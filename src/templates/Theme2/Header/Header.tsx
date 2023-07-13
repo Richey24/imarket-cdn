@@ -6,7 +6,7 @@ export default function Header() {
           <header className="">
                <div className="container 2xl:w-[1240px] mx-auto flex items-center justify-between py-4 px-8 text-gray-900">
                     <div className="flex items-center">
-                         <div className="mr-4">logo </div>
+                         <div className="mr-4">logo 2 </div>
                          <input
                               type="text"
                               placeholder="Search"
