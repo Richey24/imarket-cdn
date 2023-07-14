@@ -1,25 +1,46 @@
 "use client";
 import { AppContext } from "@/appProvider";
 import { templateConfig } from "@/templates/config/index";
-// import { templateConfig } from "@/templates/config";
-import Image from "next/image";
 import { useContext } from "react";
 
 const DynamicComponent = ({ component }: { component: React.ComponentType<any> | string }) => {
-     console.log({ component });
      const Component = component;
      return <Component />;
 };
 
 export default function Home() {
+     const currentPage = "home";
+
      const { site } = useContext(AppContext);
-     const template = templateConfig[site.theme.theme];
+     const defualtTemplate = templateConfig[site.theme.theme];
+     const loadedTemplate = site.theme.pages.find(
+          (page: { name: any }) => page.name === currentPage,
+     );
+
+     const newGeneratedTemplate = () => {
+          let temp = { ...defualtTemplate };
+          const sections = loadedTemplate.sections;
+
+          for (let index = 0; index < sections.length; index++) {
+               // Use sections.length instead of sections
+               if (
+                    Object.keys(temp).includes(sections[index].name) &&
+                    sections[index].component &&
+                    sections[index].component.theme
+               ) {
+                    temp[sections[index].name] =
+                         templateConfig[sections[index].component.theme][sections[index].name];
+               }
+          }
+
+          return temp;
+     };
 
      return (
-          <div className="page-wrapper">
-               {Object.keys(template).map((key) => {
-                    return <DynamicComponent key={key} component={template[key]} />;
+          <>
+               {Object.keys(newGeneratedTemplate()).map((key) => {
+                    return <DynamicComponent component={newGeneratedTemplate()[key] as string} />;
                })}
-          </div>
+          </>
      );
 }
