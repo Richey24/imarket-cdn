@@ -1,5 +1,6 @@
 import OwlCarouselComponent from "@/app/components/OWlCarousel";
 import Product from "@/app/components/Product";
+import ProductWidget from "@/app/components/Product/ProductWidget";
 import Image from "next/image";
 
 export default function ProductPage() {
@@ -412,6 +413,23 @@ export default function ProductPage() {
                                    );
                               })}
                          </OwlCarouselComponent>
+                    </div>
+                    <div className="product-widgets-container row pb-2 mt-24">
+                         {[
+                              "FEATURED PRODUCTS",
+                              "BEST SELLING PRODUCTS",
+                              "LATEST PRODUCTS",
+                              "TOP RATED PRODUCTS",
+                         ].map((label) => {
+                              return (
+                                   <div key={label} className="col-lg-3 col-sm-6 pb-5 pb-md-0">
+                                        <h4 className="font-bold text-sm mb-1">{label}</h4>
+                                        <ProductWidget />
+                                        <ProductWidget />
+                                        <ProductWidget />
+                                   </div>
+                              );
+                         })}
                     </div>
                </div>
           </div>
