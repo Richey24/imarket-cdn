@@ -27,64 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <html lang="en">
                <Head>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    {/* <link
-                         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-                         rel="stylesheet"
-                         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-                         crossOrigin="anonymous"
-                    /> */}
-                    {/* <meta charSet="UTF-8" />
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-                    <meta
-                         name="viewport"
-                         content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                    />
-
-                    <title>Porto - Bootstrap eCommerce Template</title>
-
-                    <meta name="keywords" content="HTML5 Template" />
-                    <meta name="description" content="Porto - Bootstrap eCommerce Template" />
-                    <meta name="author" content="SW-THEMES" />
-
-                    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.png" /> */}
-
-                    {/* <link
-                         rel="stylesheet"
-                         href="../assets/css/demo13.min.css"
-                         crossOrigin="anonymous"
-                    /> */}
-                    {/* <link
-                         rel="stylesheet"
-                         type="text/css"
-                         href="assets/vendor/fontawesome-free/css/all.min.css"
-                    />
-                    <link
-                         rel="stylesheet"
-                         type="text/css"
-                         href="assets/vendor/simple-line-icons/css/simple-line-icons.min.css"
-                    /> */}
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
                </Head>
-
-               {/* <Script
-                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-                    crossOrigin="anonymous"
-               /> */}
                <AppProvider>{children}</AppProvider>
           </html>
      );
-}
-
-{
-     /* <script>
-		WebFontConfig = {
-			google: { families: [ 'Open+Sans:300,400,600,700,800,900', 'Poppins:300,400,500,600,700', 'Oswald:600,700' ] }
-		};
-		( function ( d ) {
-			var wf = d.createElement( 'script' ), s = d.scripts[ 0 ];
-			wf.src = 'assets/js/webfont.js';
-			wf.async = true;
-			s.parentNode.insertBefore( wf, s );
-		} )( document );
-	</script> */
 }

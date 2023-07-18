@@ -7,10 +7,10 @@ const dummySite = {
      company: {},
      theme: {
           theme: "theme1",
-          menus: [],
           pages: [
                {
                     name: "home",
+                    layout: "",
                     sections: [
                          // {
                          //      name: "footer",
@@ -21,15 +21,15 @@ const dummySite = {
                          //           name: "",
                          //      },
                          // },
-                         // {
-                         //      name: "header",
-                         //      // type: "header",
-                         //      content: "",
-                         //      component: {
-                         //           theme: "theme2",
-                         //           name: "",
-                         //      },
-                         // },
+                         {
+                              name: "header",
+                              // type: "header",
+                              content: "",
+                              component: {
+                                   theme: "theme2",
+                                   props: { phone: "+1940595000" },
+                              },
+                         },
                     ],
                },
           ],

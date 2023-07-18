@@ -2,10 +2,17 @@
 import { AppContext } from "@/appProvider";
 import { templateConfig } from "@/templates/config/index";
 import { useContext } from "react";
+import PropTypes from "prop-types";
 
-const DynamicComponent = ({ component }: { component: React.ComponentType<any> | string }) => {
+const DynamicComponent = ({
+     component,
+     props,
+}: {
+     component: React.ComponentType<any> | string;
+     props: any;
+}) => {
      const Component = component;
-     return <Component />;
+     return <Component {...props} />;
 };
 
 export default function Home() {
@@ -17,7 +24,9 @@ export default function Home() {
           (page: { name: any }) => page.name === currentPage,
      );
 
-     const newGeneratedTemplate = () => {
+     const newGeneratedTemplate = (): {
+          [key: string]: { component?: React.ComponentType<any> | string; props?: object };
+     } => {
           let temp = { ...defualtTemplate };
           const sections = loadedTemplate.sections;
 
@@ -28,8 +37,11 @@ export default function Home() {
                     sections[index].component &&
                     sections[index].component.theme
                ) {
-                    temp[sections[index].name] =
-                         templateConfig[sections[index].component.theme][sections[index].name];
+                    temp[sections[index].name] = {
+                         component:
+                              templateConfig[sections[index].component.theme][sections[index].name],
+                         props: sections[index].component.props,
+                    };
                }
           }
 
@@ -39,7 +51,22 @@ export default function Home() {
      return (
           <>
                {Object.keys(newGeneratedTemplate()).map((key) => {
-                    return <DynamicComponent component={newGeneratedTemplate()[key] as string} />;
+                    console.log({ key: newGeneratedTemplate() });
+                    return (
+                         <DynamicComponent
+                              key={key}
+                              component={
+                                   newGeneratedTemplate()[key]?.component
+                                        ? (newGeneratedTemplate()[key].component as string)
+                                        : (newGeneratedTemplate()[key] as string)
+                              }
+                              props={
+                                   newGeneratedTemplate()[key].component && {
+                                        ...newGeneratedTemplate()[key].props,
+                                   }
+                              }
+                         />
+                    );
                })}
           </>
      );
