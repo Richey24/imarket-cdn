@@ -8,5 +8,4 @@ export const templateConfig: any = {
           theme2: Theme2Header,
           theme3: Theme3Header,
      },
-     
 };
