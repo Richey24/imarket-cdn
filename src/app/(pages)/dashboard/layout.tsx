@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           { title: "Orders", url: "/dashboard/orders" },
           { title: "Addresses", url: "/dashboard/addresses" },
           { title: "Account details", url: "/dashboard/account-details" },
-          { title: "Shopping Addres", url: "/dashboard/shipping-address" },
+          // { title: "Shopping Addres", url: "/dashboard/shipping-address" },
           { title: "Wishlist", url: "/wishlist" },
      ];
 
