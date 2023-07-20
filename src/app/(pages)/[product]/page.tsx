@@ -1,9 +1,22 @@
+"use client";
 import OwlCarouselComponent from "@/app/components/OWlCarousel";
 import Product from "@/app/components/Product";
 import ProductWidget from "@/app/components/Product/ProductWidget";
-import Image from "next/image";
+import { Button, HStack, Input, useNumberInput } from "@chakra-ui/react";
 
 export default function ProductPage() {
+     const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } = useNumberInput({
+          step: 0.01,
+          defaultValue: 1.53,
+          min: 1,
+          max: 6,
+          precision: 2,
+     });
+
+     const inc = getIncrementButtonProps();
+     const dec = getDecrementButtonProps();
+     const input = getInputProps();
+
      const img =
           "https://images.unsplash.com/photo-1689598843935-1aba53dd1277?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
      return (
@@ -312,21 +325,28 @@ export default function ProductPage() {
                                    </div>
 
                                    <div className="product-action">
-                                        <div className="product-single-qty">
-                                             <input
-                                                  className="horizontal-quantity form-control"
-                                                  type="text"
-                                             />
+                                        <div className="flex gap-12">
+                                             <HStack
+                                                  maxW="10rem"
+                                                  gap="0"
+                                                  className="border border-gray-600 rounded-md px-1"
+                                             >
+                                                  <Button bg="white" {...inc}>
+                                                       +
+                                                  </Button>
+                                                  <Input {...input} className="border-none" />
+                                                  <Button bg="white" {...dec}>
+                                                       -
+                                                  </Button>
+                                             </HStack>
+
+                                             <button
+                                                  className="btn bg-gray-800 rounded-sm text-base text-white add-cart mr-2"
+                                                  title="Add to Cart"
+                                             >
+                                                  Add to Cart
+                                             </button>
                                         </div>
-
-                                        <a
-                                             href="javascript:;"
-                                             className="btn btn-dark add-cart mr-2"
-                                             title="Add to Cart"
-                                        >
-                                             Add to Cart
-                                        </a>
-
                                         <a
                                              href="cart.html"
                                              className="btn btn-gray view-cart d-none"

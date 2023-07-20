@@ -1,4 +1,17 @@
+"use client";
 import ProductCard from "@/app/components/Product";
+import {
+     Accordion,
+     AccordionItem,
+     AccordionButton,
+     AccordionIcon,
+     AccordionPanel,
+     Box,
+     RangeSliderTrack,
+     RangeSliderThumb,
+     RangeSliderFilledTrack,
+     RangeSlider,
+} from "@chakra-ui/react";
 
 export default function Home() {
      const img =
@@ -205,332 +218,195 @@ export default function Home() {
                          </div>
                          <aside className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
                               <div className="sidebar-wrapper">
-                                   <div className="widget">
-                                        <h3 className="widget-title">
-                                             <a
-                                                  data-toggle="collapse"
-                                                  href="#widget-body-2"
-                                                  role="button"
-                                                  aria-expanded="true"
-                                                  aria-controls="widget-body-2"
-                                             >
-                                                  Categories
-                                             </a>
-                                        </h3>
+                                   {/* side nav */}
+                                   <Accordion allowMultiple allowToggle>
+                                        <AccordionItem>
+                                             <h2>
+                                                  <AccordionButton>
+                                                       <Box
+                                                            as="span"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            className=" font-semibold "
+                                                       >
+                                                            CATEGORIES
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <AccordionPanel pb={4}>
+                                                  {/*  */}
 
-                                        <div className="collapse show" id="widget-body-2">
-                                             <div className="widget-body">
-                                                  <ul className="cat-list">
-                                                       <li>
-                                                            <a
-                                                                 href="#widget-category-1"
-                                                                 data-toggle="collapse"
-                                                                 role="button"
-                                                                 aria-expanded="true"
-                                                                 aria-controls="widget-category-1"
-                                                            >
-                                                                 Accessories
-                                                                 <span className="products-count">
-                                                                      (3)
-                                                                 </span>
-                                                                 <span className="toggle"></span>
-                                                            </a>
-                                                            <div
-                                                                 className="collapse show"
-                                                                 id="widget-category-1"
-                                                            >
-                                                                 <ul className="cat-sublist">
-                                                                      <li>
-                                                                           Caps
-                                                                           <span className="products-count">
-                                                                                (1)
-                                                                           </span>
-                                                                      </li>
-                                                                      <li>
-                                                                           Watches
-                                                                           <span className="products-count">
-                                                                                (2)
-                                                                           </span>
-                                                                      </li>
-                                                                 </ul>
-                                                            </div>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#widget-category-2"
-                                                                 className="collapsed"
-                                                                 data-toggle="collapse"
-                                                                 role="button"
-                                                                 aria-expanded="false"
-                                                                 aria-controls="widget-category-2"
-                                                            >
-                                                                 Dress
-                                                                 <span className="products-count">
-                                                                      (4)
-                                                                 </span>
-                                                                 <span className="toggle"></span>
-                                                            </a>
-                                                            <div
-                                                                 className="collapse"
-                                                                 id="widget-category-2"
-                                                            >
-                                                                 <ul className="cat-sublist">
-                                                                      <li>
-                                                                           Clothing
-                                                                           <span className="products-count">
-                                                                                (4)
-                                                                           </span>
-                                                                      </li>
-                                                                 </ul>
-                                                            </div>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#widget-category-3"
-                                                                 className="collapsed"
-                                                                 data-toggle="collapse"
-                                                                 role="button"
-                                                                 aria-expanded="false"
-                                                                 aria-controls="widget-category-3"
-                                                            >
-                                                                 Electronics
-                                                                 <span className="products-count">
-                                                                      (2)
-                                                                 </span>
-                                                                 <span className="toggle"></span>
-                                                            </a>
-                                                            <div
-                                                                 className="collapse"
-                                                                 id="widget-category-3"
-                                                            >
-                                                                 <ul className="cat-sublist">
-                                                                      <li>
-                                                                           Headphone
-                                                                           <span className="products-count">
-                                                                                (1)
-                                                                           </span>
-                                                                      </li>
-                                                                      <li>
-                                                                           Watch
-                                                                           <span className="products-count">
-                                                                                (1)
-                                                                           </span>
-                                                                      </li>
-                                                                 </ul>
-                                                            </div>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#widget-category-4"
-                                                                 className="collapsed"
-                                                                 data-toggle="collapse"
-                                                                 role="button"
-                                                                 aria-expanded="false"
-                                                                 aria-controls="widget-category-4"
-                                                            >
-                                                                 Fashion
-                                                                 <span className="products-count">
-                                                                      (6)
-                                                                 </span>
-                                                                 <span className="toggle"></span>
-                                                            </a>
-                                                            <div
-                                                                 className="collapse"
-                                                                 id="widget-category-4"
-                                                            >
-                                                                 <ul className="cat-sublist">
-                                                                      <li>
-                                                                           Shoes
-                                                                           <span className="products-count">
-                                                                                (4)
-                                                                           </span>
-                                                                      </li>
-                                                                      <li>
-                                                                           Bag
-                                                                           <span className="products-count">
-                                                                                (2)
-                                                                           </span>
-                                                                      </li>
-                                                                 </ul>
-                                                            </div>
-                                                       </li>
-                                                  </ul>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div className="widget">
-                                        <h3 className="widget-title">
-                                             <a
-                                                  data-toggle="collapse"
-                                                  href="#widget-body-3"
-                                                  role="button"
-                                                  aria-expanded="true"
-                                                  aria-controls="widget-body-3"
-                                             >
-                                                  Price
-                                             </a>
-                                        </h3>
-
-                                        <div className="collapse show" id="widget-body-3">
-                                             <div className="widget-body pb-0">
-                                                  <form action="#">
-                                                       <div className="price-slider-wrapper">
-                                                            <div id="price-slider"></div>
-                                                       </div>
-
-                                                       <div className="filter-price-action d-flex align-items-center justify-content-between flex-wrap">
-                                                            <div className="filter-price-text">
-                                                                 Price:
-                                                                 <span id="filter-price-range"></span>
-                                                            </div>
-
-                                                            <button
-                                                                 type="submit"
-                                                                 className="btn btn-primary"
-                                                            >
-                                                                 Filter
-                                                            </button>
-                                                       </div>
-                                                  </form>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div className="widget widget-size">
-                                        <h3 className="widget-title">
-                                             <a
-                                                  data-toggle="collapse"
-                                                  href="#widget-body-5"
-                                                  role="button"
-                                                  aria-expanded="true"
-                                                  aria-controls="widget-body-5"
-                                             >
-                                                  Size
-                                             </a>
-                                        </h3>
-
-                                        <div className="collapse show" id="widget-body-5">
-                                             <div className="widget-body">
-                                                  <ul className="cat-list">
-                                                       <li className="active">
-                                                            <a href="#">Extra Large</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="#">Extra Small</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="#">Large</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="#">Medium</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="#">Small</a>
-                                                       </li>
-                                                  </ul>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div className="widget widget-brand">
-                                        <h3 className="widget-title">
-                                             <a
-                                                  data-toggle="collapse"
-                                                  href="#widget-body-5"
-                                                  role="button"
-                                                  aria-expanded="true"
-                                                  aria-controls="widget-body-5"
-                                             >
-                                                  Brands
-                                             </a>
-                                        </h3>
-
-                                        <div className="collapse show" id="widget-body-6">
-                                             <div className="widget-body">
-                                                  <ul className="cat-list">
-                                                       <li>
-                                                            <a href="#">Adidas</a>
-                                                       </li>
-                                                  </ul>
-                                             </div>
-                                        </div>
-                                   </div>
-
-                                   <div className="widget widget-color">
-                                        <h3 className="widget-title">
-                                             <a
-                                                  data-toggle="collapse"
-                                                  href="#widget-body-4"
-                                                  role="button"
-                                                  aria-expanded="true"
-                                                  aria-controls="widget-body-4"
-                                             >
-                                                  Color
-                                             </a>
-                                        </h3>
-
-                                        <div className="collapse show" id="widget-body-4">
-                                             <div className="widget-body pb-0">
-                                                  <ul className="config-swatch-list">
-                                                       <li className="active">
-                                                            <a
-                                                                 href="#"
-                                                                 style={{ backgroundColor: "#000" }}
-                                                            ></a>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#"
-                                                                 style={{
-                                                                      backgroundColor: "#0188cc",
-                                                                 }}
-                                                            ></a>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#"
-                                                                 style={{
-                                                                      backgroundColor: "#81d742",
-                                                                 }}
-                                                            ></a>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#"
-                                                                 style={{
-                                                                      backgroundColor: "#6085a5",
-                                                                 }}
-                                                            ></a>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#"
-                                                                 style={{
-                                                                      backgroundColor: "#ab6e6e",
-                                                                 }}
-                                                            ></a>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#"
-                                                                 style={{
-                                                                      backgroundColor: "#809fbf",
-                                                                 }}
-                                                            ></a>
-                                                       </li>
-                                                       <li>
-                                                            <a
-                                                                 href="#"
-                                                                 style={{
-                                                                      backgroundColor: "#eded78",
-                                                                 }}
-                                                            ></a>
-                                                       </li>
-                                                  </ul>
-                                             </div>
-                                        </div>
-                                   </div>
+                                                  <Accordion allowMultiple allowToggle>
+                                                       <AccordionItem>
+                                                            <h2>
+                                                                 <AccordionButton>
+                                                                      <Box
+                                                                           as="span"
+                                                                           flex="1"
+                                                                           textAlign="left"
+                                                                      >
+                                                                           Car
+                                                                      </Box>
+                                                                      <AccordionIcon />
+                                                                 </AccordionButton>
+                                                            </h2>
+                                                            <AccordionPanel pb={4}>
+                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                      BMW
+                                                                 </div>
+                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                      Range Rover
+                                                                 </div>
+                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                      Benz
+                                                                 </div>
+                                                            </AccordionPanel>
+                                                       </AccordionItem>
+                                                       <AccordionItem>
+                                                            <h2>
+                                                                 <AccordionButton>
+                                                                      <Box
+                                                                           as="span"
+                                                                           flex="1"
+                                                                           textAlign="left"
+                                                                      >
+                                                                           Fashion
+                                                                      </Box>
+                                                                      <AccordionIcon />
+                                                                 </AccordionButton>
+                                                            </h2>
+                                                            <AccordionPanel pb={4}>
+                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                      Shoe
+                                                                 </div>
+                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                      Clothes
+                                                                 </div>
+                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                      Bag
+                                                                 </div>
+                                                            </AccordionPanel>
+                                                       </AccordionItem>
+                                                  </Accordion>
+                                                  {/*  */}
+                                             </AccordionPanel>
+                                        </AccordionItem>
+                                        <AccordionItem>
+                                             <h2>
+                                                  <AccordionButton>
+                                                       <Box
+                                                            as="span"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            className=" font-semibold "
+                                                       >
+                                                            PRICE
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <AccordionPanel pb={4}>
+                                                  <RangeSlider
+                                                       aria-label={["min", "max"]}
+                                                       defaultValue={[10, 3000]}
+                                                  >
+                                                       <RangeSliderTrack>
+                                                            <RangeSliderFilledTrack />
+                                                       </RangeSliderTrack>
+                                                       <RangeSliderThumb index={0} />
+                                                       <RangeSliderThumb index={1} />
+                                                  </RangeSlider>
+                                             </AccordionPanel>
+                                        </AccordionItem>
+                                        <AccordionItem>
+                                             <h2>
+                                                  <AccordionButton>
+                                                       <Box
+                                                            as="span"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            className=" font-semibold "
+                                                       >
+                                                            SIZE
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <AccordionPanel pb={4}>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Extra Large
+                                                  </div>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Extra Small
+                                                  </div>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Large
+                                                  </div>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Medium
+                                                  </div>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Small
+                                                  </div>
+                                             </AccordionPanel>
+                                        </AccordionItem>
+                                        <AccordionItem>
+                                             <h2>
+                                                  <AccordionButton>
+                                                       <Box
+                                                            as="span"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            className=" font-semibold "
+                                                       >
+                                                            BRANDS
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <AccordionPanel pb={4}>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Adidas
+                                                  </div>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Niki
+                                                  </div>
+                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                       Puma
+                                                  </div>
+                                             </AccordionPanel>
+                                        </AccordionItem>
+                                        <AccordionItem>
+                                             <h2>
+                                                  <AccordionButton>
+                                                       <Box
+                                                            as="span"
+                                                            flex="1"
+                                                            textAlign="left"
+                                                            className=" font-semibold "
+                                                       >
+                                                            COLOR
+                                                       </Box>
+                                                       <AccordionIcon />
+                                                  </AccordionButton>
+                                             </h2>
+                                             <AccordionPanel pb={4}>
+                                                  <div className="flex gap-4">
+                                                       {["red", "blue", "green"].map((color) => {
+                                                            return (
+                                                                 <div
+                                                                      className="h-8 w-8 rounded-sm cursor-pointer"
+                                                                      style={{
+                                                                           backgroundColor: color,
+                                                                      }}
+                                                                 ></div>
+                                                            );
+                                                       })}
+                                                  </div>
+                                             </AccordionPanel>
+                                        </AccordionItem>
+                                   </Accordion>
                               </div>
                          </aside>
                     </div>
@@ -538,3 +414,4 @@ export default function Home() {
           </div>
      );
 }
+//
