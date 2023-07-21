@@ -1,9 +1,13 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { LoginRequest, useLoginMutation } from "@/redux/services/auth";
+import toast from "react-hot-toast";
 import { schema } from "./schema";
 
 export default function Login() {
+     const [login, { isLoading }] = useLoginMutation();
+
      const {
           register,
           handleSubmit,
@@ -12,8 +16,14 @@ export default function Login() {
      } = useForm({
           resolver: yupResolver(schema),
      });
-     const onSubmit = (data) => {
+     const onSubmit = async (data: LoginRequest) => {
           console.log(data);
+          try {
+               await login(data).unwrap();
+               toast.success("Login successful");
+          } catch (err: any) {
+               toast.error(err.data.message);
+          }
      };
 
      return (
