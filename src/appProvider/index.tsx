@@ -26,7 +26,7 @@ const dummySite = {
                               // type: "header",
                               content: "",
                               component: {
-                                   theme: "theme2",
+                                   theme: "theme1",
                                    props: { phone: "+1940595000" },
                               },
                          },
