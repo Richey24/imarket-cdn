@@ -26,19 +26,18 @@ export interface LoginRequest {
 
 export interface RegisterRequest {
   email: string;
-  merchant_name: string;
   firstname: string;
   lastname: string;
   password: string;
-  confirm_password: string;
+  confirmPassword: string;
 }
 
 interface RegisterPayload {
   email: string;
-  merchant_name: string;
   firstname: string;
   lastname: string;
   password: string;
+  domain: string;
 }
 
 interface ResendVerificationPayload {
@@ -54,14 +53,14 @@ export const authApi = api.injectEndpoints({
   endpoints: (build) => ({
     login: build.mutation<UserResponse, LoginRequest>({
       query: (credentials: any) => ({
-        url: "/login",
+        url: "/auth/login",
         method: "POST",
         body: credentials,
       }),
     }),
     register: build.mutation<any, RegisterPayload>({
       query: (credentials: any) => ({
-        url: "/register",
+        url: "/auth/register",
         method: "POST",
         body: credentials,
       }),
