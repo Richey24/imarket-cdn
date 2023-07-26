@@ -3,7 +3,7 @@
 import AppProvider from "@/appProvider";
 import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
-
+import ReactQueryProviders from "@/utils/provider";
 import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -47,10 +47,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     crossOrigin="anonymous"
                /> */}
                <Providers>
-                    <AppProvider>
-                         {children}
-                         <Toaster />
-                    </AppProvider>
+                    <ReactQueryProviders>
+                         <AppProvider>
+                              {children}
+                              <Toaster />
+                         </AppProvider>
+                    </ReactQueryProviders>
                </Providers>
           </html>
      );
