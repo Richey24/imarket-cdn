@@ -23,7 +23,7 @@ export default function OwlCarouselComponent({
      },
 }: {
      children: React.ReactNode;
-     className: string;
+     className?: string;
      isResponsive?: boolean;
      responsive?: { [breakpoint: string]: Options };
 }) {

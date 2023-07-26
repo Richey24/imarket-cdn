@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-css-tags */
 "use client";
 import AppProvider from "@/appProvider";
+import { Providers } from "@/redux/provider";
+import { Toaster } from "react-hot-toast";
+
 import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -38,7 +41,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     />
                </Head>
 
-               <AppProvider>{children}</AppProvider>
+               {/* <Script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+                    crossOrigin="anonymous"
+               /> */}
+               <Providers>
+                    <AppProvider>
+                         {children}
+                         <Toaster />
+                    </AppProvider>
+               </Providers>
           </html>
      );
 }
