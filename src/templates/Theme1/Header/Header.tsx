@@ -14,7 +14,7 @@ import stickyLogo from "../../../assets/images/sticky-logo.png";
 
 export default function Header() {
      return (
-          <>
+          <div style={{ width: "100%" }}>
                <div className="top-notice text-white bg-secondary">
                     <div className="container text-center">
                          <h5 className="d-inline-block mb-0">
@@ -33,7 +33,7 @@ export default function Header() {
                          </button>
                     </div>
                </div>
-               <header className="header">
+               <header className="header" style={{ border: "3px solid red" }}>
                     <div className="header-top">
                          <div className="container">
                               <div className="header-left header-dropdowns">
@@ -124,7 +124,7 @@ export default function Header() {
                     </div>
                     <div
                          className="header-middle sticky-header"
-                         data-sticky-options="{'mobile': true}"
+                         data-sticky-options="{'mobile': false}"
                     >
                          <div className="container">
                               <div className="header-left col-lg-2 w-auto pl-0">
@@ -1052,6 +1052,6 @@ export default function Header() {
                          </div>
                     </div>
                </header>
-          </>
+          </div>
      );
 }
