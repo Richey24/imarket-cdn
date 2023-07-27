@@ -1,12 +1,23 @@
 "use client";
+import React from "react";
+import type { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
+import { getCsrfToken } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 import { useForm } from "react-hook-form";
+import { useSearchParams, useRouter } from "next/navigation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { LoginRequest, useLoginMutation } from "@/redux/services/auth";
 import toast from "react-hot-toast";
 import { schema } from "./schema";
+import axios from "axios";
 
 export default function Login() {
-     const [login, { isLoading }] = useLoginMutation();
+     const [csrfToken, setCsrfToken] = React.useState<string | null>("");
+     const router = useRouter();
+
+     // const [login, { isLoading }] = useLoginMutation();
+     const searchParams = useSearchParams();
+     const callbackUrl = searchParams.get("callbackUrl") || "/profile";
 
      const {
           register,
@@ -17,14 +28,33 @@ export default function Login() {
           resolver: yupResolver(schema),
      });
      const onSubmit = async (data: LoginRequest) => {
-          console.log(data);
           try {
-               await login(data).unwrap();
-               toast.success("Login successful");
+               console.log(data);
+
+               const res = await signIn("credentials", {
+                    redirect: false,
+                    email: data.email,
+                    password: data.password,
+                    callbackUrl,
+               });
+               //uahomorejoice@gmail.com
+               //Rejoice11#
+
+               console.log(res);
+               if (!res?.error) {
+                    router.push(callbackUrl);
+               } else {
+                    toast.error("invalid email or password");
+               }
           } catch (err: any) {
                toast.error(err.data.message);
           }
      };
+     React.useEffect(() => {
+          getCsrfToken().then((csr) => {
+               setCsrfToken(csr || null);
+          });
+     }, []);
 
      return (
           <div className="flex w-screen h-screen items-center justify-center">

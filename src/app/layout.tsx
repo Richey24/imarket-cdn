@@ -4,6 +4,8 @@ import AppProvider from "@/appProvider";
 import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
 import ReactQueryProviders from "@/utils/provider";
+import { SessionProvider } from "next-auth/react";
+
 import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -18,7 +20,7 @@ import "../assets/css/demo13.min.css";
 // import "../assets/css/demo11.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
-import "../assets/js/webfont";
+// import "../assets/js/webfont";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,14 +48,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
                     crossOrigin="anonymous"
                /> */}
-               <Providers>
-                    <ReactQueryProviders>
-                         <AppProvider>
-                              {children}
-                              <Toaster />
-                         </AppProvider>
-                    </ReactQueryProviders>
-               </Providers>
+               <SessionProvider>
+                    <Providers>
+                         <ReactQueryProviders>
+                              <AppProvider>
+                                   {children}
+                                   <Toaster />
+                              </AppProvider>
+                         </ReactQueryProviders>
+                    </Providers>
+               </SessionProvider>
           </html>
      );
 }

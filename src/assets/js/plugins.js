@@ -1494,7 +1494,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 				currentItem = 1,
 				currentTop = 0;
 
-			console.log("wird", itemsWrapper);
+			// console.log("wird", itemsWrapper);
 
 			itemsWrapper.append(firstItemClone);
 
