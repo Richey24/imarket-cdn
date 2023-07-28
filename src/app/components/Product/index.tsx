@@ -8,7 +8,7 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
      return (
           <Link href={`/${productName}`}>
                <div className="product-default inner-quickview inner-icon">
-                    <figure className="img-effect h-72 ">
+                    <figure className="img-effect h-60 ">
                          <a href="demo13-product.html">
                               <img src={imageSrc} className="w-full h-full" alt="product" />
                               {/* <img src={imageSrc} width="205" height="205" alt="product" /> */}
@@ -53,7 +53,7 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
                          </div>
 
                          <div className="price-box">
-                              <span className="product-price"> {price}</span>
+                              <span className="text-2xl font-semibold"> {price}</span>
                          </div>
                     </div>
                </div>
