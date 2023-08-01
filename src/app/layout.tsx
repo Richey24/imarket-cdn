@@ -17,10 +17,12 @@ import Script from "next/script";
 import Head from "next/head";
 import "../assets/css/bootstrap.min.css";
 import "../assets/css/demo13.min.css";
-// import "../assets/css/demo11.min.css";
+import "../assets/css/demo1.min.css";
+import "../assets/css/demo2.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
-// import "../assets/js/webfont";
+import "../assets/js/webfont";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
