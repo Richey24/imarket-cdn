@@ -6,4 +6,5 @@ function getSubDomain(uri: string) {
     return subdomain
 }
 
+
 export { getSubDomain }
