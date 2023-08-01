@@ -33,7 +33,7 @@ export default function Header() {
                          </button>
                     </div>
                </div>
-               <header className="header" style={{ border: "3px solid red" }}>
+               <header className="header">
                     <div className="header-top">
                          <div className="container">
                               <div className="header-left header-dropdowns">
