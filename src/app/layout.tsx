@@ -17,9 +17,17 @@ import Script from "next/script";
 import Head from "next/head";
 import "../assets/css/bootstrap.min.css";
 import "../assets/css/demo13.min.css";
-// import "../assets/css/demo11.min.css";
+import "../assets/css/demo2.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
+
+import "../assets/js/main.min.js"
+import "../assets/js/jquery.min.js"
+import "../assets/js/bootstrap.bundle.min.js"
+import "../assets/js/jquery.appear.min.js"
+import "../assets/js/plugins.min.js"
+import "../assets/js/optional/imagesloaded.pkgd.min.js"
+import "../assets/js/optional/isotope.pkgd.min.js"
 // import "../assets/js/webfont";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,6 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <script src="../assets/js/main.min.js" defer></script>
                     <script src="../assets/js/jquery.min.js" defer />
                     <script src="../assets/js/bootstrap.bundle.min.js" defer />
+                    <script src="../assets/js/optional/imagesloaded.pkgd.min.js" defer></script>
+                    <script src="../assets/js/optional/isotope.pkgd.min.js" defer></script>
+                    <script src="../assets/js/jquery.appear.min.js" defer></script>
                     <script src="../assets/js/plugins.min.js" defer />
                     <script
                          src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.min.js"
