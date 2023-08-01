@@ -7,5 +7,6 @@ export const templateConfig: any = {
     theme1: theme1TemplateConfig,
     theme2: theme2TemplateConfig,
     theme3: theme3TemplateConfig,
+    // template demo4
     theme4: theme4TemplateConfig
 };
