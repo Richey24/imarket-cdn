@@ -3,6 +3,8 @@
 import AppProvider from "@/appProvider";
 import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
+import ReactQueryProviders from "@/utils/provider";
+import { SessionProvider } from "next-auth/react";
 
 import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -48,12 +50,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
                     crossOrigin="anonymous"
                /> */}
-               <Providers>
-                    <AppProvider>
-                         {children}
-                         <Toaster />
-                    </AppProvider>
-               </Providers>
+               <SessionProvider>
+                    <Providers>
+                         <ReactQueryProviders>
+                              <AppProvider>
+                                   {children}
+                                   <Toaster />
+                              </AppProvider>
+                         </ReactQueryProviders>
+                    </Providers>
+               </SessionProvider>
           </html>
      );
 }

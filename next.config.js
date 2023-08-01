@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ["images.unsplash.com", "source.unsplash.com", "placekitten.com", "flipkart.com", "ukminim1.flixcart.com", "rukminim1.flixcart.com", "picsum.photos"],
+        domains: ["images.unsplash.com", "source.unsplash.com", "placekitten.com", "flipkart.com", "ukminim1.flixcart.com", "rukminim1.flixcart.com", "picsum.photos","plus.unsplash.com"],
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         config.plugins.push(

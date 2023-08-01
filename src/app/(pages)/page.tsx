@@ -51,7 +51,6 @@ export default function Home() {
      return (
           <>
                {Object.keys(newGeneratedTemplate()).map((key) => {
-                    console.log({ key: newGeneratedTemplate() });
                     return (
                          <DynamicComponent
                               key={key}

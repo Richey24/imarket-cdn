@@ -11,6 +11,7 @@ import Image from "next/image";
 import logoBlack from "../../../assets/images/logo-black.png";
 import logoWhite from "../../../assets/images/logo-white.png";
 import stickyLogo from "../../../assets/images/sticky-logo.png";
+import Link from "next/link";
 
 export default function Header() {
      return (
@@ -83,18 +84,18 @@ export default function Header() {
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
-                                                       <a href="dashboard.html">My Account</a>
+                                                       <Link href="/dashboard">My Account</Link>
                                                   </li>
                                                   <li>
-                                                       <a href="wishlist.html">My Wishlist</a>
+                                                       <Link href="/wishlist">My Wishlist</Link>
                                                   </li>
                                                   <li>
-                                                       <a href="cart.html">Cart</a>
+                                                       <Link href="/cart">Cart</Link>
                                                   </li>
                                                   <li>
-                                                       <a href="#" className="login-link">
+                                                       <Link href="/login" className="login-link">
                                                             Log In
-                                                       </a>
+                                                       </Link>
                                                   </li>
                                              </ul>
                                         </div>
