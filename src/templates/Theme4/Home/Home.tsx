@@ -7,6 +7,7 @@ import Banner3 from "../../../assets/images/demoes/demo4/banners/banner-3.jpg";
 import Banner4 from "../../../assets/images/demoes/demo4/banners/banner-4.jpg";
 import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
 import Image from "next/image";
+import { InfoBoxesContainer } from "./components/Info";
 
 const Home = () => {
      return (
@@ -14,133 +15,7 @@ const Home = () => {
                <div className="home-slider show-nav-hover nav-big mb-2 text-uppercase">
                     <Banner />
                </div>
-               {/* End .home-slider */}
-               <div className="container">
-                    <div className="info-boxes-slider owl-carousel mb-2">
-                         <div className="info-box info-box-icon-left">
-                              <i className="icon-shipping" />
-                              <div className="info-box-content">
-                                   <h4>FREE SHIPPING &amp; RETURN</h4>
-                                   <p className="text-body">
-                                        Free shipping on all orders over $99.
-                                   </p>
-                              </div>
-                              {/* End .info-box-content */}
-                         </div>
-                         {/* End .info-box */}
-                         <div className="info-box info-box-icon-left">
-                              <i className="icon-money" />
-                              <div className="info-box-content">
-                                   <h4>MONEY BACK GUARANTEE</h4>
-                                   <p className="text-body">100% money back guarantee</p>
-                              </div>
-                              {/* End .info-box-content */}
-                         </div>
-                         {/* End .info-box */}
-                         <div className="info-box info-box-icon-left">
-                              <i className="icon-support" />
-                              <div className="info-box-content">
-                                   <h4>ONLINE SUPPORT 24/7</h4>
-                                   <p className="text-body">Lorem ipsum dolor sit amet.</p>
-                              </div>
-                              {/* End .info-box-content */}
-                         </div>
-                         {/* End .info-box */}
-                    </div>
-                    {/* End .info-boxes-slider */}
-                    <div className="banners-container mb-2">
-                         <div className="banners-slider ">
-                              <div
-                                   className="banner banner1 banner-sm-vw d-flex align-items-center"
-                                   style={{ backgroundColor: "#ccc" }}
-                                   data-animation-name="fadeInLeftShorter"
-                                   data-animation-delay={500}
-                              >
-                                   <figure className="w-100">
-                                        <Image
-                                             src={Banner1}
-                                             alt="banner"
-                                             width={380}
-                                             height={175}
-                                        />
-                                   </figure>
-                                   <div className="banner-layer">
-                                        <h3 className="m-b-2">Porto Watches</h3>
-                                        <h4 className="m-b-3 text-primary">
-                                             <sup className="text-dark">
-                                                  <del>20%</del>
-                                             </sup>
-                                             30%<sup>OFF</sup>
-                                        </h4>
-                                        <a href="category.html" className="btn btn-sm btn-dark">
-                                             Shop Now
-                                        </a>
-                                   </div>
-                              </div>
-                              {/* End .banner */}
-                              <div
-                                   className="banner banner2 banner-sm-vw text-uppercase d-flex align-items-center"
-                                   data-animation-name="fadeInUpShorter"
-                                   data-animation-delay={200}
-                              >
-                                   <figure className="w-100">
-                                        <Image
-                                             src={Banner2}
-                                             style={{ backgroundColor: "#ccc" }}
-                                             alt="banner"
-                                             width={380}
-                                             height={175}
-                                        />
-                                   </figure>
-                                   <div className="banner-layer text-center">
-                                        <div className="row align-items-lg-center">
-                                             <div className="col-lg-7 text-lg-right">
-                                                  <h3>Deal Promos</h3>
-                                                  <h4 className="pb-4 pb-lg-0 mb-0 text-body">
-                                                       Starting at $99
-                                                  </h4>
-                                             </div>
-                                             <div className="col-lg-5 text-lg-left px-0 px-xl-3">
-                                                  <a
-                                                       href="category.html"
-                                                       className="btn btn-sm btn-dark"
-                                                  >
-                                                       Shop Now
-                                                  </a>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                              {/* End .banner */}
-                              <div
-                                   className="banner banner3 banner-sm-vw d-flex align-items-center"
-                                   style={{ backgroundColor: "#ccc" }}
-                                   data-animation-name="fadeInRightShorter"
-                                   data-animation-delay={500}
-                              >
-                                   <figure className="w-100">
-                                        <Image
-                                             src={Banner3}
-                                             alt="banner"
-                                             width={380}
-                                             height={175}
-                                        />
-                                   </figure>
-                                   <div className="banner-layer text-right">
-                                        <h3 className="m-b-2">Handbags</h3>
-                                        <h4 className="m-b-2 text-secondary text-uppercase">
-                                             Starting at $99
-                                        </h4>
-                                        <a href="category.html" className="btn btn-sm btn-dark">
-                                             Shop Now
-                                        </a>
-                                   </div>
-                              </div>
-                              {/* End .banner */}
-                         </div>
-                    </div>
-               </div>
-               {/* End .container */}
+               <InfoBoxesContainer />
                <section className="featured-products-section">
                     <div className="container">
                          <h2 className="section-title heading-border ls-20 border-0">
@@ -1250,7 +1125,7 @@ const Home = () => {
                <section
                     className="promo-section bg-dark"
                     data-parallax="{'speed': 2, 'enableOnMobile': true}"
-                    data-image-src="assets/images/demoes/demo4/banners/banner-5.jpg"
+                    data-image-src={Banner5}
                >
                     <div className="promo-banner banner container text-uppercase">
                          <div className="banner-content row align-items-center text-center">
