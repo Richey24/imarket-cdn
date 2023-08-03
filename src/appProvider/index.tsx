@@ -13,24 +13,33 @@ const dummySite = {
                     name: "home",
                     layout: "",
                     sections: [
-                         // {
-                         //      name: "footer",
-                         //      // type: "footer",
-                         //      content: "",
-                         //      component: {
-                         //           theme: "theme1",
-                         //           name: "",
-                         //      },
-                         // },
-                         // {
-                         //      name: "header",
-                         //      // type: "header",
-                         //      content: "",
-                         //      component: {
-                         //           theme: "theme3",
-                         //           props: { phone: "+1940595000" },
-                         //      },
-                         // },
+                         {
+                              name: "footer",
+                              // type: "footer",
+                              content: "",
+                              component: {
+                                   theme: "theme11",
+                                   name: "",
+                              },
+                         },
+                         {
+                              name: "header",
+                              // type: "header",
+                              content: "",
+                              component: {
+                                   theme: "theme11",
+                                   props: { phone: "+1940595000" },
+                              },
+                         },
+                         {
+                              name: "home",
+                              // type: "header",
+                              content: "",
+                              component: {
+                                   theme: "theme11",
+                                   props: { phone: "+1940595000" },
+                              },
+                         },
                     ],
                },
           ],
