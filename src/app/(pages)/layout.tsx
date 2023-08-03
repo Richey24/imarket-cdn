@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      return (
           <html lang="en">
                <Providers>
-                    <body className={"homepage"}>{children}</body>
+                    <body className={"homepage relative"}>{children}</body>
                </Providers>
           </html>
      );
