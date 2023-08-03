@@ -6,7 +6,7 @@ export const AppContext = React.createContext<any>(null);
 const dummySite = {
      company: {},
      theme: {
-          theme: "theme7",
+          theme: "theme30",
           pages: [
                {
                     name: "home",
