@@ -19,6 +19,7 @@ import "../assets/css/bootstrap.min.css";
 import "../assets/css/demo13.min.css";
 import "../assets/css/demo1.min.css";
 import "../assets/css/demo2.min.css";
+import "../assets/css/demo4.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 import "../assets/js/webfont";
