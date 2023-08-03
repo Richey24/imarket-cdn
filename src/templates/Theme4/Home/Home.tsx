@@ -8,14 +8,20 @@ import Banner4 from "../../../assets/images/demoes/demo4/banners/banner-4.jpg";
 import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
 import Image from "next/image";
 import { InfoBoxesContainer } from "./components/Info";
+import  SmallBoxes  from "./components/smallBoxes";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import { slidesData } from "./data";
 
 const Home = () => {
      return (
           <main className="main">
                <div className="home-slider show-nav-hover nav-big mb-2 text-uppercase">
-                    <Banner />
+                    <Banner slides={slidesData} />
                </div>
                <InfoBoxesContainer />
+
+               <SmallBoxes />
                <section className="featured-products-section">
                     <div className="container">
                          <h2 className="section-title heading-border ls-20 border-0">

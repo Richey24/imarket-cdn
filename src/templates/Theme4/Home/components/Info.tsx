@@ -42,7 +42,7 @@ export const InfoBoxesContainer: React.FC = () => {
 
      const owlCarouselOptions = {
           dots: false,
-          margin: 20,
+          margin: 0,
           loop: false,
           responsive: {
                576: {
