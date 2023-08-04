@@ -12,15 +12,15 @@ const dummySite = {
                     name: "home",
                     layout: "",
                     sections: [
-                         // {
-                         //      name: "footer",
-                         //      // type: "footer",
-                         //      content: "",
-                         //      component: {
-                         //           theme: "theme1",
-                         //           name: "",
-                         //      },
-                         // },
+                         {
+                              name: "footer",
+                              // type: "footer",
+                              content: "",
+                              component: {
+                                   theme: "theme11",
+                                   name: "",
+                              },
+                         },
                          {
                               name: "header",
                               // type: "header",

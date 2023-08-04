@@ -4,8 +4,14 @@ import slide2 from "../../../../assets/images/demoes/demo1/slider/slide-2.jpg";
 import slide3 from "../../../../assets/images/demoes/demo1/slider/slide-3.jpg";
 import Image from "next/image";
 const Banner = () => {
+     const breakPoints = [
+          { width: 1, itemsToShow: 3 },
+          { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+          { width: 768, itemsToShow: 3 },
+          { width: 1200, itemsToShow: 4 }
+        ];
      return (
-          <Carousel>
+          <Carousel   >
                <Carousel.Item>
                     <div className="home-slide home-slide1 banner banner-md-vw banner-sm-vw d-flex align-items-center">
                          <Image
