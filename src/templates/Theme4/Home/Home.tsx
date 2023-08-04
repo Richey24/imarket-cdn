@@ -9,9 +9,8 @@ import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
 import Image from "next/image";
 import { InfoBoxesContainer } from "./components/Info";
 import SmallBoxes from "./components/smallBoxes";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import { slidesData } from "./data";
+import { latestProducts, productsData, slidesData } from "./data";
+import FeaturedProductsSection from "./components/FeaturedProduct";
 
 const Home = () => {
      return (
@@ -21,21 +20,7 @@ const Home = () => {
                </div>
                <InfoBoxesContainer />
                <SmallBoxes />
-
-               <section className="featured-products-section">
-                    <div className="container">
-                         <h2 className="section-title heading-border ls-20 border-0">
-                              Featured Products
-                         </h2>
-                         <div
-                              className="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center"
-                             
-                         >
-                            
-                         </div>
-                         {/* End .featured-proucts */}
-                    </div>
-               </section>
+               <FeaturedProductsSection products={[...productsData]} />
                <section className="new-products-section">
                     <div className="container">
                          <h2 className="section-title heading-border ls-20 border-0">
