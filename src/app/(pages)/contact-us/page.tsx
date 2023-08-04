@@ -1,8 +1,50 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import GoogleMapComponent from "@/app/components/GoogleMap";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import toast from "react-hot-toast";
+import { ContactUsService } from "@/api/contact-us.api";
+import { IcontactUsReq } from "./contact.types";
+import { schema } from "./schema";
+import { getSubDomain } from "@/utils/helper";
 
 export default function ContactUs() {
+     const contactUsApiService = new ContactUsService();
+     const [domain, setDomain] = React.useState<string>("");
+
+     const {
+          register,
+          handleSubmit,
+          formState: { errors },
+          reset,
+     } = useForm({
+          resolver: yupResolver(schema),
+     });
+
+     const mutation = useMutation({
+          mutationFn: (payload: IcontactUsReq) => {
+               return contactUsApiService.sendContactUsMessage(payload);
+          },
+          onSuccess() {
+               toast.success("Message sent successfully");
+          },
+          onError(error) {
+               toast.error("An Error occured while trying to send message");
+          },
+     });
+
+     const onSubmit = async (data: IcontactUsReq) => {
+          console.log({ data });
+          try {
+               mutation.mutate(data);
+          } catch (err: any) {
+               toast.error(err.data.message);
+          }
+     };
+
      const img1 =
           "https://images.unsplash.com/photo-1689481172416-dae28c4a08b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=822&q=80";
      return (
@@ -15,64 +57,84 @@ export default function ContactUs() {
                                    <strong>Contact Us</strong>
                               </h2>
 
-                              <form action="#">
+                              <form onSubmit={handleSubmit(onSubmit)}>
+                                   <input
+                                        type="text"
+                                        id="domain"
+                                        className="hidden"
+                                        value={getSubDomain(window.location.host) || ""}
+                                        {...register("domain")}
+                                        name="domain"
+                                   />
                                    <div className="row">
                                         <div className="col-md-6">
                                              <div className="form-group required-field">
-                                                  <label htmlFor="contact-name">Your name</label>
+                                                  <label htmlFor="fullName">Your Full Name</label>
                                                   <input
                                                        type="text"
                                                        className="form-control"
-                                                       id="contact-name"
-                                                       name="contact-name"
-                                                       required
+                                                       id="fullName"
+                                                       {...register("fullName")}
+                                                       name="fullName"
                                                   />
+                                                  <p className="text-red-500 text-base">
+                                                       {errors.fullName?.message}
+                                                  </p>
                                              </div>
                                         </div>
 
                                         <div className="col-md-6">
                                              <div className="form-group required-field">
-                                                  <label htmlFor="contact-email">
-                                                       Your email address
-                                                  </label>
+                                                  <label htmlFor="email">Your email address</label>
                                                   <input
                                                        type="email"
+                                                       {...register("email")}
                                                        className="form-control"
-                                                       id="contact-email"
-                                                       name="contact-email"
-                                                       required
+                                                       id="email"
+                                                       name="email"
                                                   />
+                                                  <p className="text-red-500 text-base">
+                                                       {errors.email?.message}
+                                                  </p>
                                              </div>
                                         </div>
                                    </div>
 
                                    <div className="form-group">
-                                        <label htmlFor="contact-subject">Subject</label>
+                                        <label htmlFor="subject">Subject</label>
                                         <input
                                              type="text"
+                                             {...register("subject")}
                                              className="form-control"
-                                             id="contact-subject"
-                                             name="contact-subject"
+                                             id="subject"
+                                             name="subject"
                                         />
+                                        <p className="text-red-500 text-base">
+                                             {errors.subject?.message}
+                                        </p>
                                    </div>
 
                                    <div className="form-group mb-0">
-                                        <label htmlFor="contact-message">Your Message</label>
+                                        <label htmlFor="content">Your Message</label>
                                         <textarea
                                              cols={30}
                                              rows={1}
-                                             id="contact-message"
+                                             {...register("content")}
+                                             id="content"
                                              className="form-control"
-                                             name="contact-message"
-                                             required
+                                             name="content"
                                         ></textarea>
+                                        <p className="text-red-500 text-base">
+                                             {errors.content?.message}
+                                        </p>
                                    </div>
 
-                                   <div className="form-footer">
-                                        <button type="submit" className="btn btn-primary">
-                                             SEND MESSAGE
-                                        </button>
-                                   </div>
+                                   <button
+                                        type="submit"
+                                        className="bg-gray-800 text-white px-4 py-2 w-full mt-4 rounded-md"
+                                   >
+                                        SEND MESSAGE
+                                   </button>
                               </form>
                          </div>
 

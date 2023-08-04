@@ -26,10 +26,12 @@ export default function Register() {
                toast.error(err.data.message);
           }
      };
+
      React.useEffect(() => {
           const subDomain = window.location.host.split(".")[0];
           setDomain(subDomain);
      }, []);
+
      return (
           <div className="flex w-screen h-screen items-center justify-center">
                <div className="bg-gray-50 p-6 border rounded-xl w-full md:w-1/2 xl:w-1/3">

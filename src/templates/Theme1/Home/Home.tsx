@@ -29,7 +29,7 @@ export const Home = () => {
      };
 
      return (
-          <main className="main">
+          <main className="main d-block">
                <div className="home-top-container mt-lg-2">
                     <div className="container">
                          <div className="row">
