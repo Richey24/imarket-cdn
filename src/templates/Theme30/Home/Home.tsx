@@ -1,10 +1,8 @@
 import React from "react";
-import { Product } from "./components/Product";
 import FeaturedProduct from "./components/FeaturedProducts";
 import { Banner } from "./components/Banner";
-import PopularProducts from "./components/PopularProducts";
 import { latestProducts } from "./data";
-import OurCategory from "./components/OurCategory";
+import { InfoBoxesContainer } from "./components/Info";
 import Gift from "./components/Gifts";
 import ShopGifts from "./components/ShopGift";
 
@@ -14,37 +12,19 @@ export const Home = () => {
                <div className="container">
                     <Banner />
 
-                    <div className="container">
-                         <div className="text-2xl font-extrabold my-10" >Best Selling Gifts</div>
-                         <FeaturedProduct products={latestProducts} />
-                    </div>
-
+                    <Gift />
+                    <div className="text-2xl font-extrabold my-10">Best Selling Gifts</div>
+                    <FeaturedProduct products={latestProducts} />
+                    <InfoBoxesContainer />
                </div>
                {/* End .home-top-container */}
-               <div className="container my-12">
-                    <Gift />
 
-               </div>
                <ShopGifts />
-               <div className="container my-12">
-                    <div>JUST ARRIVED</div>
-                    <hr className="h-0 border-b mb-1 w-full" />
-
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                         {latestProducts.map((product) => {
-                              return <Product
-                                   productImageUrl={product.imageUrl}
-                                   productCategory={product.category}
-                                   productTitle={product.title}
-                                   productPrice={product.price} />
-
-                         })}
-                    </div>
-                    <hr className="h-0 border-b mb-1 w-full" />
-               </div>
                <div className="container">
-                    <PopularProducts />
+                    <div className="text-2xl font-extrabold mt-10">Our Recommendations</div>
+                    <hr className="h-0 border-b mb-3 w-full" />
+                    <FeaturedProduct products={latestProducts} />
                </div>
-          </main >
+          </main>
      );
 };

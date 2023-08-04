@@ -12,10 +12,7 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
         <Swiper
             slidesPerView={4}
             spaceBetween={30}
-            pagination={{
-                clickable: true,
-            }}
-            modules={[Pagination]}
+            // modules={[Pagination]}
             className="mySwiper"
         >
             {products.map((product: Iproduct) => {

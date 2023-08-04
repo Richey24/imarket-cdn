@@ -1,98 +1,242 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import OwlCarousel from "react-owl-carousel";
+
+const owlCarouselOptions = {
+     dots: false,
+     margin: 20,
+     loop: false,
+     responsive: {
+          576: {
+               items: 1,
+          },
+     },
+};
 
 export const Banner = () => {
-
      return (
-          <div className="home-top-container">
-               <div className="container">
-                    <div className="row h-[50rem]">
-                         <div className="col-lg-6 mb-2">
-                              <div className="home-banner banner banner1 banner-md-vw banner-sm-vw d-flex align-items-center">
-                                   <figure className="w-100">
-                                        <Image src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=728&q=80"
-                                             className="bg-[#4a4a4a]" fill alt="banner" />
-                                   </figure>
-                                   <div className="banner-layer">
-                                        <h4 className=" text-white mb-0">Find the Boundaries</h4>
-                                        <h2 className="text-white mb-0">Flash Sale</h2>
-                                        <h3 className="text-white text-uppercase m-b-3">70% Off</h3>
-                                        <h5 className="text-white text-uppercase ls-n-20 align-text-bottom">
-                                             Starting At <b
-                                                  className="coupon-sale-text bg-secondary text-white d-inline-block">$<em
-                                                       className="align-text-top">199</em>99</b></h5>
-                                        <a href="demo7-shop.html" className="btn bg-white btn-md ls-10">Shop Now!</a>
+          <div className="container">
+               <section className="mb-2">
+                    <div className="row">
+                         <div className="col-lg-6">
+                              <div className="home-banner">
+                                   <div className="row m-0">
+                                        <div className="col-sm-6 p-0 pr-sm-2 d-flex align-items-center justify-content-center justify-content-lg-end text-center text-sm-right">
+                                             <div className="banner-content ">
+                                                  <span>An entire week to enjoy all offers</span>
+                                                  <h3 className="ls-0">The Week</h3>
+                                                  <h4 className="ls-0">Gift Shop</h4>
+                                                  <Link href="demo30-shop.html" className="btn">
+                                                       SHOP NOW
+                                                  </Link>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 p-0">
+                                             <OwlCarousel
+                                                  className="info-boxes-slider owl-carousel owl-theme"
+                                                  {...owlCarouselOptions}
+                                             >
+                                                  <div className="product-default pt-5">
+                                                       <figure>
+                                                            <Link href="demo30-product.html">
+                                                                 <img
+                                                                      src="https://images.unsplash.com/photo-1530733895788-f39cc96b6ae8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                                                                      width="280"
+                                                                      height="280"
+                                                                      alt="Product"
+                                                                 />
+                                                                 <img
+                                                                      src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                                                      width="280"
+                                                                      height="280"
+                                                                      alt="Product"
+                                                                 />
+                                                            </Link>
+                                                       </figure>
+                                                       <div className="product-details">
+                                                            <h3 className="product-title">
+                                                                 {" "}
+                                                                 <Link href="demo30-product.html">
+                                                                      Ceramic Panda Mug
+                                                                 </Link>{" "}
+                                                            </h3>
+                                                            <div className="price-box">
+                                                                 <span className="old-price">
+                                                                      $59.00
+                                                                 </span>
+                                                                 <span className="product-price">
+                                                                      $49.00
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div className="product-default pt-5">
+                                                       <figure>
+                                                            <Link href="demo30-product.html">
+                                                                 <img
+                                                                      src="https://images.unsplash.com/photo-1614850715661-902fd7e93c78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                                                      width="280"
+                                                                      height="280"
+                                                                      alt="Product"
+                                                                 />
+                                                                 <img
+                                                                      src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                                                                      width="280"
+                                                                      height="280"
+                                                                      alt="Product"
+                                                                 />
+                                                            </Link>
+                                                       </figure>
+                                                       <div className="product-details">
+                                                            <h3 className="product-title">
+                                                                 {" "}
+                                                                 <Link href="demo30-product.html">
+                                                                      USB Memories
+                                                                 </Link>{" "}
+                                                            </h3>
+                                                            <div className="price-box">
+                                                                 <span className="old-price">
+                                                                      $59.00
+                                                                 </span>
+                                                                 <span className="product-price">
+                                                                      $49.00
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div className="product-default pt-5">
+                                                       <figure>
+                                                            <Link href="demo30-product.html">
+                                                                 <img
+                                                                      src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                                                      width="280"
+                                                                      height="280"
+                                                                      alt="Product"
+                                                                 />
+                                                                 <img
+                                                                      src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                                                      width="280"
+                                                                      height="280"
+                                                                      alt="Product"
+                                                                 />
+                                                            </Link>
+                                                       </figure>
+                                                       <div className="product-details">
+                                                            <h3 className="product-title">
+                                                                 {" "}
+                                                                 <Link href="demo30-product.html">
+                                                                      Sugar
+                                                                 </Link>
+                                                            </h3>
+                                                            <div className="price-box">
+                                                                 <span className="old-price">
+                                                                      $59.00
+                                                                 </span>
+                                                                 <span className="product-price">
+                                                                      $49.00
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </OwlCarousel>
+                                        </div>
                                    </div>
                               </div>
                          </div>
-
-                         <div className="col-lg-3 col-sm-6 mb-2">
-                              <div className="row h-100">
-                                   <div className="col-lg-12 mb-2">
-                                        <div className="banner banner2 banner-hover-shadow d-flex align-items-center">
-                                             <figure className="w-100">
-                                                  <Image src="https://images.unsplash.com/photo-1634581448750-22a591d78099?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
-                                                       className="bg-[#ccc]" fill alt="banner" />
-                                             </figure>
-                                             <div className="banner-layer">
-                                                  <h3 className="m-b-2">Porto Watches</h3>
-                                                  <h4 className="m-b-2 text-secondary"><sup
-                                                       className="text-dark"><del>20%</del></sup>30%<sup>OFF</sup></h4>
-                                                  <a href="demo7-shop.html" className="btn btn-dark text-uppercase ls-10">Shop
-                                                       Now</a>
-                                                  <Image src="https://images.unsplash.com/photo-1634581448750-22a591d78099?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
-                                                       className="bg-[#eee]" width="48" height="15" alt="brand" />
+                         <div className="col-sm-6 col-lg-3">
+                              <div className="home-banner2 text-center">
+                                   <h3 className="mb-0">Flash Sale Running!</h3>
+                                   <div className="banner-content">
+                                        <div className="product-panel">
+                                             <div className="product-default mt-0">
+                                                  <figure className="mb-0">
+                                                       <Link href="demo30-product.html">
+                                                            <img
+                                                                 src="https://images.unsplash.com/photo-1510162126413-f644071b8f60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80"
+                                                                 width="280"
+                                                                 height="280"
+                                                                 alt="Product"
+                                                            />
+                                                       </Link>
+                                                  </figure>
+                                                  <div className="product-details">
+                                                       <h3 className="product-title">
+                                                            {" "}
+                                                            <Link href="demo30-product.html">
+                                                                 Teddy Bear Blue
+                                                            </Link>{" "}
+                                                       </h3>
+                                                       <div className="price-box">
+                                                            <span className="old-price">
+                                                                 $59.00
+                                                            </span>
+                                                            <span className="product-price">
+                                                                 $49.00
+                                                            </span>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </div>
-                                   </div>
-
-                                   <div className="col-lg-12">
-                                        <div
-                                             className="banner banner3 text-uppercase banner-hover-shadow d-flex align-items-center">
-                                             <figure className="w-100">
-                                                  <Image fill src="https://images.unsplash.com/photo-1634581448750-22a591d78099?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="banner" />
-                                             </figure>
-
-                                             <h6 className="banner-label left-label">50<small><sup>%</sup><sub>OFF</sub></small>
-                                             </h6>
-                                             <h6 className="banner-label right-label">70<small><sup>%</sup><sub>OFF</sub></small>
-                                             </h6>
-                                             <h6 className="banner-label bottom-label mb-0">
-                                                  30<small><sup>%</sup><sub>OFF</sub></small>
-                                             </h6>
-
-                                             <div className="banner-layer banner-layer-middle text-center">
-                                                  <h3 className="m-b-1 ls-10">DEAL PROMOS</h3>
-                                                  <h4 className="ls-0 text-body">STARTING AT $99</h4>
-                                                  <a href="demo7-shop.html" className="btn btn-dark btn-black ls-10">SHOP NOW</a>
-                                             </div>
-                                        </div>
+                                        <Link href="demo30-shop.html" className="btn">
+                                             SHOP SALE NOW
+                                        </Link>
                                    </div>
                               </div>
                          </div>
-
-                         <div className="col-lg-3 col-sm-6 mb-2">
-                              <div className="banner banner4 text-uppercase banner-hover-shadow d-flex align-items-center">
-                                   <figure className="w-100">
-                                        <Image src="https://images.unsplash.com/photo-1634581448750-22a591d78099?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
-                                             className="bg-[#555]" fill alt="banner" />
-                                   </figure>
-
-                                   <div className="banner-layer banner-layer-middle d-flex align-items-end flex-column">
-                                        <div className="coupon-sale-content">
-                                             <h3 className="text-white font1">Leather Jackets</h3>
-                                             <h5 className="coupon-sale-text text-white ls-0 p-0"><i className="ls-0 font1">UP
-                                                  TO</i><b className="text-white bg-secondary">$100</b><sub>OFF</sub></h5>
-                                             <a href="demo7-shop.html"
-                                                  className="btn bg-white btn-lg ls-10 d-block d-lg-inline-block  text-dark">Get
-                                                  Yours!</a>
+                         <div className="col-sm-6 col-lg-3">
+                              <div
+                                   className="home-banner3 text-center"
+                                   style={{
+                                        backgroundImage:
+                                             "url('https://images.unsplash.com/photo-1531256379416-9f000e90aacc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');",
+                                   }}
+                              >
+                                   <h3 className="ls-10">
+                                        Gift Finder
+                                        <br />
+                                        <span>Find the Perfect Gift</span>
+                                   </h3>
+                                   <div className="select-box">
+                                        <div className="select-custom">
+                                             <select className="form-control">
+                                                  <option selected hidden>
+                                                       Price Range
+                                                  </option>
+                                                  <option>0 - 100</option>
+                                                  <option>100 - 200</option>
+                                                  <option>200 - 500</option>
+                                             </select>
+                                        </div>
+                                        <div className="select-custom">
+                                             <select className="form-control">
+                                                  <option selected hidden>
+                                                       By color
+                                                  </option>
+                                                  <option>Red</option>
+                                                  <option>Green</option>
+                                                  <option>Blue</option>
+                                             </select>
+                                        </div>
+                                        <div className="select-custom">
+                                             <select className="form-control">
+                                                  <option selected hidden>
+                                                       By size
+                                                  </option>
+                                                  <option>L</option>
+                                                  <option>M</option>
+                                                  <option>X</option>
+                                                  <option>XL</option>
+                                             </select>
                                         </div>
                                    </div>
+                                   <Link href="demo30-shop.html" className="btn btn-primary">
+                                        VIEW SUGGESTIONS
+                                   </Link>
                               </div>
-
                          </div>
                     </div>
-               </div>
+               </section>
           </div>
      );
 };
