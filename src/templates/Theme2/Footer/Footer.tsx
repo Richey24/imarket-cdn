@@ -105,7 +105,7 @@ const Footer = (): JSX.Element => {
                <div className="container">
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
-                              <span className="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+                              <span className="footer-copyright">© Dreamtechlabs 2023. All Rights Reserved</span>
                          </div>
 
                          <div className="footer-right ml-auto mt-1 mt-sm-0">
