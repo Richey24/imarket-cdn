@@ -20,12 +20,7 @@ export default function MainCategory() {
           <section className="bg-gray banners-section text-center">
                <div className="container py-2">
                     <div className="row">
-                         <div
-                              className="col-sm-6 col-lg-3"
-                              data-animation-name="fadeInLeftShorter"
-                              data-animation-delay="100"
-                              data-animation-duration="1000"
-                         >
+                         <div className="col-sm-6 col-lg-3">
                               <div className="home-banner banner banner-sm-vw mb-2">
                                    <img
                                         src="https://images.unsplash.com/photo-1523297736436-356615162cc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
@@ -47,12 +42,7 @@ export default function MainCategory() {
                                    </div>
                               </div>
                          </div>
-                         <div
-                              className="col-sm-6 col-lg-3 appear-animate"
-                              data-animation-name="fadeInLeftShorter"
-                              data-animation-delay="300"
-                              data-animation-duration="1000"
-                         >
+                         <div className="col-sm-6 col-lg-3 ">
                               <div className="home-banner banner banner-sm-vw mb-2">
                                    <img
                                         src="https://images.unsplash.com/photo-1523297736436-356615162cc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
@@ -74,12 +64,7 @@ export default function MainCategory() {
                                    </div>
                               </div>
                          </div>
-                         <div
-                              className="col-sm-6 col-lg-3 appear-animate"
-                              data-animation-name="fadeInLeftShorter"
-                              data-animation-delay="500"
-                              data-animation-duration="1000"
-                         >
+                         <div className="col-sm-6 col-lg-3 ">
                               <div className="home-banner banner banner-sm-vw mb-2">
                                    <img
                                         src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80"
@@ -103,12 +88,7 @@ export default function MainCategory() {
                                    </div>
                               </div>
                          </div>
-                         <div
-                              className="col-sm-6 col-lg-3 appear-animate"
-                              data-animation-name="fadeInLeftShorter"
-                              data-animation-delay="700"
-                              data-animation-duration="1000"
-                         >
+                         <div className="col-sm-6 col-lg-3 ">
                               <div className="home-banner banner banner-sm-vw mb-2">
                                    <img
                                         src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"

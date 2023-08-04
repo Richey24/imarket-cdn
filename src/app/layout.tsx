@@ -24,8 +24,8 @@ import "../assets/css/bootstrap.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 // import "../assets/js/webfont";
-import "../assets/css/demo30.min.css";
-// import "../assets/css/demo3.min.css";
+// import "../assets/css/demo30.min.css";
+import "../assets/css/demo3.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
