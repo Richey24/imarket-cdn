@@ -11,12 +11,12 @@ import { theme11TemplateConfig } from "./theme11";
 // Theme6 demo2
 // Theme7 demo3
 export const templateConfig: any = {
-     theme1: theme1TemplateConfig,
-     theme2: theme2TemplateConfig,
-     theme3: theme3TemplateConfig,
-     theme5: theme5TemplateConfig,
-     theme6: theme6TemplateConfig,
-     theme7: theme7TemplateConfig,
-     theme10: theme10TemplateConfig,
-     theme11: theme11TemplateConfig,
+    theme1: theme1TemplateConfig,
+    theme2: theme2TemplateConfig,
+    theme3: theme3TemplateConfig,
+    theme5: theme5TemplateConfig,
+    theme6: theme6TemplateConfig,
+    theme7: theme7TemplateConfig,
+    theme10: theme10TemplateConfig,
+    theme11: theme11TemplateConfig,
 };

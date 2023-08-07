@@ -15,6 +15,7 @@ import $ from "jquery";
 import Popper from "popper.js";
 import Script from "next/script";
 import Head from "next/head";
+import "owl.carousel/dist/assets/owl.carousel.css";
 import "../assets/css/bootstrap.min.css";
 // import "../assets/css/demo13.min.css";
 // import "../assets/css/demo1.min.css";
