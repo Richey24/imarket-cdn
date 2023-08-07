@@ -15,6 +15,7 @@ import $ from "jquery";
 import Popper from "popper.js";
 import Script from "next/script";
 import Head from "next/head";
+import "owl.carousel/dist/assets/owl.carousel.css";
 import "../assets/css/bootstrap.min.css";
 // import "../assets/css/demo13.min.css";
 // import "../assets/css/demo1.min.css";
@@ -24,6 +25,9 @@ import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 import "../assets/js/webfont";
 // import "bootstrap/dist/css/bootstrap.min.css";
+
+import "slick-carousel/slick/slick.css"; // Import react-slick styles
+import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
 
 const inter = Inter({ subsets: ["latin"] });
 
