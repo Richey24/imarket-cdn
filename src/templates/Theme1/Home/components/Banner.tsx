@@ -6,28 +6,18 @@ import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import "slick-carousel/slick/slick.css"; // Import react-slick styles
 import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
 
-export const Banner = () => {
+export const Banner = ({ slides }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
 
-     const slides = [
-          {
-               background: "#555",
-               imageSrc: slide1,
-               title: "Find the Boundaries. Push Through!",
-               saleTitle: "Summer Sale",
-               discount: "70% Off",
-               price: "$199.99",
-               link: "demo13-shop.html",
-          },
-          {
-               background: "rgb(216, 41, 41)",
-               imageSrc: slide2,
-               title: "Over 200 products with discounts",
-               saleTitle: "Great Deals",
-               price: "$299.99",
-               link: "demo13-shop.html",
-          },
-     ];
+     const mappedSlides = slides.map((slide: any) => ({
+          background: "#555",
+          imageSrc: slide?.imageUrl !== "" ? slide?.imageUrl : slide1,
+          title: "Find the Boundaries. Push Through!",
+          saleTitle: "Summer Sale",
+          discount: "70% Off",
+          price: "$199.99",
+          link: "demo13-shop.html",
+     }));
 
      const settings = {
           dots: true,
@@ -41,7 +31,7 @@ export const Banner = () => {
      return (
           <div className="col-lg-9 col-md-12 mb-2">
                <Slider {...settings}>
-                    {slides.map((slide, index) => (
+                    {mappedSlides.map((slide, index) => (
                          <div
                               key={index}
                               className={`home-slide banner banner-md-vw h-100 ${
