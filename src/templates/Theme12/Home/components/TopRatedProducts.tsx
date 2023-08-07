@@ -1,16 +1,7 @@
-import Featured1 from "../../../../assets/images/demoes/demo21/products/product-1.jpg";
-import Featured from "../../../../assets/images/demoes/demo21/products/product-1-2.jpg";
-import Featured2 from "../../../../assets/images/demoes/demo21/products/product-2.jpg";
-import Featured3 from "../../../../assets/images/demoes/demo21/products/product-3.jpg";
-import Featured4 from "../../../../assets/images/demoes/demo21/products/product-4.jpg";
-import Featured5 from "../../../../assets/images/demoes/demo21/products/product-5.jpg";
-import Featured6 from "../../../../assets/images/demoes/demo21/products/product-6.jpg";
-import Subproduct from "../../../../assets/images/demoes/demo21/products/product-3-2.jpg";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
-import { featuredProducts } from "../data";
-export const FeaturedProducts = () => {
+import { mostViedProducts } from "../data";
+export const TopRatedProducts = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -22,25 +13,25 @@ export const FeaturedProducts = () => {
      };
      return (
           <section
-               className="featured-products-section appear-animate"
-               style={{ paddingRight: "80px", paddingLeft: "80px" }}
+               className="most-viewed-products appear-animate"
+               style={{ paddingLeft: "80px", paddingRight: "80px" }}
           >
                <div className="container">
-                    <h2 className="section-title ls-n-10 pb-3 m-b-4">Featured Products</h2>
-                    <div className="row no-gutters">
-                         <Slider {...settings}>
-                              {featuredProducts.map((product) => (
-                                 
+                    <h2 className="section-title ls-n-10 pb-3 m-b-4">Top Rated Products</h2>
+                    <div className="row">
+                         <div className="products-slider 5col  owl-theme owl-nav-outisde show-nav-hover nav-image-center custom-nav">
+                              <Slider {...settings}>
+                                   {" "}
+                                   {mostViedProducts.map((product) => (
                                         <div className="product-default inner-quickview inner-icon">
                                              <figure>
-                                                  <a href="demo21-product.html">
+                                                  <a href="demo22-product.html">
                                                        <img
                                                             src={product.productImageUrl.src}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
                                                        />
-                                                    
                                                   </a>
                                                   <div className="label-group">
                                                        <div className="product-label label-hot">
@@ -49,10 +40,11 @@ export const FeaturedProducts = () => {
                                                   </div>
                                                   <div className="btn-icon-group">
                                                        <a
-                                                            href="demo21-product.html"
-                                                            className="btn-icon btn-add-cart"
+                                                            href="#"
+                                                            title="Add To Cart"
+                                                            className="btn-icon btn-add-cart product-type-simple"
                                                        >
-                                                            <i className="fa fa-arrow-right" />
+                                                            <i className="icon-shopping-cart" />
                                                        </a>
                                                   </div>
                                                   <a
@@ -67,7 +59,7 @@ export const FeaturedProducts = () => {
                                                   <div className="category-wrap">
                                                        <div className="category-list">
                                                             <a
-                                                                 href="demo21-shop.html"
+                                                                 href="demo22-shop.html"
                                                                  className="product-category"
                                                             >
                                                                  category
@@ -82,28 +74,29 @@ export const FeaturedProducts = () => {
                                                        </a>
                                                   </div>
                                                   <h3 className="product-title">
-                                                       <a href="demo21-product.html">
-                                                            Digital Camera 16x
+                                                       <a href="demo22-product.html">
+                                                            {product.productTitle}
                                                        </a>
                                                   </h3>
                                                   {/* <div class="ratings-container">
-               <div class="product-ratings">
-                   <span class="ratings" style="width:100%"></span>
-                   <span class="tooltiptext tooltip-top"></span>
-               </div>
-           </div> */}
+           <div class="product-ratings">
+               <span class="ratings" style="width:100%"></span>
+               <span class="tooltiptext tooltip-top"></span>
+           </div>
+       </div> */}
+                                                  {/* End .product-container */}
                                                   <div className="price-box">
                                                        <span className="product-price">
-                                                            $101.00 – $111.00
+                                                            ${product.productPrice}
                                                        </span>
                                                   </div>
                                                   {/* End .price-box */}
                                              </div>
                                              {/* End .product-details */}
                                         </div>
-                                   
-                              ))}
-                         </Slider>
+                                   ))}
+                              </Slider>
+                         </div>
                     </div>
                </div>
           </section>

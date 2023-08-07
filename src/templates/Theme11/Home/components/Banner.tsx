@@ -13,12 +13,13 @@ export const Banner = () => {
           <section className="intro-section">
                {activeTab === "drones" && (
                     <div
-                         className="home-slide banner"
+                         className="home-slide banner test"
                          style={{
-                              backgroundImage: `url(${slide1})`,
+                              background: `url(${slide1.src})`,
+                             
                          }}
                     >
-                         <div className="banner-layer banner-layer-middle">
+                         <div className="banner-layer banner-layer-middle" style={{ paddingLeft:'80px',}}>
                               <div className="container banner-content">
                                    <h2
                                         className="font1 font-weight-normal text-uppercase mb-0 appear-animate"
@@ -59,10 +60,10 @@ export const Banner = () => {
                     <div
                          className="home-slide banner"
                          style={{
-                              backgroundImage: `url(${slide3})`,
+                              backgroundImage: `url(${slide2.src})`,
                          }}
                     >
-                         <div className="banner-layer banner-layer-middle">
+                         <div className="banner-layer banner-layer-middle" style={{ paddingLeft:'80px',}}>
                               <div className="container banner-content">
                                    <h2
                                         className="font1 font-weight-normal text-uppercase mb-0 appear-animate"
@@ -103,10 +104,10 @@ export const Banner = () => {
                     <div
                          className="home-slide banner"
                          style={{
-                              backgroundImage: `url(${slide3})`,
+                              backgroundImage: `url(${slide3.src})`,
                          }}
                     >
-                         <div className="banner-layer banner-layer-middle">
+                         <div className="banner-layer banner-layer-middle" style={{ paddingLeft:'80px',}}>
                               <div className="container banner-content">
                                    <h2
                                         className="font1 font-weight-normal text-uppercase mb-0 appear-animate"
@@ -144,8 +145,8 @@ export const Banner = () => {
                     </div>
                )}
 
-               <div className="home-slider-sidebar d-none d-sm-block">
-                    <div className="container">
+               <div className="home-slider-sidebar d-none d-sm-block" style={{paddingRight:'80px'}}>
+                    <div className="container" >
                          <ul>
                               <li
                                    className={`nav-link ${activeTab === "drones" ? "active" : ""}`}

@@ -18,6 +18,7 @@ import subproduct13 from "../../../assets/images/demoes/demo21/products/special/
 import product14 from "../../../assets/images/demoes/demo21/products/special/product-14.jpg";
 import product11 from "../../../assets/images/demoes/demo21/products/special/product-11.jpg";
 import subproduct14 from "../../../assets/images/demoes/demo21/products/special/product-14-2.jpg";
+import SubProduct8 from "../../../assets/images/demoes/demo21/products/product-8-2.jpg";
 import brand1 from "../../../assets/images/demoes/demo21/brands/brand1.png";
 import brand2 from "../../../assets/images/demoes/demo21/brands/brand2.png";
 import brand3 from "../../../assets/images/demoes/demo21/brands/brand3.png";
@@ -25,6 +26,106 @@ import brand4 from "../../../assets/images/demoes/demo21/brands/brand4.png";
 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 
+export const featuredProducts: ProductProps[] = [
+     {
+          productImageAlt: "product",
+          productCategory: "CATEGORY",
+          productImageUrl: product1,
+          productImageUrlTwo: product2,
+          productTitle: "Casual Note Bag",
+          productPrice: 299,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "CAPS, DRESS",
+          productImageUrl: product2,
+          productImageUrlTwo: subproduct2,
+          productTitle: "Blue Backpack",
+          productPrice: 299.0,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "CAPS, T-SHIRTS",
+          productImageUrl: product3,
+          productImageUrlTwo: product2,
+          productTitle: "Battery Charger",
+          productPrice: 259,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: product4,
+          productImageUrlTwo: product1,
+          productTitle: "Computer Mouse",
+          productPrice: 49,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: product5,
+          productImageUrlTwo: product1,
+          productTitle: "Computer Mouse",
+          productPrice: 49,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: product6,
+          productImageUrlTwo: product1,
+          productTitle: "Computer Mouse",
+          productPrice: 49,
+     },
+];
+export const newArrivalsProducts: ProductProps[] = [
+     {
+          productImageAlt: "product",
+          productCategory: "CATEGORY",
+          productImageUrl: product7,
+          productImageUrlTwo: product2,
+          productTitle: "Casual Note Bag",
+          productPrice: 299,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "CAPS, DRESS",
+          productImageUrl: product1,
+          productImageUrlTwo: subproduct2,
+          productTitle: "Blue Backpack",
+          productPrice: 299.0,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "CAPS, T-SHIRTS",
+          productImageUrl: product2,
+          productImageUrlTwo: product2,
+          productTitle: "Battery Charger",
+          productPrice: 259,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: product8,
+          productImageUrlTwo: product1,
+          productTitle: "Computer Mouse",
+          productPrice: 49,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: product7,
+          productImageUrlTwo: product1,
+          productTitle: "Computer Mouse",
+          productPrice: 49,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: product9,
+          productImageUrlTwo: product1,
+          productTitle: "Computer Mouse",
+          productPrice: 49,
+     },
+];
 export const bestsellersProducts: ProductProps[] = [
      {
           productImageAlt: "product",
