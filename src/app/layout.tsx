@@ -20,13 +20,11 @@ import "../assets/css/bootstrap.min.css";
 // import "../assets/css/demo13.min.css";
 // import "../assets/css/demo1.min.css";
 // import "../assets/css/demo2.min.css";
-import "../assets/css/demo3.min.css";
-// import "../assets/css/demo20.min.css";
-//  import "../assets/css/demo21.min.css";
+import "../assets/css/demo8.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 import "../assets/js/webfont";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 import "slick-carousel/slick/slick.css"; // Import react-slick styles
 import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
@@ -45,6 +43,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <script src="../assets/js/main.min.js" defer></script>
                     <script src="../assets/js/jquery.min.js" defer />
                     <script src="../assets/js/bootstrap.bundle.min.js" defer />
+                    <script src="../assets/js/optional/imagesloaded.pkgd.min.js" defer></script>
+                    <script src="../assets/js/optional/isotope.pkgd.min.js" defer></script>
+                    <script src="../assets/js/jquery.appear.min.js" defer></script>
                     <script src="../assets/js/plugins.min.js" defer />
                     <script
                          src="https://cdnjs.cloudflare.com/ajax/libs/jquery-appear/0.1/jquery.appear.min.js"
