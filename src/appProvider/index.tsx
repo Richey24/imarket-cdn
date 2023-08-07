@@ -8,7 +8,6 @@ const dummySite = {
      theme: {
           theme: "theme3",
           pages: [
-               
                {
                     name: "home",
                     layout: "",
