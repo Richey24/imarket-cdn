@@ -131,5 +131,68 @@ export const productsData = [
           oldPrice: 299,
           productPrice: 249,
      },
+     {
+          imageUrl1:
+               "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          imageUrl2:
+               "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          altText: "Product 3 Image",
+          category: "Home & Kitchen",
+          productName: "Kitchen Appliance Set",
+          ratings: 4.8,
+          oldPrice: 299,
+          productPrice: 249,
+     },
+     {
+          imageUrl1:
+               "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          imageUrl2:
+               "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          altText: "Product 3 Image",
+          category: "Home & Kitchen",
+          productName: "Kitchen Appliance Set",
+          ratings: 4.8,
+          oldPrice: 299,
+          productPrice: 249,
+     },
      // Add more products here if needed
+];
+
+export const categories = [
+     {
+          name: "Dress",
+          link: "/categories/dress",
+          image: "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          productsCount: 3,
+     },
+     {
+          name: "Watches",
+          link: "/categories/watches",
+          image: "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          productsCount: 3,
+     },
+     {
+          name: "Machine",
+          link: "/categories/machine",
+          image: "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          productsCount: 3,
+     },
+     {
+          name: "Sofa",
+          link: "/categories/sofa",
+          image: "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          productsCount: 3,
+     },
+     {
+          name: "Headphone",
+          link: "/categories/headphone",
+          image: "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          productsCount: 3,
+     },
+     {
+          name: "Sports",
+          link: "/categories/sports",
+          image: "https://images.unsplash.com/photo-1690818723724-865c77962c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+          productsCount: 3,
+     },
 ];

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NextImage from "next/image";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
+import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
+import Slider from "react-slick";
 
 interface ProductData {
      imageUrl1: string;
@@ -16,32 +16,48 @@ interface ProductData {
 
 interface FeaturedProductsSectionProps {
      products: ProductData[];
+     section: string;
 }
 
-const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ products }) => {
-     const [imageWidths, setImageWidths] = useState<number[]>([]);
-     const owlCarouselOptions = {
-          dots: false,
-          margin: 20,
-          nav: true,
+const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ products, section }) => {
+     const [currentSlide, setCurrentSlide] = useState(0);
+
+     const settings = {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
      };
 
      return (
           <section className="featured-products-section">
                <div className="container">
-                    <h2 className="section-title heading-border ls-20 border-0">
-                         Featured Products
+                    <h2 className="section-title heading-border ls-20 border-0 color-black">
+                         {section}
                     </h2>
-                    <OwlCarousel
-                         className="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center"
-                         {...owlCarouselOptions}
-                    >
+
+                    <Slider {...settings} style={{ marginRight: "20px" }}>
                          {products.map((product, index) => (
-                              <div className="product-default" key={index}>
-                                   <figure>
+                              <div
+                                   className="product-default "
+                                   key={index}
+                                   style={{
+                                        marginRight: "30px !important",
+                                        marginLeft: "30px !important",
+                                        padding: "20px !important",
+                                   }}
+                              >
+                                   <figure style={{ marginRight: "20px", height: 280 }}>
                                         <a href="product.html">
-                                        <img src={product.imageUrl1} width="280" height="280" alt="product" />
-                                    {/* <img src="assets/images/products/product-2-2.jpg" width="280" height="280" alt="product"> */}
+                                             <img
+                                                  src={product.imageUrl1}
+                                                  width="280"
+                                                  height="280"
+                                                  alt="product"
+                                             />
+                                             {/* <img src="assets/images/products/product-2-2.jpg" width="280" height="280" alt="product"> */}
                                              {/* <NextImage
                                                   src={product.imageUrl1}
                                                   width={imageWidths[index] || 280}
@@ -113,7 +129,7 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                                    </div>
                               </div>
                          ))}
-                    </OwlCarousel>
+                    </Slider>
                </div>
           </section>
      );

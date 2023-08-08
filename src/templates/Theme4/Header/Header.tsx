@@ -1,4 +1,6 @@
 import React from "react";
+import logo from "../../../assets/images/your-logo.png";
+import phone from "../../../assets/images/phone.png";
 
 const Header = () => {
      return (
@@ -17,24 +19,37 @@ const Header = () => {
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <a href="dashboard.html">My Account</a>
-                                             </li>
-                                             <li>
-                                                  <a href="about.html">About Us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="blog.html">Blog</a>
-                                             </li>
-                                             <li>
-                                                  <a href="wishlist.html">My Wishlist</a>
+                                                  <a href="dashboard.html">Dashboard</a>
                                              </li>
                                              <li>
                                                   <a href="cart.html">Cart</a>
                                              </li>
                                              <li>
-                                                  <a href="login.html" className="login-link">
-                                                       Log In
-                                                  </a>
+                                                  <a href="cart.html">Checkout</a>
+                                             </li>
+                                             <li>
+                                                  <a href="wishlist.html">Wishlist</a>
+                                             </li>
+                                             <li>
+                                                  <a href="about.html">About Us</a>
+                                             </li>
+                                             <li>
+                                                  <a href="blog.html">Contact Us</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                                   {/* End .header-menu */}
+                              </div>
+                              {/* End .header-dropown */}
+                              <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
+                                   <a href="#">Order</a>
+                                   <div className="header-menu">
+                                        <ul>
+                                             <li>
+                                                  <a href="#">Order Tracking</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">Order History</a>
                                              </li>
                                         </ul>
                                    </div>
@@ -116,12 +131,7 @@ const Header = () => {
                                    <i className="fas fa-bars" />
                               </button>
                               <a href="demo4.html" className="logo">
-                                   <img
-                                        src="assets/images/logo.png"
-                                        width={111}
-                                        height={44}
-                                        alt="Porto Logo"
-                                   />
+                                   <img src={logo.src} width={111} height={44} alt="Porto Logo" />
                               </a>
                          </div>
                          {/* End .header-left */}
@@ -180,7 +190,7 @@ const Header = () => {
                               <div className="header-contact d-none d-lg-flex pl-4 pr-4">
                                    <img
                                         alt="phone"
-                                        src="assets/images/phone.png"
+                                        src={phone.src}
                                         width={30}
                                         height={30}
                                         className="pb-1"
@@ -662,17 +672,6 @@ const Header = () => {
                                                   <a href="about.html">About Us</a>
                                              </li>
                                              <li>
-                                                  <a href="#">Blog</a>
-                                                  <ul>
-                                                       <li>
-                                                            <a href="blog.html">Blog</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="single.html">Blog Post</a>
-                                                       </li>
-                                                  </ul>
-                                             </li>
-                                             <li>
                                                   <a href="contact.html">Contact Us</a>
                                              </li>
                                              <li>
@@ -684,84 +683,7 @@ const Header = () => {
                                         </ul>
                                    </li>
                                    <li>
-                                        <a href="blog.html">Blog</a>
-                                   </li>
-                                   <li>
-                                        <a href="#">Elements</a>
-                                        <ul className="custom-scrollbar">
-                                             <li>
-                                                  <a href="element-accordions.html">Accordion</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-alerts.html">Alerts</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-animations.html">Animations</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-banners.html">Banners</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-buttons.html">Buttons</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-call-to-action.html">
-                                                       Call to Action
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-countdown.html">Count Down</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-counters.html">Counters</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-headings.html">Headings</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-icons.html">Icons</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-info-box.html">Info box</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-posts.html">Posts</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-products.html">Products</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-product-categories.html">
-                                                       Product Categories
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-tabs.html">Tabs</a>
-                                             </li>
-                                             <li>
-                                                  <a href="element-testimonial.html">
-                                                       Testimonials
-                                                  </a>
-                                             </li>
-                                        </ul>
-                                   </li>
-                                   <li>
                                         <a href="contact.html">Contact Us</a>
-                                   </li>
-                                   <li className="float-right">
-                                        <a
-                                             href="https://1.envato.market/DdLk5"
-                                             rel="noopener"
-                                             className="pl-5"
-                                             target="_blank"
-                                        >
-                                             Buy Porto!
-                                        </a>
-                                   </li>
-                                   <li className="float-right">
-                                        <a href="#" className="pl-5">
-                                             Special Offer!
-                                        </a>
                                    </li>
                               </ul>
                          </nav>
