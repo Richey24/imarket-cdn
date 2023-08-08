@@ -6,9 +6,8 @@ export const AppContext = React.createContext<any>(null);
 const dummySite = {
      company: {},
      theme: {
-          theme: "theme11",
+          theme: "theme9",
           pages: [
-               
                {
                     name: "home",
                     layout: "",
@@ -22,24 +21,15 @@ const dummySite = {
                                    name: "",
                               },
                          },
-                         {
-                              name: "header",
-                              // type: "header",
-                              content: "",
-                              component: {
-                                   theme: "theme11",
-                                   props: { phone: "+1940595000" },
-                              },
-                         },
-                         {
-                              name: "home",
-                              // type: "header",
-                              content: "",
-                              component: {
-                                   theme: "theme11",
-                                   props: { phone: "+1940595000" },
-                              },
-                         },
+                         // {
+                         //      name: "header",
+                         //      // type: "header",
+                         //      content: "",
+                         //      component: {
+                         //           theme: "theme8",
+                         //           props: { phone: "+1940595000" },
+                         //      },
+                         // },
                     ],
                },
           ],
