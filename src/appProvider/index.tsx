@@ -12,24 +12,24 @@ const dummySite = {
                     name: "home",
                     layout: "",
                     sections: [
-                         // {
-                         //      name: "footer",
-                         //      // type: "footer",
-                         //      content: "",
-                         //      component: {
-                         //           theme: "theme1",
-                         //           name: "",
-                         //      },
-                         // },
                          {
-                              name: "header",
-                              // type: "header",
+                              name: "footer",
+                              // type: "footer",
                               content: "",
                               component: {
                                    theme: "theme4",
                                    props: { phone: "+1940595000" },
                               },
                          },
+                         // {
+                         //      name: "header",
+                         //      // type: "header",
+                         //      content: "",
+                         //      component: {
+                         //           theme: "theme8",
+                         //           props: { phone: "+1940595000" },
+                         //      },
+                         // },
                     ],
                },
           ],
