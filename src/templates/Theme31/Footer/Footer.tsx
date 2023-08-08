@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = (): JSX.Element => {
      return (
-          <footer className="footer">
+          <footer className="footer p-0">
                <div className="footer-top">
                     <div className="container">
                          <div className="footer-left nav-links">

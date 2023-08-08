@@ -28,3 +28,40 @@ export const templateConfig: any = {
     theme30: theme30TemplateConfig,
     theme31: theme31TemplateConfig
 };
+
+export const cssImports: { [key: string]: any } = {
+    theme1: require("../../assets/css/demo13.min.css"),
+    theme31: require("../../assets/css/demo31.min.css"),
+};
+
+export const themeProps = {
+    header: {
+        company: {},
+        static: {
+            languages: [],
+            currencies: [],
+            socials: [
+                { name: "facebook", link: "/" },
+                { name: "instagram", link: "/" },
+                { name: "twitter", link: "/" },
+            ],
+            pageLinks: [
+                {
+                    name: "home",
+                    url: "/",
+                    subMenu: null,
+                },
+                {
+                    name: "shop",
+                    url: "/tester",
+                    subMenu: [
+                        {
+                            name: "tester",
+                            url: "/shop/tester",
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+};

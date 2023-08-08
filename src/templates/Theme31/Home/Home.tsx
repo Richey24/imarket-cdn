@@ -12,19 +12,18 @@ export const Home = () => {
                <div className="container">
                     <Banner />
 
-                    <Gift />
-                    <div className="text-2xl font-extrabold my-10">Best Selling Gifts</div>
+                    {/* <Gift /> */}
+                    {/* <div className="text-2xl font-extrabold my-10">Best Selling Gifts</div>*/}
+                    <div className="section-title">
+                         <h2 className="mr-5 ls-0 mb-0">Recently Released</h2>
+                         <a href="demo31-product.html">
+                              view all products<i className="icon-right"></i>
+                         </a>
+                    </div>
                     <FeaturedProduct products={latestProducts} />
                     <InfoBoxesContainer />
                </div>
                {/* End .home-top-container */}
-
-               <ShopGifts />
-               <div className="container">
-                    <div className="text-2xl font-extrabold mt-10">Our Recommendations</div>
-                    <hr className="h-0 border-b mb-3 w-full" />
-                    <FeaturedProduct products={latestProducts} />
-               </div>
           </main>
      );
 };
