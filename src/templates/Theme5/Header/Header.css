@@ -1,0 +1,28 @@
+.theListDrop {
+    display: flex;
+    align-items: center;
+}
+
+.theListDrop::after {
+    content: "⮟";
+    margin-left: 5px;
+    font-weight: 400;
+    color: white;
+}
+
+.theList:hover,
+.theListDrop:hover {
+    color: white !important;
+}
+
+.cartCanvas {
+    display: none;
+}
+
+.showCanvas {
+    display: flex;
+}
+
+.showDrop {
+    display: block !important;
+}

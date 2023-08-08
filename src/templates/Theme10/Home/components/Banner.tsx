@@ -1,0 +1,1 @@
+import banner1 from "../../../assets/images/demoes/demo20/banners/banner-1.jpg";
