@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import NextImage from "next/image";
+import Image from "next/image";
 import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import Slider from "react-slick";
 
@@ -41,7 +41,7 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                     <Slider {...settings} style={{ marginRight: "20px" }}>
                          {products.map((product, index) => (
                               <div
-                                   className="product-default "
+                                   className="product-default mx-2"
                                    key={index}
                                    style={{
                                         marginRight: "30px !important",
@@ -51,7 +51,7 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                               >
                                    <figure style={{ marginRight: "20px", height: 280 }}>
                                         <a href="product.html">
-                                             <img
+                                             <Image
                                                   src={product.imageUrl1}
                                                   width="280"
                                                   height="280"
