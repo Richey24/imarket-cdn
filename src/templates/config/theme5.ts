@@ -6,7 +6,6 @@ import { IComponentProps } from "./config.type";
 
 export const theme5TemplateConfig = {
      header: T5Header,
-     // pageLink: T5pageLinks,
      home: Home,
      footer: T5Footer,
 };
