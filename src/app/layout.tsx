@@ -36,7 +36,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                          async
                          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
                     ></script>
-                    {/* <script src="../assets/js/main.min.js" defer></script> */}
                     <script src="../assets/js/jquery.min.js" defer />
                     <script src="../assets/js/bootstrap.bundle.min.js" defer />
                     <script src="../assets/js/plugins.min.js" defer />

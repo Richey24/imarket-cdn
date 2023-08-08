@@ -20,8 +20,6 @@ export default function Home() {
      const currentPage = "home";
      const { site } = useContext(AppContext);
 
-     // console.log("site", site);
-
      const newGeneratedTemplate = (): {
           [key: string]: { component?: React.ComponentType<any> | string; props?: object };
      } => {

@@ -27,9 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           return <NoSite />;
      }
 
+     console.log("nowSite", site);
      const defualtTemplate = templateConfig[site.theme.theme];
-     const Header = defualtTemplate["header"];
-     const Footer = defualtTemplate["footer"];
+     const Header = defualtTemplate?.["header"];
+     const Footer = defualtTemplate?.["footer"];
 
      return (
           <html lang="en">

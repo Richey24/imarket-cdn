@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = (props: any) => {
      return (
           <footer className="footer bg-dark position-relative">
                <div className="footer-middle">
