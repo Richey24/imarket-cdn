@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import BrowseByCategory from "./BrowseByCategories";
+import { StaticImageData } from "next/image";
 
 interface Category {
      name: string;
      link: string;
-     image: string;
+     image: string | StaticImageData;
      productsCount: number;
 }
 

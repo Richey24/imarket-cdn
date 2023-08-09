@@ -4,7 +4,7 @@ import phone from "../../../assets/images/phone.png";
 
 const Header = () => {
      return (
-          <header className="header">
+          <header className="header" style={{ background: "#fbfbfb" }}>
                <div className="header-top">
                     <div className="container">
                          <div className="header-left d-none d-sm-block">

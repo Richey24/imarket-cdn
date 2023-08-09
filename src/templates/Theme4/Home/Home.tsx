@@ -13,10 +13,11 @@ import {
      bestSellingWidget,
      categories,
      featuredProductWidget,
-     latestProducts,
-     postData,
+     latestproductWidget,
+     newArrivalData,
      productsData,
      slidesData,
+     topRatedWidget,
 } from "./data";
 import FeaturedProductsSection from "./components/FeaturedProduct";
 import CategoriesSlider from "./components/CategoriesSlider";
@@ -47,7 +48,7 @@ const Home = () => {
                          products={[...productsData]}
                          section="Featured Products"
                     />
-                    <FeaturedProductsSection products={[...productsData]} section="New Arrivals" />
+                    <FeaturedProductsSection products={newArrivalData} section="New Arrivals" />
                     <section
                          className="new-products-section"
                          style={{ backgroundColor: "#f6f7f9" }}
@@ -165,7 +166,7 @@ const Home = () => {
                     <section
                          className="promo-section bg-dark"
                          data-parallax="{'speed': 2, 'enableOnMobile': true}"
-                         data-image-src={Banner5}
+                         data-image-src={Banner5.src}
                     >
                          <div className="promo-banner banner container text-uppercase">
                               <div className="banner-content row align-items-center text-center">
@@ -213,22 +214,6 @@ const Home = () => {
                     </section>
                     <section className="blog-section pb-0" style={{ background: "#f6f7f9" }}>
                          <div className="container">
-                              <h2
-                                   className="section-title heading-border border-0 "
-                                   data-animation-name="fadeInUp"
-                              >
-                                   Latest News
-                              </h2>
-                              <Slider {...settings} className="row">
-                                   {postData.map((data, index) => (
-                                        <Post
-                                             key={index}
-                                             imageUrl={data.imageUrl}
-                                             postTitle={data.postTitle}
-                                             postContent={data.postContent}
-                                        />
-                                   ))}
-                              </Slider>
                               <hr className="mt-0 m-b-5" />
                               {/* End .brands-slider */}
                               <hr className="mt-4 m-b-5" />
@@ -271,7 +256,7 @@ const Home = () => {
                                         data-animation-delay={800}
                                    >
                                         <h4 className="section-sub-title">Latest Products</h4>
-                                        {featuredProductWidget.map((product, index) => (
+                                        {latestproductWidget.map((product, index) => (
                                              <ProductWidget
                                                   key={index}
                                                   productImage={product.image1}
@@ -287,7 +272,7 @@ const Home = () => {
                                         data-animation-delay={1100}
                                    >
                                         <h4 className="section-sub-title">Top Rated Products</h4>
-                                        {featuredProductWidget.map((product, index) => (
+                                        {topRatedWidget.map((product, index) => (
                                              <ProductWidget
                                                   key={index}
                                                   productImage={product.image1}

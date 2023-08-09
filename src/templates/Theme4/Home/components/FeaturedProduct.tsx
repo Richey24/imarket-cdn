@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import Slider from "react-slick";
 
 interface ProductData {
-     imageUrl1: string;
-     imageUrl2: string;
-     altText: string;
+     imageUrl1: string | StaticImageData;
+     imageUrl2: string | StaticImageData;
+     altText?: string;
      category: string;
      productName: string;
-     ratings: number;
      oldPrice: number;
      productPrice: number;
 }
@@ -38,17 +37,9 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                          {section}
                     </h2>
 
-                    <Slider {...settings} style={{ marginRight: "20px" }}>
+                    <Slider {...settings}>
                          {products.map((product, index) => (
-                              <div
-                                   className="product-default mx-2"
-                                   key={index}
-                                   style={{
-                                        marginRight: "30px !important",
-                                        marginLeft: "30px !important",
-                                        padding: "20px !important",
-                                   }}
-                              >
+                              <div className="product-default mx-2" key={index}>
                                    <figure style={{ marginRight: "20px", height: 280 }}>
                                         <a href="product.html">
                                              <Image
@@ -57,20 +48,12 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                                                   height="280"
                                                   alt="product"
                                              />
-                                             {/* <img src="assets/images/products/product-2-2.jpg" width="280" height="280" alt="product"> */}
-                                             {/* <NextImage
-                                                  src={product.imageUrl1}
-                                                  width={imageWidths[index] || 280}
-                                                  height={280}
-                                                  alt={product.altText}
-                                                  layout="fixed"
-                                             /> */}
-                                             {/* <NextImage
+                                             <Image
                                                   src={product.imageUrl2}
-                                                  width={imageWidths[index] || 280}
-                                                  height={280}
-                                                  alt={product.altText}
-                                             /> */}
+                                                  width="280"
+                                                  height="280"
+                                                  alt="product"
+                                             />
                                         </a>
                                         <div className="label-group">
                                              <div className="product-label label-hot">HOT</div>
@@ -86,15 +69,7 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                                         <h3 className="product-title">
                                              <a href="product.html">{product.productName}</a>
                                         </h3>
-                                        <div className="ratings-container">
-                                             <div className="product-ratings">
-                                                  <span
-                                                       className="ratings"
-                                                       style={{ width: product.ratings + "%" }}
-                                                  />
-                                                  <span className="tooltiptext tooltip-top" />
-                                             </div>
-                                        </div>
+
                                         <div className="price-box">
                                              <del className="old-price">
                                                   ${product.oldPrice.toFixed(2)}
