@@ -8,9 +8,9 @@ import Cat6 from "../../../../assets/images/demoes/demo20/products/categories/ca
 
 export const FeaturedCategories = () => {
     return (
-      <section className="category-section mb-3">
+      <section className="category-section mb-3" style={{paddingRight:'50px', paddingLeft:'50px'}}>
                       <div className="container">
-                           <h2 className="section-title ls-n-10 text-center text-uppercase">
+                           <h2 className="section-title ls-n-10 text-center text-uppercase" style={{fontWeight:'bold', marginBottom:'15px'}}>
                                 Featured Categories
                            </h2>
                            <div className="row">
