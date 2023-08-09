@@ -7,6 +7,7 @@ import { theme7TemplateConfig } from "./theme7";
 import { theme10TemplateConfig } from "./theme10";
 import { theme11TemplateConfig } from "./theme11";
 import { theme8TemplateConfig } from "./theme8";
+import { theme30TemplateConfig } from "./theme30";
 
 // Theme5 demo1
 // Theme6 demo2
@@ -21,4 +22,5 @@ export const templateConfig: any = {
     theme8: theme8TemplateConfig,
     theme10: theme10TemplateConfig,
     theme11: theme11TemplateConfig,
+    theme30: theme30TemplateConfig
 };

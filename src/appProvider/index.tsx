@@ -17,7 +17,7 @@ const dummySite = {
                               // type: "footer",
                               content: "",
                               component: {
-                                   theme: "theme11",
+                                   theme: "theme8",
                                    name: "",
                               },
                          },
