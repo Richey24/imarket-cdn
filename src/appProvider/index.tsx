@@ -21,15 +21,15 @@ const dummySite = {
                                    props: { phone: "+1940595000" },
                               },
                          },
-                         // {
-                         //      name: "header",
-                         //      // type: "header",
-                         //      content: "",
-                         //      component: {
-                         //           theme: "theme8",
-                         //           props: { phone: "+1940595000" },
-                         //      },
-                         // },
+                         {
+                              name: "header",
+                              // type: "header",
+                              content: "",
+                              component: {
+                                   theme: "theme4",
+                                   props: { phone: "+1940595000" },
+                              },
+                         },
                     ],
                },
           ],

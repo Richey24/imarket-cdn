@@ -10059,7 +10059,7 @@ header .separator {
 .menu > li.active > a,
 .menu > li.show > a,
 .menu > li:hover > a {
-     color: #08c;
+     color: #08c!important;
      background: transparent;
 }
 .menu > li > .sf-with-ul:before {
