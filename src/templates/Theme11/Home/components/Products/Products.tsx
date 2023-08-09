@@ -6,8 +6,7 @@ export const Products = () => {
      return (
           <div
                className="product-widgets-container lg-images appear-animate mb-0"
-               data-animation-name="fadeIn"
-               data-animation-delay={200}
+               style={{paddingRight:'80px', paddingLeft:'80px'}}
           >
                <div className="container">
                     <div className="row">

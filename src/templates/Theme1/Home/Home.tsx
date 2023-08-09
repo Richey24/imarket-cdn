@@ -21,57 +21,54 @@ import { ProductWidget } from "./components/ProductWidget";
 import { SidebarHome } from "./components/SidebarHome";
 import { Banner } from "./components/Banner";
 
-export const Home = () => {
+export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
+     const { static: statiProps } = props;
 
+     console.log("homeProps", statiProps);
      const handleTabChange = (tabId: string) => {
           setActiveTab(tabId);
      };
 
      return (
-          <main className="main">
+          <main className="main d-block">
                <div className="home-top-container mt-lg-2">
                     <div className="container">
                          <div className="row">
-                              <Banner />
+                              <Banner slides={statiProps?.banner ?? []} />
                               {/* End .col-lg-9 */}
                               <div className="col-lg-3 top-banners">
                                    <div className="row">
-                                        <div className="col-md-4 col-lg-12">
-                                             <MiniBanner
-                                                  src={banner1}
-                                                  backgroundColor="#ccc"
-                                                  title="Handbags"
-                                                  subtitle="Starting at $99"
-                                             />
-                                        </div>
-                                        <div className="col-md-4 col-lg-12">
-                                             <MiniBanner
-                                                  src={banner2}
-                                                  backgroundColor="#fff"
-                                                  title="Deal Promos"
-                                                  subtitle="Starting at $99"
-                                             />
-                                        </div>
-                                        <div className="col-md-4 col-lg-12">
-                                             <MiniBanner
-                                                  src={banner3}
-                                                  backgroundColor="#b8c1d0"
-                                                  title="Black Jackets"
-                                                  subtitle="Starting at $99"
-                                             />
-                                        </div>
+                                        {statiProps?.dealsBanner?.map(
+                                             (banner: any, idx: number) => (
+                                                  <div key={idx} className="col-md-4 col-lg-12">
+                                                       <MiniBanner
+                                                            src={
+                                                                 banner?.imageUrl !== ""
+                                                                      ? banner?.imageUrl
+                                                                      : banner1
+                                                            }
+                                                            backgroundColor="#ccc"
+                                                            title={
+                                                                 banner?.text !== ""
+                                                                      ? banner?.title
+                                                                      : "HandBag"
+                                                            }
+                                                            subtitle={
+                                                                 banner?.text !== ""
+                                                                      ? banner?.text
+                                                                      : "Starting from $99"
+                                                            }
+                                                       />
+                                                  </div>
+                                             ),
+                                        )}
                                    </div>
                               </div>
-                              {/* End .col-lg-3 */}
                          </div>
-                         {/* End .row */}
                     </div>
-                    {/* End .container */}
                </div>
-               {/* End .home-top-container */}
                <InfoBoxesContainer />
-               {/* End .info-boxes-container */}
                <div className="container">
                     <div className="row">
                          <div className="col-lg-9">
