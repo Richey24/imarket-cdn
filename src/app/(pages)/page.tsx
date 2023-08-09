@@ -3,6 +3,7 @@ import { AppContext } from "@/appProvider";
 import { templateConfig } from "@/templates/config/index";
 import { useContext } from "react";
 import PropTypes from "prop-types";
+import { PlaceholderLayout } from "../components/PlaceholderLayout/PlaceholderLayout";
 
 const DynamicComponent = ({
      component,
@@ -17,16 +18,15 @@ const DynamicComponent = ({
 
 export default function Home() {
      const currentPage = "home";
-
      const { site } = useContext(AppContext);
-     const defualtTemplate = templateConfig[site.theme.theme];
-     const loadedTemplate = site.theme.pages.find(
-          (page: { name: any }) => page.name === currentPage,
-     );
 
      const newGeneratedTemplate = (): {
           [key: string]: { component?: React.ComponentType<any> | string; props?: object };
      } => {
+          const defualtTemplate = templateConfig[site.theme.theme];
+          const loadedTemplate = site.theme.pages.find(
+               (page: { name: any }) => page.name === currentPage,
+          );
           let temp = { ...defualtTemplate };
           const sections = loadedTemplate.sections;
 
@@ -45,7 +45,8 @@ export default function Home() {
                }
           }
 
-          return temp;
+          const { header, footer, ...selected } = temp;
+          return selected;
      };
 
      return (

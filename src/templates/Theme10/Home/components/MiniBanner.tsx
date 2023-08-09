@@ -2,12 +2,16 @@ import Image from "next/image";
 import banner3 from "../../../../assets/images/demoes/demo20/banners/banner-3.jpg";
 import banner4 from "../../../../assets/images/demoes/demo20/banners/banner-4.jpg";
 import banner5 from "../../../../assets/images/demoes/demo20/banners/banner-5.png";
+import banner6 from "../../../../assets/images/demoes/demo20/banners/brand1.png";
 
 export const MiniBanner = () => {
      return (
-          <section className="newsletter-section">
+          <section
+               className="newsletter-section"
+               style={{ paddingRight: "50px", paddingLeft: "50px" }}
+          >
                <div className="container">
-                    <h2 className="section-title ls-n-10 text-center text-uppercase m-b-4">
+                    <h2 className="section-title ls-n-10 text-center text-uppercase m-b-4" style={{fontWeight:'bold'}}>
                          Offers and Deals
                     </h2>
                     <div className="row">
@@ -34,7 +38,7 @@ export const MiniBanner = () => {
                                         </a>
                                    </div>
                                    <div className="banner-layer banner-layer-right">
-                                        <Image src={banner4} alt="brand" width={105} height={45} />
+                                        <Image src={banner6} alt="brand" width={105} height={45} />
                                    </div>
                               </div>
                          </div>
@@ -81,7 +85,7 @@ export const MiniBanner = () => {
                                              data-animation-name="fadeInUpShorter"
                                              data-animation-delay={200}
                                         >
-                                             <h4 className="mt-0 m-b-1">
+                                             <h4 className="mt-0 m-b-1" style={{fontWeight:'bolder'}}>
                                                   Subscribe To Our Newsletter
                                              </h4>
                                              <p className="font2 text-body m-b-4">
@@ -95,6 +99,7 @@ export const MiniBanner = () => {
                                                        placeholder="Email address"
                                                   />
                                                   <input
+                                                       style={{ background: "#282828" }}
                                                        type="submit"
                                                        className="btn btn-dark"
                                                        defaultValue="Subscribe"
