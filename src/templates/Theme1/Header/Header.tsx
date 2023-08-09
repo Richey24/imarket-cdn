@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPhoneAlt, FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
 import product3 from "../../../assets/images/products/product-3.jpg";
 import product2 from "../../../assets/images/products/product-2.jpg";
@@ -13,7 +13,11 @@ import logoWhite from "../../../assets/images/logo-white.png";
 import stickyLogo from "../../../assets/images/sticky-logo.png";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header(props: any) {
+     const { company, static: staticProps } = props.props;
+     const [activeMenuId, setActiveMenuId] = useState(0);
+
+     console.log("headerProps", staticProps);
      return (
           <div style={{ width: "100%" }}>
                <div className="top-notice text-white bg-secondary">
@@ -34,7 +38,7 @@ export default function Header() {
                          </button>
                     </div>
                </div>
-               <header className="header" style={{ border: "3px solid red" }}>
+               <header className="header">
                     <div className="header-top">
                          <div className="container">
                               <div className="header-left header-dropdowns">
@@ -133,20 +137,17 @@ export default function Header() {
                                         <i className="fas fa-bars" />
                                    </button>
                                    <a href="demo13.html" className="logo">
-                                        <Image
-                                             src={logoBlack}
-                                             className="black-logo"
-                                             alt="Porto Logo"
-                                             width={202}
-                                             height={80}
-                                        />
-                                        <Image
-                                             src={logoWhite}
-                                             className="white-logo"
-                                             alt="Porto Logo"
-                                             width={202}
-                                             height={80}
-                                        />
+                                        {company?.logo ? (
+                                             <Image
+                                                  src={company?.logo}
+                                                  className="black-logo"
+                                                  alt="Porto Logo"
+                                                  width={202}
+                                                  height={80}
+                                             />
+                                        ) : (
+                                             <h3>{company?.company_name || "Tester"}</h3>
+                                        )}
                                    </a>
                               </div>
                               {/* End .header-left */}
@@ -168,7 +169,7 @@ export default function Header() {
                                                   <div className="select-custom body-text">
                                                        <select id="cat" name="cat">
                                                             <option>All Categories</option>
-                                                            <option value={4}>Fashion</option>
+                                                            {/* <option value={4}>Fashion</option>
                                                             <option value={12}>- Women</option>
                                                             <option value={13}>- Men</option>
                                                             <option value={66}>- Jewellery</option>
@@ -195,7 +196,7 @@ export default function Header() {
                                                             <option value={34}>- Boats</option>
                                                             <option value={57}>
                                                                  - Auto Tools &amp; Supplies
-                                                            </option>
+                                                            </option> */}
                                                        </select>
                                                   </div>
                                                   {/* End .select-custom */}
@@ -219,7 +220,7 @@ export default function Header() {
                                         <h6>
                                              Call us now
                                              <a href="tel:#" className="text-dark font1">
-                                                  +123 5678 890
+                                                  {company?.phone}
                                              </a>
                                         </h6>
                                    </div>
@@ -424,10 +425,26 @@ export default function Header() {
                               <div className="header-center">
                                    <nav className="main-nav w-100">
                                         <ul className="menu">
-                                             <li className="active">
-                                                  <a href="demo13.html">Home</a>
-                                             </li>
-                                             <li>
+                                             {staticProps?.pageLinks?.map(
+                                                  (
+                                                       link: { name: string; url: string },
+                                                       idx: number,
+                                                  ) => (
+                                                       <li
+                                                            className={
+                                                                 activeMenuId === idx
+                                                                      ? "active"
+                                                                      : ""
+                                                            }
+                                                            key={idx}
+                                                            onClick={() => setActiveMenuId(idx)}
+                                                       >
+                                                            <Link href={link.url}>{link.name}</Link>
+                                                       </li>
+                                                  ),
+                                             )}
+
+                                             {/* <li>
                                                   <a href="demo13-shop.html">Categories</a>
                                                   <div className="megamenu megamenu-fixed-width megamenu-3cols">
                                                        <div className="row">
@@ -553,267 +570,8 @@ export default function Header() {
                                                             </div>
                                                        </div>
                                                   </div>
-                                                  {/* End .megamenu */}
-                                             </li>
-                                             <li>
-                                                  <a href="demo13-product.html">Products</a>
-                                                  <div className="megamenu megamenu-fixed-width megamenu-3cols">
-                                                       <div className="row">
-                                                            <div className="col-lg-4">
-                                                                 <a href="#" className="nolink">
-                                                                      PRODUCT PAGES
-                                                                 </a>
-                                                                 <ul className="submenu">
-                                                                      <li>
-                                                                           <a href="demo13-product.html">
-                                                                                SIMPLE PRODUCT
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-variable.html">
-                                                                                VARIABLE PRODUCT
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="demo13-product.html">
-                                                                                SALE PRODUCT
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="demo13-product.html">
-                                                                                FEATURED &amp; ON
-                                                                                SALE
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-custom-tab.html">
-                                                                                WITH CUSTOM TAB
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-sidebar-left.html">
-                                                                                WITH LEFT SIDEBAR
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-sidebar-right.html">
-                                                                                WITH RIGHT SIDEBAR
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-addcart-sticky.html">
-                                                                                ADD CART STICKY
-                                                                           </a>
-                                                                      </li>
-                                                                 </ul>
-                                                            </div>
-                                                            {/* End .col-lg-4 */}
-                                                            <div className="col-lg-4">
-                                                                 <a href="#" className="nolink">
-                                                                      PRODUCT LAYOUTS
-                                                                 </a>
-                                                                 <ul className="submenu">
-                                                                      <li>
-                                                                           <a href="product-extended-layout.html">
-                                                                                EXTENDED LAYOUT
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-grid-layout.html">
-                                                                                GRID IMAGE
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-full-width.html">
-                                                                                FULL WIDTH LAYOUT
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-sticky-info.html">
-                                                                                STICKY INFO
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-sticky-both.html">
-                                                                                LEFT &amp; RIGHT
-                                                                                STICKY
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-transparent-image.html">
-                                                                                TRANSPARENT IMAGE
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="product-center-vertical.html">
-                                                                                CENTER VERTICAL
-                                                                           </a>
-                                                                      </li>
-                                                                      <li>
-                                                                           <a href="#">
-                                                                                BUILD YOUR OWN
-                                                                           </a>
-                                                                      </li>
-                                                                 </ul>
-                                                            </div>
-                                                            {/* End .col-lg-4 */}
-                                                            <div className="col-lg-4 p-0">
-                                                                 <div className="menu-banner menu-banner-2">
-                                                                      <figure>
-                                                                           <img
-                                                                                src={menuBanner1}
-                                                                                alt="Menu banner"
-                                                                                className="product-promo"
-                                                                                width={380}
-                                                                                height={790}
-                                                                           />
-                                                                      </figure>
-                                                                      <i>OFF</i>
-                                                                      <div className="banner-content">
-                                                                           <h4>
-                                                                                <span>UP TO</span>
-                                                                                <br />
-                                                                                <b>50%</b>
-                                                                           </h4>
-                                                                      </div>
-                                                                      <a
-                                                                           href="demo13-shop.html"
-                                                                           className="btn btn-sm btn-dark"
-                                                                      >
-                                                                           SHOP NOW
-                                                                      </a>
-                                                                 </div>
-                                                            </div>
-                                                            {/* End .col-lg-4 */}
-                                                       </div>
-                                                       {/* End .row */}
-                                                  </div>
-                                                  {/* End .megamenu */}
-                                             </li>
-                                             <li>
-                                                  <a href="#">Pages</a>
-                                                  <ul>
-                                                       <li>
-                                                            <a href="wishlist.html">Wishlist</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="cart.html">Shopping Cart</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="checkout.html">Checkout</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="dashboard.html">Dashboard</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="demo13-about.html">About Us</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="#">Blog</a>
-                                                            <ul>
-                                                                 <li>
-                                                                      <a href="blog.html">Blog</a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="single.html">
-                                                                           Blog Post
-                                                                      </a>
-                                                                 </li>
-                                                            </ul>
-                                                       </li>
-                                                       <li>
-                                                            <a href="contact.html">Contact Us</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="login.html">Login</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="forgot-password.html">
-                                                                 Forgot Password
-                                                            </a>
-                                                       </li>
-                                                  </ul>
-                                             </li>
-                                             <li>
-                                                  <a href="blog.html">Blog</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Elements</a>
-                                                  <ul className="custom-scrollbar">
-                                                       <li>
-                                                            <a href="element-accordions.html">
-                                                                 Accordion
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-alerts.html">Alerts</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-animations.html">
-                                                                 Animations
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-banners.html">
-                                                                 Banners
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-buttons.html">
-                                                                 Buttons
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-call-to-action.html">
-                                                                 Call to Action
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-countdown.html">
-                                                                 Count Down
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-counters.html">
-                                                                 Counters
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-headings.html">
-                                                                 Headings
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-icons.html">Icons</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-info-box.html">
-                                                                 Info box
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-posts.html">Posts</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-products.html">
-                                                                 Products
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-product-categories.html">
-                                                                 Product Categories
-                                                            </a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-tabs.html">Tabs</a>
-                                                       </li>
-                                                       <li>
-                                                            <a href="element-testimonial.html">
-                                                                 Testimonials
-                                                            </a>
-                                                       </li>
-                                                  </ul>
-                                             </li>
+                                             </li> */}
+
                                              <li className="float-right">
                                                   <a
                                                        href="https://1.envato.market/DdLk5"
