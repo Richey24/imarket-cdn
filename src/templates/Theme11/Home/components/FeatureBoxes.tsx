@@ -10,7 +10,7 @@ export const FeatureBoxes = () => {
                     <div className="row">
                          <div className="col-md-4">
                               <div
-                                   className="feature-box feature-box-simple text-center mb-2 appear-animate"
+                                   className="feature-box feature-box-simple text-center mb-2"
                                    data-animation-name="fadeInRightShorter"
                                    data-animation-delay={200}
                               >
@@ -34,7 +34,7 @@ export const FeatureBoxes = () => {
                          {/* End .col-md-4 */}
                          <div className="col-md-4">
                               <div
-                                   className="feature-box feature-box-simple text-center mb-2 appear-animate"
+                                   className="feature-box feature-box-simple text-center mb-2"
                                    data-animation-name="fadeInRightShorter"
                                    data-animation-delay={400}
                               >
@@ -56,7 +56,7 @@ export const FeatureBoxes = () => {
                          {/* End .col-md-4 */}
                          <div className="col-md-4">
                               <div
-                                   className="feature-box feature-box-simple text-center mb-2 appear-animate"
+                                   className="feature-box feature-box-simple text-center mb-2"
                                    data-animation-name="fadeInRightShorter"
                                    data-animation-delay={600}
                               >

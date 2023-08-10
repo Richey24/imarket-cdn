@@ -10,7 +10,7 @@ export const SmallBanner = () => {
          <div className="row">
               <div className="col-sm-6 col-xl-3">
                    <div
-                        className="cat-banner appear-animate"
+                        className="cat-banner"
                         data-animation-name="fadeInLeftShorter"
                         data-animation-delay={800}
                    >
@@ -36,7 +36,7 @@ export const SmallBanner = () => {
               </div>
               <div className="col-sm-6 col-xl-3">
                    <div
-                        className="cat-banner appear-animate"
+                        className="cat-banner"
                         data-animation-name="fadeInLeftShorter"
                         data-animation-delay={600}
                    >
@@ -62,7 +62,7 @@ export const SmallBanner = () => {
               </div>
               <div className="col-sm-6 col-xl-3">
                    <div
-                        className="cat-banner appear-animate"
+                        className="cat-banner"
                         data-animation-name="fadeInLeftShorter"
                         data-animation-delay={400}
                    >
@@ -88,7 +88,7 @@ export const SmallBanner = () => {
               </div>
               <div className="col-sm-6 col-xl-3">
                    <div
-                        className="cat-banner appear-animate"
+                        className="cat-banner"
                         data-animation-name="fadeInLeftShorter"
                         data-animation-delay={200}
                    >

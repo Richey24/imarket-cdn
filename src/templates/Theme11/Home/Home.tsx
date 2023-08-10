@@ -12,12 +12,11 @@ import { FeatureBoxes } from "./components/FeatureBoxes";
 import { Card } from "./components/Card";
 
 const Home = () => {
-     
      return (
           <main className="main">
                <Banner />
                <FeaturedProducts />
-               <Card/>
+               <Card />
                <section className="new-products-section">
                     <div
                          className="container"
@@ -25,7 +24,7 @@ const Home = () => {
                     >
                          <MiniBanner />
                          <h2
-                              className="section-title ls-n-10 pb-3 m-b-4 appear-animate"
+                              className="section-title ls-n-10 pb-3 m-b-4"
                               data-animation-name="fadeIn"
                               data-animation-delay={300}
                          >

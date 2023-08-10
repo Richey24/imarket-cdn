@@ -5,8 +5,8 @@ import sale from "../../../../../assets/images/demoes/demo21/products/featured-s
 export const Products = () => {
      return (
           <div
-               className="product-widgets-container lg-images appear-animate mb-0"
-               style={{paddingRight:'80px', paddingLeft:'80px'}}
+               className="product-widgets-container lg-images mb-0"
+               style={{ paddingRight: "80px", paddingLeft: "80px" }}
           >
                <div className="container">
                     <div className="row">
