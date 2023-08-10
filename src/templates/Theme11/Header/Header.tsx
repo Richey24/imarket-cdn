@@ -6,7 +6,7 @@ import logo from "../../../assets/images/your-logo.png";
 const Header = () => {
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);
-     const [pag, setPag] = useState(false);
+     const [pag, setPag] = useState(false); 
      return (
           <header className="header box-shadow ">
                <div className="header-top" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
