@@ -1,11 +1,15 @@
 import React from "react";
 import logo from "../../../assets/images/your-logo.png";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
-const Footer = () => {
+const Footer = (props: any) => {
+     console.log("headerProps", props);
      return (
           <footer>
                <div className="footer">
-                    <div className="footer-top" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
+                    <div
+                         className="footer-top"
+                         style={{ paddingLeft: "80px", paddingRight: "80px" }}
+                    >
                          <div className="container">
                               <div className="row align-items-center">
                                    <div className="col-md-6 col-lg-3">
@@ -29,7 +33,6 @@ const Footer = () => {
                                                        type="email"
                                                        className="form-control mb-0"
                                                        placeholder="Enter your Email address..."
-                                                       
                                                   />
                                                   <button
                                                        type="submit"
@@ -43,7 +46,10 @@ const Footer = () => {
                               </div>
                          </div>
                     </div>
-                    <div className="container" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
+                    <div
+                         className="container"
+                         style={{ paddingLeft: "80px", paddingRight: "80px" }}
+                    >
                          <div className="footer-middle">
                               <div className="row">
                                    <div className="col-lg-4">
@@ -169,12 +175,7 @@ const Footer = () => {
                                    </span>
                               </div>
                               <div className="footer-right ml-auto mt-1 mt-sm-0">
-                                   <img
-                                        src={payment.src}
-                                        alt="payment"
-                                        width={200}
-                                        height={27}
-                                   />
+                                   <img src={payment.src} alt="payment" width={200} height={27} />
                               </div>
                          </div>
                     </div>
