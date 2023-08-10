@@ -3,8 +3,6 @@ import FeaturedProduct from "./components/FeaturedProducts";
 import { Banner } from "./components/Banner";
 import { latestProducts } from "./data";
 import { InfoBoxesContainer } from "./components/Info";
-import Gift from "./components/Gifts";
-import ShopGifts from "./components/ShopGift";
 
 export const Home = () => {
      return (

@@ -10,6 +10,7 @@ import { theme8TemplateConfig } from "./theme8";
 import { theme9TemplateConfig } from "./theme9";
 import { theme30TemplateConfig } from "./theme30";
 import { theme31TemplateConfig } from "./theme31";
+import { theme32TemplateConfig } from "./theme32";
 
 // Theme5 demo1
 // Theme6 demo2
@@ -26,13 +27,15 @@ export const templateConfig: any = {
     theme11: theme11TemplateConfig,
     theme9: theme9TemplateConfig,
     theme30: theme30TemplateConfig,
-    theme31: theme31TemplateConfig
+    theme31: theme31TemplateConfig,
+    theme32: theme32TemplateConfig
 };
 
-export const cssImports: { [key: string]: any } = {
-    theme1: require("../../assets/css/demo13.min.css"),
-    theme31: require("../../assets/css/demo31.min.css"),
-};
+// export const cssImports: { [key: string]: any } = {
+//     // theme1: require("../../assets/css/demo13.min.css"),
+//     // theme31: require("../../assets/css/demo31.min.css"),
+//     theme32: require("../../assets/css/demo32.min.css"),
+// };
 
 export const themeProps = {
     header: {

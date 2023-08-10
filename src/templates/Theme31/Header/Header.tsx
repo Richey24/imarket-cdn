@@ -5,7 +5,7 @@ import React from "react";
 export default function Header() {
 
      return (
-          <header className="header">
+          <header className="header p-0">
                <div className="header-middle sticky-header">
                     <div className="container">
                          <div className="header-left">
