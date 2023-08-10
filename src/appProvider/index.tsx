@@ -32,7 +32,9 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           }
      }, []);
 
-     return <AppContext.Provider value={{ site, loading }}>{children}</AppContext.Provider>;
+     return (
+          <AppContext.Provider value={{ site: dummySite, loading }}>{children}</AppContext.Provider>
+     );
 };
 
 export default AppProvider;

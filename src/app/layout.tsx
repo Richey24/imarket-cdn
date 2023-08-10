@@ -5,7 +5,7 @@ import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
 import ReactQueryProviders from "@/utils/provider";
 import { SessionProvider } from "next-auth/react";
-import "./globals.css";
+// import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 import type { Metadata } from "next";
@@ -23,12 +23,17 @@ import "../assets/css/bootstrap.min.css";
 // import "../assets/css/demo1.min.css";
 // import "../assets/css/demo2.min.css";
 // import "../assets/css/demo9.min.css";
+//   import "../assets/css/demo1.min.css";
+//  import "../assets/css/demo2.min.css";
+//  import "../assets/css/demo20.min.css";
+// import "../assets/css/demo21.min.css";
+//  import "../assets/css/demo22.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 import "../assets/js/webfont";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import "slick-carousel/slick/slick.css"; // Import react-slick styles
-import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

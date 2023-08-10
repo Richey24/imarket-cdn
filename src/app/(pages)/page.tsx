@@ -49,25 +49,21 @@ export default function Home() {
           return selected;
      };
 
-     return (
-          <>
-               {Object.keys(newGeneratedTemplate()).map((key) => {
-                    return (
-                         <DynamicComponent
-                              key={key}
-                              component={
-                                   newGeneratedTemplate()[key]?.component
-                                        ? (newGeneratedTemplate()[key].component as string)
-                                        : (newGeneratedTemplate()[key] as string)
-                              }
-                              props={
-                                   newGeneratedTemplate()[key].component && {
-                                        ...newGeneratedTemplate()[key].props,
-                                   }
-                              }
-                         />
-                    );
-               })}
-          </>
-     );
+     return Object.keys(newGeneratedTemplate()).map((key) => {
+          return (
+               <DynamicComponent
+                    key={key}
+                    component={
+                         newGeneratedTemplate()[key]?.component
+                              ? (newGeneratedTemplate()[key].component as string)
+                              : (newGeneratedTemplate()[key] as string)
+                    }
+                    props={
+                         newGeneratedTemplate()[key].component && {
+                              ...newGeneratedTemplate()[key].props,
+                         }
+                    }
+               />
+          );
+     });
 }
