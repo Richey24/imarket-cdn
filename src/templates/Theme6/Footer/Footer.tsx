@@ -1,28 +1,74 @@
+import visa from "../../../assets/images/payments/payment-visa.svg";
+import paypal from "../../../assets/images/payments/payment-paypal.svg";
+import stripe from "../../../assets/images/payments/payment-stripe.png";
+import verisign from "../../../assets/images/payments/payment-verisign.svg";
+
 const Footer = () => {
      return (
-          <footer className="footer bg-dark position-relative">
-               <div className="footer-middle">
-                    <div className="container position-static">
-                         <div className="footer-ribbon bg-primary text-white ls-0">
-                              Get in touch
+          <footer className="footer">
+               <div className="container-fluid">
+                    <div className="footer-top">
+                         <div className="widget widget-newsletter">
+                              <div className="row">
+                                   <div className="col-lg-4 col-md-6 col-sm-12 col-9">
+                                        <h4 className="widget-title">Subscribe newsletter</h4>
+                                        <p>
+                                             Get all the latest information on Events, Sales and
+                                             Offers. Sign up for newsletter today.
+                                        </p>
+                                   </div>
+
+                                   <div className="col-lg-6 col-md-6 col-sm-7 d-flex align-items-center">
+                                        <form action="#" className="d-flex w-100 pb-2">
+                                             <input
+                                                  type="email"
+                                                  className="form-control mb-0"
+                                                  placeholder="Enter Your Email address"
+                                                  required
+                                             />
+                                             <button
+                                                  type="submit"
+                                                  className="btn btn-primary text-white"
+                                             >
+                                                  Subscribe
+                                             </button>
+                                        </form>
+                                   </div>
+
+                                   <div className="col-lg-2 col-md-12 col-sm-5 widget-social d-flex align-items-center justify-content-lg-end justify-content-start mt-2 mb-1 mb-sm-0 mt-sm-0">
+                                        <div className="social-icons pb-1">
+                                             <a href="#" className="social-icon" target="_blank">
+                                                  <i className="icon-instagram"></i>
+                                             </a>
+                                             <a href="#" className="social-icon" target="_blank">
+                                                  <i className="icon-twitter"></i>
+                                             </a>
+                                             <a href="#" className="social-icon" target="_blank">
+                                                  <i className="icon-facebook"></i>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
                          </div>
-                         {/* End .footer-ribbon */}
+                    </div>
+               </div>
+
+               <div className="footer-middle">
+                    <div className="container-fluid">
                          <div className="row">
-                              <div className="col-lg-3 col-md-4">
+                              <div className="col-lg-3">
                                    <div className="widget">
-                                        <h4 className="widget-title font-weight-bold">
-                                             Contact Info
-                                        </h4>
+                                        <h4 className="widget-title pb-2 mb-1">Contact Info</h4>
                                         <ul className="contact-info">
                                              <li>
                                                   <span className="contact-info-label">
                                                        Address:
                                                   </span>
-                                                  123 Street Name, City, England
+                                                  1234 Street Name, City, England
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">(123) 456-7890</a>
+                                                  Toll Free <a href="tel:">(123) 456-7890</a>
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Email:</span>{" "}
@@ -30,75 +76,12 @@ const Footer = () => {
                                                        mail@example.com
                                                   </a>
                                              </li>
-                                             <li>
-                                                  <span className="contact-info-label">
-                                                       Working Days/Hours:
-                                                  </span>{" "}
-                                                  Mon - Sun / 9:00 AM - 8:00 PM
-                                             </li>
                                         </ul>
-                                        <div className="social-icons">
-                                             <a
-                                                  href="#"
-                                                  className="social-icon social-facebook icon-facebook"
-                                                  target="_blank"
-                                                  title="Facebook"
-                                             ></a>
-                                             <a
-                                                  href="#"
-                                                  className="social-icon social-twitter icon-twitter"
-                                                  target="_blank"
-                                                  title="Twitter"
-                                             ></a>
-                                             <a
-                                                  href="#"
-                                                  className="social-icon social-linkedin fab fa-linkedin-in"
-                                                  target="_blank"
-                                                  title="Linkedin"
-                                             ></a>
-                                        </div>
-                                        {/* End .social-icons */}
                                    </div>
-                                   {/* End .widget */}
                               </div>
-                              {/* End .col-lg-3 */}
 
-                              <div className="col-lg-9 col-md-8">
-                                   <div className="widget widget-newsletter">
-                                        <h4 className="widget-title">Subscribe newsletter</h4>
-                                        <div className="row align-items-center">
-                                             <div className="col-lg-6 col-md-12 mb-1">
-                                                  <p className="mb-0">
-                                                       Get all the latest information on Events,
-                                                       Sales and Offers. Sign up for newsletter
-                                                       today.
-                                                  </p>
-                                             </div>
-                                             {/* End .col-lg-6 */}
-
-                                             <div className="col-lg-6 col-md-12 mb-1">
-                                                  <form action="#" className="d-flex mb-0 w-100">
-                                                       <input
-                                                            type="email"
-                                                            className="form-control mb-0"
-                                                            placeholder="Email Address"
-                                                            required
-                                                       />
-
-                                                       <input
-                                                            type="submit"
-                                                            className="btn btn-primary shadow-none"
-                                                            value="Subscribe"
-                                                       />
-                                                  </form>
-                                             </div>
-                                             {/* End .col-lg-6 */}
-                                        </div>
-                                        {/* End .row */}
-                                   </div>
-                                   {/* End .widget */}
-
-                                   <div className="row">
+                              <div className="col-lg-9">
+                                   <div className="row footer-content">
                                         <div className="col-sm-6 col-lg-3">
                                              <div className="widget">
                                                   <h3 className="widget-title">Account</h3>
@@ -149,56 +132,59 @@ const Footer = () => {
                                                   </div>
                                              </div>
                                         </div>
+
+                                        <div className="col-lg-3">
+                                             <div className="widget widget-time">
+                                                  <h4 className="widget-title mb-1">
+                                                       Working Days/Hours
+                                                  </h4>
+                                                  <ul className="contact-info">
+                                                       <li>Mon - Sun / 9:00AM - 8:00PM</li>
+                                                  </ul>
+                                             </div>
+                                        </div>
                                    </div>
-                                   {/* End .row */}
-                              </div>
-                              {/* End .col-lg-9 */}
-                         </div>
-                         {/* End .row */}
-                    </div>
-                    {/* End .container */}
-               </div>
-               {/* End .footer-middle */}
 
-               <div className="container">
-                    <div className="footer-bottom d-sm-flex align-items-center">
-                         <div className="footer-left">
-                              <span className="footer-copyright">
-                                   © Porto eCommerce. 2021. All Rights Reserved
-                              </span>
-                         </div>
+                                   <div className="footer-bottom d-sm-flex align-items-center">
+                                        <div className="footer-left">
+                                             <span className="footer-copyright">
+                                                  Porto eCommerce. © 2021 All Rights Reserved
+                                             </span>
+                                        </div>
 
-                         <div className="footer-right ml-auto mt-1 mt-sm-0">
-                              <div className="payment-icons mr-0">
-                                   <span
-                                        className="payment-icon visa"
-                                        style={{
-                                             backgroundImage: `url(assets/images/payments/payment-visa.svg)`,
-                                        }}
-                                   ></span>
-                                   <span
-                                        className="payment-icon paypal"
-                                        style={{
-                                             backgroundImage: `url(assets/images/payments/payment-paypal.svg)`,
-                                        }}
-                                   ></span>
-                                   <span
-                                        className="payment-icon stripe"
-                                        style={{
-                                             backgroundImage: `url(assets/images/payments/payment-stripe.png)`,
-                                        }}
-                                   ></span>
-                                   <span
-                                        className="payment-icon verisign"
-                                        style={{
-                                             backgroundImage: `url(assets/images/payments/payment-verisign.svg)`,
-                                        }}
-                                   ></span>
+                                        <div className="footer-right ml-auto mt-1 mt-sm-0">
+                                             <div className="payment-icons mr-0">
+                                                  <span
+                                                       className="payment-icon visa"
+                                                       style={{
+                                                            backgroundImage: `url(${visa.src})`,
+                                                       }}
+                                                  ></span>
+                                                  <span
+                                                       className="payment-icon paypal"
+                                                       style={{
+                                                            backgroundImage: `url(${paypal.src})`,
+                                                       }}
+                                                  ></span>
+                                                  <span
+                                                       className="payment-icon stripe"
+                                                       style={{
+                                                            backgroundImage: `url(${stripe.src})`,
+                                                       }}
+                                                  ></span>
+                                                  <span
+                                                       className="payment-icon verisign"
+                                                       style={{
+                                                            backgroundImage: `url(${verisign.src})`,
+                                                       }}
+                                                  ></span>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                     </div>
                </div>
-               {/* End .footer-bottom */}
           </footer>
      );
 };

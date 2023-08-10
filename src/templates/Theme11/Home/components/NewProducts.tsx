@@ -14,7 +14,7 @@ export const NewProducts = () => {
      };
 
      return (
-          <div className="row no-gutters appear-animate">
+          <div className="row no-gutters">
                <Slider {...settings}>
                     {newArrivalsProducts.map((product) => (
                          <div className="product-default inner-quickview inner-icon">
