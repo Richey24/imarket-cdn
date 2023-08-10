@@ -7,7 +7,7 @@ export const Card = () => {
           speed: 500,
           slidesToShow: 6,
           slidesToScroll: 1,
-          beforeChange: (current, next) => setCurrentSlide(next), 
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
           <section
@@ -15,7 +15,7 @@ export const Card = () => {
                style={{ paddingRight: "80px", paddingLeft: "80px" }}
           >
                <div className="container">
-                    <div className="row categories-slider owl-carousel owl-theme appear-animate owl-loaded owl-drag animated fadeIn appear-animation-visible">
+                    <div className="row categories-slider owl-carousel owl-theme owl-loaded owl-drag animated fadeIn appear-animation-visible">
                          <Slider {...settings}>
                               {" "}
                               <div className="product-category mb-2">

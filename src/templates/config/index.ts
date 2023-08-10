@@ -22,7 +22,7 @@ export const templateConfig: any = {
      theme3: theme3TemplateConfig,
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
-     theme6: theme6TemplateConfig,
+     // theme6: theme6TemplateConfig,
      theme10: theme10TemplateConfig,
      theme11: theme11TemplateConfig,
      theme21: theme21TemplateConfig,
@@ -33,8 +33,16 @@ export const templateConfig: any = {
      theme30: theme30TemplateConfig,
 };
 
-export const cssImports: { [key: string]: any } = {
-     // theme1: require("../../assets/css/demo13.min.css"),
+export const cssImports = {
+     theme1: "demo13",
+     theme4: "demo4",
+     theme5: "demo1",
+     theme6: "demo2",
+     theme7: "demo3",
+     theme10: "demo20",
+     theme11: "demo11",
+     theme21: "demo21",
+     theme12: "demo12",
 };
 
 export const themeProps = {

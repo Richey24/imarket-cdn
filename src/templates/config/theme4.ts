@@ -4,6 +4,6 @@ import Home from "../Theme4/Home/Home";
 
 export const theme4TemplateConfig: any = {
      header: T4Header,
-     Home: Home,
-     Footer: Footer,
+     home: Home,
+     footer: Footer,
 };

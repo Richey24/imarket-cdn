@@ -18,7 +18,7 @@ export const SpecialOffer = () => {
      };
      return (
           <section
-               className="special-offer-section bg-gray appear-animate"
+               className="special-offer-section bg-gray"
                style={{paddingRight:'80px', paddingLeft:'80px'}}
           >
                <div className="container">

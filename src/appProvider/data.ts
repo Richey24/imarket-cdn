@@ -5,7 +5,7 @@ export const dummySite = {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme2",
+                    theme: "theme11",
                     name: "",
                     props: {
                          static: {
@@ -77,7 +77,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme2",
+                                   theme: "theme4",
                                    props: {
                                         static: {
                                              promotion: {

@@ -16,27 +16,29 @@ export const Banner = () => {
                          className="home-slide banner test"
                          style={{
                               background: `url(${slide1.src})`,
-                             
                          }}
                     >
-                         <div className="banner-layer banner-layer-middle" style={{ paddingLeft:'80px',}}>
+                         <div
+                              className="banner-layer banner-layer-middle"
+                              style={{ paddingLeft: "80px" }}
+                         >
                               <div className="container banner-content">
                                    <h2
-                                        className="font1 font-weight-normal text-uppercase mb-0 appear-animate"
+                                        className="font1 font-weight-normal text-uppercase mb-0"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={200}
                                    >
                                         start the revolution
                                    </h2>
                                    <h1
-                                        className="font1 font-weight-bold text-uppercase appear-animate"
+                                        className="font1 font-weight-bold text-uppercase"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={500}
                                    >
                                         drone pro 4
                                    </h1>
                                    <h2
-                                        className="font1 font-weight-normal text-uppercase mb-3 appear-animate"
+                                        className="font1 font-weight-normal text-uppercase mb-3"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={800}
                                    >
@@ -44,7 +46,7 @@ export const Banner = () => {
                                         <strong>$499</strong>
                                    </h2>
                                    <a
-                                        className="btn btn-dark btn-buy appear-animate"
+                                        className="btn btn-dark btn-buy"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={1100}
                                         href="demo21-shop.html"
@@ -63,24 +65,27 @@ export const Banner = () => {
                               backgroundImage: `url(${slide2.src})`,
                          }}
                     >
-                         <div className="banner-layer banner-layer-middle" style={{ paddingLeft:'80px',}}>
+                         <div
+                              className="banner-layer banner-layer-middle"
+                              style={{ paddingLeft: "80px" }}
+                         >
                               <div className="container banner-content">
                                    <h2
-                                        className="font1 font-weight-normal text-uppercase mb-0 appear-animate"
+                                        className="font1 font-weight-normal text-uppercase mb-0"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={200}
                                    >
                                         amazing deals
                                    </h2>
                                    <h1
-                                        className="font1 font-weight-bold text-uppercase appear-animate"
+                                        className="font1 font-weight-bold text-uppercase"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={500}
                                    >
                                         smartphone
                                    </h1>
                                    <h2
-                                        className="font1 font-weight-normal text-uppercase mb-3 appear-animate"
+                                        className="font1 font-weight-normal text-uppercase mb-3"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={800}
                                    >
@@ -88,7 +93,7 @@ export const Banner = () => {
                                         <strong>$199</strong>
                                    </h2>
                                    <a
-                                        className="btn btn-dark btn-buy appear-animate"
+                                        className="btn btn-dark btn-buy"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={1100}
                                         href="demo21-shop.html"
@@ -107,24 +112,27 @@ export const Banner = () => {
                               backgroundImage: `url(${slide3.src})`,
                          }}
                     >
-                         <div className="banner-layer banner-layer-middle" style={{ paddingLeft:'80px',}}>
+                         <div
+                              className="banner-layer banner-layer-middle"
+                              style={{ paddingLeft: "80px" }}
+                         >
                               <div className="container banner-content">
                                    <h2
-                                        className="font1 font-weight-normal text-uppercase mb-0 appear-animate"
+                                        className="font1 font-weight-normal text-uppercase mb-0"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={200}
                                    >
                                         best price of the year
                                    </h2>
                                    <h1
-                                        className="font1 font-weight-bold text-uppercase appear-animate"
+                                        className="font1 font-weight-bold text-uppercase"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={500}
                                    >
                                         top accessories
                                    </h1>
                                    <h2
-                                        className="font1 font-weight-normal text-uppercase mb-3 appear-animate"
+                                        className="font1 font-weight-normal text-uppercase mb-3"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={800}
                                    >
@@ -132,7 +140,7 @@ export const Banner = () => {
                                         <strong>$19</strong>
                                    </h2>
                                    <a
-                                        className="btn btn-dark btn-buy appear-animate"
+                                        className="btn btn-dark btn-buy"
                                         data-animation-name="fadeInUpShorter"
                                         data-animation-delay={1100}
                                         href="demo21-shop.html"
@@ -145,8 +153,11 @@ export const Banner = () => {
                     </div>
                )}
 
-               <div className="home-slider-sidebar d-none d-sm-block" style={{paddingRight:'80px'}}>
-                    <div className="container" >
+               <div
+                    className="home-slider-sidebar d-none d-sm-block"
+                    style={{ paddingRight: "80px" }}
+               >
+                    <div className="container">
                          <ul>
                               <li
                                    className={`nav-link ${activeTab === "drones" ? "active" : ""}`}

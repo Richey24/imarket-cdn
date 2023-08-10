@@ -1,6 +1,6 @@
 import React from "react";
 import HomeSlider from "./components/HomeSlider";
-import { bannerData, infoBoxData, sliderData } from "./data";
+import { bannerData, infoBoxData, productsData, sliderData } from "./data";
 import BannersContainer from "./components/BannersContainer";
 import InfoBoxesContainer from "./components/InfoBoxes";
 import ProductGrid from "./components/ProductGrid";
@@ -54,113 +54,7 @@ const Home = () => {
                          >
                               Amazing categories with only top fashion products
                          </p>
-                         <div
-                              className="owl-carousel owl-theme categories-slider content-center-bottom nav-outer appear-animate"
-                              data-animation-name="fadeIn"
-                              data-animation-delay={100}
-                              data-owl-options="{
-                'nav': false,
-                'responsive': {
-                    '0': {
-                        'items': 1
-                    },
-                    '480': {
-                        'items': 2
-                    }
-                }
-            }"
-                         >
-                              <div className="product-category">
-                                   <a href="demo11-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="assets/images/demoes/demo11/categories/category-1.jpg"
-                                                  width={220}
-                                                  height={220}
-                                                  alt="Category"
-                                             />
-                                        </figure>
-                                        <div className="category-content">
-                                             <h3>Bags</h3>
-                                        </div>
-                                   </a>
-                              </div>
-                              <div className="product-category">
-                                   <a href="demo11-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="assets/images/demoes/demo11/categories/category-2.jpg"
-                                                  width={220}
-                                                  height={220}
-                                                  alt="Category"
-                                             />
-                                        </figure>
-                                        <div className="category-content">
-                                             <h3>Hats</h3>
-                                        </div>
-                                   </a>
-                              </div>
-                              <div className="product-category">
-                                   <a href="demo11-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="assets/images/demoes/demo11/categories/category-3.jpg"
-                                                  width={220}
-                                                  height={220}
-                                                  alt="Category"
-                                             />
-                                        </figure>
-                                        <div className="category-content">
-                                             <h3>Jackets</h3>
-                                        </div>
-                                   </a>
-                              </div>
-                              <div className="product-category">
-                                   <a href="demo11-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="assets/images/demoes/demo11/categories/category-4.jpg"
-                                                  width={220}
-                                                  height={220}
-                                                  alt="Category"
-                                             />
-                                        </figure>
-                                        <div className="category-content">
-                                             <h3>Sunglasses</h3>
-                                        </div>
-                                   </a>
-                              </div>
-                              <div className="product-category">
-                                   <a href="demo11-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="assets/images/demoes/demo11/categories/category-5.jpg"
-                                                  width={220}
-                                                  height={220}
-                                                  alt="Category"
-                                             />
-                                        </figure>
-                                        <div className="category-content">
-                                             <h3>Shoes</h3>
-                                        </div>
-                                   </a>
-                              </div>
-                              <div className="product-category">
-                                   <a href="demo11-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="assets/images/demoes/demo11/categories/category-1.jpg"
-                                                  width={220}
-                                                  height={220}
-                                                  alt="Category"
-                                             />
-                                        </figure>
-                                        <div className="category-content">
-                                             <h3>Bags</h3>
-                                        </div>
-                                   </a>
-                              </div>
-                         </div>
+
                          {/* End .categories-slider */}
                     </div>
                     {/* End .container */}

@@ -2,10 +2,15 @@ import slide1 from "../../../assets/images/demoes/demo11/slider/slide-1.jpg";
 import slide2 from "../../../assets/images/demoes/demo11/slider/slide-2.jpg";
 import banner1 from "../../../assets/images/demoes/demo11/banners/banner-1.jpg";
 import banner2 from "../../../assets/images/demoes/demo11/banners/banner-2.jpg";
+import banner3 from "../../../assets/images/demoes/demo11/banners/banner-3.jpg";
 import product1 from "../../../assets/images/demoes/demo11/products/product-15.jpg";
 import product1b from "../../../assets/images/demoes/demo11/products/product-15-2.jpg";
 import product2 from "../../../assets/images/demoes/demo11/products/product-16.jpg";
 import product2b from "../../../assets/images/demoes/demo11/products/product-16-2.jpg";
+import product3 from "../../../assets/images/demoes/demo11/products/product-17.jpg";
+import product3b from "../../../assets/images/demoes/demo11/products/product-17-2.jpg";
+import product4 from "../../../assets/images/demoes/demo11/products/product-18.jpg";
+import product4b from "../../../assets/images/demoes/demo11/products/product-18-2.jpg";
 
 export const sliderData = [
      {
@@ -80,16 +85,16 @@ export const productsData = [
      },
      {
           id: 2,
-          image1: "assets/images/demoes/demo11/products/product-16.jpg",
-          image2: "assets/images/demoes/demo11/products/product-16-2.jpg",
+          image1: product2.src,
+          image2: product2b.src,
           category: "Men Glasses",
           title: "Men Glasses",
           price: "$60.00",
      },
      {
           id: 3,
-          image1: "assets/images/demoes/demo11/products/product-17.jpg",
-          image2: "assets/images/demoes/demo11/products/product-17-2.jpg",
+          image1: product3.src,
+          image2: product3b.src,
           category: "Ray Ban",
           title: "Ray Ban 5228",
           oldPrice: "$75.00",
@@ -97,8 +102,8 @@ export const productsData = [
      },
      {
           id: 4,
-          image1: "assets/images/demoes/demo11/products/product-18.jpg",
-          image2: "assets/images/demoes/demo11/products/product-18-2.jpg",
+          image1: product4.src,
+          image2: product4b.src,
           category: "Masrinna Ankle Fashion",
           title: "Masrinna Ankle Fashion",
           oldPrice: "$60.00",

@@ -1,13 +1,9 @@
 import Banner1 from "../../../../assets/images/demoes/demo21/banners/banner-1.jpg";
 import Banner2 from "../../../../assets/images/demoes/demo21/banners/banner-2.jpg";
 
-
 export const MiniBanner = () => {
      return (
-          <div
-               className="row m-b-3 appear-animate"
-                
-          >
+          <div className="row m-b-3">
                <div className="col-md-6">
                     <div className="banner banner1" style={{ backgroundColor: "#f4f4f4" }}>
                          <figure>
@@ -59,5 +55,3 @@ export const MiniBanner = () => {
           </div>
      );
 };
-
-
