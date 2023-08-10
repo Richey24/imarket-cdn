@@ -4,7 +4,7 @@ import { theme5TemplateConfig } from "./theme5";
 import { theme6TemplateConfig } from "./theme6";
 import { theme3TemplateConfig } from "./theme3";
 import { theme10TemplateConfig } from "./theme10";
-import { theme11TemplateConfig } from "./theme11";
+import { theme11TemplateConfig } from "./theme21";
 import { theme4TemplateConfig } from "./theme4";
 import { theme12TemplateConfig } from "./theme12";
 import { theme7TemplateConfig } from "./theme7";
@@ -32,7 +32,7 @@ export const templateConfig: any = {
 };
 
 export const cssImports: { [key: string]: any } = {
-     theme1: require("../../assets/css/demo13.min.css"),
+     // theme1: require("../../assets/css/demo13.min.css"),
 };
 
 export const themeProps = {

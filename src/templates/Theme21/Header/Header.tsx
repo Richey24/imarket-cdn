@@ -3,6 +3,7 @@ import { FiChevronDown } from "react-icons/fi";
 import banner from "../../../assets/images/menu-banner.jpg";
 import banner1 from "../../../assets/images/menu-banner-1.jpg";
 import logo from "../../../assets/images/your-logo.png";
+
 const Header = () => {
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);
