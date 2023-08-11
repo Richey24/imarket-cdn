@@ -23,7 +23,7 @@ import "../assets/js/webfont";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css"; // Import react-slick styles
 import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
-import "../assets/css/demo32.min.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

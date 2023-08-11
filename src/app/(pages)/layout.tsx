@@ -15,11 +15,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
      const { site, loading } = useContext<{ site: SitesField; loading: boolean }>(AppContext);
 
-     // useEffect(() => {
-     //      if (site) {
-     //           cssImports[site.theme.theme as ThemeName];
-     //      }
-     // }, [site]);
+     useEffect(() => {
+          if (site) {
+               cssImports[site.theme.theme as ThemeName];
+          }
+     }, [site]);
 
      if (!site && loading) {
           return <PlaceholderLayout />;
