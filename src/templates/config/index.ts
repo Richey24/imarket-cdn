@@ -46,6 +46,7 @@ export const cssImports = {
      theme10: "demo20",
      theme11: "demo21",
      theme12: "demo12",
+     theme30: "demo30",
      theme31: "demo31",
      theme32: "demo32",
      theme33: "demo33",
