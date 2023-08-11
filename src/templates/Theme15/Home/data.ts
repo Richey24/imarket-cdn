@@ -1,14 +1,14 @@
-import product5 from "../../../assets/images/demoes/demo13/products/product-5.jpg";
+import product5 from "../../../assets/images/demoes/demo15/products/product-5.jpg";
 import product5two from "../../../assets/images/demoes/demo13/products/product-5-2.jpg";
-import product1 from "../../../assets/images/demoes/demo13/products/product-1.jpg";
+import product1 from "../../../assets/images/demoes/demo15/products/product-1.jpg";
 import product1two from "../../../assets/images/demoes/demo13/products/product-1-2.jpg";
-import product2 from "../../../assets/images/demoes/demo13/products/product-2.jpg";
+import product2 from "../../../assets/images/demoes/demo15/products/product-2.jpg";
 import product2two from "../../../assets/images/demoes/demo13/products/product-2-2.jpg";
-import product3 from "../../../assets/images/demoes/demo13/products/product-3.jpg";
+import product3 from "../../../assets/images/demoes/demo15/products/product-3.jpg";
 import product3two from "../../../assets/images/demoes/demo13/products/product-3-2.jpg";
-import product4 from "../../../assets/images/demoes/demo13/products/product-4.jpg";
+import product4 from "../../../assets/images/demoes/demo15/products/product-4.jpg";
 import product4two from "../../../assets/images/demoes/demo13/products/product-4-2.jpg";
-import product6 from "../../../assets/images/demoes/demo13/products/product-6.jpg";
+import product6 from "../../../assets/images/demoes/demo15/products/product-6.jpg";
 import product8 from "../../../assets/images/demoes/demo13/products/product-8.jpg";
 import product8two from "../../../assets/images/demoes/demo13/products/product-8-2.jpg";
 import product9 from "../../../assets/images/demoes/demo13/products/product-9.jpg";
@@ -34,9 +34,9 @@ import client1 from "../../../assets/images/clients/client-1.jpg";
 import client2 from "../../../assets/images/clients/client-2.jpg";
 import client3 from "../../../assets/images/clients/client-3.jpg";
 
-import banner1 from "../../../assets/images/demoes/demo3/banners/home-banner1.jpg";
-import banner2 from "../../../assets/images/demoes/demo3/banners/home-banner2.jpg";
-import banner3 from "../../../assets/images/demoes/demo3/banners/home-banner3.jpg";
+import banner1 from "../../../assets/images/demoes/demo15/banners/banner-1.jpg";
+import banner2 from "../../../assets/images/demoes/demo15/banners/banner-2.jpg";
+import banner3 from "../../../assets/images/demoes/demo15/banners/banner-3.jpg";
 import banner4 from "../../../assets/images/demoes/demo3/banners/home-banner4.jpg";
 
 import category1 from "../../../assets/images/demoes/demo3/categories/category-1.jpg";
@@ -45,79 +45,74 @@ import category3 from "../../../assets/images/demoes/demo3/categories/category-3
 import category4 from "../../../assets/images/demoes/demo3/categories/category-4.jpg";
 import category5 from "../../../assets/images/demoes/demo3/categories/category-5.jpg";
 import category6 from "../../../assets/images/demoes/demo3/categories/category-6.jpg";
+import { MiniBannerProps } from "./components/MiniBanner/MiniBanner";
 
 export const featuredProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "SHOES, TOYS",
-          productImageUrl: product5,
-          productImageUrlTwo: product5two,
-          productTitle: "Men Gentle Shoes",
+          productImageUrl: product1,
+          productTitle: "Woman Red Bag",
           productPrice: 269,
      },
      {
           productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product1,
-          productImageUrlTwo: product1two,
-          productTitle: "Porto Gray Cap",
+          productCategory: "DRESS, TOYS",
+          productImageUrl: product2,
+          productTitle: "Woman Black Blouse",
           productPrice: 29,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product8,
-          productImageUrlTwo: product8two,
+          productImageUrl: product5,
           productTitle: "Porto White Cap",
           productPrice: 101,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product11,
-          productImageUrlTwo: product11two,
-          productTitle: "Winter Towel",
+          productImageUrl: product4,
+          productTitle: "Woman Jacket",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
-          productCategory: "DRESS, HEADPHONE",
-          productImageUrl: product9,
-          productImageUrlTwo: product9two,
-          productTitle: "Product Extended",
+          productCategory: "DRESS, TROUSERS",
+          productImageUrl: product3,
+          productTitle: "Porto Sticky info",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
-          productCategory: "SHOES, TOYS",
-          productImageUrl: product10,
-          productImageUrlTwo: product10two,
-          productTitle: "Sports Shoes",
+          productCategory: "HEADPHONE, T-SHIRTS",
+          productImageUrl: product6,
+          productTitle: "Jeans Wear",
           productPrice: 239,
      },
+];
+
+export const miniBanners: MiniBannerProps[] = [
      {
-          productImageAlt: "product",
-          productCategory: "TOYS, TROUSERS",
-          productImageUrl: product14,
-          productImageUrlTwo: product14two,
-          productTitle: "Women Bag",
-          productPrice: 299,
+          src: banner1,
+          title: "Orange",
+          price: "19",
+          priceSup: "99",
+          backgroundColor: "#efefef",
      },
      {
-          productImageAlt: "product",
-          productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: product4,
-          productImageUrlTwo: product4two,
-          productTitle: "Men Black Belts",
-          productPrice: 55,
+          src: banner2,
+          title: "White",
+          price: "29",
+          priceSup: "99",
+          backgroundColor: "#efefef",
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, WATCHES",
-          productImageUrl: product12,
-          productImageUrlTwo: product12two,
-          productTitle: "Women Bag",
-          productPrice: 199,
+          src: banner3,
+          title: "Black",
+          price: "39",
+          priceSup: "99",
+          backgroundColor: "#efefef",
      },
 ];
 

@@ -101,7 +101,7 @@ const Banner = () => {
                               data-animation-name="blurIn"
                               data-animation-duration={1200}
                          >
-                              Women's Hats
+                              Women&apos;s Hats
                          </h3>
                          <h5
                               className="ls-n-20 float-left m-r-3 p-t-3 appear-animat"
