@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { newArrivalsProducts } from "../data";
+import { newArrivalsProducts } from "../../data";
 
 export const NewProducts = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +14,7 @@ export const NewProducts = () => {
      };
 
      return (
-          <div className="row no-gutters">
+          <div className="no-gutters">
                <Slider {...settings}>
                     {newArrivalsProducts.map((product) => (
                          <div className="product-default inner-quickview inner-icon">

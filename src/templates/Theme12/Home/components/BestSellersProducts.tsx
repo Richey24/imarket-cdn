@@ -11,7 +11,7 @@ export const BestSellersProducts = () => {
      return (
           <section
                className="best-sellers bg-gray appear-animate"
-               style={{paddingLeft:'80px', paddingRight:'80px'}}
+              
           >
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">

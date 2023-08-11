@@ -8,7 +8,7 @@ export const Electronics = () => {
      return (
           <section
                className="electronics-container appear-animate"
-               style={{ paddingLeft: "80px", paddingRight: "80px" }}
+                
           >
                <div className="container">
                     <h2 className="section-title border-0 line-height-1 ls-n-10 m-b-4">

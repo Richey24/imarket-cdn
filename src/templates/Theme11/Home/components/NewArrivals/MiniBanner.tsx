@@ -1,5 +1,5 @@
-import Banner1 from "../../../../assets/images/demoes/demo21/banners/banner-1.jpg";
-import Banner2 from "../../../../assets/images/demoes/demo21/banners/banner-2.jpg";
+import Banner1 from "../../../../../assets/images/demoes/demo21/banners/banner-1.jpg";
+import Banner2 from "../../../../../assets/images/demoes/demo21/banners/banner-2.jpg";
 
 export const MiniBanner = () => {
      return (

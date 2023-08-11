@@ -1,8 +1,8 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";
+import Skeleton from "react-loading-skeleton";  
 import "./PlaceholderLayout.css";
-
-export const PlaceholderLayout = () => {
+ 
+export const PlaceholderLayout = () => {  
      return (
           <div className="complex-placeholder-layout">
                <header className="header">

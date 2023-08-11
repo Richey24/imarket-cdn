@@ -23,11 +23,11 @@ export const FeaturedProducts = () => {
      return (
           <section
                className="featured-products-section"
-               style={{ paddingRight: "80px", paddingLeft: "80px" }}
+                
           >
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">Featured Products</h2>
-                    <div className="row no-gutters">
+                    <div className="no-gutters">
                          <Slider {...settings}>
                               {featuredProducts.map((product) => (
                                    <div className="product-default inner-quickview inner-icon">

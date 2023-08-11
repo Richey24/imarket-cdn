@@ -5,7 +5,8 @@ export const PromoBanner = () => {
           <div
                className="promo-section bg-gray"
                data-parallax="{'speed': 2, 'enableOnMobile': true}"
-               style={{backgroundImage:`url(${promobanner.src})`}}
+               // style={{backgroundImage:`url(${promobanner.src})`}}
+               data-image-src={promobanner.src}
           >
                <div className="promo-banner banner container text-uppercase">
                     <div className="banner-content row align-items-center text-center">
@@ -17,7 +18,7 @@ export const PromoBanner = () => {
                               </h2>
                          </div>
                          <div className="col-md-3 pb-4 pb-md-0">
-                              <a href="#" className="btn ls-10" style={{background:'#7aa93c'}}>
+                              <a href="#" className="btn ls-10" style={{background:'#7aa93c', color:'#fff'}}>
                                    View Sale
                               </a>
                          </div>

@@ -4,7 +4,7 @@ import { payments } from "../Home/data";
 const Footer = () => {
      return (
           <footer className="footer bg-dark position-relative">
-               <div className="footer-middle" style={{ paddingLeft: "40px", paddingRight: "40px" }}>
+               <div className="footer-middle"  >
                     <div className="container position-static">
                          <div className="row">
                               <div className="col-lg-3 col-md-4">
@@ -156,7 +156,7 @@ const Footer = () => {
                     {/* End .container */}
                </div>
                {/* End .footer-middle */}
-               <div className="container" style={{ paddingLeft: "40px", paddingRight: "40px" }}>
+               <div className="container"  >
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
                               <span className="footer-copyright">

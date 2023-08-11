@@ -26,7 +26,7 @@ import brand4 from "../../../assets/images/demoes/demo21/brands/brand4.png";
 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 
-export const featuredProducts: ProductProps[] = [
+export const featuredProducts = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",

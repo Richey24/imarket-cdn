@@ -332,7 +332,7 @@ const Header = () => {
                     >
                          <div
                               className="container"
-                              style={{ paddingLeft: "80px", paddingRight: "80px" }}
+                               
                          >
                               <div className="header-center">
                                    <button className="mobile-menu-toggler" type="button">

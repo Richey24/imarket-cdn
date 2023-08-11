@@ -11,8 +11,11 @@ const Header = () => {
 
      return (
           <header className="header">
-               <div className="top-notice text-white  " style={{background:'#7aa93c'}}>
-                    <div className="container  " style={{textAlign:'center', justifyContent:'center'}}>
+               <div className="top-notice text-white  " style={{ background: "#7aa93c" }}>
+                    <div
+                         className="container  "
+                         style={{ textAlign: "center", justifyContent: "center" }}
+                    >
                          <h5 className="d-inline-block mb-0">
                               Get Up to
                               <b>40% OFF</b> New-Season Styles
@@ -25,7 +28,7 @@ const Header = () => {
                     {/* End .container */}
                </div>
 
-               <div className="header-top" style={{ paddingLeft: "40px", paddingRight: "40px" }}>
+               <div className="header-top">
                     <div className="container">
                          <div className="header-left header-dropdowns">
                               <div className="header-dropdown lang-menu">
@@ -425,8 +428,8 @@ const Header = () => {
                                         <a href="demo21-shop.html" style={{ display: "flex" }}>
                                              Categories{" "}
                                              <FiChevronDown
-                                                  style={{ marginTop: "2px" }}
                                                   size={15}
+                                                  style={{ marginTop: "2px" }}
                                              />{" "}
                                         </a>
                                         {cat && (
@@ -437,6 +440,7 @@ const Header = () => {
                                                        backgroundColor: "#fff",
                                                        border: "1px solid #eee",
                                                        padding: "10px 20px",
+                                                       zIndex: 999,
                                                        boxShadow: "0 1rem 2.5rem rgba(0,0,0,0.15)",
                                                   }}
                                              >
@@ -598,21 +602,22 @@ const Header = () => {
                                         onMouseEnter={() => setPro(true)}
                                         onMouseLeave={() => setPro(false)}
                                    >
-                                        <a href="demo14-product.html" style={{ display: "flex" }}>
+                                        <a href="demo21-product.html" style={{ display: "flex" }}>
                                              Products{" "}
                                              <FiChevronDown
-                                                  style={{ marginTop: "2px" }}
                                                   size={15}
+                                                  style={{ marginTop: "2px" }}
                                              />
                                         </a>
                                         {pro && (
                                              <div
                                                   style={{
-                                                       width: "650px",
+                                                       width: "600px",
                                                        position: "absolute",
                                                        backgroundColor: "#fff",
                                                        border: "1px solid #eee",
                                                        padding: "10px 20px",
+                                                       zIndex: 999,
                                                        boxShadow: "0 1rem 2.5rem rgba(0,0,0,0.15)",
                                                   }}
                                              >
@@ -779,8 +784,8 @@ const Header = () => {
                                         <a href="#" style={{ display: "flex" }}>
                                              Pages{" "}
                                              <FiChevronDown
-                                                  style={{ marginTop: "2px" }}
                                                   size={15}
+                                                  style={{ marginTop: "2px" }}
                                              />
                                         </a>
                                         {pag && (

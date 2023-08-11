@@ -385,7 +385,7 @@ const Header = () => {
                                              {cat && (
                                                   <div
                                                        style={{
-                                                            width: "700px",
+                                                            width: "650px",
                                                             position: "absolute",
                                                             backgroundColor: "#fff",
                                                             border: "1px solid #eee",
@@ -561,7 +561,7 @@ const Header = () => {
                                              {pro && (
                                                   <div
                                                        style={{
-                                                            width: "700px",
+                                                            width: "650px",
                                                             position: "absolute",
                                                             backgroundColor: "#fff",
                                                             border: "1px solid #eee",

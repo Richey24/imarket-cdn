@@ -42,6 +42,8 @@ import banner3 from "../../../assets/images/demoes/demo14/banners/banner3.jpg";
 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 
+
+
 export const featuredProducts = [
      {
           productImageAlt: "product",
