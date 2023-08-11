@@ -1,9 +1,23 @@
 import React from "react";
 import HomeSlider from "./components/HomeSlider";
-import { bannerData, infoBoxData, productsData, sliderData } from "./data";
+import {
+     additionalProductWidgetsData,
+     bannerData,
+     categoriesData,
+     featuredProductsWidgetsData,
+     infoBoxData,
+     productWidgetsData,
+     productsData,
+     sliderData,
+     topRatedproducts,
+} from "./data";
 import BannersContainer from "./components/BannersContainer";
 import InfoBoxesContainer from "./components/InfoBoxes";
 import ProductGrid from "./components/ProductGrid";
+import CategoriesSlider from "./components/CategoriesSlider";
+import { ProductWidget } from "./components/ProductWidget";
+import { featuredProductWidget } from "@/templates/Theme4/Home/data";
+import TopRatedCard from "./components/TopRatedCard";
 
 const Home = () => {
      return (
@@ -18,14 +32,14 @@ const Home = () => {
                     {/* End .container */}
                     <div className="container mb-4 mb-lg-6">
                          <h2
-                              className="section-title text-center appear-animate"
+                              className="section-title text-center "
                               data-animation-name="fadeInUpShorter"
                               data-animation-delay={200}
                          >
                               Featured Products
                          </h2>
                          <p
-                              className="section-description text-center appear-animate"
+                              className="section-description text-center "
                               data-animation-name="fadeInUpShorter"
                               data-animation-delay={200}
                          >
@@ -54,7 +68,7 @@ const Home = () => {
                          >
                               Amazing categories with only top fashion products
                          </p>
-
+                         <CategoriesSlider categories={categoriesData} />
                          {/* End .categories-slider */}
                     </div>
                     {/* End .container */}
@@ -65,27 +79,27 @@ const Home = () => {
                     >
                          <div className="promo-content">
                               <h2
-                                   className="m-b-1 appear-animate"
+                                   className="m-b-1 "
                                    data-animation-name="fadeInUpShorter"
                                    data-animation-delay={200}
                               >
                                    New Season Sale
                               </h2>
                               <h3
-                                   className="mb-1 appear-animate"
+                                   className="mb-1 "
                                    data-animation-name="fadeInUpShorter"
                                    data-animation-delay={400}
                               >
                                    40% OFF
                               </h3>
                               <hr
-                                   className="divider-short-thick appear-animate"
+                                   className="divider-short-thick "
                                    data-animation-name="fadeInUpShorter"
                                    data-animation-delay={600}
                               />
                               <a
                                    href="demo11-shop.html"
-                                   className="btn btn-light appear-animate"
+                                   className="btn btn-light "
                                    data-animation-name="fadeInUpShorter"
                                    data-animation-delay={800}
                               >
@@ -95,7 +109,7 @@ const Home = () => {
                     </div>
                     {/* End .promo-section */}
                     <div
-                         className="container mb-2 mb-lg-4 appear-animate"
+                         className="container mb-2 mb-lg-4 "
                          data-animation-name="fadeIn"
                          data-animation-delay={100}
                     >
@@ -103,6 +117,7 @@ const Home = () => {
                          <p className="section-description text-center">
                               Only the top rated products added recently in our catalog
                          </p>
+                         <TopRatedCard products={topRatedproducts} />
                          <div
                               className="owl-carousel owl-theme pb-2 mb-2"
                               data-owl-options="{
@@ -322,12 +337,6 @@ const Home = () => {
                                              {" "}
                                              <a href="demo11-product.html">Women Dress</a>{" "}
                                         </h3>
-                                        {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
                                         <div className="price-box">
                                              <span className="old-price">$75.00</span>
                                              <span className="product-price">$55.00</span>
@@ -340,360 +349,54 @@ const Home = () => {
                          <hr className="mt-1 m-b-5" />
                          <div className="row">
                               <div
-                                   className="col-md-4 pb-5 pb-md-0 appear-animate"
+                                   className="col-md-4 pb-5 pb-md-0 "
                                    data-animation-name="fadeIn"
                                    data-animation-delay={200}
                               >
                                    <h4 className="section-sub-title mb-2">
                                         Recently Added Products
                                    </h4>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-1.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-1-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-2-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-3.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-3-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
+                                   {productWidgetsData.map((product, index) => (
+                                        <ProductWidget
+                                             key={index}
+                                             productImage={product.image1}
+                                             productTitle={product.name}
+                                             productPrice={product.price}
+                                             productImageTwo={product.image2}
+                                        />
+                                   ))}
                               </div>
                               <div
-                                   className="col-md-4 pb-5 pb-md-0 appear-animate"
+                                   className="col-md-4 pb-5 pb-md-0 "
                                    data-animation-name="fadeIn"
                                    data-animation-delay={400}
                               >
                                    <h4 className="section-sub-title mb-2">Best Selling Products</h4>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-4.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-4-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-5.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-5-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-6.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-6-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
+                                   {additionalProductWidgetsData.map((product, index) => (
+                                        <ProductWidget
+                                             key={index}
+                                             productImage={product.image1}
+                                             productTitle={product.name}
+                                             productPrice={product.price}
+                                             productImageTwo={product.image2}
+                                        />
+                                   ))}
                               </div>
                               <div
-                                   className="col-md-4 pb-5 pb-md-0 appear-animate"
+                                   className="col-md-4 pb-5 pb-md-0 "
                                    data-animation-name="fadeIn"
                                    data-animation-delay={600}
                               >
                                    <h4 className="section-sub-title mb-2">Featured Products</h4>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-7.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-7-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-8.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-8-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
-                                   <div className="product-default left-details product-widget">
-                                        <figure>
-                                             <a href="demo11-product.html">
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-9.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                                  <img
-                                                       src="assets/images/demoes/demo11/products/small/product-9-2.jpg"
-                                                       width={68}
-                                                       height={69}
-                                                       alt="Product"
-                                                  />
-                                             </a>
-                                        </figure>
-                                        <div className="product-details">
-                                             <h3 className="product-title">
-                                                  {" "}
-                                                  <a href="demo11-product.html">
-                                                       Product Short Name
-                                                  </a>{" "}
-                                             </h3>
-                                             {/* <div class="ratings-container">
-                                <div class="product-ratings">
-                                    <span class="ratings" style="width:100%"></span>
-                                    <span class="tooltiptext tooltip-top"></span>
-                                </div>
-                            </div> */}
-                                             <div className="price-box">
-                                                  <span className="product-price">$49.00</span>
-                                             </div>
-                                             {/* End .price-box */}
-                                        </div>
-                                        {/* End .product-details */}
-                                   </div>
+                                   {featuredProductsWidgetsData.map((product, index) => (
+                                        <ProductWidget
+                                             key={index}
+                                             productImage={product.image1}
+                                             productTitle={product.name}
+                                             productPrice={product.price}
+                                             productImageTwo={product.image2}
+                                        />
+                                   ))}
                               </div>
                          </div>
                          {/* End .row */}
