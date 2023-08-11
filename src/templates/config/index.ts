@@ -31,6 +31,8 @@ export const templateConfig: any = {
 
 export const cssImports: { [key: string]: any } = {
      theme1: require("../../assets/css/demo13.min.css"),
+     theme5: require("../../assets/css/demo5.min.css"),
+     theme11: require("../../assets/css/demo21.min.css"),
 };
 
 export const themeProps = {

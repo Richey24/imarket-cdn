@@ -20,7 +20,7 @@ import "../assets/css/bootstrap.min.css";
 //   import "../assets/css/demo1.min.css";
 //  import "../assets/css/demo2.min.css";
 //  import "../assets/css/demo20.min.css";
-import "../assets/css/demo21.min.css";
+// import "../assets/css/demo21.min.css";
 //  import "../assets/css/demo22.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
