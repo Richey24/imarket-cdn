@@ -12,7 +12,7 @@ interface BannersContainerProps {
 }
 
 const BannersContainer: React.FC<BannersContainerProps> = ({ banners }) => (
-     <div className="banners-container text-uppercase clear " data-animation-name="fadeIn">
+     <div className="banners-container text-uppercase clear">
           <div className="container">
                <div className="row row-joined">
                     {banners.map((banner, index) => (

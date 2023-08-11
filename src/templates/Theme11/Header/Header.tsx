@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../../assets/images/your-logo.png";
 
 const Header = () => {
      return (
@@ -653,7 +654,7 @@ const Header = () => {
                                    </div>
                                    {/* End .popup-menu */}
                                    <a href="demo11.html" className="logo">
-                                        <img src="assets/images/your-logo.png" alt="Porto Logo" />
+                                        <img src={logo.src} alt="Porto Logo" />
                                    </a>
                               </div>
                               {/* End .header-left */}
