@@ -1,179 +1,152 @@
 import React from "react";
-import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
-import logo from "../../../assets/images/your-logo.png";
+
 const Footer = () => {
      return (
-          <footer>
-               <div className="footer">
-                    <div className="footer-top"  style={{paddingRight:'80px', paddingLeft:'80px'}}>
-                         <div className="container">
-                              <div className="row align-items-center">
-                                   <div className="col-md-6 col-lg-3">
-                                        <h4 className="widget-newsletter-title font1 font-weight-bold text-white ls-n-10">
-                                             Sign Up to Newsletter
-                                        </h4>
+          <footer className="footer bg-dark">
+               <div className="container">
+                    <div className="footer-middle">
+                         <div className="row">
+                              <div className="col-md-5 col-lg-3">
+                                   <div className="widget widget-contact-info">
+                                        <h4 className="widget-title">Contact Info</h4>
+                                        <ul className="contact-info">
+                                             <li>
+                                                  <i className="icon-direction" />
+                                                  <span className="contact-info-label">
+                                                       Address
+                                                  </span>
+                                                  123 Street Name, City, England
+                                             </li>
+                                             <li>
+                                                  <i className="icon-phone-1" />
+                                                  <span className="contact-info-label">Phone</span>
+                                                  Toll Free <a href="tel:">(123) 456-7890</a>
+                                             </li>
+                                             <li>
+                                                  <i className="icon-envolope" />
+                                                  <span className="contact-info-label">
+                                                       Email
+                                                  </span>{" "}
+                                                  <a href="mailto:mail@example.com">
+                                                       mail@example.com
+                                                  </a>
+                                             </li>
+                                        </ul>
                                    </div>
-                                   <div className="col-md-6 col-lg-4">
-                                        <p className="widget-newsletter-content ls-n-10 text-white mb-0">
-                                             Get all the latest information on Events, Sales and
-                                             Offers.
-                                        </p>
-                                        <span className="widget-newsletter-content d-block font-weight-bold ls-n-10 text-white">
-                                             Receive $10 coupon for first shopping.
-                                        </span>
-                                   </div>
-                                   <div className="col-md-10 col-lg-5">
-                                        <form action="#" className="mb-0">
-                                             <div className="footer-submit-wrapper d-flex">
-                                                  <input
-                                                       type="email"
-                                                       className="form-control mb-0"
-                                                       placeholder="Enter your Email address..."
-                                                  />
-                                                  <button
-                                                       type="submit"
-                                                       className="btn btn-md btn-dark"
-                                                  >
-                                                       Subscribe
-                                                  </button>
+                                   {/* End .widget */}
+                              </div>
+                              <div className="col-md-7 offset-lg-1 col-lg-8">
+                                   <div className="row">
+                                        <div className="col-sm-6 col-lg-3">
+                                             <div className="widget">
+                                                  <h3 className="widget-title">Account</h3>
+                                                  <div className="widget-content">
+                                                       <ul>
+                                                            <li>
+                                                                 <a href="dashboard.html">
+                                                                      Dashboard
+                                                                 </a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Cart</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Checkout</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Order tracking</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Order history</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Wishlist</a>
+                                                            </li>
+                                                       </ul>
+                                                  </div>
                                              </div>
-                                        </form>
+                                        </div>
+                                        <div className="col-sm-6 col-lg-3">
+                                             <div className="widget">
+                                                  <h3 className="widget-title">About</h3>
+                                                  <div className="widget-content">
+                                                       <ul>
+                                                            <li>
+                                                                 <a href="about.html">About us</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Contact us</a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">
+                                                                      Shipping &amp; Delivery
+                                                                 </a>
+                                                            </li>
+                                                            <li>
+                                                                 <a href="#">Privacy</a>
+                                                            </li>
+                                                       </ul>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div className="col-md-12 col-lg-5">
+                                             <div className="widget widget-newsletter">
+                                                  <h4 className="widget-title">Newsletter</h4>
+                                                  <p className="mb-2 mr-3">
+                                                       Get all the latest information on Events,
+                                                       Sales and Offers. Sign up for newsletter
+                                                       today.
+                                                  </p>
+                                                  <form action="#">
+                                                       <input
+                                                            type="email"
+                                                            className="form-control"
+                                                            placeholder="Email address..."
+                                                       />
+                                                       <input
+                                                            type="submit"
+                                                            className="btn"
+                                                            defaultValue="GO"
+                                                       />
+                                                  </form>
+                                             </div>
+                                             {/* End .widget */}
+                                        </div>
                                    </div>
                               </div>
                          </div>
+                         {/* End .row */}
                     </div>
-                    <div className="container"  style={{paddingRight:'80px', paddingLeft:'80px'}}>
-                         <div className="footer-middle">
-                              <div className="row">
-                                   <div className="col-lg-6 mb-1">
-                                        <a href="demo21.html">
-                                             <img
-                                                  src={logo.src}
-                                                  alt="Logo"
-                                                  className="logo mb-3 mb-lg-6"
-                                             />
-                                        </a>
-                                        <div className="row no-gutters m-0">
-                                             <div className="col-md-4 mb-2">
-                                                  <div className="contact-widget phone">
-                                                       <h4 className="widget-title">
-                                                            call us now:
-                                                       </h4>
-                                                       <a href="#">+123 5678 890</a>
-                                                  </div>
-                                             </div>
-                                             <div className="col-md-4 mb-2">
-                                                  <div className="contact-widget email">
-                                                       <h4 className="widget-title">
-                                                            e-mail address:
-                                                       </h4>
-                                                       <a href="mailto:mail@example.com">
-                                                            mail@example.com
-                                                       </a>
-                                                  </div>
-                                             </div>
-                                             <div className="col-md-4 mb-2">
-                                                  <div className="contact-widget follow">
-                                                       <h4 className="widget-title ls-n-10">
-                                                            follow us
-                                                       </h4>
-                                                       <div className="social-icons">
-                                                            <a
-                                                                 href="#"
-                                                                 className="social-icon social-facebook icon-facebook"
-                                                                 target="_blank"
-                                                            />
-                                                            <a
-                                                                 href="#"
-                                                                 className="social-icon social-twitter icon-twitter"
-                                                                 target="_blank"
-                                                            />
-                                                            <a
-                                                                 href="#"
-                                                                 className="social-icon social-linkedin fab fa-linkedin-in"
-                                                                 target="_blank"
-                                                            />
-                                                       </div>
-                                                       {/* End .social-icons */}
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div className="col-lg-2">
-                                        <div className="widget">
-                                             <h4 className="widget-title">Categories</h4>
-                                             <ul className="links">
-                                                  <li>
-                                                       <a href="demo21-shop.html">Electronics</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="demo21-shop.html">Fashion</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="demo21-shop.html">Gifts</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="demo21-shop.html">Music</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="demo21-shop.html">Trousers</a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
-                                   <div className="col-lg-4 links link-parts row">
-                                        <ul className="link-part col-lg-6 col-md-12 mb-0">
-                                             <h4 className="widget-title">About</h4>
-                                             <li>
-                                                  <a href="demo2-about.html">About us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo2-contact.html">Cart</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo2-contact.html">Checkout</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo2-contact.html">Contact us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="login.html">Dashboard</a>
-                                             </li>
-                                        </ul>
-                                        <ul className="link-part col-lg-6 col-md-12">
-                                             <h4 className="widget-title">Account</h4>
-                                             <li>
-                                                  <a href="#">Order tracking</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Order history</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Privacy</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Shipping &amp; Delivery</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Wishlist</a>
-                                             </li>
-                                        </ul>
-                                   </div>
-                              </div>
+                    {/* End .footer-middle */}
+                    <div className="footer-bottom d-flex flex-column flex-lg-row align-items-sm-center">
+                         <p className="footer-copyright mb-lg-0">
+                              © Porto eCommerce. 2021. All Rights Reserved
+                         </p>
+                         <div className="social-icons ml-lg-auto mr-1">
+                              <a
+                                   href="#"
+                                   className="social-icon social-facebook icon-facebook"
+                                   target="_blank"
+                                   title="Facebook"
+                              />
+                              <a
+                                   href="#"
+                                   className="social-icon social-twitter icon-twitter"
+                                   target="_blank"
+                                   title="Twitter"
+                              />
+                              <a
+                                   href="#"
+                                   className="social-icon social-linkedin fab fa-linkedin-in"
+                                   target="_blank"
+                                   title="Linkedin"
+                              />
                          </div>
-                         <div className="footer-bottom d-sm-flex align-items-center">
-                              <div className="footer-left">
-                                   <span className="footer-copyright">
-                                        © Porto eCommerce. 2021. All Rights Reserved
-                                   </span>
-                              </div>
-                              <div className="footer-right ml-auto mt-1 mt-sm-0">
-                                   <img src={payment.src} alt="payment" />
-                              </div>
-                         </div>
+                         {/* End .social-icons */}
                     </div>
                     {/* End .footer-bottom */}
                </div>
+               {/* End .container */}
           </footer>
      );
 };
