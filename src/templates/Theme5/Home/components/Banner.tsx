@@ -1,104 +1,177 @@
-import Carousel from "react-bootstrap/Carousel";
-import slide1 from "../../../../assets/images/demoes/demo1/slider/slide-1.png";
-import slide2 from "../../../../assets/images/demoes/demo1/slider/slide-2.jpg";
-import slide3 from "../../../../assets/images/demoes/demo1/slider/slide-3.jpg";
 import Image from "next/image";
+import Slider from "react-slick";
+
 const Banner = () => {
+     const settings = {
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+     };
+
      return (
-          <Carousel>
-               <Carousel.Item>
-                    <div className="home-slide home-slide1 banner banner-md-vw banner-sm-vw d-flex align-items-center">
-                         <Image
-                              src={slide1}
-                              alt=""
-                              width="880"
-                              height="428"
-                              className="img-fluid"
-                         />
-                         <Carousel.Caption className="h-100">
-                              <div className="w-100 d-flex flex-column justify-content-center align-items-start h-100 text-uppercase">
-                                   <h4 className="text-white mb-0">
-                                        Find the Boundaries. Push Through!
-                                   </h4>
-                                   <h2 className="text-white mb-0">Summer Sale</h2>
-                                   <h3 className="text-white text-uppercase m-b-3">70% Off</h3>
-                                   <h5 className="text-white text-uppercase d-inline-block mb-0 ls-n-20 align-text-bottom">
-                                        Starting At{" "}
-                                        <b className="coupon-sale-text bg-secondary text-white d-inline-block">
-                                             $ <em className="align-text-top">199</em>99
-                                        </b>
-                                        <a
-                                             href="demo1-shop.html"
-                                             className="btn btn-dark btn-md ls-10"
-                                        >
-                                             Shop Now!
-                                        </a>
-                                   </h5>
-                              </div>
-                         </Carousel.Caption>
+          <div style={{ height: "650px", overflow: "hidden" }}>
+               <div
+                    style={{
+                         display: "flex",
+                         justifyContent: "space-between",
+                         paddingLeft: "80px",
+                         paddingRight: "50px",
+                    }}
+                    className="info-boxes-slider"
+               >
+                    <div className="info-box info-box-icon-left">
+                         <i className="icon-shipping font-35 pt-1"></i>
+
+                         <div className="info-box-content pt-1">
+                              <h4>FREE SHIPPING &amp; RETURN</h4>
+                              <p className="text-body">Free shipping on all orders over $99</p>
+                         </div>
                     </div>
-               </Carousel.Item>
-               <Carousel.Item>
-                    <div className="home-slide home-slide2 banner banner-md-vw banner-sm-vw d-flex align-items-center">
+
+                    <div className="info-box info-box-icon-left">
+                         <i className="icon-money pt-1"></i>
+
+                         <div className="info-box-content">
+                              <h4>MONEY BACK GUARANTEE</h4>
+                              <p className="text-body">100% money back guarantee</p>
+                         </div>
+                    </div>
+
+                    <div className="info-box info-box-icon-left">
+                         <i className="icon-support pt-1"></i>
+
+                         <div className="info-box-content">
+                              <h4>ONLINE SUPPORT 24/7</h4>
+                              <p className="text-body">Lorem ipsum dolor sit amet.</p>
+                         </div>
+                    </div>
+               </div>
+
+               <Slider {...settings}>
+                    <div className="home-slide banner banner-md-vw">
                          <Image
+                              width={200}
+                              height={200}
                               className="slide-bg"
-                              style={{ backgroundColor: "#dadada" }}
-                              src={slide2}
-                              width="880"
-                              height="428"
-                              alt="home-slider"
+                              src={
+                                   "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide1.jpg"
+                              }
+                              style={{ width: "85%", margin: "0 auto" }}
+                              alt="slider image"
                          />
-                         <Carousel.Caption className="h-100">
-                              <div className="w-100 d-flex flex-column justify-content-center align-items-start h-100 text-uppercase">
-                                   <h4 className="m-b-2">Over 200 products with discounts</h4>
-                                   <h2 className="m-b-3">Great Deals</h2>
-                                   <h5 className="d-inline-block mb-0 align-top ls-n-20 mr-5 mb-2">
-                                        Starting At $
-                                        <b className="">
-                                             <em>299</em>99
-                                        </b>
-                                        <a
-                                             href="demo1-shop.html"
-                                             className="btn btn-dark btn-md ls-10 ms-2"
-                                        >
-                                             Get Yours!
-                                        </a>
-                                   </h5>
-                              </div>
-                         </Carousel.Caption>
+                         <div
+                              style={{ marginLeft: "100px" }}
+                              className="banner-layer banner-layer-middle"
+                         >
+                              <h4
+                                   style={{ color: "#838588", fontWeight: "400", fontSize: "23px" }}
+                                   className="m-b-3"
+                              >
+                                   Find the Boundaries. Push Through!
+                              </h4>
+                              <h2 style={{ fontSize: "70px" }} className="font-script mb-0">
+                                   Jeans Sale
+                              </h2>
+                              <h3
+                                   style={{ fontSize: "80px", display: "flex", columnGap: "10px" }}
+                                   className="upto-text"
+                              >
+                                   <em
+                                        style={{
+                                             fontSize: "40px",
+                                             display: "flex",
+                                             flexDirection: "column",
+                                        }}
+                                   >
+                                        up <span>to</span>
+                                   </em>
+                                   80% OFF
+                              </h3>
+                              <h5 className="d-inline-block mb-0 text-uppercase ls-n-20">
+                                   Starting At
+                                   <b
+                                        style={{
+                                             backgroundColor: "#FF7272",
+                                             marginLeft: "15px",
+                                             marginRight: "15px",
+                                        }}
+                                        className="coupon-sale-text text-white"
+                                   >
+                                        $<em>199</em>99
+                                   </b>
+                              </h5>
+                              <a href="demo5-shop.html" className="btn btn-dark btn-lg ls-10">
+                                   Shop Now!
+                              </a>
+                         </div>
                     </div>
-               </Carousel.Item>
-               <Carousel.Item>
-                    <div className="home-slide home-slide3 banner banner-md-vw banner-sm-vw  d-flex align-items-center">
+
+                    <div className="home-slide banner banner-md-vw">
                          <Image
+                              width={200}
+                              height={200}
                               className="slide-bg"
-                              style={{ backgroundColor: "#e5e4e2" }}
-                              src={slide3}
-                              width="880"
-                              height="428"
-                              alt="home-slider"
+                              src={
+                                   "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide2.jpg"
+                              }
+                              style={{ width: "85%", margin: "0 auto" }}
+                              alt="slider image"
                          />
-                         <Carousel.Caption className="h-100">
-                              <div className="w-100 d-flex flex-column justify-content-center align-items-start h-100 text-uppercase">
-                                   <h4 className="m-b-2">Up to 70% off</h4>
-                                   <h2 className="m-b-3">New Arrivals</h2>
-                                   <h5 className="d-inline-block mb-0 align-top mr-5 mb-2">
-                                        Starting At $
-                                        <b>
-                                             <em className="display-5">299</em> 99
-                                        </b>
-                                        <a
-                                             href="demo1-shop.html"
-                                             className="btn btn-dark btn-md ls-10 ms-2"
-                                        >
-                                             Get Yours!
-                                        </a>
-                                   </h5>
-                              </div>
-                         </Carousel.Caption>
+                         <div
+                              style={{ marginLeft: "100px" }}
+                              className="banner-layer banner-layer-middle"
+                         >
+                              <h2 style={{ fontSize: "40px" }} className="ls-n-25 mb-0">
+                                   {"Women's"} Business Fashion
+                              </h2>
+                              <h3
+                                   style={{
+                                        fontSize: "100px",
+                                        marginTop: "10px",
+                                        display: "flex",
+                                        columnGap: "10px",
+                                   }}
+                                   className="upto-text"
+                              >
+                                   <em
+                                        style={{
+                                             fontSize: "50px",
+                                             fontStyle: "normal",
+                                             display: "flex",
+                                             flexDirection: "column",
+                                        }}
+                                   >
+                                        up <span>to</span>
+                                   </em>
+                                   60% OFF
+                              </h3>
+                              <h5 className="text-uppercase d-inline-block mb-0 align-top ls-n-20">
+                                   Starting at
+                                   <b
+                                        style={{
+                                             color: "#FF7272",
+                                             marginLeft: "5px",
+                                             marginRight: "25px",
+                                             fontSize: "21px",
+                                        }}
+                                        className="coupon-sale-text "
+                                   >
+                                        $<em>29</em>99
+                                   </b>
+                              </h5>
+                              <a
+                                   href="demo5-shop.html"
+                                   className="btn btn-dark btn-outline ls-10 btn-xl mt-0"
+                              >
+                                   Shop Now!
+                              </a>
+                         </div>
                     </div>
-               </Carousel.Item>
-          </Carousel>
+               </Slider>
+          </div>
      );
 };
 export default Banner;
