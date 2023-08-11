@@ -1,10 +1,11 @@
 import React from "react";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
+import logo from "../../../assets/images/your-logo.png";
 const Footer = () => {
      return (
           <footer>
                <div className="footer">
-                    <div className="footer-top">
+                    <div className="footer-top"  style={{paddingRight:'80px', paddingLeft:'80px'}}>
                          <div className="container">
                               <div className="row align-items-center">
                                    <div className="col-md-6 col-lg-3">
@@ -28,7 +29,6 @@ const Footer = () => {
                                                        type="email"
                                                        className="form-control mb-0"
                                                        placeholder="Enter your Email address..."
-                                                      
                                                   />
                                                   <button
                                                        type="submit"
@@ -42,13 +42,13 @@ const Footer = () => {
                               </div>
                          </div>
                     </div>
-                    <div className="container">
+                    <div className="container"  style={{paddingRight:'80px', paddingLeft:'80px'}}>
                          <div className="footer-middle">
                               <div className="row">
                                    <div className="col-lg-6 mb-1">
                                         <a href="demo21.html">
                                              <img
-                                                  src="assets/images/your-logo.png"
+                                                  src={logo.src}
                                                   alt="Logo"
                                                   className="logo mb-3 mb-lg-6"
                                              />
@@ -121,7 +121,7 @@ const Footer = () => {
                                              </ul>
                                         </div>
                                    </div>
-                                   <div className="links link-parts row">
+                                   <div className="col-lg-4 links link-parts row">
                                         <ul className="link-part col-lg-6 col-md-12 mb-0">
                                              <h4 className="widget-title">About</h4>
                                              <li>
@@ -168,10 +168,7 @@ const Footer = () => {
                                    </span>
                               </div>
                               <div className="footer-right ml-auto mt-1 mt-sm-0">
-                                   <img
-                                        src={payment.src}
-                                        alt="payment"
-                                   />
+                                   <img src={payment.src} alt="payment" />
                               </div>
                          </div>
                     </div>

@@ -1,0 +1,15 @@
+/* styles.module.css */
+.error-container {
+     text-align: center;
+     padding: 20px;
+}
+
+.error-container h1 {
+     font-size: 24px;
+     margin-bottom: 10px;
+}
+
+.error-container p {
+     font-size: 16px;
+     color: #666;
+}

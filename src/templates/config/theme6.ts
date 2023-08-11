@@ -3,8 +3,7 @@ import T6Header from "../Theme6/Header/Header";
 import { Home } from "../Theme6/Home/Home";
 import T6pageLinks from "../Theme6/PageLinks/pageLinks";
 import { IComponentProps } from "./config.type";
-import "../../assets/css/demo6.min.css";
-
+// import "../../assets/css/demo6.min.css";
 
 export const theme6TemplateConfig = {
      header: T6Header,

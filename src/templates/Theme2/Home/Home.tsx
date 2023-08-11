@@ -4,8 +4,6 @@ import { Banner } from "./components/Banner";
 import Card from "./components/Card";
 
 const Home = () => {
-
-
      return (
           <main className="main">
                <Banner />
@@ -14,4 +12,4 @@ const Home = () => {
      );
 };
 
-export default Home
+export default Home;
