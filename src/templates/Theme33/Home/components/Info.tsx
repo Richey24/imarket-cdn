@@ -56,18 +56,14 @@ export const InfoBoxesContainer: React.FC = () => {
 
      return (
           <div className="top-notice bg-primary">
-               <div className="container">
-                    <OwlCarousel
-                         className="info-boxes-slider owl-carousel owl-theme"
-                         {...owlCarouselOptions}
-                    >
-                         {infoBoxItems.map((item, index) => (
-                              <InfoBox key={index} {...item} />
-                         ))}
-                    </OwlCarousel>
-                    {/* End .info-boxes-slider */}
-               </div>
-               {/* End .container */}
+               <OwlCarousel
+                    className="info-boxes-slider owl-carousel owl-theme"
+                    {...owlCarouselOptions}
+               >
+                    {infoBoxItems.map((item, index) => (
+                         <InfoBox key={index} {...item} />
+                    ))}
+               </OwlCarousel>
           </div>
      );
 };

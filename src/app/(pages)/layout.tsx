@@ -1,5 +1,5 @@
 "use client";
-import "../globals.css";
+// import "../globals.css";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import { useContext, useEffect } from "react";
@@ -9,6 +9,7 @@ import { cssImports, templateConfig } from "@/templates/config/index";
 import { PlaceholderLayout } from "../components/PlaceholderLayout/PlaceholderLayout";
 import { SitesField, ThemeName } from "@/appProvider/types";
 import { NoSite } from "../components/NoSite/NoSite";
+// import "../../assets/css/demo2.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
      useEffect(() => {
           if (site) {
-               cssImports[site.theme.theme as ThemeName];
+               import(`../../assets/css/${cssImports[site.theme.theme as ThemeName]}.min.css`);
           }
      }, [site]);
 
@@ -34,23 +35,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
      return (
           <html lang="en">
-               <Head>
+               {/* <Head>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-               </Head>
-               <body className={"homepage page-wrapper"}>
-                    <Header
-                         props={{
-                              ...site.theme.header.component.props,
-                              company: site.company,
-                         }}
-                    />
-                    {children}
-                    <Footer
-                         props={{
-                              company: site.company,
-                              ...site.theme.footer.component.props,
-                         }}
-                    />
+               </Head> */}
+               <body className={"homepage relative"}>
+                    <div className="page-wrapper">
+                         <Header
+                              props={{
+                                   ...site.theme.header.component.props,
+                                   company: site.company,
+                              }}
+                         />
+                         {children}
+                         <Footer
+                              props={{
+                                   company: site.company,
+                                   ...site.theme.footer.component.props,
+                              }}
+                         />
+                    </div>
                </body>
           </html>
      );

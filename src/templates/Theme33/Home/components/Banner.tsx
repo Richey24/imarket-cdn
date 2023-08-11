@@ -10,8 +10,7 @@ const settings = {
      speed: 500,
      slidesToShow: 1,
      slidesToScroll: 1,
-     autoplay: true,
-     autoplaySpeed: 2000,
+     autoplay: false,
 };
 
 export const Banner = () => {
@@ -63,7 +62,7 @@ export const Banner = () => {
                               src={
                                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide1.jpg"
                               }
-                              style={{ width: "85%", margin: "0 auto" }}
+                              style={{ width: "100", margin: "0 auto" }}
                               alt="slider image"
                          />
                          <div
@@ -129,7 +128,7 @@ export const Banner = () => {
                               src={
                                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide2.jpg"
                               }
-                              style={{ width: "85%", margin: "0 auto" }}
+                              style={{ width: "100%", margin: "0 auto" }}
                               alt="slider image"
                          />
                          <div
