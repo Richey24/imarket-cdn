@@ -21,7 +21,7 @@ export const Banner = () => {
 
      return (
           <div style={{ paddingLeft: "100px", paddingRight: "100px", paddingTop: "20px", paddingBottom: "20px" }} className="row">
-               <div className="col-lg-3 mb-2 appear-animate" data-animation-name="fadeInRightShorter"
+               <div className="col-lg-3 mb-2" data-animation-name="fadeInRightShorter"
                     data-animation-delay="200" data-animation-duration="1000">
                     <div className="side-menu-wrapper">
                          <h2 className="side-menu-title ls-10">Top Categories</h2>
@@ -45,7 +45,7 @@ export const Banner = () => {
                     </div>
                </div>
 
-               <div className="col-lg-9 mb-2 appear-animate" data-animation-name="fadeInLeftShorter"
+               <div className="col-lg-9 mb-2" data-animation-name="fadeInLeftShorter"
                     data-animation-delay="400" data-animation-duration="1000">
                     <div className="home-slider owl-theme" data-owl-options="{
 							'dots': true,
