@@ -6,7 +6,6 @@ import { IComponentProps } from "./config.type";
 
 export const theme1TemplateConfig = {
      header: T1Header,
-     // pageLink: T1pageLinks,
      home: Home,
      footer: T1Footer,
 };

@@ -7,12 +7,11 @@ import Product from "./components/Product";
 import ProductWidget from "./components/ProductWidget";
 
 export const Home = () => {
-
-     const [quickView, setQuick] = useState({})
+     const [quickView, setQuick] = useState({});
 
      return (
           <main style={{ backgroundColor: "#F6F7F9", paddingBottom: "10px" }} className="main home">
-               <Banner />
+               {/* <Banner /> */}
                <Card />
                <MiniBanner />
                <Product setQuickView={setQuick} />

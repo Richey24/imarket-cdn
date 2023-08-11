@@ -18,9 +18,8 @@ export const SpecialOffer = () => {
      };
      return (
           <section
-               className="special-offer-section bg-gray appear-animate"
-               data-animation-name="fadeIn"
-               data-animation-delay={200}
+               className="special-offer-section bg-gray"
+               style={{paddingRight:'80px', paddingLeft:'80px'}}
           >
                <div className="container">
                     <div className="row">
