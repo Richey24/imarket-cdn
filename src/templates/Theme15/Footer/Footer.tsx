@@ -3,8 +3,11 @@ import logo from "../../../assets/images/logo.png";
 import product9 from "../../../assets/images/demoes/demo15/products/product-9.jpg";
 import product3 from "../../../assets/images/demoes/demo15/products/product-3.jpg";
 import product6 from "../../../assets/images/demoes/demo15/products/product-6.jpg";
+import payments from "../../../assets/images/demoes/demo15/payment-icon.png";
 
-const Footer = () => {
+const Footer = (props: any) => {
+     const { static: staticProps, company } = props.props;
+     console.log("footerProps", company);
      return (
           <footer className="footer bg-dark ">
                <div className="container">
@@ -41,21 +44,20 @@ const Footer = () => {
                                                        <span className="contact-info-label">
                                                             Address:
                                                        </span>
-                                                       1234 Street Name, City, Country
+                                                       {company?.city + " " + company?.country}
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
                                                             Phone:
                                                        </span>
-                                                       Toll Free
-                                                       <a href="tel:">(123) 456-7890</a>
+                                                       <span>{company?.phone}</span>
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
                                                             Email:
                                                        </span>
                                                        <a href="mailto:mail@example.com">
-                                                            mail@example.com
+                                                            {company?.user_id?.email}
                                                        </a>
                                                   </li>
                                                   <li>
@@ -292,34 +294,7 @@ const Footer = () => {
                          </p>
                          <div className="footer-right mt-1 mt-sm-0">
                               <div className="payment-icons mr-0">
-                                   <span
-                                        className="payment-icon visa"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-visa.svg)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon paypal"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-paypal.svg)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon stripe"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-stripe.png)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon verisign"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-verisign.svg)",
-                                        }}
-                                   />
+                                   <Image src={payments} alt="" />
                               </div>
                          </div>
                     </div>

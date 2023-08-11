@@ -1,7 +1,14 @@
 import Image from "next/image";
 import logo from "../../../assets/images/logo.png";
 import { FiChevronDown } from "react-icons/fi";
-const Header = () => {
+import { useState } from "react";
+const Header = (props: any) => {
+     const { company, static: staticProps } = props.props;
+     console.log("headerProps", staticProps);
+
+     const [cat, setCat] = useState(false);
+     const [pro, setPro] = useState(false);
+     const [pag, setPag] = useState(false);
      return (
           <header className="header">
                <div className="header-top">
@@ -127,20 +134,17 @@ const Header = () => {
                                    <i className="fas fa-bars" />
                               </button>
                               <a href="demo15.html" className="logo">
-                                   <Image
-                                        src={logo}
-                                        className="black-logo"
-                                        alt="Porto Logo"
-                                        width={202}
-                                        height={80}
-                                   />
-                                   {/* <img
-                                        src="assets/images/your-logo.png"
-                                        className="white-logo"
-                                        alt="Porto Logo"
-                                        width={202}
-                                        height={80}
-                                   /> */}
+                                   {company?.logo ? (
+                                        <Image
+                                             src={company?.logo}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   ) : (
+                                        <h3>{company?.company_name || "Tester"}</h3>
+                                   )}
                               </a>
                          </div>
                          {/* End .header-left */}

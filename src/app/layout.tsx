@@ -16,15 +16,6 @@ import Script from "next/script";
 import Head from "next/head";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "../assets/css/bootstrap.min.css";
-<<<<<<< HEAD
-// import "../assets/css/demo13.min.css";
-// import "../assets/css/demo1.min.css";
-// import "../assets/css/demo2.min.css";
-// import "../assets/css/demo3.min.css";
-// import "../assets/css/demo9.min.css";
-import "../assets/css/demo15.min.css";
-=======
->>>>>>> main
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 import "../assets/js/webfont";
