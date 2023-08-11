@@ -162,7 +162,7 @@ const Home = () => {
                     <section
                          className="promo-section bg-dark"
                          data-parallax="{'speed': 2, 'enableOnMobile': true}"
-                         data-image-src={Banner5.src}
+                         data-image-src={Banner5}
                     >
                          <div className="promo-banner banner container text-uppercase">
                               <div className="banner-content row align-items-center text-center">
