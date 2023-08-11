@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetSiteByDomain } from "./hook";
 import { getSubDomain } from "@/utils/helper";
-import { SitesField } from "./types";
+import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
 
 export const AppContext = React.createContext<any>(null);
@@ -33,7 +33,9 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      }, []);
 
      return (
-          <AppContext.Provider value={{ site: dummySite, loading }}>{children}</AppContext.Provider>
+          <AppContext.Provider value={{ site, loading, setLoading }}>
+               {children}
+          </AppContext.Provider>
      );
 };
 
