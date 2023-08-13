@@ -1,9 +1,5 @@
 import React from "react";
 import Banner from "./components/Banner";
-import Banner1 from "../../../assets/images/demoes/demo4/banners/banner-1.jpg";
-import Banner2 from "../../../assets/images/demoes/demo4/banners/banner-2.jpg";
-import Banner3 from "../../../assets/images/demoes/demo4/banners/banner-3.jpg";
-import Banner4 from "../../../assets/images/demoes/demo4/banners/banner-4.jpg";
 import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
 import Slider from "react-slick";
 import Image from "next/image";
@@ -166,7 +162,7 @@ const Home = () => {
                     <section
                          className="promo-section bg-dark"
                          data-parallax="{'speed': 2, 'enableOnMobile': true}"
-                         data-image-src={Banner5.src}
+                         data-image-src={Banner5}
                     >
                          <div className="promo-banner banner container text-uppercase">
                               <div className="banner-content row align-items-center text-center">

@@ -3,44 +3,7 @@ import React from "react";
 
 const Footer = (): JSX.Element => {
      return (
-          <footer className="footer font2">
-               <div className="footer-top">
-                    <div className="container">
-                         <div className="widget-newsletter">
-                              <div className="row align-items-center">
-                                   <div className="col-sm-6 col-lg-4">
-                                        <h4 className="newsletter-title line-height-1 text-uppercase m-b-1">
-                                             Subscribe Newsletter
-                                        </h4>
-                                        <p className="newsletter-info">
-                                             Get all the latest information on Events, Sales and
-                                             Offers.
-                                        </p>
-                                   </div>
-
-                                   <div className="col-sm-6 col-lg-8">
-                                        <form action="#" className="mb-0">
-                                             <div className="footer-submit-wrapper d-flex">
-                                                  <input
-                                                       type="email"
-                                                       className="form-control mb-1"
-                                                       placeholder="Email address..."
-                                                       required
-                                                  />
-                                                  <button
-                                                       type="submit"
-                                                       className="btn btn-dark btn-sm"
-                                                  >
-                                                       Subscribe
-                                                  </button>
-                                             </div>
-                                        </form>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-
+          <footer className="footer font2 footer-reveal">
                <div className="container">
                     <div className="footer-middle">
                          <div className="row">
@@ -121,7 +84,7 @@ const Footer = (): JSX.Element => {
                                         <div className="social-icons">
                                              <Link
                                                   href="#"
-                                                  className="social-icon social-facebook icon-facebook"
+                                                  className="social-icon social-instagram icon-instagram"
                                                   target="_blank"
                                              ></Link>
                                              <Link
@@ -131,7 +94,7 @@ const Footer = (): JSX.Element => {
                                              ></Link>
                                              <Link
                                                   href="#"
-                                                  className="social-icon social-instagram icon-instagram"
+                                                  className="social-icon social-facebook icon-facebook"
                                                   target="_blank"
                                              ></Link>
                                         </div>
@@ -141,7 +104,7 @@ const Footer = (): JSX.Element => {
                                         <h4 className="widget-title">Payment Methods</h4>
 
                                         <img
-                                             src="assets/images/demoes/demo34/payments.png"
+                                             src="assets/images/demoes/demo35/payment.png"
                                              alt="payment"
                                              width="240"
                                              height="32"
@@ -151,8 +114,9 @@ const Footer = (): JSX.Element => {
                          </div>
                     </div>
                     <div className="footer-bottom">
-                         <p className="footer-copyright text-lg-center mb-0">
-                              Porto eCommerce. &copy; 2021. All Rights Reserved
+                         <p className="footer-copyright text-lg-center ls-n-25 mb-0">
+                              Porto eCommerce.&nbsp;&copy;&nbsp;&nbsp;2021.&nbsp;&nbsp;All Rights
+                              Reserved.
                          </p>
                     </div>
                </div>

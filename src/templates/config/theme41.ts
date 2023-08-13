@@ -1,9 +1,11 @@
-import T1Footer from "../Theme34/Footer/Footer";
-import T1Header from "../Theme34/Header/Header";
-import { Home } from "../Theme34/Home/Home";
+import T1Footer from "../Theme41/Footer/Footer";
+import T1Header from "../Theme41/Header/Header";
+import { Home } from "../Theme41/Home/Home";
 
-export const theme34TemplateConfig = {
+const templateConfig = {
      header: T1Header,
      home: Home,
      footer: T1Footer,
 };
+
+export default templateConfig

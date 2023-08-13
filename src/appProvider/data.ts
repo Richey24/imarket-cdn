@@ -1,11 +1,11 @@
 export const dummySite = {
      theme: {
-          theme: "theme34",
+          theme: "theme35",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme34",
+                    theme: "theme35",
                     name: "",
                     props: {
                          static: {
@@ -36,17 +36,17 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme34",
+                    theme: "theme35",
                     props: {
                          company: {},
                          static: {
                               languages: [],
                               currencies: [],
-                              socials: [
-                                   { name: "facebook", link: "/" },
-                                   { name: "instagram", link: "/" },
-                                   { name: "twitter", link: "/" },
-                              ],
+                              // socials: [
+                              //      { name: "facebook", link: "/" },
+                              //      { name: "instagram", link: "/" },
+                              //      { name: "twitter", link: "/" },
+                              // ],
                               pageLinks: [
                                    {
                                         name: "home",
@@ -77,7 +77,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme34",
+                                   theme: "theme35",
                                    props: {
                                         static: {
                                              promotion: {
