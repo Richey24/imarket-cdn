@@ -3,6 +3,7 @@ import { theme2TemplateConfig } from "./theme2";
 import { theme5TemplateConfig } from "./theme5";
 import { theme3TemplateConfig } from "./theme3";
 import { theme10TemplateConfig } from "./theme10";
+import { theme21TemplateConfig } from "./theme21";
 import { theme11TemplateConfig } from "./theme11";
 import { theme4TemplateConfig } from "./theme4";
 import { theme12TemplateConfig } from "./theme12";
@@ -23,6 +24,7 @@ export const templateConfig: any = {
      // theme6: theme6TemplateConfig,
      theme10: theme10TemplateConfig,
      theme11: theme11TemplateConfig,
+     theme21: theme21TemplateConfig,
      theme12: theme12TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
@@ -37,7 +39,8 @@ export const cssImports = {
      theme6: "demo2",
      theme7: "demo3",
      theme10: "demo20",
-     theme11: "demo21",
+     theme11: "demo11",
+     theme21: "demo21",
      theme12: "demo12",
 };
 
