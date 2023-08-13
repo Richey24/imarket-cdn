@@ -1441,7 +1441,7 @@ export const templateImages = {
             zoomImage: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo33-product/zoom/product-1.jpg",
         },
         bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo33-slide.png"
+            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo33-slide.jpg"
         }
     },
     demo34: {

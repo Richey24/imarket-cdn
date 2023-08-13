@@ -358,9 +358,9 @@ export default function Header() {
                                              <li className="active">
                                                   <Link href="demo33.html">Home</Link>
                                              </li>
-                                             <li>
+                                             <li className="tw-group">
                                                   <Link href="demo33-shop.html">Categories</Link>
-                                                  <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                                  <div className="megamenu megamenu-fixed-width megamenu-3cols group-hover:tw-block">
                                                        <div className="row">
                                                             <div className="col-lg-4">
                                                                  <Link href="#" className="nolink">
@@ -489,9 +489,9 @@ export default function Header() {
                                                        </div>
                                                   </div>
                                              </li>
-                                             <li>
+                                             <li className="tw-group">
                                                   <Link href="demo33-product.html">Products</Link>
-                                                  <div className="megamenu megamenu-fixed-width">
+                                                  <div className="megamenu megamenu-fixed-width group-hover:tw-block">
                                                        <div className="row">
                                                             <div className="col-lg-4">
                                                                  <Link href="#" className="nolink">
@@ -623,9 +623,9 @@ export default function Header() {
                                                        </div>
                                                   </div>
                                              </li>
-                                             <li>
+                                             <li className="tw-group">
                                                   <Link href="#">Pages</Link>
-                                                  <ul>
+                                                  <ul className="group-hover:tw-block">
                                                        <li>
                                                             <Link href="wishlist.html">
                                                                  Wishlist

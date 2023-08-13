@@ -52,4 +52,5 @@ export type ThemeName =
      | "theme20"
      | "theme30"
      | "theme31"
-     | "theme32";
+     | "theme32"
+     | "theme33";

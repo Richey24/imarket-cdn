@@ -4,6 +4,7 @@ import { Banner } from "./components/Banner";
 import { latestProducts } from "./data";
 import SummerCollection from "./components/SummerCollection";
 import Category from "./components/Category";
+import PopularProducts from "./components/PopularProducts";
 
 export const Home = () => {
      return (
@@ -11,6 +12,7 @@ export const Home = () => {
                <div className="container">
                     <Banner />
                     <Category />
+                    <PopularProducts />
                     {/* <Gift /> */}
                </div>
                {/* End .home-top-container */}
