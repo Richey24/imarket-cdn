@@ -1,6 +1,6 @@
 export const dummySite = {
      theme: {
-          theme: "theme30",
+          theme: "theme11",
           footer: {
                name: "footer",
                content: "",
@@ -42,11 +42,11 @@ export const dummySite = {
                          static: {
                               languages: [],
                               currencies: [],
-                              socials: [
-                                   { name: "facebook", link: "/" },
-                                   { name: "instagram", link: "/" },
-                                   { name: "twitter", link: "/" },
-                              ],
+                              // socials: [
+                              //      { name: "facebook", link: "/" },
+                              //      { name: "instagram", link: "/" },
+                              //      { name: "twitter", link: "/" },
+                              // ],
                               pageLinks: [
                                    {
                                         name: "home",
@@ -77,7 +77,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme30",
+                                   theme: "theme11",
                                    props: {
                                         static: {
                                              promotion: {

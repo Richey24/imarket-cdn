@@ -36,7 +36,6 @@ const templates = [
                               name: "",
                          },
                     },
-                    
                ],
           },
           styles: {
