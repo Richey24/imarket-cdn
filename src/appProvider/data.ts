@@ -5,7 +5,7 @@ export const dummySite = {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme4",
+                    theme: "theme30",
                     name: "",
                     props: {
                          static: {
@@ -36,7 +36,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme4",
+                    theme: "theme30",
                     props: {
                          company: {},
                          static: {
