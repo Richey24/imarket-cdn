@@ -17,12 +17,14 @@ import {
      newArrivalData,
      productsData,
      slidesData,
+     smallBoxData,
      topRatedWidget,
 } from "./data";
 import FeaturedProductsSection from "./components/FeaturedProduct";
 import CategoriesSlider from "./components/CategoriesSlider";
 import Post from "./components/Post";
 import { ProductWidget } from "./components/ProductWidget";
+import { bannerData } from "@/templates/Theme11/Home/data";
 
 const Home = () => {
      let settings = {
@@ -43,7 +45,7 @@ const Home = () => {
                          <Banner slides={slidesData} />
                     </div>
                     <InfoBoxesContainer />
-                    <SmallBoxes />
+                    <SmallBoxes banners={smallBoxData} />
                     <FeaturedProductsSection
                          products={[...productsData]}
                          section="Featured Products"
@@ -167,6 +169,9 @@ const Home = () => {
                          className="promo-section bg-dark"
                          data-parallax="{'speed': 2, 'enableOnMobile': true}"
                          data-image-src={Banner5}
+                         style={{
+                              backgroundImage: `url(${Banner5.src})`,
+                         }}
                     >
                          <div className="promo-banner banner container text-uppercase">
                               <div className="banner-content row align-items-center text-center">

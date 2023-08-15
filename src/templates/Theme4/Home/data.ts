@@ -52,6 +52,9 @@ import product10 from "../../../assets/images/products/product-10.jpg";
 import product10b from "../../../assets/images/products/product-10-2.jpg";
 import product11 from "../../../assets/images/products/product-11.jpg";
 import product11b from "../../../assets/images/products/product-11-2.jpg";
+import banner1 from "../../../assets/images/demoes/demo4/banners/banner-1.jpg";
+import banner2 from "../../../assets/images/demoes/demo4/banners/banner-2.jpg";
+import banner3 from "../../../assets/images/demoes/demo4/banners/banner-3.jpg";
 
 export const slidesData = [
      {
@@ -67,6 +70,30 @@ export const slidesData = [
           subheading: "20% off Accessories",
           buttonText: "Shop All Sale",
           buttonLink: "category.html",
+     },
+];
+
+export const smallBoxData = [
+     {
+          imageUrl: banner1.src,
+          title: "Porto Watches",
+          oldDiscount: 20,
+          newDiscount: 30,
+          link: "category.html",
+     },
+     {
+          imageUrl: banner2.src,
+          title: "Deal Promos",
+          oldDiscount: 0,
+          newDiscount: 0,
+          link: "category.html",
+     },
+     {
+          imageUrl: banner3.src,
+          title: "Handbags",
+          oldDiscount: 0,
+          newDiscount: 0,
+          link: "category.html",
      },
 ];
 
