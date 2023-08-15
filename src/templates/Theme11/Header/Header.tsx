@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../../assets/images/your-logo.png";
+import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 
 const Header = () => {
      return (
@@ -17,11 +18,21 @@ const Header = () => {
                               <nav className="main-nav w-100 d-xl-block d-none">
                                    <ul className="menu sf-arrows d-flex align-items-center no-superfish">
                                         <li className="active no-subMenu">
-                                             <a href="demo11.html">Home</a>
+                                             <a href="demo11.html">
+                                                  Home{" "}
+                                                  <FiChevronRight
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
+                                             </a>
                                         </li>
                                         <li>
                                              <a href="demo11-shop.html" className="sf-with-ul">
                                                   Categories
+                                                  <FiChevronDown
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
                                              </a>
                                              <div className="megamenu megamenu-fixed-width megamenu-3cols">
                                                   <div className="row">
@@ -154,6 +165,10 @@ const Header = () => {
                                         <li>
                                              <a href="demo11-product.html" className="sf-with-ul">
                                                   Products
+                                                  <FiChevronDown
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
                                              </a>
                                              <div className="megamenu megamenu-fixed-width">
                                                   <div className="row">
@@ -289,6 +304,10 @@ const Header = () => {
                                         <li>
                                              <a href="#" className="sf-with-ul">
                                                   Pages
+                                                  <FiChevronDown
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
                                              </a>
                                              <ul>
                                                   <li>
@@ -323,7 +342,13 @@ const Header = () => {
                               </nav>
                               <div className="header-dropdowns text-upper">
                                    <div className="header-dropdown pl-2">
-                                        <a href="#">USD</a>
+                                        <a href="#">
+                                             USD{" "}
+                                             <FiChevronDown
+                                                  style={{ marginTop: "2px" }}
+                                                  size={15}
+                                             />
+                                        </a>
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
@@ -341,6 +366,10 @@ const Header = () => {
                                         <a href="#">
                                              <i className="flag-us flag" />
                                              ENG
+                                             <FiChevronDown
+                                                  style={{ marginTop: "2px" }}
+                                                  size={15}
+                                             />
                                         </a>
                                         <div className="header-menu">
                                              <ul>
