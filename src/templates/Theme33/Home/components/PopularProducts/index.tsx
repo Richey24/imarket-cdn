@@ -7,7 +7,7 @@ import React from "react";
 
 export default function PopularProducts() {
      return (
-          <div className="product-widgets">
+          <div className="product-widgets container">
                <div className="row">
                     <div className="col-9">
                          <div className="row">

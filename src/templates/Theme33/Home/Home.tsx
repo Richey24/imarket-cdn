@@ -11,7 +11,9 @@ export const Home = () => {
           <main className="main home px-0 !block ">
                <div className="container">
                     <Banner />
-                    <Category />
+               </div>
+               <Category />
+               <div className="tw-bg-gray-100 tw-py-24">
                     <PopularProducts />
                     {/* <Gift /> */}
                </div>

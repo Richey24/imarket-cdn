@@ -15,12 +15,9 @@ function Category() {
                          Only the best seller products added recently in our catalog
                     </h5>
 
-                    <div
-                         className="row grid "
-                         data-animation-name="fadeInUpShorter"
-                         data-animation-delay="400"
-                    >
-                         <div className="grid-item col-sm-6 col-md-3 height-3-5">
+                    <div className="row grid ">
+                         <div className="col-12 col-md-3">
+                              {" "}
                               <div className="product-category tw-bg-[#f4f4f2]">
                                    <a href="demo34-shop.html">
                                         <figure>
@@ -56,8 +53,6 @@ function Category() {
                                         </h3>
                                    </div>
                               </div>
-                         </div>
-                         <div className="grid-item col-sm-6 height-5-5">
                               <div className="product-category tw-bg-[#f4f4f2]">
                                    <a href="demo34-shop.html">
                                         <figure>
@@ -100,7 +95,7 @@ function Category() {
                                    </div>
                               </div>
                          </div>
-                         <div className="grid-item col-sm-6 col-md-3 height-2-5">
+                         <div className="col-12 col-md-6">
                               <div className="product-category tw-bg-[#f4f4f4]">
                                    <a href="demo34-shop.html">
                                         <figure>
@@ -131,7 +126,8 @@ function Category() {
                                    </div>
                               </div>
                          </div>
-                         <div className="grid-item col-sm-6 col-md-3 height-3-5">
+                         <div className="col-12 col-md-3">
+                              {" "}
                               <div className="product-category tw-bg-[#f4f4f2]">
                                    <a href="demo34-shop.html">
                                         <figure>
@@ -166,8 +162,6 @@ function Category() {
                                         </h3>
                                    </div>
                               </div>
-                         </div>
-                         <div className="grid-item col-sm-6 col-md-3 height-2-5">
                               <div className="product-category tw-bg-[#f4f4f4]">
                                    <a href="demo34-shop.html">
                                         <figure>
@@ -201,7 +195,6 @@ function Category() {
                                    </div>
                               </div>
                          </div>
-                         <div className="grid-col-sizer col-1"></div>
                     </div>
                </div>
           </section>

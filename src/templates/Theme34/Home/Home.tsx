@@ -2,10 +2,11 @@ import React from "react";
 import BestSellerProducts from "./components/FeaturedProducts";
 import { Banner } from "./components/Banner";
 import { latestProducts } from "./data";
-import SummerCollection from "./components/SummerCollection";
+import SummerCollection from "./components/BestSelling";
 import Category from "./components/Category";
 import PopularProducts from "./components/PopularProducts";
 import ClientsReview from "./components/ClientsReview";
+import BestSelling from "./components/BestSelling";
 
 export const Home = () => {
      return (
@@ -14,6 +15,7 @@ export const Home = () => {
                <div>
                     <Category />
                     <ClientsReview />
+                    <BestSelling />
                     {/*  <PopularProducts /> */}
                     {/* <Gift /> */}
                </div>

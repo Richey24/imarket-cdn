@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import OwlCarousel from "react-owl-carousel";
+import { templateImages } from "@/appProvider/templateImages";
 
 const owlCarouselOptions = {
      dots: false,
@@ -20,7 +21,7 @@ export const Banner = () => {
                     <div className="home-slide home-slide-1 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src="assets/images/demoes/demo34/slider/slide-1.jpg"
+                                   src={templateImages.demo34.bannerImage.banner1}
                                    alt="slider"
                                    width="1920"
                                    height="700"
@@ -28,11 +29,7 @@ export const Banner = () => {
                          </figure>
 
                          <div className="banner-layer banner-layer-middle">
-                              <div
-                                   className="appear-animate"
-                                   data-animation-name="fadeInLeftShorter"
-                                   data-animation-delay="300"
-                              >
+                              <div>
                                    <h4 className="m-b-2">New Amazing Collection</h4>
                                    <h2 className="font1 font-italic m-b-4">Summer Beauty Sale</h2>
                                    <p className="font2 ls-n-15 m-b-4">
@@ -73,7 +70,7 @@ export const Banner = () => {
                     <div className="home-slide home-slide-2 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src="assets/images/demoes/demo34/slider/slide-2.jpg"
+                                   src={templateImages.demo34.bannerImage.banner1}
                                    alt="slider"
                                    width="1920"
                                    height="700"

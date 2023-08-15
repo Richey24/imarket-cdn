@@ -1479,7 +1479,7 @@ export const templateImages = {
             "category5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo34-product/categories/cat-5.jpg"
         },
         bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo34-slide.png"
+            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo34-slide.jpg"
         }
     },
     demo35: {
