@@ -429,7 +429,7 @@ export default function Header(props: any) {
                                                   (
                                                        link: { name: string; url: string },
                                                        idx: number,
-                                                  ) => (
+                                                   ) => (
                                                        <li
                                                             className={
                                                                  activeMenuId === idx
