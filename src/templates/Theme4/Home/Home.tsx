@@ -1,12 +1,6 @@
 import React from "react";
 import Banner from "./components/Banner";
-import Banner1 from "../../../assets/images/demoes/demo4/banners/banner-1.jpg";
-import Banner2 from "../../../assets/images/demoes/demo4/banners/banner-2.jpg";
-import Banner3 from "../../../assets/images/demoes/demo4/banners/banner-3.jpg";
-import Banner4 from "../../../assets/images/demoes/demo4/banners/banner-4.jpg";
 import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
-import Slider from "react-slick";
-import Image from "next/image";
 import { InfoBoxesContainer } from "./components/Info";
 import SmallBoxes from "./components/smallBoxes";
 import {
@@ -22,9 +16,7 @@ import {
 } from "./data";
 import FeaturedProductsSection from "./components/FeaturedProduct";
 import CategoriesSlider from "./components/CategoriesSlider";
-import Post from "./components/Post";
 import { ProductWidget } from "./components/ProductWidget";
-import { bannerData } from "@/templates/Theme11/Home/data";
 
 const Home = () => {
      let settings = {
