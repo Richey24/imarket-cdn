@@ -12,7 +12,7 @@ import { theme20TemplateConfig } from "./theme20";
 import { theme21TemplateConfig } from "./theme21";
 import { theme30TemplateConfig } from "./theme30";
 
-import { theme6TemplateConfig } from "./themex-2";
+// import { theme6TemplateConfig } from "./themex-2";
 
 // Theme5 demo1
 // Theme6 demo2
@@ -32,7 +32,6 @@ export const templateConfig: any = {
      theme20: theme20TemplateConfig,
      theme21: theme21TemplateConfig,
      theme30: theme30TemplateConfig,
-
 };
 
 export const cssImports = {
@@ -49,7 +48,6 @@ export const cssImports = {
      theme20: "demo20",
      theme21: "demo21",
      theme30: "demo30",
-
 };
 
 export const themeProps = {
