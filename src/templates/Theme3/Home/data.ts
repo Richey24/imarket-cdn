@@ -248,7 +248,7 @@ export const promotions: PromotionProps[] = [
           position: "left",
           size: "small",
           buttonCaption: "Shop by Glasses",
-          verticalAlignment: "end",
+          verticalAlignment: "bottom",
      },
      {
           title: "Cosmetics Trends",
@@ -258,7 +258,7 @@ export const promotions: PromotionProps[] = [
           size: "small",
           buttonCaption: "Shop by Glasses",
           textColor: "light",
-          verticalAlignment: "start",
+          verticalAlignment: "top",
      },
      {
           title: "Fashion Summer Sale",
@@ -268,7 +268,7 @@ export const promotions: PromotionProps[] = [
           size: "small",
           buttonCaption: "Shop by fashion",
           textColor: "light",
-          verticalAlignment: "center",
+          verticalAlignment: "middle",
      },
      {
           title: "UP TO 70% IN ALL BAGS",
@@ -277,7 +277,7 @@ export const promotions: PromotionProps[] = [
           position: "centered",
           size: "small",
           buttonCaption: "Buy Now!",
-          verticalAlignment: "end",
+          verticalAlignment: "bottom",
      },
 ];
 

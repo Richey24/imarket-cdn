@@ -1,5 +1,5 @@
 import T2Footer from "../Theme2/Footer/Footer";
-import T2Header from "../Theme2/Header/Header";
+import T2Header from "../Theme2/Header/Headerx";
 import { Home } from "../Theme2/Home/Home";
 import T2pageLinks from "../Theme2/PageLinks/pageLinks";
 import { IComponentProps } from "./config.type";

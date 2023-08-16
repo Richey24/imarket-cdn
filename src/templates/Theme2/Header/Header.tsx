@@ -1,13 +1,6 @@
 import Image from "next/image";
-import logo from "../../../assets/images/your-logo.png";
+import logo from "../../../assets/images/logo.png";
 import phone from "../../../assets/images/phone-white.png";
-import slide1 from "../../../assets/images/demoes/demo6/slider/slide-1.jpg";
-import product1 from "../../../assets/images/products/product-1.jpg";
-import product2 from "../../../assets/images/products/product-2.jpg";
-import product3 from "../../../assets/images/products/product-3.jpg";
-import menuBanner from "../../../assets/images/menu-banner.jpg";
-import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
-// import vid1 from "../../../assets/images/demoes/demo6/slider/slide-2.mp4";
 
 const Header = () => {
      return (
@@ -19,7 +12,8 @@ const Header = () => {
                                    FREE Returns. Standard Shipping Orders $99+
                               </p>
                          </div>
-                         {/* End .header-left */}
+                         {/*End .header-left */}
+
                          <div className="header-right header-dropdowns w-sm-100">
                               <div className="header-dropdown dropdown-expanded d-none d-lg-block">
                                    <a href="#">Links</a>
@@ -45,9 +39,9 @@ const Header = () => {
                                              </li>
                                         </ul>
                                    </div>
-                                   {/* End .header-menu */}
+                                   {/*End .header-menu */}
                               </div>
-                              {/* End .header-dropown */}
+                              {/*End .header-dropown */}
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                    <a href="#">Order</a>
                                    <div className="header-menu">
@@ -60,34 +54,34 @@ const Header = () => {
                                              </li>
                                         </ul>
                                    </div>
-                                   {/* End .header-menu */}
+                                   {/*End .header-menu */}
                               </div>
-                              {/* End .header-dropown */}
-                              <span className="separator" />
+                              {/*End .header-dropown */}
+
+                              <span className="separator"></span>
+
                               <div className="header-dropdown">
                                    <a href="#">
-                                        <i className="flag-us flag" />
-                                        ENG
+                                        <i className="flag-us flag"></i>ENG
                                    </a>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
                                                   <a href="#">
-                                                       <i className="flag-us flag mr-2" />
-                                                       ENG
+                                                       <i className="flag-us flag mr-2"></i>ENG
                                                   </a>
                                              </li>
                                              <li>
                                                   <a href="#">
-                                                       <i className="flag-fr flag mr-2" />
-                                                       FRA
+                                                       <i className="flag-fr flag mr-2"></i>FRA
                                                   </a>
                                              </li>
                                         </ul>
                                    </div>
-                                   {/* End .header-menu */}
+                                   {/*End .header-menu */}
                               </div>
-                              {/* End .header-dropown */}
+                              {/*End .header-dropown */}
+
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                    <a href="#">USD</a>
                                    <div className="header-menu">
@@ -100,45 +94,49 @@ const Header = () => {
                                              </li>
                                         </ul>
                                    </div>
-                                   {/* End .header-menu */}
+                                   {/*End .header-menu */}
                               </div>
-                              {/* End .header-dropown */}
-                              <span className="separator" />
+                              {/*End .header-dropown */}
+
+                              <span className="separator"></span>
+
                               <div className="social-icons">
                                    <a
                                         href="#"
                                         className="social-icon social-facebook icon-facebook"
                                         target="_blank"
-                                   />
+                                   ></a>
                                    <a
                                         href="#"
                                         className="social-icon social-twitter icon-twitter"
                                         target="_blank"
-                                   />
+                                   ></a>
                                    <a
                                         href="#"
                                         className="social-icon social-instagram icon-instagram"
                                         target="_blank"
-                                   />
+                                   ></a>
                               </div>
-                              {/* End .social-icons */}
+                              {/*End .social-icons */}
                          </div>
-                         {/* End .header-right */}
+                         {/*End .header-right */}
                     </div>
-                    {/* End .container */}
+                    {/*End .container */}
                </div>
-               {/* End .header-top */}
+               {/*End .header-top */}
+
                <div className="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                     <div className="container">
                          <div className="header-left col-lg-2 w-auto pl-0">
                               <button className="mobile-menu-toggler mr-2" type="button">
-                                   <i className="fas fa-bars" />
+                                   <i className="fas fa-bars"></i>
                               </button>
                               <a href="demo2.html" className="logo">
                                    <Image src={logo} alt="Porto Logo" />
                               </a>
                          </div>
-                         {/* End .header-left */}
+                         {/*End .header-left */}
+
                          <div className="header-right w-lg-max ml-0">
                               <div className="header-icon mb-0 header-search header-search-inline header-search-category w-lg-max pl-3 pr-1">
                                    <a
@@ -147,7 +145,7 @@ const Header = () => {
                                         role="button"
                                         title="Search"
                                    >
-                                        <i className="icon-search-3" />
+                                        <i className="icon-search-3"></i>
                                    </a>
                                    <form action="#" method="get">
                                         <div className="header-search-wrapper">
@@ -162,47 +160,48 @@ const Header = () => {
                                              <div className="select-custom bg-white">
                                                   <select id="category" name="cat">
                                                        <option value="">All Categories</option>
-                                                       <option value={4}>Fashion</option>
-                                                       <option value={12}>- Women</option>
-                                                       <option value={13}>- Men</option>
-                                                       <option value={66}>- Jewellery</option>
-                                                       <option value={67}>- Kids Fashion</option>
-                                                       <option value={5}>Electronics</option>
-                                                       <option value={21}>- Smart TVs</option>
-                                                       <option value={22}>- Cameras</option>
-                                                       <option value={63}>- Games</option>
-                                                       <option value={7}>Home &amp; Garden</option>
-                                                       <option value={11}>Motors</option>
-                                                       <option value={31}>- Cars and Trucks</option>
-                                                       <option value={32}>
+                                                       <option value="4">Fashion</option>
+                                                       <option value="12">- Women</option>
+                                                       <option value="13">- Men</option>
+                                                       <option value="66">- Jewellery</option>
+                                                       <option value="67">- Kids Fashion</option>
+                                                       <option value="5">Electronics</option>
+                                                       <option value="21">- Smart TVs</option>
+                                                       <option value="22">- Cameras</option>
+                                                       <option value="63">- Games</option>
+                                                       <option value="7">Home &amp; Garden</option>
+                                                       <option value="11">Motors</option>
+                                                       <option value="31">- Cars and Trucks</option>
+                                                       <option value="32">
                                                             - Motorcycles &amp; Powersports
                                                        </option>
-                                                       <option value={33}>
+                                                       <option value="33">
                                                             - Parts &amp; Accessories
                                                        </option>
-                                                       <option value={34}>- Boats</option>
-                                                       <option value={57}>
+                                                       <option value="34">- Boats</option>
+                                                       <option value="57">
                                                             - Auto Tools &amp; Supplies
                                                        </option>
                                                   </select>
                                              </div>
-                                             {/* End .select-custom */}
+                                             {/*End .select-custom */}
                                              <button
                                                   className="btn icon-magnifier pb-1 bg-white"
                                                   type="submit"
                                                   title="Search"
-                                             />
+                                             ></button>
                                         </div>
-                                        {/* End .header-search-wrapper */}
+                                        {/*End .header-search-wrapper */}
                                    </form>
                               </div>
-                              {/* End .header-search */}
+                              {/*End .header-search */}
+
                               <div className="header-contact d-none d-lg-flex pl-4 ml-3 mr-xl-5">
                                    <Image
                                         alt="phone"
                                         src={phone}
-                                        width={30}
-                                        height={30}
+                                        width="30"
+                                        height="30"
                                         className="pb-1"
                                    />
                                    <h6>
@@ -212,20 +211,23 @@ const Header = () => {
                                         </a>
                                    </h6>
                               </div>
+
                               <a
                                    href="login.html"
                                    className="header-icon d-inline-block"
                                    title="Login"
                               >
-                                   <i className="icon-user-2" />
+                                   <i className="icon-user-2"></i>
                               </a>
+
                               <a
                                    href="wishlist.html"
                                    className="header-icon d-inline-block"
                                    title="Wishlist"
                               >
-                                   <i className="icon-wishlist-2" />
+                                   <i className="icon-wishlist-2"></i>
                               </a>
+
                               <div className="dropdown cart-dropdown">
                                    <a
                                         href="#"
@@ -237,19 +239,23 @@ const Header = () => {
                                         aria-expanded="false"
                                         data-display="static"
                                    >
-                                        <i className="minicart-icon" />
+                                        <i className="minicart-icon"></i>
                                         <span className="cart-count badge-circle">3</span>
                                    </a>
-                                   <div className="cart-overlay" />
+
+                                   <div className="cart-overlay"></div>
+
                                    <div className="dropdown-menu mobile-cart">
                                         <a href="#" title="Close (Esc)" className="btn-close">
                                              ×
                                         </a>
+
                                         <div className="dropdownmenu-wrapper custom-scrollbar">
                                              <div className="dropdown-cart-header">
                                                   Shopping Cart
                                              </div>
-                                             {/* End .dropdown-cart-header */}
+                                             {/*End .dropdown-cart-header */}
+
                                              <div className="dropdown-cart-products">
                                                   <div className="product">
                                                        <div className="product-details">
@@ -258,6 +264,7 @@ const Header = () => {
                                                                       Ultimate 3D Bluetooth Speaker
                                                                  </a>
                                                             </h4>
+
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
@@ -265,7 +272,8 @@ const Header = () => {
                                                                  × $99.00
                                                             </span>
                                                        </div>
-                                                       {/* End .product-details */}
+                                                       {/*End .product-details */}
+
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
@@ -274,10 +282,11 @@ const Header = () => {
                                                                  <img
                                                                       src="assets/images/products/product-1.jpg"
                                                                       alt="product"
-                                                                      width={80}
-                                                                      height={80}
+                                                                      width="80"
+                                                                      height="80"
                                                                  />
                                                             </a>
+
                                                             <a
                                                                  href="#"
                                                                  className="btn-remove"
@@ -287,7 +296,8 @@ const Header = () => {
                                                             </a>
                                                        </figure>
                                                   </div>
-                                                  {/* End .product */}
+                                                  {/*End .product */}
+
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
@@ -295,6 +305,7 @@ const Header = () => {
                                                                       Brown Women Casual HandBag
                                                                  </a>
                                                             </h4>
+
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
@@ -302,7 +313,8 @@ const Header = () => {
                                                                  × $35.00
                                                             </span>
                                                        </div>
-                                                       {/* End .product-details */}
+                                                       {/*End .product-details */}
+
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
@@ -311,10 +323,11 @@ const Header = () => {
                                                                  <img
                                                                       src="assets/images/products/product-2.jpg"
                                                                       alt="product"
-                                                                      width={80}
-                                                                      height={80}
+                                                                      width="80"
+                                                                      height="80"
                                                                  />
                                                             </a>
+
                                                             <a
                                                                  href="#"
                                                                  className="btn-remove"
@@ -324,7 +337,8 @@ const Header = () => {
                                                             </a>
                                                        </figure>
                                                   </div>
-                                                  {/* End .product */}
+                                                  {/*End .product */}
+
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
@@ -332,6 +346,7 @@ const Header = () => {
                                                                       Circled Ultimate 3D Speaker
                                                                  </a>
                                                             </h4>
+
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
@@ -339,7 +354,8 @@ const Header = () => {
                                                                  × $35.00
                                                             </span>
                                                        </div>
-                                                       {/* End .product-details */}
+                                                       {/*End .product-details */}
+
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
@@ -348,8 +364,8 @@ const Header = () => {
                                                                  <img
                                                                       src="assets/images/products/product-3.jpg"
                                                                       alt="product"
-                                                                      width={80}
-                                                                      height={80}
+                                                                      width="80"
+                                                                      height="80"
                                                                  />
                                                             </a>
                                                             <a
@@ -361,16 +377,19 @@ const Header = () => {
                                                             </a>
                                                        </figure>
                                                   </div>
-                                                  {/* End .product */}
+                                                  {/*End .product */}
                                              </div>
-                                             {/* End .cart-product */}
+                                             {/*End .cart-product */}
+
                                              <div className="dropdown-cart-total">
                                                   <span>SUBTOTAL:</span>
+
                                                   <span className="cart-total-price float-right">
                                                        $134.00
                                                   </span>
                                              </div>
-                                             {/* End .dropdown-cart-total */}
+                                             {/*End .dropdown-cart-total */}
+
                                              <div className="dropdown-cart-action">
                                                   <a
                                                        href="cart.html"
@@ -385,19 +404,20 @@ const Header = () => {
                                                        Checkout
                                                   </a>
                                              </div>
-                                             {/* End .dropdown-cart-total */}
+                                             {/*End .dropdown-cart-total */}
                                         </div>
-                                        {/* End .dropdownmenu-wrapper */}
+                                        {/*End .dropdownmenu-wrapper */}
                                    </div>
-                                   {/* End .dropdown-menu */}
+                                   {/*End .dropdown-menu */}
                               </div>
-                              {/* End .dropdown */}
+                              {/*End .dropdown */}
                          </div>
-                         {/* End .header-right */}
+                         {/*End .header-right */}
                     </div>
-                    {/* End .container */}
+                    {/*End .container */}
                </div>
-               {/* End .header-middle */}
+               {/*End .header-middle */}
+
                <div
                     className="header-bottom sticky-header d-lg-block d-none"
                     data-sticky-options="{'mobile': false}"
@@ -518,8 +538,8 @@ const Header = () => {
                                                                       <img
                                                                            src="assets/images/menu-banner.jpg"
                                                                            alt="Menu banner"
-                                                                           width={300}
-                                                                           height={300}
+                                                                           width="300"
+                                                                           height="300"
                                                                       />
                                                                  </figure>
                                                                  <div className="banner-content">
@@ -542,7 +562,7 @@ const Header = () => {
                                                        </div>
                                                   </div>
                                              </div>
-                                             {/* End .megamenu */}
+                                             {/*End .megamenu */}
                                         </li>
                                         <li>
                                              <a href="demo2-product.html">Products</a>
@@ -570,7 +590,7 @@ const Header = () => {
                                                                  </li>
                                                                  <li>
                                                                       <a href="product.html">
-                                                                           FEATURED &amp; ON SALE
+                                                                           FEATURED & ON SALE
                                                                       </a>
                                                                  </li>
                                                                  <li>
@@ -595,7 +615,8 @@ const Header = () => {
                                                                  </li>
                                                             </ul>
                                                        </div>
-                                                       {/* End .col-lg-4 */}
+                                                       {/*End .col-lg-4 */}
+
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
                                                                  PRODUCT LAYOUTS
@@ -623,7 +644,7 @@ const Header = () => {
                                                                  </li>
                                                                  <li>
                                                                       <a href="product-sticky-both.html">
-                                                                           LEFT &amp; RIGHT STICKY
+                                                                           LEFT & RIGHT STICKY
                                                                       </a>
                                                                  </li>
                                                                  <li>
@@ -641,7 +662,8 @@ const Header = () => {
                                                                  </li>
                                                             </ul>
                                                        </div>
-                                                       {/* End .col-lg-4 */}
+                                                       {/*End .col-lg-4 */}
+
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner menu-banner-2">
                                                                  <figure>
@@ -649,8 +671,8 @@ const Header = () => {
                                                                            src="assets/images/menu-banner-1.jpg"
                                                                            alt="Menu banner"
                                                                            className="product-promo"
-                                                                           width={380}
-                                                                           height={790}
+                                                                           width="380"
+                                                                           height="790"
                                                                       />
                                                                  </figure>
                                                                  <i>OFF</i>
@@ -671,11 +693,11 @@ const Header = () => {
                                                                  </a>
                                                             </div>
                                                        </div>
-                                                       {/* End .col-lg-4 */}
+                                                       {/*End .col-lg-4 */}
                                                   </div>
-                                                  {/* End .row */}
+                                                  {/*End .row */}
                                              </div>
-                                             {/* End .megamenu */}
+                                             {/*End .megamenu */}
                                         </li>
                                         <li>
                                              <a href="#">Pages</a>
@@ -695,6 +717,7 @@ const Header = () => {
                                                   <li>
                                                        <a href="demo2-about.html">About Us</a>
                                                   </li>
+
                                                   <li>
                                                        <a href="demo2-contact.html">Contact Us</a>
                                                   </li>
@@ -708,6 +731,7 @@ const Header = () => {
                                                   </li>
                                              </ul>
                                         </li>
+
                                         <li>
                                              <a href="demo2-contact.html">Contact Us</a>
                                         </li>
@@ -717,7 +741,7 @@ const Header = () => {
                          <div className="header-right">
                               <div className="header-search header-icon header-search-inline header-search-category w-lg-max">
                                    <a href="#" className="search-toggle" role="button">
-                                        <i className="icon-search-3" />
+                                        <i className="icon-search-3"></i>
                                    </a>
                                    <form action="#" method="get">
                                         <div className="header-search-wrapper">
@@ -732,46 +756,49 @@ const Header = () => {
                                              <div className="select-custom">
                                                   <select id="cat" name="cat">
                                                        <option value="">All Categories</option>
-                                                       <option value={4}>Fashion</option>
-                                                       <option value={12}>- Women</option>
-                                                       <option value={13}>- Men</option>
-                                                       <option value={66}>- Jewellery</option>
-                                                       <option value={67}>- Kids Fashion</option>
-                                                       <option value={5}>Electronics</option>
-                                                       <option value={21}>- Smart TVs</option>
-                                                       <option value={22}>- Cameras</option>
-                                                       <option value={63}>- Games</option>
-                                                       <option value={7}>Home &amp; Garden</option>
-                                                       <option value={11}>Motors</option>
-                                                       <option value={31}>- Cars and Trucks</option>
-                                                       <option value={32}>
+                                                       <option value="4">Fashion</option>
+                                                       <option value="12">- Women</option>
+                                                       <option value="13">- Men</option>
+                                                       <option value="66">- Jewellery</option>
+                                                       <option value="67">- Kids Fashion</option>
+                                                       <option value="5">Electronics</option>
+                                                       <option value="21">- Smart TVs</option>
+                                                       <option value="22">- Cameras</option>
+                                                       <option value="63">- Games</option>
+                                                       <option value="7">Home &amp; Garden</option>
+                                                       <option value="11">Motors</option>
+                                                       <option value="31">- Cars and Trucks</option>
+                                                       <option value="32">
                                                             - Motorcycles &amp; Powersports
                                                        </option>
-                                                       <option value={33}>
+                                                       <option value="33">
                                                             - Parts &amp; Accessories
                                                        </option>
-                                                       <option value={34}>- Boats</option>
-                                                       <option value={57}>
+                                                       <option value="34">- Boats</option>
+                                                       <option value="57">
                                                             - Auto Tools &amp; Supplies
                                                        </option>
                                                   </select>
                                              </div>
-                                             {/* End .select-custom */}
+                                             {/*End .select-custom */}
                                              <button
                                                   className="btn p-0 icon-search-3"
                                                   type="submit"
-                                             />
+                                             ></button>
                                         </div>
-                                        {/* End .header-search-wrapper */}
+                                        {/*End .header-search-wrapper */}
                                    </form>
                               </div>
-                              {/* End .header-search */}
+                              {/*End .header-search */}
+
                               <a href="login.html" className="header-icon ">
-                                   <i className="icon-user-2" />
+                                   <i className="icon-user-2"></i>
                               </a>
+
                               <a href="wishlist.html" className="header-icon">
-                                   <i className="icon-wishlist-2" />
+                                   <i className="icon-wishlist-2"></i>
                               </a>
+
                               <div className="dropdown cart-dropdown">
                                    <a
                                         href="#"
@@ -783,19 +810,23 @@ const Header = () => {
                                         aria-expanded="false"
                                         data-display="static"
                                    >
-                                        <i className="minicart-icon" />
+                                        <i className="minicart-icon"></i>
                                         <span className="cart-count badge-circle">3</span>
                                    </a>
-                                   <div className="cart-overlay" />
+
+                                   <div className="cart-overlay"></div>
+
                                    <div className="dropdown-menu mobile-cart">
                                         <a href="#" title="Close (Esc)" className="btn-close">
                                              ×
                                         </a>
+
                                         <div className="dropdownmenu-wrapper custom-scrollbar">
                                              <div className="dropdown-cart-header">
                                                   Shopping Cart
                                              </div>
-                                             {/* End .dropdown-cart-header */}
+                                             {/*End .dropdown-cart-header */}
+
                                              <div className="dropdown-cart-products">
                                                   <div className="product">
                                                        <div className="product-details">
@@ -804,6 +835,7 @@ const Header = () => {
                                                                       Ultimate 3D Bluetooth Speaker
                                                                  </a>
                                                             </h4>
+
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
@@ -811,7 +843,8 @@ const Header = () => {
                                                                  × $99.00
                                                             </span>
                                                        </div>
-                                                       {/* End .product-details */}
+                                                       {/*End .product-details */}
+
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
@@ -820,10 +853,11 @@ const Header = () => {
                                                                  <img
                                                                       src="assets/images/products/product-1.jpg"
                                                                       alt="product"
-                                                                      width={80}
-                                                                      height={80}
+                                                                      width="80"
+                                                                      height="80"
                                                                  />
                                                             </a>
+
                                                             <a
                                                                  href="#"
                                                                  className="btn-remove"
@@ -833,7 +867,8 @@ const Header = () => {
                                                             </a>
                                                        </figure>
                                                   </div>
-                                                  {/* End .product */}
+                                                  {/*End .product */}
+
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
@@ -841,6 +876,7 @@ const Header = () => {
                                                                       Brown Women Casual HandBag
                                                                  </a>
                                                             </h4>
+
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
@@ -848,7 +884,8 @@ const Header = () => {
                                                                  × $35.00
                                                             </span>
                                                        </div>
-                                                       {/* End .product-details */}
+                                                       {/*End .product-details */}
+
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
@@ -857,10 +894,11 @@ const Header = () => {
                                                                  <img
                                                                       src="assets/images/products/product-2.jpg"
                                                                       alt="product"
-                                                                      width={80}
-                                                                      height={80}
+                                                                      width="80"
+                                                                      height="80"
                                                                  />
                                                             </a>
+
                                                             <a
                                                                  href="#"
                                                                  className="btn-remove"
@@ -870,7 +908,8 @@ const Header = () => {
                                                             </a>
                                                        </figure>
                                                   </div>
-                                                  {/* End .product */}
+                                                  {/*End .product */}
+
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
@@ -878,6 +917,7 @@ const Header = () => {
                                                                       Circled Ultimate 3D Speaker
                                                                  </a>
                                                             </h4>
+
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
@@ -885,7 +925,8 @@ const Header = () => {
                                                                  × $35.00
                                                             </span>
                                                        </div>
-                                                       {/* End .product-details */}
+                                                       {/*End .product-details */}
+
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
@@ -894,8 +935,8 @@ const Header = () => {
                                                                  <img
                                                                       src="assets/images/products/product-3.jpg"
                                                                       alt="product"
-                                                                      width={80}
-                                                                      height={80}
+                                                                      width="80"
+                                                                      height="80"
                                                                  />
                                                             </a>
                                                             <a
@@ -907,16 +948,19 @@ const Header = () => {
                                                             </a>
                                                        </figure>
                                                   </div>
-                                                  {/* End .product */}
+                                                  {/*End .product */}
                                              </div>
-                                             {/* End .cart-product */}
+                                             {/*End .cart-product */}
+
                                              <div className="dropdown-cart-total">
                                                   <span>SUBTOTAL:</span>
+
                                                   <span className="cart-total-price float-right">
                                                        $134.00
                                                   </span>
                                              </div>
-                                             {/* End .dropdown-cart-total */}
+                                             {/*End .dropdown-cart-total */}
+
                                              <div className="dropdown-cart-action">
                                                   <a
                                                        href="cart.html"
@@ -931,18 +975,18 @@ const Header = () => {
                                                        Checkout
                                                   </a>
                                              </div>
-                                             {/* End .dropdown-cart-total */}
+                                             {/*End .dropdown-cart-total */}
                                         </div>
-                                        {/* End .dropdownmenu-wrapper */}
+                                        {/*End .dropdownmenu-wrapper */}
                                    </div>
-                                   {/* End .dropdown-menu */}
+                                   {/*End .dropdown-menu */}
                               </div>
-                              {/* End .dropdown */}
+                              {/*End .dropdown */}
                          </div>
                     </div>
-                    {/* End .container */}
+                    {/*End .container */}
                </div>
-               {/* End .header-bottom */}
+               {/*End .header-bottom */}
           </header>
      );
 };

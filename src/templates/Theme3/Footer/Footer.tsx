@@ -1,3 +1,5 @@
+import Image from "next/image";
+import payments from "../../../assets/images/payments.png";
 const Footer = () => {
      return (
           <footer className="footer">
@@ -145,34 +147,7 @@ const Footer = () => {
                          </div>
                          <div className="footer-right ml-auto mt-1 mt-sm-0">
                               <div className="payment-icons mr-0">
-                                   <span
-                                        className="payment-icon visa"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-visa.svg)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon paypal"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-paypal.svg)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon stripe"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-stripe.png)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon verisign"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(../../../assets/images/payments/payment-verisign.svg)",
-                                        }}
-                                   />
+                                   <Image src={payments} alt="" />
                               </div>
                          </div>
                     </div>

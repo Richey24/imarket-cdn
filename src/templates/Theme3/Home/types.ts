@@ -35,7 +35,7 @@ export interface PromotionProps {
      promoText?: string;
      promoUrl?: string;
      textColor?: "light" | "dark";
-     verticalAlignment?: "start" | "center" | "end";
+     verticalAlignment?: "top" | "middle" | "bottom";
 }
 
 export interface ShopByCategoryProps {
