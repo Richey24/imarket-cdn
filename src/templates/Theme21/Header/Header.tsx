@@ -115,12 +115,7 @@ const Header = () => {
                                    <i className="fas fa-bars" />
                               </button>
                               <a href="demo21.html" className="logo">
-                                   <img
-                                        src={logo.src}
-                                        alt="Porto Logo"
-                                        width={111}
-                                        height={44}
-                                   />
+                                   <img src={logo.src} alt="Porto Logo" width={111} height={44} />
                                    <img
                                         src="assets/images/your-logo.png"
                                         alt="Porto Logo"
@@ -513,7 +508,14 @@ const Header = () => {
                                                             <div className="col-lg-4 p-0">
                                                                  <div className="menu-banner">
                                                                       <figure>
-                                                                           <img style={{height:'100%',objectFit:'cover', objectPosition:"center 80%"}}
+                                                                           <img
+                                                                                style={{
+                                                                                     height: "100%",
+                                                                                     objectFit:
+                                                                                          "cover",
+                                                                                     objectPosition:
+                                                                                          "center 80%",
+                                                                                }}
                                                                                 src={banner.src}
                                                                                 alt="Menu banner"
                                                                                 width={300}
@@ -693,7 +695,14 @@ const Header = () => {
                                                             <div className="col-lg-4 p-0">
                                                                  <div className="menu-banner menu-banner-2">
                                                                       <figure>
-                                                                           <img style={{height:'100%',objectFit:'cover', objectPosition:"center 80%"}}
+                                                                           <img
+                                                                                style={{
+                                                                                     height: "100%",
+                                                                                     objectFit:
+                                                                                          "cover",
+                                                                                     objectPosition:
+                                                                                          "center 80%",
+                                                                                }}
                                                                                 src={banner1.src}
                                                                                 alt="Menu banner"
                                                                                 width={300}

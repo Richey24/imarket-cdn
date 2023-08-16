@@ -1,13 +1,18 @@
 export const dummySite = {
      theme: {
-          theme: "theme9",
+          theme: "theme21",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme9",
+                    theme: "theme21",
                     name: "",
                     props: {
+                         company: {
+                              city: "City",
+                              country: "Country",
+                              phone: "(123) 456-7890",
+                         },
                          static: {
                               customerService: [
                                    { name: "Help & Faq", link: "/" },
@@ -36,9 +41,13 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme9",
+                    theme: "theme21",
                     props: {
-                         company: {},
+                         company: {
+                              city: "City",
+                              country: "Country",
+                              phone: "(123) 456-7890",
+                         },
                          static: {
                               languages: [],
                               currencies: [],
@@ -77,7 +86,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme9",
+                                   theme: "theme21",
                                    props: {
                                         static: {
                                              promotion: {

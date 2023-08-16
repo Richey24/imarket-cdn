@@ -1,9 +1,17 @@
-import T1Footer from "../Theme7/Footer/Footer";
-import T1Header from "../Theme7/Header/Header";
-import { Home } from "../Theme7/Home/Home";
+import Footer from "../Theme7/Footer/Footer";
+import T3Header from "../Theme7/Header/Header";
+import InfoBoxesContainer from "../Theme7/InfoBoxesContainer";
+import PopularProducts from "../Theme7/PopularProducts";
+import ShopByCategory from "../Theme7/ShopByCategory";
+import Banner from "../Theme7/Banner";
+import MainCategory from "../Theme7/MainCategory";
 
-export const theme7TemplateConfig = {
-     header: T1Header,
-     home: Home,
-     footer: T1Footer,
+export const theme7TemplateConfig: any = {
+     header: T3Header,
+     Banner: Banner,
+     ShopByCategory: ShopByCategory,
+     MainCategory: MainCategory,
+     PopularProducts: PopularProducts,
+     InfoBoxesContainer: InfoBoxesContainer,
+     footer: Footer,
 };
