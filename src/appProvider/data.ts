@@ -42,11 +42,11 @@ export const dummySite = {
                          static: {
                               languages: [],
                               currencies: [],
-                              socials: [
-                                   { name: "facebook", link: "/" },
-                                   { name: "instagram", link: "/" },
-                                   { name: "twitter", link: "/" },
-                              ],
+                              // socials: [
+                              //      { name: "facebook", link: "/" },
+                              //      { name: "instagram", link: "/" },
+                              //      { name: "twitter", link: "/" },
+                              // ],
                               pageLinks: [
                                    {
                                         name: "home",

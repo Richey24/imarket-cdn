@@ -18,7 +18,10 @@ export const ProductTabs = () => {
           beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
-          <div className="home-product-tabs product-slider-tab pt-5 pt-md-0" style={{ paddingLeft: "40px", paddingRight: "40px" }}>
+          <div
+               className="home-product-tabs product-slider-tab pt-5 pt-md-0"
+               style={{ paddingLeft: "40px", paddingRight: "40px" }}
+          >
                <div className="container">
                     <ul className="nav nav-tabs" role="tablist">
                          <li className="nav-item">
@@ -56,10 +59,7 @@ export const ProductTabs = () => {
                                                        <figure>
                                                             <a href="demo14-product.html">
                                                                  <img
-                                                                      src={
-                                                                           product.productImageUrl
-                                                                                .src
-                                                                      }
+                                                                      src={product.productImageUrl}
                                                                       width={280}
                                                                       height={280}
                                                                       alt="product"
@@ -136,7 +136,7 @@ export const ProductTabs = () => {
                                    {/* End .products-carousel */}
                               </div>
                          )}
-                          {activeTab === "latest-product" && (
+                         {activeTab === "latest-product" && (
                               <div className="tab-pane fade show active">
                                    <div className="tab-products-carousel  owl-theme quantity-inputs show-nav-hover nav-outer nav-image-center">
                                         <Slider {...settings}>
@@ -146,10 +146,7 @@ export const ProductTabs = () => {
                                                        <figure>
                                                             <a href="demo14-product.html">
                                                                  <img
-                                                                      src={
-                                                                           product.productImageUrl
-                                                                                .src
-                                                                      }
+                                                                      src={product.productImageUrl}
                                                                       width={280}
                                                                       height={280}
                                                                       alt="product"
@@ -226,14 +223,8 @@ export const ProductTabs = () => {
                                    {/* End .products-carousel */}
                               </div>
                          )}
-
-                         
-              
-                          
                     </div>
-                   
                </div>
-                
           </div>
      );
 };

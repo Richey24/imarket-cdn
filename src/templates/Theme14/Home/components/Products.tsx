@@ -15,7 +15,7 @@ export const Products = () => {
                                    <figure>
                                         <a href="demo14-product.html">
                                              <img
-                                                  src={product.productImageUrl.src}
+                                                  src={product.productImageUrl}
                                                   width={175}
                                                   height={175}
                                                   alt="product"
@@ -70,7 +70,7 @@ export const Products = () => {
                                    <figure>
                                         <a href="demo14-product.html">
                                              <img
-                                                  src={product.productImageUrl.src}
+                                                  src={product.productImageUrl}
                                                   width={175}
                                                   height={175}
                                                   alt="product"
@@ -125,7 +125,7 @@ export const Products = () => {
                                    <figure>
                                         <a href="demo14-product.html">
                                              <img
-                                                  src={product.productImageUrl.src}
+                                                  src={product.productImageUrl}
                                                   width={175}
                                                   height={175}
                                                   alt="product"

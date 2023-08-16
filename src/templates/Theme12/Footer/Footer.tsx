@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../assets/images/your-logo.png";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
+
 const Footer = (props: any) => {
      console.log("headerProps", props);
      return (

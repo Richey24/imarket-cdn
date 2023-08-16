@@ -9,6 +9,7 @@ import Theme10Header from "./Theme10/Header/Header";
 import Theme11Header from "./Theme11/Header/Header";
 import Theme12Header from "./Theme12/Header/Header";
 import Theme14Header from "./Theme14/Header/Header";
+import Theme21Header from "./Theme21/Header/Header";
 
 export const templateConfig: any = {
      headers: {
@@ -23,5 +24,6 @@ export const templateConfig: any = {
           theme11: Theme11Header,
           theme12: Theme12Header,
           theme14:Theme14Header,
+          theme21: Theme21Header,
      },
 };

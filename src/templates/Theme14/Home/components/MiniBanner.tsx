@@ -19,7 +19,7 @@ export const MiniBanner = () => {
                          {miniBanners.map((banner) => (
                               <div className="banner">
                                    <img
-                                        src={banner.bannerImage.src}
+                                        src={banner.image}
                                         width={360}
                                         height={280}
                                         alt="category banner"

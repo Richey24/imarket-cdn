@@ -1,391 +1,276 @@
-import product1 from "../../../assets/images/demoes/demo21/products/special/product-1.jpg";
-import product2 from "../../../assets/images/demoes/demo21/products/special/product-2.jpg";
-import subproduct2 from "../../../assets/images/demoes/demo21/products/special/product-2-2.jpg";
-import product3 from "../../../assets/images/demoes/demo21/products/special/product-3.jpg";
-import product4 from "../../../assets/images/demoes/demo21/products/special/product-4.jpg";
-import product5 from "../../../assets/images/demoes/demo21/products/special/product-5.jpg";
-import subproduct5 from "../../../assets/images/demoes/demo21/products/special/product-5-2.jpg";
-import product6 from "../../../assets/images/demoes/demo21/products/special/product-6.jpg";
-import subproduct6 from "../../../assets/images/demoes/demo21/products/special/product-6-2.jpg";
-import product7 from "../../../assets/images/demoes/demo21/products/special/product-7.jpg";
-import product8 from "../../../assets/images/demoes/demo21/products/special/product-8.jpg";
-import product9 from "../../../assets/images/demoes/demo21/products/special/product-9.jpg";
-import product10 from "../../../assets/images/demoes/demo21/products/special/product-10.jpg";
-import product12 from "../../../assets/images/demoes/demo21/products/special/product-12.jpg";
-import subproduct12 from "../../../assets/images/demoes/demo21/products/special/product-12-2.jpg";
-import product13 from "../../../assets/images/demoes/demo21/products/special/product-13.jpg";
-import subproduct13 from "../../../assets/images/demoes/demo21/products/special/product-13-2.jpg";
-import product14 from "../../../assets/images/demoes/demo21/products/special/product-14.jpg";
-import product11 from "../../../assets/images/demoes/demo21/products/special/product-11.jpg";
-import subproduct14 from "../../../assets/images/demoes/demo21/products/special/product-14-2.jpg";
-import SubProduct8 from "../../../assets/images/demoes/demo21/products/product-8-2.jpg";
-import brand1 from "../../../assets/images/demoes/demo21/brands/brand1.png";
-import brand2 from "../../../assets/images/demoes/demo21/brands/brand2.png";
-import brand3 from "../../../assets/images/demoes/demo21/brands/brand3.png";
-import brand4 from "../../../assets/images/demoes/demo21/brands/brand4.png";
+import slide1 from "../../../assets/images/demoes/demo11/slider/slide-1.jpg";
+import slide2 from "../../../assets/images/demoes/demo11/slider/slide-2.jpg";
+import banner1 from "../../../assets/images/demoes/demo11/banners/banner-1.jpg";
+import banner2 from "../../../assets/images/demoes/demo11/banners/banner-2.jpg";
+import banner3 from "../../../assets/images/demoes/demo11/banners/banner-3.jpg";
+import product1 from "../../../assets/images/demoes/demo11/products/product-15.jpg";
+import product1b from "../../../assets/images/demoes/demo11/products/product-15-2.jpg";
+import product2 from "../../../assets/images/demoes/demo11/products/product-16.jpg";
+import product2b from "../../../assets/images/demoes/demo11/products/product-16-2.jpg";
+import product3 from "../../../assets/images/demoes/demo11/products/product-17.jpg";
+import product3b from "../../../assets/images/demoes/demo11/products/product-17-2.jpg";
+import product4 from "../../../assets/images/demoes/demo11/products/product-18.jpg";
+import product4b from "../../../assets/images/demoes/demo11/products/product-18-2.jpg";
+import product5 from "../../../assets/images/demoes/demo11/products/product-19.jpg";
+import product5b from "../../../assets/images/demoes/demo11/products/product-19-2.jpg";
+import product6 from "../../../assets/images/demoes/demo11/products/product-20.jpg";
+import product6b from "../../../assets/images/demoes/demo11/products/product-20-2.jpg";
+import product7 from "../../../assets/images/demoes/demo11/products/product-21.jpg";
+import product7b from "../../../assets/images/demoes/demo11/products/product-21-2.jpg";
+import category1 from "../../../assets/images/demoes/demo11/categories/category-1.jpg";
+import category2 from "../../../assets/images/demoes/demo11/categories/category-2.jpg";
+import category3 from "../../../assets/images/demoes/demo11/categories/category-3.jpg";
+import category4 from "../../../assets/images/demoes/demo11/categories/category-4.jpg";
+import category5 from "../../../assets/images/demoes/demo11/categories/category-5.jpg";
+import smallProduct1 from "../../../assets//images/demoes/demo11/products/small/product-1.jpg";
+import smallProduct1b from "../../../assets//images/demoes/demo11/products/small/product-1-2.jpg";
+import smallProduct2 from "../../../assets//images/demoes/demo11/products/small/product-2.jpg";
+import smallProduct2b from "../../../assets//images/demoes/demo11/products/small/product-2-2.jpg";
+import smallProduct3 from "../../../assets//images/demoes/demo11/products/small/product-3.jpg";
+import smallProduct3b from "../../../assets//images/demoes/demo11/products/small/product-3-2.jpg";
+import smallProduct4 from "../../../assets//images/demoes/demo11/products/small/product-4.jpg";
+import smallProduct4b from "../../../assets//images/demoes/demo11/products/small/product-4-2.jpg";
+import smallProduct5 from "../../../assets//images/demoes/demo11/products/small/product-5.jpg";
+import smallProduct5b from "../../../assets//images/demoes/demo11/products/small/product-5-2.jpg";
+import smallProduct6 from "../../../assets//images/demoes/demo11/products/small/product-6.jpg";
+import smallProduct6b from "../../../assets//images/demoes/demo11/products/small/product-6-2.jpg";
+import smallProduct7 from "../../../assets//images/demoes/demo11/products/small/product-7.jpg";
+import smallProduct7b from "../../../assets//images/demoes/demo11/products/small/product-7-2.jpg";
+import smallProduct8 from "../../../assets//images/demoes/demo11/products/small/product-8.jpg";
+import smallProduct8b from "../../../assets//images/demoes/demo11/products/small/product-8-2.jpg";
+import smallProduct9 from "../../../assets//images/demoes/demo11/products/small/product-9.jpg";
+import smallProduct9b from "../../../assets//images/demoes/demo11/products/small/product-9-2.jpg";
 
-import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
+export const sliderData = [
+     {
+          id: 1,
+          imageUrl: slide1.src,
+          title: "New Season Dresses",
+          discount: "50%",
+          startingPrice: "39.99",
+          shopLink: "demo11-shop.html",
+     },
+     {
+          id: 2,
+          imageUrl: slide2.src,
+          title: "New Season Hats",
+          discount: "20%",
+          startingPrice: "19.99",
+          shopLink: "demo11-shop.html",
+     },
+     // Add more slide data here
+];
 
-export const featuredProducts = [
+export const bannerData = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product1,
-          productImageUrlTwo: product2,
-          productTitle: "Casual Note Bag",
-          productPrice: 299,
+          title: "Sunglasses",
+          productsCount: "16",
+          shopLink: "demo11-shop.html",
+          imageUrl: banner1.src,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Blue Backpack",
-          productPrice: 299.0,
+          title: "Woman Shoes",
+          productsCount: "12",
+          shopLink: "demo11-shop.html",
+          imageUrl: banner2.src,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product3,
-          productImageUrlTwo: product2,
-          productTitle: "Battery Charger",
-          productPrice: 259,
+          title: "Woman Bags",
+          productsCount: "38",
+          shopLink: "demo11-shop.html",
+          imageUrl: banner3.src,
      },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product4,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product5,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product6,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
-     },
+     // Add more banner data here
 ];
-export const newArrivalsProducts: ProductProps[] = [
+
+export const infoBoxData = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product7,
-          productImageUrlTwo: product2,
-          productTitle: "Casual Note Bag",
-          productPrice: 299,
+          icon: "icon-shipping",
+          title: "FREE SHIPPING & RETURN",
+          content: "Free shipping on all orders over $99.",
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product1,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Blue Backpack",
-          productPrice: 299.0,
+          icon: "icon-money",
+          title: "MONEY BACK GUARANTEE",
+          content: "100% money back guarantee",
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product2,
-          productImageUrlTwo: product2,
-          productTitle: "Battery Charger",
-          productPrice: 259,
+          icon: "icon-support",
+          title: "ONLINE SUPPORT 24/7",
+          content: "Lorem ipsum dolor sit amet.",
      },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product8,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product7,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product9,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
-     },
+     // Add more info box data here
 ];
-export const bestsellersProducts: ProductProps[] = [
+
+export const productsData = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product1,
-          productImageUrlTwo: product2,
-          productTitle: "Casual Note Bag",
-          productPrice: 299,
+          id: 1,
+          image1: product1.src,
+          image2: product1b.src,
+          category: "Women Fashion",
+          title: "Women Fashion-Black",
+          oldPrice: "$90.00",
+          price: "$70.00",
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Blue Backpack",
-          productPrice: 299.0,
+          id: 2,
+          image1: product2.src,
+          image2: product2b.src,
+          category: "Men Glasses",
+          title: "Men Glasses",
+          price: "$60.00",
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product3,
-          productImageUrlTwo: product2,
-          productTitle: "Battery Charger",
-          productPrice: 259,
+          id: 3,
+          image1: product3.src,
+          image2: product3b.src,
+          category: "Ray Ban",
+          title: "Ray Ban 5228",
+          oldPrice: "$75.00",
+          price: "$55.00",
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product4,
-          productImageUrlTwo: product1,
-          productTitle: "Computer Mouse",
-          productPrice: 49,
+          id: 4,
+          image1: product4.src,
+          image2: product4b.src,
+          category: "Masrinna Ankle Fashion",
+          title: "Masrinna Ankle Fashion",
+          oldPrice: "$60.00",
+          price: "$50.00",
      },
+     // ... add more products here ...
 ];
-export const audiospeakers: ProductProps[] = [
+
+export const categoriesData = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product5,
-          productImageUrlTwo: subproduct5,
-          productTitle: " Black Grey Headset",
-          productPrice: 39.0,
+          name: "Bags",
+          image: category1.src,
+          link: "demo11-shop.html",
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Blue Backpack",
-          productPrice: 299.0,
+          name: "Hats",
+          image: category2.src,
+          link: "demo11-shop.html",
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product3,
-          productImageUrlTwo: product2,
-          productTitle: "Computer Mouse",
-          productPrice: 259,
+          name: "Jackets",
+          image: category3.src,
+          link: "demo11-shop.html",
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product6,
-          productImageUrlTwo: subproduct6,
-          productTitle: "Digital Camera 16x",
-          productPrice: 101.0,
+          name: "Sunglasses",
+          image: category4.src,
+          link: "demo11-shop.html",
      },
+     {
+          name: "Shoes",
+          image: category5.src,
+          link: "demo11-shop.html",
+     },
+     {
+          name: "More Bags",
+          image: category1.src,
+          link: "demo11-shop.html",
+     },
+     // Add more categories...
 ];
-export const cameras: ProductProps[] = [
+
+export const topRatedproducts = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product5,
-          productImageUrlTwo: subproduct5,
-          productTitle: " Black Grey Headset",
-          productPrice: 39.0,
+          image1: product5.src,
+          image2: product5b.src,
+          alt: "Product",
+          label: "HOT",
+          name: "Product Brown Bag",
+          price: 70.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Blue Backpack",
-          productPrice: 299.0,
+          image1: product6.src,
+          image2: product6b.src,
+          alt: "Product",
+          name: "Women Shoes",
+          price: 60.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product6,
-          productImageUrlTwo: subproduct6,
-          productTitle: "Digital Camera 16x",
-          productPrice: 101.0,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product7,
-          productImageUrlTwo: subproduct6,
-          productTitle: "Porto Extended Camera",
-          productPrice: 599.0,
+          image1: product7.src,
+          image2: product7b.src,
+          alt: "Product",
+          label: "HOT",
+          name: "Women Dress",
+          price: 55.0,
      },
 ];
 
-export const lamps: ProductProps[] = [
+export const productWidgetsData = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product8,
-          productImageUrlTwo: product9,
-          productTitle: "  Brown Bag",
-          productPrice: 299.0,
+          image1: smallProduct1.src,
+          image2: smallProduct1b.src,
+          alt: "Product",
+          name: "Product Short Name 1",
+          price: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product9,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Casual Note Bag",
-          productPrice: 299.0,
+          image1: smallProduct2.src,
+          image2: smallProduct2b.src,
+          alt: "Product",
+          name: "Product Short Name 2",
+          price: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product10,
-          productImageUrlTwo: product8,
-          productTitle: " Laptop Case Bag",
-          productPrice: 1999.0,
+          image1: smallProduct3.src,
+          image2: smallProduct3b.src,
+          alt: "Product",
+          name: "Product Short Name 3",
+          price: 49.0,
      },
+     // Add more products...
 ];
-export const computers: ProductProps[] = [
+
+export const additionalProductWidgetsData = [
      {
-          productImageAlt: "product",
-          productCategory: "CATEGORY",
-          productImageUrl: product11,
-          productImageUrlTwo: subproduct5,
-          productTitle: " 1080p Wifi Ip Camera",
-          productPrice: 299.0,
+          image1: smallProduct4.src,
+          image2: smallProduct4b.src,
+          alt: "Product",
+          name: "Product Short Name 4",
+          price: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product4,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Battery Charger",
-          productPrice: 299.0,
+          image1: smallProduct5.src,
+          image2: smallProduct5b.src,
+          alt: "Product",
+          name: "Product Short Name 5",
+          price: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product5,
-          productImageUrlTwo: subproduct5,
-          productTitle: " Black Grey Headset",
-          productPrice: 29.0,
+          image1: smallProduct6.src,
+          image2: smallProduct6b.src,
+          alt: "Product",
+          name: "Product Short Name 6",
+          price: 49.0,
      },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: " Blue Backpack",
-          productPrice: 299.0,
-     },
+     // Add more products...
 ];
-export const mobilephones: ProductProps[] = [
+
+export const featuredProductsWidgetsData = [
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: "Blue Backpack",
-          productPrice: 299.0,
+          image1: smallProduct7,
+          image2: smallProduct7b,
+          alt: "Product",
+          name: "Product Short Name 7",
+          price: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product12,
-          productImageUrlTwo: subproduct12,
-          productTitle: "Black Porto Men Shoes",
-          productPrice: 111.0,
+          image1: smallProduct8,
+          image2: smallProduct8b,
+          alt: "Product",
+          name: "Product Short Name 8",
+          price: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product13,
-          productImageUrlTwo: subproduct13,
-          productTitle: "  Sports Shoes",
-          productPrice: 101.0,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product14,
-          productImageUrlTwo: subproduct14,
-          productTitle: " Casual Blue Shoes",
-          productPrice: 101.0,
-     },
-];
-export const topRatedProduct: ProductProps[] = [
-     {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: " Casual Blue Shoes",
-          productPrice: 101.0,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product12,
-          productImageUrlTwo: subproduct12,
-          productTitle: "1080p Wifi IP Camera",
-          productPrice: 299.0,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product13,
-          productImageUrlTwo: subproduct13,
-          productTitle: "  Blue BackPack",
-          productPrice: 299.0,
-     },
-];
-export const topSellingProduct: ProductProps[] = [
-     {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: " Casual Blue Shoesk",
-          productPrice: 101.0,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product12,
-          productImageUrlTwo: subproduct12,
-          productTitle: "1080p Wifi IP Camera",
-          productPrice: 299.0,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product13,
-          productImageUrlTwo: subproduct13,
-          productTitle: "  Blue BackPack",
-          productPrice: 299.0,
-     },
-];
-export const brandsImage = [
-     {
-          image: brand1,
-     },
-     {
-          image: brand2,
-     },
-     {
-          image: brand3,
-     },
-     {
-          image: brand4,
+          image1: smallProduct9,
+          image2: smallProduct9b,
+          alt: "Product",
+          name: "Product Short Name 9",
+          price: 49.0,
      },
 ];

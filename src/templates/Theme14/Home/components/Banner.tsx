@@ -1,6 +1,5 @@
+import { templateImages } from "@/appProvider/templateImages";
 import Carousel from "react-bootstrap/Carousel";
-import slider1 from "../../../../assets/images/demoes/demo14/slider/slide-1.jpg";
-import slider2 from "../../../../assets/images/demoes/demo14/slider/slide-2.jpg";
  
 export const Banner = () => {
      return (
@@ -11,7 +10,7 @@ export const Banner = () => {
                          <div className="home-slide home-slide1 banner">
                               <img
                                    className="slide-bg"
-                                   src={slider1.src}
+                                   src={templateImages.demo14.sliderImage.slide1}
                                    alt="slider image"
                                    width={1120}
                                    height={500}
@@ -43,7 +42,7 @@ export const Banner = () => {
                          <div className="home-slide home-slide2 banner">
                               <img
                                    className="slide-bg"
-                                   src={slider2.src}
+                                   src={templateImages.demo14.sliderImage.slide2}
                                    alt="slider image"
                                    width={1120}
                                    height={500}
