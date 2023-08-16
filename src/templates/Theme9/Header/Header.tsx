@@ -466,7 +466,7 @@ export default function Header() {
                <div className="container d-none  d-lg-block">
                     <div className="row">
                          <aside className="sidebar-home col-lg-3 mobile-sidebar toggle-menu-wrap">
-                              <div className="side-menu-wrapper text-uppercase d-none d-lg-block">
+                              <div className="side-menu-wrapper text-uppercase d-none d-lg-block ">
                                    <h2 className="side-menu-title">
                                         <a className="d-block btn-dark" href="#">
                                              <i className="fas fa-bars"></i>Shop By Category
@@ -480,11 +480,11 @@ export default function Header() {
                                                        <i className="sicon-home"></i>Home
                                                   </a>
                                              </li>
-                                             <li>
+                                             <li className="tw-group">
                                                   <a href="demo9-shop.html" className="sf-with-ul">
                                                        <i className="sicon-briefcase"></i>Categories
                                                   </a>
-                                                  <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                                  <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                        <div className="row">
                                                             <div className="col-lg-4">
                                                                  <a href="#" className="nolink">
@@ -613,14 +613,14 @@ export default function Header() {
                                                        </div>
                                                   </div>
                                              </li>
-                                             <li>
+                                             <li className="tw-group">
                                                   <a
                                                        href="demo9-product.html"
                                                        className="sf-with-ul"
                                                   >
                                                        <i className="sicon-present"></i>Products
                                                   </a>
-                                                  <div className="megamenu megamenu-fixed-width">
+                                                  <div className="megamenu megamenu-fixed-width tw-hidden group-hover:tw-block">
                                                        <div className="row">
                                                             <div className="col-lg-4">
                                                                  <a href="#" className="nolink">
@@ -750,11 +750,11 @@ export default function Header() {
                                                        </div>
                                                   </div>
                                              </li>
-                                             <li>
+                                             <li className="tw-group">
                                                   <a href="#" className="sf-with-ul">
                                                        <i className="sicon-docs"></i>Pages
                                                   </a>
-                                                  <ul>
+                                                  <ul className="tw-hidden group-hover:tw-block">
                                                        <li>
                                                             <a href="wishlist.html">Wishlist</a>
                                                        </li>
