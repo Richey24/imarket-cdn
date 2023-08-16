@@ -1,11 +1,11 @@
 export const dummySite = {
      theme: {
-          theme: "theme9",
+          theme: "theme12",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme9",
+                    theme: "theme12",
                     name: "",
                     props: {
                          company: {
@@ -41,7 +41,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme9",
+                    theme: "theme12",
                     props: {
                          company: {
                               city: "City",
@@ -51,11 +51,11 @@ export const dummySite = {
                          static: {
                               languages: [],
                               currencies: [],
-                              socials: [
-                                   { name: "facebook", link: "/" },
-                                   { name: "instagram", link: "/" },
-                                   { name: "twitter", link: "/" },
-                              ],
+                              // socials: [
+                              //      { name: "facebook", link: "/" },
+                              //      { name: "instagram", link: "/" },
+                              //      { name: "twitter", link: "/" },
+                              // ],
                               pageLinks: [
                                    {
                                         name: "home",
@@ -86,7 +86,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme9",
+                                   theme: "theme12",
                                    props: {
                                         static: {
                                              promotion: {
@@ -136,7 +136,7 @@ export const dummySite = {
           styles: {
                colors: [],
                mode: "light",
-               demoLink: "demo13",
+               demoLink: "demo33",
           },
      },
 };

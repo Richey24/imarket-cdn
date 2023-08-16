@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetSiteByDomain } from "./hook";
 import { getSubDomain } from "@/utils/helper";
-import { SitesField } from "./types";
+import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
 
 export const AppContext = React.createContext<any>(null);
