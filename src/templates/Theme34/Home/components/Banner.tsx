@@ -21,7 +21,7 @@ export const Banner = () => {
                     <div className="home-slide home-slide-1 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src={templateImages.demo34.bannerImage.banner1}
+                                   src={templateImages.demo34.sliderImage.slide2}
                                    alt="slider"
                                    width="1920"
                                    height="700"
@@ -51,7 +51,7 @@ export const Banner = () => {
 
                          <div className="banner-layer banner-layer-bottom banner-text">
                               <img
-                                   src="assets/images/demoes/demo34/slider/slide-1-text.png"
+                                   src={templateImages.demo34.sliderImage.slide1}
                                    alt="bg-text"
                                    width="1281"
                                    height="275"
@@ -60,7 +60,7 @@ export const Banner = () => {
 
                          <div className="banner-layer dot-image">
                               <img
-                                   src="assets/images/demoes/demo34/dots.png"
+                                   src={templateImages.demo34.sliderImage.slide3}
                                    alt="dots"
                                    width="123"
                                    height="126"
@@ -70,7 +70,7 @@ export const Banner = () => {
                     <div className="home-slide home-slide-2 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src={templateImages.demo34.bannerImage.banner1}
+                                   src={templateImages.demo34.sliderImage.slide4}
                                    alt="slider"
                                    width="1920"
                                    height="700"
@@ -78,11 +78,7 @@ export const Banner = () => {
                          </figure>
 
                          <div className="banner-layer banner-layer-middle text-right">
-                              <div
-                                   className="appear-animate"
-                                   data-animation-name="fadeInRightShorter"
-                                   data-animation-delay="300"
-                              >
+                              <div>
                                    <h4 className="m-b-2">Back In Stock</h4>
                                    <h2 className="font1 font-italic m-b-4">Ultimate SkinCare</h2>
                                    <p className="font2 ls-n-15 m-b-4">

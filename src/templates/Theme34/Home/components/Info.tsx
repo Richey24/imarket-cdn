@@ -54,7 +54,7 @@ export const InfoBoxesContainer: React.FC = () => {
      };
 
      return (
-          <div className="top-notice bg-primary">
+          <div className="">
                <OwlCarousel
                     className="info-boxes-slider owl-carousel owl-theme"
                     {...owlCarouselOptions}

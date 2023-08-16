@@ -22,8 +22,10 @@ function Category() {
                                    <a href="demo34-shop.html">
                                         <figure>
                                              <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
-                                                  alt="src"
+                                                  src={
+                                                       templateImages.demo34.categoryImages
+                                                            .category1
+                                                  }
                                                   width="264"
                                                   height="345"
                                              />
@@ -57,7 +59,10 @@ function Category() {
                                    <a href="demo34-shop.html">
                                         <figure>
                                              <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+                                                  src={
+                                                       templateImages.demo34.categoryImages
+                                                            .category4
+                                                  }
                                                   alt="src"
                                                   width="550"
                                                   height="564"
@@ -100,7 +105,10 @@ function Category() {
                                    <a href="demo34-shop.html">
                                         <figure>
                                              <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+                                                  src={
+                                                       templateImages.demo34.categoryImages
+                                                            .category2
+                                                  }
                                                   alt="src"
                                                   width="264"
                                                   height="199"
@@ -132,7 +140,10 @@ function Category() {
                                    <a href="demo34-shop.html">
                                         <figure>
                                              <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+                                                  src={
+                                                       templateImages.demo34.categoryImages
+                                                            .category3
+                                                  }
                                                   alt="src"
                                                   width="264"
                                                   height="345"
@@ -166,7 +177,10 @@ function Category() {
                                    <a href="demo34-shop.html">
                                         <figure>
                                              <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+                                                  src={
+                                                       templateImages.demo34.categoryImages
+                                                            .category5
+                                                  }
                                                   alt="src"
                                                   width="264"
                                                   height="199"

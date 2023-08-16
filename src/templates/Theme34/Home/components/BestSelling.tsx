@@ -19,7 +19,7 @@ function BestSelling() {
                                    <div className="banner banner1 mb-2 tw-bg-[#f4f4f2]">
                                         <figure>
                                              <img
-                                                  src="assets/images/demoes/demo34/banners/banner-1.png"
+                                                  src={templateImages.demo34.bannerImage.banner2}
                                                   alt="banner"
                                                   width="580"
                                                   height="430"
@@ -84,7 +84,7 @@ function BestSelling() {
                               className="col-lg-6 parallax-bg tw-bg-[#f4f4f2]"
                               // data-parallax="{'speed': 1.3, 'enableOnMobile': false}"
                               style={{
-                                   backgroundImage: `url(${templateImages.demo3.bannerImage.banner1})`,
+                                   backgroundImage: `url(${templateImages.demo34.bannerImage.banner3})`,
                                    backgroundRepeat: "no-repeat",
                                    backgroundSize: "cover",
                               }}
@@ -126,8 +126,11 @@ function BestSelling() {
                     <div className="row no-gutters m-0">
                          <div
                               className="col-lg-6 parallax-bg order-lg-last tw-bg-[#f5dee6]"
-                              data-parallax="{'speed': 1.3, 'enableOnMobile': false}"
-                              data-image-src="assets/images/demoes/demo34/banners/banner-3.jpg"
+                              style={{
+                                   backgroundImage: `url(${templateImages.demo34.bannerImage.banner4})`,
+                                   backgroundRepeat: "no-repeat",
+                                   backgroundSize: "cover",
+                              }}
                          >
                               <div className="dot-image">
                                    <img

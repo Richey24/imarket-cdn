@@ -7,6 +7,8 @@ import Category from "./components/Category";
 import PopularProducts from "./components/PopularProducts";
 import ClientsReview from "./components/ClientsReview";
 import BestSelling from "./components/BestSelling";
+import { InfoBoxesContainer } from "./components/Info";
+import Recomended from "./components/Recomended";
 
 export const Home = () => {
      return (
@@ -14,9 +16,13 @@ export const Home = () => {
                <Banner />
                <div>
                     <Category />
+                    <Recomended />
                     <ClientsReview />
                     <BestSelling />
-                    {/*  <PopularProducts /> */}
+                    <div className="container tw-my-12">
+                         <InfoBoxesContainer />
+                    </div>
+                    <PopularProducts />
                     {/* <Gift /> */}
                </div>
                {/* End .home-top-container */}

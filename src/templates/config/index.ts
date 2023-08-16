@@ -59,10 +59,13 @@ export const templateConfig: any = {
 
 export const cssImports = {
      theme1: "demo13",
+     theme2: "demo2",
      theme4: "demo4",
-     theme5: "demo1",
+     theme5: "demo5",
      theme6: "demo2",
      theme7: "demo3",
+     theme8: "demo8",
+     theme9: "demo9",
      theme10: "demo20",
      theme11: "demo11",
      theme21: "demo21",
