@@ -2558,7 +2558,6 @@ export const templateImages = {
             "category2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-2.png",
             "category3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-3.png",
             "category4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-4.png",
-            "category5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-5.png"
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-slide.jpg",
