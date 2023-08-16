@@ -2,7 +2,6 @@ import React from "react";
 import FeaturedProduct from "./components/FeaturedProducts";
 import { Banner } from "./components/Banner";
 import { latestProducts } from "./data";
-import OurCategory from "./components/OurCategory";
 
 export const Home = () => {
      return (
@@ -16,7 +15,6 @@ export const Home = () => {
                     </div>
                </div>
                {/* End .home-top-container */}
-               <OurCategory />
                <div className="container my-12">
                     <div className="relative w-full mb-16">
                          <div className="absolute p-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white font-bold text-3xl">
