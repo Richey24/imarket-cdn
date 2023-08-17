@@ -1,12 +1,9 @@
-import React from "react";
 import visa from "../../../assets/images/payments/payment-visa.svg";
 import paypal from "../../../assets/images/payments/payment-paypal.svg";
 import stripe from "../../../assets/images/payments/payment-stripe.png";
 import verisign from "../../../assets/images/payments/payment-verisign.svg";
 
-const Footer = (): JSX.Element => {
-     console.log(visa);
-
+const Footer = () => {
      return (
           <footer className="footer bg-dark position-relative">
                <div className="footer-middle">
@@ -14,6 +11,7 @@ const Footer = (): JSX.Element => {
                          <div className="footer-ribbon bg-primary text-white ls-0">
                               Get in touch
                          </div>
+                         {/* End .footer-ribbon */}
                          <div className="row">
                               <div className="col-lg-3 col-md-4">
                                    <div className="widget">
@@ -50,23 +48,25 @@ const Footer = (): JSX.Element => {
                                                   className="social-icon social-facebook icon-facebook"
                                                   target="_blank"
                                                   title="Facebook"
-                                             ></a>
+                                             />
                                              <a
                                                   href="#"
                                                   className="social-icon social-twitter icon-twitter"
                                                   target="_blank"
                                                   title="Twitter"
-                                             ></a>
+                                             />
                                              <a
                                                   href="#"
                                                   className="social-icon social-linkedin fab fa-linkedin-in"
                                                   target="_blank"
                                                   title="Linkedin"
-                                             ></a>
+                                             />
                                         </div>
+                                        {/* End .social-icons */}
                                    </div>
+                                   {/* End .widget */}
                               </div>
-
+                              {/* End .col-lg-3 */}
                               <div className="col-lg-9 col-md-8">
                                    <div className="widget widget-newsletter">
                                         <h4 className="widget-title">Subscribe newsletter</h4>
@@ -78,7 +78,7 @@ const Footer = (): JSX.Element => {
                                                        today.
                                                   </p>
                                              </div>
-
+                                             {/* End .col-lg-6 */}
                                              <div className="col-lg-6 col-md-12 mb-1">
                                                   <form action="#" className="d-flex mb-0 w-100">
                                                        <input
@@ -87,17 +87,18 @@ const Footer = (): JSX.Element => {
                                                             placeholder="Email Address"
                                                             required
                                                        />
-
                                                        <input
                                                             type="submit"
                                                             className="btn btn-primary shadow-none"
-                                                            value="Subscribe"
+                                                            defaultValue="Subscribe"
                                                        />
                                                   </form>
                                              </div>
+                                             {/* End .col-lg-6 */}
                                         </div>
+                                        {/* End .row */}
                                    </div>
-
+                                   {/* End .widget */}
                                    <div className="row">
                                         <div className="col-sm-6 col-lg-3">
                                              <div className="widget">
@@ -140,7 +141,9 @@ const Footer = (): JSX.Element => {
                                                                  <a href="#">Contact us</a>
                                                             </li>
                                                             <li>
-                                                                 <a href="#">Shipping & Delivery</a>
+                                                                 <a href="#">
+                                                                      Shipping &amp; Delivery
+                                                                 </a>
                                                             </li>
                                                             <li>
                                                                  <a href="#">Privacy</a>
@@ -150,45 +153,57 @@ const Footer = (): JSX.Element => {
                                              </div>
                                         </div>
                                    </div>
+                                   {/* End .row */}
                               </div>
+                              {/* End .col-lg-9 */}
                          </div>
+                         {/* End .row */}
                     </div>
+                    {/* End .container */}
                </div>
-
+               {/* End .footer-middle */}
                <div className="container">
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
                               <span className="footer-copyright">
-                                   © Dreamtechlabs 2023. All Rights Reserved
+                                   © Porto eCommerce. 2021. All Rights Reserved
                               </span>
                          </div>
-
                          <div className="footer-right ml-auto mt-1 mt-sm-0">
                               <div className="payment-icons mr-0">
                                    <span
                                         className="payment-icon visa"
-                                        style={{ backgroundImage: `url(${visa.src})` }}
-                                   ></span>
+                                        style={{
+                                             backgroundImage: `url('${visa}')`,
+                                        }}
+                                   />
                                    <span
                                         className="payment-icon paypal"
-                                        style={{ backgroundImage: `url(${paypal.src})` }}
-                                   ></span>
+                                        style={{
+                                             backgroundImage:
+                                                  "url(assets/images/payments/payment-paypal.svg)",
+                                        }}
+                                   />
                                    <span
                                         className="payment-icon stripe"
-                                        style={{ backgroundImage: `url(${stripe.src})` }}
-                                   ></span>
+                                        style={{
+                                             backgroundImage:
+                                                  "url(assets/images/payments/payment-stripe.png)",
+                                        }}
+                                   />
                                    <span
                                         className="payment-icon verisign"
-                                        style={{ backgroundImage: `url(${verisign.src})` }}
-                                   ></span>
+                                        style={{
+                                             backgroundImage:
+                                                  "url(assets/images/payments/payment-verisign.svg)",
+                                        }}
+                                   />
                               </div>
                          </div>
                     </div>
-                    {/* End .footer-bottom */}
                </div>
-               {/* End .container */}
+               {/* End .footer-bottom */}
           </footer>
      );
 };
-
 export default Footer;

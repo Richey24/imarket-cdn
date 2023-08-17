@@ -12,7 +12,7 @@ export const Product: React.FC<ProductProps> = ({
      oldPrice,
 }) => {
      return (
-          <div className="col-6 col-sm-4">
+          <div className="col-6 col-sm-4 col-lg-3">
                <div className="product-default inner-quickview inner-icon">
                     <figure>
                          <a href="demo13-product.html">
