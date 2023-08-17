@@ -4689,6 +4689,8 @@ label {
      font-size: 1.7rem;
      color: #da7940;
      font-weight: 700;
+     letter-spacing: -0.05em;
+     color: #222529;
 }
 .countdown-type1 .countdown-period {
      font-size: 1.7rem;
@@ -8289,6 +8291,17 @@ html {
      font-size-adjust: 100%;
      -ms-text-size-adjust: 100%;
      -webkit-text-size-adjust: 100%;
+}
+body {
+     color: #777;
+     background: #fff;
+     font-size: 1.4rem;
+     font-weight: 400;
+     line-height: 1.4;
+     font-family: "Open Sans", sans-serif;
+     -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+     overflow-x: hidden;
 }
 ::-moz-selection {
      background-color: #08c;

@@ -11,6 +11,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [site, setSite] = useState<SitesField | null>(null);
      const [loading, setLoading] = useState<boolean>(false);
      const [products, setProducts] = useState(null);
+     const [categories, setCategories] = useState(null);
 
      const getSiteByDomain = useGetSiteByDomain();
      const getProducts = useGetProducts();
@@ -42,21 +43,25 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                getProducts(
                     site?.company?.company_id,
                     (products) => {
-                         console.log("products", products);
+                         setProducts(products);
                     },
                     () => {},
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
-                         console.log("categories", categories);
+                         setCategories(categories);
                     },
                     () => {},
                );
           }
      }, [site]);
 
-     return <AppContext.Provider value={{ site, loading }}>{children}</AppContext.Provider>;
+     return (
+          <AppContext.Provider value={{ site, loading, categories, products }}>
+               {children}
+          </AppContext.Provider>
+     );
 };
 
 export default AppProvider;

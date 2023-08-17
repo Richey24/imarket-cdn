@@ -12,10 +12,12 @@ import { NoSite } from "../components/NoSite/NoSite";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-     const { site, loading, setLoading } = useContext<{
+     const { site, loading, setLoading, categories, products } = useContext<{
           site: SitesField;
           loading: boolean;
           setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+          categories: any;
+          products: any;
      }>(AppContext);
      const [styleLoader, setStyleLoader] = useState(false);
 
@@ -52,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                    props={{
                                         ...site.theme.header.component.props,
                                         company: site.company,
+                                        categories,
                                    }}
                               />
                               {children}

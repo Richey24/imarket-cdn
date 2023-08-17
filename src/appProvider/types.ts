@@ -49,4 +49,16 @@ export type ThemeName =
      | "theme17"
      | "theme18"
      | "theme19"
-     | "theme20";
+     | "theme20"
+     | "theme30"
+     | "theme31"
+     | "theme32"
+     | "theme33"
+     | "theme34"
+     | "theme35"
+     | "theme36"
+     | "theme37"
+     | "theme38"
+     | "theme39"
+     | "theme41"
+     | "theme42";

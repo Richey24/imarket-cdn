@@ -1,13 +1,18 @@
 export const dummySite = {
      theme: {
-          theme: "theme11",
+          theme: "theme13",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme30",
+                    theme: "theme13",
                     name: "",
                     props: {
+                         company: {
+                              city: "City",
+                              country: "Country",
+                              phone: "(123) 456-7890",
+                         },
                          static: {
                               customerService: [
                                    { name: "Help & Faq", link: "/" },
@@ -36,9 +41,13 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme30",
+                    theme: "theme13",
                     props: {
-                         company: {},
+                         company: {
+                              city: "City",
+                              country: "Country",
+                              phone: "(123) 456-7890",
+                         },
                          static: {
                               languages: [],
                               currencies: [],
@@ -77,7 +86,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme11",
+                                   theme: "theme13",
                                    props: {
                                         static: {
                                              promotion: {
@@ -87,12 +96,14 @@ export const dummySite = {
                                                   {
                                                        title: "",
                                                        text: "",
-                                                       imageUrl: "",
+                                                       imageUrl:
+                                                            "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-1.png",
                                                   },
                                                   {
                                                        title: "",
                                                        text: "",
-                                                       imageUrl: "",
+                                                       imageUrl:
+                                                            "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-2.jpg",
                                                   },
                                              ],
                                              dealsBanner: [
@@ -127,7 +138,7 @@ export const dummySite = {
           styles: {
                colors: [],
                mode: "light",
-               demoLink: "demo13",
+               demoLink: "demo33",
           },
      },
 };
