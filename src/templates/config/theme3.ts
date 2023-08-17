@@ -1,17 +1,9 @@
-import Footer from "../Theme3/Footer/Footer";
+import T3Footer from "../Theme3/Footer/Footer";
 import T3Header from "../Theme3/Header/Header";
-import InfoBoxesContainer from "../Theme3/InfoBoxesContainer";
-import PopularProducts from "../Theme3/PopularProducts";
-import ShopByCategory from "../Theme3/ShopByCategory";
-import Banner from '../Theme3/Banner';
-import MainCategory from "../Theme3/MainCategory";
+import { Home } from "../Theme3/Home/Home";
 
-export const theme3TemplateConfig: any = {
+export const theme3TemplateConfig = {
      header: T3Header,
-     Banner: Banner,
-     ShopByCategory: ShopByCategory,
-     MainCategory: MainCategory,
-     PopularProducts: PopularProducts,
-     InfoBoxesContainer: InfoBoxesContainer,
-     Footer: Footer
+     home: Home,
+     footer: T3Footer,
 };
