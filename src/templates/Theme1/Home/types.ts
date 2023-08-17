@@ -16,3 +16,10 @@ export interface ProductWidgetProps {
      productTitle: string;
      productPrice: number;
 }
+
+export interface TestimonialProps {
+     clientImageUrl: StaticImageData;
+     title: string;
+     position: string;
+     message: string;
+}

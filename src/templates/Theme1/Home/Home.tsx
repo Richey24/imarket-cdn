@@ -1,267 +1,205 @@
-"use client";
-
 import Image from "next/image";
-import React, { useState } from "react";
-import slide1 from "../../../assets/images/demoes/demo13/slider/slide-1.jpg";
-import slide2 from "../../../assets/images/demoes/demo13/slider/slide-2.jpg";
-import banner1 from "../../../assets/images/demoes/demo13/banners/banner-1.jpg";
-import banner2 from "../../../assets/images/demoes/demo13/banners/banner-2.jpg";
-import banner3 from "../../../assets/images/demoes/demo13/banners/banner-3.jpg";
-import banner4 from "../../../assets/images/demoes/demo13/banners/banner-4.jpg";
-
-import product15two from "../../../assets/images/demoes/demo13/products/product-15-2.jpg";
-import client1 from "../../../assets/images/clients/client-1.jpg";
-import client2 from "../../../assets/images/clients/client-2.jpg";
-import client3 from "../../../assets/images/clients/client-3.jpg";
+import banner1 from "../../../assets/images/demoes/demo1/banners/banner-1.jpg";
+import banner2 from "../../../assets/images/demoes/demo1/banners/banner-2.jpg";
+import banner3 from "../../../assets/images/demoes/demo1/banners/banner-3.jpg";
+import banner4 from "../../../assets/images/demoes/demo1/banners/banner-4.jpg";
+import Banner from "./components/Banner";
+import SideSlide from "./components/SideSlide";
 import { MiniBanner } from "./components/MiniBanner";
-import { InfoBoxesContainer } from "./components/Info";
 import { Product } from "./components/Product";
-import { featuredProducts, latestProducts, topRatedProducts } from "./data";
-import { ProductWidget } from "./components/ProductWidget";
-import { SidebarHome } from "./components/SidebarHome";
-import { Banner } from "./components/Banner";
-
-export const Home = (props: any) => {
-     const [activeTab, setActiveTab] = useState("featured-products");
-     const { static: statiProps } = props;
-
-     console.log("homeProps", statiProps);
-     const handleTabChange = (tabId: string) => {
-          setActiveTab(tabId);
-     };
-
+import { featuredProducts, testimonies } from "./data";
+import { Testimonial } from "./components/Testimonial";
+import Carousel from "react-bootstrap/esm/Carousel";
+import { InfoBoxesContainer } from "./components/Info";
+export const Home = () => {
      return (
-          <main className="main d-block">
-               <div className="home-top-container mt-lg-2">
-                    <div className="container">
-                         <div className="row">
-                              <Banner slides={statiProps?.banner ?? []} />
-                              {/* End .col-lg-9 */}
-                              <div className="col-lg-3 top-banners">
-                                   <div className="row">
-                                        {statiProps?.dealsBanner?.map(
-                                             (banner: any, idx: number) => (
-                                                  <div key={idx} className="col-md-4 col-lg-12">
-                                                       <MiniBanner
-                                                            src={
-                                                                 banner?.imageUrl !== ""
-                                                                      ? banner?.imageUrl
-                                                                      : banner1
-                                                            }
-                                                            backgroundColor="#ccc"
-                                                            title={
-                                                                 banner?.text !== ""
-                                                                      ? banner?.title
-                                                                      : "HandBag"
-                                                            }
-                                                            subtitle={
-                                                                 banner?.text !== ""
-                                                                      ? banner?.text
-                                                                      : "Starting from $99"
-                                                            }
-                                                       />
-                                                  </div>
-                                             ),
-                                        )}
-                                   </div>
-                              </div>
-                         </div>
+          <main className="main home">
+               <div className="container mb-2">
+                    <div className="info-boxes-container row row-joined mb-2 font2">
+                         <InfoBoxesContainer />
                     </div>
-               </div>
-               <InfoBoxesContainer />
-               <div className="container">
-                    <div className="row">
-                         <div className="col-lg-9">
-                              <div className="home-product-tabs">
-                                   <ul className="nav nav-tabs mb-2" role="tablist">
-                                        <li className="nav-item">
-                                             <a
-                                                  className={`nav-link ${
-                                                       activeTab === "featured-products"
-                                                            ? "active"
-                                                            : ""
-                                                  }`}
-                                                  id="featured-products-tab"
-                                                  onClick={() =>
-                                                       handleTabChange("featured-products")
-                                                  }
-                                             >
-                                                  Featured Products
-                                             </a>
-                                        </li>
-                                        <li className="nav-item">
-                                             <a
-                                                  className={`nav-link ${
-                                                       activeTab === "latest-products"
-                                                            ? "active"
-                                                            : ""
-                                                  }`}
-                                                  id="latest-products-tab"
-                                                  onClick={() => handleTabChange("latest-products")}
-                                             >
-                                                  Latest Products
-                                             </a>
-                                        </li>
-                                   </ul>
-                                   <div>
-                                        {activeTab === "featured-products" && (
-                                             <div
-                                                  className={`tab-pane fade ${
-                                                       activeTab === "featured-products"
-                                                            ? "show active"
-                                                            : ""
-                                                  }`}
-                                                  id="featured-products"
-                                             >
-                                                  <div className="row">
-                                                       {featuredProducts.map((product, index) => (
-                                                            <Product
-                                                                 key={`featured-product-${index}`}
-                                                                 {...product}
-                                                            />
-                                                       ))}
-                                                  </div>
-                                             </div>
-                                        )}
 
-                                        {activeTab === "latest-products" && (
-                                             <div
-                                                  className={`tab-pane fade ${
-                                                       activeTab === "latest-products"
-                                                            ? "show active"
-                                                            : ""
-                                                  }`}
-                                                  id="latest-products"
-                                             >
-                                                  <div className="row">
-                                                       {latestProducts.map((product, index) => (
-                                                            <Product
-                                                                 key={`latest-product-${index}`}
-                                                                 {...product}
-                                                            />
-                                                       ))}
-                                                  </div>
-                                             </div>
-                                        )}
+                    <div className="row">
+                         <div className="col-lg-9 order-lg-2">
+                              <Banner />
+
+                              <div className="row gx-5 my-3">
+                                   <div className="col-sm-6 col-md-4 ">
+                                        <MiniBanner
+                                             src={banner1}
+                                             backgroundColor="#ccc"
+                                             title="Porto Watches"
+                                             subtitle="Starting at $99"
+                                        />
+                                   </div>
+                                   <div className="col-sm-6 col-md-4 ">
+                                        <MiniBanner
+                                             src={banner2}
+                                             backgroundColor="#fff"
+                                             title="Deal Promos"
+                                             subtitle="Starting at $99"
+                                        />
+                                   </div>
+                                   <div className="col-sm-6 col-md-4 ">
+                                        <MiniBanner
+                                             src={banner3}
+                                             backgroundColor="#b8c1d0"
+                                             title="Handbags"
+                                             subtitle="Starting at $99"
+                                        />
                                    </div>
                               </div>
-                              {/* End .home-product-tabs */}
-                              <div className="banners-group">
-                                   <div className="row m-b-3">
-                                        <div className="col-md-6 w-md-44 mb-2">
-                                             <div
-                                                  className="banner banner4 banner-md-vw-large"
-                                                  style={{ backgroundColor: "#383b44" }}
-                                             >
-                                                  <figure>
-                                                       <Image
-                                                            src={banner4}
-                                                            width={360}
-                                                            height={196}
-                                                            style={{ backgroundColor: "#555" }}
-                                                            alt="banner"
-                                                       />
-                                                  </figure>
-                                                  <div className="banner-layer banner-layer-middle banner-layer-space">
-                                                       <h3 className="m-b-2 ls-n-20 text-uppercase">
-                                                            Flash Sale
-                                                       </h3>
-                                                       <h5 className="m-b-2 ls-n-20 text-uppercase">
-                                                            Cool Sunglasses
-                                                       </h5>
-                                                       <h4 className="m-b-3 ls-n-20 text-white">
-                                                            <span>Only</span>
-                                                            <sup>$</sup>199
-                                                            <sup>99</sup>
-                                                       </h4>
-                                                       <a
-                                                            href="#"
-                                                            className="btn btn-md btn-light ls-10"
-                                                       >
-                                                            View Sale
-                                                       </a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                        {/* End .col-md-6 */}
-                                        <div className="col-md-6 w-md-55 mb-2">
-                                             <div
-                                                  className="banner banner5 banner-md-vw-large"
-                                                  style={{
-                                                       backgroundImage:
-                                                            "url(../../../assets/images/demoes/demo13/banners/banner-5.jpg)",
-                                                  }}
-                                             >
-                                                  <div className="banner-layer">
-                                                       <h3 className="text-primary">
-                                                            Exclusive Shoes
-                                                       </h3>
-                                                       <h4 className="text-primary">50% OFF</h4>
-                                                       <a
-                                                            href="#"
-                                                            className="btn btn-md btn-dark ls-10"
-                                                       >
-                                                            View Sale
-                                                       </a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                        {/* End .col-md-6 */}
-                                   </div>
-                                   {/* End .row */}
-                              </div>
-                              {/* End .banners-group */}
-                              <div className="product-widgets">
+                              <div>
+                                   <h3 className="fw-bold fs-2 mb-4 pb-2 mt-3 border-bottom">
+                                        Featured Products
+                                   </h3>
+
                                    <div className="row">
-                                        {/* product-1 */}
-                                        <div className="col-lg-4 col-sm-6 pb-5">
-                                             <h4 className="section-sub-title text-uppercase m-b-3">
-                                                  Top Rated Products
-                                             </h4>
-                                             {topRatedProducts.map((product, index) => (
-                                                  <ProductWidget
-                                                       key={`product-${index}`}
-                                                       {...product}
-                                                  />
-                                             ))}
+                                        {featuredProducts.map((product, index) => (
+                                             <Product
+                                                  key={`featured-product-${index}`}
+                                                  {...product}
+                                             />
+                                        ))}
+                                   </div>
+                              </div>
+
+                              <hr className="mt-1 mb-3 pb-2" />
+
+                              <div className="feature-boxes-container">
+                                   <div className="row">
+                                        <div
+                                             className="col-md-4 "
+                                             data-animation-name="fadeInRightShorter"
+                                             data-animation-delay="200"
+                                        >
+                                             <div className="feature-box  feature-box-simple text-center">
+                                                  <i className="icon-earphones-alt"></i>
+
+                                                  <div className="feature-box-content p-0">
+                                                       <h3 className="mb-0 pb-1">
+                                                            Customer Support
+                                                       </h3>
+                                                       <h5 className="mb-1 pb-1">
+                                                            Need Assistance?
+                                                       </h5>
+
+                                                       <p>
+                                                            Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit. Duis nec vestibulum
+                                                            magna, et dapib.
+                                                       </p>
+                                                  </div>
+                                                  {/* End .feature-box-content */}
+                                             </div>
+                                             {/* End .feature-box */}
                                         </div>
-                                        {/* product-2 */}
-                                        <div className="col-lg-4 col-sm-6 pb-5">
-                                             <h4 className="section-sub-title text-uppercase m-b-3">
-                                                  Best Selling Products
-                                             </h4>
-                                             {topRatedProducts.map((product, index) => (
-                                                  <ProductWidget
-                                                       key={`product-${index}`}
-                                                       {...product}
-                                                  />
-                                             ))}
+                                        {/* End .col-md-4 */}
+
+                                        <div
+                                             className="col-md-4 "
+                                             data-animation-name="fadeInRightShorter"
+                                             data-animation-delay="400"
+                                        >
+                                             <div className="feature-box feature-box-simple text-center">
+                                                  <i className="icon-credit-card"></i>
+
+                                                  <div className="feature-box-content p-0">
+                                                       <h3 className="mb-0 pb-1">
+                                                            Secured Payment
+                                                       </h3>
+                                                       <h5 className="mb-1 pb-1">Safe & Fast</h5>
+
+                                                       <p>
+                                                            Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit. Duis nec vestibulum
+                                                            magna, et dapib.
+                                                       </p>
+                                                  </div>
+                                                  {/* End .feature-box-content */}
+                                             </div>
+                                             {/* End .feature-box */}
                                         </div>
-                                        {/* product-3 */}
-                                        <div className="col-lg-4 col-sm-6 pb-5">
-                                             <h4 className="section-sub-title text-uppercase m-b-3">
-                                                  Latest Products
-                                             </h4>
-                                             {topRatedProducts.map((product, index) => (
-                                                  <ProductWidget
-                                                       key={`product-${index}`}
-                                                       {...product}
-                                                  />
-                                             ))}
+                                        {/* End .col-md-4 */}
+
+                                        <div
+                                             className="col-md-4 "
+                                             data-animation-name="fadeInRightShorter"
+                                             data-animation-delay="600"
+                                        >
+                                             <div className="feature-box feature-box-simple text-center">
+                                                  <i className="icon-action-undo"></i>
+
+                                                  <div className="feature-box-content p-0">
+                                                       <h3 className="mb-0 pb-1">Returns</h3>
+                                                       <h5 className="mb-1 pb-1">Easy & Free</h5>
+
+                                                       <p>
+                                                            Lorem ipsum dolor sit amet, consectetur
+                                                            adipiscing elit. Duis nec vestibulum
+                                                            magna, et dapib.
+                                                       </p>
+                                                  </div>
+                                                  {/* End .feature-box-content */}
+                                             </div>
+                                             {/* End .feature-box */}
                                         </div>
+                                        {/* End .col-md-4 */}
                                    </div>
                                    {/* End .row */}
                               </div>
-                              {/* End .product-widgets */}
+                              {/* End .feature-boxes-container */}
                          </div>
                          {/* End .col-lg-9 */}
-                         <div className="sidebar-overlay" />
-                         <div className="sidebar-toggle custom-sidebar-toggle">
-                              <i className="fas fa-sliders-h" />
-                         </div>
-                         <SidebarHome />
+
+                         <aside className="col-lg-3 order-lg-1 mobile-sideba">
+                              <SideSlide />
+
+                              <div className="widget widget-newsletters bg-gray text-center">
+                                   <h3 className="widget-title text-uppercase m-b-3">
+                                        Subscribe Newsletter
+                                   </h3>
+                                   <p className="mb-2">
+                                        Get all the latest information on Events, Sales and Offers.{" "}
+                                   </p>
+                                   <form action="#">
+                                        <div className="form-group position-relative sicon-envolope-letter">
+                                             <input
+                                                  type="email"
+                                                  className="form-control"
+                                                  name="newsletter-email"
+                                                  placeholder="Email address"
+                                             />
+                                        </div>
+                                        {/* Endd .form-group */}
+                                        <input
+                                             type="submit"
+                                             className="btn btn-primary text-dark btn-md"
+                                             value="Subscribe"
+                                        />
+                                   </form>
+                              </div>
+                              {/* End .widget */}
+
+                              <div className="widget widget-testimonials">
+                                   <div className=" owl-theme dots-left dots-small">
+                                        <Carousel fade controls={false}>
+                                             {testimonies.map((testimony, index) => (
+                                                  <Carousel.Item key={index}>
+                                                       <Testimonial {...testimony} />
+                                                  </Carousel.Item>
+                                             ))}
+                                        </Carousel>
+                                   </div>
+                                   {/* End .testimonials-slider */}
+                              </div>
+                              {/* End .widget */}
+                         </aside>
+                         {/* End .col-lg-3 */}
                     </div>
+                    {/* End .row */}
                </div>
+               {/* End .container */}
           </main>
      );
 };
