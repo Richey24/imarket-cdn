@@ -10,7 +10,7 @@ const Header = () => {
      const [pag, setPag] = useState(false);
      return (
           <header className="header box-shadow ">
-               <div className="header-top" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
+               <div className="header-top">
                     <div className="container">
                          <div className="header-left">
                               <div className="header-dropdown">
@@ -105,22 +105,14 @@ const Header = () => {
                     {/* End .container */}
                </div>
                {/* End .header-top */}
-               <div
-                    className="header-middle sticky-header"
-                    style={{ paddingLeft: "80px", paddingRight: "80px" }}
-               >
+               <div className="header-middle sticky-header">
                     <div className="container">
                          <div className="header-left">
                               <button className="mobile-menu-toggler" type="button">
                                    <i className="fas fa-bars" />
                               </button>
                               <a href="demo21.html" className="logo">
-                                   <img
-                                        src={logo.src}
-                                        alt="Porto Logo"
-                                        width={111}
-                                        height={44}
-                                   />
+                                   <img src={logo.src} alt="Porto Logo" width={111} height={44} />
                                    <img
                                         src="assets/images/your-logo.png"
                                         alt="Porto Logo"
@@ -356,10 +348,7 @@ const Header = () => {
                          </div>
                     </div>
                </div>
-               <div
-                    className="header-bottom sticky-header"
-                    style={{ paddingLeft: "80px", paddingRight: "80px" }}
-               >
+               <div className="header-bottom sticky-header">
                     <div className="container">
                          <div className="header-left">
                               <a href="demo21.html" className="logo">
@@ -513,7 +502,14 @@ const Header = () => {
                                                             <div className="col-lg-4 p-0">
                                                                  <div className="menu-banner">
                                                                       <figure>
-                                                                           <img style={{height:'100%',objectFit:'cover', objectPosition:"center 80%"}}
+                                                                           <img
+                                                                                style={{
+                                                                                     height: "100%",
+                                                                                     objectFit:
+                                                                                          "cover",
+                                                                                     objectPosition:
+                                                                                          "center 80%",
+                                                                                }}
                                                                                 src={banner.src}
                                                                                 alt="Menu banner"
                                                                                 width={300}
@@ -693,7 +689,14 @@ const Header = () => {
                                                             <div className="col-lg-4 p-0">
                                                                  <div className="menu-banner menu-banner-2">
                                                                       <figure>
-                                                                           <img style={{height:'100%',objectFit:'cover', objectPosition:"center 80%"}}
+                                                                           <img
+                                                                                style={{
+                                                                                     height: "100%",
+                                                                                     objectFit:
+                                                                                          "cover",
+                                                                                     objectPosition:
+                                                                                          "center 80%",
+                                                                                }}
                                                                                 src={banner1.src}
                                                                                 alt="Menu banner"
                                                                                 width={300}

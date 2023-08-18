@@ -170,7 +170,7 @@ const Footer = () => {
                                              className="payment-icon visa"
                                              style={{
                                                   backgroundImage:
-                                                       `url(${pay.image.src})`
+                                                       `url(${pay.image})`
                                              }}
                                         />
                                    ))}

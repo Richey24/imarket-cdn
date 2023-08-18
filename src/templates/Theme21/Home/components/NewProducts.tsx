@@ -21,7 +21,7 @@ export const NewProducts = () => {
                               <figure>
                                    <a href="demo21-product.html">
                                         <img
-                                             src={product.productImageUrl.src}
+                                             src={product.productImageUrl}
                                              width={217}
                                              height={217}
                                              alt="product"

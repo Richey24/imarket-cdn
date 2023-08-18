@@ -40,7 +40,7 @@ export const TopRatedProducts = () => {
                                                                            src={
                                                                                 product
                                                                                      .productImageUrl
-                                                                                     .src
+                                                                                     
                                                                            }
                                                                            width={217}
                                                                            height={217}

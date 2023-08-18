@@ -16,26 +16,19 @@ export const Product: React.FC<ProductProps> = ({
                <div className="product-default inner-quickview inner-icon">
                     <figure>
                          <a href="demo13-product.html">
-                              <a href="demo21-product.html">
-                                   <img
-                                        src={productImageUrl.src}
-                                        width={217}
-                                        height={217}
+                              <Image src={productImageUrl} width={300} height={300} alt="product" />
+                              {productImageUrlTwo && (
+                                   <Image
+                                        src={productImageUrlTwo}
+                                        width={300}
+                                        height={300}
                                         alt="product"
                                    />
-                                   {productImageUrlTwo && (
-                                        <img
-                                             src={productImageUrlTwo.src}
-                                             width={217}
-                                             height={217}
-                                             alt="product"
-                                        />
-                                   )}
-                              </a>
+                              )}
                          </a>
-                         {/* <div className="label-group">
+                         <div className="label-group">
                               <span className="product-label label-sale">-30%</span>
-                         </div> */}
+                         </div>
                          <div className="btn-icon-group">
                               <a href="#" className="btn-icon btn-add-cart product-type-simple">
                                    <i className="icon-shopping-cart" />
@@ -52,9 +45,9 @@ export const Product: React.FC<ProductProps> = ({
                     <div className="product-details">
                          <div className="category-wrap">
                               <div className="category-list">
-                                   {/* <a href="demo13-shop.html" className="product-category">
+                                   <a href="demo13-shop.html" className="product-category">
                                         {productCategory}
-                                   </a> */}
+                                   </a>
                               </div>
                               <a href="#" className="btn-icon-wish">
                                    <i className="icon-wishlist-2" />
@@ -63,15 +56,15 @@ export const Product: React.FC<ProductProps> = ({
                          <h3 className="product-title">
                               <a href="demo13-product.html">{productTitle}</a>
                          </h3>
-                         {/* <div className="ratings-container">
+                         <div className="ratings-container">
                               <div className="product-ratings">
                                    <span className="ratings" style={{ width: "100%" }} />
-                                  
+                                   {/* End .ratings */}
                                    <span className="tooltiptext tooltip-top" />
                               </div>
-                           
-                         </div> */}
-
+                              {/* End .product-ratings */}
+                         </div>
+                         {/* End .product-container */}
                          <div className="price-box">
                               {oldPrice && (
                                    <span className="old-price">${oldPrice.toFixed(2)}</span>

@@ -1165,7 +1165,7 @@ export const templateImages = {
             "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-6.jpg",
             "smallImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-7.jpg",
             "smallImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-8.jpg",
-            "smallImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-9.jpg"
+             "smallImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-9.jpg"
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-slide.jpg",
@@ -1634,7 +1634,7 @@ export const templateImages = {
             "zoomImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/zoom/product-2.jpg",
             "zoomImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/zoom/product-3.jpg",
             "zoomImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/zoom/product-4.jpg"
-        },
+         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-slide.jpg",
             banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/banner/banner-1.jpg",
@@ -1796,7 +1796,7 @@ export const templateImages = {
             "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/small-images/product-2.jpg"
         },
         zoomImages: {
-            "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-1-big.jpg",
+             "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-1-big.jpg",
             "zoomImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-2-big.jpg",
             "zoomImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-3-big.jpg",
             "zoomImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-1.jpg",
@@ -1823,7 +1823,7 @@ export const templateImages = {
         sliderImage: {
             slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide1.jpg",
             slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide2.jpg",
-            slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide3.jpg",
+             slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide3.jpg",
             slide4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide4.jpg",
         },
         vendorImage: {

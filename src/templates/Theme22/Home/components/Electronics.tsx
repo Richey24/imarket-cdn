@@ -1,9 +1,6 @@
 import React from "react";
-import banner from '../../../../assets/images/demoes/demo22/banners/banner-4.jpg'
-import product1 from '../../../../assets/images/demoes/demo22/products/product-10.jpg'
-import product2 from '../../../../assets/images/demoes/demo22/products/product-9.jpg'
-import product3 from '../../../../assets/images/demoes/demo22/products/product-18.jpg'
-import product4 from '../../../../assets/images/demoes/demo22/products/product-23.jpg'
+ 
+import { templateImages } from "@/appProvider/templateImages";
 export const Electronics = () => {
      return (
           <section
@@ -34,7 +31,7 @@ export const Electronics = () => {
                                    <figure className="h-100">
                                         <img
                                              className="h-100"
-                                             src={banner.src}
+                                             src={templateImages.demo22.bannerImage.banner5}
                                              alt="baner"
                                              width={360}
                                              height={508}
@@ -77,7 +74,7 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product1.src}
+                                                            src={templateImages.demo22.productImages.product10}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -155,7 +152,7 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product2.src}
+                                                            src={templateImages.demo22.productImages.product9}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -231,7 +228,7 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product3.src}
+                                                            src={templateImages.demo22.productImages.product18}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -304,7 +301,7 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product4.src}
+                                                            src={templateImages.demo22.productImages.product23}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
