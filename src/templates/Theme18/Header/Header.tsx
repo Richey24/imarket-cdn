@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../../assets/images/your-logo.png";
+import { FiChevronDown } from "react-icons/fi";
 
 const Header = () => {
      return (
@@ -21,9 +22,15 @@ const Header = () => {
                                         <li className="active">
                                              <a href="demo18.html">Home</a>
                                         </li>
-                                        <li>
-                                             <a href="demo18-shop.html">Categories</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                        <li className="tw-group">
+                                             <a href="demo18-shop.html" style={{ display: "flex" }}>
+                                                  Categories
+                                                  <FiChevronDown
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
+                                             </a>
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -151,9 +158,18 @@ const Header = () => {
                                              </div>
                                              {/* End .megamenu */}
                                         </li>
-                                        <li>
-                                             <a href="demo18-product.html">Products</a>
-                                             <div className="megamenu megamenu-fixed-width">
+                                        <li className="tw-group">
+                                             <a
+                                                  href="demo18-product.html"
+                                                  style={{ display: "flex" }}
+                                             >
+                                                  Products
+                                                  <FiChevronDown
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
+                                             </a>
+                                             <div className="megamenu megamenu-fixed-width tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -284,9 +300,15 @@ const Header = () => {
                                              </div>
                                              {/* End .megamenu */}
                                         </li>
-                                        <li className="d-none d-xl-block">
-                                             <a href="#">Pages</a>
-                                             <ul>
+                                        <li className="d-none d-xl-block tw-group">
+                                             <a href="#" style={{ display: "flex" }}>
+                                                  Pages
+                                                  <FiChevronDown
+                                                       style={{ marginTop: "2px" }}
+                                                       size={15}
+                                                  />
+                                             </a>
+                                             <ul className="tw-hidden group-hover:tw-block">
                                                   <li>
                                                        <a href="wishlist.html">Wishlist</a>
                                                   </li>
@@ -474,7 +496,7 @@ const Header = () => {
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>{" "}
+                                                                 </span>
                                                                  × $99.00
                                                             </span>
                                                        </div>
@@ -511,7 +533,7 @@ const Header = () => {
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>{" "}
+                                                                 </span>
                                                                  × $35.00
                                                             </span>
                                                        </div>
@@ -548,7 +570,7 @@ const Header = () => {
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>{" "}
+                                                                 </span>
                                                                  × $35.00
                                                             </span>
                                                        </div>
