@@ -8,6 +8,11 @@ export const dummySite = {
                     theme: "theme17",
                     name: "",
                     props: {
+                         company: {
+                              city: "City",
+                              country: "Country",
+                              phone: "(123) 456-7890",
+                         },
                          static: {
                               customerService: [
                                    { name: "Help & Faq", link: "/" },
@@ -36,9 +41,13 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme30",
+                    theme: "theme21",
                     props: {
-                         company: {},
+                         company: {
+                              city: "City",
+                              country: "Country",
+                              phone: "(123) 456-7890",
+                         },
                          static: {
                               languages: [],
                               currencies: [],

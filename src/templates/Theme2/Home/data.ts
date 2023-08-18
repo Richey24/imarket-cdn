@@ -26,7 +26,20 @@ import product13 from "../../../assets/images/demoes/demo13/products/product-13.
 import product13two from "../../../assets/images/demoes/demo13/products/product-13-2.jpg";
 import product14 from "../../../assets/images/demoes/demo13/products/product-14.jpg";
 import product14two from "../../../assets/images/demoes/demo13/products/product-14-2.jpg";
-import { ProductProps, ProductWidgetProps } from "./types";
+import { ProductProps, ProductWidgetProps, PromotionProps, TestimonialProps } from "./types";
+import client1 from "../../../assets/images/clients/client-1.jpg";
+import client2 from "../../../assets/images/clients/client-2.jpg";
+import client3 from "../../../assets/images/clients/client-3.jpg";
+
+import banner1 from "../../../assets/images/demoes/demo2/banners/banner-1.jpg";
+import banner2 from "../../../assets/images/demoes/demo2/banners/banner-2.jpg";
+import banner3 from "../../../assets/images/demoes/demo2/banners/banner-3.jpg";
+import banner4 from "../../../assets/images/demoes/demo2/banners/banner-4.jpg";
+import banner5 from "../../../assets/images/demoes/demo2/banners/banner-5.jpg";
+import banner6 from "../../../assets/images/demoes/demo2/banners/banner-6.jpg";
+import banner7 from "../../../assets/images/demoes/demo2/banners/banner-7.jpg";
+import banner8 from "../../../assets/images/demoes/demo2/banners/banner-8.jpg";
+import banner9 from "../../../assets/images/demoes/demo2/banners/banner-9.jpg";
 
 export const featuredProducts: ProductProps[] = [
      {
@@ -199,4 +212,110 @@ export const topRatedProducts: ProductWidgetProps[] = [
           productPrice: 39,
      },
      // Add more products as needed
+];
+
+export const testimonies: TestimonialProps[] = [
+     {
+          clientImageUrl: client1,
+          position: "John Smith",
+          title: "CEO, Founder",
+          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+     },
+     {
+          clientImageUrl: client2,
+          position: "Dae Smith",
+          title: "CEO, Founder",
+          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+     },
+     {
+          clientImageUrl: client3,
+          position: "John Doe",
+          title: "CEO, Founder",
+          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+     },
+];
+
+export const promotions: PromotionProps[] = [
+     {
+          title: "Mega Sale",
+          subtitle: "Watches",
+          imageUrl: banner1,
+          position: "right",
+          size: "small",
+          buttonCaption: "View Sales",
+          promoText: "40% Off",
+     },
+     {
+          title: "Electronic Deals",
+          subtitle: "Exclusive COUPON",
+          promoText: "UP TO $100 OFF",
+          imageUrl: banner7,
+          position: "right",
+          size: "large",
+          buttonCaption: "Get Yours!",
+          textColor: "light",
+     },
+     {
+          title: "Trending",
+          subtitle: "Hot Sales",
+          imageUrl: banner2,
+          position: "right",
+          size: "small",
+          buttonCaption: "Buy Now!",
+          promoText: "Starting at $99",
+     },
+     {
+          title: "Top Brands Smartphones",
+          subtitle: "* limited time only",
+          imageUrl: banner3,
+          position: "right",
+          size: "small",
+          buttonCaption: "Buy Now!",
+     },
+
+     {
+          title: "Exclusive Shoes",
+          promoText: "50% Off",
+          imageUrl: banner8,
+          position: "left",
+          size: "large",
+          buttonCaption: "Get Yours!",
+     },
+     {
+          title: "FLASH SALE",
+          subtitle: "TOP BRANDS SUMMER SUNGLASSES",
+          promoText: "STARTING AT $199",
+          imageUrl: banner4,
+          position: "right",
+          size: "small",
+          buttonCaption: "VIEW SALE",
+          textColor: "light",
+     },
+     {
+          title: "Amazing Collections",
+          subtitle: "Check Our Discounts",
+          promoText: "STARTING AT $199",
+          imageUrl: banner2,
+          position: "centered",
+          size: "small",
+          buttonCaption: "SHOP NOW!",
+     },
+     {
+          title: "Check our discounts",
+          subtitle: "More than 20 brands",
+          promoText: "UP TO 100% OFF",
+          imageUrl: banner9,
+          position: "left",
+          size: "large",
+          buttonCaption: "CHECK THIS SALE!",
+     },
+
+     {
+          title: "Deal Promos",
+          promoText: "STARTING AT $199",
+          imageUrl: banner6,
+          position: "centered",
+          size: "small",
+          buttonCaption: "BUY NOW!",
+     },
 ];

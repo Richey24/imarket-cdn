@@ -5,7 +5,7 @@ import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
 import ReactQueryProviders from "@/utils/provider";
 import { SessionProvider } from "next-auth/react";
-// import "./globals.css";
+import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 import type { Metadata } from "next";
@@ -22,6 +22,7 @@ import "../assets/js/webfont";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

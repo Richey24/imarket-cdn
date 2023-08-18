@@ -25,7 +25,7 @@ export const Banner = () => {
                          className="home-slider owl-carousel owl-carousel-lazy"
                          {...owlCarouselOptions}
                     >
-                         <div className="home-slide banner w-full h-[410px]">
+                         <div className="home-slide banner tw-w-full tw-h-[410px]">
                               <Link href="demo9-shop.html">
                                    <Image
                                         className="slide-bg bg-[#ccc]"
@@ -55,7 +55,7 @@ export const Banner = () => {
                                              data-animation-delay="500"
                                              data-animation-name="fadeInRightShorter"
                                         >
-                                             <h3 className="sale-label line-height-1 mb-0 d-inline-block text-center">
+                                             <h3 className="sale-label line-height-1 tw-mb-0 d-inline-block text-center">
                                                   40
                                                   <small>
                                                        <sup>%</sup>
@@ -74,7 +74,7 @@ export const Banner = () => {
                                              <h5 className="text-left coupon-sale-text">
                                                   $<b>119</b>99
                                              </h5>
-                                             <div className="mb-0">
+                                             <div className="tw-mb-0">
                                                   <Link
                                                        href="demo9-shop.html"
                                                        className="btn btn-modern btn-md btn-dark"
@@ -86,7 +86,7 @@ export const Banner = () => {
                                    </div>
                               </div>
                          </div>
-                         <div className="home-slide banner  w-full h-[410px]">
+                         <div className="home-slide banner  tw-w-full tw-h-[410px]">
                               <a href="demo9-shop.html">
                                    <Image
                                         className="slide-bg bg-[#ccc]"
@@ -122,7 +122,7 @@ export const Banner = () => {
                                              <br />
                                              AT<sup className="pl-2 ml-1">$</sup>199<sup>99</sup>
                                         </h3>
-                                        <div className="pt-1">
+                                        <div className="tw-pt-1">
                                              <a
                                                   href="demo9-shop.html"
                                                   className="btn btn-modern btn-lg btn-light "
