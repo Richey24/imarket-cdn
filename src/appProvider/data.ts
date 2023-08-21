@@ -136,7 +136,7 @@ export const dummySite = {
           styles: {
                colors: [],
                mode: "light",
-               demoLink: "demo33",
+               demoLink: "demo12",
           },
      },
 };

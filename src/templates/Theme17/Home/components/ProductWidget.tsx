@@ -68,16 +68,16 @@ const ProductWidget = ({ quickView }) => {
                               </div>
                               <div className="prod-thumbnail owl-dots">
                                    <div className="owl-dot">
-                                        <Image alt="product" width={200} height={200} src={quickView.productImageUrl} />
+                                        <Image width={200} height={200} alt="product" src={quickView.productImageUrl} />
                                    </div>
                                    <div className="owl-dot">
-                                        <Image alt="product" width={200} height={200} src={product2} />
+                                        <Image width={200} height={200} alt="product" src={product2} />
                                    </div>
                                    <div className="owl-dot">
-                                        <Image alt="product" width={200} height={200} src={product3} />
+                                        <Image width={200} height={200} alt="product" src={product3} />
                                    </div>
                                    <div className="owl-dot">
-                                        <Image alt="product" width={200} height={200} src={product4} />
+                                        <Image width={200} height={200} alt="product" src={product4} />
                                    </div>
                                    {/* <div className="owl-dot">
                                         <Image alt="product" src={product5} />
