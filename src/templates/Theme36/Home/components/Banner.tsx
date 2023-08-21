@@ -21,64 +21,105 @@ export const Banner = () => {
                     <div className="home-slide home-slide-1 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src={templateImages.demo35.sliderImage.slide1}
+                                   src={templateImages.demo36.sliderImage.slide1}
                                    alt="slider"
                                    width="1920"
                                    height="700"
                               />
                          </figure>
 
-                         <div className="banner-layer banner-layer-middle banner-layer-left">
-                              <h4 className="font-weight-normal text-body m-b-2 ">
-                                   Exclusive Product New Arrival
-                              </h4>
-                              <h2 className="">Organic Coffee</h2>
-                              <div>
-                                   <h3 className="text-uppercase mb-4">Special Blend</h3>
-                                   <h5 className="rotate-text font-weight-normal text-primary">
-                                        Fresh!
-                                   </h5>
+                         <div className="container d-flex align-items-sm-center justify-content-sm-between justify-content-center flex-column flex-sm-row">
+                              <div className="banner-content content-left text-sm-right mb-sm-0 mb-2">
+                                   <h2 className="text-shadow text-white font1 mb-0 ">TRENDY</h2>
+                                   <h1 className="text-dark ">GAMING</h1>
+                                   <h3 className="text-dark mb-0 ">CHAIRS</h3>
+                                   <h2 className="text-shadow text-white font1 mr-0 mb-0 ">
+                                        DEALS
+                                   </h2>
                               </div>
-                              <p className="font2 text-right text-uppercase ">
-                                   Breakfast products on sale
-                              </p>
-                              <div className="coupon-sale-text m-b-2 ">
-                                   <h6 className="text-uppercase text-right mb-0">
-                                        <sup>up to</sup>
-                                        <strong className=" text-white">50%</strong>
-                                   </h6>
+
+                              <div
+                                   className="banner-content content-right "
+                                   data-animation-name="fadeInUpShorter"
+                                   data-animation-delay="1000"
+                              >
+                                   <h4 className="text-transform-none">Porto Game Chair</h4>
+                                   <h5 className="text-price text-transform-none mb-0">
+                                        from <span>$299.99</span>
+                                   </h5>
+                                   <h5 className="coupon-sale-text">
+                                        <span>to</span>
+                                        <b className="text-white align-middle">
+                                             <sup>$</sup>
+                                             <em className="align-text-top">199</em>
+                                             <sup>99</sup>
+                                        </b>
+                                   </h5>
+                                   <a href="demo36-shop.html" className="btn btn-dark btn-lg">
+                                        Shop Now
+                                   </a>
                               </div>
                          </div>
                     </div>
                     <div className="home-slide home-slide-2 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src={templateImages.demo35.sliderImage.slide2}
+                                   src={templateImages.demo36.sliderImage.slide2}
                                    alt="slider"
                                    width="1920"
                                    height="700"
                               />
                          </figure>
 
-                         <div className="banner-layer banner-layer-middle banner-layer-right">
-                              <h4 className="font-weight-normal text-body m-b-2 ">
-                                   Exclusive Product New Arrival
-                              </h4>
-                              <h2 className="">Fit Low Carb</h2>
-                              <div className="position-relative ">
-                                   <h3 className="text-uppercase">Candy Bar</h3>
-                                   <h5 className="rotate-text font-weight-normal text-secondary">
-                                        Sugar-Free
+                         <div className="container d-flex align-items-sm-center justify-content-center justify-content-sm-between flex-column-reverse flex-sm-row">
+                              <div
+                                   className="banner-content content-left mt-2 mt-sm-0 "
+                                   data-animation-name="fadeInUpShorter"
+                                   data-animation-delay="1000"
+                              >
+                                   <h4 className="text-transform-none">Best Gadtets Deals</h4>
+                                   <h5 className="coupon-sale-text">
+                                        <span>from</span>
+                                        <b className="text-white align-middle">
+                                             <sup>$</sup>
+                                             <em className="align-text-top">1</em>
+                                             <sup>99</sup>
+                                        </b>
                                    </h5>
+                                   <a href="demo36-shop.html" className="btn btn-dark btn-lg">
+                                        Shop Now
+                                   </a>
                               </div>
-                              <p className="font2 text-right text-uppercase ">
-                                   Breakfast products on sale
-                              </p>
-                              <div className="coupon-sale-text pb-0 ">
-                                   <h6 className="text-uppercase text-right mb-0">
-                                        <sup>up to</sup>
-                                        <strong className=" text-white">70%</strong>
-                                   </h6>
+
+                              <div className="banner-content content-right text-sm-right">
+                                   <h2
+                                        className="text-shadow text-white font1 mb-0 "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="100"
+                                   >
+                                        NEW
+                                   </h2>
+                                   <h1
+                                        className="text-dark "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="400"
+                                   >
+                                        SELECTED
+                                   </h1>
+                                   <h3
+                                        className="text-dark mb-0 "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="600"
+                                   >
+                                        DEALS
+                                   </h3>
+                                   <h2
+                                        className="text-shadow text-white font1 mr-0 mb-0 "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="800"
+                                   >
+                                        RELEASES
+                                   </h2>
                               </div>
                          </div>
                     </div>

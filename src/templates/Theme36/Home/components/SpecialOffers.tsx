@@ -3,34 +3,28 @@ import { latestProducts } from "@/templates/Theme34/Home/data";
 import React from "react";
 import { templateImages } from "@/appProvider/templateImages";
 
-export default function WeekSpecials() {
+export default function WeekSpecials(props) {
+     console.log({ props });
      return (
           <section className="special-section tw-py-16">
-               <h2 className="section-title">Special Offers</h2>
-               <p className="section-info font2">
-                    All our new arrivals in a exclusive brand selection
-               </p>
+               <h2 className="section-title d-flex align-items-center text-transform-none">
+                    <i className="icon-percent-shape"></i>Special Offers
+               </h2>
 
-               <div className="row offer-products">
-                    <div
-                         className="col-md-4 "
-                         data-animation-name="fadeInRightShorter"
-                         data-animation-delay="100"
-                    >
+               <div className="row">
+                    <div className="col-md-4 mb-2 mb-md-0">
                          <div className="count-deal bg-white rounded mb-md-0">
                               <div className="product-default">
                                    <figure>
                                         <a href="demo35-product.html">
                                              <img
-                                                  src={
-                                                       templateImages.demo35.productImages.product16
-                                                  }
+                                                  src={templateImages.demo36.productImages.product1}
                                                   alt="product"
                                                   width="1200"
                                                   height="1200"
                                              />
                                         </a>
-                                        <div className="product-countdown-container">
+                                        <div className="product-countdown-container custom-product-countdown">
                                              <span className="product-countdown-title">
                                                   offer ends in:
                                              </span>
@@ -86,8 +80,8 @@ export default function WeekSpecials() {
                          </div>
                     </div>
                     <div className="col-md-8">
-                         <div className="custom-products bg-white rounded">
-                              <div className="row">
+                         <div className="products-with-divide">
+                              <div className="row row-joined">
                                    {latestProducts.map((product, index) => {
                                         return (
                                              <div
@@ -96,7 +90,7 @@ export default function WeekSpecials() {
                                              >
                                                   <Product
                                                        imageSrc={
-                                                            templateImages.demo35.productImages[
+                                                            templateImages.demo36.productImages[
                                                                  `product${index + 1}`
                                                             ]
                                                        }
