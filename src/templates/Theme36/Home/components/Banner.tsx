@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import OwlCarousel from "react-owl-carousel";
+import { templateImages } from "@/appProvider/templateImages";
 
 const owlCarouselOptions = {
      dots: false,
@@ -20,110 +21,106 @@ export const Banner = () => {
                     <div className="home-slide home-slide-1 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src="assets/images/demoes/demo34/slider/slide-1.jpg"
+                                   src={templateImages.demo36.sliderImage.slide1}
                                    alt="slider"
                                    width="1920"
                                    height="700"
                               />
                          </figure>
 
-                         <div className="banner-layer banner-layer-middle">
+                         <div className="container d-flex align-items-sm-center justify-content-sm-between justify-content-center flex-column flex-sm-row">
+                              <div className="banner-content content-left text-sm-right mb-sm-0 mb-2">
+                                   <h2 className="text-shadow text-white font1 mb-0 ">TRENDY</h2>
+                                   <h1 className="text-dark ">GAMING</h1>
+                                   <h3 className="text-dark mb-0 ">CHAIRS</h3>
+                                   <h2 className="text-shadow text-white font1 mr-0 mb-0 ">
+                                        DEALS
+                                   </h2>
+                              </div>
+
                               <div
-                                   className="appear-animate"
-                                   data-animation-name="fadeInLeftShorter"
-                                   data-animation-delay="300"
+                                   className="banner-content content-right "
+                                   data-animation-name="fadeInUpShorter"
+                                   data-animation-delay="1000"
                               >
-                                   <h4 className="m-b-2">New Amazing Collection</h4>
-                                   <h2 className="font1 font-italic m-b-4">Summer Beauty Sale</h2>
-                                   <p className="font2 ls-n-15 m-b-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent ullamcorper quam lacus, et suscipit lectus porta
-                                        efficitur.
-                                   </p>
-                                   <h5 className="coupon-sale-text float-left ls-n-20 text-uppercase">
-                                        Starting at
-                                        <em>
-                                             $<strong>39</strong>99
-                                        </em>
+                                   <h4 className="text-transform-none">Porto Game Chair</h4>
+                                   <h5 className="text-price text-transform-none mb-0">
+                                        from <span>$299.99</span>
                                    </h5>
-                                   <a href="demo34-shop.html" className="btn btn-light btn-lg mb-2">
+                                   <h5 className="coupon-sale-text">
+                                        <span>to</span>
+                                        <b className="text-white align-middle">
+                                             <sup>$</sup>
+                                             <em className="align-text-top">199</em>
+                                             <sup>99</sup>
+                                        </b>
+                                   </h5>
+                                   <a href="demo36-shop.html" className="btn btn-dark btn-lg">
                                         Shop Now
                                    </a>
                               </div>
-                         </div>
-
-                         <div className="banner-layer banner-layer-bottom banner-text">
-                              <img
-                                   src="assets/images/demoes/demo34/slider/slide-1-text.png"
-                                   alt="bg-text"
-                                   width="1281"
-                                   height="275"
-                              />
-                         </div>
-
-                         <div className="banner-layer dot-image">
-                              <img
-                                   src="assets/images/demoes/demo34/dots.png"
-                                   alt="dots"
-                                   width="123"
-                                   height="126"
-                              />
                          </div>
                     </div>
                     <div className="home-slide home-slide-2 banner tw-bg-[#f6dbe2]">
                          <figure>
                               <img
-                                   src="assets/images/demoes/demo34/slider/slide-2.jpg"
+                                   src={templateImages.demo36.sliderImage.slide2}
                                    alt="slider"
                                    width="1920"
                                    height="700"
                               />
                          </figure>
 
-                         <div className="banner-layer banner-layer-middle text-right">
+                         <div className="container d-flex align-items-sm-center justify-content-center justify-content-sm-between flex-column-reverse flex-sm-row">
                               <div
-                                   className="appear-animate"
-                                   data-animation-name="fadeInRightShorter"
-                                   data-animation-delay="300"
+                                   className="banner-content content-left mt-2 mt-sm-0 "
+                                   data-animation-name="fadeInUpShorter"
+                                   data-animation-delay="1000"
                               >
-                                   <h4 className="m-b-2">Back In Stock</h4>
-                                   <h2 className="font1 font-italic m-b-4">Ultimate SkinCare</h2>
-                                   <p className="font2 ls-n-15 m-b-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent lori ullamcorper quam lacus, et suscipit lectus
-                                        porta efficitur.
-                                   </p>
-                                   <a
-                                        href="demo34-shop.html"
-                                        className="btn btn-light btn-lg mb-2 float-right"
-                                   >
+                                   <h4 className="text-transform-none">Best Gadtets Deals</h4>
+                                   <h5 className="coupon-sale-text">
+                                        <span>from</span>
+                                        <b className="text-white align-middle">
+                                             <sup>$</sup>
+                                             <em className="align-text-top">1</em>
+                                             <sup>99</sup>
+                                        </b>
+                                   </h5>
+                                   <a href="demo36-shop.html" className="btn btn-dark btn-lg">
                                         Shop Now
                                    </a>
-                                   <h5 className="coupon-sale-text float-right ls-n-20 text-uppercase">
-                                        Starting at
-                                        <em>
-                                             $<strong>39</strong>99
-                                        </em>
-                                   </h5>
                               </div>
-                         </div>
 
-                         <div className="banner-layer banner-layer-bottom banner-text">
-                              <img
-                                   src="assets/images/demoes/demo34/slider/slide-2-text.png"
-                                   alt="bg-text"
-                                   width="1281"
-                                   height="275"
-                              />
-                         </div>
-
-                         <div className="banner-layer dot-image">
-                              <img
-                                   src="assets/images/demoes/demo34/dots.png"
-                                   alt="dots"
-                                   width="123"
-                                   height="126"
-                              />
+                              <div className="banner-content content-right text-sm-right">
+                                   <h2
+                                        className="text-shadow text-white font1 mb-0 "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="100"
+                                   >
+                                        NEW
+                                   </h2>
+                                   <h1
+                                        className="text-dark "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="400"
+                                   >
+                                        SELECTED
+                                   </h1>
+                                   <h3
+                                        className="text-dark mb-0 "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="600"
+                                   >
+                                        DEALS
+                                   </h3>
+                                   <h2
+                                        className="text-shadow text-white font1 mr-0 mb-0 "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay="800"
+                                   >
+                                        RELEASES
+                                   </h2>
+                              </div>
                          </div>
                     </div>
                </OwlCarousel>
