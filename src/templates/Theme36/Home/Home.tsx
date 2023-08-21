@@ -6,6 +6,7 @@ import SelectedProducts from "./components/SelectedProducts";
 import RecentlyViewed from "./components/RecentlyViewed";
 import SpecialOffers from "./components/SpecialOffers";
 import Categories from "./components/SelectedProducts/Categories";
+import SortBy from "./components/SortBy";
 
 export const Home = () => {
      return (
@@ -23,6 +24,7 @@ export const Home = () => {
                          </div>
                     </div>
                     <div className="container">
+                         <SortBy />
                          <SelectedProducts />
                          <RecentlyViewed />
                     </div>
