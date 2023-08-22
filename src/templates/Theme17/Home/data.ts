@@ -16,12 +16,13 @@ import product15 from "../../../assets/images/demoes/demo5/products/product-15.j
 import product16 from "../../../assets/images/demoes/demo5/products/product-16.jpg";
 import product17 from "../../../assets/images/demoes/demo5/products/product-17.jpg";
 import { ProductProps } from "./types";
+import { templateImages } from "@/appProvider/templateImages";
 
 export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "SHOES, TOYS",
-        productImageUrl: product5,
+        productImageUrl: templateImages.demo17.home.homeImage1,
         productImageUrlTwo: product15,
         productTitle: "Men Gentle Shoes",
         productPrice: 269,
@@ -29,7 +30,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "CAPS, DRESS",
-        productImageUrl: product1,
+        productImageUrl: templateImages.demo17.home.homeImage2,
         productImageUrlTwo: product7,
         productTitle: "Porto Gray Cap",
         productPrice: 29,
@@ -37,7 +38,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "CAPS, T-SHIRTS",
-        productImageUrl: product8,
+        productImageUrl: templateImages.demo17.home.homeImage3,
         productImageUrlTwo: product16,
         productTitle: "Porto White Cap",
         productPrice: 101,
@@ -45,7 +46,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "DRESS, T-SHIRTS",
-        productImageUrl: product11,
+        productImageUrl: templateImages.demo17.home.homeImage4,
         productImageUrlTwo: product17,
         productTitle: "Winter Towel",
         productPrice: 49,
@@ -53,7 +54,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "DRESS, HEADPHONE",
-        productImageUrl: product9,
+        productImageUrl: templateImages.demo17.home.homeImage5,
         productImageUrlTwo: product9,
         productTitle: "Product Extended",
         productPrice: 49,
@@ -61,7 +62,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "SHOES, TOYS",
-        productImageUrl: product10,
+        productImageUrl: templateImages.demo17.home.homeImage6,
         productImageUrlTwo: product10,
         productTitle: "Sports Shoes",
         productPrice: 239,
@@ -69,7 +70,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "TOYS, TROUSERS",
-        productImageUrl: product14,
+        productImageUrl: templateImages.demo17.home.homeImage7,
         productImageUrlTwo: product14,
         productTitle: "Women Bag",
         productPrice: 299,
@@ -77,7 +78,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "HEADPHONE, WATCHES",
-        productImageUrl: product4,
+        productImageUrl: templateImages.demo17.home.homeImage8,
         productImageUrlTwo: product4,
         productTitle: "Men Black Belts",
         productPrice: 55,
@@ -85,7 +86,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "DRESS, WATCHES",
-        productImageUrl: product12,
+        productImageUrl: templateImages.demo17.home.homeImage9,
         productImageUrlTwo: product12,
         productTitle: "Women Bag",
         productPrice: 199,
@@ -93,7 +94,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product13,
+        productImageUrl: templateImages.demo17.home.homeImage10,
         productImageUrlTwo: product12,
         productTitle: "Men Black Jacket",
         productPrice: 49,
@@ -102,7 +103,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product6,
+        productImageUrl: templateImages.demo17.home.homeImage11,
         productImageUrlTwo: product12,
         productTitle: "Black Women Shoes",
         productPrice: 49,
@@ -111,7 +112,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product7,
+        productImageUrl: templateImages.demo17.home.homeImage12,
         productImageUrlTwo: product12,
         productTitle: "Black Men Carousel Melt",
         productPrice: 49,
@@ -120,7 +121,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product8,
+        productImageUrl: templateImages.demo17.home.homeImage1,
         productImageUrlTwo: product12,
         productTitle: "Blue Sports Clothes",
         productPrice: 49,
@@ -129,7 +130,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product9,
+        productImageUrl: templateImages.demo17.home.homeImage2,
         productImageUrlTwo: product12,
         productTitle: "Blue Spring Casual Shoes",
         productPrice: 49,
@@ -138,7 +139,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product10,
+        productImageUrl: templateImages.demo17.home.homeImage3,
         productImageUrlTwo: product12,
         productTitle: "Grey Men Sports Cap",
         productPrice: 49,
@@ -147,7 +148,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product11,
+        productImageUrl: templateImages.demo17.home.homeImage4,
         productImageUrlTwo: product12,
         productTitle: "Men Black Jacket",
         productPrice: 49,
@@ -156,7 +157,7 @@ export const products: ProductProps[] = [
     {
         productImageAlt: "product",
         productCategory: "category",
-        productImageUrl: product12,
+        productImageUrl: templateImages.demo17.home.homeImage5,
         productImageUrlTwo: product11,
         productTitle: "Porto Brown Bag",
         productPrice: 49,

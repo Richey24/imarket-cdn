@@ -1,12 +1,9 @@
- 
-import Footer from "../Theme12/Footer/Footer";
-import Header from "../Theme12/Header/Header";
-import Home from "../Theme12/Home/Home";
-import { IComponentProps } from "./config.type";
+import t12Header from "../Theme12/Header/Header"
+import t12Footer from "../Theme12/Footer/Footer"
+import t12Home from "../Theme12/Home/Home"
 
 export const theme12TemplateConfig = {
-     header: Header,
-     // pageLink: T6pageLinks,
-      home: Home,
-     footer: Footer,
-};
+    header: t12Header,
+    home: t12Home,
+    footer: t12Footer
+}
