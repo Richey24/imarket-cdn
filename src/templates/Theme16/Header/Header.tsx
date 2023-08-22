@@ -122,15 +122,16 @@ const Header = () => {
                          </div>
                          {/* End .header-left */}
                          <div className="header-right">
-                              <a href="#" className="popup-menu-toggler mr-2 pr-1" >
+                              <a href="#" className="popup-menu-toggler mr-2 pr-1" onClick={toggleMenu}>
                                    <i className="toggler-icon" />
                               </a>
                               <div className="separator sepa-1" />
-                              <div className="popup-menu">
+                              <div className={isMenuOpen ? "popup-menu open" : "popup-menu" } >
                                    <button
                                         title="Close (Esc)"
                                         type="button"
                                         className="mfp-close popup-menu-close"
+                                        onClick={toggleMenu}
                                    />
                                    <nav>
                                         <ul className="popup-menu-ul">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { miniBannerProduct } from "../../data";
+import { templateImages } from "@/appProvider/templateImages";
 export const MiniBanner = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
@@ -17,7 +18,7 @@ export const MiniBanner = () => {
                     className="col-md-6 col-12 banner d-flex align-items-center appear-animate order-last bg-img bg-fixed bg-right"
                     data-animation-duration={1200}
                     style={{
-                         backgroundImage: 'url("assets/images/demoes/demo16/bg-4.jpg")',
+                         backgroundImage: `url(${templateImages.demo16.bgImages.bg3})`,
                          animationDelay: "0ms",
                          animationDuration: "1200ms",
                          backgroundColor: "#dcdbd9",
@@ -54,7 +55,7 @@ export const MiniBanner = () => {
                                         <figure>
                                              <a href="demo16-product.html">
                                                   <img
-                                                       src="assets/images/demoes/demo16/products/home/product-13.jpg"
+                                                       src={product.productImageUrl}
                                                        alt="product"
                                                        width={400}
                                                        height={400}

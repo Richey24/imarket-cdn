@@ -1,3 +1,4 @@
+import { templateImages } from "@/appProvider/templateImages";
 import React from "react";
 
 export const Category = () => {
@@ -7,7 +8,7 @@ export const Category = () => {
                     className="col-md-6 col-12 banner banner-1 bg-img d-flex align-items-center appear-animate"
                     data-animation-duration={1200}
                     style={{
-                         backgroundImage: 'url("assets/images/demoes/demo16/banners/banner-1.jpg")',
+                         backgroundImage: `url(${templateImages.demo16.sliderImage.slide1})`,
                          animationDelay: "0ms",
                          animationDuration: "1200ms",
                          backgroundColor: "#dcdbd9",
@@ -37,7 +38,7 @@ export const Category = () => {
                     className="col-md-6 col-12 banner banner-1 bg-img d-flex align-items-center appear-animate"
                     data-animation-duration={1200}
                     style={{
-                         backgroundImage: 'url("assets/images/demoes/demo16/banners/banner-2.jpg")',
+                         backgroundImage: `url(${templateImages.demo16.sliderImage.slide2})`,
                          animationDelay: "0ms",
                          animationDuration: "1200ms",
                     }}

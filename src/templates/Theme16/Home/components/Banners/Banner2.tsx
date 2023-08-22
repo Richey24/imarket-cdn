@@ -6,7 +6,7 @@ export const Banner2 = () => {
           <section
                className="section-2 large-banner slider-left section-bg bg-img bg-fixed"
                style={{
-                    backgroundImage: 'url("assets/images/demoes/demo16/bg-2.jpg")',
+                    backgroundImage: `url(${templateImages.demo16.bgImages.bg1})`,
                     backgroundColor: "#0188ca",
                }}
           >

@@ -1,3 +1,4 @@
+import { templateImages } from "@/appProvider/templateImages";
 import React from "react";
 
 export const Banner3 = () => {
@@ -5,7 +6,7 @@ export const Banner3 = () => {
           <section
                className="section-8 large-banner slider-left section-bg bg-img bg-fixed"
                style={{
-                    backgroundImage: 'url("assets/images/demoes/demo16/bg-7.jpg")',
+                    backgroundImage: `url(${templateImages.demo16.bgImages.bg6})`,
                     backgroundColor: "#dcdbd9",
                }}
           >

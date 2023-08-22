@@ -1,3 +1,4 @@
+import { templateImages } from "@/appProvider/templateImages";
 import React from "react";
 
 export const NewsLetter = () => {
@@ -5,7 +6,7 @@ export const NewsLetter = () => {
           <section
                className="section-7 newsletter-section bg-image bg-fixed"
                style={{
-                    backgroundImage: 'url("assets/images/demoes/demo16/bg-6.jpg")',
+                    backgroundImage: `url(${templateImages.demo16.bgImages.bg5})`,
                     backgroundColor: "#dcdbd9",
                }}
           >

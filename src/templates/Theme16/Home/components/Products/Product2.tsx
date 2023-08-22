@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Slider from "react-slick";
 import {  sunglassesProducts } from "../../data";
+import { templateImages } from "@/appProvider/templateImages";
 export const Product2 = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
@@ -15,7 +16,7 @@ export const Product2 = () => {
           <section
                className="section-9 product-collection bg-fixed"
                style={{
-                    backgroundImage: 'url("assets/images/demoes/demo16/bg-8.jpg")',
+                    backgroundImage: `url(${templateImages.demo16.bgImages.bg7})`,
                     backgroundColor: "#dcdbd9",
                }}
           >
@@ -43,17 +44,12 @@ export const Product2 = () => {
                                         <figure>
                                              <a href="demo16-product.html">
                                                   <img
-                                                       src="assets/images/demoes/demo16/products/home/product-9.jpg"
+                                                       src={product.productImageUrl}
                                                        alt="product"
                                                        width={400}
                                                        height={400}
                                                   />
-                                                  <img
-                                                       src="assets/images/demoes/demo16/products/home/product-12.jpg"
-                                                       alt="product"
-                                                       width={400}
-                                                       height={400}
-                                                  />
+                                                  
                                              </a>
                                              <div className="btn-icon-group">
                                                   <button

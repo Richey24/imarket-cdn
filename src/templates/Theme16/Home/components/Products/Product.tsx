@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import React, { useState } from "react";
 import { featuredProducts, styledOutFitsProducts } from "../../data";
+import { templateImages } from "@/appProvider/templateImages";
 
 export const Product = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,7 +17,7 @@ export const Product = () => {
           <section
                className="section-4 product-collection bg-fixed"
                style={{
-                    backgroundImage: 'url("assets/images/demoes/demo16/bg-3.jpg")',
+                    backgroundImage: `url(${templateImages.demo16.bgImages.bg2})`,
                     backgroundColor: "#dcdbd9",
                }}
           >
@@ -44,17 +45,12 @@ export const Product = () => {
                                         <figure>
                                              <a href="demo16-product.html">
                                                   <img
-                                                       src="assets/images/demoes/demo16/products/home/product-1.jpg"
+                                                       src={product.productImageUrl}
                                                        alt="product"
                                                        width={400}
                                                        height={400}
                                                   />
-                                                  <img
-                                                       src="assets/images/demoes/demo16/products/home/product-7.jpg"
-                                                       alt="product"
-                                                       width={400}
-                                                       height={400}
-                                                  />
+                                                 
                                              </a>
                                              <div className="label-group">
                                                   <span className="product-label label-hot">
