@@ -1,7 +1,9 @@
 import Image from "next/image";
 import logo from "../../../assets/images/logo.png";
+import { templateImages } from "@/appProvider/templateImages";
 
-const Header = () => {
+const Header = (props: any): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <div>
                <div className="top-notice text-white bg-dark">
@@ -134,12 +136,22 @@ const Header = () => {
                                         <i className="fas fa-bars"></i>
                                    </button>
                                    <a href="demo1.html" className="logo">
-                                        <Image
-                                             src={logo}
-                                             width="111"
-                                             height="44"
-                                             alt="Porto Logo"
-                                        />
+                                        {company?.logo ? (
+                                             <Image
+                                                  src={company?.logo}
+                                                  className="black-logo"
+                                                  alt="Porto Logo"
+                                                  width={202}
+                                                  height={80}
+                                             />
+                                        ) : (
+                                             <Image
+                                                  src={templateImages.logoImage.logo2}
+                                                  width="111"
+                                                  height="44"
+                                                  alt="Porto Logo"
+                                             />
+                                        )}
                                    </a>
                               </div>
                               {/* End .header-left */}
@@ -211,7 +223,7 @@ const Header = () => {
                                                   href="tel:#"
                                                   className="d-block text-dark ls-10 pt-1"
                                              >
-                                                  +123 5678 890
+                                                  {company?.phone || "+123 5678 890"}
                                              </a>
                                         </h6>
                                    </div>

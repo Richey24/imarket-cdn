@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 interface MiniBannerProps {
-     src: StaticImageData;
+     src: StaticImageData | string;
      backgroundColor: string;
      title: string;
      subtitle: string;

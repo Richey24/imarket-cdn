@@ -46,47 +46,48 @@ import category4 from "../../../assets/images/demoes/demo3/categories/category-4
 import category5 from "../../../assets/images/demoes/demo3/categories/category-5.jpg";
 import category6 from "../../../assets/images/demoes/demo3/categories/category-6.jpg";
 import { MiniBannerProps } from "./components/MiniBanner/MiniBanner";
+import { templateImages } from "@/appProvider/templateImages";
 
 export const featuredProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "SHOES, TOYS",
-          productImageUrl: product1,
+          productImageUrl: templateImages.demo15.productImages.product1,
           productTitle: "Woman Red Bag",
           productPrice: 269,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, TOYS",
-          productImageUrl: product2,
+          productImageUrl: templateImages.demo15.productImages.product2,
           productTitle: "Woman Black Blouse",
           productPrice: 29,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product5,
+          productImageUrl: templateImages.demo15.productImages.product5,
           productTitle: "Porto White Cap",
           productPrice: 101,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product4,
+          productImageUrl: templateImages.demo15.productImages.product4,
           productTitle: "Woman Jacket",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, TROUSERS",
-          productImageUrl: product3,
+          productImageUrl: templateImages.demo15.productImages.product3,
           productTitle: "Porto Sticky info",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "HEADPHONE, T-SHIRTS",
-          productImageUrl: product6,
+          productImageUrl: templateImages.demo15.productImages.product6,
           productTitle: "Jeans Wear",
           productPrice: 239,
      },
@@ -94,21 +95,21 @@ export const featuredProducts: ProductProps[] = [
 
 export const miniBanners: MiniBannerProps[] = [
      {
-          src: banner1,
+          src: templateImages.demo15.bannerImage.banner2,
           title: "Orange",
           price: "19",
           priceSup: "99",
           backgroundColor: "#efefef",
      },
      {
-          src: banner2,
+          src: templateImages.demo15.bannerImage.banner3,
           title: "White",
           price: "29",
           priceSup: "99",
           backgroundColor: "#efefef",
      },
      {
-          src: banner3,
+          src: templateImages.demo15.bannerImage.banner4,
           title: "Black",
           price: "39",
           priceSup: "99",

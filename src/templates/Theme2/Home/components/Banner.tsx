@@ -3,12 +3,19 @@ import slide1 from "../../../../assets/images/demoes/demo1/slider/slide-1.png";
 import slide2 from "../../../../assets/images/demoes/demo1/slider/slide-2.jpg";
 import slide3 from "../../../../assets/images/demoes/demo1/slider/slide-3.jpg";
 import Image from "next/image";
+import { templateImages } from "@/appProvider/templateImages";
 const Banner = () => {
      return (
           <Carousel>
                <Carousel.Item>
                     <div className="home-slide home-slide1 banner banner-md-vw banner-sm-vw d-flex align-items-center">
-                         <Image className="slide-bg" src={slide1} alt="" width="880" height="428" />
+                         <Image
+                              className="slide-bg"
+                              src={templateImages.demo2.sliderImage.slider1}
+                              alt=""
+                              width="880"
+                              height="428"
+                         />
                          <Carousel.Caption className="h-100">
                               <div className="w-100 d-flex flex-column justify-content-center align-items-start h-100 text-uppercase">
                                    <h4 className="text-white mb-0">
@@ -37,7 +44,7 @@ const Banner = () => {
                          <Image
                               className="slide-bg"
                               style={{ backgroundColor: "#dadada" }}
-                              src={slide2}
+                              src={templateImages.demo2.sliderImage.slider2}
                               width="880"
                               height="428"
                               alt="home-slider"
@@ -67,7 +74,7 @@ const Banner = () => {
                          <Image
                               className="slide-bg"
                               style={{ backgroundColor: "#e5e4e2" }}
-                              src={slide3}
+                              src={templateImages.demo2.sliderImage.slider3}
                               width="880"
                               height="428"
                               alt="home-slider"
