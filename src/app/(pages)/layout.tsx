@@ -8,6 +8,7 @@ import { cssImports, templateConfig } from "@/templates/config/index";
 import { PlaceholderLayout } from "../components/PlaceholderLayout/PlaceholderLayout";
 import { SitesField, ThemeName } from "@/appProvider/types";
 import { NoSite } from "../components/NoSite/NoSite";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

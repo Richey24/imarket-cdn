@@ -12,12 +12,12 @@ import logoBlack from "../../../assets/images/logo-black.png";
 import logoWhite from "../../../assets/images/logo-white.png";
 import stickyLogo from "../../../assets/images/sticky-logo.png";
 import Link from "next/link";
+import _ from "lodash";
 
 export default function Header(props: any) {
      const { company, static: staticProps, categories } = props.props;
      const [activeMenuId, setActiveMenuId] = useState(0);
 
-     console.log("categories", categories);
      return (
           <div style={{ width: "100%" }}>
                <div className="top-notice text-white bg-secondary">
@@ -180,6 +180,36 @@ export default function Header(props: any) {
                                                                                 >
                                                                                      {category.name}
                                                                                 </option>
+                                                                           )}
+                                                                           {category.child_id.map(
+                                                                                (id) => {
+                                                                                     const child =
+                                                                                          categories.find(
+                                                                                               (
+                                                                                                    cat,
+                                                                                               ) =>
+                                                                                                    cat.id ===
+                                                                                                    id,
+                                                                                          );
+                                                                                     if (child) {
+                                                                                          return (
+                                                                                               <option
+                                                                                                    value={
+                                                                                                         child.id
+                                                                                                    }
+                                                                                               >
+                                                                                                    -{" "}
+                                                                                                    {_.capitalize(
+                                                                                                         child.name,
+                                                                                                    )}
+                                                                                               </option>
+                                                                                          );
+                                                                                     } else {
+                                                                                          return (
+                                                                                               <></>
+                                                                                          );
+                                                                                     }
+                                                                                },
                                                                            )}
                                                                       </>
                                                                  ))}
