@@ -1,21 +1,11 @@
 import Image from "next/image";
-import banner1 from "../../../assets/images/demoes/demo2/banners/banner-1.jpg";
-import banner2 from "../../../assets/images/demoes/demo2/banners/banner-2.jpg";
-import banner3 from "../../../assets/images/demoes/demo2/banners/banner-3.jpg";
-import banner4 from "../../../assets/images/demoes/demo2/banners/banner-4.jpg";
-import banner5 from "../../../assets/images/demoes/demo2/banners/banner-5.jpg";
-import banner6 from "../../../assets/images/demoes/demo2/banners/banner-6.jpg";
-import banner7 from "../../../assets/images/demoes/demo2/banners/banner-7.jpg";
-import banner8 from "../../../assets/images/demoes/demo2/banners/banner-8.jpg";
-import banner9 from "../../../assets/images/demoes/demo2/banners/banner-9.jpg";
-
 import Banner from "./components/Banner";
-import { InfoBoxesContainer } from "./components/Info";
+import { InfoBoxesContainer } from "../../components/Info";
 import { Product } from "./components/Product";
-import { featuredProducts, promotions } from "./data";
-import { Promotion } from "./components/Promotion";
+import { featuredProducts } from "./data";
 import SideMenu from "./components/SideMenu";
 import Promotions from "./components/Promotions";
+
 export const Home = () => {
      return (
           <main className="main home">
@@ -28,12 +18,6 @@ export const Home = () => {
                          </div>
                     </div>
                     <InfoBoxesContainer />
-
-                    {/* <div className="row g-3 align-items-center">
-                         {promotions.map((promotion, index) => (
-                              <Promotion key={index} {...promotion} />
-                         ))}
-                    </div> */}
                     <Promotions />
                </div>
 

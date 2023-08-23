@@ -1,8 +1,13 @@
+import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../assets/images/logo.png";
 import phone from "../../../assets/images/phone-white.png";
 
-const Header = () => {
+const Header = (props: any) => {
+     const { static: staticProps, company } = props.props;
+     const [activeMenuId, setActiveMenuId] = useState(0);
+
      return (
           <header className="header">
                <div className="container">
@@ -20,22 +25,19 @@ const Header = () => {
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <a href="dashboard.html">Dashboard</a>
+                                                  <a href="/dashboard">Dashboard</a>
                                              </li>
                                              <li>
-                                                  <a href="cart.html">Cart</a>
+                                                  <a href="/cart">Cart</a>
                                              </li>
                                              <li>
-                                                  <a href="cart.html">Checkout</a>
+                                                  <a href="/cart">Checkout</a>
                                              </li>
                                              <li>
-                                                  <a href="wishlist.html">Wishlist</a>
+                                                  <a href="/wishlist">Wishlist</a>
                                              </li>
                                              <li>
-                                                  <a href="about.html">About Us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="blog.html">Contact Us</a>
+                                                  <a href="/about">About Us</a>
                                              </li>
                                         </ul>
                                    </div>
@@ -132,7 +134,17 @@ const Header = () => {
                                    <i className="fas fa-bars"></i>
                               </button>
                               <a href="demo2.html" className="logo">
-                                   <Image src={logo} alt="Porto Logo" />
+                                   {company?.logo ? (
+                                        <Image
+                                             src={company?.logo}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   ) : (
+                                        <h3>{company?.company_name || "Tester"}</h3>
+                                   )}
                               </a>
                          </div>
                          {/*End .header-left */}
@@ -207,7 +219,7 @@ const Header = () => {
                                    <h6>
                                         Call us now
                                         <a href="tel:#" className="font1">
-                                             +123 5678 890
+                                             {company?.phone}
                                         </a>
                                    </h6>
                               </div>
@@ -425,316 +437,35 @@ const Header = () => {
                     <div className="container">
                          <div className="header-left">
                               <a href="demo2.html" className="logo">
-                                   <img src="assets/images/your-logo.png" alt="Porto Logo" />
+                                   {company?.logo ? (
+                                        <Image
+                                             src={company?.logo}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   ) : (
+                                        <h3>{company?.company_name || "Tester"}</h3>
+                                   )}
                               </a>
                          </div>
                          <div className="header-center">
                               <nav className="main-nav w-100">
                                    <ul className="menu">
-                                        <li className="active">
-                                             <a href="demo2.html">Home</a>
-                                        </li>
-                                        <li>
-                                             <a href="demo2-shop.html">Categories</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
-                                                  <div className="row">
-                                                       <div className="col-lg-4">
-                                                            <a href="#" className="nolink">
-                                                                 VARIATION 1
-                                                            </a>
-                                                            <ul className="submenu">
-                                                                 <li>
-                                                                      <a href="category.html">
-                                                                           Fullwidth Banner
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-banner-boxed-slider.html">
-                                                                           Boxed Slider Banner
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-banner-boxed-image.html">
-                                                                           Boxed Image Banner
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category.html">
-                                                                           Left Sidebar
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-sidebar-right.html">
-                                                                           Right Sidebar
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-off-canvas.html">
-                                                                           Off Canvas Filter
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-horizontal-filter1.html">
-                                                                           Horizontal Filter1
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-horizontal-filter2.html">
-                                                                           Horizontal Filter2
-                                                                      </a>
-                                                                 </li>
-                                                            </ul>
-                                                       </div>
-                                                       <div className="col-lg-4">
-                                                            <a href="#" className="nolink">
-                                                                 VARIATION 2
-                                                            </a>
-                                                            <ul className="submenu">
-                                                                 <li>
-                                                                      <a href="category-list.html">
-                                                                           List Types
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-infinite-scroll.html">
-                                                                           Ajax Infinite Scroll
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category.html">
-                                                                           3 Columns Products
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-4col.html">
-                                                                           4 Columns Products
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-5col.html">
-                                                                           5 Columns Products
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-6col.html">
-                                                                           6 Columns Products
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-7col.html">
-                                                                           7 Columns Products
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="category-8col.html">
-                                                                           8 Columns Products
-                                                                      </a>
-                                                                 </li>
-                                                            </ul>
-                                                       </div>
-                                                       <div className="col-lg-4 p-0">
-                                                            <div className="menu-banner">
-                                                                 <figure>
-                                                                      <img
-                                                                           src="assets/images/menu-banner.jpg"
-                                                                           alt="Menu banner"
-                                                                           width="300"
-                                                                           height="300"
-                                                                      />
-                                                                 </figure>
-                                                                 <div className="banner-content">
-                                                                      <h4>
-                                                                           <span className="">
-                                                                                UP TO
-                                                                           </span>
-                                                                           <br />
-                                                                           <b className="">50%</b>
-                                                                           <i>OFF</i>
-                                                                      </h4>
-                                                                      <a
-                                                                           href="demo2-shop.html"
-                                                                           className="btn btn-sm btn-dark"
-                                                                      >
-                                                                           SHOP NOW
-                                                                      </a>
-                                                                 </div>
-                                                            </div>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                             {/*End .megamenu */}
-                                        </li>
-                                        <li>
-                                             <a href="demo2-product.html">Products</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
-                                                  <div className="row">
-                                                       <div className="col-lg-4">
-                                                            <a href="#" className="nolink">
-                                                                 PRODUCT PAGES
-                                                            </a>
-                                                            <ul className="submenu">
-                                                                 <li>
-                                                                      <a href="product.html">
-                                                                           SIMPLE PRODUCT
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-variable.html">
-                                                                           VARIABLE PRODUCT
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product.html">
-                                                                           SALE PRODUCT
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product.html">
-                                                                           FEATURED & ON SALE
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-custom-tab.html">
-                                                                           WITH CUSTOM TAB
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-sidebar-left.html">
-                                                                           WITH LEFT SIDEBAR
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-sidebar-right.html">
-                                                                           WITH RIGHT SIDEBAR
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-addcart-sticky.html">
-                                                                           ADD CART STICKY
-                                                                      </a>
-                                                                 </li>
-                                                            </ul>
-                                                       </div>
-                                                       {/*End .col-lg-4 */}
-
-                                                       <div className="col-lg-4">
-                                                            <a href="#" className="nolink">
-                                                                 PRODUCT LAYOUTS
-                                                            </a>
-                                                            <ul className="submenu">
-                                                                 <li>
-                                                                      <a href="product-extended-layout.html">
-                                                                           EXTENDED LAYOUT
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-grid-layout.html">
-                                                                           GRID IMAGE
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-full-width.html">
-                                                                           FULL WIDTH LAYOUT
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-sticky-info.html">
-                                                                           STICKY INFO
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-sticky-both.html">
-                                                                           LEFT & RIGHT STICKY
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-transparent-image.html">
-                                                                           TRANSPARENT IMAGE
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="product-center-vertical.html">
-                                                                           CENTER VERTICAL
-                                                                      </a>
-                                                                 </li>
-                                                                 <li>
-                                                                      <a href="#">BUILD YOUR OWN</a>
-                                                                 </li>
-                                                            </ul>
-                                                       </div>
-                                                       {/*End .col-lg-4 */}
-
-                                                       <div className="col-lg-4 p-0">
-                                                            <div className="menu-banner menu-banner-2">
-                                                                 <figure>
-                                                                      <img
-                                                                           src="assets/images/menu-banner-1.jpg"
-                                                                           alt="Menu banner"
-                                                                           className="product-promo"
-                                                                           width="380"
-                                                                           height="790"
-                                                                      />
-                                                                 </figure>
-                                                                 <i>OFF</i>
-                                                                 <div className="banner-content">
-                                                                      <h4>
-                                                                           <span className="">
-                                                                                UP TO
-                                                                           </span>
-                                                                           <br />
-                                                                           <b className="">50%</b>
-                                                                      </h4>
-                                                                 </div>
-                                                                 <a
-                                                                      href="demo2-shop.html"
-                                                                      className="btn btn-sm btn-dark"
-                                                                 >
-                                                                      SHOP NOW
-                                                                 </a>
-                                                            </div>
-                                                       </div>
-                                                       {/*End .col-lg-4 */}
-                                                  </div>
-                                                  {/*End .row */}
-                                             </div>
-                                             {/*End .megamenu */}
-                                        </li>
-                                        <li>
-                                             <a href="#">Pages</a>
-                                             <ul>
-                                                  <li>
-                                                       <a href="wishlist.html">Wishlist</a>
+                                        {staticProps?.pageLinks?.map(
+                                             (link: { name: string; url: string }, idx: number) => (
+                                                  <li
+                                                       className={
+                                                            activeMenuId === idx ? "active" : ""
+                                                       }
+                                                       key={idx}
+                                                       onClick={() => setActiveMenuId(idx)}
+                                                  >
+                                                       <Link href={link.url}>{link.name}</Link>
                                                   </li>
-                                                  <li>
-                                                       <a href="cart.html">Shopping Cart</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="checkout.html">Checkout</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="dashboard.html">Dashboard</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="demo2-about.html">About Us</a>
-                                                  </li>
-
-                                                  <li>
-                                                       <a href="demo2-contact.html">Contact Us</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="login.html">Login</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="forgot-password.html">
-                                                            Forgot Password
-                                                       </a>
-                                                  </li>
-                                             </ul>
-                                        </li>
-
-                                        <li>
-                                             <a href="demo2-contact.html">Contact Us</a>
-                                        </li>
+                                             ),
+                                        )}
                                    </ul>
                               </nav>
                          </div>
@@ -963,7 +694,7 @@ const Header = () => {
 
                                              <div className="dropdown-cart-action">
                                                   <a
-                                                       href="cart.html"
+                                                       href="/cart"
                                                        className="btn btn-gray btn-block view-cart"
                                                   >
                                                        View Cart

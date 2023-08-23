@@ -3,7 +3,8 @@ import paypal from "../../../assets/images/payments/payment-paypal.svg";
 import stripe from "../../../assets/images/payments/payment-stripe.png";
 import verisign from "../../../assets/images/payments/payment-verisign.svg";
 
-const Footer = () => {
+const Footer = (props: any): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer className="footer bg-dark position-relative">
                <div className="footer-middle">
@@ -23,16 +24,16 @@ const Footer = () => {
                                                   <span className="contact-info-label">
                                                        Address:
                                                   </span>
-                                                  123 Street Name, City, England
+                                                  {company?.city + " " + company?.country}
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">(123) 456-7890</a>
+                                                  <a href="tel:">{company?.phone}</a>
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Email:</span>{" "}
                                                   <a href="mailto:mail@example.com">
-                                                       mail@example.com
+                                                       {company?.user_id?.email}
                                                   </a>
                                              </li>
                                              <li>
@@ -166,7 +167,7 @@ const Footer = () => {
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
                               <span className="footer-copyright">
-                                   © Porto eCommerce. 2021. All Rights Reserved
+                                   © Porto eCommerce {new Date().getFullYear()}. All Rights Reserved
                               </span>
                          </div>
                          <div className="footer-right ml-auto mt-1 mt-sm-0">

@@ -11,7 +11,7 @@ import ShopByCategory from "./components/ShopByCategory";
 import { InfoBox } from "@react-google-maps/api";
 import { InfoBoxesContainer } from "./components/Info";
 
-export const Home = () => {
+export const Home = (props) => {
      let settings = {
           // dots: true,
           infinite: true,
@@ -23,6 +23,7 @@ export const Home = () => {
           arrows: true,
           accessibility: true,
      };
+     console.log({ props });
      return (
           <main className="main">
                <Banner />

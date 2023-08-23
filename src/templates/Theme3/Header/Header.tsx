@@ -1,6 +1,11 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../../../assets/images/logo.png";
-const Header = () => {
+
+const Header = (props: any) => {
+     const { company, static: staticProps } = props.props;
+     const [activeMenuId, setActiveMenuId] = useState(0);
+
      return (
           <header className="header header-transparent">
                <div className="header-middle sticky-header">
