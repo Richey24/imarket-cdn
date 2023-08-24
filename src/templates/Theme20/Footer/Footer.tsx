@@ -34,7 +34,7 @@ const Footer = () => {
 
                               <Slider {...settings}>
                                    {instagram.map((data, index) => (
-                                        <Image src={data.image} alt="instagram" />
+                                        <Image src={data.image} alt="instagram" width={100} height={100} />
                                    ))}
                               </Slider>
                          </div>
@@ -129,7 +129,7 @@ const Footer = () => {
                                              <span
                                                   className="payment-icon visa"
                                                   style={{
-                                                       backgroundImage: `url(${pay.image.src})`,
+                                                       backgroundImage: `url(${pay.image})`,
                                                   }}
                                              />
                                         ))}

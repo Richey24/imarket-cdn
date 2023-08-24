@@ -1,11 +1,3 @@
-import Featured1 from "../../../../assets/images/demoes/demo21/products/product-1.jpg";
-import Featured from "../../../../assets/images/demoes/demo21/products/product-1-2.jpg";
-import Featured2 from "../../../../assets/images/demoes/demo21/products/product-2.jpg";
-import Featured3 from "../../../../assets/images/demoes/demo21/products/product-3.jpg";
-import Featured4 from "../../../../assets/images/demoes/demo21/products/product-4.jpg";
-import Featured5 from "../../../../assets/images/demoes/demo21/products/product-5.jpg";
-import Featured6 from "../../../../assets/images/demoes/demo21/products/product-6.jpg";
-import Subproduct from "../../../../assets/images/demoes/demo21/products/product-3-2.jpg";
 
 import { useState } from "react";
 import Slider from "react-slick";
@@ -34,7 +26,7 @@ export const FeaturedProducts = () => {
                                         <figure>
                                              <a href="demo21-product.html">
                                                   <img
-                                                       src={product.productImageUrl.src}
+                                                       src={product.productImageUrl}
                                                        width={217}
                                                        height={217}
                                                        alt="product"

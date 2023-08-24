@@ -1,7 +1,3 @@
-import payment1 from "../../../assets/images/payments/payment-visa.svg";
-import payment2 from "../../../assets/images/payments/payment-paypal.svg";
-import payment3 from "../../../assets/images/payments/payment-stripe.png";
-import payment4 from "../../../assets/images/payments/payment-verisign.svg";
 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
@@ -203,15 +199,15 @@ export const lastestProducts2 = [
 
 export const payments = [
      {
-          image: payment1,
+          image: templateImages.paymentImage.payment4,
      },
      {
-          image: payment2,
+          image: templateImages.paymentImage.payment1,
      },
      {
-          image: payment3,
+          image: templateImages.paymentImage.payment2,
      },
      {
-          image: payment4,
+          image: templateImages.paymentImage.payment3,
      },
 ];

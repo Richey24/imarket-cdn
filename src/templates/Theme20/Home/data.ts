@@ -1,62 +1,44 @@
-import product1 from "../../../assets/images/demoes/demo20/products/product-1.jpg";
-import product2 from "../../../assets/images/demoes/demo20/products/product-2.jpg";
-import product3 from "../../../assets/images/demoes/demo20/products/product-3.jpg";
-import product4 from "../../../assets/images/demoes/demo20/products/product-4.jpg";
-import product5 from "../../../assets/images/demoes/demo20/products/product-5.jpg";
-import Instagram1 from "../../../assets/images/demoes/demo20/instagrams/instagram-1.jpg";
-import Instagram2 from "../../../assets/images/demoes/demo20/instagrams/instagram-2.jpg";
-import Instagram3 from "../../../assets/images/demoes/demo20/instagrams/instagram-3.jpg";
-import Instagram4 from "../../../assets/images/demoes/demo20/instagrams/instagram-4.jpg";
-import Instagram5 from "../../../assets/images/demoes/demo20/instagrams/instagram-5.jpg";
-import Instagram6 from "../../../assets/images/demoes/demo20/instagrams/instagram-6.jpg";
-import Instagram7 from "../../../assets/images/demoes/demo20/instagrams/instagram-7.jpg";
-import Instagram8 from "../../../assets/images/demoes/demo20/instagrams/instagram-8.jpg";
-import Instagram9 from "../../../assets/images/demoes/demo20/instagrams/instagram-9.jpg";
-import payment1 from "../../../assets/images/payments/payment-visa.svg";
-import payment2 from "../../../assets/images/payments/payment-paypal.svg";
-import payment3 from "../../../assets/images/payments/payment-stripe.png";
-import payment4 from "../../../assets/images/payments/payment-verisign.svg";
-
 import { ProductProps, ProductWidgetProps } from "./types";
+import { templateImages } from "@/appProvider/templateImages";
 
-export const featuredProducts: ProductProps[] = [
+export const featuredProducts = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product1,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo20.productImages.product1,
+          productImageUrlTwo: "",
           productTitle: "Men Gentle Shoes",
           productPrice: 56.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product2,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo20.productImages.product2,
+          productImageUrlTwo: "",
           productTitle: "Porto Gray Cap",
           productPrice: 76.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product3,
-          productImageUrlTwo: product3,
+          productImageUrl: templateImages.demo20.productImages.product3,
+          productImageUrlTwo: "",
           productTitle: "Porto White Cap",
           productPrice: 56.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product4,
-          productImageUrlTwo: product4,
+          productImageUrl: templateImages.demo20.productImages.product4,
+          productImageUrlTwo: "",
           productTitle: "Winter Towel",
           productPrice: 199,
      },
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product5,
-          productImageUrlTwo: product5,
+          productImageUrl: templateImages.demo20.productImages.product5,
+          productImageUrlTwo: "",
           productTitle: "FOOTWAER",
           productPrice: 88,
      },
@@ -114,44 +96,44 @@ export const featuredProducts: ProductProps[] = [
 // ];
 export const instagram = [
      {
-          image: Instagram1,
+          image: templateImages.demo20.instagramImage.insta1,
      },
      {
-          image: Instagram2,
+          image: templateImages.demo20.instagramImage.insta2,
      },
      {
-          image: Instagram3,
+          image: templateImages.demo20.instagramImage.insta3,
      },
      {
-          image: Instagram4,
+          image: templateImages.demo20.instagramImage.insta4,
      },
      {
-          image: Instagram5,
+          image: templateImages.demo20.instagramImage.insta5,
      },
      {
-          image: Instagram6,
+          image: templateImages.demo20.instagramImage.insta6,
      },
      {
-          image: Instagram7,
+          image: templateImages.demo20.instagramImage.insta7,
      },
      {
-          image: Instagram8,
+          image: templateImages.demo20.instagramImage.insta8,
      },
      {
-          image: Instagram9,
+          image: templateImages.demo20.instagramImage.insta9,
      },
 ];
 export const payments = [
      {
-          image: payment1,
+          image: templateImages.paymentImage.payment4,
      },
      {
-          image: payment2,
+          image: templateImages.paymentImage.payment1,
      },
      {
-          image: payment3,
+          image: templateImages.paymentImage.payment2,
      },
      {
-          image: payment4,
+          image: templateImages.paymentImage.payment3,
      },
 ];
