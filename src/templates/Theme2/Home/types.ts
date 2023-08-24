@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
 
 export interface ProductProps {
-     productImageUrl: StaticImageData;
-     productImageUrlTwo?: StaticImageData;
+     productImageUrl: StaticImageData | string;
+     productImageUrlTwo?: StaticImageData | string;
      productImageAlt: string;
      productCategory: string;
      productTitle: string;
@@ -15,4 +15,23 @@ export interface ProductWidgetProps {
      productImageTwo: StaticImageData;
      productTitle: string;
      productPrice: number;
+}
+
+export interface TestimonialProps {
+     clientImageUrl: StaticImageData;
+     title: string;
+     position: string;
+     message: string;
+}
+
+export interface PromotionProps {
+     imageUrl: StaticImageData;
+     title: string;
+     subtitle?: string;
+     size: "small" | "large";
+     position: "left" | "right" | "centered";
+     buttonCaption: string;
+     promoText?: string;
+     promoUrl?: string;
+     textColor?: "light" | "dark";
 }
