@@ -11,13 +11,16 @@ import { featuredProducts, testimonies } from "./data";
 import { Testimonial } from "./components/Testimonial";
 import Carousel from "react-bootstrap/esm/Carousel";
 import { InfoBoxesContainer } from "./components/Info";
+import ServiceBox from "./components/ServiceBox";
+import SideMenu from "./components/SideMenu";
+import NewsLetter from "./components/Newsletter";
+import FeatureBoxes from "./components/FeatureBoxes";
+import { templateImages } from "@/appProvider/templateImages";
 export const Home = () => {
      return (
           <main className="main home">
                <div className="container mb-2">
-                    <div className="info-boxes-container row row-joined mb-2 font2">
-                         <InfoBoxesContainer />
-                    </div>
+                    <InfoBoxesContainer />
 
                     <div className="row">
                          <div className="col-lg-9 order-lg-2">
@@ -26,7 +29,7 @@ export const Home = () => {
                               <div className="row gx-5 my-3">
                                    <div className="col-sm-6 col-md-4 ">
                                         <MiniBanner
-                                             src={banner1}
+                                             src={templateImages.allBannerImage.banner5}
                                              backgroundColor="#ccc"
                                              title="Porto Watches"
                                              subtitle="Starting at $99"
@@ -34,7 +37,7 @@ export const Home = () => {
                                    </div>
                                    <div className="col-sm-6 col-md-4 ">
                                         <MiniBanner
-                                             src={banner2}
+                                             src={templateImages.allBannerImage.banner1}
                                              backgroundColor="#fff"
                                              title="Deal Promos"
                                              subtitle="Starting at $99"
@@ -42,7 +45,7 @@ export const Home = () => {
                                    </div>
                                    <div className="col-sm-6 col-md-4 ">
                                         <MiniBanner
-                                             src={banner3}
+                                             src={templateImages.allBannerImage.banner3}
                                              backgroundColor="#b8c1d0"
                                              title="Handbags"
                                              subtitle="Starting at $99"
@@ -65,121 +68,17 @@ export const Home = () => {
                               </div>
 
                               <hr className="mt-1 mb-3 pb-2" />
-
-                              <div className="feature-boxes-container">
-                                   <div className="row">
-                                        <div
-                                             className="col-md-4 "
-                                             data-animation-name="fadeInRightShorter"
-                                             data-animation-delay="200"
-                                        >
-                                             <div className="feature-box  feature-box-simple text-center">
-                                                  <i className="icon-earphones-alt"></i>
-
-                                                  <div className="feature-box-content p-0">
-                                                       <h3 className="mb-0 pb-1">
-                                                            Customer Support
-                                                       </h3>
-                                                       <h5 className="mb-1 pb-1">
-                                                            Need Assistance?
-                                                       </h5>
-
-                                                       <p>
-                                                            Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit. Duis nec vestibulum
-                                                            magna, et dapib.
-                                                       </p>
-                                                  </div>
-                                                  {/* End .feature-box-content */}
-                                             </div>
-                                             {/* End .feature-box */}
-                                        </div>
-                                        {/* End .col-md-4 */}
-
-                                        <div
-                                             className="col-md-4 "
-                                             data-animation-name="fadeInRightShorter"
-                                             data-animation-delay="400"
-                                        >
-                                             <div className="feature-box feature-box-simple text-center">
-                                                  <i className="icon-credit-card"></i>
-
-                                                  <div className="feature-box-content p-0">
-                                                       <h3 className="mb-0 pb-1">
-                                                            Secured Payment
-                                                       </h3>
-                                                       <h5 className="mb-1 pb-1">Safe & Fast</h5>
-
-                                                       <p>
-                                                            Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit. Duis nec vestibulum
-                                                            magna, et dapib.
-                                                       </p>
-                                                  </div>
-                                                  {/* End .feature-box-content */}
-                                             </div>
-                                             {/* End .feature-box */}
-                                        </div>
-                                        {/* End .col-md-4 */}
-
-                                        <div
-                                             className="col-md-4 "
-                                             data-animation-name="fadeInRightShorter"
-                                             data-animation-delay="600"
-                                        >
-                                             <div className="feature-box feature-box-simple text-center">
-                                                  <i className="icon-action-undo"></i>
-
-                                                  <div className="feature-box-content p-0">
-                                                       <h3 className="mb-0 pb-1">Returns</h3>
-                                                       <h5 className="mb-1 pb-1">Easy & Free</h5>
-
-                                                       <p>
-                                                            Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit. Duis nec vestibulum
-                                                            magna, et dapib.
-                                                       </p>
-                                                  </div>
-                                                  {/* End .feature-box-content */}
-                                             </div>
-                                             {/* End .feature-box */}
-                                        </div>
-                                        {/* End .col-md-4 */}
-                                   </div>
-                                   {/* End .row */}
-                              </div>
-                              {/* End .feature-boxes-container */}
+                              <FeatureBoxes />
                          </div>
                          {/* End .col-lg-9 */}
-
-                         <aside className="col-lg-3 order-lg-1 mobile-sideba">
+                         <div className="sidebar-overlay"></div>
+                         <div className="sidebar-toggle custom-sidebar-toggle">
+                              <i className="fas fa-sliders-h"></i>
+                         </div>
+                         <aside className="sidebar-home col-lg-3 order-lg-first mobile-sidebar">
+                              <SideMenu />
                               <SideSlide />
-
-                              <div className="widget widget-newsletters bg-gray text-center">
-                                   <h3 className="widget-title text-uppercase m-b-3">
-                                        Subscribe Newsletter
-                                   </h3>
-                                   <p className="mb-2">
-                                        Get all the latest information on Events, Sales and Offers.{" "}
-                                   </p>
-                                   <form action="#">
-                                        <div className="form-group position-relative sicon-envolope-letter">
-                                             <input
-                                                  type="email"
-                                                  className="form-control"
-                                                  name="newsletter-email"
-                                                  placeholder="Email address"
-                                             />
-                                        </div>
-                                        {/* Endd .form-group */}
-                                        <input
-                                             type="submit"
-                                             className="btn btn-primary text-dark btn-md"
-                                             value="Subscribe"
-                                        />
-                                   </form>
-                              </div>
-                              {/* End .widget */}
+                              <NewsLetter />
 
                               <div className="widget widget-testimonials">
                                    <div className=" owl-theme dots-left dots-small">

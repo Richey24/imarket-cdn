@@ -15,8 +15,9 @@ import product15two from "../../../../assets/images/demoes/demo13/products/produ
 import client1 from "../../../../assets/images/clients/client-1.jpg";
 import client2 from "../../../../assets/images/clients/client-2.jpg";
 import client3 from "../../../../assets/images/clients/client-3.jpg";
+import _ from "lodash";
 
-export const SidebarHome = () => {
+export const SidebarHome = ({ categories }) => {
      // State for the accordion menu
      const [menuOpen, setMenuOpen] = useState(false);
 
@@ -57,60 +58,12 @@ export const SidebarHome = () => {
                <div className="side-menu-wrapper mb-3">
                     <h2 className="side-menu-title ls-n-25">Browse Categories</h2>
                     <ul className="side-menu px-3 mx-3">
-                         <li>
-                              <a href="demo13-shop.html">Fashion</a>
-                              <span
-                                   className="side-menu-toggle"
-                                   onClick={() => setMenuOpen(!menuOpen)}
-                              />
-                              <ul style={{ display: menuOpen ? "block" : "none" }}>
-                                   <li>
-                                        <a href="#">Women Clothes</a>
-                                   </li>
-                                   <li>
-                                        <a href="#">Men Clothes</a>
-                                   </li>
-                                   <li>
-                                        <a href="#">Shoes</a>
-                                   </li>
-                                   <li>
-                                        <a href="#">Accessories</a>
-                                   </li>
-                              </ul>
-                         </li>
-                         <li>
-                              <a href="demo13-shop.html">Accessories</a>
-                              <span
-                                   className="side-menu-toggle"
-                                   onClick={() => setMenuOpen(!menuOpen)}
-                              />
-                              <ul style={{ display: menuOpen ? "block" : "none" }}>
-                                   <li>
-                                        <a href="#">Watches</a>
-                                   </li>
-                                   <li>
-                                        <a href="#">Caps</a>
-                                   </li>
-                              </ul>
-                         </li>
-                         <li>
-                              <a href="demo13-shop.html">Electronics</a>
-                              <span
-                                   className="side-menu-toggle"
-                                   onClick={() => setMenuOpen(!menuOpen)}
-                              />
-                              <ul style={{ display: menuOpen ? "block" : "none" }}>
-                                   <li>
-                                        <a href="#">Toys</a>
-                                   </li>
-                                   <li>
-                                        <a href="#">Headphone</a>
-                                   </li>
-                              </ul>
-                         </li>
-                         <li>
-                              <a href="demo13-shop.html">Dress</a>
-                         </li>
+                         {categories &&
+                              categories
+                                   .filter((category) => !category.parent_id)
+                                   .map((category) => (
+                                        <CategoryList category={category} categories={categories} />
+                                   ))}
                     </ul>
                     {/* End .side-menu */}
                </div>
@@ -219,5 +172,32 @@ export const SidebarHome = () => {
                     </div>
                </div>
           </aside>
+     );
+};
+
+const CategoryList = ({ category, categories }) => {
+     const [menuOpen, setMenuOpen] = useState(false);
+
+     return (
+          <li>
+               <a href="demo13-shop.html">{category.name}</a>
+               {category.child_id?.length > 0 && (
+                    <span className="side-menu-toggle" onClick={() => setMenuOpen(!menuOpen)} />
+               )}
+               <ul style={{ display: menuOpen ? "block" : "none" }}>
+                    {category.child_id.map((id) => {
+                         const child = categories.find((cat) => cat.id === id);
+                         if (child) {
+                              return (
+                                   <li key={id}>
+                                        <a href="#">{_.capitalize(child.name)}</a>
+                                   </li>
+                              );
+                         } else {
+                              return <></>;
+                         }
+                    })}
+               </ul>
+          </li>
      );
 };

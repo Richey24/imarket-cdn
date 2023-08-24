@@ -1,8 +1,10 @@
 import Image from "next/image";
 import logo from "../../../assets/images/logo.png";
 import phone from "../../../assets/images/phone-white.png";
+import { templateImages } from "@/appProvider/templateImages";
 
-const Header = () => {
+const Header = (props: any): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <header className="header">
                <div className="container">
@@ -132,7 +134,22 @@ const Header = () => {
                                    <i className="fas fa-bars"></i>
                               </button>
                               <a href="demo2.html" className="logo">
-                                   <Image src={logo} alt="Porto Logo" />
+                                   {company?.logo ? (
+                                        <Image
+                                             src={company?.logo}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   ) : (
+                                        <Image
+                                             src={templateImages.logoImage.logo2}
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   )}
                               </a>
                          </div>
                          {/*End .header-left */}
@@ -207,7 +224,7 @@ const Header = () => {
                                    <h6>
                                         Call us now
                                         <a href="tel:#" className="font1">
-                                             +123 5678 890
+                                             {company?.phone || "+123 5678 890"}
                                         </a>
                                    </h6>
                               </div>
@@ -434,9 +451,9 @@ const Header = () => {
                                         <li className="active">
                                              <a href="demo2.html">Home</a>
                                         </li>
-                                        <li>
+                                        <li className="tw-group">
                                              <a href="demo2-shop.html">Categories</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -535,8 +552,12 @@ const Header = () => {
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner">
                                                                  <figure>
-                                                                      <img
-                                                                           src="assets/images/menu-banner.jpg"
+                                                                      <Image
+                                                                           src={
+                                                                                templateImages
+                                                                                     .allBannerImage
+                                                                                     .banner2
+                                                                           }
                                                                            alt="Menu banner"
                                                                            width="300"
                                                                            height="300"
@@ -564,9 +585,9 @@ const Header = () => {
                                              </div>
                                              {/*End .megamenu */}
                                         </li>
-                                        <li>
+                                        <li className="tw-group">
                                              <a href="demo2-product.html">Products</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -667,8 +688,12 @@ const Header = () => {
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner menu-banner-2">
                                                                  <figure>
-                                                                      <img
-                                                                           src="assets/images/menu-banner-1.jpg"
+                                                                      <Image
+                                                                           src={
+                                                                                templateImages
+                                                                                     .allBannerImage
+                                                                                     .banner3
+                                                                           }
                                                                            alt="Menu banner"
                                                                            className="product-promo"
                                                                            width="380"
