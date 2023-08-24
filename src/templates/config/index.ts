@@ -1,8 +1,12 @@
 import { theme1TemplateConfig } from "./theme1";
 import { theme2TemplateConfig } from "./theme2";
 import { theme3TemplateConfig } from "./theme3";
+import { theme20TemplateConfig } from "./theme20";
+import { theme21TemplateConfig } from "./theme21";
+import { theme11TemplateConfig } from "./theme11";
 import { theme4TemplateConfig } from "./theme4";
-import { theme5TemplateConfig } from "./theme5";
+import { theme22TemplateConfig } from "./theme22";
+import { theme14TemplateConfig } from "./theme14";
 import { theme7TemplateConfig } from "./theme7";
 import { theme8TemplateConfig } from "./theme8";
 import { theme9TemplateConfig } from "./theme9";
@@ -44,19 +48,14 @@ export const templateConfig: any = {
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
      // theme6: theme6TemplateConfig,
+     theme20: theme20TemplateConfig,
+     theme11: theme11TemplateConfig,
+     theme21: theme21TemplateConfig,
+     theme22: theme22TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
-     // theme10: theme10TemplateConfig,
-     // theme11: theme11TemplateConfig,
-     theme12: theme12TemplateConfig,
-     theme13: theme13TemplateConfig,
-     theme15: theme15TemplateConfig,
-     theme17: theme17TemplateConfig,
-     theme19: theme19TemplateConfig,
-     theme20: theme20TemplateConfig,
-     theme21: theme21TemplateConfig,
-     theme25: theme25TemplateConfig,
+     theme14: theme14TemplateConfig,
      theme30: theme30TemplateConfig,
      theme31: theme31TemplateConfig,
      theme32: theme32TemplateConfig,
@@ -82,15 +81,12 @@ export const cssImports = {
      theme7: "demo3",
      theme8: "demo8",
      theme9: "demo9",
-     theme11: "demo11",
-     theme12: "demo12",
-     theme13: "demo13",
-     theme15: "demo15",
-     theme17: "demo17",
-     theme19: "demo19",
      theme20: "demo20",
+     theme22: "demo22",
+     theme14: "demo14",
+     theme11: "demo11",
      theme21: "demo21",
-     theme25: "demo25",
+     // theme12: "demo12",
      theme30: "demo30",
      theme31: "demo31",
      theme32: "demo32",

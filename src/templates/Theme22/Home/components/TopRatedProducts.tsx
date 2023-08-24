@@ -12,10 +12,7 @@ export const TopRatedProducts = () => {
           beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
      };
      return (
-          <section
-               className="most-viewed-products appear-animate"
-               style={{ paddingLeft: "80px", paddingRight: "80px" }}
-          >
+          <section className="recent-products">
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">Top Rated Products</h2>
                     <div className="row">

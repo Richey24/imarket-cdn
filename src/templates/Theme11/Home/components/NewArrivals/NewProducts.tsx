@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { newArrivalsProducts } from "../data";
+import { newArrivalsProducts } from "../../data";
 
 export const NewProducts = () => {
      const [currentSlide, setCurrentSlide] = useState(0);

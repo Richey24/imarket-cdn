@@ -1215,7 +1215,7 @@ export const templateImages = {
             "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/2.jpg",
             "smallImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/3.jpg",
             "smallImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/4.jpg",
-            "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/5.jpg",
+             "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/5.jpg",
             "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/6.jpg"
         },
         zoomImages: {

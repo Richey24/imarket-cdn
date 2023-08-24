@@ -17,8 +17,6 @@ import payment2 from "../../../assets/images/payments/payment-paypal.svg";
 import payment3 from "../../../assets/images/payments/payment-stripe.png";
 import payment4 from "../../../assets/images/payments/payment-verisign.svg";
 
- 
- 
 import { ProductProps, ProductWidgetProps } from "./types";
 
 export const featuredProducts: ProductProps[] = [
@@ -28,7 +26,7 @@ export const featuredProducts: ProductProps[] = [
           productImageUrl: product1,
           productImageUrlTwo: product1,
           productTitle: "Men Gentle Shoes",
-          productPrice: 56.00,
+          productPrice: 56.0,
      },
      {
           productImageAlt: "product",
@@ -36,7 +34,7 @@ export const featuredProducts: ProductProps[] = [
           productImageUrl: product2,
           productImageUrlTwo: product2,
           productTitle: "Porto Gray Cap",
-          productPrice: 76.00,
+          productPrice: 76.0,
      },
      {
           productImageAlt: "product",
@@ -44,7 +42,7 @@ export const featuredProducts: ProductProps[] = [
           productImageUrl: product3,
           productImageUrlTwo: product3,
           productTitle: "Porto White Cap",
-          productPrice: 56.00,
+          productPrice: 56.0,
      },
      {
           productImageAlt: "product",
@@ -62,8 +60,6 @@ export const featuredProducts: ProductProps[] = [
           productTitle: "FOOTWAER",
           productPrice: 88,
      },
-     
-      
 ];
 // export const featuredCategories: ProductProps[] = [
 //      {
@@ -114,56 +110,48 @@ export const featuredProducts: ProductProps[] = [
 //           productTitle: "FOOTWAER",
 //           productPrice: 88,
 //      },
-     
-      
+
 // ];
 export const instagram = [
      {
-          image:Instagram1,
+          image: Instagram1,
      },
      {
-          image:Instagram2,
+          image: Instagram2,
      },
      {
-          image:Instagram3,
+          image: Instagram3,
      },
      {
-          image:Instagram4,
+          image: Instagram4,
      },
      {
-          image:Instagram5,
+          image: Instagram5,
      },
      {
-          image:Instagram6,
+          image: Instagram6,
      },
      {
-          image:Instagram7,
+          image: Instagram7,
      },
      {
-          image:Instagram8,
+          image: Instagram8,
      },
      {
-          image:Instagram9,
+          image: Instagram9,
      },
-     
-
-]
+];
 export const payments = [
      {
-          image:payment1,
+          image: payment1,
      },
      {
-          image:payment2,
+          image: payment2,
      },
      {
-          image:payment3,
+          image: payment3,
      },
      {
-          image:payment4,
+          image: payment4,
      },
-      
-     
-
-]
-
- 
+];
