@@ -33,6 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }
      }, [site]);
 
+     console.log(site, loading);
+
+
      if (!site && loading) {
           return <PlaceholderLayout />;
      } else if (!site && !loading) {

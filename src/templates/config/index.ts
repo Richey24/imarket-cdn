@@ -30,6 +30,7 @@ import theme42TemplateConfig from "./theme42";
 import { theme17TemplateConfig } from "./theme17";
 import { theme19TemplateConfig } from "./theme19";
 import { theme25TemplateConfig } from "./theme25";
+import { theme28TemplateConfig } from "./theme28";
 
 // import { theme6TemplateConfig } from "./themex-2";
 
@@ -57,6 +58,7 @@ export const templateConfig: any = {
      theme20: theme20TemplateConfig,
      theme21: theme21TemplateConfig,
      theme25: theme25TemplateConfig,
+     theme28: theme28TemplateConfig,
      theme30: theme30TemplateConfig,
      theme31: theme31TemplateConfig,
      theme32: theme32TemplateConfig,
@@ -91,6 +93,7 @@ export const cssImports = {
      theme20: "demo20",
      theme21: "demo21",
      theme25: "demo25",
+     theme28: "demo28",
      theme30: "demo30",
      theme31: "demo31",
      theme32: "demo32",
