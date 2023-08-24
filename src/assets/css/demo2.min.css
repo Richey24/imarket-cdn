@@ -4689,6 +4689,8 @@ label {
      font-size: 1.7rem;
      color: #da7940;
      font-weight: 700;
+     letter-spacing: -0.05em;
+     color: #222529;
 }
 .countdown-type1 .countdown-period {
      font-size: 1.7rem;

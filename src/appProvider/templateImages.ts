@@ -234,6 +234,10 @@ export const templateImages = {
         team3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-3.jpg",
         team4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-4.jpg",
     },
+    menuBanner: {
+        menu1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner.jpg",
+        menu2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner-1.jpg",
+    },
     demo1: {
         productImages: {
             product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-1.jpg",
@@ -1368,6 +1372,15 @@ export const templateImages = {
             team3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/team/3.jpg",
             team4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/team/4.jpg",
             team5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/team/5.jpg",
+        },
+        bgImages: {
+            bg1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-2.jpg",
+            bg2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-3.jpg",
+            bg3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-4.jpg",
+            bg4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-5.jpg",
+            bg5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-6.jpg",
+            bg6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-7.jpg",
+            bg7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-8.jpg",
         }
     },
     demo17: {

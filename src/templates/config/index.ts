@@ -7,10 +7,11 @@ import { theme7TemplateConfig } from "./theme7";
 import { theme8TemplateConfig } from "./theme8";
 import { theme9TemplateConfig } from "./theme9";
 // import { theme10TemplateConfig } from "./theme10";
-import { theme11TemplateConfig } from "./theme11";
+// import { theme11TemplateConfig } from "./theme11";
 import { theme12TemplateConfig } from "./theme12";
 import { theme13TemplateConfig } from "./theme13";
 import { theme15TemplateConfig } from "./theme15";
+import  theme18TemplateConfig  from "./theme18";
 import { theme20TemplateConfig } from "./theme20";
 import { theme21TemplateConfig } from "./theme21";
 import { theme30TemplateConfig } from "./theme30";
@@ -26,6 +27,7 @@ import theme39TemplateConfig from "./theme39";
 import theme40TemplateConfig from "./theme40";
 import theme41TemplateConfig from "./theme41";
 import theme42TemplateConfig from "./theme42";
+import { theme17TemplateConfig } from "./theme17";
 
 // import { theme6TemplateConfig } from "./themex-2";
 
@@ -44,10 +46,11 @@ export const templateConfig: any = {
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
      // theme10: theme10TemplateConfig,
-     theme11: theme11TemplateConfig,
+     // theme11: theme11TemplateConfig,
      theme12: theme12TemplateConfig,
      theme13: theme13TemplateConfig,
      theme15: theme15TemplateConfig,
+     theme17: theme17TemplateConfig,
      theme20: theme20TemplateConfig,
      theme21: theme21TemplateConfig,
      theme30: theme30TemplateConfig,
@@ -80,6 +83,7 @@ export const cssImports = {
      theme12: "demo12",
      theme13: "demo13",
      theme15: "demo15",
+     theme17: "demo17",
      theme21: "demo21",
      theme20: "demo20",
      theme30: "demo30",
