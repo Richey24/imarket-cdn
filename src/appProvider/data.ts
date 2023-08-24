@@ -1,11 +1,11 @@
 export const dummySite = {
      theme: {
-          theme: "theme17",
+          theme: "theme25",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme17",
+                    theme: "theme25",
                     name: "",
                     props: {
                          company: {
@@ -86,7 +86,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme17",
+                                   theme: "theme25",
                                    props: {
                                         static: {
                                              promotion: {
