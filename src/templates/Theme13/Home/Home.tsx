@@ -108,11 +108,10 @@ export const Home = (props: any) => {
                                    <ul className="nav nav-tabs mb-2" role="tablist">
                                         <li className="nav-item">
                                              <a
-                                                  className={`nav-link ${
-                                                       activeTab === "featured-products"
-                                                            ? "active"
-                                                            : ""
-                                                  }`}
+                                                  className={`nav-link ${activeTab === "featured-products"
+                                                       ? "active"
+                                                       : ""
+                                                       }`}
                                                   id="featured-products-tab"
                                                   onClick={() =>
                                                        handleTabChange("featured-products")
@@ -123,11 +122,10 @@ export const Home = (props: any) => {
                                         </li>
                                         <li className="nav-item">
                                              <a
-                                                  className={`nav-link ${
-                                                       activeTab === "latest-products"
-                                                            ? "active"
-                                                            : ""
-                                                  }`}
+                                                  className={`nav-link ${activeTab === "latest-products"
+                                                       ? "active"
+                                                       : ""
+                                                       }`}
                                                   id="latest-products-tab"
                                                   onClick={() => handleTabChange("latest-products")}
                                              >
@@ -138,11 +136,10 @@ export const Home = (props: any) => {
                                    <div>
                                         {activeTab === "featured-products" && (
                                              <div
-                                                  className={`tab-pane fade ${
-                                                       activeTab === "featured-products"
-                                                            ? "show active"
-                                                            : ""
-                                                  }`}
+                                                  className={`tab-pane fade ${activeTab === "featured-products"
+                                                       ? "show active"
+                                                       : ""
+                                                       }`}
                                                   id="featured-products"
                                              >
                                                   <div className="row">
@@ -158,11 +155,10 @@ export const Home = (props: any) => {
 
                                         {activeTab === "latest-products" && (
                                              <div
-                                                  className={`tab-pane fade ${
-                                                       activeTab === "latest-products"
-                                                            ? "show active"
-                                                            : ""
-                                                  }`}
+                                                  className={`tab-pane fade ${activeTab === "latest-products"
+                                                       ? "show active"
+                                                       : ""
+                                                       }`}
                                                   id="latest-products"
                                              >
                                                   {latestProductsState ? (
@@ -323,20 +319,20 @@ export const Home = (props: any) => {
                                                                  {...product}
                                                             />
                                                        ))}
-                                        </div>
-                                   </div>
+                                        </div >
+                                   </div >
                                    {/* End .row */}
-                              </div>
+                              </div >
                               {/* End .product-widgets */}
-                         </div>
+                         </div >
                          {/* End .col-lg-9 */}
-                         <div className="sidebar-overlay" />
+                         < div className="sidebar-overlay" />
                          <div className="sidebar-toggle custom-sidebar-toggle">
                               <i className="fas fa-sliders-h" />
                          </div>
                          <SidebarHome categories={categories} />
-                    </div>
-               </div>
-          </main>
+                    </div >
+               </div >
+          </main >
      );
 };

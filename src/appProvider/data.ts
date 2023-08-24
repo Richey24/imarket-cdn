@@ -41,7 +41,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme15",
+                    theme: "theme16",
                     props: {
                          company: {
                               city: "City",

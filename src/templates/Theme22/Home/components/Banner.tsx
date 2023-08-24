@@ -1,11 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
-import slider1 from "../../../../assets/images/demoes/demo22/slider/home_slide1.jpg";
-import slider2 from "../../../../assets/images/demoes/demo22/slider/home_slide2.jpg";
-import banner1 from "../../../../assets/images/demoes/demo22/products/featured-sale.jpg";
-import banner2 from "../../../../assets/images/demoes/demo22/products/featured-sale-2.jpg";
+import { templateImages } from "@/appProvider/templateImages";
 export const Banner = () => {
      return (
-          <section className="intro-section" style={{paddingLeft:'80px', paddingRight:'80px'}}>
+          <section className="intro-section" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
                <div className="container" >
                     <div className="row">
                          <div className="col-lg-9 mb-2">
@@ -16,7 +13,7 @@ export const Banner = () => {
                                              <div className="home-slide home-slide-1 banner">
                                                   <img
                                                        className="slide-bg"
-                                                       src={slider1.src}
+                                                       src={templateImages.demo22.sliderImage.slide1}
                                                        alt="slider image"
                                                        width={772}
                                                        height={434}
@@ -50,7 +47,7 @@ export const Banner = () => {
                                                             <a
                                                                  href="demo22-shop.html"
                                                                  className="btn btn-light btn-lg ls-10"
-                                                                 style={{color:'#f14705', fontWeight:'bold'}}
+                                                                 style={{ color: '#f14705', fontWeight: 'bold' }}
                                                             >
                                                                  View All Now
                                                             </a>
@@ -68,7 +65,7 @@ export const Banner = () => {
                                              <div className="home-slide home-slide-2 banner">
                                                   <img
                                                        className="slide-bg"
-                                                       src={slider2.src}
+                                                       src={templateImages.demo22.sliderImage.slide2}
                                                        alt="slider image"
                                                        width={772}
                                                        height={434}
@@ -96,7 +93,7 @@ export const Banner = () => {
                                                             <a
                                                                  href="demo22-shop.html"
                                                                  className="btn btn-light btn-lg ls-10"
-                                                                 style={{color:'#f14705', fontWeight:'bold'}}
+                                                                 style={{ color: '#f14705', fontWeight: 'bold' }}
                                                             >
                                                                  View All Now
                                                             </a>
@@ -117,7 +114,7 @@ export const Banner = () => {
                                                   <figure>
                                                        <a href="demo22-product.html">
                                                             <img
-                                                                 src={banner1.src}
+                                                                 src={templateImages.demo22.sliderImage.slide3}
                                                                  width={217}
                                                                  height={217}
                                                                  alt="product"
@@ -174,7 +171,7 @@ export const Banner = () => {
                                                   <figure>
                                                        <a href="demo22-product.html">
                                                             <img
-                                                                 src={banner2.src}
+                                                                 src={templateImages.demo22.sliderImage.slide4}
                                                                  width={217}
                                                                  height={217}
                                                                  alt="product"
@@ -229,6 +226,20 @@ export const Banner = () => {
                          </div>
                     </div>
                </div>
+
+               <div className="cat-section container position-absolute">
+                    <div style={{ display: "flex", columnGap: "20px" }}>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">ACCESSORIES</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">CAPS</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">DRESS</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">ELECTRONICS</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">FASHION</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">HEADPHONE</a>
+                    </div>
+               </div>
           </section>
-     );
-};
+        </div >
+    )
+}
+
+export default Banner

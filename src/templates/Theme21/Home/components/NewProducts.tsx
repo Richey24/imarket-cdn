@@ -14,14 +14,14 @@ export const NewProducts = () => {
      };
 
      return (
-          <div className="row no-gutters">
+          <div className="no-gutters">
                <Slider {...settings}>
                     {newArrivalsProducts.map((product) => (
                          <div className="product-default inner-quickview inner-icon">
                               <figure>
                                    <a href="demo21-product.html">
                                         <img
-                                             src={product.productImageUrl.src}
+                                             src={product.productImageUrl}
                                              width={217}
                                              height={217}
                                              alt="product"

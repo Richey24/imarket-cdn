@@ -1,6 +1,5 @@
 import React from 'react'
-import banner1 from "../../../../assets/images/demoes/demo20/banners/banner-1.jpg";
-import banner2 from "../../../../assets/images/demoes/demo20/banners/banner-2.jpg";
+import { templateImages } from '@/appProvider/templateImages';
 export const Banner = () => {
   return (
     <section className="intro-section" style={{paddingRight:'50px', paddingLeft:'50px'}}>
@@ -13,7 +12,7 @@ export const Banner = () => {
                    >
                         <figure>
                              <img
-                                  src={banner1.src}
+                                  src={templateImages.demo20.bannerImage.banner8}
                                   alt="banner"
                                   width={779}
                                   height={464}
@@ -88,7 +87,7 @@ export const Banner = () => {
                         style={{ backgroundColor: "#eee" }}
                    >
                         <figure>
-                             <img src={banner2.src} alt="banner" />
+                             <img src={templateImages.demo20.bannerImage.banner3} alt="banner" />
                         </figure>
                         <div className="banner-layer banner-layer-middle banner-layer-right text-right">
                              <h3 className="ls-10 text-uppercase m-b-3">

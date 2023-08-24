@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Card = () => {
   return (
-    <div className="container" style={{paddingLeft:'80px', paddingRight:'80px',marginTop:'20px'}}>
+    <div className="container" style={{marginTop:'20px'}}>
     <div className="info-boxes-container">
          <div className="row m-0 divide-line">
               <div className="info-box info-box-icon-left col-sm-6 col-lg-3">
