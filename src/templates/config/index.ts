@@ -11,6 +11,7 @@ import { theme9TemplateConfig } from "./theme9";
 import { theme12TemplateConfig } from "./theme12";
 import { theme13TemplateConfig } from "./theme13";
 import { theme15TemplateConfig } from "./theme15";
+import  theme18TemplateConfig  from "./theme18";
 import { theme20TemplateConfig } from "./theme20";
 import { theme21TemplateConfig } from "./theme21";
 import { theme30TemplateConfig } from "./theme30";
