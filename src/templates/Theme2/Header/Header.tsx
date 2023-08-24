@@ -1,20 +1,10 @@
-import React from "react";
-import PropTypes, { InferProps } from "prop-types";
-import yourLogo from "../../../assets/images/your-logo.png";
-import phone from "../../../assets/images/phone-white.png";
-import product1 from "../../../assets/images/products/product-1.jpg";
-import product2 from "../../../assets/images/products/product-2.jpg";
-import product3 from "../../../assets/images/products/product-3.jpg";
-import menuBanner from "../../../assets/images/menu-banner.jpg";
-import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
 import Image from "next/image";
+import logo from "../../../assets/images/logo.png";
+import phone from "../../../assets/images/phone-white.png";
+import { templateImages } from "@/appProvider/templateImages";
 
-const HeaderProps = {
-     phoneProp: PropTypes.string.isRequired,
-     age: PropTypes.string.isRequired,
-};
-
-export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps>) {
+const Header = (props: any): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <header className="header">
                <div className="container">
@@ -24,6 +14,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                    FREE Returns. Standard Shipping Orders $99+
                               </p>
                          </div>
+                         {/*End .header-left */}
 
                          <div className="header-right header-dropdowns w-sm-100">
                               <div className="header-dropdown dropdown-expanded d-none d-lg-block">
@@ -50,7 +41,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                              </li>
                                         </ul>
                                    </div>
+                                   {/*End .header-menu */}
                               </div>
+                              {/*End .header-dropown */}
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                    <a href="#">Order</a>
                                    <div className="header-menu">
@@ -63,7 +56,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                              </li>
                                         </ul>
                                    </div>
+                                   {/*End .header-menu */}
                               </div>
+                              {/*End .header-dropown */}
 
                               <span className="separator"></span>
 
@@ -85,7 +80,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                              </li>
                                         </ul>
                                    </div>
+                                   {/*End .header-menu */}
                               </div>
+                              {/*End .header-dropown */}
 
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                    <a href="#">USD</a>
@@ -99,7 +96,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                              </li>
                                         </ul>
                                    </div>
+                                   {/*End .header-menu */}
                               </div>
+                              {/*End .header-dropown */}
 
                               <span className="separator"></span>
 
@@ -120,9 +119,13 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                         target="_blank"
                                    ></a>
                               </div>
+                              {/*End .social-icons */}
                          </div>
+                         {/*End .header-right */}
                     </div>
+                    {/*End .container */}
                </div>
+               {/*End .header-top */}
 
                <div className="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                     <div className="container">
@@ -131,9 +134,25 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                    <i className="fas fa-bars"></i>
                               </button>
                               <a href="demo2.html" className="logo">
-                                   <Image src={yourLogo} alt="Porto Logo" />
+                                   {company?.logo ? (
+                                        <Image
+                                             src={company?.logo}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   ) : (
+                                        <Image
+                                             src={templateImages.logoImage.logo2}
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   )}
                               </a>
                          </div>
+                         {/*End .header-left */}
 
                          <div className="header-right w-lg-max ml-0">
                               <div className="header-icon mb-0 header-search header-search-inline header-search-category w-lg-max pl-3 pr-1">
@@ -182,14 +201,17 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        </option>
                                                   </select>
                                              </div>
+                                             {/*End .select-custom */}
                                              <button
                                                   className="btn icon-magnifier pb-1 bg-white"
                                                   type="submit"
                                                   title="Search"
                                              ></button>
                                         </div>
+                                        {/*End .header-search-wrapper */}
                                    </form>
                               </div>
+                              {/*End .header-search */}
 
                               <div className="header-contact d-none d-lg-flex pl-4 ml-3 mr-xl-5">
                                    <Image
@@ -202,7 +224,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                    <h6>
                                         Call us now
                                         <a href="tel:#" className="font1">
-                                             +123 5678 890
+                                             {company?.phone || "+123 5678 890"}
                                         </a>
                                    </h6>
                               </div>
@@ -249,6 +271,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                              <div className="dropdown-cart-header">
                                                   Shopping Cart
                                              </div>
+                                             {/*End .dropdown-cart-header */}
 
                                              <div className="dropdown-cart-products">
                                                   <div className="product">
@@ -266,14 +289,15 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  × $99.00
                                                             </span>
                                                        </div>
+                                                       {/*End .product-details */}
 
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
                                                                  className="product-image"
                                                             >
-                                                                 <Image
-                                                                      src={product1}
+                                                                 <img
+                                                                      src="assets/images/products/product-1.jpg"
                                                                       alt="product"
                                                                       width="80"
                                                                       height="80"
@@ -289,6 +313,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             </a>
                                                        </figure>
                                                   </div>
+                                                  {/*End .product */}
 
                                                   <div className="product">
                                                        <div className="product-details">
@@ -305,14 +330,15 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  × $35.00
                                                             </span>
                                                        </div>
+                                                       {/*End .product-details */}
 
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
                                                                  className="product-image"
                                                             >
-                                                                 <Image
-                                                                      src={product2}
+                                                                 <img
+                                                                      src="assets/images/products/product-2.jpg"
                                                                       alt="product"
                                                                       width="80"
                                                                       height="80"
@@ -328,6 +354,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             </a>
                                                        </figure>
                                                   </div>
+                                                  {/*End .product */}
 
                                                   <div className="product">
                                                        <div className="product-details">
@@ -344,14 +371,15 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  × $35.00
                                                             </span>
                                                        </div>
+                                                       {/*End .product-details */}
 
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
                                                                  className="product-image"
                                                             >
-                                                                 <Image
-                                                                      src={product3}
+                                                                 <img
+                                                                      src="assets/images/products/product-3.jpg"
                                                                       alt="product"
                                                                       width="80"
                                                                       height="80"
@@ -366,7 +394,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             </a>
                                                        </figure>
                                                   </div>
+                                                  {/*End .product */}
                                              </div>
+                                             {/*End .cart-product */}
 
                                              <div className="dropdown-cart-total">
                                                   <span>SUBTOTAL:</span>
@@ -375,6 +405,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        $134.00
                                                   </span>
                                              </div>
+                                             {/*End .dropdown-cart-total */}
 
                                              <div className="dropdown-cart-action">
                                                   <a
@@ -390,12 +421,19 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        Checkout
                                                   </a>
                                              </div>
+                                             {/*End .dropdown-cart-total */}
                                         </div>
+                                        {/*End .dropdownmenu-wrapper */}
                                    </div>
+                                   {/*End .dropdown-menu */}
                               </div>
+                              {/*End .dropdown */}
                          </div>
+                         {/*End .header-right */}
                     </div>
+                    {/*End .container */}
                </div>
+               {/*End .header-middle */}
 
                <div
                     className="header-bottom sticky-header d-lg-block d-none"
@@ -404,7 +442,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                     <div className="container">
                          <div className="header-left">
                               <a href="demo2.html" className="logo">
-                                   <Image src={yourLogo} alt="Porto Logo" />
+                                   <img src="assets/images/your-logo.png" alt="Porto Logo" />
                               </a>
                          </div>
                          <div className="header-center">
@@ -413,9 +451,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                         <li className="active">
                                              <a href="demo2.html">Home</a>
                                         </li>
-                                        <li>
+                                        <li className="tw-group">
                                              <a href="demo2-shop.html">Categories</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -515,7 +553,11 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             <div className="menu-banner">
                                                                  <figure>
                                                                       <Image
-                                                                           src={menuBanner}
+                                                                           src={
+                                                                                templateImages
+                                                                                     .allBannerImage
+                                                                                     .banner2
+                                                                           }
                                                                            alt="Menu banner"
                                                                            width="300"
                                                                            height="300"
@@ -541,10 +583,11 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        </div>
                                                   </div>
                                              </div>
+                                             {/*End .megamenu */}
                                         </li>
-                                        <li>
+                                        <li className="tw-group">
                                              <a href="demo2-product.html">Products</a>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols">
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -593,6 +636,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  </li>
                                                             </ul>
                                                        </div>
+                                                       {/*End .col-lg-4 */}
 
                                                        <div className="col-lg-4">
                                                             <a href="#" className="nolink">
@@ -639,12 +683,17 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  </li>
                                                             </ul>
                                                        </div>
+                                                       {/*End .col-lg-4 */}
 
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner menu-banner-2">
                                                                  <figure>
                                                                       <Image
-                                                                           src={menuBanner1}
+                                                                           src={
+                                                                                templateImages
+                                                                                     .allBannerImage
+                                                                                     .banner3
+                                                                           }
                                                                            alt="Menu banner"
                                                                            className="product-promo"
                                                                            width="380"
@@ -669,8 +718,11 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  </a>
                                                             </div>
                                                        </div>
+                                                       {/*End .col-lg-4 */}
                                                   </div>
+                                                  {/*End .row */}
                                              </div>
+                                             {/*End .megamenu */}
                                         </li>
                                         <li>
                                              <a href="#">Pages</a>
@@ -753,13 +805,16 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        </option>
                                                   </select>
                                              </div>
+                                             {/*End .select-custom */}
                                              <button
                                                   className="btn p-0 icon-search-3"
                                                   type="submit"
                                              ></button>
                                         </div>
+                                        {/*End .header-search-wrapper */}
                                    </form>
                               </div>
+                              {/*End .header-search */}
 
                               <a href="login.html" className="header-icon ">
                                    <i className="icon-user-2"></i>
@@ -795,6 +850,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                              <div className="dropdown-cart-header">
                                                   Shopping Cart
                                              </div>
+                                             {/*End .dropdown-cart-header */}
 
                                              <div className="dropdown-cart-products">
                                                   <div className="product">
@@ -812,14 +868,15 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  × $99.00
                                                             </span>
                                                        </div>
+                                                       {/*End .product-details */}
 
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
                                                                  className="product-image"
                                                             >
-                                                                 <Image
-                                                                      src={product1}
+                                                                 <img
+                                                                      src="assets/images/products/product-1.jpg"
                                                                       alt="product"
                                                                       width="80"
                                                                       height="80"
@@ -835,6 +892,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             </a>
                                                        </figure>
                                                   </div>
+                                                  {/*End .product */}
 
                                                   <div className="product">
                                                        <div className="product-details">
@@ -851,14 +909,15 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  × $35.00
                                                             </span>
                                                        </div>
+                                                       {/*End .product-details */}
 
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
                                                                  className="product-image"
                                                             >
-                                                                 <Image
-                                                                      src={product2}
+                                                                 <img
+                                                                      src="assets/images/products/product-2.jpg"
                                                                       alt="product"
                                                                       width="80"
                                                                       height="80"
@@ -874,6 +933,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             </a>
                                                        </figure>
                                                   </div>
+                                                  {/*End .product */}
 
                                                   <div className="product">
                                                        <div className="product-details">
@@ -890,14 +950,15 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                                  × $35.00
                                                             </span>
                                                        </div>
+                                                       {/*End .product-details */}
 
                                                        <figure className="product-image-container">
                                                             <a
                                                                  href="demo2-product.html"
                                                                  className="product-image"
                                                             >
-                                                                 <Image
-                                                                      src={product3}
+                                                                 <img
+                                                                      src="assets/images/products/product-3.jpg"
                                                                       alt="product"
                                                                       width="80"
                                                                       height="80"
@@ -912,7 +973,9 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                             </a>
                                                        </figure>
                                                   </div>
+                                                  {/*End .product */}
                                              </div>
+                                             {/*End .cart-product */}
 
                                              <div className="dropdown-cart-total">
                                                   <span>SUBTOTAL:</span>
@@ -921,6 +984,7 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        $134.00
                                                   </span>
                                              </div>
+                                             {/*End .dropdown-cart-total */}
 
                                              <div className="dropdown-cart-action">
                                                   <a
@@ -936,12 +1000,19 @@ export default function Header({ phoneProp, age }: InferProps<typeof HeaderProps
                                                        Checkout
                                                   </a>
                                              </div>
+                                             {/*End .dropdown-cart-total */}
                                         </div>
+                                        {/*End .dropdownmenu-wrapper */}
                                    </div>
+                                   {/*End .dropdown-menu */}
                               </div>
+                              {/*End .dropdown */}
                          </div>
                     </div>
+                    {/*End .container */}
                </div>
+               {/*End .header-bottom */}
           </header>
      );
-}
+};
+export default Header;

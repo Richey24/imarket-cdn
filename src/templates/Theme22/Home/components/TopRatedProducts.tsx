@@ -109,10 +109,64 @@ export const TopRatedProducts = () => {
                                                             {/* End .product-details */}
                                                        </div>
                                                   </div>
-                                             ))}
-                                        </Slider>
+                                                  <div className="btn-icon-group">
+                                                       <a
+                                                            href="#"
+                                                            title="Add To Cart"
+                                                            className="btn-icon btn-add-cart product-type-simple"
+                                                       >
+                                                            <i className="icon-shopping-cart" />
+                                                       </a>
+                                                  </div>
+                                                  <a
+                                                       href="ajax/product-quick-view.html"
+                                                       className="btn-quickview"
+                                                       title="Quick View"
+                                                  >
+                                                       Quick View
+                                                  </a>
+                                             </figure>
+                                        <div className="product-details">
+                                             <div className="category-wrap">
+                                                  <div className="category-list">
+                                                       <a
+                                                            href="demo22-shop.html"
+                                                            className="product-category"
+                                                       >
+                                                            category
+                                                       </a>
+                                                  </div>
+                                                  <a
+                                                       href="wishlist.html"
+                                                       title="Add to Wishlist"
+                                                       className="btn-icon-wish"
+                                                  >
+                                                       <i className="icon-heart" />
+                                                  </a>
+                                             </div>
+                                             <h3 className="product-title">
+                                                  <a href="demo22-product.html">
+                                                       {product.productTitle}
+                                                  </a>
+                                             </h3>
+                                             {/* <div class="ratings-container">
+           <div class="product-ratings">
+               <span class="ratings" style="width:100%"></span>
+               <span class="tooltiptext tooltip-top"></span>
+           </div>
+       </div> */}
+                                             {/* End .product-container */}
+                                             <div className="price-box">
+                                                  <span className="product-price">
+                                                       ${product.productPrice}
+                                                  </span>
+                                             </div>
+                                             {/* End .price-box */}
+                                        </div>
+                                        {/* End .product-details */}
                                    </div>
-                              </div>
+                                   ))}
+                              </Slider>
                          </div>
                     </div>
                </div>

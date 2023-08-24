@@ -4,6 +4,7 @@ import { templateConfig } from "@/templates/config/index";
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { PlaceholderLayout } from "../components/PlaceholderLayout/PlaceholderLayout";
+import { products } from "@/templates/Theme5/Home/data";
 
 const DynamicComponent = ({
      component,
@@ -18,7 +19,7 @@ const DynamicComponent = ({
 
 export default function Home() {
      const currentPage = "home";
-     const { site } = useContext(AppContext);
+     const { site, products, categories } = useContext(AppContext);
 
      const newGeneratedTemplate = (): {
           [key: string]: { component?: React.ComponentType<any> | string; props?: object };
@@ -61,6 +62,8 @@ export default function Home() {
                     props={
                          newGeneratedTemplate()[key].component && {
                               ...newGeneratedTemplate()[key].props,
+                              products,
+                              categories,
                          }
                     }
                />

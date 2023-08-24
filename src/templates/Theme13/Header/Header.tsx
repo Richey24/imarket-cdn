@@ -12,12 +12,12 @@ import logoBlack from "../../../assets/images/logo-black.png";
 import logoWhite from "../../../assets/images/logo-white.png";
 import stickyLogo from "../../../assets/images/sticky-logo.png";
 import Link from "next/link";
+import _ from "lodash";
 
 export default function Header(props: any) {
-     const { company, static: staticProps } = props.props;
+     const { company, static: staticProps, categories } = props.props;
      const [activeMenuId, setActiveMenuId] = useState(0);
 
-     console.log("headerProps", staticProps);
      return (
           <div style={{ width: "100%" }}>
                <div className="top-notice text-white bg-secondary">
@@ -169,8 +169,52 @@ export default function Header(props: any) {
                                                   <div className="select-custom body-text">
                                                        <select id="cat" name="cat">
                                                             <option>All Categories</option>
+                                                            {categories &&
+                                                                 categories.map((category) => (
+                                                                      <>
+                                                                           {!category.parent_id && (
+                                                                                <option
+                                                                                     value={
+                                                                                          category.id
+                                                                                     }
+                                                                                >
+                                                                                     {category.name}
+                                                                                </option>
+                                                                           )}
+                                                                           {category.child_id.map(
+                                                                                (id) => {
+                                                                                     const child =
+                                                                                          categories.find(
+                                                                                               (
+                                                                                                    cat,
+                                                                                               ) =>
+                                                                                                    cat.id ===
+                                                                                                    id,
+                                                                                          );
+                                                                                     if (child) {
+                                                                                          return (
+                                                                                               <option
+                                                                                                    value={
+                                                                                                         child.id
+                                                                                                    }
+                                                                                               >
+                                                                                                    -{" "}
+                                                                                                    {_.capitalize(
+                                                                                                         child.name,
+                                                                                                    )}
+                                                                                               </option>
+                                                                                          );
+                                                                                     } else {
+                                                                                          return (
+                                                                                               <></>
+                                                                                          );
+                                                                                     }
+                                                                                },
+                                                                           )}
+                                                                      </>
+                                                                 ))}
                                                             {/* <option value={4}>Fashion</option>
-                                                            <option value={12}>- Women</option>
+                                                           
                                                             <option value={13}>- Men</option>
                                                             <option value={66}>- Jewellery</option>
                                                             <option value={67}>

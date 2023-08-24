@@ -8,12 +8,6 @@ export interface ProductProps {
      oldPrice?: number;
 }
 
-export interface ProductWidgetProps {
-     productImage: StaticImageData;
-     productTitle: string;
-     productPrice: number;
-}
-
 export interface BrowseByCategoryProps {
      imageUrl: StaticImageData | string;
      categoryName: string;
@@ -22,8 +16,8 @@ export interface BrowseByCategoryProps {
 }
 
 export interface ProductWidgetProps {
-     productImage: StaticImageData;
-     productImageTwo: StaticImageData;
+     productImage: string;
+     productImageTwo: string;
      productTitle: string;
      productPrice: number;
 }

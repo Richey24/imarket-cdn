@@ -26,78 +26,82 @@ import product13 from "../../../assets/images/demoes/demo13/products/product-13.
 import product13two from "../../../assets/images/demoes/demo13/products/product-13-2.jpg";
 import product14 from "../../../assets/images/demoes/demo13/products/product-14.jpg";
 import product14two from "../../../assets/images/demoes/demo13/products/product-14-2.jpg";
-import { ProductProps, ProductWidgetProps } from "./types";
+import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
+import client1 from "../../../assets/images/clients/client-1.jpg";
+import client2 from "../../../assets/images/clients/client-2.jpg";
+import client3 from "../../../assets/images/clients/client-3.jpg";
+import { templateImages } from "@/appProvider/templateImages";
 
 export const featuredProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "SHOES, TOYS",
-          productImageUrl: product5,
-          productImageUrlTwo: product5two,
+          productImageUrl: templateImages.demo1.productImages.product5,
+          productImageUrlTwo: templateImages.demo1.productImages.product5,
           productTitle: "Men Gentle Shoes",
           productPrice: 269,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product1,
-          productImageUrlTwo: product1two,
+          productImageUrl: templateImages.demo1.productImages.product1,
+          productImageUrlTwo: templateImages.demo1.productImages.product1,
           productTitle: "Porto Gray Cap",
           productPrice: 29,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product8,
-          productImageUrlTwo: product8two,
+          productImageUrl: templateImages.demo1.productImages.product8,
+          productImageUrlTwo: templateImages.demo1.productImages.product8,
           productTitle: "Porto White Cap",
           productPrice: 101,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product11,
-          productImageUrlTwo: product11two,
+          productImageUrl: templateImages.demo1.productImages.product9,
+          productImageUrlTwo: templateImages.demo1.productImages.product9,
           productTitle: "Winter Towel",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, HEADPHONE",
-          productImageUrl: product9,
-          productImageUrlTwo: product9two,
+          productImageUrl: templateImages.demo1.productImages.product7,
+          productImageUrlTwo: templateImages.demo1.productImages.product7,
           productTitle: "Product Extended",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "SHOES, TOYS",
-          productImageUrl: product10,
-          productImageUrlTwo: product10two,
+          productImageUrl: templateImages.demo1.productImages.product6,
+          productImageUrlTwo: templateImages.demo1.productImages.product6,
           productTitle: "Sports Shoes",
           productPrice: 239,
      },
      {
           productImageAlt: "product",
           productCategory: "TOYS, TROUSERS",
-          productImageUrl: product14,
-          productImageUrlTwo: product14two,
+          productImageUrl: templateImages.demo1.productImages.product3,
+          productImageUrlTwo: templateImages.demo1.productImages.product3,
           productTitle: "Women Bag",
           productPrice: 299,
      },
      {
           productImageAlt: "product",
           productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: product4,
-          productImageUrlTwo: product4two,
+          productImageUrl: templateImages.demo1.productImages.product4,
+          productImageUrlTwo: templateImages.demo1.productImages.product4,
           productTitle: "Men Black Belts",
           productPrice: 55,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, WATCHES",
-          productImageUrl: product12,
-          productImageUrlTwo: product12two,
+          productImageUrl: templateImages.demo1.productImages.product8,
+          productImageUrlTwo: templateImages.demo1.productImages.product8,
           productTitle: "Women Bag",
           productPrice: 199,
      },
@@ -199,4 +203,25 @@ export const topRatedProducts: ProductWidgetProps[] = [
           productPrice: 39,
      },
      // Add more products as needed
+];
+
+export const testimonies: TestimonialProps[] = [
+     {
+          clientImageUrl: templateImages.clientImage.client1,
+          position: "John Smith",
+          title: "CEO, Founder",
+          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+     },
+     {
+          clientImageUrl: templateImages.clientImage.client2,
+          position: "Dae Smith",
+          title: "CEO, Founder",
+          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+     },
+     {
+          clientImageUrl: templateImages.clientImage.client3,
+          position: "John Doe",
+          title: "CEO, Founder",
+          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+     },
 ];

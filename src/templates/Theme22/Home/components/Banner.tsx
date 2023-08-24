@@ -2,7 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { templateImages } from "@/appProvider/templateImages";
 export const Banner = () => {
      return (
-          <section className="intro-section" style={{paddingLeft:'80px', paddingRight:'80px'}}>
+          <section className="intro-section" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
                <div className="container" >
                     <div className="row">
                          <div className="col-lg-9 mb-2">
@@ -47,7 +47,7 @@ export const Banner = () => {
                                                             <a
                                                                  href="demo22-shop.html"
                                                                  className="btn btn-light btn-lg ls-10"
-                                                                 style={{color:'#f14705', fontWeight:'bold'}}
+                                                                 style={{ color: '#f14705', fontWeight: 'bold' }}
                                                             >
                                                                  View All Now
                                                             </a>
@@ -93,7 +93,7 @@ export const Banner = () => {
                                                             <a
                                                                  href="demo22-shop.html"
                                                                  className="btn btn-light btn-lg ls-10"
-                                                                 style={{color:'#f14705', fontWeight:'bold'}}
+                                                                 style={{ color: '#f14705', fontWeight: 'bold' }}
                                                             >
                                                                  View All Now
                                                             </a>
@@ -226,6 +226,20 @@ export const Banner = () => {
                          </div>
                     </div>
                </div>
+
+               <div className="cat-section container position-absolute">
+                    <div style={{ display: "flex", columnGap: "20px" }}>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">ACCESSORIES</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">CAPS</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">DRESS</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">ELECTRONICS</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">FASHION</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">HEADPHONE</a>
+                    </div>
+               </div>
           </section>
-     );
-};
+        </div >
+    )
+}
+
+export default Banner

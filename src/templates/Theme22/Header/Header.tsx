@@ -20,14 +20,14 @@ const Header = () => {
                               height={49}
                          />
                          <div className="notice-content my-2">
-                              <h3 className="d-inline-block font1   mb-0" style={{color:'#188268'}}>
+                              <h3 className="d-inline-block font1   mb-0" style={{ color: '#188268' }}>
                                    PortoPlus X Pro Only
                               </h3>
                               <div className="d-inline-block">
-                                   <span className="d-inline-block skew-box product-price font1 font-weight-bold  " style={{background:'#188268'}}>
+                                   <span className="d-inline-block skew-box product-price font1 font-weight-bold  " style={{ background: '#188268' }}>
                                         $199
                                    </span>
-                                   <span className="d-inline-block font1 old-price   mr-0" style={{color:'#188268'}}>
+                                   <span className="d-inline-block font1 old-price   mr-0" style={{ color: '#188268' }}>
                                         $299
                                    </span>
                               </div>
@@ -332,7 +332,7 @@ const Header = () => {
                     >
                          <div
                               className="container"
-                               
+
                          >
                               <div className="header-center">
                                    <button className="mobile-menu-toggler" type="button">

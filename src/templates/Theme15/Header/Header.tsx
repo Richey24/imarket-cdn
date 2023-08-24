@@ -4,6 +4,7 @@ import menuBanner from "../../../assets/images/menu-banner.jpg";
 import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
+import { templateImages } from "@/appProvider/templateImages";
 const Header = (props: any) => {
      const { company, static: staticProps } = props.props;
      console.log("headerProps", staticProps);
@@ -402,7 +403,7 @@ const Header = (props: any) => {
                          <div className="header-left">
                               <a href="demo15.html" className="logo">
                                    <Image
-                                        src={logo}
+                                        src={templateImages.logoImage.logo1}
                                         className="white-logo sticky-logo"
                                         alt="Porto Logo"
                                         width={110}
@@ -554,7 +555,11 @@ const Header = (props: any) => {
                                                             <div className="menu-banner">
                                                                  <figure>
                                                                       <Image
-                                                                           src={menuBanner}
+                                                                           src={
+                                                                                templateImages
+                                                                                     .allBannerImage
+                                                                                     .banner2
+                                                                           }
                                                                            alt="Menu banner"
                                                                            width={380}
                                                                            height={790}
@@ -728,7 +733,11 @@ const Header = (props: any) => {
                                                                                 objectPosition:
                                                                                      "center 80%",
                                                                            }}
-                                                                           src={menuBanner1}
+                                                                           src={
+                                                                                templateImages
+                                                                                     .allBannerImage
+                                                                                     .banner1
+                                                                           }
                                                                            alt="Menu banner"
                                                                            className="product-prom"
                                                                            width={380}
