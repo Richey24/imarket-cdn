@@ -4,6 +4,8 @@ import product9 from "../../../assets/images/demoes/demo15/products/product-9.jp
 import product3 from "../../../assets/images/demoes/demo15/products/product-3.jpg";
 import product6 from "../../../assets/images/demoes/demo15/products/product-6.jpg";
 import payments from "../../../assets/images/demoes/demo15/payment-icon.png";
+import { templateImages } from "@/appProvider/templateImages";
+import Payments from "./Payments";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
@@ -18,7 +20,7 @@ const Footer = (props: any) => {
                                         <h4 className="widget-title">About Us</h4>
                                         <a href="demo15.html" className="logo mb-2">
                                              <Image
-                                                  src={logo}
+                                                  src={templateImages.logoImage.logo2}
                                                   className="m-b-3"
                                                   width={110}
                                                   height={46}
@@ -102,7 +104,10 @@ const Footer = (props: any) => {
                                              <figure>
                                                   <a href="demo15-product.html">
                                                        <Image
-                                                            src={product9}
+                                                            src={
+                                                                 templateImages.demo15.productImages
+                                                                      .product9
+                                                            }
                                                             width={95}
                                                             height={95}
                                                             alt="product"
@@ -135,7 +140,10 @@ const Footer = (props: any) => {
                                              <figure>
                                                   <a href="demo15-product.html">
                                                        <Image
-                                                            src={product6}
+                                                            src={
+                                                                 templateImages.demo15.productImages
+                                                                      .product6
+                                                            }
                                                             width={95}
                                                             height={95}
                                                             alt="product"
@@ -166,7 +174,10 @@ const Footer = (props: any) => {
                                              <figure>
                                                   <a href="demo15-product.html">
                                                        <Image
-                                                            src={product3}
+                                                            src={
+                                                                 templateImages.demo15.productImages
+                                                                      .product3
+                                                            }
                                                             width={95}
                                                             height={95}
                                                             alt="product"
@@ -293,9 +304,7 @@ const Footer = (props: any) => {
                               © Porto eCommerce. 2021. All Rights Reserved
                          </p>
                          <div className="footer-right mt-1 mt-sm-0">
-                              <div className="payment-icons mr-0">
-                                   <Image src={payments} alt="" />
-                              </div>
+                              <Payments />
                          </div>
                     </div>
                     {/* End .footer-bottom */}
