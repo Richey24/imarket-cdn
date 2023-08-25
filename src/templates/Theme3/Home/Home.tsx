@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
-import { Carousel } from "react-bootstrap";
 import Slider from "react-slick";
 import { Product } from "./components/Product";
 import { Promotion } from "./components/Promotion";
-import { featuredProducts, promotions, shopByCategories } from "./data";
-import Image from "next/image";
-import slide1 from "../../../assets/images/demoes/demo3/slider/slide1.jpg";
-import slide2 from "../../../assets/images/demoes/demo3/slider/slide2.jpg";
+import { promotions, shopByCategories } from "./data";
 import Banner from "./components/Banner";
 import ShopByCategory from "./components/ShopByCategory";
-import { InfoBox } from "@react-google-maps/api";
-import { InfoBoxesContainer } from "./components/Info";
 
 export const Home = (props: any) => {
      let settings = {

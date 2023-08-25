@@ -1,10 +1,5 @@
 import Image from "next/image";
-import Cat1 from "../../../../assets/images/demoes/demo20/products/categories/cat-1.jpg";
-import Cat2 from "../../../../assets/images/demoes/demo20/products/categories/cat-2.jpg";
-import Cat3 from "../../../../assets/images/demoes/demo20/products/categories/cat-3.jpg";
-import Cat4 from "../../../../assets/images/demoes/demo20/products/categories/cat-4.jpg";
-import Cat5 from "../../../../assets/images/demoes/demo20/products/categories/cat-5.jpg";
-import Cat6 from "../../../../assets/images/demoes/demo20/products/categories/cat-6.jpg";
+import { templateImages } from "@/appProvider/templateImages";
 
 export const FeaturedCategories = () => {
     return (
@@ -24,7 +19,7 @@ export const FeaturedCategories = () => {
                                           <a href="demo20-shop.html">
                                                <figure>
                                                     <Image
-                                                         src={Cat1}
+                                                         src={templateImages.demo20.categoryImages.category1}
                                                          alt="category"
                                                          width={280}
                                                          height={240}
@@ -46,7 +41,7 @@ export const FeaturedCategories = () => {
                                           <a href="demo20-shop.html">
                                                <figure>
                                                     <Image
-                                                         src={Cat2}
+                                                         src={templateImages.demo20.categoryImages.category2}
                                                          alt="category"
                                                          width={580}
                                                          height={240}
@@ -68,7 +63,7 @@ export const FeaturedCategories = () => {
                                           <a href="demo20-shop.html">
                                                <figure>
                                                     <Image
-                                                         src={Cat3}
+                                                         src={templateImages.demo20.categoryImages.category3}
                                                          alt="category"
                                                          width={280}
                                                          height={240}
@@ -90,7 +85,7 @@ export const FeaturedCategories = () => {
                                           <a href="demo20-shop.html">
                                                <figure>
                                                     <Image
-                                                         src={Cat4}
+                                                         src={templateImages.demo20.categoryImages.category4}
                                                          alt="category"
                                                          width={380}
                                                          height={240}
@@ -112,7 +107,7 @@ export const FeaturedCategories = () => {
                                           <a href="demo20-shop.html">
                                                <figure>
                                                     <Image
-                                                         src={Cat5}
+                                                         src={templateImages.demo20.categoryImages.category5}
                                                          alt="category"
                                                          width={280}
                                                          height={240}
@@ -134,7 +129,7 @@ export const FeaturedCategories = () => {
                                           <a href="demo20-shop.html">
                                                <figure>
                                                     <Image
-                                                         src={Cat6}
+                                                         src={templateImages.demo20.categoryImages.category6}
                                                          alt="category"
                                                          width={480}
                                                          height={240}

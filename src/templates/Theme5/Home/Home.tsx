@@ -34,10 +34,13 @@ export const Home = (props: any) => {
      }, [products]);
 
      return (
-          <main style={{ backgroundColor: "#F6F7F9", paddingBottom: "10px" }} className="main home">
-               {/* <Banner /> */}
+          <main
+               style={{ backgroundColor: "#F6F7F9", paddingBottom: "10px" }}
+               className="main home container"
+          >
+               <Banner slides={statiProps?.banner ?? []} />
                <Card />
-               <MiniBanner />
+               <MiniBanner dealsBanner={statiProps?.dealsBanner || []} />
                <Product setQuickView={setQuick} products={latestProductsState} />
                <Info />
                <ProductWidget quickView={quickView} />

@@ -42,7 +42,7 @@ export const Home = (props: any) => {
                          <SideMenu />
 
                          <div className="col-lg-9">
-                              <Banner slides={statiProps?.banner ?? []}/>
+                              <Banner slides={statiProps?.banner ?? []} />
                          </div>
                     </div>
                     <InfoBoxesContainer />

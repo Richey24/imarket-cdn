@@ -19,7 +19,7 @@ export interface ProductWidgetProps {
 }
 
 export interface TestimonialProps {
-     clientImageUrl: StaticImageData;
+     clientImageUrl: StaticImageData | string;
      title: string;
      position: string;
      message: string;

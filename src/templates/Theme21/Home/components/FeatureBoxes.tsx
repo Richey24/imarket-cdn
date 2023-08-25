@@ -2,10 +2,7 @@ import React from "react";
 
 export const FeatureBoxes = () => {
      return (
-          <div
-               className="feature-boxes-container bg-gray"
-               style={{ paddingRight: "80px", paddingLeft: "80px" }}
-          >
+          <div className="feature-boxes-container bg-gray">
                <div className="container">
                     <div className="row">
                          <div className="col-md-4">

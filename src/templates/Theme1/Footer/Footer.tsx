@@ -1,13 +1,10 @@
 import Image from "next/image";
-import LogoFooter from "../../../assets/images/logo-footer.png";
-import logo from "../../../assets/images/logo.png";
 import Link from "next/link";
+import { templateImages } from "@/appProvider/templateImages";
+import Payments from "./Payments";
 
-import VisaPayment from "../../../assets/images/payments.png";
-
-const Footer = (props: any) => {
+const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
-
      return (
           <footer className="footer bg-dark position-relative">
                <div className="footer-middle">
@@ -20,7 +17,10 @@ const Footer = (props: any) => {
                                         <h4 className="widget-title">About Us</h4>
                                         <Link href="demo1.html">
                                              <Image
-                                                  src={company?.logo}
+                                                  src={
+                                                       company?.logo ||
+                                                       templateImages.logoImage.logo2
+                                                  }
                                                   width={80}
                                                   height={80}
                                                   alt="Logo"
@@ -150,13 +150,7 @@ const Footer = (props: any) => {
                          </div>
 
                          <div className="footer-right ml-auto mt-1 mt-sm-0">
-                              <div className="payment-icons">
-                                   <Image src={VisaPayment} alt="" width={270} height={80} />
-                                   {/* <span className="payment-icon visa" style={{backgroundImage: `url(${VisaPayment})`}}></span>
-                    <span className="payment-icon paypal" style={{backgroundImage: "url(assets/images/payments/payment-paypal.svg)"}}></span>
-                    <span className="payment-icon stripe" style={{backgroundImage:"url(assets/images/payments/payment-stripe.png)"}}></span>
-                    <span className="payment-icon verisign" style={{backgroundImage:  "url(assets/images/payments/payment-verisign.svg)"}}></span> */}
-                              </div>
+                              <Payments />
                          </div>
                     </div>
                </div>

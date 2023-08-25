@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 export const Card = () => {
+     const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
           infinite: true,
@@ -10,10 +11,7 @@ export const Card = () => {
           beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
-          <section
-               className="cat-section bg-gray"
-               style={{ paddingRight: "80px", paddingLeft: "80px" }}
-          >
+          <section className="cat-section bg-gray">
                <div className="container">
                     <div className="row categories-slider owl-carousel owl-theme owl-loaded owl-drag animated fadeIn appear-animation-visible">
                          <Slider {...settings}>

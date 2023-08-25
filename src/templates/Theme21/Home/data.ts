@@ -1,391 +1,380 @@
-import product1 from "../../../assets/images/demoes/demo21/products/special/product-1.jpg";
-import product2 from "../../../assets/images/demoes/demo21/products/special/product-2.jpg";
-import subproduct2 from "../../../assets/images/demoes/demo21/products/special/product-2-2.jpg";
-import product3 from "../../../assets/images/demoes/demo21/products/special/product-3.jpg";
-import product4 from "../../../assets/images/demoes/demo21/products/special/product-4.jpg";
-import product5 from "../../../assets/images/demoes/demo21/products/special/product-5.jpg";
-import subproduct5 from "../../../assets/images/demoes/demo21/products/special/product-5-2.jpg";
-import product6 from "../../../assets/images/demoes/demo21/products/special/product-6.jpg";
-import subproduct6 from "../../../assets/images/demoes/demo21/products/special/product-6-2.jpg";
-import product7 from "../../../assets/images/demoes/demo21/products/special/product-7.jpg";
-import product8 from "../../../assets/images/demoes/demo21/products/special/product-8.jpg";
-import product9 from "../../../assets/images/demoes/demo21/products/special/product-9.jpg";
-import product10 from "../../../assets/images/demoes/demo21/products/special/product-10.jpg";
-import product12 from "../../../assets/images/demoes/demo21/products/special/product-12.jpg";
-import subproduct12 from "../../../assets/images/demoes/demo21/products/special/product-12-2.jpg";
-import product13 from "../../../assets/images/demoes/demo21/products/special/product-13.jpg";
-import subproduct13 from "../../../assets/images/demoes/demo21/products/special/product-13-2.jpg";
-import product14 from "../../../assets/images/demoes/demo21/products/special/product-14.jpg";
-import product11 from "../../../assets/images/demoes/demo21/products/special/product-11.jpg";
-import subproduct14 from "../../../assets/images/demoes/demo21/products/special/product-14-2.jpg";
-import SubProduct8 from "../../../assets/images/demoes/demo21/products/product-8-2.jpg";
-import brand1 from "../../../assets/images/demoes/demo21/brands/brand1.png";
-import brand2 from "../../../assets/images/demoes/demo21/brands/brand2.png";
-import brand3 from "../../../assets/images/demoes/demo21/brands/brand3.png";
-import brand4 from "../../../assets/images/demoes/demo21/brands/brand4.png";
-
+ 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
+import { templateImages } from "@/appProvider/templateImages";
 
-export const featuredProducts: ProductProps[] = [
+export const featuredProducts = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product1,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special1,
+          productImageUrlTwo: '',
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: '',
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product3,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special3,
+          productImageUrlTwo: '',
           productTitle: "Battery Charger",
           productPrice: 259,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product4,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special4,
+          productImageUrlTwo: '',
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product5,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special5,
+          productImageUrlTwo: '',
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product6,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special6,
+          productImageUrlTwo:  '',
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
 ];
-export const newArrivalsProducts: ProductProps[] = [
+export const newArrivalsProducts = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product7,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special7,
+          productImageUrlTwo: '',
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product1,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special1,
+          productImageUrlTwo: '',
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product2,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: '',
           productTitle: "Battery Charger",
           productPrice: 259,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product8,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special8,
+          productImageUrlTwo:  '',
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product7,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special7,
+          productImageUrlTwo: '',
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product9,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special9,
+          productImageUrlTwo: '',
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
 ];
-export const bestsellersProducts: ProductProps[] = [
+export const bestsellersProducts = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product1,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special1,
+          productImageUrlTwo:templateImages.demo21.specialImage.special2,
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special1,
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product3,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special3,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Battery Charger",
           productPrice: 259,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product4,
-          productImageUrlTwo: product1,
+          productImageUrl: templateImages.demo21.specialImage.special4,
+          productImageUrlTwo: templateImages.demo21.specialImage.special1,
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
 ];
-export const audiospeakers: ProductProps[] = [
+export const audiospeakers  = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product5,
-          productImageUrlTwo: subproduct5,
+          productImageUrl: templateImages.demo21.specialImage.special5,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: " Black Grey Headset",
           productPrice: 39.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special1,
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product3,
-          productImageUrlTwo: product2,
+          productImageUrl: templateImages.demo21.specialImage.special3,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Computer Mouse",
           productPrice: 259,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product6,
-          productImageUrlTwo: subproduct6,
+          productImageUrl: templateImages.demo21.specialImage.special6,
+          productImageUrlTwo: templateImages.demo21.specialImage.special3,
           productTitle: "Digital Camera 16x",
           productPrice: 101.0,
      },
 ];
-export const cameras: ProductProps[] = [
+export const cameras  = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product5,
-          productImageUrlTwo: subproduct5,
+          productImageUrl: templateImages.demo21.specialImage.special5,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: " Black Grey Headset",
           productPrice: 39.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special3,
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product6,
-          productImageUrlTwo: subproduct6,
+          productImageUrl: templateImages.demo21.specialImage.special6,
+          productImageUrlTwo: templateImages.demo21.specialImage.special5,
           productTitle: "Digital Camera 16x",
           productPrice: 101.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product7,
-          productImageUrlTwo: subproduct6,
+          productImageUrl: templateImages.demo21.specialImage.special7,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Porto Extended Camera",
           productPrice: 599.0,
      },
 ];
 
-export const lamps: ProductProps[] = [
+export const lamps  = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product8,
-          productImageUrlTwo: product9,
+          productImageUrl: templateImages.demo21.specialImage.special8,
+          productImageUrlTwo: templateImages.demo21.specialImage.special9,
           productTitle: "  Brown Bag",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product9,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special9,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Casual Note Bag",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product10,
-          productImageUrlTwo: product8,
+          productImageUrl: templateImages.demo21.specialImage.special10,
+          productImageUrlTwo: templateImages.demo21.specialImage.special8,
           productTitle: " Laptop Case Bag",
           productPrice: 1999.0,
      },
 ];
-export const computers: ProductProps[] = [
+export const computers  = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
-          productImageUrl: product11,
-          productImageUrlTwo: subproduct5,
+          productImageUrl: templateImages.demo21.specialImage.special11,
+          productImageUrlTwo: templateImages.demo21.specialImage.special5,
           productTitle: " 1080p Wifi Ip Camera",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product4,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special4,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Battery Charger",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product5,
-          productImageUrlTwo: subproduct5,
+          productImageUrl: templateImages.demo21.specialImage.special5,
+          productImageUrlTwo: templateImages.demo21.specialImage.special4,
           productTitle: " Black Grey Headset",
           productPrice: 29.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special3,
           productTitle: " Blue Backpack",
           productPrice: 299.0,
      },
 ];
-export const mobilephones: ProductProps[] = [
+export const mobilephones  = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special3,
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product12,
-          productImageUrlTwo: subproduct12,
+          productImageUrl: templateImages.demo21.specialImage.special12,
+          productImageUrlTwo: templateImages.demo21.specialImage.special9,
           productTitle: "Black Porto Men Shoes",
           productPrice: 111.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product13,
-          productImageUrlTwo: subproduct13,
+          productImageUrl: templateImages.demo21.specialImage.special13,
+          productImageUrlTwo: templateImages.demo21.specialImage.special12,
           productTitle: "  Sports Shoes",
           productPrice: 101.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product14,
-          productImageUrlTwo: subproduct14,
+          productImageUrl: templateImages.demo21.specialImage.special14,
+          productImageUrlTwo: templateImages.demo21.specialImage.special3,
           productTitle: " Casual Blue Shoes",
           productPrice: 101.0,
      },
 ];
-export const topRatedProduct: ProductProps[] = [
+export const topRatedProduct = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: " Casual Blue Shoes",
           productPrice: 101.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product12,
-          productImageUrlTwo: subproduct12,
+          productImageUrl: templateImages.demo21.specialImage.special12,
+          productImageUrlTwo: templateImages.demo21.specialImage.special12,
           productTitle: "1080p Wifi IP Camera",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product13,
-          productImageUrlTwo: subproduct13,
+          productImageUrl: templateImages.demo21.specialImage.special13,
+          productImageUrlTwo: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
      },
 ];
-export const topSellingProduct: ProductProps[] = [
+export const topSellingProduct  = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product2,
-          productImageUrlTwo: subproduct2,
-          productTitle: " Casual Blue Shoesk",
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
+          productTitle: " Casual Blue Shoes",
           productPrice: 101.0,
      },
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
-          productImageUrl: product12,
-          productImageUrlTwo: subproduct12,
+          productImageUrl: templateImages.demo21.specialImage.special12,
+          productImageUrlTwo: templateImages.demo21.specialImage.special12,
           productTitle: "1080p Wifi IP Camera",
           productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product13,
-          productImageUrlTwo: subproduct13,
+          productImageUrl: templateImages.demo21.specialImage.special13,
+          productImageUrlTwo: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
      },
 ];
-export const brandsImage = [
+ 
+export const onSaleProduct  = [
      {
-          image: brand1,
+          productImageAlt: "product",
+          productCategory: "CAPS, DRESS",
+          productImageUrl: templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
+          productTitle: " Casual Blue Shoes",
+          productPrice: 101.0,
      },
      {
-          image: brand2,
+          productImageAlt: "product",
+          productCategory: "CAPS, DRESS",
+          productImageUrl: templateImages.demo21.specialImage.special12,
+          productImageUrlTwo: templateImages.demo21.specialImage.special12,
+          productTitle: "1080p Wifi IP Camera",
+          productPrice: 299.0,
      },
      {
-          image: brand3,
-     },
-     {
-          image: brand4,
+          productImageAlt: "product",
+          productCategory: "DRESS, T-SHIRTS",
+          productImageUrl: templateImages.demo21.specialImage.special13,
+          productImageUrlTwo: templateImages.demo21.specialImage.special13,
+          productTitle: "  Blue BackPack",
+          productPrice: 299.0,
      },
 ];

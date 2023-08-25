@@ -8,7 +8,7 @@ const Footer = (props: any) => {
                <div className="footer">
                     <div
                          className="footer-top"
-                         style={{ paddingLeft: "80px", paddingRight: "80px" }}
+
                     >
                          <div className="container">
                               <div className="row align-items-center">
@@ -48,7 +48,7 @@ const Footer = (props: any) => {
                     </div>
                     <div
                          className="container"
-                         style={{ paddingLeft: "80px", paddingRight: "80px" }}
+
                     >
                          <div className="footer-middle">
                               <div className="row">
@@ -179,7 +179,7 @@ const Footer = (props: any) => {
                               </div>
                          </div>
                     </div>
-                    {/* End .footer-bottom */}
+
                </div>
           </footer>
      );

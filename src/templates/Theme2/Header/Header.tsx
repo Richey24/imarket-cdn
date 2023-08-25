@@ -133,7 +133,7 @@ const Header = (props: any) => {
                               <button className="mobile-menu-toggler mr-2" type="button">
                                    <i className="fas fa-bars"></i>
                               </button>
-                              <Link href="demo2.html" className="logo">
+                              <Link href="/" className="logo">
                                    {company?.logo ? (
                                         <Image
                                              src={company?.logo}
@@ -234,7 +234,7 @@ const Header = (props: any) => {
                                    />
                                    <h6>
                                         Call us now
-                                        <Link href="tel:#" className="font1">
+                                        <Link href={`tel:${company?.phone}`} className="font1">
                                              {company?.phone}
                                         </Link>
                                    </h6>
@@ -503,28 +503,44 @@ const Header = (props: any) => {
                                              <div className="select-custom">
                                                   <select id="cat" name="cat">
                                                        <option value="">All Categories</option>
-                                                       <option value="4">Fashion</option>
-                                                       <option value="12">- Women</option>
-                                                       <option value="13">- Men</option>
-                                                       <option value="66">- Jewellery</option>
-                                                       <option value="67">- Kids Fashion</option>
-                                                       <option value="5">Electronics</option>
-                                                       <option value="21">- Smart TVs</option>
-                                                       <option value="22">- Cameras</option>
-                                                       <option value="63">- Games</option>
-                                                       <option value="7">Home &amp; Garden</option>
-                                                       <option value="11">Motors</option>
-                                                       <option value="31">- Cars and Trucks</option>
-                                                       <option value="32">
-                                                            - Motorcycles &amp; Powersports
-                                                       </option>
-                                                       <option value="33">
-                                                            - Parts &amp; Accessories
-                                                       </option>
-                                                       <option value="34">- Boats</option>
-                                                       <option value="57">
-                                                            - Auto Tools &amp; Supplies
-                                                       </option>
+                                                       {categories &&
+                                                            categories.map((category) => (
+                                                                 <>
+                                                                      {!category.parent_id && (
+                                                                           <option
+                                                                                value={category.id}
+                                                                           >
+                                                                                {category.name}
+                                                                           </option>
+                                                                      )}
+                                                                      {category.child_id.map(
+                                                                           (id) => {
+                                                                                const child =
+                                                                                     categories.find(
+                                                                                          (cat) =>
+                                                                                               cat.id ===
+                                                                                               id,
+                                                                                     );
+                                                                                if (child) {
+                                                                                     return (
+                                                                                          <option
+                                                                                               value={
+                                                                                                    child.id
+                                                                                               }
+                                                                                          >
+                                                                                               -{" "}
+                                                                                               {_.capitalize(
+                                                                                                    child.name,
+                                                                                               )}
+                                                                                          </option>
+                                                                                     );
+                                                                                } else {
+                                                                                     return <></>;
+                                                                                }
+                                                                           },
+                                                                      )}
+                                                                 </>
+                                                            ))}
                                                   </select>
                                              </div>
                                              {/*End .select-custom */}

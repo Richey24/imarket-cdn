@@ -6,8 +6,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 const Banner = ({ slides }) => {
-     const [currentSlide, setCurrentSlide] = useState(0);
-
      const mappedSlides = slides.map((slide: any) => ({
           background: "#555",
           imageSrc: slide?.imageUrl !== "" ? slide?.imageUrl : slide1,
@@ -51,7 +49,7 @@ const Banner = ({ slides }) => {
                                    <h5 className="text-uppercase">
                                         Starting at
                                         <span className="coupon-sale-text">
-                                             <sup>$</sup>199<sup> {slide.price}</sup>
+                                             <sup>$</sup> {slide.price}
                                         </span>
                                    </h5>
                                    <Link
