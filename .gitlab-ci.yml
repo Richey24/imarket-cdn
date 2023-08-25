@@ -13,7 +13,7 @@ format:
   before_script:
     - yarn install --frozen-lockfile
   script:
-    -yarn run format:fix 
+    - yarn run format:fix 
   only:
     - merge_requests
     - main 
