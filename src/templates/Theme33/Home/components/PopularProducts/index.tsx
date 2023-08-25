@@ -2,7 +2,8 @@ import Product from "@/app/components/Product";
 import ProductWidget from "@/app/components/Product/ProductWidget";
 import ProductList from "@/app/components/ProductList";
 import { templateImages } from "@/appProvider/templateImages";
-import { topRatedProducts } from "@/templates/Theme1/Home/data";
+import { topRatedProducts } from "@/templates/Theme13/Home/data";
+// import { TopRatedProducts } from "@/templates/Theme12/Home/data";
 import React from "react";
 
 export default function PopularProducts() {

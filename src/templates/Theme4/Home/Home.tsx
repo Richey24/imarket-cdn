@@ -1,8 +1,6 @@
 import React from "react";
 import Banner from "./components/Banner";
 import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
-import Slider from "react-slick";
-import Image from "next/image";
 import { InfoBoxesContainer } from "./components/Info";
 import SmallBoxes from "./components/smallBoxes";
 import {
@@ -13,25 +11,15 @@ import {
      newArrivalData,
      productsData,
      slidesData,
+     smallBoxData,
      topRatedWidget,
 } from "./data";
 import FeaturedProductsSection from "./components/FeaturedProduct";
 import CategoriesSlider from "./components/CategoriesSlider";
-import Post from "./components/Post";
 import { ProductWidget } from "./components/ProductWidget";
+import { templateImages } from "@/appProvider/templateImages";
 
 const Home = () => {
-     let settings = {
-          // dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: true,
-          swipeToSlide: true,
-          arrows: true,
-          accessibility: true,
-     };
      return (
           <div className="page-wrapper">
                <main className="main">
@@ -39,7 +27,7 @@ const Home = () => {
                          <Banner slides={slidesData} />
                     </div>
                     <InfoBoxesContainer />
-                    <SmallBoxes />
+                    <SmallBoxes banners={smallBoxData} />
                     <FeaturedProductsSection
                          products={[...productsData]}
                          section="Featured Products"
@@ -55,8 +43,7 @@ const Home = () => {
                                    data-animation-delay={200}
                                    data-animation-name="fadeInUpShorter"
                                    style={{
-                                        background:
-                                             '#2A95CB center/cover url("assets/images/demoes/demo4/banners/banner-4.jpg")',
+                                        background: `#2A95CB center/cover url(${templateImages.demo4.bannerImage.banner4})`,
                                    }}
                               >
                                    <div className="banner-content row align-items-center mx-0">
@@ -163,6 +150,9 @@ const Home = () => {
                          className="promo-section bg-dark"
                          data-parallax="{'speed': 2, 'enableOnMobile': true}"
                          data-image-src={Banner5}
+                         style={{
+                              backgroundImage: `url(${templateImages.demo4.bannerImage.banner5})`,
+                         }}
                     >
                          <div className="promo-banner banner container text-uppercase">
                               <div className="banner-content row align-items-center text-center">
@@ -223,10 +213,10 @@ const Home = () => {
                                         {featuredProductWidget.map((product, index) => (
                                              <ProductWidget
                                                   key={index}
-                                                  productImage={product.image1}
+                                                  productImage={product.imageUrl1}
                                                   productTitle={product.title}
                                                   productPrice={product.price}
-                                                  productImageTwo={product.image2}
+                                                  productImageTwo={product.imageUrl2}
                                              />
                                         ))}
                                    </div>
@@ -239,10 +229,10 @@ const Home = () => {
                                         {bestSellingWidget.map((product, index) => (
                                              <ProductWidget
                                                   key={index}
-                                                  productImage={product.image1}
+                                                  productImage={product.imageUrl1}
                                                   productTitle={product.title}
                                                   productPrice={product.price}
-                                                  productImageTwo={product.image2}
+                                                  productImageTwo={product.imageUrl2}
                                              />
                                         ))}
                                    </div>
@@ -255,10 +245,10 @@ const Home = () => {
                                         {latestproductWidget.map((product, index) => (
                                              <ProductWidget
                                                   key={index}
-                                                  productImage={product.image1}
+                                                  productImage={product.imageUrl1}
                                                   productTitle={product.title}
                                                   productPrice={product.price}
-                                                  productImageTwo={product.image2}
+                                                  productImageTwo={product.imageUrl2}
                                              />
                                         ))}
                                    </div>
@@ -271,10 +261,10 @@ const Home = () => {
                                         {topRatedWidget.map((product, index) => (
                                              <ProductWidget
                                                   key={index}
-                                                  productImage={product.image1}
+                                                  productImage={product.imageUrl1}
                                                   productTitle={product.title}
                                                   productPrice={product.price}
-                                                  productImageTwo={product.image2}
+                                                  productImageTwo={product.imageUrl2}
                                              />
                                         ))}
                                    </div>

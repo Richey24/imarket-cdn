@@ -1,7 +1,5 @@
 import { theme1TemplateConfig } from "./theme1";
 import { theme2TemplateConfig } from "./theme2";
-import { theme5TemplateConfig } from "./theme5";
-import { theme6TemplateConfig } from "./theme6";
 import { theme3TemplateConfig } from "./theme3";
 import { theme20TemplateConfig } from "./theme20";
 import { theme21TemplateConfig } from "./theme21";
@@ -12,6 +10,13 @@ import { theme14TemplateConfig } from "./theme14";
 import { theme7TemplateConfig } from "./theme7";
 import { theme8TemplateConfig } from "./theme8";
 import { theme9TemplateConfig } from "./theme9";
+// import { theme10TemplateConfig } from "./theme10";
+// import { theme11TemplateConfig } from "./theme11";
+import { theme12TemplateConfig } from "./theme12";
+import { theme13TemplateConfig } from "./theme13";
+import { theme15TemplateConfig } from "./theme15";
+import theme18TemplateConfig from "./theme18";
+ 
 import { theme30TemplateConfig } from "./theme30";
 import { theme31TemplateConfig } from "./theme31";
 import { theme32TemplateConfig } from "./theme32";
@@ -27,10 +32,17 @@ import theme41TemplateConfig from "./theme41";
 import theme42TemplateConfig from "./theme42";
 import { theme16TemplateConfig } from "./theme16";
 import { theme23TemplateConfig } from "./theme23";
+import { theme17TemplateConfig } from "./theme17";
+import { theme19TemplateConfig } from "./theme19";
+import { theme25TemplateConfig } from "./theme25";
+import { theme5TemplateConfig } from "./theme5";
+
+// import { theme6TemplateConfig } from "./themex-2";
 
 // Theme5 demo1
 // Theme6 demo2
 // Theme7 demo3
+// Theme15 demo15
 export const templateConfig: any = {
      theme1: theme1TemplateConfig,
      theme2: theme2TemplateConfig,
@@ -64,7 +76,8 @@ export const templateConfig: any = {
 };
 
 export const cssImports = {
-     theme1: "demo13",
+     theme1: "demo1",
+     theme3: "demo3",
      theme2: "demo2",
      theme4: "demo4",
      theme5: "demo5",

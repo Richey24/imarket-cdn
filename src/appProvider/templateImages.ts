@@ -234,6 +234,10 @@ export const templateImages = {
         team3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-3.jpg",
         team4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-4.jpg",
     },
+    menuBanner: {
+        menu1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner.jpg",
+        menu2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner-1.jpg",
+    },
     demo1: {
         productImages: {
             product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-1.jpg",
@@ -1165,7 +1169,7 @@ export const templateImages = {
             "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-6.jpg",
             "smallImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-7.jpg",
             "smallImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-8.jpg",
-             "smallImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-9.jpg"
+            "smallImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-product/small-images/product-9.jpg"
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo13-slide.jpg",
@@ -1211,7 +1215,7 @@ export const templateImages = {
             "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/2.jpg",
             "smallImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/3.jpg",
             "smallImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/4.jpg",
-             "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/5.jpg",
+            "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/5.jpg",
             "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/small-images/6.jpg"
         },
         zoomImages: {
@@ -1369,7 +1373,7 @@ export const templateImages = {
             team4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/team/4.jpg",
             team5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/team/5.jpg",
         },
-          bgImages: {
+        bgImages: {
             bg1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-2.jpg",
             bg2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-3.jpg",
             bg3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-4.jpg",
@@ -1378,7 +1382,7 @@ export const templateImages = {
             bg6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-7.jpg",
             bg7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo16-product/bgImages/bg-8.jpg",
         }
-    }, 
+    },
     demo17: {
         productImages: {
             "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo17-product/product-1.jpg",
@@ -1643,7 +1647,7 @@ export const templateImages = {
             "zoomImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/zoom/product-2.jpg",
             "zoomImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/zoom/product-3.jpg",
             "zoomImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/zoom/product-4.jpg"
-         },
+        },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-slide.jpg",
             banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo20-product/banner/banner-1.jpg",
@@ -1805,7 +1809,7 @@ export const templateImages = {
             "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/small-images/product-2.jpg"
         },
         zoomImages: {
-             "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-1-big.jpg",
+            "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-1-big.jpg",
             "zoomImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-2-big.jpg",
             "zoomImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-3-big.jpg",
             "zoomImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/zoom/product-1.jpg",
@@ -1832,7 +1836,7 @@ export const templateImages = {
         sliderImage: {
             slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide1.jpg",
             slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide2.jpg",
-             slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide3.jpg",
+            slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide3.jpg",
             slide4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo22-product/slider/home_slide4.jpg",
         },
         vendorImage: {
@@ -2567,7 +2571,6 @@ export const templateImages = {
             "category2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-2.png",
             "category3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-3.png",
             "category4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-4.png",
-            "category5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-product/categories/cat-5.png"
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo35-slide.jpg",

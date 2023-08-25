@@ -17,10 +17,20 @@ export const MiniBanner: React.FC<MiniBannerProps> = ({
      return (
           <div
                className="banner banner-md-vw-large banner-sm-vw-large mb-2"
-               style={{ backgroundColor }}
+               style={{
+                    backgroundColor,
+                    maxHeight: 135,
+                    overflow: "hidden",
+               }}
           >
                <figure>
-                    <Image src={src} alt="banner" width={264} height={133} />
+                    <Image
+                         src={src}
+                         alt="banner"
+                         width={264}
+                         style={{ maxHeight: "100%", height: "100%" }}
+                         height={133}
+                    />
                </figure>
                <div className="banner-layer banner-layer-middle text-right">
                     <h3 className="m-b-2">{title}</h3>

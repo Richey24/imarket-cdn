@@ -1,35 +1,20 @@
-import React, { useState } from "react";
-import { FaPhoneAlt, FaShoppingCart, FaHeart, FaUser } from "react-icons/fa";
-import product3 from "../../../assets/images/products/product-3.jpg";
-import product2 from "../../../assets/images/products/product-2.jpg";
-import product1 from "../../../assets/images/products/product-1.jpg";
-import menuBanner from "../../../assets/images/menu-banner.jpg";
-import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
-
-import phone from "../../../assets/images/phone.png";
 import Image from "next/image";
-import logoBlack from "../../../assets/images/logo-black.png";
-import logoWhite from "../../../assets/images/logo-white.png";
-import stickyLogo from "../../../assets/images/sticky-logo.png";
-import Link from "next/link";
+import logo from "../../../assets/images/logo.png";
+import { templateImages } from "@/appProvider/templateImages";
 
-export default function Header(props: any) {
-     const { company, static: staticProps } = props.props;
-     const [activeMenuId, setActiveMenuId] = useState(0);
-
-     console.log("headerProps", staticProps);
+const Header = (props: any): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
-          <div style={{ width: "100%" }}>
-               <div className="top-notice text-white bg-secondary">
+          <div>
+               <div className="top-notice text-white bg-dark">
                     <div className="container text-center">
                          <h5 className="d-inline-block mb-0">
-                              Get Up to
-                              <b>40% OFF</b> New-Season Styles
+                              Get Up to <b>40% OFF</b> New-Season Styles
                          </h5>
-                         <a href="category.html" className="category">
+                         <a href="demo1-shop.html" className="category">
                               MEN
                          </a>
-                         <a href="category.html" className="category">
+                         <a href="demo1-shop.html" className="category">
                               WOMEN
                          </a>
                          <small>* Limited time only.</small>
@@ -37,34 +22,37 @@ export default function Header(props: any) {
                               ×
                          </button>
                     </div>
+                    {/* End .container */}
                </div>
-               <header className="header">
-                    <div className="header-top">
+               {/* End .top-notice */}
+
+               <header className="header home">
+                    <div className="header-top bg-primary text-uppercase">
                          <div className="container">
-                              <div className="header-left header-dropdowns">
-                                   <div className="header-dropdown lang-menu">
-                                        <a href="#">
-                                             <i className="flag-us flag" />
-                                             ENG
+                              <div className="header-left">
+                                   <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
+                                        <a href="#" className="pl-0">
+                                             <i className="flag-us flag"></i>ENG
                                         </a>
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
                                                        <a href="#">
-                                                            <i className="flag-us flag mr-2" />
-                                                            ENG
+                                                            <i className="flag-us flag mr-2"></i>ENG
                                                        </a>
                                                   </li>
                                                   <li>
                                                        <a href="#">
-                                                            <i className="flag-fr flag mr-2" />
-                                                            FRA
+                                                            <i className="flag-fr flag mr-2"></i>FRA
                                                        </a>
                                                   </li>
                                              </ul>
                                         </div>
+                                        {/* End .header-menu */}
                                    </div>
-                                   <div className="header-dropdown">
+                                   {/* End .header-dropown */}
+
+                                   <div className="header-dropdown ml-3 pl-1">
                                         <a href="#">USD</a>
                                         <div className="header-menu">
                                              <ul>
@@ -76,67 +64,78 @@ export default function Header(props: any) {
                                                   </li>
                                              </ul>
                                         </div>
+                                        {/* End .header-menu */}
                                    </div>
+                                   {/* End .header-dropown */}
                               </div>
-                              <div className="header-right">
-                                   <p className="top-message text-uppercase d-none d-sm-block">
-                                        Free returns. Standard shipping orders $99+
+                              {/* End .header-left */}
+
+                              <div className="header-right header-dropdowns ml-0 ml-sm-auto">
+                                   <p className="top-message mb-0 d-none d-sm-block">
+                                        Welcome To Porto!
                                    </p>
-                                   <span className="separator" />
-                                   <div className="header-dropdown dropdown-expanded mx-3 px-1">
+                                   <div className="header-dropdown dropdown-expanded mr-3">
                                         <a href="#">Links</a>
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
-                                                       <Link href="/dashboard">My Account</Link>
+                                                       <a href="dashboard.html">Dashboard</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="/wishlist">My Wishlist</Link>
+                                                       <a href="cart.html">Cart</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="/cart">Cart</Link>
+                                                       <a href="cart.html">Checkout</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="/login" className="login-link">
-                                                            Log In
-                                                       </Link>
+                                                       <a href="wishlist.html">Wishlist</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="about.html">About Us</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="blog.html">Contact Us</a>
                                                   </li>
                                              </ul>
                                         </div>
                                         {/* End .header-menu */}
                                    </div>
                                    {/* End .header-dropown */}
-                                   <span className="separator separator-1" />
-                                   <div className="social-icons d-flex">
+
+                                   <span className="separator"></span>
+
+                                   <div className="social-icons">
                                         <a
                                              href="#"
-                                             className="social-icon social-facebook icon-facebook"
+                                             className="social-icon social-facebook icon-facebook ml-0"
                                              target="_blank"
-                                        />
+                                        ></a>
                                         <a
                                              href="#"
-                                             className="social-icon social-twitter icon-twitter"
+                                             className="social-icon social-twitter icon-twitter ml-0"
                                              target="_blank"
-                                        />
+                                        ></a>
                                         <a
                                              href="#"
-                                             className="social-icon social-instagram icon-instagram"
+                                             className="social-icon social-instagram icon-instagram ml-0"
                                              target="_blank"
-                                        />
+                                        ></a>
                                    </div>
+                                   {/* End .social-icons */}
                               </div>
+                              {/* End .header-right */}
                          </div>
+                         {/* End .container */}
                     </div>
-                    <div
-                         className="header-middle sticky-header"
-                         data-sticky-options="{'mobile': false}"
-                    >
+                    {/* End .header-top */}
+
+                    <div className="header-middle text-dark sticky-header">
                          <div className="container">
                               <div className="header-left col-lg-2 w-auto pl-0">
-                                   <button className="mobile-menu-toggler" type="button">
-                                        <i className="fas fa-bars" />
+                                   <button className="mobile-menu-toggler mr-2" type="button">
+                                        <i className="fas fa-bars"></i>
                                    </button>
-                                   <a href="demo13.html" className="logo">
+                                   <a href="demo1.html" className="logo">
                                         {company?.logo ? (
                                              <Image
                                                   src={company?.logo}
@@ -146,15 +145,21 @@ export default function Header(props: any) {
                                                   height={80}
                                              />
                                         ) : (
-                                             <h3>{company?.company_name || "Tester"}</h3>
+                                             <Image
+                                                  src={templateImages.logoImage.logo2}
+                                                  width="111"
+                                                  height="44"
+                                                  alt="Porto Logo"
+                                             />
                                         )}
                                    </a>
                               </div>
                               {/* End .header-left */}
-                              <div className="header-right w-lg-max">
-                                   <div className="header-icon header-search header-search-inline header-search-category mr-lg-5 pr-lg-4 w-lg-max">
+
+                              <div className="header-right w-lg-max pl-2">
+                                   <div className="header-search header-icon header-search-inline header-search-category w-lg-max">
                                         <a href="#" className="search-toggle" role="button">
-                                             <i className="icon-search-3" />
+                                             <i className="icon-search-3"></i>
                                         </a>
                                         <form action="#" method="get">
                                              <div className="header-search-wrapper">
@@ -166,124 +171,132 @@ export default function Header(props: any) {
                                                        placeholder="Search..."
                                                        required
                                                   />
-                                                  <div className="select-custom body-text">
+                                                  <div className="select-custom">
                                                        <select id="cat" name="cat">
-                                                            <option>All Categories</option>
-                                                            {/* <option value={4}>Fashion</option>
-                                                            <option value={12}>- Women</option>
-                                                            <option value={13}>- Men</option>
-                                                            <option value={66}>- Jewellery</option>
-                                                            <option value={67}>
+                                                            <option value="">All Categories</option>
+                                                            <option value="4">Fashion</option>
+                                                            <option value="12">- Women</option>
+                                                            <option value="13">- Men</option>
+                                                            <option value="66">- Jewellery</option>
+                                                            <option value="67">
                                                                  - Kids Fashion
                                                             </option>
-                                                            <option value={5}>Electronics</option>
-                                                            <option value={21}>- Smart TVs</option>
-                                                            <option value={22}>- Cameras</option>
-                                                            <option value={63}>- Games</option>
-                                                            <option value={7}>
+                                                            <option value="5">Electronics</option>
+                                                            <option value="21">- Smart TVs</option>
+                                                            <option value="22">- Cameras</option>
+                                                            <option value="63">- Games</option>
+                                                            <option value="7">
                                                                  Home &amp; Garden
                                                             </option>
-                                                            <option value={11}>Motors</option>
-                                                            <option value={31}>
+                                                            <option value="11">Motors</option>
+                                                            <option value="31">
                                                                  - Cars and Trucks
                                                             </option>
-                                                            <option value={32}>
+                                                            <option value="32">
                                                                  - Motorcycles &amp; Powersports
                                                             </option>
-                                                            <option value={33}>
+                                                            <option value="33">
                                                                  - Parts &amp; Accessories
                                                             </option>
-                                                            <option value={34}>- Boats</option>
-                                                            <option value={57}>
+                                                            <option value="34">- Boats</option>
+                                                            <option value="57">
                                                                  - Auto Tools &amp; Supplies
-                                                            </option> */}
+                                                            </option>
                                                        </select>
                                                   </div>
                                                   {/* End .select-custom */}
                                                   <button
-                                                       className="btn icon-search-3"
+                                                       className="btn icon-magnifier"
                                                        type="submit"
-                                                  />
+                                                  ></button>
                                              </div>
                                              {/* End .header-search-wrapper */}
                                         </form>
                                    </div>
                                    {/* End .header-search */}
-                                   <div className="header-contact d-none d-lg-flex pl-1 mr-xl-5 pr-4">
-                                        <Image
-                                             alt="phone"
-                                             src={phone}
-                                             width={30}
-                                             height={30}
-                                             className="pb-1"
-                                        />
-                                        <h6>
+
+                                   <div className="header-contact d-none d-lg-flex align-items-center pr-xl-5 mr-5 mr-xl-3 ml-5">
+                                        <i className="icon-phone-2"></i>
+                                        <h6 className="pt-1 line-height-1">
                                              Call us now
-                                             <a href="tel:#" className="text-dark font1">
-                                                  {company?.phone}
+                                             <a
+                                                  href="tel:#"
+                                                  className="d-block text-dark ls-10 pt-1"
+                                             >
+                                                  {company?.phone || "+123 5678 890"}
                                              </a>
                                         </h6>
                                    </div>
                                    {/* End .header-contact */}
-                                   <a href="dashboard.html" className="header-icon login-btn pl-1">
-                                        <i className="icon-user-2" />
+
+                                   <a href="login.html" className="header-icon header-icon-user">
+                                        <i className="icon-user-2"></i>
                                    </a>
-                                   <a href="#" className="header-icon account-link pl-1">
-                                        <i className="icon-wishlist-2" />
+
+                                   <a href="wishlist.html" className="header-icon">
+                                        <i className="icon-wishlist-2"></i>
                                    </a>
+
                                    <div className="dropdown cart-dropdown">
                                         <a
                                              href="#"
                                              title="Cart"
-                                             className="dropdown-toggle dropdown-arrow cart-toggle d-flex align-items-center"
+                                             className="dropdown-toggle dropdown-arrow cart-toggle"
                                              role="button"
                                              data-toggle="dropdown"
                                              aria-haspopup="true"
                                              aria-expanded="false"
                                              data-display="static"
                                         >
-                                             <i className="minicart-icon" />
+                                             <i className="minicart-icon"></i>
                                              <span className="cart-count badge-circle">3</span>
                                         </a>
-                                        <div className="cart-overlay" />
+
+                                        <div className="cart-overlay"></div>
+
                                         <div className="dropdown-menu mobile-cart">
                                              <a href="#" title="Close (Esc)" className="btn-close">
                                                   ×
                                              </a>
+
                                              <div className="dropdownmenu-wrapper custom-scrollbar">
                                                   <div className="dropdown-cart-header">
                                                        Shopping Cart
                                                   </div>
                                                   {/* End .dropdown-cart-header */}
+
                                                   <div className="dropdown-cart-products">
                                                        <div className="product">
                                                             <div className="product-details">
                                                                  <h4 className="product-title">
-                                                                      <a href="demo13-product.html">
+                                                                      <a href="demo1-product.html">
                                                                            Ultimate 3D Bluetooth
                                                                            Speaker
                                                                       </a>
                                                                  </h4>
+
                                                                  <span className="cart-product-info">
                                                                       <span className="cart-product-qty">
                                                                            1
-                                                                      </span>
+                                                                      </span>{" "}
                                                                       × $99.00
                                                                  </span>
                                                             </div>
                                                             {/* End .product-details */}
+
                                                             <figure className="product-image-container">
                                                                  <a
-                                                                      href="demo13-product.html"
+                                                                      href="demo1-product.html"
                                                                       className="product-image"
                                                                  >
-                                                                      <Image
-                                                                           src={product1}
+                                                                      <img
+                                                                           src="assets/images/products/product-1.jpg"
                                                                            alt="product"
-                                                                           width={80}
-                                                                           height={80}
+                                                                           width="80"
+                                                                           height="80"
                                                                       />
                                                                  </a>
+
                                                                  <a
                                                                       href="#"
                                                                       className="btn-remove"
@@ -294,34 +307,38 @@ export default function Header(props: any) {
                                                             </figure>
                                                        </div>
                                                        {/* End .product */}
+
                                                        <div className="product">
                                                             <div className="product-details">
                                                                  <h4 className="product-title">
-                                                                      <a href="demo13-product.html">
+                                                                      <a href="demo1-product.html">
                                                                            Brown Women Casual
                                                                            HandBag
                                                                       </a>
                                                                  </h4>
+
                                                                  <span className="cart-product-info">
                                                                       <span className="cart-product-qty">
                                                                            1
-                                                                      </span>
+                                                                      </span>{" "}
                                                                       × $35.00
                                                                  </span>
                                                             </div>
                                                             {/* End .product-details */}
+
                                                             <figure className="product-image-container">
                                                                  <a
-                                                                      href="demo13-product.html"
+                                                                      href="demo1-product.html"
                                                                       className="product-image"
                                                                  >
-                                                                      <Image
-                                                                           src={product2}
+                                                                      <img
+                                                                           src="assets/images/products/product-2.jpg"
                                                                            alt="product"
-                                                                           width={80}
-                                                                           height={80}
+                                                                           width="80"
+                                                                           height="80"
                                                                       />
                                                                  </a>
+
                                                                  <a
                                                                       href="#"
                                                                       className="btn-remove"
@@ -332,32 +349,35 @@ export default function Header(props: any) {
                                                             </figure>
                                                        </div>
                                                        {/* End .product */}
+
                                                        <div className="product">
                                                             <div className="product-details">
                                                                  <h4 className="product-title">
-                                                                      <a href="demo13-product.html">
+                                                                      <a href="demo1-product.html">
                                                                            Circled Ultimate 3D
                                                                            Speaker
                                                                       </a>
                                                                  </h4>
+
                                                                  <span className="cart-product-info">
                                                                       <span className="cart-product-qty">
                                                                            1
-                                                                      </span>
+                                                                      </span>{" "}
                                                                       × $35.00
                                                                  </span>
                                                             </div>
                                                             {/* End .product-details */}
+
                                                             <figure className="product-image-container">
                                                                  <a
-                                                                      href="demo13-product.html"
+                                                                      href="demo1-product.html"
                                                                       className="product-image"
                                                                  >
-                                                                      <Image
-                                                                           src={product3}
+                                                                      <img
+                                                                           src="assets/images/products/product-3.jpg"
                                                                            alt="product"
-                                                                           width={80}
-                                                                           height={80}
+                                                                           width="80"
+                                                                           height="80"
                                                                       />
                                                                  </a>
                                                                  <a
@@ -372,13 +392,16 @@ export default function Header(props: any) {
                                                        {/* End .product */}
                                                   </div>
                                                   {/* End .cart-product */}
+
                                                   <div className="dropdown-cart-total">
                                                        <span>SUBTOTAL:</span>
+
                                                        <span className="cart-total-price float-right">
                                                             $134.00
                                                        </span>
                                                   </div>
                                                   {/* End .dropdown-cart-total */}
+
                                                   <div className="dropdown-cart-action">
                                                        <a
                                                             href="cart.html"
@@ -429,7 +452,7 @@ export default function Header(props: any) {
                                                   (
                                                        link: { name: string; url: string },
                                                        idx: number,
-                                                   ) => (
+                                                  ) => (
                                                        <li
                                                             className={
                                                                  activeMenuId === idx
@@ -811,6 +834,8 @@ export default function Header(props: any) {
                          </div>
                     </div>
                </header>
+               {/* End .header */}
           </div>
      );
-}
+};
+export default Header;

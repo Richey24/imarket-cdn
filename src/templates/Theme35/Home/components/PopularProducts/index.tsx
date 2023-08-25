@@ -1,66 +1,107 @@
 import Product from "@/app/components/Product";
-import ProductWidget from "@/app/components/Product/ProductWidget";
-import ProductList from "@/app/components/ProductList";
-import { templateImages } from "@/appProvider/templateImages";
-import { topRatedProducts } from "@/templates/Theme1/Home/data";
 import React from "react";
+import OwlCarousel from "react-owl-carousel";
+import { latestProducts } from "@/templates/Theme34/Home/data";
+import { Tab, Nav } from "react-bootstrap";
+import { templateImages } from "@/appProvider/templateImages";
+
+const owlCarouselOptions = {
+     dots: false,
+     margin: 20,
+     loop: false,
+     responsive: {
+          576: {
+               items: 2.5,
+          },
+          992: {
+               items: 6,
+          },
+     },
+};
+
+function TabContent() {
+     return (
+          <OwlCarousel
+               className="products-slider owl-carousel owl-theme show-nav-hover nav-outer nav-image-center"
+               {...owlCarouselOptions}
+          >
+               {latestProducts.map((product, index) => {
+                    return (
+                         <Product
+                              key={product.title}
+                              imageSrc={templateImages.demo35.productImages[`product${index + 1}`]}
+                              productName={product.title}
+                              price={product.price}
+                         />
+                    );
+               })}
+          </OwlCarousel>
+     );
+}
 
 export default function PopularProducts() {
      return (
-          <div className="product-widgets">
-               <div className="row">
-                    <div className="col-9">
-                         <div className="row">
-                              {/* product-1 */}
-                              <div className="col-lg-4 col-sm-6 pb-5">
-                                   <h4 className="section-sub-title text-uppercase ">
-                                        Top Rated Products
-                                   </h4>
-                                   {topRatedProducts.map((product, index) => (
-                                        <ProductWidget key={`product-${index}`} {...product} />
-                                   ))}
-                              </div>
-                              {/* product-2 */}
-                              <div className="col-lg-4 col-sm-6 pb-5">
-                                   <h4 className="section-sub-title text-uppercase">
-                                        Best Selling Products
-                                   </h4>
-                                   {topRatedProducts.map((product, index) => (
-                                        <ProductWidget key={`product-${index}`} {...product} />
-                                   ))}
-                              </div>
-                              {/* product-3 */}
-                              <div className="col-lg-4 col-sm-6 pb-5">
-                                   <h4 className="section-sub-title text-uppercase m-b-3">
-                                        Latest Products
-                                   </h4>
-                                   {topRatedProducts.map((product, index) => (
-                                        <ProductWidget key={`product-${index}`} {...product} />
-                                   ))}
-                              </div>
-                         </div>
-                    </div>
-                    {/* End .row */}
-                    <div className="col-lg-3 col-sm-6 pb-5 pb-md-0">
-                         <div className="banner text-center top-shoes-banner banner-sm-vw-large tw-bg-[#28252c]">
-                              <figure>
-                                   <img
-                                        src={templateImages.demo33.bannerImage.banner1}
-                                        alt="banner"
-                                        width="266"
-                                        height="325"
-                                   />
-                              </figure>
+          <div className="tw-py-12">
+               <h2 className="section-title">Most Popular</h2>
+               <p className="section-info font2">
+                    All our new arrivals in a exclusive brand selection
+               </p>
 
-                              <div className="banner-layer banner-layer-middle">
-                                   <h3 className="m-b-2">Top Shoes</h3>
-                                   <h4 className="text-primary m-b-3">Summer Sale</h4>
-                                   <a href="demo33-shop.html" className="btn btn-light btn-outline">
-                                        Shop Now
-                                   </a>
-                              </div>
-                         </div>
-                    </div>
+               <div className="products-container product-slider-tab rounded tw-bg-white">
+                    <Tab.Container id="post-popular" defaultActiveKey="viewAll">
+                         <Nav className="nav nav-tabs border-0 px-4 pb-0 m-b-3">
+                              <Nav.Item>
+                                   <Nav.Link eventKey="viewAll" className="nav-link">
+                                        View All
+                                   </Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                                   <Nav.Link eventKey="breakfast" className="nav-link">
+                                        Breakfast
+                                   </Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                                   <Nav.Link eventKey="cooking" className="nav-link">
+                                        Cooking
+                                   </Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                                   <Nav.Link eventKey="frozen" className="nav-link">
+                                        Frozen
+                                   </Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                                   <Nav.Link eventKey="fruits" className="nav-link">
+                                        Fruits
+                                   </Nav.Link>
+                              </Nav.Item>
+                              <Nav.Item>
+                                   <Nav.Link eventKey="vegetables" className="nav-link">
+                                        Vegetables
+                                   </Nav.Link>
+                              </Nav.Item>
+                         </Nav>
+                         <Tab.Content>
+                              <Tab.Pane eventKey="viewAll">
+                                   <TabContent />
+                              </Tab.Pane>
+                              <Tab.Pane eventKey="breakfast">
+                                   <TabContent />
+                              </Tab.Pane>
+                              <Tab.Pane eventKey="cooking">
+                                   <TabContent />
+                              </Tab.Pane>
+                              <Tab.Pane eventKey="frozen">
+                                   <TabContent />
+                              </Tab.Pane>
+                              <Tab.Pane eventKey="fruits">
+                                   <TabContent />
+                              </Tab.Pane>
+                              <Tab.Pane eventKey="vegetables">
+                                   <TabContent />
+                              </Tab.Pane>
+                         </Tab.Content>
+                    </Tab.Container>
                </div>
           </div>
      );

@@ -1,17 +1,10 @@
 import Image from "next/image";
 import Slider from "react-slick";
-import productBig1 from "../../../../assets/images/products/zoom/product-1-big.jpg"
-import productBig2 from "../../../../assets/images/products/zoom/product-2-big.jpg"
-import productBig3 from "../../../../assets/images/products/zoom/product-3-big.jpg"
-import productBig4 from "../../../../assets/images/products/zoom/product-4-big.jpg"
-import productBig5 from "../../../../assets/images/products/zoom/product-5-big.jpg"
-import product1 from "../../../../assets/images/products/zoom/product-1.jpg"
+
 import product2 from "../../../../assets/images/products/zoom/product-2.jpg"
 import product3 from "../../../../assets/images/products/zoom/product-3.jpg"
 import product4 from "../../../../assets/images/products/zoom/product-4.jpg"
-import product5 from "../../../../assets/images/products/zoom/product-5.jpg"
 import { useState } from "react";
-import { ChildrenProps } from "../types"
 
 
 const ProductWidget = ({ quickView }) => {
@@ -51,7 +44,7 @@ const ProductWidget = ({ quickView }) => {
                                    <div style={{ width: "800px", height: "400px" }} className="product-single-carousel show-nav-hover">
                                         <Slider {...settings}>
                                              <div style={{ width: "400px", height: "400px" }}>
-                                                  <Image className="product-single-image" style={{ width: "400px", height: "400px" }} alt="product" src={quickView.productImageUrl}
+                                                  <Image width={200} height={200} className="product-single-image" style={{ width: "400px", height: "400px" }} alt="product" src={quickView.productImageUrl}
                                                        data-zoom-image="assets/images/products/zoom/product-1-big.jpg" />
                                              </div>
                                              {/* <div className="product-item" style={{ width: "400px", height: "400px" }}>
@@ -75,16 +68,16 @@ const ProductWidget = ({ quickView }) => {
                               </div>
                               <div className="prod-thumbnail owl-dots">
                                    <div className="owl-dot">
-                                        <Image alt="product" src={quickView.productImageUrl} />
+                                        <Image alt="product" width={200} height={200} src={quickView.productImageUrl} />
                                    </div>
                                    <div className="owl-dot">
-                                        <Image alt="product" src={product2} />
+                                        <Image alt="product" width={200} height={200} src={product2} />
                                    </div>
                                    <div className="owl-dot">
-                                        <Image alt="product" src={product3} />
+                                        <Image alt="product" width={200} height={200} src={product3} />
                                    </div>
                                    <div className="owl-dot">
-                                        <Image alt="product" src={product4} />
+                                        <Image alt="product" width={200} height={200} src={product4} />
                                    </div>
                                    {/* <div className="owl-dot">
                                         <Image alt="product" src={product5} />

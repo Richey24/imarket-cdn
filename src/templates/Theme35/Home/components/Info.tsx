@@ -37,6 +37,11 @@ export const InfoBoxesContainer: React.FC = () => {
                title: "ONLINE SUPPORT 24/7",
                description: "Lorem Ipsum Dolor Sit Amet.",
           },
+          {
+               icon: "icon-secure-payment",
+               title: "SECURE PAYMENT",
+               description: "Lorem Ipsum Dolor Sit Amet.",
+          },
      ];
 
      const owlCarouselOptions = {
@@ -50,11 +55,14 @@ export const InfoBoxesContainer: React.FC = () => {
                992: {
                     items: 3,
                },
+               1024: {
+                    items: 4,
+               },
           },
      };
 
      return (
-          <div className="top-notice bg-primary">
+          <div className="container">
                <OwlCarousel
                     className="info-boxes-slider owl-carousel owl-theme"
                     {...owlCarouselOptions}
@@ -66,3 +74,5 @@ export const InfoBoxesContainer: React.FC = () => {
           </div>
      );
 };
+
+export default InfoBoxesContainer;
