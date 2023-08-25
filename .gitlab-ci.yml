@@ -1,19 +1,12 @@
-image: node:18
-
-cache:
-     untracked: true
-     paths:
-          - node_modules/
-
 stages:
   - format
 
 format:
   stage: format
+  image: node:18
   before_script:
     - yarn install --frozen-lockfile
   script:
     - yarn run format:fix 
   only:
     - merge_requests
-    - main 
