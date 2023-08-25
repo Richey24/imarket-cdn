@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Slider from "react-slick";
 import { templateImages } from "@/appProvider/templateImages";
-// import "slick-carousel/slick/slick.css"; // Import react-slick styles
-// import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
 
 const Banner = () => {
      let settings = {
@@ -15,7 +13,7 @@ const Banner = () => {
           swipeToSlide: true,
           arrows: true,
           accessibility: true,
-          // className: "intro-slider slide-animat curved-border  nav-big ",
+          className: "intro-slider slide-animat curved-border  nav-big ",
      };
      return (
           <div className="intro-section mb-3">

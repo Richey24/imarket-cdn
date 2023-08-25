@@ -2,8 +2,6 @@ import React from "react";
 import { TestimonialProps } from "../types";
 import Image from "next/image";
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css"; // Import react-slick styles
-// import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
 
 const Testimonial: React.FC<TestimonialProps> = ({ clientImageUrl, title, position, message }) => {
      return (
