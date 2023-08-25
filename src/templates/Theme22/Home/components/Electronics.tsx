@@ -1,12 +1,9 @@
 import React from "react";
- 
+
 import { templateImages } from "@/appProvider/templateImages";
 export const Electronics = () => {
      return (
-          <section
-               className="electronics-container appear-animate"
-                
-          >
+          <section className="electronics-container appear-animate">
                <div className="container">
                     <h2 className="section-title border-0 line-height-1 ls-n-10 m-b-4">
                          Electronics
@@ -55,7 +52,11 @@ export const Electronics = () => {
                                         </div>
                                    </div>
                                    <div className="banner-layer banner-layer-bottom">
-                                        <a href="demo22-shop.html" className="btn btn-light" style={{color:'#f14705', fontWeight:'bold'}}>
+                                        <a
+                                             href="demo22-shop.html"
+                                             className="btn btn-light"
+                                             style={{ color: "#f14705", fontWeight: "bold" }}
+                                        >
                                              View All Now
                                         </a>
                                    </div>
@@ -74,7 +75,10 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product10}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product10
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -152,7 +156,10 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product9}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product9
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -228,7 +235,10 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product18}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product18
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -301,7 +311,10 @@ export const Electronics = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product23}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product23
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"

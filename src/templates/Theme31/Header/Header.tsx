@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 
 export default function Header() {
-
      return (
           <header className="header p-0">
                <div className="header-middle sticky-header">

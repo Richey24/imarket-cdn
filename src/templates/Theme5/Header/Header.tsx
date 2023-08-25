@@ -10,7 +10,7 @@ import { socialMap } from "@/utils/helper";
 
 const Header = (props: any) => {
      const { company, static: staticProps, categories } = props.props;
-   
+
      const showDrop = (id: string) => {
           document.getElementById(id)?.classList.toggle("showDrop");
      };
@@ -130,8 +130,8 @@ const Header = (props: any) => {
                                         {staticProps.socials.map((social) => {
                                              return (
                                                   <Link
-                                                  href={social.link}
-                                                  className={`social-icon ${
+                                                       href={social.link}
+                                                       className={`social-icon ${
                                                             socialMap[social.name]
                                                        }`}
                                                        target="_blank"

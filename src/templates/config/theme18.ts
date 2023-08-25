@@ -1,6 +1,6 @@
 import Footer from "../Theme18/Footer/Footer";
 import Header from "../Theme18/Header/Header";
-import Home  from "../Theme18/Home/Home";
+import Home from "../Theme18/Home/Home";
 
 const theme18TemplateConfig = {
      header: Header,
@@ -8,4 +8,4 @@ const theme18TemplateConfig = {
      footer: Footer,
 };
 
-export default theme18TemplateConfig
+export default theme18TemplateConfig;

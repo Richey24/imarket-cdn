@@ -15,4 +15,4 @@ const templateConfig: any = {
      InfoBoxesContainer: InfoBoxesContainer,
      footer: Footer,
 };
-export default templateConfig
+export default templateConfig;

@@ -1,4 +1,3 @@
- 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
@@ -7,7 +6,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo21.specialImage.special1,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
@@ -15,7 +14,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
           productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
@@ -23,7 +22,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special3,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Battery Charger",
           productPrice: 259,
      },
@@ -31,7 +30,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special4,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -39,7 +38,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special5,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -47,7 +46,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special6,
-          productImageUrlTwo:  '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -57,7 +56,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo21.specialImage.special7,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
@@ -65,7 +64,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
           productImageUrl: templateImages.demo21.specialImage.special1,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
@@ -73,7 +72,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Battery Charger",
           productPrice: 259,
      },
@@ -81,7 +80,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special8,
-          productImageUrlTwo:  '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -89,7 +88,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special7,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -97,7 +96,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special9,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -107,7 +106,7 @@ export const bestsellersProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo21.specialImage.special1,
-          productImageUrlTwo:templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
@@ -136,7 +135,7 @@ export const bestsellersProducts = [
           productPrice: 49,
      },
 ];
-export const audiospeakers  = [
+export const audiospeakers = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -170,7 +169,7 @@ export const audiospeakers  = [
           productPrice: 101.0,
      },
 ];
-export const cameras  = [
+export const cameras = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -205,7 +204,7 @@ export const cameras  = [
      },
 ];
 
-export const lamps  = [
+export const lamps = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -231,7 +230,7 @@ export const lamps  = [
           productPrice: 1999.0,
      },
 ];
-export const computers  = [
+export const computers = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -265,7 +264,7 @@ export const computers  = [
           productPrice: 299.0,
      },
 ];
-export const mobilephones  = [
+export const mobilephones = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
@@ -325,7 +324,7 @@ export const topRatedProduct = [
           productPrice: 299.0,
      },
 ];
-export const topSellingProduct  = [
+export const topSellingProduct = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
@@ -351,8 +350,8 @@ export const topSellingProduct  = [
           productPrice: 299.0,
      },
 ];
- 
-export const onSaleProduct  = [
+
+export const onSaleProduct = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
-import {  sunglassesProducts } from "../../data";
+import { sunglassesProducts } from "../../data";
 import { templateImages } from "@/appProvider/templateImages";
 export const Product2 = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,7 +49,6 @@ export const Product2 = () => {
                                                        width={400}
                                                        height={400}
                                                   />
-                                                  
                                              </a>
                                              <div className="btn-icon-group">
                                                   <button

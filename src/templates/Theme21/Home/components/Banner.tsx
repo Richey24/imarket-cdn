@@ -1,5 +1,5 @@
 import React, { useState } from "react";
- 
+
 import { templateImages } from "@/appProvider/templateImages";
 
 export const Banner = () => {

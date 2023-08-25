@@ -167,7 +167,8 @@ const Footer = (props: any): JSX.Element => {
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
                               <span className="footer-copyright">
-                                   © Porto eCommerce {new Date().getFullYear()}. All Rights Reserved
+                                   © Porto eCommerce {new Date().getFullYear()}. All Rights
+                                   Reserved
                               </span>
                          </div>
                          <div className="footer-right ml-auto mt-1 mt-sm-0">

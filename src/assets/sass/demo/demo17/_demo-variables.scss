@@ -6,7 +6,6 @@
 // 3. Theme Variables
 // 4. Plugin Variables
 
-
 // 1. Theme Skin
 $primary-color: #301b24;
 $secondary-color: #e36159;
@@ -16,210 +15,195 @@ $dot-border: #222529;
 $dot-border-active: #222529;
 $dot-width: 14px;
 $dot-height: 14px;
-$dot-border: #e7e7e7;	
+$dot-border: #e7e7e7;
 $nav-color: #333;
 $nav-color-hover: #333;
 
 // 3. Theme Variables
 $border-color: #e7e7e7;
-$font-family: 'Poppins', sans-serif;
+$font-family: "Poppins", sans-serif;
 // $second-font-family: 'Open Sans', sans-serif;
 
 @include set(
-	(
-		body: (
-			background: #fff
-		),
-		
-		layout: (
-			container: (
-				max-width-desktop: 1200px
-			)
-		),
+     (
+          body: (
+               background: #fff,
+          ),
 
-		header: (
-			top-notice: (
-				display: flex,
-				background-color: #f4f4f4,
-				font-size: 1.6rem,
-				letter-spacing: -0.02em,
-			),
+          layout: (
+               container: (
+                    max-width-desktop: 1200px,
+               ),
+          ),
 
-			dropdowns: (
-				font-size: 1.1rem
-			),
+          header: (
+               top-notice: (
+                    display: flex,
+                    background-color: #f4f4f4,
+                    font-size: 1.6rem,
+                    letter-spacing: -0.02em,
+               ),
 
-			top: (
-				padding: 1.1rem 0,
-				border-bottom: 1px solid #e7e7e7,
-				font-family: "'Open Sans', sans-serif",
-				font-weight: 600,
-			),
+               dropdowns: (
+                    font-size: 1.1rem,
+               ),
 
-			middle: (
-				padding-top: 2.7rem
-			),
+               top: (
+                    padding: 1.1rem 0,
+                    border-bottom: 1px solid #e7e7e7,
+                    font-family: "'Open Sans', sans-serif",
+                    font-weight: 600,
+               ),
 
-			icon: (
-				_size: 1.9rem,
-				_space: 2.4rem
-			),
+               middle: (
+                    padding-top: 2.7rem,
+               ),
 
-			logo: (
-				max-width: 11.1rem,
-				width: 11.1rem
-			),
+               icon: (
+                    _size: 1.9rem,
+                    _space: 2.4rem,
+               ),
 
-			search: (
-				height: 34px,
-				
-				border: (
-					_width: 5px
-				)
-			)
-		),
+               logo: (
+                    max-width: 11.1rem,
+                    width: 11.1rem,
+               ),
 
-		menu: (
-			main: (
-				text-transform: none,
-				font-size: 12px,
-				font-weight: 500,
+               search: (
+                    height: 34px,
 
-				top: (
-					_space: 3.3rem,
-					font-size: 1.4rem,
-					font-weight: 600,
-					color: #555,
-					_active-color: $primary-color-dark
-				)
-			)
-		),
+                    border: (
+                         _width: 5px,
+                    ),
+               ),
+          ),
 
-		product: (
-		// 1.1) Base
-			self: (
-				color: #999
-			),
+          menu: (
+               main: (
+                    text-transform: none,
+                    font-size: 12px,
+                    font-weight: 500,
 
-		// 1.2) Image
-			figure: (
-				margin-bottom: 0,
+                    top: (
+                         _space: 3.3rem,
+                         font-size: 1.4rem,
+                         font-weight: 600,
+                         color: #555,
+                         _active-color: $primary-color-dark,
+                    ),
+               ),
+          ),
 
-				img: (
-					transition: opacity .3s
-				)
-			),
+          product: (
+               // 1.1) Base
+               self: (color: #999),
 
-		// 1.3) Label
-			product-label: (
-				padding: 5px 9px,
-				font-size: 11px
-			),
+               // 1.2) Image
+               figure:
+                    (
+                         margin-bottom: 0,
 
-		// 1.5) Category List
-			product-category: (
-				color: #777,
-				font-family: "'Open Sans', sans-serif"
-			),
+                         img: (
+                              transition: opacity 0.3s,
+                         )
+                    ),
 
-		// 1.6) Product Title
-			product-title: (
-				margin-bottom: 5px,
-				letter-spacing: -.01em
-			),
+               // 1.3) Label
+               product-label: (padding: 5px 9px, font-size: 11px),
 
-		// 1.7) Product Tooltip
-			tooltiptext: (
-				background-color: rgba(0, 0, 0, .8),
+               // 1.5) Category List
+               product-category: (color: #777, font-family: "'Open Sans', sans-serif"),
 
-				after: (
-					border-top-color: rgba(0, 0, 0, .8),
-				)
-			),
+               // 1.6) Product Title
+               product-title: (margin-bottom: 5px, letter-spacing: -0.01em),
 
-		// 1.8) Actions
-			btn-add-cart: (
-				i: (
-					font-size: 1.2rem
-				)
-			),
+               // 1.7) Product Tooltip
+               tooltiptext:
+                    (
+                         background-color: rgba(0, 0, 0, 0.8),
+                         after: (
+                              border-top-color: rgba(0, 0, 0, 0.8),
+                         )
+                    ),
 
-			btn-wishlist: (
-				color: #777,
+               // 1.8) Actions
+               btn-add-cart:
+                    (
+                         i: (
+                              font-size: 1.2rem,
+                         )
+                    ),
 
-				hover: (
-					color: #000,
-				)
-			),
+               btn-wishlist: (
+                    color: #777,
 
-			btn-quickview: (
-				padding: 0
-			),
+                    hover: (
+                         color: #000,
+                    )
+               ),
 
-		// 2.2) Price
-			price: (
-				font-family: "Open Sans, sans-serif",
-				font-size: 1.125em
-			),
+               btn-quickview: (padding: 0),
 
-			old-price: (
-				font-family: "Open Sans, sans-serif",
-				line-height: 1,
-				font-size: 14.4px,
-				letter-spacing: 0
-			),
+               // 2.2) Price
+               price: (font-family: "Open Sans, sans-serif", font-size: 1.125em),
 
-			price-box: (
-				margin-bottom: 1.5rem
-			),
+               old-price: (
+                    font-family: "Open Sans, sans-serif",
+                    line-height: 1,
+                    font-size: 14.4px,
+                    letter-spacing: 0
+               ),
 
-		// 2.3) Ratings
-			ratings-container: (
-				margin-left: 0,
-				margin-bottom: 1.3rem,
+               price-box: (margin-bottom: 1.5rem),
 
-				product-ratings: (
-					before: (
-						color: rgba(0,0,0,0.16)
-					)
-				),
+               // 2.3) Ratings
+               ratings-container:
+                    (
+                         margin-left: 0,
+                         margin-bottom: 1.3rem,
 
-				ratings: (
-					before: (
-						color: #6a6a6d
-					)
-				)
-			)
-		),
+                         product-ratings: (
+                              before: (
+                                   color: rgba(0, 0, 0, 0.16),
+                              ),
+                         ),
 
-		footer: (
-			color: #999,
+                         ratings: (
+                              before: (
+                                   color: #6a6a6d,
+                              ),
+                         )
+                    ),
+          ),
 
-			bottom: (
-				padding-top: 2.4rem,
-				padding-bottom: 2.4rem,
-				font-size: .9em
-			),
+          footer: (
+               color: #999,
 
-			widget: (
-				title: (
-					text-transform: none
-				)
-			),
+               bottom: (
+                    padding-top: 2.4rem,
+                    padding-bottom: 2.4rem,
+                    font-size: 0.9em,
+               ),
 
-			social-icon: (
-				color: $primary-color-dark,
-				size: 3rem,
-				font-size: 1.9rem
-			)
-		),
+               widget: (
+                    title: (
+                         text-transform: none,
+                    ),
+               ),
 
-		owl-carousel: (
-			nav: (
-				image-center: 38%
-			)
-		)
-	)
+               social-icon: (
+                    color: $primary-color-dark,
+                    size: 3rem,
+                    font-size: 1.9rem,
+               ),
+          ),
+
+          owl-carousel: (
+               nav: (
+                    image-center: 38%,
+               ),
+          ),
+     )
 );
 
 // 4. Plugin Variables

@@ -59,7 +59,10 @@ const Header = () => {
                </div>
 
                <header className="header">
-                    <div className="header-top d-none d-lg-block" style={{paddingRight:'50px', paddingLeft:'50px'}}>
+                    <div
+                         className="header-top d-none d-lg-block"
+                         style={{ paddingRight: "50px", paddingLeft: "50px" }}
+                    >
                          <div className="container">
                               <div className="header-left">
                                    <div className="header-search header-search-inline header-search-category d-block header-icon text-dark">

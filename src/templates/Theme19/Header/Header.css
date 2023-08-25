@@ -1,29 +1,29 @@
 .themeEightDrop {
-    display: flex;
-    align-items: center;
+     display: flex;
+     align-items: center;
 }
 
 .themeEightDrop::after {
-    content: "⮟";
-    margin-left: 5px;
-    font-weight: 400;
-    color: black;
+     content: "⮟";
+     margin-left: 5px;
+     font-weight: 400;
+     color: black;
 }
 
 .cartCanvas {
-    display: none;
-    overflow-y: scroll;
-    height: 95vh;
+     display: none;
+     overflow-y: scroll;
+     height: 95vh;
 }
 
 .showCanvas {
-    display: flex;
+     display: flex;
 }
 
 .showDrop {
-    display: block !important;
+     display: block !important;
 }
 
 .showSearch {
-    display: flex !important;
+     display: flex !important;
 }

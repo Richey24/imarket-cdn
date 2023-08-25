@@ -2772,13 +2772,17 @@ a:focus {
 .count-wrapper {
      margin-bottom: 0.9rem;
      color: #282d3b;
-     font: 400 2.8rem/1 Poppins, sans-serif;
+     font:
+          400 2.8rem/1 Poppins,
+          sans-serif;
      text-transform: uppercase;
 }
 .count-title {
      margin-bottom: 0;
      color: #555;
-     font: 600 1.6rem/1 "Open Sans", sans-serif;
+     font:
+          600 1.6rem/1 "Open Sans",
+          sans-serif;
 }
 @media (min-width: 992px) {
      .count-wrapper {
@@ -3609,7 +3613,8 @@ a:focus {
 @font-face {
      font-family: "porto";
      src: url("../fonts/porto.eot?64334846");
-     src: url("../fonts/porto.eot?64334846#iefix") format("embedded-opentype"),
+     src:
+          url("../fonts/porto.eot?64334846#iefix") format("embedded-opentype"),
           url("../fonts/porto.woff2?64334846") format("woff2"),
           url("../fonts/porto.woff?64334846") format("woff"),
           url("../fonts/porto.ttf?64334846") format("truetype"),
@@ -4940,7 +4945,9 @@ span.page-link {
      z-index: 1000;
      background: #fff;
      opacity: 0;
-     transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out;
+     transition:
+          right 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
 }
 .minipopup-box.active {
      right: 0;
@@ -5004,7 +5011,9 @@ span.page-link {
      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
      opacity: 0;
      visibility: hidden;
-     transition: opacity 0.35s, visibility 0.35s;
+     transition:
+          opacity 0.35s,
+          visibility 0.35s;
      z-index: 100;
 }
 .wishlist-popup .wishlist-popup-msg {
@@ -5329,7 +5338,9 @@ button.mfp-close:before {
 .product-intro.owl-carousel.owl-theme .owl-nav .owl-next,
 .product-intro.owl-carousel.owl-theme .owl-nav .owl-prev {
      opacity: 0;
-     transition: opacity 0.2s, transform 0.4s;
+     transition:
+          opacity 0.2s,
+          transform 0.4s;
      top: 30%;
      width: 30px;
 }
@@ -5937,7 +5948,9 @@ figure .porto-loading-icon {
 .add-cart-box .btn-actions .btn-primary {
      width: 140px;
      padding: 8px 0;
-     font: 500 16px "Open Sans", sans-serif;
+     font:
+          500 16px "Open Sans",
+          sans-serif;
      border: none;
      cursor: pointer;
 }
@@ -6083,7 +6096,9 @@ figure .porto-loading-icon {
      margin: 0;
      border: none;
      line-height: 1.82;
-     transition: padding-top 0.2s, padding-bottom 0.2s;
+     transition:
+          padding-top 0.2s,
+          padding-bottom 0.2s;
      z-index: 2;
 }
 .inner-quickview figure .btn-quickview:hover {
@@ -6167,7 +6182,10 @@ figure .porto-loading-icon {
 .inner-icon:not(.product-widget):hover figure .btn-quickview {
      padding-top: 1.2rem;
      padding-bottom: 1.3rem;
-     transition: padding-top 0.2s, padding-bottom 0.2s, opacity 0.2s;
+     transition:
+          padding-top 0.2s,
+          padding-bottom 0.2s,
+          opacity 0.2s;
 }
 .inner-icon .btn-add-cart,
 .inner-icon .btn-icon-wish,
@@ -6194,7 +6212,11 @@ figure .porto-loading-icon {
      padding: 0;
      opacity: 0;
      visibility: hidden;
-     transition: opacity 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+     transition:
+          opacity 0.3s,
+          background-color 0.3s,
+          color 0.3s,
+          border-color 0.3s;
      transform: none;
 }
 .inner-icon figure .btn-icon i:not(.fa):before {
@@ -8035,7 +8057,9 @@ figure .porto-loading-icon {
      height: 0 !important;
      opacity: 0;
      z-index: -1;
-     transition: visibility 0.3s, opacity 0.3s;
+     transition:
+          visibility 0.3s,
+          opacity 0.3s;
 }
 .product-slider-tab .tab-content > .tab-pane:not(.active) {
      overflow: hidden;
@@ -8940,7 +8964,9 @@ a:hover {
 }
 .owl-carousel.show-nav-hover .owl-nav {
      opacity: 0;
-     transition: opacity 0.2s, color 0.2s;
+     transition:
+          opacity 0.2s,
+          color 0.2s;
 }
 .owl-carousel.show-nav-hover:hover .owl-nav {
      opacity: 1;
@@ -10848,7 +10874,9 @@ footer .contact-info-label {
      visibility: hidden;
      opacity: 0;
      border-radius: 0 0 0 0;
-     transition: all 0.3s, margin-right 0s;
+     transition:
+          all 0.3s,
+          margin-right 0s;
      transform: translateY(40px);
 }
 #scroll-top > i {
@@ -11070,7 +11098,9 @@ footer .contact-info-label {
 .product-default.inner-icon:not(.product-widget):hover figure .btn-quickview {
      padding-top: 1.2rem;
      padding-bottom: 1.3rem;
-     transition: padding-top 0.2s, padding-bottom 0.2s;
+     transition:
+          padding-top 0.2s,
+          padding-bottom 0.2s;
 }
 .ratings-container {
      margin-left: 0;
@@ -11084,7 +11114,9 @@ footer .contact-info-label {
 }
 .inner-quickview figure .btn-quickview {
      padding: 0.8rem 1.4rem;
-     transition: padding-top 0.2s, padding-bottom 0.2s;
+     transition:
+          padding-top 0.2s,
+          padding-bottom 0.2s;
      line-height: 1.82;
      z-index: 2;
 }
@@ -14742,7 +14774,9 @@ aside .widget-info i {
 .filter-sidebar li {
      position: relative;
      padding: 12px 0 12px 24px;
-     font: 600 12px Poppins, sans-serif;
+     font:
+          600 12px Poppins,
+          sans-serif;
      font-size: 12px;
      font-weight: 600;
      line-height: 2;
@@ -15193,7 +15227,9 @@ aside .widget-info i {
 }
 .page-header.page-header-bg h1 {
      margin-bottom: 17px;
-     font: 400 6rem Oswald, sans-serif;
+     font:
+          400 6rem Oswald,
+          sans-serif;
      letter-spacing: 0.0175em;
      line-height: 1;
      text-transform: uppercase;
@@ -15201,7 +15237,9 @@ aside .widget-info i {
 .page-header.page-header-bg h1 span {
      display: block;
      margin-bottom: 5px;
-     font: 500 2.5rem Poppins, sans-serif;
+     font:
+          500 2.5rem Poppins,
+          sans-serif;
      letter-spacing: 0;
      line-height: normal;
 }
@@ -15268,7 +15306,9 @@ aside .widget-info i {
      font-family: Oswald, sans-serif;
 }
 .count-title {
-     font: 400 1.8rem Poppins, sans-serif;
+     font:
+          400 1.8rem Poppins,
+          sans-serif;
 }
 .testimonials-section {
      padding-top: 5rem;

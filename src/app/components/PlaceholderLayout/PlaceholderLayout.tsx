@@ -1,8 +1,8 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";  
+import Skeleton from "react-loading-skeleton";
 import "./PlaceholderLayout.css";
- 
-export const PlaceholderLayout = () => {  
+
+export const PlaceholderLayout = () => {
      return (
           <div className="complex-placeholder-layout">
                <div style={{ marginBottom: 10 }}>
@@ -19,7 +19,7 @@ export const PlaceholderLayout = () => {
                </div>
                <section className="sidebar">
                     <div className="sidebar-header">
-                         <Skeleton height={30}  />
+                         <Skeleton height={30} />
                     </div>
                     <div className="sidebar-body">
                          <Skeleton count={10} />

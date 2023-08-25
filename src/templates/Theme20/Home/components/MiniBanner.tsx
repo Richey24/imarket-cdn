@@ -8,7 +8,10 @@ export const MiniBanner = () => {
                style={{ paddingRight: "50px", paddingLeft: "50px" }}
           >
                <div className="container">
-                    <h2 className="section-title ls-n-10 text-center text-uppercase m-b-4" style={{fontWeight:'bold'}}>
+                    <h2
+                         className="section-title ls-n-10 text-center text-uppercase m-b-4"
+                         style={{ fontWeight: "bold" }}
+                    >
                          Offers and Deals
                     </h2>
                     <div className="row">
@@ -35,7 +38,12 @@ export const MiniBanner = () => {
                                         </a>
                                    </div>
                                    <div className="banner-layer banner-layer-right">
-                                        <Image src={templateImages.demo20.bannerImage.banner7} alt="brand" width={105} height={45} />
+                                        <Image
+                                             src={templateImages.demo20.bannerImage.banner7}
+                                             alt="brand"
+                                             width={105}
+                                             height={45}
+                                        />
                                    </div>
                               </div>
                          </div>
@@ -82,7 +90,10 @@ export const MiniBanner = () => {
                                              data-animation-name="fadeInUpShorter"
                                              data-animation-delay={200}
                                         >
-                                             <h4 className="mt-0 m-b-1" style={{fontWeight:'bolder'}}>
+                                             <h4
+                                                  className="mt-0 m-b-1"
+                                                  style={{ fontWeight: "bolder" }}
+                                             >
                                                   Subscribe To Our Newsletter
                                              </h4>
                                              <p className="font2 text-body m-b-4">

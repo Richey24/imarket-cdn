@@ -1,6 +1,6 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Carousel from "react-bootstrap/Carousel";
- 
+
 export const Banner = () => {
      return (
           <section className="home-slider  owl-theme text-uppercase nav-big bg-gray">
@@ -25,7 +25,10 @@ export const Banner = () => {
                                         <h3 className="m-b-2">30% Off</h3>
                                         <h5 className="d-inline-block pt-2 mb-1 pb-1 ls-n-20 align-middle">
                                              Starting AT
-                                             <b className="coupon-sale-text  text-white d-inline-block align-sub" style={{background:'#ff7272'}}>
+                                             <b
+                                                  className="coupon-sale-text  text-white d-inline-block align-sub"
+                                                  style={{ background: "#ff7272" }}
+                                             >
                                                   $<em className="align-middle">199</em>99
                                              </b>
                                         </h5>
@@ -62,7 +65,6 @@ export const Banner = () => {
                                         </a>
                                    </div>
                               </div>
-                              
                          </div>
                     </Carousel.Item>
                </Carousel>

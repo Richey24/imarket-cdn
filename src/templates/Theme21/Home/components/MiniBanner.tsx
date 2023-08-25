@@ -1,5 +1,4 @@
 import { templateImages } from "@/appProvider/templateImages";
- 
 
 export const MiniBanner = () => {
      return (

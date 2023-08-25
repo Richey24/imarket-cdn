@@ -39,4 +39,4 @@ const MiniBanner = ({ dealsBanner }) => {
      );
 };
 
-export default MiniBanner
+export default MiniBanner;

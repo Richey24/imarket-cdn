@@ -8,4 +8,4 @@ const templateConfig: any = {
      footer: T2Footer,
 };
 
-export default templateConfig
+export default templateConfig;
