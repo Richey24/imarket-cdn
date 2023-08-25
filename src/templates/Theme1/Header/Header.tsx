@@ -1,7 +1,11 @@
 import Image from "next/image";
-import logo from "../../../assets/images/logo.png";
+import Link from "next/link";
+import _ from "lodash";
+import { socialMap } from "@/utils/helper";
 
-const Header = () => {
+const Header = (props: any) => {
+     const { company, static: staticProps, categories } = props.props;
+
      return (
           <div>
                <div className="top-notice text-white bg-dark">
@@ -9,12 +13,12 @@ const Header = () => {
                          <h5 className="d-inline-block mb-0">
                               Get Up to <b>40% OFF</b> New-Season Styles
                          </h5>
-                         <a href="demo1-shop.html" className="category">
+                         <Link href="demo1-shop.html" className="category">
                               MEN
-                         </a>
-                         <a href="demo1-shop.html" className="category">
+                         </Link>
+                         <Link href="demo1-shop.html" className="category">
                               WOMEN
-                         </a>
+                         </Link>
                          <small>* Limited time only.</small>
                          <button title="Close (Esc)" type="button" className="mfp-close">
                               ×
@@ -29,20 +33,20 @@ const Header = () => {
                          <div className="container">
                               <div className="header-left">
                                    <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
-                                        <a href="#" className="pl-0">
+                                        <Link href="#" className="pl-0">
                                              <i className="flag-us flag"></i>ENG
-                                        </a>
+                                        </Link>
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
-                                                       <a href="#">
+                                                       <Link href="#">
                                                             <i className="flag-us flag mr-2"></i>ENG
-                                                       </a>
+                                                       </Link>
                                                   </li>
                                                   <li>
-                                                       <a href="#">
+                                                       <Link href="#">
                                                             <i className="flag-fr flag mr-2"></i>FRA
-                                                       </a>
+                                                       </Link>
                                                   </li>
                                              </ul>
                                         </div>
@@ -51,14 +55,14 @@ const Header = () => {
                                    {/* End .header-dropown */}
 
                                    <div className="header-dropdown ml-3 pl-1">
-                                        <a href="#">USD</a>
+                                        <Link href="#">USD</Link>
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
-                                                       <a href="#">EUR</a>
+                                                       <Link href="#">EUR</Link>
                                                   </li>
                                                   <li>
-                                                       <a href="#">USD</a>
+                                                       <Link href="#">USD</Link>
                                                   </li>
                                              </ul>
                                         </div>
@@ -73,26 +77,21 @@ const Header = () => {
                                         Welcome To Porto!
                                    </p>
                                    <div className="header-dropdown dropdown-expanded mr-3">
-                                        <a href="#">Links</a>
+                                        <Link href="#">Links</Link>
                                         <div className="header-menu">
                                              <ul>
                                                   <li>
-                                                       <a href="dashboard.html">Dashboard</a>
+                                                       <Link href="/dashboard">Dashboard</Link>
                                                   </li>
                                                   <li>
-                                                       <a href="cart.html">Cart</a>
+                                                       <Link href="/cart">Cart</Link>
+                                                  </li>
+
+                                                  <li>
+                                                       <Link href="/wishlist">Wishlist</Link>
                                                   </li>
                                                   <li>
-                                                       <a href="cart.html">Checkout</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="wishlist.html">Wishlist</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="about.html">About Us</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="blog.html">Contact Us</a>
+                                                       <Link href="/about">About Us</Link>
                                                   </li>
                                              </ul>
                                         </div>
@@ -101,24 +100,20 @@ const Header = () => {
                                    {/* End .header-dropown */}
 
                                    <span className="separator"></span>
-
                                    <div className="social-icons">
-                                        <a
-                                             href="#"
-                                             className="social-icon social-facebook icon-facebook ml-0"
-                                             target="_blank"
-                                        ></a>
-                                        <a
-                                             href="#"
-                                             className="social-icon social-twitter icon-twitter ml-0"
-                                             target="_blank"
-                                        ></a>
-                                        <a
-                                             href="#"
-                                             className="social-icon social-instagram icon-instagram ml-0"
-                                             target="_blank"
-                                        ></a>
+                                        {staticProps.socials.map((social) => {
+                                             return (
+                                                  <Link
+                                                       href={social.link}
+                                                       className={`social-icon ml-0${
+                                                            socialMap[social.name]
+                                                       }`}
+                                                       target="_blank"
+                                                  ></Link>
+                                             );
+                                        })}
                                    </div>
+
                                    {/* End .social-icons */}
                               </div>
                               {/* End .header-right */}
@@ -133,22 +128,27 @@ const Header = () => {
                                    <button className="mobile-menu-toggler mr-2" type="button">
                                         <i className="fas fa-bars"></i>
                                    </button>
-                                   <a href="demo1.html" className="logo">
-                                        <Image
-                                             src={logo}
-                                             width="111"
-                                             height="44"
-                                             alt="Porto Logo"
-                                        />
-                                   </a>
+                                   <Link href="/" className="logo">
+                                        {company?.logo ? (
+                                             <Image
+                                                  src={company?.logo}
+                                                  className="black-logo"
+                                                  alt="Porto Logo"
+                                                  width={202}
+                                                  height={80}
+                                             />
+                                        ) : (
+                                             <h3>{company?.company_name || "Tester"}</h3>
+                                        )}
+                                   </Link>
                               </div>
                               {/* End .header-left */}
 
                               <div className="header-right w-lg-max pl-2">
                                    <div className="header-search header-icon header-search-inline header-search-category w-lg-max">
-                                        <a href="#" className="search-toggle" role="button">
+                                        <Link href="#" className="search-toggle" role="button">
                                              <i className="icon-search-3"></i>
-                                        </a>
+                                        </Link>
                                         <form action="#" method="get">
                                              <div className="header-search-wrapper">
                                                   <input
@@ -162,34 +162,50 @@ const Header = () => {
                                                   <div className="select-custom">
                                                        <select id="cat" name="cat">
                                                             <option value="">All Categories</option>
-                                                            <option value="4">Fashion</option>
-                                                            <option value="12">- Women</option>
-                                                            <option value="13">- Men</option>
-                                                            <option value="66">- Jewellery</option>
-                                                            <option value="67">
-                                                                 - Kids Fashion
-                                                            </option>
-                                                            <option value="5">Electronics</option>
-                                                            <option value="21">- Smart TVs</option>
-                                                            <option value="22">- Cameras</option>
-                                                            <option value="63">- Games</option>
-                                                            <option value="7">
-                                                                 Home &amp; Garden
-                                                            </option>
-                                                            <option value="11">Motors</option>
-                                                            <option value="31">
-                                                                 - Cars and Trucks
-                                                            </option>
-                                                            <option value="32">
-                                                                 - Motorcycles &amp; Powersports
-                                                            </option>
-                                                            <option value="33">
-                                                                 - Parts &amp; Accessories
-                                                            </option>
-                                                            <option value="34">- Boats</option>
-                                                            <option value="57">
-                                                                 - Auto Tools &amp; Supplies
-                                                            </option>
+                                                            {categories &&
+                                                                 categories.map((category) => (
+                                                                      <>
+                                                                           {!category.parent_id && (
+                                                                                <option
+                                                                                     value={
+                                                                                          category.id
+                                                                                     }
+                                                                                >
+                                                                                     {category.name}
+                                                                                </option>
+                                                                           )}
+                                                                           {category.child_id.map(
+                                                                                (id) => {
+                                                                                     const child =
+                                                                                          categories.find(
+                                                                                               (
+                                                                                                    cat,
+                                                                                               ) =>
+                                                                                                    cat.id ===
+                                                                                                    id,
+                                                                                          );
+                                                                                     if (child) {
+                                                                                          return (
+                                                                                               <option
+                                                                                                    value={
+                                                                                                         child.id
+                                                                                                    }
+                                                                                               >
+                                                                                                    -{" "}
+                                                                                                    {_.capitalize(
+                                                                                                         child.name,
+                                                                                                    )}
+                                                                                               </option>
+                                                                                          );
+                                                                                     } else {
+                                                                                          return (
+                                                                                               <></>
+                                                                                          );
+                                                                                     }
+                                                                                },
+                                                                           )}
+                                                                      </>
+                                                                 ))}
                                                        </select>
                                                   </div>
                                                   {/* End .select-custom */}
@@ -211,19 +227,19 @@ const Header = () => {
                                                   href="tel:#"
                                                   className="d-block text-dark ls-10 pt-1"
                                              >
-                                                  +123 5678 890
+                                                  {company?.phone}
                                              </a>
                                         </h6>
                                    </div>
                                    {/* End .header-contact */}
 
-                                   <a href="login.html" className="header-icon header-icon-user">
+                                   <Link href="/login" className="header-icon header-icon-user">
                                         <i className="icon-user-2"></i>
-                                   </a>
+                                   </Link>
 
-                                   <a href="wishlist.html" className="header-icon">
+                                   <Link href="/wishlist" className="header-icon">
                                         <i className="icon-wishlist-2"></i>
-                                   </a>
+                                   </Link>
 
                                    <div className="dropdown cart-dropdown">
                                         <a
@@ -243,9 +259,13 @@ const Header = () => {
                                         <div className="cart-overlay"></div>
 
                                         <div className="dropdown-menu mobile-cart">
-                                             <a href="#" title="Close (Esc)" className="btn-close">
+                                             <Link
+                                                  href="#"
+                                                  title="Close (Esc)"
+                                                  className="btn-close"
+                                             >
                                                   ×
-                                             </a>
+                                             </Link>
 
                                              <div className="dropdownmenu-wrapper custom-scrollbar">
                                                   <div className="dropdown-cart-header">
@@ -257,10 +277,10 @@ const Header = () => {
                                                        <div className="product">
                                                             <div className="product-details">
                                                                  <h4 className="product-title">
-                                                                      <a href="demo1-product.html">
+                                                                      <Link href="demo1-product.html">
                                                                            Ultimate 3D Bluetooth
                                                                            Speaker
-                                                                      </a>
+                                                                      </Link>
                                                                  </h4>
 
                                                                  <span className="cart-product-info">
@@ -299,10 +319,10 @@ const Header = () => {
                                                        <div className="product">
                                                             <div className="product-details">
                                                                  <h4 className="product-title">
-                                                                      <a href="demo1-product.html">
+                                                                      <Link href="demo1-product.html">
                                                                            Brown Women Casual
                                                                            HandBag
-                                                                      </a>
+                                                                      </Link>
                                                                  </h4>
 
                                                                  <span className="cart-product-info">
@@ -341,10 +361,10 @@ const Header = () => {
                                                        <div className="product">
                                                             <div className="product-details">
                                                                  <h4 className="product-title">
-                                                                      <a href="demo1-product.html">
+                                                                      <Link href="demo1-product.html">
                                                                            Circled Ultimate 3D
                                                                            Speaker
-                                                                      </a>
+                                                                      </Link>
                                                                  </h4>
 
                                                                  <span className="cart-product-info">

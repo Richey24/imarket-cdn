@@ -7,7 +7,6 @@ import payments from "../../../assets/images/demoes/demo15/payment-icon.png";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
-     console.log("footerProps", company);
      return (
           <footer className="footer bg-dark ">
                <div className="container">

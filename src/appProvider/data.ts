@@ -96,12 +96,14 @@ export const dummySite = {
                                                   {
                                                        title: "",
                                                        text: "",
-                                                       imageUrl: "",
+                                                       imageUrl:
+                                                            "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-1.png",
                                                   },
                                                   {
                                                        title: "",
                                                        text: "",
-                                                       imageUrl: "",
+                                                       imageUrl:
+                                                            "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-2.jpg",
                                                   },
                                              ],
                                              dealsBanner: [

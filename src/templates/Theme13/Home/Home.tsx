@@ -1,31 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
-import slide1 from "../../../assets/images/demoes/demo13/slider/slide-1.jpg";
-import slide2 from "../../../assets/images/demoes/demo13/slider/slide-2.jpg";
+import React, { useEffect, useState } from "react";
 import banner1 from "../../../assets/images/demoes/demo13/banners/banner-1.jpg";
-import banner2 from "../../../assets/images/demoes/demo13/banners/banner-2.jpg";
-import banner3 from "../../../assets/images/demoes/demo13/banners/banner-3.jpg";
 import banner4 from "../../../assets/images/demoes/demo13/banners/banner-4.jpg";
-
-import product15two from "../../../assets/images/demoes/demo13/products/product-15-2.jpg";
-import client1 from "../../../assets/images/clients/client-1.jpg";
-import client2 from "../../../assets/images/clients/client-2.jpg";
-import client3 from "../../../assets/images/clients/client-3.jpg";
 import { MiniBanner } from "./components/MiniBanner";
 import { InfoBoxesContainer } from "./components/Info";
 import { Product } from "./components/Product";
-import { featuredProducts, latestProducts, topRatedProducts } from "./data";
+import { featuredProducts, topRatedProducts } from "./data";
 import { ProductWidget } from "./components/ProductWidget";
 import { SidebarHome } from "./components/SidebarHome";
 import { Banner } from "./components/Banner";
+import { Skeleton, Stack } from "@chakra-ui/react";
+import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/PlaceholderLayout";
+// import Skeleton from "react-loading-skeleton";
+// import "react-loading-skeleton/dist/skeleton.css";
 
 export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
-     const { static: statiProps } = props;
+     const { static: statiProps, products, categories } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
 
-     console.log("homeProps", statiProps);
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: product.display_name,
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+     }, [products]);
+
      const handleTabChange = (tabId: string) => {
           setActiveTab(tabId);
      };
@@ -41,7 +58,11 @@ export const Home = (props: any) => {
                                    <div className="row">
                                         {statiProps?.dealsBanner?.map(
                                              (banner: any, idx: number) => (
-                                                  <div key={idx} className="col-md-4 col-lg-12">
+                                                  <div
+                                                       key={idx}
+                                                       className="col-md-4 col-lg-12"
+                                                       style={{}}
+                                                  >
                                                        <MiniBanner
                                                             src={
                                                                  banner?.imageUrl !== ""
@@ -133,14 +154,50 @@ export const Home = (props: any) => {
                                                   }`}
                                                   id="latest-products"
                                              >
-                                                  <div className="row">
-                                                       {latestProducts.map((product, index) => (
-                                                            <Product
-                                                                 key={`latest-product-${index}`}
-                                                                 {...product}
-                                                            />
-                                                       ))}
-                                                  </div>
+                                                  {latestProductsState ? (
+                                                       <div className="row">
+                                                            {/* {products.map((product, index) => (
+                                                                 <Product
+                                                                      key={`latest-product-${index}`}
+                                                                      {...product}
+                                                                 />
+                                                            ))} */}
+                                                            {latestProductsState &&
+                                                                 latestProductsState
+                                                                      .sort(
+                                                                           (a: any, b: any) =>
+                                                                                b.__last_update -
+                                                                                a.__last_update,
+                                                                      )
+                                                                      .map((product, index) => (
+                                                                           <Product
+                                                                                key={`latest-product-${index}`}
+                                                                                {...product}
+                                                                           />
+                                                                      ))}
+                                                       </div>
+                                                  ) : (
+                                                       <div
+                                                            style={{
+                                                                 display: "flex",
+                                                                 alignItems: "flex-start",
+                                                                 justifyContent: "space-between",
+                                                                 flexWrap: "wrap",
+                                                                 gap: 4,
+                                                            }}
+                                                       >
+                                                            {[...Array(6)].map((_) => (
+                                                                 <div
+                                                                      style={{
+                                                                           width: "29%",
+                                                                           flex: 1,
+                                                                      }}
+                                                                 >
+                                                                      <ProductPlaceholder />
+                                                                 </div>
+                                                            ))}
+                                                       </div>
+                                                  )}
                                              </div>
                                         )}
                                    </div>
@@ -242,12 +299,19 @@ export const Home = (props: any) => {
                                              <h4 className="section-sub-title text-uppercase m-b-3">
                                                   Latest Products
                                              </h4>
-                                             {topRatedProducts.map((product, index) => (
-                                                  <ProductWidget
-                                                       key={`product-${index}`}
-                                                       {...product}
-                                                  />
-                                             ))}
+                                             {latestProductsState &&
+                                                  latestProductsState
+                                                       .sort(
+                                                            (a: any, b: any) =>
+                                                                 b.__last_update - a.__last_update,
+                                                       )
+                                                       .filter((_, idx) => idx < 3)
+                                                       .map((product, index) => (
+                                                            <ProductWidget
+                                                                 key={`product-${index}`}
+                                                                 {...product}
+                                                            />
+                                                       ))}
                                         </div>
                                    </div>
                                    {/* End .row */}
@@ -259,7 +323,7 @@ export const Home = (props: any) => {
                          <div className="sidebar-toggle custom-sidebar-toggle">
                               <i className="fas fa-sliders-h" />
                          </div>
-                         <SidebarHome />
+                         <SidebarHome categories={categories} />
                     </div>
                </div>
           </main>

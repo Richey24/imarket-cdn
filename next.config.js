@@ -15,6 +15,10 @@ const nextConfig = {
                "plus.unsplash.com",
                "absa7kzimnaf.blob.core.windows.net",
           ],
+
+          dangerouslyAllowSVG: true,
+          contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+
      },
      webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
           config.plugins.push(

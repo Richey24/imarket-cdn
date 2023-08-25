@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../../assets/images/logo.png";
 import phone from "../../../assets/images/phone-white.png";
+import _ from "lodash";
 
 const Header = (props: any) => {
-     const { static: staticProps, company } = props.props;
+     const { static: staticProps, company, categories } = props.props;
      const [activeMenuId, setActiveMenuId] = useState(0);
 
      return (
@@ -21,23 +21,23 @@ const Header = (props: any) => {
 
                          <div className="header-right header-dropdowns w-sm-100">
                               <div className="header-dropdown dropdown-expanded d-none d-lg-block">
-                                   <a href="#">Links</a>
+                                   <Link href="#">Links</Link>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <a href="/dashboard">Dashboard</a>
+                                                  <Link href="/dashboard">Dashboard</Link>
                                              </li>
                                              <li>
-                                                  <a href="/cart">Cart</a>
+                                                  <Link href="/cart">Cart</Link>
                                              </li>
                                              <li>
-                                                  <a href="/cart">Checkout</a>
+                                                  <Link href="/cart">Checkout</Link>
                                              </li>
                                              <li>
-                                                  <a href="/wishlist">Wishlist</a>
+                                                  <Link href="/wishlist">Wishlist</Link>
                                              </li>
                                              <li>
-                                                  <a href="/about">About Us</a>
+                                                  <Link href="/about">About Us</Link>
                                              </li>
                                         </ul>
                                    </div>
@@ -45,14 +45,14 @@ const Header = (props: any) => {
                               </div>
                               {/*End .header-dropown */}
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
-                                   <a href="#">Order</a>
+                                   <Link href="#">Order</Link>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <a href="#">Order Tracking</a>
+                                                  <Link href="#">Order Tracking</Link>
                                              </li>
                                              <li>
-                                                  <a href="#">Order History</a>
+                                                  <Link href="#">Order History</Link>
                                              </li>
                                         </ul>
                                    </div>
@@ -63,20 +63,20 @@ const Header = (props: any) => {
                               <span className="separator"></span>
 
                               <div className="header-dropdown">
-                                   <a href="#">
+                                   <Link href="#">
                                         <i className="flag-us flag"></i>ENG
-                                   </a>
+                                   </Link>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <a href="#">
+                                                  <Link href="#">
                                                        <i className="flag-us flag mr-2"></i>ENG
-                                                  </a>
+                                                  </Link>
                                              </li>
                                              <li>
-                                                  <a href="#">
+                                                  <Link href="#">
                                                        <i className="flag-fr flag mr-2"></i>FRA
-                                                  </a>
+                                                  </Link>
                                              </li>
                                         </ul>
                                    </div>
@@ -85,14 +85,14 @@ const Header = (props: any) => {
                               {/*End .header-dropown */}
 
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
-                                   <a href="#">USD</a>
+                                   <Link href="#">USD</Link>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <a href="#">EUR</a>
+                                                  <Link href="#">EUR</Link>
                                              </li>
                                              <li>
-                                                  <a href="#">USD</a>
+                                                  <Link href="#">USD</Link>
                                              </li>
                                         </ul>
                                    </div>
@@ -133,7 +133,7 @@ const Header = (props: any) => {
                               <button className="mobile-menu-toggler mr-2" type="button">
                                    <i className="fas fa-bars"></i>
                               </button>
-                              <a href="demo2.html" className="logo">
+                              <Link href="demo2.html" className="logo">
                                    {company?.logo ? (
                                         <Image
                                              src={company?.logo}
@@ -145,7 +145,7 @@ const Header = (props: any) => {
                                    ) : (
                                         <h3>{company?.company_name || "Tester"}</h3>
                                    )}
-                              </a>
+                              </Link>
                          </div>
                          {/*End .header-left */}
 
@@ -172,28 +172,44 @@ const Header = (props: any) => {
                                              <div className="select-custom bg-white">
                                                   <select id="category" name="cat">
                                                        <option value="">All Categories</option>
-                                                       <option value="4">Fashion</option>
-                                                       <option value="12">- Women</option>
-                                                       <option value="13">- Men</option>
-                                                       <option value="66">- Jewellery</option>
-                                                       <option value="67">- Kids Fashion</option>
-                                                       <option value="5">Electronics</option>
-                                                       <option value="21">- Smart TVs</option>
-                                                       <option value="22">- Cameras</option>
-                                                       <option value="63">- Games</option>
-                                                       <option value="7">Home &amp; Garden</option>
-                                                       <option value="11">Motors</option>
-                                                       <option value="31">- Cars and Trucks</option>
-                                                       <option value="32">
-                                                            - Motorcycles &amp; Powersports
-                                                       </option>
-                                                       <option value="33">
-                                                            - Parts &amp; Accessories
-                                                       </option>
-                                                       <option value="34">- Boats</option>
-                                                       <option value="57">
-                                                            - Auto Tools &amp; Supplies
-                                                       </option>
+                                                       {categories &&
+                                                            categories.map((category) => (
+                                                                 <>
+                                                                      {!category.parent_id && (
+                                                                           <option
+                                                                                value={category.id}
+                                                                           >
+                                                                                {category.name}
+                                                                           </option>
+                                                                      )}
+                                                                      {category.child_id.map(
+                                                                           (id) => {
+                                                                                const child =
+                                                                                     categories.find(
+                                                                                          (cat) =>
+                                                                                               cat.id ===
+                                                                                               id,
+                                                                                     );
+                                                                                if (child) {
+                                                                                     return (
+                                                                                          <option
+                                                                                               value={
+                                                                                                    child.id
+                                                                                               }
+                                                                                          >
+                                                                                               -{" "}
+                                                                                               {_.capitalize(
+                                                                                                    child.name,
+                                                                                               )}
+                                                                                          </option>
+                                                                                     );
+                                                                                } else {
+                                                                                     return <></>;
+                                                                                }
+                                                                           },
+                                                                      )}
+                                                                 </>
+                                                            ))}
                                                   </select>
                                              </div>
                                              {/*End .select-custom */}
@@ -218,9 +234,9 @@ const Header = (props: any) => {
                                    />
                                    <h6>
                                         Call us now
-                                        <a href="tel:#" className="font1">
+                                        <Link href="tel:#" className="font1">
                                              {company?.phone}
-                                        </a>
+                                        </Link>
                                    </h6>
                               </div>
 
@@ -258,9 +274,9 @@ const Header = (props: any) => {
                                    <div className="cart-overlay"></div>
 
                                    <div className="dropdown-menu mobile-cart">
-                                        <a href="#" title="Close (Esc)" className="btn-close">
+                                        <Link href="#" title="Close (Esc)" className="btn-close">
                                              ×
-                                        </a>
+                                        </Link>
 
                                         <div className="dropdownmenu-wrapper custom-scrollbar">
                                              <div className="dropdown-cart-header">
@@ -272,9 +288,9 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo2-product.html">
+                                                                 <Link href="demo2-product.html">
                                                                       Ultimate 3D Bluetooth Speaker
-                                                                 </a>
+                                                                 </Link>
                                                             </h4>
 
                                                             <span className="cart-product-info">
@@ -313,9 +329,9 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo2-product.html">
+                                                                 <Link href="demo2-product.html">
                                                                       Brown Women Casual HandBag
-                                                                 </a>
+                                                                 </Link>
                                                             </h4>
 
                                                             <span className="cart-product-info">
@@ -354,9 +370,9 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo2-product.html">
+                                                                 <Link href="demo2-product.html">
                                                                       Circled Ultimate 3D Speaker
-                                                                 </a>
+                                                                 </Link>
                                                             </h4>
 
                                                             <span className="cart-product-info">
@@ -436,7 +452,7 @@ const Header = (props: any) => {
                >
                     <div className="container">
                          <div className="header-left">
-                              <a href="demo2.html" className="logo">
+                              <Link href="demo2.html" className="logo">
                                    {company?.logo ? (
                                         <Image
                                              src={company?.logo}
@@ -448,7 +464,7 @@ const Header = (props: any) => {
                                    ) : (
                                         <h3>{company?.company_name || "Tester"}</h3>
                                    )}
-                              </a>
+                              </Link>
                          </div>
                          <div className="header-center">
                               <nav className="main-nav w-100">
@@ -471,9 +487,9 @@ const Header = (props: any) => {
                          </div>
                          <div className="header-right">
                               <div className="header-search header-icon header-search-inline header-search-category w-lg-max">
-                                   <a href="#" className="search-toggle" role="button">
+                                   <Link href="#" className="search-toggle" role="button">
                                         <i className="icon-search-3"></i>
-                                   </a>
+                                   </Link>
                                    <form action="#" method="get">
                                         <div className="header-search-wrapper">
                                              <input
@@ -522,13 +538,13 @@ const Header = (props: any) => {
                               </div>
                               {/*End .header-search */}
 
-                              <a href="login.html" className="header-icon ">
+                              <Link href="login.html" className="header-icon ">
                                    <i className="icon-user-2"></i>
-                              </a>
+                              </Link>
 
-                              <a href="wishlist.html" className="header-icon">
+                              <Link href="wishlist.html" className="header-icon">
                                    <i className="icon-wishlist-2"></i>
-                              </a>
+                              </Link>
 
                               <div className="dropdown cart-dropdown">
                                    <a
@@ -548,9 +564,9 @@ const Header = (props: any) => {
                                    <div className="cart-overlay"></div>
 
                                    <div className="dropdown-menu mobile-cart">
-                                        <a href="#" title="Close (Esc)" className="btn-close">
+                                        <Link href="#" title="Close (Esc)" className="btn-close">
                                              ×
-                                        </a>
+                                        </Link>
 
                                         <div className="dropdownmenu-wrapper custom-scrollbar">
                                              <div className="dropdown-cart-header">
@@ -562,9 +578,9 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo2-product.html">
+                                                                 <Link href="demo2-product.html">
                                                                       Ultimate 3D Bluetooth Speaker
-                                                                 </a>
+                                                                 </Link>
                                                             </h4>
 
                                                             <span className="cart-product-info">
@@ -603,9 +619,9 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo2-product.html">
+                                                                 <Link href="demo2-product.html">
                                                                       Brown Women Casual HandBag
-                                                                 </a>
+                                                                 </Link>
                                                             </h4>
 
                                                             <span className="cart-product-info">
@@ -644,9 +660,9 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo2-product.html">
+                                                                 <Link href="demo2-product.html">
                                                                       Circled Ultimate 3D Speaker
-                                                                 </a>
+                                                                 </Link>
                                                             </h4>
 
                                                             <span className="cart-product-info">

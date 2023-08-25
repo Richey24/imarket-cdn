@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useGetSiteByDomain } from "./hook";
+import NextNProgress from "nextjs-progressbar";
+import { useGetCategories, useGetProducts, useGetSiteByDomain } from "./hook";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
@@ -10,8 +11,14 @@ export const AppContext = React.createContext<any>(null);
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [site, setSite] = useState<SitesField | null>(null);
      const [loading, setLoading] = useState<boolean>(false);
-     const getSiteByDomain = useGetSiteByDomain();
+     const [products, setProducts] = useState(null);
+     const [categories, setCategories] = useState(null);
 
+     const getSiteByDomain = useGetSiteByDomain();
+     const getProducts = useGetProducts();
+     const getCategories = useGetCategories();
+
+     console.log(site);
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {
@@ -32,7 +39,38 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           }
      }, []);
 
-     return <AppContext.Provider value={{ site, loading }}>{children}</AppContext.Provider>;
+     useEffect(() => {
+          if (site && !products) {
+               getProducts(
+                    site?.company?.company_id,
+                    (products) => {
+                         setProducts(products);
+                    },
+                    () => {},
+               );
+               getCategories(
+                    site?.company?._id,
+                    (categories) => {
+                         setCategories(categories);
+                    },
+                    () => {},
+               );
+          }
+     }, [site]);
+
+     return (
+          <AppContext.Provider value={{ site, loading, categories, products }}>
+               <NextNProgress
+                    color="#29D"
+                    startPosition={0.3}
+                    stopDelayMs={200}
+                    height={3}
+                    showOnShallow={true}
+               />
+
+               {children}
+          </AppContext.Provider>
+     );
 };
 
 export default AppProvider;
