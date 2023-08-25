@@ -54,6 +54,7 @@ export const templateConfig: any = {
      theme11: theme11TemplateConfig,
      theme21: theme21TemplateConfig,
      theme22: theme22TemplateConfig,
+     theme23: theme23TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
@@ -72,7 +73,7 @@ export const templateConfig: any = {
      theme40: theme40TemplateConfig,
      theme41: theme41TemplateConfig,
      theme42: theme42TemplateConfig,
-     theme23: theme23TemplateConfig,
+     
 };
 
 export const cssImports = {
