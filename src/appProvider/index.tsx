@@ -58,7 +58,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      }, [site]);
 
      return (
-          <AppContext.Provider value={{ site, loading, categories, products }}>
+          <AppContext.Provider value={{ site: dummySite, loading, categories, products }}>
                {children}
           </AppContext.Provider>
      );
