@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import slide1 from "../../../assets/images/demoes/demo13/slider/slide-1.jpg";
 import slide2 from "../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import banner1 from "../../../assets/images/demoes/demo13/banners/banner-1.jpg";
@@ -20,12 +20,40 @@ import { featuredProducts, latestProducts, topRatedProducts } from "./data";
 import { ProductWidget } from "./components/ProductWidget";
 import { SidebarHome } from "./components/SidebarHome";
 import { Banner } from "./components/Banner";
+import { Skeleton, Stack } from "@chakra-ui/react";
+import { PlaceholderLayout } from "@/app/components/PlaceholderLayout/PlaceholderLayout";
+import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/PlaceholderLayout";
+// import Skeleton from "react-loading-skeleton";
+// import "react-loading-skeleton/dist/skeleton.css";
 
 export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
-     const { static: statiProps } = props;
+     const { static: statiProps, products, categories } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
 
-     console.log("homeProps", statiProps);
+     console.log("products", products, categories);
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+     }, [products]);
+
      const handleTabChange = (tabId: string) => {
           setActiveTab(tabId);
      };
@@ -41,7 +69,11 @@ export const Home = (props: any) => {
                                    <div className="row">
                                         {statiProps?.dealsBanner?.map(
                                              (banner: any, idx: number) => (
-                                                  <div key={idx} className="col-md-4 col-lg-12">
+                                                  <div
+                                                       key={idx}
+                                                       className="col-md-4 col-lg-12"
+                                                       style={{}}
+                                                  >
                                                        <MiniBanner
                                                             src={
                                                                  banner?.imageUrl !== ""
@@ -76,11 +108,10 @@ export const Home = (props: any) => {
                                    <ul className="nav nav-tabs mb-2" role="tablist">
                                         <li className="nav-item">
                                              <a
-                                                  className={`nav-link ${
-                                                       activeTab === "featured-products"
-                                                            ? "active"
-                                                            : ""
-                                                  }`}
+                                                  className={`nav-link ${activeTab === "featured-products"
+                                                       ? "active"
+                                                       : ""
+                                                       }`}
                                                   id="featured-products-tab"
                                                   onClick={() =>
                                                        handleTabChange("featured-products")
@@ -91,11 +122,10 @@ export const Home = (props: any) => {
                                         </li>
                                         <li className="nav-item">
                                              <a
-                                                  className={`nav-link ${
-                                                       activeTab === "latest-products"
-                                                            ? "active"
-                                                            : ""
-                                                  }`}
+                                                  className={`nav-link ${activeTab === "latest-products"
+                                                       ? "active"
+                                                       : ""
+                                                       }`}
                                                   id="latest-products-tab"
                                                   onClick={() => handleTabChange("latest-products")}
                                              >
@@ -106,11 +136,10 @@ export const Home = (props: any) => {
                                    <div>
                                         {activeTab === "featured-products" && (
                                              <div
-                                                  className={`tab-pane fade ${
-                                                       activeTab === "featured-products"
-                                                            ? "show active"
-                                                            : ""
-                                                  }`}
+                                                  className={`tab-pane fade ${activeTab === "featured-products"
+                                                       ? "show active"
+                                                       : ""
+                                                       }`}
                                                   id="featured-products"
                                              >
                                                   <div className="row">
@@ -126,21 +155,56 @@ export const Home = (props: any) => {
 
                                         {activeTab === "latest-products" && (
                                              <div
-                                                  className={`tab-pane fade ${
-                                                       activeTab === "latest-products"
-                                                            ? "show active"
-                                                            : ""
-                                                  }`}
+                                                  className={`tab-pane fade ${activeTab === "latest-products"
+                                                       ? "show active"
+                                                       : ""
+                                                       }`}
                                                   id="latest-products"
                                              >
-                                                  <div className="row">
-                                                       {latestProducts.map((product, index) => (
-                                                            <Product
-                                                                 key={`latest-product-${index}`}
-                                                                 {...product}
-                                                            />
-                                                       ))}
-                                                  </div>
+                                                  {latestProductsState ? (
+                                                       <div className="row">
+                                                            {/* {products.map((product, index) => (
+                                                                 <Product
+                                                                      key={`latest-product-${index}`}
+                                                                      {...product}
+                                                                 />
+                                                            ))} */}
+                                                            {latestProductsState &&
+                                                                 latestProductsState
+                                                                      .sort(
+                                                                           (a: any, b: any) =>
+                                                                                b.__last_update -
+                                                                                a.__last_update,
+                                                                      )
+                                                                      .map((product, index) => (
+                                                                           <Product
+                                                                                key={`latest-product-${index}`}
+                                                                                {...product}
+                                                                           />
+                                                                      ))}
+                                                       </div>
+                                                  ) : (
+                                                       <div
+                                                            style={{
+                                                                 display: "flex",
+                                                                 alignItems: "flex-start",
+                                                                 justifyContent: "space-between",
+                                                                 flexWrap: "wrap",
+                                                                 gap: 4,
+                                                            }}
+                                                       >
+                                                            {[...Array(6)].map((_) => (
+                                                                 <div
+                                                                      style={{
+                                                                           width: "29%",
+                                                                           flex: 1,
+                                                                      }}
+                                                                 >
+                                                                      <ProductPlaceholder />
+                                                                 </div>
+                                                            ))}
+                                                       </div>
+                                                  )}
                                              </div>
                                         )}
                                    </div>
@@ -242,26 +306,33 @@ export const Home = (props: any) => {
                                              <h4 className="section-sub-title text-uppercase m-b-3">
                                                   Latest Products
                                              </h4>
-                                             {topRatedProducts.map((product, index) => (
-                                                  <ProductWidget
-                                                       key={`product-${index}`}
-                                                       {...product}
-                                                  />
-                                             ))}
-                                        </div>
-                                   </div>
+                                             {latestProductsState &&
+                                                  latestProductsState
+                                                       .sort(
+                                                            (a: any, b: any) =>
+                                                                 b.__last_update - a.__last_update,
+                                                       )
+                                                       .filter((_, idx) => idx < 3)
+                                                       .map((product, index) => (
+                                                            <ProductWidget
+                                                                 key={`product-${index}`}
+                                                                 {...product}
+                                                            />
+                                                       ))}
+                                        </div >
+                                   </div >
                                    {/* End .row */}
-                              </div>
+                              </div >
                               {/* End .product-widgets */}
-                         </div>
+                         </div >
                          {/* End .col-lg-9 */}
-                         <div className="sidebar-overlay" />
+                         < div className="sidebar-overlay" />
                          <div className="sidebar-toggle custom-sidebar-toggle">
                               <i className="fas fa-sliders-h" />
                          </div>
-                         <SidebarHome />
-                    </div>
-               </div>
-          </main>
+                         <SidebarHome categories={categories} />
+                    </div >
+               </div >
+          </main >
      );
 };

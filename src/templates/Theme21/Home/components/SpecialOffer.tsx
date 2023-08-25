@@ -8,7 +8,8 @@ import {
      lamps,
      mobilephones,
 } from "../data";
-import { Product } from "./Product";
+
+import { templateImages } from "@/appProvider/templateImages";
 
 export const SpecialOffer = () => {
      const [activeTab, setActiveTab] = useState("best-sellers");
@@ -17,10 +18,7 @@ export const SpecialOffer = () => {
           setActiveTab(tabId);
      };
      return (
-          <section
-               className="special-offer-section bg-gray"
-               style={{paddingRight:'80px', paddingLeft:'80px'}}
-          >
+          <section className="special-offer-section bg-gray">
                <div className="container">
                     <div className="row">
                          <div className="col-xl-4">
@@ -28,7 +26,7 @@ export const SpecialOffer = () => {
                               <div className="banner banner3" style={{ backgroundColor: "#fff" }}>
                                    <figure>
                                         <img
-                                             src={Banner3.src}
+                                             src={templateImages.demo21.bannerImage.banner4}
                                              alt="banner"
                                              width={450}
                                              height={257}
@@ -118,10 +116,94 @@ export const SpecialOffer = () => {
                                    {activeTab === "best-sellers" && (
                                         <div className="row">
                                              {bestsellersProducts.map((product, index) => (
-                                                  <Product
+                                                  <div
+                                                       className="col-6 col-sm-4 col-lg-3"
                                                        key={`best-sellers-${index}`}
-                                                       {...product}
-                                                  />
+                                                  >
+                                                       <div className="product-default inner-quickview inner-icon">
+                                                            <figure>
+                                                                 <a href="demo13-product.html">
+                                                                      <a href="demo21-product.html">
+                                                                           <img
+                                                                                src={
+                                                                                     product.productImageUrl
+                                                                                }
+                                                                                width={217}
+                                                                                height={217}
+                                                                                alt="product"
+                                                                           />
+                                                                           {product.productImageUrlTwo && (
+                                                                                <img
+                                                                                     src={
+                                                                                          product.productImageUrlTwo
+                                                                                     }
+                                                                                     width={217}
+                                                                                     height={217}
+                                                                                     alt="product"
+                                                                                />
+                                                                           )}
+                                                                      </a>
+                                                                 </a>
+                                                                 {/* <div className="label-group">
+                              <span className="product-label label-sale">-30%</span>
+                         </div> */}
+                                                                 <div className="btn-icon-group">
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon btn-add-cart product-type-simple"
+                                                                      >
+                                                                           <i className="icon-shopping-cart" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <a
+                                                                      href="ajax/product-quick-view.html"
+                                                                      className="btn-quickview"
+                                                                      title="Quick View"
+                                                                 >
+                                                                      Quick View
+                                                                 </a>
+                                                            </figure>
+                                                            <div className="product-details">
+                                                                 <div className="category-wrap">
+                                                                      <div className="category-list">
+                                                                           {/* <a href="demo13-shop.html" className="product-category">
+                                        {productCategory}
+                                   </a> */}
+                                                                      </div>
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon-wish"
+                                                                      >
+                                                                           <i className="icon-wishlist-2" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo13-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 {/* <div className="ratings-container">
+                              <div className="product-ratings">
+                                   <span className="ratings" style={{ width: "100%" }} />
+                                  
+                                   <span className="tooltiptext tooltip-top" />
+                              </div>
+                           
+                         </div> */}
+
+                                                                 <div className="price-box">
+                                                                      <span className="product-price">
+                                                                           $
+                                                                           {product.productPrice.toFixed(
+                                                                                2,
+                                                                           )}
+                                                                      </span>
+                                                                 </div>
+                                                                 {/* End .price-box */}
+                                                            </div>
+                                                            {/* End .product-details */}
+                                                       </div>
+                                                  </div>
                                              ))}
                                         </div>
                                    )}
@@ -129,41 +211,470 @@ export const SpecialOffer = () => {
                                    {activeTab === "audio-speakers" && (
                                         <div className="row">
                                              {audiospeakers.map((product, index) => (
-                                                  <Product
+                                                  <div
+                                                       className="col-6 col-sm-4 col-lg-3"
                                                        key={`audio-speakers-${index}`}
-                                                       {...product}
-                                                  />
+                                                  >
+                                                       <div className="product-default inner-quickview inner-icon">
+                                                            <figure>
+                                                                 <a href="demo13-product.html">
+                                                                      <a href="demo21-product.html">
+                                                                           <img
+                                                                                src={
+                                                                                     product.productImageUrl
+                                                                                }
+                                                                                width={217}
+                                                                                height={217}
+                                                                                alt="product"
+                                                                           />
+                                                                           {product.productImageUrlTwo && (
+                                                                                <img
+                                                                                     src={
+                                                                                          product.productImageUrlTwo
+                                                                                     }
+                                                                                     width={217}
+                                                                                     height={217}
+                                                                                     alt="product"
+                                                                                />
+                                                                           )}
+                                                                      </a>
+                                                                 </a>
+                                                                 {/* <div className="label-group">
+                              <span className="product-label label-sale">-30%</span>
+                         </div> */}
+                                                                 <div className="btn-icon-group">
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon btn-add-cart product-type-simple"
+                                                                      >
+                                                                           <i className="icon-shopping-cart" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <a
+                                                                      href="ajax/product-quick-view.html"
+                                                                      className="btn-quickview"
+                                                                      title="Quick View"
+                                                                 >
+                                                                      Quick View
+                                                                 </a>
+                                                            </figure>
+                                                            <div className="product-details">
+                                                                 <div className="category-wrap">
+                                                                      <div className="category-list">
+                                                                           {/* <a href="demo13-shop.html" className="product-category">
+                                        {productCategory}
+                                   </a> */}
+                                                                      </div>
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon-wish"
+                                                                      >
+                                                                           <i className="icon-wishlist-2" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo13-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 {/* <div className="ratings-container">
+                              <div className="product-ratings">
+                                   <span className="ratings" style={{ width: "100%" }} />
+                                  
+                                   <span className="tooltiptext tooltip-top" />
+                              </div>
+                           
+                         </div> */}
+
+                                                                 <div className="price-box">
+                                                                      <span className="product-price">
+                                                                           $
+                                                                           {product.productPrice.toFixed(
+                                                                                2,
+                                                                           )}
+                                                                      </span>
+                                                                 </div>
+                                                                 {/* End .price-box */}
+                                                            </div>
+                                                            {/* End .product-details */}
+                                                       </div>
+                                                  </div>
                                              ))}
                                         </div>
                                    )}
                                    {activeTab === "cameras" && (
                                         <div className="row">
                                              {cameras.map((product, index) => (
-                                                  <Product key={`cameras-${index}`} {...product} />
+                                                  <div
+                                                       className="col-6 col-sm-4 col-lg-3"
+                                                       key={`cameras-${index}`}
+                                                  >
+                                                       <div className="product-default inner-quickview inner-icon">
+                                                            <figure>
+                                                                 <a href="demo13-product.html">
+                                                                      <a href="demo21-product.html">
+                                                                           <img
+                                                                                src={
+                                                                                     product.productImageUrl
+                                                                                }
+                                                                                width={217}
+                                                                                height={217}
+                                                                                alt="product"
+                                                                           />
+                                                                           {product.productImageUrlTwo && (
+                                                                                <img
+                                                                                     src={
+                                                                                          product.productImageUrlTwo
+                                                                                     }
+                                                                                     width={217}
+                                                                                     height={217}
+                                                                                     alt="product"
+                                                                                />
+                                                                           )}
+                                                                      </a>
+                                                                 </a>
+                                                                 {/* <div className="label-group">
+                         <span className="product-label label-sale">-30%</span>
+                    </div> */}
+                                                                 <div className="btn-icon-group">
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon btn-add-cart product-type-simple"
+                                                                      >
+                                                                           <i className="icon-shopping-cart" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <a
+                                                                      href="ajax/product-quick-view.html"
+                                                                      className="btn-quickview"
+                                                                      title="Quick View"
+                                                                 >
+                                                                      Quick View
+                                                                 </a>
+                                                            </figure>
+                                                            <div className="product-details">
+                                                                 <div className="category-wrap">
+                                                                      <div className="category-list">
+                                                                           {/* <a href="demo13-shop.html" className="product-category">
+                                   {productCategory}
+                              </a> */}
+                                                                      </div>
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon-wish"
+                                                                      >
+                                                                           <i className="icon-wishlist-2" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo13-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 {/* <div className="ratings-container">
+                         <div className="product-ratings">
+                              <span className="ratings" style={{ width: "100%" }} />
+                             
+                              <span className="tooltiptext tooltip-top" />
+                         </div>
+                      
+                    </div> */}
+
+                                                                 <div className="price-box">
+                                                                      <span className="product-price">
+                                                                           $
+                                                                           {product.productPrice.toFixed(
+                                                                                2,
+                                                                           )}
+                                                                      </span>
+                                                                 </div>
+                                                                 {/* End .price-box */}
+                                                            </div>
+                                                            {/* End .product-details */}
+                                                       </div>
+                                                  </div>
                                              ))}
                                         </div>
                                    )}
                                    {activeTab === "lamps" && (
                                         <div className="row">
                                              {lamps.map((product, index) => (
-                                                  <Product key={`lamps-${index}`} {...product} />
+                                                  <div
+                                                       className="col-6 col-sm-4 col-lg-3"
+                                                       key={`lamps-${index}`}
+                                                  >
+                                                       <div className="product-default inner-quickview inner-icon">
+                                                            <figure>
+                                                                 <a href="demo13-product.html">
+                                                                      <a href="demo21-product.html">
+                                                                           <img
+                                                                                src={
+                                                                                     product.productImageUrl
+                                                                                }
+                                                                                width={217}
+                                                                                height={217}
+                                                                                alt="product"
+                                                                           />
+                                                                           {product.productImageUrlTwo && (
+                                                                                <img
+                                                                                     src={
+                                                                                          product.productImageUrlTwo
+                                                                                     }
+                                                                                     width={217}
+                                                                                     height={217}
+                                                                                     alt="product"
+                                                                                />
+                                                                           )}
+                                                                      </a>
+                                                                 </a>
+                                                                 {/* <div className="label-group">
+                         <span className="product-label label-sale">-30%</span>
+                    </div> */}
+                                                                 <div className="btn-icon-group">
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon btn-add-cart product-type-simple"
+                                                                      >
+                                                                           <i className="icon-shopping-cart" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <a
+                                                                      href="ajax/product-quick-view.html"
+                                                                      className="btn-quickview"
+                                                                      title="Quick View"
+                                                                 >
+                                                                      Quick View
+                                                                 </a>
+                                                            </figure>
+                                                            <div className="product-details">
+                                                                 <div className="category-wrap">
+                                                                      <div className="category-list">
+                                                                           {/* <a href="demo13-shop.html" className="product-category">
+                                   {productCategory}
+                              </a> */}
+                                                                      </div>
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon-wish"
+                                                                      >
+                                                                           <i className="icon-wishlist-2" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo13-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 {/* <div className="ratings-container">
+                         <div className="product-ratings">
+                              <span className="ratings" style={{ width: "100%" }} />
+                             
+                              <span className="tooltiptext tooltip-top" />
+                         </div>
+                      
+                    </div> */}
+
+                                                                 <div className="price-box">
+                                                                      <span className="product-price">
+                                                                           $
+                                                                           {product.productPrice.toFixed(
+                                                                                2,
+                                                                           )}
+                                                                      </span>
+                                                                 </div>
+                                                                 {/* End .price-box */}
+                                                            </div>
+                                                            {/* End .product-details */}
+                                                       </div>
+                                                  </div>
                                              ))}
                                         </div>
                                    )}
                                    {activeTab === "computer" && (
                                         <div className="row">
                                              {computers.map((product, index) => (
-                                                  <Product key={`computer-${index}`} {...product} />
+                                                  <div
+                                                       className="col-6 col-sm-4 col-lg-3"
+                                                       key={`computer-${index}`}
+                                                  >
+                                                       <div className="product-default inner-quickview inner-icon">
+                                                            <figure>
+                                                                 <a href="demo13-product.html">
+                                                                      <a href="demo21-product.html">
+                                                                           <img
+                                                                                src={
+                                                                                     product.productImageUrl
+                                                                                }
+                                                                                width={217}
+                                                                                height={217}
+                                                                                alt="product"
+                                                                           />
+                                                                           {product.productImageUrlTwo && (
+                                                                                <img
+                                                                                     src={
+                                                                                          product.productImageUrlTwo
+                                                                                     }
+                                                                                     width={217}
+                                                                                     height={217}
+                                                                                     alt="product"
+                                                                                />
+                                                                           )}
+                                                                      </a>
+                                                                 </a>
+                                                                 {/* <div className="label-group">
+                         <span className="product-label label-sale">-30%</span>
+                    </div> */}
+                                                                 <div className="btn-icon-group">
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon btn-add-cart product-type-simple"
+                                                                      >
+                                                                           <i className="icon-shopping-cart" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <a
+                                                                      href="ajax/product-quick-view.html"
+                                                                      className="btn-quickview"
+                                                                      title="Quick View"
+                                                                 >
+                                                                      Quick View
+                                                                 </a>
+                                                            </figure>
+                                                            <div className="product-details">
+                                                                 <div className="category-wrap">
+                                                                      <div className="category-list">
+                                                                           {/* <a href="demo13-shop.html" className="product-category">
+                                   {productCategory}
+                              </a> */}
+                                                                      </div>
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon-wish"
+                                                                      >
+                                                                           <i className="icon-wishlist-2" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo13-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 {/* <div className="ratings-container">
+                         <div className="product-ratings">
+                              <span className="ratings" style={{ width: "100%" }} />
+                             
+                              <span className="tooltiptext tooltip-top" />
+                         </div>
+                      
+                    </div> */}
+
+                                                                 <div className="price-box">
+                                                                      <span className="product-price">
+                                                                           $
+                                                                           {product.productPrice.toFixed(
+                                                                                2,
+                                                                           )}
+                                                                      </span>
+                                                                 </div>
+                                                                 {/* End .price-box */}
+                                                            </div>
+                                                            {/* End .product-details */}
+                                                       </div>
+                                                  </div>
                                              ))}
                                         </div>
                                    )}
                                    {activeTab === "mobile-phones" && (
                                         <div className="row">
                                              {mobilephones.map((product, index) => (
-                                                  <Product
+                                                  <div
+                                                       className="col-6 col-sm-4 col-lg-3"
                                                        key={`mobile-phones-${index}`}
-                                                       {...product}
-                                                  />
+                                                  >
+                                                       <div className="product-default inner-quickview inner-icon">
+                                                            <figure>
+                                                                 <a href="demo13-product.html">
+                                                                      <a href="demo21-product.html">
+                                                                           <img
+                                                                                src={
+                                                                                     product.productImageUrl
+                                                                                }
+                                                                                width={217}
+                                                                                height={217}
+                                                                                alt="product"
+                                                                           />
+                                                                           {product.productImageUrlTwo && (
+                                                                                <img
+                                                                                     src={
+                                                                                          product.productImageUrlTwo
+                                                                                     }
+                                                                                     width={217}
+                                                                                     height={217}
+                                                                                     alt="product"
+                                                                                />
+                                                                           )}
+                                                                      </a>
+                                                                 </a>
+                                                                 {/* <div className="label-group">
+                    <span className="product-label label-sale">-30%</span>
+               </div> */}
+                                                                 <div className="btn-icon-group">
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon btn-add-cart product-type-simple"
+                                                                      >
+                                                                           <i className="icon-shopping-cart" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <a
+                                                                      href="ajax/product-quick-view.html"
+                                                                      className="btn-quickview"
+                                                                      title="Quick View"
+                                                                 >
+                                                                      Quick View
+                                                                 </a>
+                                                            </figure>
+                                                            <div className="product-details">
+                                                                 <div className="category-wrap">
+                                                                      <div className="category-list">
+                                                                           {/* <a href="demo13-shop.html" className="product-category">
+                              {productCategory}
+                         </a> */}
+                                                                      </div>
+                                                                      <a
+                                                                           href="#"
+                                                                           className="btn-icon-wish"
+                                                                      >
+                                                                           <i className="icon-wishlist-2" />
+                                                                      </a>
+                                                                 </div>
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo13-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 {/* <div className="ratings-container">
+                    <div className="product-ratings">
+                         <span className="ratings" style={{ width: "100%" }} />
+                        
+                         <span className="tooltiptext tooltip-top" />
+                    </div>
+                 
+               </div> */}
+
+                                                                 <div className="price-box">
+                                                                      <span className="product-price">
+                                                                           $
+                                                                           {product.productPrice.toFixed(
+                                                                                2,
+                                                                           )}
+                                                                      </span>
+                                                                 </div>
+                                                                 {/* End .price-box */}
+                                                            </div>
+                                                            {/* End .product-details */}
+                                                       </div>
+                                                  </div>
                                              ))}
                                         </div>
                                    )}

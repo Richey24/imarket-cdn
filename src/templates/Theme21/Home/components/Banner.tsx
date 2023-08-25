@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import slide1 from "../../../../assets/images/demoes/demo21/slider/slide1.jpg";
-import slide2 from "../../../../assets/images/demoes/demo21/slider/slide2.jpg";
-import slide3 from "../../../../assets/images/demoes/demo21/slider/slide3.jpg";
+ 
+import { templateImages } from "@/appProvider/templateImages";
 
 export const Banner = () => {
      const [activeTab, setActiveTab] = useState("drones");
@@ -15,7 +14,7 @@ export const Banner = () => {
                     <div
                          className="home-slide banner test"
                          style={{
-                              background: `url(${slide1.src})`,
+                              background: `url(${templateImages.demo21.sliderImage.slide1})`,
                          }}
                     >
                          <div
@@ -62,7 +61,7 @@ export const Banner = () => {
                     <div
                          className="home-slide banner"
                          style={{
-                              backgroundImage: `url(${slide2.src})`,
+                              backgroundImage: `url(${templateImages.demo21.sliderImage.slide2})`,
                          }}
                     >
                          <div
@@ -109,7 +108,7 @@ export const Banner = () => {
                     <div
                          className="home-slide banner"
                          style={{
-                              backgroundImage: `url(${slide3.src})`,
+                              backgroundImage: `url(${templateImages.demo21.sliderImage.slide3})`,
                          }}
                     >
                          <div

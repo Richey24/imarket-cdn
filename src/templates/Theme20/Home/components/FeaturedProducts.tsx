@@ -26,7 +26,7 @@ export const FeaturedProducts = () => {
                               <figure>
                                    <a href="demo13-product.html">
                                         <img
-                                             src={product.productImageUrl.src}
+                                             src={product.productImageUrl}
                                              width={300}
                                              height={300}
                                              alt="product"
@@ -66,9 +66,9 @@ export const FeaturedProducts = () => {
 
                                    {/* End .product-container */}
                                    <div className="price-box">
-                                        {product.oldPrice && (
+                                        {product.productPrice && (
                                              <span className="old-price">
-                                                  ${product.oldPrice.toFixed(2)}
+                                                  ${product.productPrice.toFixed(2)}
                                              </span>
                                         )}
                                         <span className="product-price">

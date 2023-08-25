@@ -1,8 +1,5 @@
 import Image from "next/image";
-import banner3 from "../../../../assets/images/demoes/demo20/banners/banner-3.jpg";
-import banner4 from "../../../../assets/images/demoes/demo20/banners/banner-4.jpg";
-import banner5 from "../../../../assets/images/demoes/demo20/banners/banner-5.png";
-import banner6 from "../../../../assets/images/demoes/demo20/banners/brand1.png";
+import { templateImages } from "@/appProvider/templateImages";
 
 export const MiniBanner = () => {
      return (
@@ -24,7 +21,7 @@ export const MiniBanner = () => {
                               >
                                    <figure>
                                         <Image
-                                             src={banner3}
+                                             src={templateImages.demo20.bannerImage.banner4}
                                              alt="banner"
                                              width={530}
                                              height={249}
@@ -38,7 +35,7 @@ export const MiniBanner = () => {
                                         </a>
                                    </div>
                                    <div className="banner-layer banner-layer-right">
-                                        <Image src={banner6} alt="brand" width={105} height={45} />
+                                        <Image src={templateImages.demo20.bannerImage.banner7} alt="brand" width={105} height={45} />
                                    </div>
                               </div>
                          </div>
@@ -51,7 +48,7 @@ export const MiniBanner = () => {
                               >
                                    <figure>
                                         <Image
-                                             src={banner4}
+                                             src={templateImages.demo20.bannerImage.banner5}
                                              alt="banner"
                                              width={580}
                                              height={301}
@@ -73,7 +70,7 @@ export const MiniBanner = () => {
                               <div className="banner banner5" style={{ backgroundColor: "#eee" }}>
                                    <figure>
                                         <Image
-                                             src={banner5}
+                                             src={templateImages.demo20.bannerImage.banner6}
                                              alt="banner"
                                              width={1180}
                                              height={300}
