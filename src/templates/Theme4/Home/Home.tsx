@@ -5,12 +5,8 @@ import { InfoBoxesContainer } from "./components/Info";
 import SmallBoxes from "./components/smallBoxes";
 import {
      bestSellingWidget,
-     categoriesData,
      featuredProductWidget,
-     latestproductWidget,
-     newArrivalData,
      productsData,
-     slidesData,
      smallBoxData,
      topRatedWidget,
 } from "./data";
