@@ -2,17 +2,8 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import slide1 from "../../../assets/images/demoes/demo13/slider/slide-1.jpg";
-import slide2 from "../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import banner1 from "../../../assets/images/demoes/demo13/banners/banner-1.jpg";
-import banner2 from "../../../assets/images/demoes/demo13/banners/banner-2.jpg";
-import banner3 from "../../../assets/images/demoes/demo13/banners/banner-3.jpg";
 import banner4 from "../../../assets/images/demoes/demo13/banners/banner-4.jpg";
-
-import product15two from "../../../assets/images/demoes/demo13/products/product-15-2.jpg";
-import client1 from "../../../assets/images/clients/client-1.jpg";
-import client2 from "../../../assets/images/clients/client-2.jpg";
-import client3 from "../../../assets/images/clients/client-3.jpg";
 import { MiniBanner } from "./components/MiniBanner";
 import { InfoBoxesContainer } from "./components/Info";
 import { Product } from "./components/Product";

@@ -1,5 +1,3 @@
-import slide1 from "../../../assets/images/demoes/demo4/slider/slide-1.jpg";
-import slide2 from "../../../assets/images/demoes/demo4/slider/slide-2.jpg";
 import { templateImages } from "@/appProvider/templateImages";
 
 export const slidesData = [
@@ -156,7 +154,7 @@ export const productsData = [
      // Add more products here if needed
 ];
 
-export const categories = [
+export const categoriesData = [
      {
           name: "Dress",
           link: "/",

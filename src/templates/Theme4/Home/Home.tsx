@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Banner from "./components/Banner";
 import Banner5 from "../../../assets/images/demoes/demo4/banners/banner-5.jpg";
 import { InfoBoxesContainer } from "./components/Info";
 import SmallBoxes from "./components/smallBoxes";
 import {
      bestSellingWidget,
-     categories,
+     categoriesData,
      featuredProductWidget,
      latestproductWidget,
      newArrivalData,
@@ -19,12 +19,50 @@ import CategoriesSlider from "./components/CategoriesSlider";
 import { ProductWidget } from "./components/ProductWidget";
 import { templateImages } from "@/appProvider/templateImages";
 
-const Home = () => {
+const Home = (props) => {
+     const { static: statiProps, products, categories } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
+
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         category: "Fashion",
+                         imageUrl1: "data:image/jpeg;base64," + product?.image_1920,
+                         imageUrl2: "data:image/jpeg;base64," + product?.image_1024,
+                         productName: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+     }, [products]);
+
+     const displayNamesWithCount =
+          categories &&
+          products &&
+          categories.map((category) => {
+               const categoryProducts = products.filter(
+                    (product) => product.category === category.display_name,
+               );
+               return {
+                    name: category.display_name,
+                    productsCount: categoryProducts.length,
+               };
+          });
+
      return (
           <div className="page-wrapper">
                <main className="main">
                     <div className="home-slider show-nav-hover nav-big mb-2 text-uppercase">
-                         <Banner slides={slidesData} />
+                         <Banner slides={statiProps?.banner ?? []} />
                     </div>
                     <InfoBoxesContainer />
                     <SmallBoxes banners={smallBoxData} />
@@ -32,7 +70,13 @@ const Home = () => {
                          products={[...productsData]}
                          section="Featured Products"
                     />
-                    <FeaturedProductsSection products={newArrivalData} section="New Arrivals" />
+                    {latestProductsState && (
+                         <FeaturedProductsSection
+                              products={latestProductsState ?? []}
+                              section="New Arrivals"
+                         />
+                    )}
+
                     <section
                          className="new-products-section"
                          style={{ backgroundColor: "#f6f7f9" }}
@@ -75,7 +119,9 @@ const Home = () => {
                               >
                                    Browse Our Categories
                               </h2>
-                              <CategoriesSlider categories={categories} />
+                              {displayNamesWithCount && (
+                                   <CategoriesSlider categories={displayNamesWithCount} />
+                              )}
                          </div>
                     </section>
 
@@ -214,7 +260,7 @@ const Home = () => {
                                              <ProductWidget
                                                   key={index}
                                                   productImage={product.imageUrl1}
-                                                  productTitle={product.title}
+                                                  productName={product.title}
                                                   productPrice={product.price}
                                                   productImageTwo={product.imageUrl2}
                                              />
@@ -230,7 +276,7 @@ const Home = () => {
                                              <ProductWidget
                                                   key={index}
                                                   productImage={product.imageUrl1}
-                                                  productTitle={product.title}
+                                                  productName={product.title}
                                                   productPrice={product.price}
                                                   productImageTwo={product.imageUrl2}
                                              />
@@ -242,15 +288,18 @@ const Home = () => {
                                         data-animation-delay={800}
                                    >
                                         <h4 className="section-sub-title">Latest Products</h4>
-                                        {latestproductWidget.map((product, index) => (
-                                             <ProductWidget
-                                                  key={index}
-                                                  productImage={product.imageUrl1}
-                                                  productTitle={product.title}
-                                                  productPrice={product.price}
-                                                  productImageTwo={product.imageUrl2}
-                                             />
-                                        ))}
+                                        {latestProductsState &&
+                                             latestProductsState
+                                                  .slice(0, 3)
+                                                  .map((product, index) => (
+                                                       <ProductWidget
+                                                            key={index}
+                                                            productImage={product.imageUrl1}
+                                                            productName={product.productName}
+                                                            productPrice={product.productPrice}
+                                                            productImageTwo={product.imageUrl2}
+                                                       />
+                                                  ))}
                                    </div>
                                    <div
                                         className="col-lg-3 col-sm-6 pb-5 pb-md-0"
@@ -262,7 +311,7 @@ const Home = () => {
                                              <ProductWidget
                                                   key={index}
                                                   productImage={product.imageUrl1}
-                                                  productTitle={product.title}
+                                                  productName={product.title}
                                                   productPrice={product.price}
                                                   productImageTwo={product.imageUrl2}
                                              />
