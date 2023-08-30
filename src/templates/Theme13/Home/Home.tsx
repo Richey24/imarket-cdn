@@ -7,7 +7,7 @@ import banner4 from "../../../assets/images/demoes/demo13/banners/banner-4.jpg";
 import { MiniBanner } from "./components/MiniBanner";
 import { InfoBoxesContainer } from "./components/Info";
 import { Product } from "./components/Product";
-import { featuredProducts, topRatedProducts } from "./data";
+import { topRatedProducts } from "./data";
 import { ProductWidget } from "./components/ProductWidget";
 import { SidebarHome } from "./components/SidebarHome";
 import { Banner } from "./components/Banner";
@@ -18,8 +18,9 @@ import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/Placehol
 
 export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
-     const { static: statiProps, products, categories } = props;
+     const { static: statiProps, products, categories, featuredProducts } = props;
      const [latestProductsState, setLatestProducts] = useState<any>(null);
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
      useEffect(() => {
           if (products && !latestProductsState) {
@@ -40,6 +41,25 @@ export const Home = (props: any) => {
                     };
                });
                setLatestProducts(latestProductsMap);
+          }
+          if (featuredProducts && !featuredProductsState) {
+               const featuredProductsMap = featuredProducts.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
           }
      }, [products]);
 
@@ -97,10 +117,11 @@ export const Home = (props: any) => {
                                    <ul className="nav nav-tabs mb-2" role="tablist">
                                         <li className="nav-item">
                                              <a
-                                                  className={`nav-link ${activeTab === "featured-products"
-                                                       ? "active"
-                                                       : ""
-                                                       }`}
+                                                  className={`nav-link ${
+                                                       activeTab === "featured-products"
+                                                            ? "active"
+                                                            : ""
+                                                  }`}
                                                   id="featured-products-tab"
                                                   onClick={() =>
                                                        handleTabChange("featured-products")
@@ -111,10 +132,11 @@ export const Home = (props: any) => {
                                         </li>
                                         <li className="nav-item">
                                              <a
-                                                  className={`nav-link ${activeTab === "latest-products"
-                                                       ? "active"
-                                                       : ""
-                                                       }`}
+                                                  className={`nav-link ${
+                                                       activeTab === "latest-products"
+                                                            ? "active"
+                                                            : ""
+                                                  }`}
                                                   id="latest-products-tab"
                                                   onClick={() => handleTabChange("latest-products")}
                                              >
@@ -125,29 +147,38 @@ export const Home = (props: any) => {
                                    <div>
                                         {activeTab === "featured-products" && (
                                              <div
-                                                  className={`tab-pane fade ${activeTab === "featured-products"
-                                                       ? "show active"
-                                                       : ""
-                                                       }`}
+                                                  className={`tab-pane fade ${
+                                                       activeTab === "featured-products"
+                                                            ? "show active"
+                                                            : ""
+                                                  }`}
                                                   id="featured-products"
                                              >
                                                   <div className="row">
-                                                       {featuredProducts.map((product, index) => (
-                                                            <Product
-                                                                 key={`featured-product-${index}`}
-                                                                 {...product}
-                                                            />
-                                                       ))}
+                                                       {featuredProductsState &&
+                                                            featuredProductsState
+                                                                 .sort(
+                                                                      (a: any, b: any) =>
+                                                                           b.__last_update -
+                                                                           a.__last_update,
+                                                                 )
+                                                                 .map((product, index) => (
+                                                                      <Product
+                                                                           key={`latest-product-${index}`}
+                                                                           {...product}
+                                                                      />
+                                                                 ))}
                                                   </div>
                                              </div>
                                         )}
 
                                         {activeTab === "latest-products" && (
                                              <div
-                                                  className={`tab-pane fade ${activeTab === "latest-products"
-                                                       ? "show active"
-                                                       : ""
-                                                       }`}
+                                                  className={`tab-pane fade ${
+                                                       activeTab === "latest-products"
+                                                            ? "show active"
+                                                            : ""
+                                                  }`}
                                                   id="latest-products"
                                              >
                                                   {latestProductsState ? (
@@ -182,12 +213,13 @@ export const Home = (props: any) => {
                                                                  gap: 4,
                                                             }}
                                                        >
-                                                            {[...Array(6)].map((_) => (
+                                                            {[...Array(6)].map((_, key) => (
                                                                  <div
                                                                       style={{
                                                                            width: "29%",
                                                                            flex: 1,
                                                                       }}
+                                                                      key={key}
                                                                  >
                                                                       <ProductPlaceholder />
                                                                  </div>
@@ -308,20 +340,20 @@ export const Home = (props: any) => {
                                                                  {...product}
                                                             />
                                                        ))}
-                                        </div >
-                                   </div >
+                                        </div>
+                                   </div>
                                    {/* End .row */}
-                              </div >
+                              </div>
                               {/* End .product-widgets */}
-                         </div >
+                         </div>
                          {/* End .col-lg-9 */}
-                         < div className="sidebar-overlay" />
+                         <div className="sidebar-overlay" />
                          <div className="sidebar-toggle custom-sidebar-toggle">
                               <i className="fas fa-sliders-h" />
                          </div>
                          <SidebarHome categories={categories} />
-                    </div >
-               </div >
-          </main >
+                    </div>
+               </div>
+          </main>
      );
 };

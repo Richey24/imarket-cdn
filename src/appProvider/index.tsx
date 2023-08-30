@@ -1,10 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import NextNProgress from "nextjs-progressbar";
-import { useGetCategories, useGetProducts, useGetSiteByDomain } from "./hook";
+import {
+     useGetCategories,
+     useGetFeaturedProducts,
+     useGetProducts,
+     useGetSiteByDomain,
+} from "./hook";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
+import NextNProgress from "nextjs-progressbar";
 
 export const AppContext = React.createContext<any>(null);
 
@@ -12,13 +17,15 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [site, setSite] = useState<SitesField | null>(null);
      const [loading, setLoading] = useState<boolean>(false);
      const [products, setProducts] = useState(null);
+     const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
 
      const getSiteByDomain = useGetSiteByDomain();
      const getProducts = useGetProducts();
      const getCategories = useGetCategories();
+     const getFeaturedProducts = useGetFeaturedProducts();
 
-     console.log(site);
+     console.log("featuredProducts", featuredProducts);
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {
@@ -48,6 +55,13 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     },
                     () => {},
                );
+               getFeaturedProducts(
+                    site?.company?.company_id,
+                    (products) => {
+                         setFeaturedProducts(products);
+                    },
+                    () => {},
+               );
                getCategories(
                     site?.company?._id,
                     (categories) => {
@@ -59,7 +73,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      }, [site]);
 
      return (
-          <AppContext.Provider value={{ site, loading, categories, products }}>
+          <AppContext.Provider value={{ site, loading, categories, products, featuredProducts }}>
                <NextNProgress
                     color="#29D"
                     startPosition={0.3}
