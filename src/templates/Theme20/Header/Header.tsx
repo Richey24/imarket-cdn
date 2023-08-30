@@ -8,6 +8,7 @@ const Header = () => {
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);
      const [pag, setPag] = useState(false);
+     const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
           infinite: true,

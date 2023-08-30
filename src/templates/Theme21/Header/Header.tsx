@@ -10,7 +10,7 @@ const Header = () => {
      const [pag, setPag] = useState(false);
      return (
           <header className="header box-shadow ">
-               <div className="header-top" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
+               <div className="header-top">
                     <div className="container">
                          <div className="header-left">
                               <div className="header-dropdown">
@@ -105,10 +105,7 @@ const Header = () => {
                     {/* End .container */}
                </div>
                {/* End .header-top */}
-               <div
-                    className="header-middle sticky-header"
-                    style={{ paddingLeft: "80px", paddingRight: "80px" }}
-               >
+               <div className="header-middle sticky-header">
                     <div className="container">
                          <div className="header-left">
                               <button className="mobile-menu-toggler" type="button">
@@ -351,10 +348,7 @@ const Header = () => {
                          </div>
                     </div>
                </div>
-               <div
-                    className="header-bottom sticky-header"
-                    style={{ paddingLeft: "80px", paddingRight: "80px" }}
-               >
+               <div className="header-bottom sticky-header">
                     <div className="container">
                          <div className="header-left">
                               <a href="demo21.html" className="logo">

@@ -8,6 +8,7 @@ import banner8 from "../../../../assets/images/demoes/demo2/banners/banner-8.jpg
 import banner3 from "../../../../assets/images/demoes/demo2/banners/banner-3.jpg";
 import banner9 from "../../../../assets/images/demoes/demo2/banners/banner-9.jpg";
 import banner6 from "../../../../assets/images/demoes/demo2/banners/banner-6.jpg";
+import { templateImages } from "@/appProvider/templateImages";
 const Promotions = () => {
      return (
           <>
@@ -47,8 +48,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner1}
-                                        style={{ backgroundColor: "#ccc" }}
+                                        src={templateImages.demo2.bannerImage.banner10}
+                                        style={{ backgroundColor: "#ccc", width: "100%" }}
+                                        width={300}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -75,8 +78,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner2}
-                                        style={{ backgroundColor: "#dce1e7" }}
+                                        src={templateImages.demo2.bannerImage.banner2}
+                                        style={{ backgroundColor: "#dce1e7", width: "100%" }}
+                                        width={300}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -98,8 +103,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner3}
-                                        style={{ backgroundColor: "#ccc" }}
+                                        src={templateImages.demo2.bannerImage.banner3}
+                                        style={{ backgroundColor: "#ccc", width: "100%" }}
+                                        width={300}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -125,8 +132,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner7}
-                                        style={{ backgroundColor: "#444" }}
+                                        src={templateImages.demo2.bannerImage.banner7}
+                                        style={{ backgroundColor: "#444", width: "100%" }}
+                                        width={700}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -162,8 +171,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner8}
-                                        style={{ backgroundColor: "#bd9c88" }}
+                                        src={templateImages.demo2.bannerImage.banner8}
+                                        style={{ backgroundColor: "#bd9c88", width: "100%" }}
+                                        width={700}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -184,8 +195,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner9}
-                                        style={{ backgroundColor: "#fff" }}
+                                        src={templateImages.demo2.bannerImage.banner9}
+                                        style={{ backgroundColor: "#fff", width: "100%" }}
+                                        width={700}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -218,8 +231,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner4}
-                                        style={{ backgroundColor: "#444" }}
+                                        src={templateImages.demo2.bannerImage.banner4}
+                                        style={{ backgroundColor: "#444", width: "100%" }}
+                                        width={300}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>
@@ -249,8 +264,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner5}
-                                        style={{ backgroundColor: "#ccc" }}
+                                        src={templateImages.demo2.bannerImage.banner5}
+                                        style={{ backgroundColor: "#ccc", width: "100%" }}
+                                        width={300}
+                                        height={700}
                                         alt="banner"
                                    />
                               </figure>
@@ -276,8 +293,10 @@ const Promotions = () => {
                          >
                               <figure>
                                    <Image
-                                        src={banner6}
-                                        style={{ backgroundColor: "#ccc" }}
+                                        src={templateImages.demo2.bannerImage.banner6}
+                                        style={{ backgroundColor: "#ccc", width: "100%" }}
+                                        width={300}
+                                        height={400}
                                         alt="banner"
                                    />
                               </figure>

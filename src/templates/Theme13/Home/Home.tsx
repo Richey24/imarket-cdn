@@ -2,25 +2,16 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import slide1 from "../../../assets/images/demoes/demo13/slider/slide-1.jpg";
-import slide2 from "../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import banner1 from "../../../assets/images/demoes/demo13/banners/banner-1.jpg";
-import banner2 from "../../../assets/images/demoes/demo13/banners/banner-2.jpg";
-import banner3 from "../../../assets/images/demoes/demo13/banners/banner-3.jpg";
 import banner4 from "../../../assets/images/demoes/demo13/banners/banner-4.jpg";
-import product15two from "../../../assets/images/demoes/demo13/products/product-15-2.jpg";
-import client1 from "../../../assets/images/clients/client-1.jpg";
-import client2 from "../../../assets/images/clients/client-2.jpg";
-import client3 from "../../../assets/images/clients/client-3.jpg";
 import { MiniBanner } from "./components/MiniBanner";
 import { InfoBoxesContainer } from "./components/Info";
 import { Product } from "./components/Product";
-import { featuredProducts, latestProducts, topRatedProducts } from "./data";
+import { topRatedProducts } from "./data";
 import { ProductWidget } from "./components/ProductWidget";
 import { SidebarHome } from "./components/SidebarHome";
 import { Banner } from "./components/Banner";
 import { Skeleton, Stack } from "@chakra-ui/react";
-import { PlaceholderLayout } from "@/app/components/PlaceholderLayout/PlaceholderLayout";
 import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/PlaceholderLayout";
 // import Skeleton from "react-loading-skeleton";
 // import "react-loading-skeleton/dist/skeleton.css";
@@ -31,12 +22,11 @@ export const Home = (props: any) => {
      const [latestProductsState, setLatestProducts] = useState<any>(null);
      const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
-     console.log("products", products, categories);
      useEffect(() => {
           if (products && !latestProductsState) {
                const latestProductsMap = products.map((product) => {
                     return {
-                         productImageAlt: "product",
+                         productImageAlt: product.display_name,
                          productCategory: "SHOES, TOYS",
                          productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
                          productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,

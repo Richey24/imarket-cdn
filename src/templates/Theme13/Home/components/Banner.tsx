@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import slide1 from "../../../../assets/images/demoes/demo13/slider/slide-1.jpg";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
+import "slick-carousel/slick/slick.css"; // Import react-slick styles
+import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
+import Link from "next/link";
 
 export const Banner = ({ slides }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
@@ -66,12 +68,12 @@ export const Banner = ({ slides }) => {
                                                   {slide.price}
                                              </b>
                                         </h5>
-                                        <a
+                                        <Link
                                              href={slide.link}
                                              className="btn btn-dark btn-md ls-10 align-bottom"
                                         >
                                              Shop Now!
-                                        </a>
+                                        </Link>
                                    </div>
                               </div>
                               {/* End .banner-layer */}

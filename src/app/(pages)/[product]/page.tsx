@@ -4,7 +4,8 @@ import Product from "@/app/components/Product";
 import ProductWidget from "@/app/components/Product/ProductWidget";
 import { Button, HStack, Input, useNumberInput } from "@chakra-ui/react";
 
-export default function ProductPage() {
+export default function ProductPage(props) {
+     console.log({ props });
      const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } = useNumberInput({
           step: 0.01,
           defaultValue: 1.53,
@@ -65,7 +66,7 @@ export default function ProductPage() {
                                         >
                                              <div className="product-item">
                                                   <img
-                                                       className="h-96 w-96 product-single-image"
+                                                       className="tw-h-96 tw-w-96 product-single-image"
                                                        src={img}
                                                        data-zoom-image={img}
                                                        alt="product"
@@ -73,7 +74,7 @@ export default function ProductPage() {
                                              </div>
                                              <div className="product-item">
                                                   <img
-                                                       className="h-96 w-96 product-single-image"
+                                                       className="tw-h-96 tw-w-96 product-single-image"
                                                        src={img}
                                                        data-zoom-image={img}
                                                        alt="product"
@@ -81,7 +82,7 @@ export default function ProductPage() {
                                              </div>
                                              <div className="product-item">
                                                   <img
-                                                       className="h-96 w-96 product-single-image"
+                                                       className="tw-h-96 tw-w-96 product-single-image"
                                                        src={img}
                                                        data-zoom-image={img}
                                                        alt="product"
@@ -89,7 +90,7 @@ export default function ProductPage() {
                                              </div>
                                              <div className="product-item">
                                                   <img
-                                                       className="h-96 w-96 product-single-image"
+                                                       className="tw-h-96 tw-w-96 product-single-image"
                                                        src={img}
                                                        data-zoom-image={img}
                                                        alt="product"
@@ -97,7 +98,7 @@ export default function ProductPage() {
                                              </div>
                                              <div className="product-item">
                                                   <img
-                                                       className="h-96 w-96 product-single-image"
+                                                       className="tw-h-96 tw-w-96 product-single-image"
                                                        src={img}
                                                        data-zoom-image={img}
                                                        alt="product"
@@ -115,7 +116,7 @@ export default function ProductPage() {
                                              <img
                                                   src={img}
                                                   width="110"
-                                                  className="h-40 w-40 product-single-image"
+                                                  className="tw-h-40 tw-w-40 product-single-image"
                                                   height="110"
                                                   alt="product-thumbnail"
                                              />
@@ -126,7 +127,7 @@ export default function ProductPage() {
                                                   width="110"
                                                   height="110"
                                                   alt="product-thumbnail"
-                                                  className="h-40 w-40 product-single-image"
+                                                  className="tw-h-40 tw-w-40 product-single-image"
                                              />
                                         </div>
                                         <div className="owl-dot">
@@ -135,7 +136,7 @@ export default function ProductPage() {
                                                   width="110"
                                                   height="110"
                                                   alt="product-thumbnail"
-                                                  className="h-40 w-40 product-single-image"
+                                                  className="tw-h-40 tw-w-40 product-single-image"
                                              />
                                         </div>
                                         <div className="owl-dot">
@@ -144,7 +145,7 @@ export default function ProductPage() {
                                                   width="110"
                                                   height="110"
                                                   alt="product-thumbnail"
-                                                  className="h-40 w-40 product-single-image"
+                                                  className="tw-h-40 tw-w-40 product-single-image"
                                              />
                                         </div>
                                         <div className="owl-dot">
@@ -153,7 +154,7 @@ export default function ProductPage() {
                                                   width="110"
                                                   height="110"
                                                   alt="product-thumbnail"
-                                                  className="h-40 w-40 product-single-image"
+                                                  className="tw-h-40 tw-w-40 product-single-image"
                                              />
                                         </div>
                                    </OwlCarouselComponent>
@@ -434,7 +435,7 @@ export default function ProductPage() {
                               })}
                          </OwlCarouselComponent>
                     </div>
-                    <div className="product-widgets-container row pb-2 mt-24">
+                    <div className="product-widgets-container row tw-pb-2 tw-mt-24">
                          {[
                               "FEATURED PRODUCTS",
                               "BEST SELLING PRODUCTS",
@@ -443,7 +444,7 @@ export default function ProductPage() {
                          ].map((label) => {
                               return (
                                    <div key={label} className="col-lg-3 col-sm-6 pb-5 pb-md-0">
-                                        <h4 className="font-bold text-sm mb-1">{label}</h4>
+                                        <h4 className="font-bold text-sm tw-mb-1">{label}</h4>
                                         <ProductWidget />
                                         <ProductWidget />
                                         <ProductWidget />

@@ -5,8 +5,6 @@ import stripe from "../../../assets/images/payments/payment-stripe.png";
 import verisign from "../../../assets/images/payments/payment-verisign.svg";
 
 const Footer = (): JSX.Element => {
-     console.log(visa);
-
      return (
           <footer className="footer bg-dark position-relative">
                <div className="footer-middle">

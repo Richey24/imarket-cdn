@@ -9,6 +9,7 @@ import {
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
+import NextNProgress from "nextjs-progressbar";
 
 export const AppContext = React.createContext<any>(null);
 
@@ -57,7 +58,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
-                         console.log("122products", products);
                          setFeaturedProducts(products);
                     },
                     () => {},
@@ -74,6 +74,14 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
      return (
           <AppContext.Provider value={{ site, loading, categories, products, featuredProducts }}>
+               <NextNProgress
+                    color="#29D"
+                    startPosition={0.3}
+                    stopDelayMs={200}
+                    height={3}
+                    showOnShallow={true}
+               />
+
                {children}
           </AppContext.Provider>
      );

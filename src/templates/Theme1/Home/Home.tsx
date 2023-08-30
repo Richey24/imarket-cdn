@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import banner1 from "../../../assets/images/demoes/demo1/banners/banner-1.jpg";
 import banner2 from "../../../assets/images/demoes/demo1/banners/banner-2.jpg";
@@ -10,44 +11,68 @@ import { Product } from "./components/Product";
 import { featuredProducts, testimonies } from "./data";
 import { Testimonial } from "./components/Testimonial";
 import Carousel from "react-bootstrap/esm/Carousel";
-import { InfoBoxesContainer } from "./components/Info";
-export const Home = () => {
+import { InfoBoxesContainer } from "@/templates/components/Info";
+
+export const Home = (props: any) => {
+     const { static: statiProps, products, categories } = props;
+
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
+
+     console.log("products", products, categories);
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: product.display_name,
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+     }, [products]);
+
      return (
           <main className="main home">
                <div className="container mb-2">
-                    <div className="info-boxes-container row row-joined mb-2 font2">
-                         <InfoBoxesContainer />
-                    </div>
+                    <InfoBoxesContainer />
 
                     <div className="row">
                          <div className="col-lg-9 order-lg-2">
-                              <Banner />
+                              <Banner slides={statiProps?.banner ?? []} />
 
                               <div className="row gx-5 my-3">
-                                   <div className="col-sm-6 col-md-4 ">
-                                        <MiniBanner
-                                             src={banner1}
-                                             backgroundColor="#ccc"
-                                             title="Porto Watches"
-                                             subtitle="Starting at $99"
-                                        />
-                                   </div>
-                                   <div className="col-sm-6 col-md-4 ">
-                                        <MiniBanner
-                                             src={banner2}
-                                             backgroundColor="#fff"
-                                             title="Deal Promos"
-                                             subtitle="Starting at $99"
-                                        />
-                                   </div>
-                                   <div className="col-sm-6 col-md-4 ">
-                                        <MiniBanner
-                                             src={banner3}
-                                             backgroundColor="#b8c1d0"
-                                             title="Handbags"
-                                             subtitle="Starting at $99"
-                                        />
-                                   </div>
+                                   {statiProps?.dealsBanner?.map((banner: any, idx: number) => (
+                                        <div key={idx} className="col-sm-6 col-md-4" style={{}}>
+                                             <MiniBanner
+                                                  src={
+                                                       banner?.imageUrl !== ""
+                                                            ? banner?.imageUrl
+                                                            : banner1
+                                                  }
+                                                  backgroundColor="#ccc"
+                                                  title={
+                                                       banner?.text !== ""
+                                                            ? banner?.title
+                                                            : "HandBag"
+                                                  }
+                                                  subtitle={
+                                                       banner?.text !== ""
+                                                            ? banner?.text
+                                                            : "Starting from $99"
+                                                  }
+                                             />
+                                        </div>
+                                   ))}
                               </div>
                               <div>
                                    <h3 className="fw-bold fs-2 mb-4 pb-2 mt-3 border-bottom">
@@ -55,12 +80,13 @@ export const Home = () => {
                                    </h3>
 
                                    <div className="row">
-                                        {featuredProducts.map((product, index) => (
-                                             <Product
-                                                  key={`featured-product-${index}`}
-                                                  {...product}
-                                             />
-                                        ))}
+                                        {latestProductsState &&
+                                             latestProductsState.map((product, index) => (
+                                                  <Product
+                                                       key={`featured-product-${index}`}
+                                                       {...product}
+                                                  />
+                                             ))}
                                    </div>
                               </div>
 

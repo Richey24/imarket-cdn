@@ -1,5 +1,5 @@
-import Banner1 from "../../../../assets/images/demoes/demo21/banners/banner-1.jpg";
-import Banner2 from "../../../../assets/images/demoes/demo21/banners/banner-2.jpg";
+import { templateImages } from "@/appProvider/templateImages";
+ 
 
 export const MiniBanner = () => {
      return (
@@ -7,7 +7,7 @@ export const MiniBanner = () => {
                <div className="col-md-6">
                     <div className="banner banner1" style={{ backgroundColor: "#f4f4f4" }}>
                          <figure>
-                              <img src={Banner1.src} alt="banner" />
+                              <img src={templateImages.demo21.bannerImage.banner2} alt="banner" />
                          </figure>
                          <div className="banner-layer banner-layer-middle row justify-content-between align-items-center no-gutters">
                               <div className="col-6 col-lg-4">
@@ -31,7 +31,7 @@ export const MiniBanner = () => {
                <div className="col-md-6">
                     <div className="banner banner2" style={{ backgroundColor: "#f4f4f4" }}>
                          <figure>
-                              <img src={Banner2.src} alt="banner" />
+                              <img src={templateImages.demo21.bannerImage.banner3} alt="banner" />
                          </figure>
                          <div className="banner-layer banner-layer-middle row justify-content-between align-items-center no-gutters">
                               <div className="col-6 col-lg-4 text-left text-lg-right">

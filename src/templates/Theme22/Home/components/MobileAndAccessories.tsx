@@ -1,14 +1,11 @@
 import React from "react";
-import banner from '../../../../assets/images/demoes/demo22/banners/banner-5.jpg'
-import product1 from '../../../../assets/images/demoes/demo22/products/product-12.jpg'
-import product2 from '../../../../assets/images/demoes/demo22/products/product-17.jpg'
-import product3 from '../../../../assets/images/demoes/demo22/products/product-13.jpg'
-import product4 from '../../../../assets/images/demoes/demo22/products/product-11.jpg'
+ 
+import { templateImages } from "@/appProvider/templateImages";
 export const MobileAndAccessories = () => {
      return (
           <section
                className="mobile-phones-container appear-animate"
-              style={{paddingLeft:'80px', paddingRight:'80px'}}
+               
           >
                <div className="container">
                     <h2 className="section-title border-0 line-height-1 ls-n-10 m-b-4">
@@ -34,7 +31,7 @@ export const MobileAndAccessories = () => {
                                    <figure className="h-100">
                                         <img
                                              className="h-100"
-                                             src={banner.src}
+                                             src={templateImages.demo22.bannerImage.banner6}
                                              alt="baner"
                                              width={360}
                                              height={508}
@@ -69,7 +66,7 @@ export const MobileAndAccessories = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product1.src}
+                                                            src={templateImages.demo22.productImages.product12}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -138,7 +135,7 @@ export const MobileAndAccessories = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product2.src}
+                                                            src={templateImages.demo22.productImages.product17}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -209,7 +206,7 @@ export const MobileAndAccessories = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product3.src}
+                                                            src={templateImages.demo22.productImages.product13}
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -276,7 +273,7 @@ export const MobileAndAccessories = () => {
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={product4.src}
+                                                            src={templateImages.demo22.productImages.product11}
                                                             width={217}
                                                             height={217}
                                                             alt="product"

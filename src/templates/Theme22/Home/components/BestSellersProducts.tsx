@@ -1,17 +1,12 @@
 import React from "react";
-import product from '../../../../assets/images/demoes/demo22/products/product-big-1.jpg'
-import product1 from '../../../../assets/images/demoes/demo22/products/product-22.jpg'
-import product2 from '../../../../assets/images/demoes/demo22/products/product-21.jpg'
-import product3 from '../../../../assets/images/demoes/demo22/products/product-20.jpg'
-import product4 from '../../../../assets/images/demoes/demo22/products/product-23.jpg'
-import product5 from '../../../../assets/images/demoes/demo22/products/product-5.jpg'
-import product6 from '../../../../assets/images/demoes/demo22/products/product-11.jpg'
+ 
+import { templateImages } from "@/appProvider/templateImages";
 
 export const BestSellersProducts = () => {
      return (
           <section
                className="best-sellers bg-gray appear-animate"
-               style={{paddingLeft:'80px', paddingRight:'80px'}}
+              
           >
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">
@@ -26,7 +21,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product.src}
+                                                   src={templateImages.demo22.productImages.product1}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -96,7 +91,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product1.src}
+                                                  src={templateImages.demo22.productImages.product22}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -179,7 +174,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product2.src}
+                                                  src={templateImages.demo22.productImages.product21}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -247,7 +242,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product3.src}
+                                                  src={templateImages.demo22.productImages.product20}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -315,7 +310,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product4.src}
+                                                  src={templateImages.demo22.productImages.product23}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -382,7 +377,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product5.src}
+                                                  src={templateImages.demo22.productImages.product5}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -452,7 +447,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={product6.src}
+                                                  src={templateImages.demo22.productImages.product11}
                                                   width={217}
                                                   height={217}
                                                   alt="product"

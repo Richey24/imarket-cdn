@@ -3,13 +3,12 @@ import logo from "../../../assets/images/your-logo.png";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
 
 const Footer = (props: any) => {
-     console.log("headerProps", props);
      return (
           <footer>
                <div className="footer">
                     <div
                          className="footer-top"
-                         style={{ paddingLeft: "80px", paddingRight: "80px" }}
+
                     >
                          <div className="container">
                               <div className="row align-items-center">
@@ -49,7 +48,7 @@ const Footer = (props: any) => {
                     </div>
                     <div
                          className="container"
-                         style={{ paddingLeft: "80px", paddingRight: "80px" }}
+
                     >
                          <div className="footer-middle">
                               <div className="row">
@@ -180,7 +179,7 @@ const Footer = (props: any) => {
                               </div>
                          </div>
                     </div>
-                    {/* End .footer-bottom */}
+
                </div>
           </footer>
      );

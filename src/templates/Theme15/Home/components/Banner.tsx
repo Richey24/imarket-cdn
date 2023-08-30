@@ -1,8 +1,6 @@
-import Carousel from "react-bootstrap/Carousel";
-import slide1 from "../../../../assets/images/demoes/demo15/slider/slide-1.jpg";
-import slide2 from "../../../../assets/images/demoes/demo15/slider/slide-2.jpg";
 import Image from "next/image";
 import Slider from "react-slick";
+import { templateImages } from "@/appProvider/templateImages";
 
 const Banner = () => {
      let settings = {
@@ -16,20 +14,12 @@ const Banner = () => {
           arrows: true,
           accessibility: true,
      };
-     // const slides = [
-     //      {
-     //           imageUrl: slide1,
-     //           title: "Winter Fashion Trends",
-     //           promoText: "Get up to 30% off",
-
-     //      }
-     // ]
      return (
           <Slider {...settings}>
                <div className="home-slide banner banner-md-vw-small">
                     <Image
                          className="slide-bg"
-                         src={slide1}
+                         src={templateImages.demo15.sliderImage.slide1}
                          style={{ backgroundColor: "#efefef" }}
                          alt="banner"
                          width={1120}
@@ -37,21 +27,21 @@ const Banner = () => {
                     />
                     <div className="banner-layer slide-1 banner-layer-left banner-layer-middle text-right">
                          <h4
-                              className="m-b-3 text-right appear-animat"
+                              className="m-b-3 text-right"
                               data-animation-delay={700}
                               data-animation-name="splitRight"
                          >
                               Luxury With Brands We Love
                          </h4>
                          <h3
-                              className="m-b-2 font3 text-right text-primary appear-animat"
+                              className="m-b-2 font3 text-right text-primary"
                               data-animation-name="blurIn"
                               data-animation-duration={1200}
                          >
                               Women&apos;s Lingerie
                          </h3>
                          <h5
-                              className="d-inline-block ls-n-20 m-r-3 p-t-3 text-left appear-animat"
+                              className="d-inline-block ls-n-20 m-r-3 p-t-3 text-left"
                               data-animation-delay={1900}
                               data-animation-duration={1200}
                               data-animation-name="fadeInLeft"
@@ -59,7 +49,7 @@ const Banner = () => {
                               STARTING AT
                          </h5>
                          <h4
-                              className="text-price ls-n-20 m-b-4 text-left float-right appear-animat"
+                              className="text-price ls-n-20 m-b-4 text-left float-right"
                               data-animation-delay={1900}
                               data-animation-duration={1200}
                               data-animation-name="fadeInUp"
@@ -68,7 +58,7 @@ const Banner = () => {
                          </h4>
                          <div className="clearfix" />
                          <div
-                              className="mb-0 appear-animat"
+                              className="mb-0"
                               data-animation-delay={2400}
                               data-animation-name="fadeInUpShorter"
                          >
@@ -82,7 +72,7 @@ const Banner = () => {
                <div className="home-slide banner banner-md-vw-small">
                     <Image
                          className="slide-bg"
-                         src={slide2}
+                         src={templateImages.demo15.sliderImage.slide2}
                          style={{ backgroundColor: "#efefef" }}
                          alt="banner"
                          width={1120}
@@ -90,14 +80,14 @@ const Banner = () => {
                     />
                     <div className="banner-layer slide-2 banner-layer-right banner-layer-middle">
                          <h4
-                              className="m-b-3 appear-animat"
+                              className="m-b-3"
                               data-animation-delay={700}
                               data-animation-name="splitRight"
                          >
                               Trending Items We Love
                          </h4>
                          <h3
-                              className="m-b-2 font3 text-primary appear-animat"
+                              className="m-b-2 font3 text-primary"
                               data-animation-name="blurIn"
                               data-animation-duration={1200}
                          >

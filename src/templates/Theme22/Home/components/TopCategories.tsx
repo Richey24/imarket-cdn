@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Banner1 from "../../../../assets/images/demoes/demo22/banners/banner-1.jpg";
-import Banner2 from "../../../../assets/images/demoes/demo22/banners/banner-2.jpg";
+ 
 import Slider from "react-slick";
+import { templateImages } from "@/appProvider/templateImages";
 export const TopCategories = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
@@ -25,7 +25,7 @@ export const TopCategories = () => {
                               >
                                    <figure>
                                         <img
-                                             src={Banner1.src}
+                                             src={templateImages.demo22.bannerImage.banner2}
                                              alt="banner"
                                              width={700}
                                              height={236}
@@ -59,7 +59,7 @@ export const TopCategories = () => {
                               >
                                    <figure>
                                         <img
-                                             src={Banner2.src}
+                                             src={templateImages.demo22.bannerImage.banner3}
                                              alt="banner"
                                              width={700}
                                              height={236}

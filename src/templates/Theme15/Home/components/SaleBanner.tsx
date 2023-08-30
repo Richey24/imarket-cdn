@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import banner4 from "../../../../assets/images/demoes/demo15/banners/banner-4.jpg";
+import { templateImages } from "@/appProvider/templateImages";
 
 const SaleBanner = () => {
      return (
           <section className="sale-banner m-t-3 ">
                <div className="banner" style={{ backgroundColor: "#ffab8c" }}>
                     <Image
-                         src={banner4}
+                         src={templateImages.demo15.bannerImage.banner5}
                          width={1120}
                          height={380}
                          style={{ backgroundColor: "#fca383" }}

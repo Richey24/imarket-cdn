@@ -4,7 +4,7 @@ import { FeaturedProducts } from "./components/FeaturedProducts";
 import { MiniBanner } from "./components/MiniBanner";
 import { NewProducts } from "./components/NewProducts";
 import { SpecialOffer } from "./components/SpecialOffer";
-import { Products } from "./components/Products/Products";
+import { Products } from "./components/Products";
 
 import { Banner } from "./components/Banner";
 import { SmallBanner } from "./components/SmallBanner";
@@ -12,17 +12,13 @@ import { FeatureBoxes } from "./components/FeatureBoxes";
 import { Card } from "./components/Card";
 
 const Home = () => {
-     
      return (
           <main className="main">
                <Banner />
                <FeaturedProducts />
-               <Card/>
+               <Card />
                <section className="new-products-section">
-                    <div
-                         className="container"
-                         style={{ paddingRight: "80px", paddingLeft: "80px" }}
-                    >
+                    <div className="container">
                          <MiniBanner />
                          <h2
                               className="section-title ls-n-10 pb-3 m-b-4 appear-animate"
