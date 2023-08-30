@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import slide1 from "../../../../assets/images/demoes/demo13/slider/slide-1.jpg";
-import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
-import "slick-carousel/slick/slick.css"; // Import react-slick styles
-import "slick-carousel/slick/slick-theme.css"; // Import react-slick theme styles
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const Banner = ({ slides }) => {
      const [currentSlide, setCurrentSlide] = useState(0);

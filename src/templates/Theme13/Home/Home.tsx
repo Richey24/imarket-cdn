@@ -8,7 +8,6 @@ import banner1 from "../../../assets/images/demoes/demo13/banners/banner-1.jpg";
 import banner2 from "../../../assets/images/demoes/demo13/banners/banner-2.jpg";
 import banner3 from "../../../assets/images/demoes/demo13/banners/banner-3.jpg";
 import banner4 from "../../../assets/images/demoes/demo13/banners/banner-4.jpg";
-
 import product15two from "../../../assets/images/demoes/demo13/products/product-15-2.jpg";
 import client1 from "../../../assets/images/clients/client-1.jpg";
 import client2 from "../../../assets/images/clients/client-2.jpg";
@@ -28,8 +27,9 @@ import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/Placehol
 
 export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
-     const { static: statiProps, products, categories } = props;
+     const { static: statiProps, products, categories, featuredProducts } = props;
      const [latestProductsState, setLatestProducts] = useState<any>(null);
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
      console.log("products", products, categories);
      useEffect(() => {
@@ -51,6 +51,25 @@ export const Home = (props: any) => {
                     };
                });
                setLatestProducts(latestProductsMap);
+          }
+          if (featuredProducts && !featuredProductsState) {
+               const featuredProductsMap = featuredProducts.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
           }
      }, [products]);
 
@@ -146,12 +165,19 @@ export const Home = (props: any) => {
                                                   id="featured-products"
                                              >
                                                   <div className="row">
-                                                       {featuredProducts.map((product, index) => (
-                                                            <Product
-                                                                 key={`featured-product-${index}`}
-                                                                 {...product}
-                                                            />
-                                                       ))}
+                                                       {featuredProductsState &&
+                                                            featuredProductsState
+                                                                 .sort(
+                                                                      (a: any, b: any) =>
+                                                                           b.__last_update -
+                                                                           a.__last_update,
+                                                                 )
+                                                                 .map((product, index) => (
+                                                                      <Product
+                                                                           key={`latest-product-${index}`}
+                                                                           {...product}
+                                                                      />
+                                                                 ))}
                                                   </div>
                                              </div>
                                         )}
@@ -197,12 +223,13 @@ export const Home = (props: any) => {
                                                                  gap: 4,
                                                             }}
                                                        >
-                                                            {[...Array(6)].map((_) => (
+                                                            {[...Array(6)].map((_, key) => (
                                                                  <div
                                                                       style={{
                                                                            width: "29%",
                                                                            flex: 1,
                                                                       }}
+                                                                      key={key}
                                                                  >
                                                                       <ProductPlaceholder />
                                                                  </div>
