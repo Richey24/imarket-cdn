@@ -56,19 +56,19 @@ const Footer = (props: any): JSX.Element => {
                                         </ul>
 
                                         <div className="social-icons">
-                                             {company.site.header.component.props.static.socials.map(
-                                                  (social) => {
+                                             {company.site?.header.component.props.static.socials.map(
+                                                  (social, i) => {
                                                        return (
                                                             <Link
+                                                                 key={i}
                                                                  style={{
                                                                       color: "black",
                                                                       backgroundColor: "white",
                                                                       border: "none",
                                                                  }}
                                                                  href={social.link}
-                                                                 className={`social-icon ml-0${
-                                                                      socialMap[social.name]
-                                                                 }`}
+                                                                 className={`social-icon ml-0${socialMap[social.name]
+                                                                      }`}
                                                                  target="_blank"
                                                                  title={social.name}
                                                             ></Link>
