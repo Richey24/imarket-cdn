@@ -41,7 +41,7 @@ export const templateConfig: any = {
      theme2: theme2TemplateConfig,
      theme3: theme3TemplateConfig,
      theme4: theme4TemplateConfig,
-     // theme5: theme5TemplateConfig,
+     theme5: theme5TemplateConfig,
      // theme6: theme6TemplateConfig,
      // theme11: theme11TemplateConfig,
      // theme22: theme22TemplateConfig,
