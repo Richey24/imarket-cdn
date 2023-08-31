@@ -4,8 +4,6 @@ import Image from "next/image";
 
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
-     console.log("footerProps", company);
-
      return (
           <footer className="footer">
                <div className="footer-middle">
@@ -41,7 +39,7 @@ const Footer = (props: any): JSX.Element => {
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Email:</span>
-                                                  <a href="mailto:mail@example.com">
+                                                  <a href={`mailto:${company?.user_id?.email}`}>
                                                        {company?.user_id?.email}
                                                   </a>
                                              </li>

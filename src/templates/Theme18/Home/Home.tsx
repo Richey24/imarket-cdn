@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "./components/Hero";
-import Products from "./components/products";
+import Products from "./components/Products";
 import { ProductsData, featuredProducts } from "./data";
 import ProductBanner from "./components/ProductBanner";
 import FeaturedProducts from "./components/FeaturedProducts";

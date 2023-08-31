@@ -6,5 +6,10 @@ function getSubDomain(uri: string) {
     return subdomain
 }
 
+const socialMap = {
+    facebook: "social-facebook icon-facebook",
+    twitter: "social-twitter icon-twitter",
+    instagram: "social-instagram icon-instagram",
+};
 
-export { getSubDomain }
+export { getSubDomain ,socialMap}

@@ -8,9 +8,9 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
      return (
           <Link href={`/${productName}`}>
                <div className="product-default inner-quickview inner-icon">
-                    <figure className="img-effect h-60 ">
+                    <figure className="img-effect tw-h-60 ">
                          <a href="demo13-product.html">
-                              <img src={imageSrc} className="w-full h-full" alt="product" />
+                              <img src={imageSrc} className="tw-w-full tw-h-full" alt="product" />
                               {/* <img src={imageSrc} width="205" height="205" alt="product" /> */}
                          </a>
                          <div className="label-group">
@@ -46,14 +46,14 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
                          </h3>
                          <div className="ratings-container">
                               <div className="product-ratings">
-                                   <span className="ratings w-0"></span>
+                                   <span className="ratings tw-w-0"></span>
 
                                    <span className="tooltiptext tooltip-top"></span>
                               </div>
                          </div>
 
                          <div className="price-box">
-                              <span className="text-2xl font-semibold"> {price}</span>
+                              <span className="tw-text-2xl font-semibold"> {price}</span>
                          </div>
                     </div>
                </div>

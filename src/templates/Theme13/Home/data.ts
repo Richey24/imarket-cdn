@@ -28,80 +28,80 @@ import product14 from "../../../assets/images/demoes/demo13/products/product-14.
 import product14two from "../../../assets/images/demoes/demo13/products/product-14-2.jpg";
 import { ProductProps, ProductWidgetProps } from "./types";
 
-export const featuredProducts: ProductProps[] = [
-     {
-          productImageAlt: "product",
-          productCategory: "SHOES, TOYS",
-          productImageUrl: product5,
-          productImageUrlTwo: product5two,
-          productTitle: "Men Gentle Shoes",
-          productPrice: 269,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: product1,
-          productImageUrlTwo: product1two,
-          productTitle: "Porto Gray Cap",
-          productPrice: 29,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: product8,
-          productImageUrlTwo: product8two,
-          productTitle: "Porto White Cap",
-          productPrice: 101,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: product11,
-          productImageUrlTwo: product11two,
-          productTitle: "Winter Towel",
-          productPrice: 49,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, HEADPHONE",
-          productImageUrl: product9,
-          productImageUrlTwo: product9two,
-          productTitle: "Product Extended",
-          productPrice: 49,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "SHOES, TOYS",
-          productImageUrl: product10,
-          productImageUrlTwo: product10two,
-          productTitle: "Sports Shoes",
-          productPrice: 239,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "TOYS, TROUSERS",
-          productImageUrl: product14,
-          productImageUrlTwo: product14two,
-          productTitle: "Women Bag",
-          productPrice: 299,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: product4,
-          productImageUrlTwo: product4two,
-          productTitle: "Men Black Belts",
-          productPrice: 55,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "DRESS, WATCHES",
-          productImageUrl: product12,
-          productImageUrlTwo: product12two,
-          productTitle: "Women Bag",
-          productPrice: 199,
-     },
-];
+// export const featuredProducts: ProductProps[] = [
+//      {
+//           productImageAlt: "product",
+//           productCategory: "SHOES, TOYS",
+//           productImageUrl: product5,
+//           productImageUrlTwo: product5two,
+//           productTitle: "Men Gentle Shoes",
+//           productPrice: 269,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "CAPS, DRESS",
+//           productImageUrl: product1,
+//           productImageUrlTwo: product1two,
+//           productTitle: "Porto Gray Cap",
+//           productPrice: 29,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "CAPS, T-SHIRTS",
+//           productImageUrl: product8,
+//           productImageUrlTwo: product8two,
+//           productTitle: "Porto White Cap",
+//           productPrice: 101,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "DRESS, T-SHIRTS",
+//           productImageUrl: product11,
+//           productImageUrlTwo: product11two,
+//           productTitle: "Winter Towel",
+//           productPrice: 49,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "DRESS, HEADPHONE",
+//           productImageUrl: product9,
+//           productImageUrlTwo: product9two,
+//           productTitle: "Product Extended",
+//           productPrice: 49,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "SHOES, TOYS",
+//           productImageUrl: product10,
+//           productImageUrlTwo: product10two,
+//           productTitle: "Sports Shoes",
+//           productPrice: 239,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "TOYS, TROUSERS",
+//           productImageUrl: product14,
+//           productImageUrlTwo: product14two,
+//           productTitle: "Women Bag",
+//           productPrice: 299,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "HEADPHONE, WATCHES",
+//           productImageUrl: product4,
+//           productImageUrlTwo: product4two,
+//           productTitle: "Men Black Belts",
+//           productPrice: 55,
+//      },
+//      {
+//           productImageAlt: "product",
+//           productCategory: "DRESS, WATCHES",
+//           productImageUrl: product12,
+//           productImageUrlTwo: product12two,
+//           productTitle: "Women Bag",
+//           productPrice: 199,
+//      },
+// ];
 
 export const latestProducts = [
      {
@@ -185,18 +185,22 @@ export const topRatedProducts: ProductWidgetProps[] = [
           productImageTwo: product5two,
           productTitle: "Men Gentle Shoes",
           productPrice: 269,
+          id: 1,
      },
      {
           productImage: product13,
           productImageTwo: product13two,
           productTitle: "Women Bag",
           productPrice: 299,
+          id: 2,
      },
      {
           productImage: product9,
           productImageTwo: product9two,
           productTitle: "Product Extended",
           productPrice: 39,
+          id: 3,
      },
+
      // Add more products as needed
 ];

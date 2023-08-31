@@ -26,14 +26,14 @@ export default function Home() {
                                    "no-repeat 50%/cover url(https://plus.unsplash.com/premium_photo-1661381007965-b21e0fb0681b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80) #ee3d43",
                          }}
                     >
-                         <div className="bg-black opacity-50 absolute w-full h-full top-0 left-0"></div>
+                         <div className="bg-black tw-opacity-50 tw-absolute tw-w-full tw-h-full tw-top-0 tw-left-0"></div>
                          <div className="container position-relative">
                               <div className="banner-body text-uppercase">
                                    <h4 className="banner-subtitle text-white">
                                         over 200 products with discounts
                                    </h4>
-                                   <h3 className="banner-title text-white">great deals</h3>
-                                   <h5 className="banner-text text-white d-inline-block ls-n-20 align-text-bottom">
+                                   <h3 className="banner-title tw-text-white">great deals</h3>
+                                   <h5 className="banner-text tw-text-white d-inline-block ls-n-20 align-text-bottom">
                                         Starting At
                                         <b className="coupon-sale-text bg-secondary text-white d-inline-block">
                                              $<em>299</em>99
@@ -252,13 +252,13 @@ export default function Home() {
                                                                  </AccordionButton>
                                                             </h2>
                                                             <AccordionPanel pb={4}>
-                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       BMW
                                                                  </div>
-                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Range Rover
                                                                  </div>
-                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Benz
                                                                  </div>
                                                             </AccordionPanel>
@@ -277,13 +277,13 @@ export default function Home() {
                                                                  </AccordionButton>
                                                             </h2>
                                                             <AccordionPanel pb={4}>
-                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Shoe
                                                                  </div>
-                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Clothes
                                                                  </div>
-                                                                 <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Bag
                                                                  </div>
                                                             </AccordionPanel>
@@ -334,19 +334,19 @@ export default function Home() {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Extra Large
                                                   </div>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Extra Small
                                                   </div>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Large
                                                   </div>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Medium
                                                   </div>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Small
                                                   </div>
                                              </AccordionPanel>
@@ -366,13 +366,13 @@ export default function Home() {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Adidas
                                                   </div>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Niki
                                                   </div>
-                                                  <div className="text-base font-light cursor-pointer text-gray-700 hover:text-gray-900">
+                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Puma
                                                   </div>
                                              </AccordionPanel>
@@ -392,11 +392,11 @@ export default function Home() {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="flex gap-4">
+                                                  <div className="tw-flex tw-gap-4">
                                                        {["red", "blue", "green"].map((color) => {
                                                             return (
                                                                  <div
-                                                                      className="h-8 w-8 rounded-sm cursor-pointer"
+                                                                      className="tw-h-8 tw-w-8 tw-rounded-sm tw-cursor-pointer"
                                                                       style={{
                                                                            backgroundColor: color,
                                                                       }}

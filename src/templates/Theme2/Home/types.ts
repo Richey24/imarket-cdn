@@ -1,8 +1,9 @@
 import { StaticImageData } from "next/image";
 
 export interface ProductProps {
-     productImageUrl: StaticImageData | string;
-     productImageUrlTwo?: StaticImageData | string;
+     id: number;
+     productImageUrl: StaticImageData;
+     productImageUrlTwo?: StaticImageData;
      productImageAlt: string;
      productCategory: string;
      productTitle: string;

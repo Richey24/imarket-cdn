@@ -7,7 +7,6 @@ import { useState } from "react";
 import { templateImages } from "@/appProvider/templateImages";
 const Header = (props: any) => {
      const { company, static: staticProps } = props.props;
-     console.log("headerProps", staticProps);
 
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);
