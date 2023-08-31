@@ -2,7 +2,6 @@ import { newArrivalsProducts } from "@/templates/Theme21/Home/data";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { products } from "../data";
- 
 
 export const Products = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
@@ -73,11 +72,11 @@ export const Products = () => {
                                 </div>
                             </div> */}
                                    <div className="price-box">
-                                        <span className="product-price">${product.productPrice}</span>
+                                        <span className="product-price">
+                                             ${product.productPrice}
+                                        </span>
                                    </div>
-                                   {/* End .price-box */}
                               </div>
-                              {/* End .product-details */}
                          </div>
                     ))}
                </Slider>

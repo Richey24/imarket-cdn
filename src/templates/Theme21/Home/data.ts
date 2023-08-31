@@ -1,4 +1,3 @@
- 
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
@@ -7,7 +6,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo21.specialImage.special1,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
@@ -15,7 +14,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
           productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
@@ -23,7 +22,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special3,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Battery Charger",
           productPrice: 259,
      },
@@ -31,7 +30,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special4,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -39,7 +38,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special5,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -47,7 +46,7 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special6,
-          productImageUrlTwo:  '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -57,7 +56,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo21.specialImage.special7,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
@@ -65,7 +64,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
           productImageUrl: templateImages.demo21.specialImage.special1,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Blue Backpack",
           productPrice: 299.0,
      },
@@ -73,7 +72,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "CAPS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Battery Charger",
           productPrice: 259,
      },
@@ -81,7 +80,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special8,
-          productImageUrlTwo:  '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -89,7 +88,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special7,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -97,7 +96,7 @@ export const newArrivalsProducts = [
           productImageAlt: "product",
           productCategory: "DRESS, T-SHIRTS",
           productImageUrl: templateImages.demo21.specialImage.special9,
-          productImageUrlTwo: '',
+          productImageUrlTwo: "",
           productTitle: "Computer Mouse",
           productPrice: 49,
      },
@@ -107,7 +106,7 @@ export const bestsellersProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo21.specialImage.special1,
-          productImageUrlTwo:templateImages.demo21.specialImage.special2,
+          productImageUrlTwo: templateImages.demo21.specialImage.special2,
           productTitle: "Casual Note Bag",
           productPrice: 299,
      },
@@ -136,7 +135,7 @@ export const bestsellersProducts = [
           productPrice: 49,
      },
 ];
-export const audiospeakers  = [
+export const audiospeakers = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -170,7 +169,7 @@ export const audiospeakers  = [
           productPrice: 101.0,
      },
 ];
-export const cameras  = [
+export const cameras = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -205,7 +204,7 @@ export const cameras  = [
      },
 ];
 
-export const lamps  = [
+export const lamps = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -231,7 +230,7 @@ export const lamps  = [
           productPrice: 1999.0,
      },
 ];
-export const computers  = [
+export const computers = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -265,7 +264,7 @@ export const computers  = [
           productPrice: 299.0,
      },
 ];
-export const mobilephones  = [
+export const mobilephones = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
@@ -325,7 +324,7 @@ export const topRatedProduct = [
           productPrice: 299.0,
      },
 ];
-export const topSellingProduct  = [
+export const topSellingProduct = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
@@ -351,8 +350,8 @@ export const topSellingProduct  = [
           productPrice: 299.0,
      },
 ];
- 
-export const onSaleProduct  = [
+
+export const onSaleProduct = [
      {
           productImageAlt: "product",
           productCategory: "CAPS, DRESS",
@@ -376,5 +375,76 @@ export const onSaleProduct  = [
           productImageUrlTwo: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
+     },
+];
+export const smallBanners = [
+     {
+          img: templateImages.demo21.categoryImages.category1,
+          h3: "Top Sharp",
+          h3Br: "Knives",
+          atag: "demo21-shop.html",
+     },
+     {
+          img: templateImages.demo21.categoryImages.category2,
+          h3: "HD Vision",
+          h3Br: " Web Cameras",
+          atag: "demo21-shop.html",
+     },
+     {
+          img: templateImages.demo21.categoryImages.category3,
+          h3: "Mobiles And",
+          h3Br: "Tablets",
+          atag: "demo21-shop.html",
+     },
+     {
+          img: templateImages.demo21.categoryImages.category4,
+          h3: "Smart",
+          h3Br: "Watches",
+          atag: "demo21-shop.html",
+     },
+];
+export const miniBanners = [
+     {
+          img: templateImages.demo21.bannerImage.banner2,
+          h3: "Action",
+          h3Br: "Cameras",
+          h4: "Starting From",
+          price: 399,
+          atag: "demo21-shop.html",
+          bannerStyles: "col-6 col-lg-4",
+          styles: "text-right text-lg-left",
+     },
+     {
+          img: templateImages.demo21.bannerImage.banner3,
+          h3: "For All",
+          h3Br: "Styles",
+          h4: "Starting From",
+          price: 199,
+          atag: "demo21-shop.html",
+          bannerStyles: "col-6 col-lg-4 text-left text-lg-right",
+          styles: "text-right text-lg-left",
+     },
+];
+export const banners = [
+     {
+          bannerimg: templateImages.demo21.sliderImage.slide1,
+          h2: "start the revolution",
+          h1: "drone pro 4",
+          price: 499,
+          atag: "demo21-shop.html",
+     },
+     {
+          bannerimg: templateImages.demo21.sliderImage.slide2,
+          h2: "amazing deals",
+          h1: "smartphone",
+          price: 199,
+          atag: "demo21-shop.html",
+     },
+     {
+          bannerimg: templateImages.demo21.sliderImage.slide3,
+          h2: "best price of the year",
+          h1: "top accessories",
+          price: 19,
+          atag: "demo21-shop.html",
      },
 ];

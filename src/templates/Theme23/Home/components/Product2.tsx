@@ -14,7 +14,7 @@ export const Product2 = () => {
      };
 
      return (
-          <div className="no-gutters" style={{paddingLeft:'50px', paddingRight:'50px'}}>
+          <div className="no-gutters" style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                <Slider {...settings}>
                     {newProducts.map((product) => (
                          <div className="product-default inner-quickview inner-icon">
@@ -75,9 +75,7 @@ export const Product2 = () => {
                                              ${product.productPrice}
                                         </span>
                                    </div>
-                                   {/* End .price-box */}
                               </div>
-                              {/* End .product-details */}
                          </div>
                     ))}
                </Slider>

@@ -14,7 +14,7 @@ export const FeaturedProducts = () => {
           beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
      };
      return (
-          <section className="featured-products-section" style={{paddingRight:'50px', paddingLeft:'50px'}}>
+          <section className="featured-products-section"  >
                <div className="container">
                     <h2 className="section-title ls-n-10 text-center text-uppercase m-b-3" style={{fontWeight:'bold'}}>
                          Featured Products
