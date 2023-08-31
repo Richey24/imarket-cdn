@@ -1,6 +1,8 @@
 import Image from "next/image";
 import payments from "../../../assets/images/payments.png";
-const Footer = () => {
+
+const Footer = (props: any): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer className="footer">
                <div className="container">
@@ -60,21 +62,23 @@ const Footer = () => {
                                                   <div className="contact-widget">
                                                        <h4 className="widget-title">ADDRESS:</h4>
                                                        <a href="#">
-                                                            1234 Street Name, City, England
+                                                            {company?.city + " " + company?.country}
                                                        </a>
                                                   </div>
                                              </div>
                                              <div className="col-sm-6 pl-xl-0">
                                                   <div className="contact-widget">
                                                        <h4 className="widget-title">PHONE:</h4>
-                                                       <a href="#">(123) 456-7890</a>
+                                                       <a href="#">{company?.phone}</a>
                                                   </div>
                                              </div>
                                              <div className="col-sm-6">
                                                   <div className="contact-widget email">
                                                        <h4 className="widget-title">EMAIL:</h4>
-                                                       <a href="mailto:mail@example.com">
-                                                            mail@example.com
+                                                       <a
+                                                            href={`mailto:${company?.user_id?.email}`}
+                                                       >
+                                                            {company?.user_id?.email}
                                                        </a>
                                                   </div>
                                              </div>

@@ -32,6 +32,22 @@ export const useGetProducts = () => {
      };
 };
 
+export const useGetFeaturedProducts = () => {
+     return async (company_id: string, onSuccess: (data: any) => void, onError: () => void) => {
+          try {
+               const response = await axios.get(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/products/${company_id}/featured`,
+               );
+               if (response.status === 201 || response.status === 200) {
+                    onSuccess(response.data.products);
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
+
 export const useGetCategories = () => {
      return async (company_id: string, onSuccess: (data: any) => void, onError: () => void) => {
           try {

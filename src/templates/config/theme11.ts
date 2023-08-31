@@ -4,7 +4,7 @@
 // import { IComponentProps } from "./config.type";
 
 // export const theme11TemplateConfig = {
-//      header: Header,
-//      home: Home,
-//      footer: Footer,
+//     header: Header,
+//     home: Home,
+//     footer: Footer,
 // };

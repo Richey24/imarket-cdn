@@ -57,14 +57,14 @@ export default function Login() {
      }, []);
 
      return (
-          <div className="flex w-screen h-screen items-center justify-center">
-               <div className="bg-gray-50 p-6 border rounded-xl w-full md:w-1/2 xl:w-1/3">
-                    <div className="heading mb-1">
+          <div className="tw-flex tw-w-screen tw-h-screen tw-items-center tw-justify-center">
+               <div className="tw-bg-gray-50 tw-p-6 tw-border tw-rounded-xl tw-w-full md:tw-w-1/2 xl:tw-w-1/3">
+                    <div className="heading tw-mb-1">
                          <h2 className="title">Login</h2>
                     </div>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="login-email">
                                    Username or email address
                                    <span className="required">*</span>
@@ -73,13 +73,15 @@ export default function Login() {
                                    type="email"
                                    {...register("email")}
                                    className={`${
-                                        errors.email?.message && "border-red-500"
+                                        errors.email?.message && "tw-border-red-500"
                                    } form-input form-wide`}
                                    id="login-email"
                               />
-                              <p className="text-red-500 text-base">{errors.email?.message}</p>
+                              <p className="tw-text-red-500 tw-text-base">
+                                   {errors.email?.message}
+                              </p>
                          </div>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="login-password">
                                    Password
                                    <span className="required">*</span>
@@ -88,21 +90,23 @@ export default function Login() {
                                    type="password"
                                    {...register("password")}
                                    className={`${
-                                        errors.email?.message && "border-red-500"
+                                        errors.email?.message && "tw-border-red-500"
                                    } form-input form-wide`}
                                    id="login-password"
                               />
-                              <p className="text-red-500 text-base">{errors.password?.message}</p>
+                              <p className="tw-text-red-500 tw-text-base">
+                                   {errors.password?.message}
+                              </p>
                          </div>
                          <div className="form-footer">
-                              <div className="custom-control custom-checkbox mb-0">
+                              <div className="custom-control custom-checkbox tw-mb-0">
                                    <input
                                         type="checkbox"
                                         className="custom-control-input"
                                         id="lost-password"
                                    />
                                    <label
-                                        className="custom-control-label mb-0"
+                                        className="custom-control-label tw-mb-0"
                                         htmlFor="lost-password"
                                    >
                                         Remember me
@@ -118,7 +122,7 @@ export default function Login() {
                          </div>
                          <button
                               type="submit"
-                              className="btn bg-gray-800 text-gray-50 hover:bg-gray-700 btn-md w-100 mt-4 rounded-md"
+                              className="btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md w-100 tw-mt-4 tw-rounded-md"
                          >
                               LOGIN
                          </button>
