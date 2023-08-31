@@ -1,0 +1,9 @@
+.cartCanvas {
+    display: none;
+    overflow-y: scroll;
+    height: 95vh;
+}
+
+.showCanvas {
+    display: flex;
+}
