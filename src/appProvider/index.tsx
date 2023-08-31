@@ -45,20 +45,20 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => {},
+                    () => { },
                );
           }
      }, [site]);
 
      return (
-          <AppContext.Provider value={{ site, loading, categories, products }}>
+          <AppContext.Provider value={{ site: dummySite, loading, categories, products }}>
                {children}
           </AppContext.Provider>
      );

@@ -17,63 +17,30 @@ const Header = () => {
 
     return (
         <div>
-            <div className="top-notice p-0">
-                <div style={{ display: "flex" }} className="info-boxes-slider bg-primary">
-                    <div className="info-box info-box-icon-left">
-                        <i className="icon-shipping"></i>
-
-                        <div className="info-box-content">
-                            <h4>Free Shipping on Orders Over $99</h4>
-                        </div>
-                    </div>
-                    <div className="info-box info-box-icon-left">
-
-                        <i className="icon-money"></i>
-
-                        <div className="info-box-content">
-                            <h4>Up to 40% OFF on Selected Items</h4>
-                        </div>
-                    </div>
-
-                    <div className="info-box info-box-icon-left">
-                        <i className="sicon-graduation"></i>
-
-                        <div className="info-box-content">
-                            <h4>15% OFF Student Discount</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <header className="header">
+            <header className="header mb-2">
                 <div className="header-middle sticky-header">
-                    <div className="container-fluid">
-                        <div className="header-left">
-                            <button className="mobile-menu-toggler pl-0" type="button">
-                                <i className="fas fa-bars"></i>
-                            </button>
-                            <a href="demo25.html" className="logo">
-                                <Image src={templateImages.logoImage.logo2} alt=" Logo" width="111" height="44" />
-                            </a>
-                            <nav className="main-nav">
+                    <div className="container">
+                        <div className="header-left pl-0">
+                            <nav className="main-nav w-100">
                                 <ul className="menu">
                                     <li className="active">
-                                        <a href="demo25.html">Home</a>
+                                        <a href="demo29.html">Home</a>
                                     </li>
                                     <li>
-                                        <a className="themeEightDrop" onMouseEnter={() => showDrop("theCategory")} onMouseLeave={() => showDrop("theCategory")} href="demo25-shop.html">Shop</a>
+                                        <a onMouseEnter={() => showDrop("theCategory")} onMouseLeave={() => showDrop("theCategory")} href="demo29-shop.html">Shop</a>
                                         <div onMouseEnter={() => showDrop("theCategory")} onMouseLeave={() => showDrop("theCategory")} id="theCategory" className="megamenu megamenu-fixed-width megamenu-3cols">
                                             <div className="row">
                                                 <div className="col-lg-4">
                                                     <a href="#" className="nolink">VARIATION 1</a>
                                                     <ul className="submenu">
-                                                        <li><a href="category.html">Fullwidth Banner</a></li>
+                                                        <li><a href="demo29-shop.html">Fullwidth Banner</a></li>
                                                         <li><a href="category-banner-boxed-slider.html">Boxed Slider
                                                             Banner</a>
                                                         </li>
                                                         <li><a href="category-banner-boxed-image.html">Boxed Image
                                                             Banner</a>
                                                         </li>
-                                                        <li><a href="category.html">Left Sidebar</a></li>
+                                                        <li><a href="demo29-shop.html">Left Sidebar</a></li>
                                                         <li><a href="category-sidebar-right.html">Right Sidebar</a></li>
                                                         <li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
                                                         <li><a href="category-horizontal-filter1.html">Horizontal
@@ -90,7 +57,7 @@ const Header = () => {
                                                         <li><a href="category-list.html">List Types</a></li>
                                                         <li><a href="category-infinite-scroll.html">Ajax Infinite Scroll</a>
                                                         </li>
-                                                        <li><a href="category.html">3 Columns Products</a></li>
+                                                        <li><a href="demo29-shop.html">3 Columns Products</a></li>
                                                         <li><a href="category-4col.html">4 Columns Products</a></li>
                                                         <li><a href="category-5col.html">5 Columns Products</a></li>
                                                         <li><a href="category-6col.html">6 Columns Products</a></li>
@@ -110,24 +77,25 @@ const Header = () => {
                                                                 <b className="">50%</b>
                                                                 <i>OFF</i>
                                                             </h4>
-                                                            <a href="category.html" className="btn btn-sm btn-dark">SHOP NOW</a>
+                                                            <a href="demo29-shop.html" className="btn btn-sm btn-dark">SHOP
+                                                                NOW</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li className="d-none d-xl-block">
-                                        <a className="themeEightDrop" onMouseEnter={() => showDrop("theProducts")} onMouseLeave={() => showDrop("theProducts")} href="demo25-product.html">Products</a>
+                                    <li>
+                                        <a onMouseEnter={() => showDrop("theProducts")} onMouseLeave={() => showDrop("theProducts")} href="demo29-product.html">Products</a>
                                         <div onMouseEnter={() => showDrop("theProducts")} onMouseLeave={() => showDrop("theProducts")} id="theProducts" className="megamenu megamenu-fixed-width">
                                             <div className="row">
                                                 <div className="col-lg-4">
                                                     <a href="#" className="nolink">PRODUCT PAGES</a>
                                                     <ul className="submenu">
-                                                        <li><a href="demo25-product.html">SIMPLE PRODUCT</a></li>
+                                                        <li><a href="product.html">SIMPLE PRODUCT</a></li>
                                                         <li><a href="product-variable.html">VARIABLE PRODUCT</a></li>
-                                                        <li><a href="demo25-product.html">SALE PRODUCT</a></li>
-                                                        <li><a href="demo25-product.html">FEATURED & ON SALE</a></li>
+                                                        <li><a href="product.html">SALE PRODUCT</a></li>
+                                                        <li><a href="product.html">FEATURED & ON SALE</a></li>
                                                         <li><a href="product-custom-tab.html">WITH CUSTOM TAB</a></li>
                                                         <li><a href="product-sidebar-left.html">WITH LEFT SIDEBAR</a></li>
                                                         <li><a href="product-sidebar-right.html">WITH RIGHT SIDEBAR</a></li>
@@ -163,14 +131,14 @@ const Header = () => {
                                                                 <b className="">50%</b>
                                                             </h4>
                                                         </div>
-                                                        <a href="category.html" className="btn btn-sm btn-dark">SHOP NOW</a>
+                                                        <a href="demo29-shop.html" className="btn btn-sm btn-dark">SHOP NOW</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
-                                        <a className="themeEightDrop" onMouseEnter={() => showDrop("thePages")} onMouseLeave={() => showDrop("thePages")} href="#">Pages</a>
+                                        <a onMouseEnter={() => showDrop("thePages")} onMouseLeave={() => showDrop("thePages")} href="#">Pages</a>
                                         <ul onMouseEnter={() => showDrop("thePages")} onMouseLeave={() => showDrop("thePages")} id="thePages">
                                             <li><a href="wishlist.html">Wishlist</a></li>
                                             <li><a href="cart.html">Shopping Cart</a></li>
@@ -183,44 +151,39 @@ const Header = () => {
                                             <li><a href="forgot-password.html">Forgot Password</a></li>
                                         </ul>
                                     </li>
-                                    <li className="d-none d-xxl-block"><a href="blog.html">Features</a></li>
 
                                 </ul>
                             </nav>
-                            <span className="separator d-none d-xl-inline"></span>
+                        </div>
+                        <div className="header-center ml-lg-auto ml-0">
+                            <button className="mobile-menu-toggler text-dark mr-2" type="button">
+                                <i className="fas fa-bars"></i>
+                            </button>
+                            <a href="demo29.html" className="logo">
+                                <Image src={templateImages.logoImage.logo2} width="111" height="44" alt="Porto Logo" />
+                            </a>
                         </div>
 
-                        <div className="header-right pl-0 pl-lg-4">
+                        <div className="header-right">
+                            <a href="login.html" className="header-icon" title="Login"><i className="icon-user-2"></i></a>
+
                             <div
-                                className="header-search header-search-inline header-search-category w-lg-max text-right d-none d-sm-flex">
+                                className="header-icon header-search header-search-popup header-search-category d-none d-sm-block">
                                 <a onClick={showSearch} href="#" className="search-toggle" role="button"><i className="icon-magnifier"></i></a>
-                                <form action=" #" method="get">
-                                    <div className="header-search-wrapper">
-                                        <input type="search" className="form-control font-italic" name="q" id="q"
+                                <form action="#" method="get">
+                                    <div id="searchDiv" className="header-search-wrapper">
+                                        <input type="search" className="form-control" name="q" id="q"
                                             placeholder="I'm searching for..." required />
-                                        <button className="btn icon-magnifier" title="search" type="submit"></button>
+                                        <button className="btn icon-search-3" type="submit"></button>
                                     </div>
                                 </form>
                             </div>
 
-                            <span className="separator d-none d-lg-inline"></span>
-
-                            <a href="login.html">
-                                <div className="header-user">
-                                    <i className="icon-user-2"></i>
-                                    <div className="header-userinfo">
-                                        <span className="d-inline-block font2 line-height-1">Hello!</span>
-                                        <h4 className="mb-0">My Account</h4>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="wishlist.html" className="header-icon">
-                                <i className="icon-wishlist-2"></i>
-                            </a>
+                            <a href="wishlist.html" className="header-icon header-icon-wishlist" title="Wishlist"><i
+                                className="icon-wishlist-2"></i></a>
 
                             <div className="dropdown cart-dropdown">
-                                <a onClick={showCanvas} href="#" title="Cart" className="dropdown-toggle cart-toggle" role="button"
+                                <a onClick={showCanvas} href="#" title="Cart" className="dropdown-toggle dropdown-arrow cart-toggle" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                     <i className="minicart-icon"></i>
                                     <span className="cart-count badge-circle">3</span>
@@ -229,7 +192,7 @@ const Header = () => {
                                 {/* <div className="cart-overlay"></div> */}
 
                                 <div id="cartCanvas" className="cartCanvas" style={{ position: "fixed", top: "0px", right: "0px", zIndex: "10", alignItems: "flex-start", gap: "10px" }}>
-                                    <a style={{ fontSize: "40px", color: "white" }} onClick={showCanvas} href="#" title="Close (Esc)" className="btn-close">×</a>
+                                    <a style={{ fontSize: "40px", color: "black" }} onClick={showCanvas} href="#" title="Close (Esc)" className="btn-close">×</a>
 
                                     <div className="dropdownmenu-wrapper custom-scrollbar">
                                         <div className="dropdown-cart-header">Shopping Cart</div>
@@ -238,7 +201,7 @@ const Header = () => {
                                             <div className="product">
                                                 <div className="product-details">
                                                     <h4 className="product-title">
-                                                        <a href="demo25-product.html">Ultimate 3D Bluetooth Speaker</a>
+                                                        <a href="demo-product.html">Ultimate 3D Bluetooth Speaker</a>
                                                     </h4>
 
                                                     <span className="cart-product-info">
@@ -248,7 +211,7 @@ const Header = () => {
                                                 </div>
 
                                                 <figure className="product-image-container">
-                                                    <a href="demo25-product.html" className="product-image">
+                                                    <a href="demo-product.html" className="product-image">
                                                         <Image src={templateImages.allTemplateImage.product.product1} alt="product"
                                                             width="80" height="80" />
                                                     </a>
@@ -260,7 +223,7 @@ const Header = () => {
                                             <div className="product">
                                                 <div className="product-details">
                                                     <h4 className="product-title">
-                                                        <a href="demo25-product.html">Brown Women Casual HandBag</a>
+                                                        <a href="demo-product.html">Brown Women Casual HandBag</a>
                                                     </h4>
 
                                                     <span className="cart-product-info">
@@ -270,7 +233,7 @@ const Header = () => {
                                                 </div>
 
                                                 <figure className="product-image-container">
-                                                    <a href="demo25-product.html" className="product-image">
+                                                    <a href="demo-product.html" className="product-image">
                                                         <Image src={templateImages.allTemplateImage.product.product2} alt="product"
                                                             width="80" height="80" />
                                                     </a>
@@ -282,7 +245,7 @@ const Header = () => {
                                             <div className="product">
                                                 <div className="product-details">
                                                     <h4 className="product-title">
-                                                        <a href="demo25-product.html">Circled Ultimate 3D Speaker</a>
+                                                        <a href="demo-product.html">Circled Ultimate 3D Speaker</a>
                                                     </h4>
 
                                                     <span className="cart-product-info">
@@ -292,7 +255,7 @@ const Header = () => {
                                                 </div>
 
                                                 <figure className="product-image-container">
-                                                    <a href="demo25-product.html" className="product-image">
+                                                    <a href="demo-product.html" className="product-image">
                                                         <Image src={templateImages.allTemplateImage.product.product3} alt="product"
                                                             width="80" height="80" />
                                                     </a>
@@ -316,6 +279,14 @@ const Header = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div className="container">
+                    <div className="header-bottom w-100">
+                        <h4 className="mb-0 text-center pr-3 pl-3">Get 10% OFF at the Porto Kitchen Selection - <a
+                            href="demo29-shop.html">Shop
+                            Now!</a></h4>
                     </div>
                 </div>
             </header>

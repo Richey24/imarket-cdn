@@ -2104,9 +2104,9 @@ export const templateImages = {
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/1.png",
             banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38/banner/3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo48/banner/4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo58/banner/5.jpg",
+            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/3.jpg",
+            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/4.jpg",
+            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/5.jpg",
         },
         clientImage: {
             client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/member/client-1.jpg",
