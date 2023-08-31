@@ -3,9 +3,9 @@ import Carousel from "react-bootstrap/Carousel";
 import Image from "next/image";
 
 interface SlideData {
-     imageSrc: string;
-     heading: string;
-     subheading: string;
+     imageUrl: string;
+     title: string;
+     text: string;
      buttonText: string;
      buttonLink: string;
 }
@@ -22,7 +22,7 @@ const CarouselBanner: React.FC<CarouselBannerProps> = ({ slides }) => {
                          <div className="home-slide banner">
                               <Image
                                    className="slide-bg"
-                                   src={slide.imageSrc}
+                                   src={slide.imageUrl}
                                    height={499}
                                    width={1903}
                                    alt="slider image"
@@ -33,13 +33,13 @@ const CarouselBanner: React.FC<CarouselBannerProps> = ({ slides }) => {
                                         data-animation-name="fadeInUpShorter"
                                    >
                                         <h4 className="text-transform-none m-b-3">
-                                             {slide.heading}
+                                             {slide.title ?? "Find the Boundaries. Push Through!"}
                                         </h4>
                                         <h2 className="text-transform-none mb-0">
-                                             {slide.subheading}
+                                             {slide.text ?? "Summer Sale"}
                                         </h2>
                                         <a href={slide.buttonLink} className="btn btn-dark btn-lg">
-                                             {slide.buttonText}
+                                             {slide.buttonText ?? "Shop Now!"}
                                         </a>
                                    </div>
                                    {/* End .banner-layer */}
