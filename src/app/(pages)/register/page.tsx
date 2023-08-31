@@ -33,14 +33,14 @@ export default function Register() {
      }, []);
 
      return (
-          <div className="flex w-screen h-screen items-center justify-center">
-               <div className="bg-gray-50 p-6 border rounded-xl w-full md:w-1/2 xl:w-1/3">
-                    <div className="heading mb-1">
+          <div className="tw-flex tw-w-screen tw-h-screen tw-items-center tw-justify-center">
+               <div className="tw-bg-gray-50 tw-p-6 tw-border tw-rounded-xl tw-w-full md:tw-w-1/2 xl:tw-w-1/3">
+                    <div className="heading tw-mb-1">
                          <h2 className="title">Register</h2>
                     </div>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="firstname">
                                    First Name
                                    <span className="required">*</span>
@@ -49,13 +49,15 @@ export default function Register() {
                                    type="text"
                                    {...formRegister("firstname")}
                                    className={`${
-                                        errors.firstname?.message && "border-red-500"
-                                   } form-input form-wide bg-white px-3 py-2`}
+                                        errors.firstname?.message && "tw-border-red-500"
+                                   } form-input form-wide tw-bg-white tw-px-3 tw-py-2`}
                                    id="firstname"
                               />
-                              <p className="text-red-500 text-base">{errors.firstname?.message}</p>
+                              <p className="tw-text-red-500 tw-text-base">
+                                   {errors.firstname?.message}
+                              </p>
                          </div>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="lastname">
                                    Last Name
                                    <span className="required">*</span>
@@ -64,13 +66,13 @@ export default function Register() {
                                    type="text"
                                    {...formRegister("lastname")}
                                    className={`${
-                                        errors.lastname?.message && "border-red-500"
-                                   } form-input bg-white form-wide px-3 py-2`}
+                                        errors.lastname?.message && "tw-border-red-500"
+                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
                                    id="lastname"
                               />
                               <p className="text-red-500 text-base">{errors.lastname?.message}</p>
                          </div>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="register-email">
                                    Email address
                                    <span className="required">*</span>
@@ -80,12 +82,14 @@ export default function Register() {
                                    {...formRegister("email")}
                                    className={`${
                                         errors.email?.message && "border-red-500"
-                                   } form-input bg-white form-wide px-3 py-2`}
+                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
                                    id="register-email"
                               />
-                              <p className="text-red-500 text-base">{errors.email?.message}</p>
+                              <p className="tw-text-red-500 tw-text-base">
+                                   {errors.email?.message}
+                              </p>
                          </div>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="register-password">
                                    Password
                                    <span className="required">*</span>
@@ -94,13 +98,15 @@ export default function Register() {
                                    type="password"
                                    {...formRegister("password")}
                                    className={`${
-                                        errors.email?.message && "border-red-500"
-                                   } form-input bg-white form-wide px-3 py-2`}
+                                        errors.email?.message && "tw-border-red-500"
+                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
                                    id="register-password"
                               />
-                              <p className="text-red-500 text-base">{errors.password?.message}</p>
+                              <p className="tw-text-red-500 tw-text-base">
+                                   {errors.password?.message}
+                              </p>
                          </div>
-                         <div className="mb-1">
+                         <div className="tw-mb-1">
                               <label htmlFor="confirmPassword">
                                    Confirm Password
                                    <span className="required">*</span>
@@ -109,17 +115,17 @@ export default function Register() {
                                    type="password"
                                    {...formRegister("confirmPassword")}
                                    className={`${
-                                        errors.confirmPassword?.message && "border-red-500"
-                                   } form-input bg-white form-wide px-3 py-2`}
+                                        errors.confirmPassword?.message && "tw-border-red-500"
+                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
                                    id="confirmPassword"
                               />
-                              <p className="text-red-500 text-base">
+                              <p className="tw-text-red-500 tw-text-base">
                                    {errors.confirmPassword?.message}
                               </p>
                          </div>
                          <button
                               type="submit"
-                              className="btn bg-gray-800 text-gray-50 hover:bg-gray-700 btn-md w-100 mt-4 rounded-md"
+                              className="btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md tw-w-100 tw-mt-4 tw-rounded-md"
                          >
                               Register
                          </button>

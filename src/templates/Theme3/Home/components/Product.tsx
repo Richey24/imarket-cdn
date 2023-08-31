@@ -1,8 +1,10 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { ProductProps } from "../types";
+import Link from "next/link";
 
 export const Product: React.FC<ProductProps> = ({
+     id,
      productImageUrl,
      productImageUrlTwo,
      productImageAlt,
@@ -15,7 +17,7 @@ export const Product: React.FC<ProductProps> = ({
           <div className="col-6 col-sm-4 col-lg-3">
                <div className="product-default inner-quickview inner-icon">
                     <figure>
-                         <a href="demo13-product.html">
+                         <Link href={`/${id}`}>
                               <Image src={productImageUrl} width={300} height={300} alt="product" />
                               {productImageUrlTwo && (
                                    <Image
@@ -25,7 +27,7 @@ export const Product: React.FC<ProductProps> = ({
                                         alt="product"
                                    />
                               )}
-                         </a>
+                         </Link>
                          <div className="label-group">
                               <span className="product-label label-sale">-30%</span>
                          </div>
@@ -34,27 +36,23 @@ export const Product: React.FC<ProductProps> = ({
                                    <i className="icon-shopping-cart" />
                               </a>
                          </div>
-                         <a
-                              href="ajax/product-quick-view.html"
-                              className="btn-quickview"
-                              title="Quick View"
-                         >
+                         <Link href={`/${id}`} className="btn-quickview" title="Quick View">
                               Quick View
-                         </a>
+                         </Link>
                     </figure>
                     <div className="product-details">
                          <div className="category-wrap">
                               <div className="category-list">
-                                   <a href="demo13-shop.html" className="product-category">
+                                   <Link href={`/${id}`} className="product-category">
                                         {productCategory}
-                                   </a>
+                                   </Link>
                               </div>
                               <a href="#" className="btn-icon-wish">
                                    <i className="icon-wishlist-2" />
                               </a>
                          </div>
                          <h3 className="product-title">
-                              <a href="demo13-product.html">{productTitle}</a>
+                              <Link href={`/${id}`}>{productTitle}</Link>
                          </h3>
                          <div className="ratings-container">
                               <div className="product-ratings">

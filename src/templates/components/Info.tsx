@@ -21,7 +21,13 @@ const InfoBox: React.FC<InfoBoxItem> = ({ icon, title, description }) => {
      );
 };
 
-export const InfoBoxesContainer: React.FC = () => {
+export const InfoBoxesContainer = ({
+     bg = "bg-white",
+     className,
+}: {
+     bg?: string;
+     className?: string;
+}): JSX.Element => {
      const infoBoxItems: InfoBoxItem[] = [
           {
                icon: "icon-shipping",
@@ -55,7 +61,7 @@ export const InfoBoxesContainer: React.FC = () => {
      };
 
      return (
-          <div className="info-boxes-container bg-white mb-4">
+          <div className={`info-boxes-container mb-4 ${bg} ${className}`}>
                <div className="container">
                     <OwlCarousel
                          className="info-boxes-slider owl-carousel owl-theme"

@@ -4,7 +4,6 @@ import React from "react";
 import { templateImages } from "@/appProvider/templateImages";
 
 export default function WeekSpecials(props) {
-     console.log({ props });
      return (
           <section className="deal-products-section tw-py-16">
                <h2 className="section-title d-flex align-items-center text-transform-none">
