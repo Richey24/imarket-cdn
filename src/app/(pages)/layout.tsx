@@ -22,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      }>(AppContext);
      const [styleLoader, setStyleLoader] = useState(false);
 
+     // console.log("site.theme.theme ", site);
      useEffect(() => {
           if (site) {
                setStyleLoader(true);

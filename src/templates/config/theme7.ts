@@ -6,7 +6,7 @@ import ShopByCategory from "../Theme7/ShopByCategory";
 import Banner from "../Theme7/Banner";
 import MainCategory from "../Theme7/MainCategory";
 
-export const theme7TemplateConfig: any = {
+const templateConfig: any = {
      header: T3Header,
      Banner: Banner,
      ShopByCategory: ShopByCategory,
@@ -15,3 +15,4 @@ export const theme7TemplateConfig: any = {
      InfoBoxesContainer: InfoBoxesContainer,
      footer: Footer,
 };
+export default templateConfig

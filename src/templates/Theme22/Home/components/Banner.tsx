@@ -2,8 +2,8 @@ import Carousel from "react-bootstrap/Carousel";
 import { templateImages } from "@/appProvider/templateImages";
 export const Banner = () => {
      return (
-          <section className="intro-section" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
-               <div className="container" >
+          <section className="intro-section" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
+               <div className="container">
                     <div className="row">
                          <div className="col-lg-9 mb-2">
                               <div className="home-slider slide-animate   owl-theme custom-nav">
@@ -13,7 +13,9 @@ export const Banner = () => {
                                              <div className="home-slide home-slide-1 banner">
                                                   <img
                                                        className="slide-bg"
-                                                       src={templateImages.demo22.sliderImage.slide1}
+                                                       src={
+                                                            templateImages.demo22.sliderImage.slide1
+                                                       }
                                                        alt="slider image"
                                                        width={772}
                                                        height={434}
@@ -47,7 +49,10 @@ export const Banner = () => {
                                                             <a
                                                                  href="demo22-shop.html"
                                                                  className="btn btn-light btn-lg ls-10"
-                                                                 style={{ color: '#f14705', fontWeight: 'bold' }}
+                                                                 style={{
+                                                                      color: "#f14705",
+                                                                      fontWeight: "bold",
+                                                                 }}
                                                             >
                                                                  View All Now
                                                             </a>
@@ -65,7 +70,9 @@ export const Banner = () => {
                                              <div className="home-slide home-slide-2 banner">
                                                   <img
                                                        className="slide-bg"
-                                                       src={templateImages.demo22.sliderImage.slide2}
+                                                       src={
+                                                            templateImages.demo22.sliderImage.slide2
+                                                       }
                                                        alt="slider image"
                                                        width={772}
                                                        height={434}
@@ -93,7 +100,10 @@ export const Banner = () => {
                                                             <a
                                                                  href="demo22-shop.html"
                                                                  className="btn btn-light btn-lg ls-10"
-                                                                 style={{ color: '#f14705', fontWeight: 'bold' }}
+                                                                 style={{
+                                                                      color: "#f14705",
+                                                                      fontWeight: "bold",
+                                                                 }}
                                                             >
                                                                  View All Now
                                                             </a>
@@ -114,7 +124,10 @@ export const Banner = () => {
                                                   <figure>
                                                        <a href="demo22-product.html">
                                                             <img
-                                                                 src={templateImages.demo22.sliderImage.slide3}
+                                                                 src={
+                                                                      templateImages.demo22
+                                                                           .sliderImage.slide3
+                                                                 }
                                                                  width={217}
                                                                  height={217}
                                                                  alt="product"
@@ -171,7 +184,10 @@ export const Banner = () => {
                                                   <figure>
                                                        <a href="demo22-product.html">
                                                             <img
-                                                                 src={templateImages.demo22.sliderImage.slide4}
+                                                                 src={
+                                                                      templateImages.demo22
+                                                                           .sliderImage.slide4
+                                                                 }
                                                                  width={217}
                                                                  height={217}
                                                                  alt="product"
@@ -229,17 +245,28 @@ export const Banner = () => {
 
                <div className="cat-section container position-absolute">
                     <div style={{ display: "flex", columnGap: "20px" }}>
-                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">ACCESSORIES</a>
-                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">CAPS</a>
-                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">DRESS</a>
-                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">ELECTRONICS</a>
-                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">FASHION</a>
-                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">HEADPHONE</a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">
+                              ACCESSORIES
+                         </a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">
+                              CAPS
+                         </a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">
+                              DRESS
+                         </a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">
+                              ELECTRONICS
+                         </a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">
+                              FASHION
+                         </a>
+                         <a href="demo12-shop.html" className="btn btn-dark btn-lg">
+                              HEADPHONE
+                         </a>
                     </div>
                </div>
           </section>
-        </div >
-    )
-}
+     );
+};
 
-export default Banner
+export default Banner;

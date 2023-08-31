@@ -4,8 +4,9 @@ import { Home } from "../Theme13/Home/Home";
 import T13pageLinks from "../Theme13/PageLinks/pageLinks";
 import { IComponentProps } from "./config.type";
 
-export const theme13TemplateConfig = {
+const templateConfig = {
      header: T13Header,
      home: Home,
      footer: T13Footer,
 };
+export default templateConfig

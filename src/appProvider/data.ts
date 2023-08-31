@@ -1,11 +1,11 @@
 export const dummySite = {
      theme: {
-          theme: "theme7",
+          theme: "theme27",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme7",
+                    theme: "theme27",
                     name: "",
                     props: {
                          company: {
@@ -41,7 +41,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme16",
+                    theme: "theme27",
                     props: {
                          company: {
                               city: "City",
@@ -56,7 +56,7 @@ export const dummySite = {
                               //      { name: "instagram", link: "/" },
                               //      { name: "twitter", link: "/" },
                               // ],
-                              pageLinks: [
+                              pageinks: [
                                    {
                                         name: "home",
                                         url: "/",
@@ -86,7 +86,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme7",
+                                   theme: "theme27",
                                    props: {
                                         static: {
                                              promotion: {

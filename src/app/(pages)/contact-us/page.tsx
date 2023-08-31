@@ -53,7 +53,7 @@ export default function ContactUs() {
                <div className="container">
                     <div className="row pt-12">
                          <div className="col-md-6">
-                              <h2 className="ls-n-10 mb-1 pb-2">
+                              <h2 className="ls-n-10 tw-mb-1 tw-pb-2">
                                    <strong>Contact Us</strong>
                               </h2>
 
@@ -77,7 +77,7 @@ export default function ContactUs() {
                                                        {...register("fullName")}
                                                        name="fullName"
                                                   />
-                                                  <p className="text-red-500 text-base">
+                                                  <p className="tw-text-red-500 tw-text-base">
                                                        {errors.fullName?.message}
                                                   </p>
                                              </div>
@@ -93,7 +93,7 @@ export default function ContactUs() {
                                                        id="email"
                                                        name="email"
                                                   />
-                                                  <p className="text-red-500 text-base">
+                                                  <p className="tw-text-red-500 tw-text-base">
                                                        {errors.email?.message}
                                                   </p>
                                              </div>
@@ -109,12 +109,12 @@ export default function ContactUs() {
                                              id="subject"
                                              name="subject"
                                         />
-                                        <p className="text-red-500 text-base">
+                                        <p className="tw-text-red-500 tw-text-base">
                                              {errors.subject?.message}
                                         </p>
                                    </div>
 
-                                   <div className="form-group mb-0">
+                                   <div className="form-group tw-mb-0">
                                         <label htmlFor="content">Your Message</label>
                                         <textarea
                                              cols={30}
@@ -124,7 +124,7 @@ export default function ContactUs() {
                                              className="form-control"
                                              name="content"
                                         ></textarea>
-                                        <p className="text-red-500 text-base">
+                                        <p className="tw-text-red-500 tw-text-base">
                                              {errors.content?.message}
                                         </p>
                                    </div>
@@ -149,9 +149,9 @@ export default function ContactUs() {
                                    consectetur adipiscing elit.
                               </p>
 
-                              <hr className="mt-3 mb-0" />
+                              <hr className="tw-mt-3 tw-mb-0" />
 
-                              <div className="contact-info mb-2">
+                              <div className="contact-info tw-mb-2">
                                    <h2 className="contact-title">
                                         <strong>The Office</strong>
                                    </h2>
@@ -183,7 +183,7 @@ export default function ContactUs() {
                                    </div>
                               </div>
 
-                              <hr className="mt-1 mb-0" />
+                              <hr className="tw-mt-1 tw-mb-0" />
 
                               <div className="contact-time">
                                    <h2 className="contact-title">

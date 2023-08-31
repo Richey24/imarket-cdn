@@ -1,11 +1,8 @@
 import Image from "next/image";
-import LogoFooter from "../../../assets/images/logo-footer.png";
-import logo from "../../../assets/images/logo.png";
-
-import VisaPayment from "../../../assets/images/payments.png";
-import { templateImages } from "@/appProvider/templateImages";
 import Link from "next/link";
+import { templateImages } from "@/appProvider/templateImages";
 import Payments from "./Payments";
+
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
      return (
@@ -18,7 +15,7 @@ const Footer = (props: any): JSX.Element => {
                               <div className="col-lg-3 col-sm-6 pb-2 pb-sm-0">
                                    <div className="widget">
                                         <h4 className="widget-title">About Us</h4>
-                                        <a href="demo1.html">
+                                        <Link href="demo1.html">
                                              <Image
                                                   src={
                                                        company?.logo ||
@@ -29,15 +26,15 @@ const Footer = (props: any): JSX.Element => {
                                                   alt="Logo"
                                                   className="logo-footer"
                                              />
-                                        </a>
+                                        </Link>
                                         <p className="m-b-4">
                                              Lorem ipsum dolor sit amet, consectetur adipiscing
                                              elit. Duis nec vestibulum magna, et dapibus lacus. Duis
                                              nec vestibulum magna, et dapibus lacus.
                                         </p>
-                                        <a href="#" className="read-more text-white">
+                                        <Link href="#" className="read-more text-white">
                                              read more...
-                                        </a>
+                                        </Link>
                                    </div>
                                    {/* End .widget */}
                               </div>
@@ -55,13 +52,16 @@ const Footer = (props: any): JSX.Element => {
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">{company?.phone}</a>
+                                                  <Link href={`tel:${company?.phone}`}>
+                                                       {" "}
+                                                       {company?.phone}
+                                                  </Link>
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Email:</span>{" "}
-                                                  <a href="mailto:mail@example.com">
+                                                  <Link href={`mailto:${company?.user_id?.email}`}>
                                                        {company?.user_id?.email}
-                                                  </a>
+                                                  </Link>
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">
@@ -144,7 +144,8 @@ const Footer = (props: any): JSX.Element => {
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
                               <span className="footer-copyright">
-                                   © copyright 2021. All Rights Reserved.
+                                   © Porto eCommerce. {new Date().getFullYear()}. All Rights
+                                   Reserved
                               </span>
                          </div>
 

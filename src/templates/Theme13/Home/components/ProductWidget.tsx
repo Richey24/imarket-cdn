@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import { ProductWidgetProps } from "../types";
+import Link from "next/link";
 
 export const ProductWidget: React.FC<ProductWidgetProps> = ({
+     id,
      productImage,
      productImageTwo,
      productTitle,
@@ -10,14 +12,14 @@ export const ProductWidget: React.FC<ProductWidgetProps> = ({
      return (
           <div className="product-default left-details product-widget">
                <figure>
-                    <a href="demo13-product.html">
+                    <Link href={`/${id}`}>
                          <Image src={productImage} width={95} height={95} alt="product" />
                          <Image src={productImageTwo} width={95} height={95} alt="product" />
-                    </a>
+                    </Link>
                </figure>
                <div className="product-details">
                     <h3 className="product-title">
-                         <a href="demo13-product.html">{productTitle}</a>
+                         <Link href={`/${id}`}>{productTitle}</Link>
                     </h3>
                     <div className="ratings-container">
                          <div className="product-ratings">

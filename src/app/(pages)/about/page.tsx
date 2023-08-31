@@ -8,7 +8,7 @@ export default function About() {
           <main className="main">
                <div className="page-header">
                     <div className="container">
-                         <h1 className="heading text-white text-uppercase">About Us</h1>
+                         <h1 className="heading tw-text-white text-uppercase">About Us</h1>
                     </div>
                </div>
                <nav aria-label="breadcrumb" className="breadcrumb-nav">

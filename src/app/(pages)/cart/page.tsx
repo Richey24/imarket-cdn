@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
      return (
-          <main className="flex min-h-screen flex-col items-center justify-between p-24">
+          <main className="tw-flex tw-min-h-screen tw-flex-col tw-items-center tw-justify-between tw-p-24">
                <div className="container">
-                    <ul className="checkout-progress-bar d-flex justify-content-center flex-wrap">
+                    <ul className="checkout-progress-bar d-flex justify-content-center tw-flex-wrap">
                          <li className="active">
                               <a href="cart.html">Shopping Cart</a>
                          </li>
@@ -20,7 +20,7 @@ export default function Home() {
                               <div className="cart-table-container">
                                    <table className="table table-cart">
                                         <thead>
-                                             <tr className="font-bold text-base">
+                                             <tr className="tw-font-bold tw-text-base">
                                                   <th className="thumbnail-col"></th>
                                                   <th className="product-col">Product</th>
                                                   <th className="price-col">Price</th>
@@ -171,8 +171,8 @@ export default function Home() {
 function CartProduct() {
      return (
           <tr className="product-row items-center">
-               <td className="align-middle">
-                    <figure className="product-image-container h-20 w-20">
+               <td className="tw-align-middle">
+                    <figure className="product-image-container tw-h-20 tw-w-20">
                          <a href="product.html" className="product-image w-full h-full">
                               <img
                                    className="w-full h-full"
@@ -182,19 +182,21 @@ function CartProduct() {
                          </a>
                     </figure>
                </td>
-               <td className="product-col align-middle">
-                    <h5 className="text-base">
+               <td className="product-col tw-align-middle">
+                    <h5 className="tw-text-base">
                          <a href="product.html">Men Watch</a>
                     </h5>
                </td>
-               <td className="align-middle text-base font-base text-gray-600">$17.90</td>
-               <td className="align-middle">
-                    <div className="product-single-qty align-middle">
+               <td className="tw-align-middle tw-text-base tw-font-base tw-text-gray-600">
+                    $17.90
+               </td>
+               <td className="tw-align-middle">
+                    <div className="product-single-qty tw-align-middle">
                          <input className="horizontal-quantity form-control" type="text" />
                     </div>
                </td>
-               <td className="text-right align-middle">
-                    <span className="text-base font-bold">$17.90</span>
+               <td className="tw-text-right tw-align-middle">
+                    <span className="tw-text-base tw-font-bold">$17.90</span>
                </td>
           </tr>
      );
