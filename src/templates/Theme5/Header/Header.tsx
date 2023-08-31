@@ -10,7 +10,7 @@ import { socialMap } from "@/utils/helper";
 
 const Header = (props: any) => {
      const { company, static: staticProps, categories } = props.props;
-   
+
      const showDrop = (id: string) => {
           document.getElementById(id)?.classList.toggle("showDrop");
      };
@@ -127,13 +127,13 @@ const Header = (props: any) => {
                                    <span className="separator"></span>
 
                                    <div className="social-icons">
-                                        {staticProps.socials.map((social) => {
+                                        {staticProps.socials?.map((social, i) => {
                                              return (
                                                   <Link
-                                                  href={social.link}
-                                                  className={`social-icon ${
-                                                            socialMap[social.name]
-                                                       }`}
+                                                       key={i}
+                                                       href={social.link}
+                                                       className={`social-icon ${socialMap[social.name]
+                                                            }`}
                                                        target="_blank"
                                                   ></Link>
                                              );
@@ -202,7 +202,7 @@ const Header = (props: any) => {
                                                                                 </option>
                                                                            )}
                                                                            {category.child_id.map(
-                                                                                (id) => {
+                                                                                (id, i) => {
                                                                                      const child =
                                                                                           categories.find(
                                                                                                (
@@ -214,6 +214,7 @@ const Header = (props: any) => {
                                                                                      if (child) {
                                                                                           return (
                                                                                                <option
+                                                                                                    key={i}
                                                                                                     value={
                                                                                                          child.id
                                                                                                     }
@@ -489,16 +490,16 @@ const Header = (props: any) => {
                                                        },
                                                        idx: number,
                                                   ) => (
-                                                       <li className="tw-group">
+                                                       <li key={idx} className="tw-group">
                                                             <Link href={link.url}>{link.name}</Link>
                                                             {link?.subMenu && (
                                                                  <div className="megamenu megamenu-fixed-width megamenu-3cols group-hover:tw-block tw-rounded">
                                                                       <div className="row">
                                                                            <ul className="submenu">
                                                                                 {link?.subMenu.map(
-                                                                                     (subLink) => {
+                                                                                     (subLink, i) => {
                                                                                           return (
-                                                                                               <li>
+                                                                                               <li key={i}>
                                                                                                     <Link
                                                                                                          key={
                                                                                                               subLink.name
@@ -557,7 +558,7 @@ const Header = (props: any) => {
                                                                                 </option>
                                                                            )}
                                                                            {category.child_id.map(
-                                                                                (id) => {
+                                                                                (id, i) => {
                                                                                      const child =
                                                                                           categories.find(
                                                                                                (
@@ -569,6 +570,7 @@ const Header = (props: any) => {
                                                                                      if (child) {
                                                                                           return (
                                                                                                <option
+                                                                                                    key={i}
                                                                                                     value={
                                                                                                          child.id
                                                                                                     }
