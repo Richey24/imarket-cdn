@@ -1,9 +1,9 @@
+import { newArrivalsProducts } from "@/templates/Theme21/Home/data";
 import React, { useState } from "react";
-import { featuredProducts } from "../data";
- 
 import Slider from "react-slick";
+import { products } from "../data";
 
-export const FeaturedProducts = () => {
+export const Products = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -11,34 +11,29 @@ export const FeaturedProducts = () => {
           speed: 500,
           slidesToShow: 4,
           slidesToScroll: 1,
-          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
+
      return (
-          <section className="featured-products-section"  >
-               <div className="container">
-                    <h2 className="section-title ls-n-10 text-center text-uppercase m-b-3" style={{fontWeight:'bold'}}>
-                         Featured Products
-                    </h2>
-                    <Slider {...settings}>
-                         {featuredProducts.map((product) => (
-                              
-                              <div className="product-default inner-quickview inner-icon w-100">
+          <div className="no-gutters">
+               <Slider {...settings}>
+                    {products.map((product) => (
+                         <div className="product-default inner-quickview inner-icon">
                               <figure>
-                                   <a href="demo13-product.html">
+                                   <a href="demo21-product.html">
                                         <img
                                              src={product.productImageUrl}
-                                             width={300}
-                                             height={300}
+                                             width={217}
+                                             height={217}
                                              alt="product"
                                         />
                                    </a>
-
                                    <div className="btn-icon-group">
                                         <a
-                                             href="#"
-                                             className="btn-icon btn-add-cart product-type-simple"
+                                             href="demo21-product.html"
+                                             className="btn-icon btn-add-cart"
                                         >
-                                             <i className="icon-shopping-cart" />
+                                             <i className="fa fa-arrow-right" />
                                         </a>
                                    </div>
                                    <a
@@ -53,35 +48,38 @@ export const FeaturedProducts = () => {
                                    <div className="category-wrap">
                                         <div className="category-list">
                                              <a
-                                                  href="demo13-shop.html"
+                                                  href="demo21-shop.html"
                                                   className="product-category"
                                              >
-                                                  {product.productCategory}
+                                                  category
                                              </a>
                                         </div>
+                                        <a
+                                             href="wishlist.html"
+                                             title="Add to Wishlist"
+                                             className="btn-icon-wish"
+                                        >
+                                             <i className="icon-heart" />
+                                        </a>
                                    </div>
                                    <h3 className="product-title">
-                                        <a href="demo13-product.html">{product.productTitle}</a>
+                                        <a href="demo21-product.html">{product.productTitle}</a>
                                    </h3>
-
-                                   {/* End .product-container */}
+                                   {/* <div class="ratings-container">
+                                <div class="product-ratings">
+                                    <span class="ratings" style="width:100%"></span>
+                                    <span class="tooltiptext tooltip-top"></span>
+                                </div>
+                            </div> */}
                                    <div className="price-box">
-                                        {product.productPrice && (
-                                             <span className="old-price">
-                                                  ${product.productPrice.toFixed(2)}
-                                             </span>
-                                        )}
                                         <span className="product-price">
-                                             ${product.productPrice.toFixed(2)}
+                                             ${product.productPrice}
                                         </span>
                                    </div>
-                                   {/* End .price-box */}
                               </div>
-                              {/* End .product-details */}
                          </div>
-                         ))}
-                    </Slider>
-               </div>
-          </section>
+                    ))}
+               </Slider>
+          </div>
      );
 };

@@ -1,6 +1,20 @@
 import { ProductProps, ProductWidgetProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
+// export const bannersImage = [
+//      {
+//           bannerImg: templateImages.demo20.bannerImage.banner8,
+//           size:8
+//      },
+//      {
+//           size:4,
+          
+//      },
+//      {
+//           bannerImg: templateImages.demo20.bannerImage.banner3,
+//           size:4,
+//      },
+// ];
 export const featuredProducts = [
      {
           productImageAlt: "product",
@@ -43,57 +57,84 @@ export const featuredProducts = [
           productPrice: 88,
      },
 ];
-// export const featuredCategories: ProductProps[] = [
-//      {
-//           productImageAlt: "product",
-//           productCategory: "CATEGORY",
-//           productImageUrl: Cat1,
-//           productImageUrlTwo: product1,
-//           productTitle: "FASHION",
-//           productPrice: 56.00,
-//      },
-//      {
-//           productImageAlt: "product",
-//           productCategory: "CATEGORY",
-//           productImageUrl: Cat2,
-//           productImageUrlTwo: product2,
-//           productTitle: "FURNITURE",
-//           productPrice: 76.00,
-//      },
-//      {
-//           productImageAlt: "product",
-//           productCategory: "CATEGORY",
-//           productImageUrl: Cat3,
-//           productImageUrlTwo: product3,
-//           productTitle: "DECORE",
-//           productPrice: 56.00,
-//      },
-//      {
-//           productImageAlt: "product",
-//           productCategory: "CATEGORY",
-//           productImageUrl: Cat4,
-//           productImageUrlTwo: product4,
-//           productTitle: "ACCESSEORIES",
-//           productPrice: 199,
-//      },
-//      {
-//           productImageAlt: "product",
-//           productCategory: "CATEGORY",
-//           productImageUrl: Cat5,
-//           productImageUrlTwo: product5,
-//           productTitle: "MOBILE",
-//           productPrice: 88,
-//      },
-//      {
-//           productImageAlt: "product",
-//           productCategory: "CATEGORY",
-//           productImageUrl: Cat6,
-//           productImageUrlTwo: product5,
-//           productTitle: "FOOTWAER",
-//           productPrice: 88,
-//      },
 
-// ];
+export const featuredCat = [
+     {
+          Img: templateImages.demo20.categoryImages.category1,
+          Title: "Fashion",
+          Smsize: 4,
+          MdSize: 3,
+     },
+     {
+          Img: templateImages.demo20.categoryImages.category2,
+          Title: "Furniture",
+          Smsize: 8,
+          MdSize: 6,
+     },
+     {
+          Img: templateImages.demo20.categoryImages.category3,
+          Title: "Decore",
+          Smsize: 5,
+          MdSize: 3,
+     },
+     {
+          Img: templateImages.demo20.categoryImages.category4,
+          Title: "Accessories",
+          Smsize: 7,
+          MdSize: 4,
+     },
+     {
+          Img: templateImages.demo20.categoryImages.category5,
+          Title: "Mobile",
+          Smsize: 4,
+          MdSize: 3,
+     },
+     {
+          Img: templateImages.demo20.categoryImages.category6,
+          Title: "Footwear",
+          Smsize: 8,
+          MdSize: 5,
+     },
+];
+export const offerAndDeals = [
+     {
+          Img: templateImages.demo20.bannerImage.banner4,
+          Img2: templateImages.demo20.bannerImage.banner7,
+          h3: "Exclusive Shoes",
+          h4: "50% Off",
+          atag: "demo20-shop.html",
+          MdSize: 6,
+          bannerStyles:'banner3',
+          h3Styles: "m-b-1",
+          h4Styles: "text-uppercase mb-4",
+          contentStyles:'banner-layer banner-layer-middle banner-layer-left'
+
+     },
+     {
+          Img: templateImages.demo20.bannerImage.banner5,
+          h3: "Collection",
+          h6: "Amazing",
+          h5: "Check our discounts",
+          atag: "demo20-shop.html",
+          MdSize: 6,
+          bannerStyles:'banner4',
+          h6Styles: "heading-border text-dark text-uppercase m-b-2",
+          h3Styles: "ls-n-10 text-uppercase m-b-3",
+          h5Styles: "text-uppercase",
+          contentStyles:'banner-layer banner-layer-middle banner-layer-right text-center'
+     },
+     {
+          Img: templateImages.demo20.bannerImage.banner6,
+          h4: "Subscribe To Our Newsletter",
+          p: "Get all the latest information on events, sales and offers",
+          MdSize: 12,
+          h4Styles: "mt-0 m-b-1",
+          pStyles: "font2 text-body m-b-4",
+          contentStyles:'banner-layer banner-layer-middle text-center',
+          bannerStyles:'banner5',
+     },
+];
+
 export const instagram = [
      {
           image: templateImages.demo20.instagramImage.insta1,
