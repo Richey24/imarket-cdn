@@ -540,8 +540,8 @@ export const templateImages = {
             banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/category-banner.jpg",
         },
         sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-2.mp4",
+            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/slider/slide-1.jpg",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/slider/slide-2.mp4",
         },
         clientImage: {
             client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/client/client-1.jpg",
@@ -605,10 +605,10 @@ export const templateImages = {
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-1.jpg",
+            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-2.jpg",
+            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-3.jpg",
+            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-4.jpg",
+            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-1.jpg",
             banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-sidebar.jpg",
             banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-top-2.jpg",
             banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-top.jpg",
@@ -697,7 +697,7 @@ export const templateImages = {
         },
         sliderImage: {
             slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-2.mp4",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-2.jpg",
         },
         instagramImage: {
             insta1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/instagram/1.jpg",
@@ -859,7 +859,7 @@ export const templateImages = {
         },
         sliderImage: {
             slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-2.mp4",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-2.jpg",
         },
         aboutImage: {
             about1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/about/img-1.jpg",
@@ -1023,7 +1023,7 @@ export const templateImages = {
         },
         sliderImage: {
             slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/slider/slide-2.mp4",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/slider/slide-2.jpg",
         },
         aboutImage: {
             about1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/about/history-thumb.png",
@@ -1272,7 +1272,7 @@ export const templateImages = {
             banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo15-product/banner/banner-top.jpg",
         },
         sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/slider/slide-1.jpg",
+            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo15-product/slider/slide-1.jpg",
             slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo15-product/slider/slide-2.jpg",
         },
     },
