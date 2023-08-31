@@ -6,7 +6,6 @@ import { StaticImageData } from "next/image";
 interface Category {
      name: string;
      link: string;
-     image: string | StaticImageData;
      productsCount: number;
 }
 
@@ -30,7 +29,6 @@ const CategoriesSlider: React.FC<Props> = ({ categories }) => {
                <Slider {...settings} style={{ marginRight: "20px" }}>
                     {categories.map((category, index) => (
                          <BrowseByCategory
-                              imageUrl={category.image}
                               categoryName={category.name}
                               count={category.productsCount}
                               key={index}
