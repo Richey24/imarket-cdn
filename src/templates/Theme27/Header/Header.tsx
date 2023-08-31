@@ -13,11 +13,86 @@ const Header = (props: any) => {
           <header className="header">
                <div className="header-top">
                     <div className="container">
-                         <div className="header-col w-100 text-center">
-                              <span className="text-primary text-uppercase">
-                                   Use <strong>PIMARET24</strong> and get 20% off in all products
-                              </span>
+                         <div className="header-left">
+                              <div className="header-dropdown">
+                                   <a href="#">USD</a>
+                                   <div className="header-menu">
+                                        <ul>
+                                             <li>
+                                                  <a href="#">EUR</a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">USD</a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                              <div className="header-dropdown">
+                                   <a href="#">
+                                        <i className="flag-us flag" />
+                                        ENG
+                                   </a>
+                                   <div className="header-menu">
+                                        <ul>
+                                             <li>
+                                                  <a href="#">
+                                                       <i className="flag-us flag mr-2" />
+                                                       ENG
+                                                  </a>
+                                             </li>
+                                             <li>
+                                                  <a href="#">
+                                                       <i className="flag-fr flag mr-2" />
+                                                       FRA
+                                                  </a>
+                                             </li>
+                                        </ul>
+                                   </div>
+                                   {/* End .header-menu */}
+                              </div>
                          </div>
+                         <div className="header-dropdown dropdown-expanded d-none d-lg-block">
+                              <a href="#">Links</a>
+                              <div className="header-menu">
+                                   <ul>
+                                        <li>
+                                             <a href="dashboard.html">Dashboard</a>
+                                        </li>
+                                        <li>
+                                             <a href="cart.html">Cart</a>
+                                        </li>
+                                        <li>
+                                             <a href="cart.html">Checkout</a>
+                                        </li>
+                                        <li>
+                                             <a href="wishlist.html">Wishlist</a>
+                                        </li>
+                                        <li>
+                                             <a href="about.html">About Us</a>
+                                        </li>
+                                        <li>
+                                             <a href="blog.html">Contact Us</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                              {/* End .header-menu */}
+                         </div>
+                         {/* End .header-dropown */}
+                         <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
+                              <a href="#">Order</a>
+                              <div className="header-menu">
+                                   <ul>
+                                        <li>
+                                             <a href="#">Order Tracking</a>
+                                        </li>
+                                        <li>
+                                             <a href="#">Order History</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                              {/* End .header-menu */}
+                         </div>
+                         {/* End .header-dropown */}
                     </div>
                </div>
                <div className="header-middle sticky-header">
@@ -26,7 +101,7 @@ const Header = (props: any) => {
                               <button className="mobile-menu-toggler" type="button">
                                    <i className="fas fa-bars" />
                               </button>
-                              <a href="demo24.html" className="logo">
+                              <a href="demo27.html" className="logo">
                                    {company?.logo ? (
                                         <Image
                                              src={company?.logo}
@@ -45,16 +120,17 @@ const Header = (props: any) => {
                                         />
                                    )}
                               </a>
-                         </div>
-                         <div className="header-center d-none d-lg-block">
                               <nav className="main-nav">
                                    <ul className="menu">
                                         <li className="active">
-                                             <a href="demo24.html">Home</a>
+                                             <a href="demo27.html">Home</a>
                                         </li>
                                         <li className="tw-group">
-                                             <a href="demo24-shop.html" className="d-flex">
-                                                  Themes <FiChevronDown />
+                                             <a
+                                                  href="demo27-shop.html"
+                                                  className="d-flex align-items-center"
+                                             >
+                                                  Shop <FiChevronDown />
                                              </a>
                                              <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
@@ -155,12 +231,8 @@ const Header = (props: any) => {
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner">
                                                                  <figure>
-                                                                      <Image
-                                                                           src={
-                                                                                templateImages
-                                                                                     .allBannerImage
-                                                                                     .banner2
-                                                                           }
+                                                                      <img
+                                                                           src="assets/images/menu-banner.jpg"
                                                                            alt="Menu banner"
                                                                            width={300}
                                                                            height={300}
@@ -176,7 +248,7 @@ const Header = (props: any) => {
                                                                            <i>OFF</i>
                                                                       </h4>
                                                                       <a
-                                                                           href="category.html"
+                                                                           href="demo27-shop.html"
                                                                            className="btn btn-sm btn-dark"
                                                                       >
                                                                            SHOP NOW
@@ -189,7 +261,10 @@ const Header = (props: any) => {
                                              {/* End .megamenu */}
                                         </li>
                                         <li className="tw-group">
-                                             <a href="demo24-product.html" className="d-flex">
+                                             <a
+                                                  href="demo27-product.html"
+                                                  className="d-flex align-items-center"
+                                             >
                                                   Products <FiChevronDown />
                                              </a>
                                              <div className="megamenu megamenu-fixed-width tw-hidden group-hover:tw-block">
@@ -200,7 +275,7 @@ const Header = (props: any) => {
                                                             </a>
                                                             <ul className="submenu">
                                                                  <li>
-                                                                      <a href="demo24-product.html">
+                                                                      <a href="demo27-product.html">
                                                                            SIMPLE PRODUCT
                                                                       </a>
                                                                  </li>
@@ -210,12 +285,12 @@ const Header = (props: any) => {
                                                                       </a>
                                                                  </li>
                                                                  <li>
-                                                                      <a href="demo24-product.html">
+                                                                      <a href="demo27-product.html">
                                                                            SALE PRODUCT
                                                                       </a>
                                                                  </li>
                                                                  <li>
-                                                                      <a href="demo24-product.html">
+                                                                      <a href="demo27-product.html">
                                                                            FEATURED &amp; ON SALE
                                                                       </a>
                                                                  </li>
@@ -291,12 +366,8 @@ const Header = (props: any) => {
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner menu-banner-2">
                                                                  <figure>
-                                                                      <Image
-                                                                           src={
-                                                                                templateImages
-                                                                                     .allBannerImage
-                                                                                     .banner1
-                                                                           }
+                                                                      <img
+                                                                           src="assets/images/menu-banner-1.jpg"
                                                                            alt="Menu banner"
                                                                            className="product-promo"
                                                                            width={380}
@@ -314,7 +385,7 @@ const Header = (props: any) => {
                                                                       </h4>
                                                                  </div>
                                                                  <a
-                                                                      href="category.html"
+                                                                      href="demo27-shop.html"
                                                                       className="btn btn-sm btn-dark"
                                                                  >
                                                                       SHOP NOW
@@ -327,8 +398,11 @@ const Header = (props: any) => {
                                              </div>
                                              {/* End .megamenu */}
                                         </li>
-                                        <li className="d-none d-xl-block tw-group">
-                                             <a href="#" className="d-flex">
+                                        <li className="d-none d-xxl-block">
+                                             <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li className="tw-group">
+                                             <a href="#" className="d-flex align-items-center">
                                                   Pages <FiChevronDown />
                                              </a>
                                              <ul className="tw-hidden group-hover:tw-block">
@@ -364,24 +438,21 @@ const Header = (props: any) => {
                               </nav>
                          </div>
                          <div className="header-right">
-                              <a href="login.html" className="header-icon">
-                                   <i className="icon-user-2" />
-                              </a>
-                              <div className="header-search header-search-popup header-search-category text-right d-none d-sm-flex">
+                              <div className="header-icon header-search header-search-inline header-search-category w-lg-max text-right d-none d-sm-block">
                                    <a href="#" className="search-toggle" role="button">
                                         <i className="icon-magnifier" />
                                    </a>
-                                   <form action="#" method="get">
+                                   <form action=" #" method="get">
                                         <div className="header-search-wrapper">
                                              <input
                                                   type="search"
                                                   className="form-control"
                                                   name="q"
                                                   id="q"
-                                                  placeholder="Search..."
+                                                  placeholder="I'm searching for..."
                                                   required
                                              />
-                                             <div className="select-custom">
+                                             <div className="select-custom font2">
                                                   <select id="cat" name="cat">
                                                        <option value="">All Categories</option>
                                                        <option value={4}>Fashion</option>
@@ -410,7 +481,7 @@ const Header = (props: any) => {
                                              </div>
                                              {/* End .select-custom */}
                                              <button
-                                                  className="btn icon-magnifier p-0"
+                                                  className="btn icon-magnifier"
                                                   title="search"
                                                   type="submit"
                                              />
@@ -420,7 +491,7 @@ const Header = (props: any) => {
                               </div>
                               {/* End .header-search */}
                               <a href="wishlist.html" className="header-icon">
-                                   <i className="icon-wishlist-2" />
+                                   <i className="icon-wishlist-2 line-height-1" />
                               </a>
                               <div className="dropdown cart-dropdown">
                                    <a
@@ -450,21 +521,21 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo24-product.html">
+                                                                 <a href="demo27-product.html">
                                                                       Ultimate 3D Bluetooth Speaker
                                                                  </a>
                                                             </h4>
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>{" "}
+                                                                 </span>
                                                                  × $99.00
                                                             </span>
                                                        </div>
                                                        {/* End .product-details */}
                                                        <figure className="product-image-container">
                                                             <a
-                                                                 href="demo24-product.html"
+                                                                 href="demo27-product.html"
                                                                  className="product-image"
                                                             >
                                                                  <img
@@ -487,21 +558,21 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo24-product.html">
+                                                                 <a href="demo27-product.html">
                                                                       Brown Women Casual HandBag
                                                                  </a>
                                                             </h4>
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>{" "}
+                                                                 </span>
                                                                  × $35.00
                                                             </span>
                                                        </div>
                                                        {/* End .product-details */}
                                                        <figure className="product-image-container">
                                                             <a
-                                                                 href="demo24-product.html"
+                                                                 href="demo27-product.html"
                                                                  className="product-image"
                                                             >
                                                                  <img
@@ -524,21 +595,21 @@ const Header = (props: any) => {
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <a href="demo24-product.html">
+                                                                 <a href="demo27-product.html">
                                                                       Circled Ultimate 3D Speaker
                                                                  </a>
                                                             </h4>
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>{" "}
+                                                                 </span>
                                                                  × $35.00
                                                             </span>
                                                        </div>
                                                        {/* End .product-details */}
                                                        <figure className="product-image-container">
                                                             <a
-                                                                 href="demo24-product.html"
+                                                                 href="demo27-product.html"
                                                                  className="product-image"
                                                             >
                                                                  <img
@@ -590,6 +661,50 @@ const Header = (props: any) => {
                               {/* End .dropdown */}
                          </div>
                     </div>
+               </div>
+               <div className="header-bottom">
+                    <div
+                         className="owl-carousel info-boxes-slider"
+                         data-owl-options="{
+                  'items': 1,
+                  'dots': false,
+                  'loop': false,
+                  'responsive': {
+                      '768': {
+                          'items': 2
+                      },
+                      '992': {
+                          'items': 3
+                      }
+                  }
+              }"
+                    >
+                         <div className="info-box info-box-icon-left">
+                              <i className="icon-shipping text-white" />
+                              <div className="info-box-content">
+                                   <h4 className="text-white">Free Shipping &amp; Return</h4>
+                              </div>
+                              {/* End .info-box-content */}
+                         </div>
+                         {/* End .info-box */}
+                         <div className="info-box info-box-icon-left">
+                              <i className="icon-money text-white" />
+                              <div className="info-box-content">
+                                   <h4 className="text-white">Money Back Guarantee</h4>
+                              </div>
+                              {/* End .info-box-content */}
+                         </div>
+                         {/* End .info-box */}
+                         <div className="info-box info-box-icon-left">
+                              <i className="icon-support text-white" />
+                              <div className="info-box-content">
+                                   <h4 className="text-white">Online Support 24/7</h4>
+                              </div>
+                              {/* End .info-box-content */}
+                         </div>
+                         {/* End .info-box */}
+                    </div>
+                    {/* End .owl-carousel */}
                </div>
           </header>
      );

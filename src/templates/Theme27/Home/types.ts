@@ -11,36 +11,12 @@ export interface ProductProps {
      oldPrice?: number;
 }
 
-export interface ProductWidgetProps {
-     productImage: StaticImageData;
-     productImageTwo: StaticImageData;
-     productTitle: string;
-     productPrice: number;
-}
 
-export interface TestimonialProps {
-     clientImageUrl: StaticImageData | string;
-     title: string;
-     position: string;
-     message: string;
-}
 
 export interface PromotionProps {
-     imageUrl: StaticImageData | string;
      title: string;
-     subtitle?: string;
-     size: "small" | "large";
-     position: "left" | "right" | "centered";
-     buttonCaption: string;
-     promoText?: string;
-     promoUrl?: string;
-     textColor?: "light" | "dark";
-     verticalAlignment?: "start" | "center" | "end";
+     promoText: string;
+     bannerUrl: string | StaticImageData;
 }
 
-export interface ShopByCategoryProps {
-     imageUrl: StaticImageData;
-     categoryName: string;
-     count: number;
-     // url: Url;
-}
+
