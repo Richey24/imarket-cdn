@@ -1,94 +1,99 @@
-import { ProductProps, TestimonialProps } from "./types";
+import { ProductProps, PromotionProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
-export const featuredProducts: ProductProps[] = [
+export const mostPopularProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product3,
-          productTitle: "x – Responsive HTML Template",
-          productPrice: 269,
+          productImageUrl: templateImages.demo27.productImages.product1,
+          productTitle: "Black Bike",
+          productPrice: 299.0,
      },
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product2,
-          productTitle: "Shoport – eCommerce Theme",
-          productPrice: 29,
+          productImageUrl: templateImages.demo27.productImages.product2,
+          productTitle: "Porto Fashion Bike",
+          productPrice: 259.0,
      },
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product1,
-          productTitle: "blee – Responsive Theme",
-          productPrice: 101,
+          productImageUrl: templateImages.demo27.productImages.product3,
+          productTitle: "Green Bike",
+          productPrice: 149.0,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "Category",
+          productImageUrl: templateImages.demo27.productImages.product4,
+          productTitle: "White Bike",
+          productPrice: 129.0,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "Category",
+          productImageUrl: templateImages.demo27.productImages.product5,
+          productTitle: "Casual Bike",
+          productPrice: 149.0,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "Category",
+          productImageUrl: templateImages.demo27.productImages.product6,
+          productTitle: "Blue Bike",
+          productPrice: 59.0,
      },
 ];
 
-export const bestSellingProducts: ProductProps[] = [
+export const trendingAccessories: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product1,
-          productTitle: "blee – Responsive Theme",
-          productPrice: 101,
+          productImageUrl: templateImages.demo27.productImages.product2,
+          productTitle: "Porto Fashion Bike",
+          productPrice: 259.0,
+     },
+     {
+          productImageAlt: "product",
+          productCategory: "Category",
+          productImageUrl: templateImages.demo27.productImages.product7,
+          productTitle: "Bike Kit",
+          productPrice: 55.0,
      },
 
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product4,
-          productTitle: "DUBLIN – HTML Temlate",
-          productPrice: 29,
+          productImageUrl: templateImages.demo27.productImages.product8,
+          productTitle: "Bike Glass",
+          productPrice: 49.0,
      },
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product5,
-          productTitle: "HUB – Magenta Theme",
-          productPrice: 29,
+          productImageUrl: templateImages.demo27.productImages.product9,
+          productTitle: "Bike Frame",
+          productPrice: 599.0,
      },
      {
           productImageAlt: "product",
           productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product6,
-          productTitle: "be – Shopify Theme",
-          productPrice: 89,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product2,
-          productTitle: "Shoport – eCommerce Theme",
-          productPrice: 29,
-     },
-
-     {
-          productImageAlt: "product",
-          productCategory: "Category",
-          productImageUrl: templateImages.demo24.productImages.product3,
-          productTitle: "x – Responsive HTML Template",
-          productPrice: 269,
+          productImageUrl: templateImages.demo27.productImages.product10,
+          productTitle: "Bike Chain",
+          productPrice: 39.0,
      },
 ];
 
-export const testimonies: TestimonialProps[] = [
+export const promotions: PromotionProps[] = [
      {
-          clientImageUrl: templateImages.clientImage.client1,
-          position: "John Smith",
-          title: "CEO, Founder",
-          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+          title: "Summer Sale",
+          promoText: "20% OFF",
+          bannerUrl: templateImages.demo27.bannerImage.banner4,
      },
      {
-          clientImageUrl: templateImages.clientImage.client2,
-          position: "Dae Smith",
-          title: "CEO, Founder",
-          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
-     },
-     {
-          clientImageUrl: templateImages.clientImage.client3,
-          position: "John Doe",
-          title: "CEO, Founder",
-          message: " Lorem ipsum dolor sit amet, consectetur elitad adipiscing Cras non placerat mi.",
+          title: "Flash Sale",
+          promoText: "20% OFF",
+          bannerUrl: templateImages.demo27.bannerImage.banner5,
      },
 ];

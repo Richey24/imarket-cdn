@@ -11,25 +11,83 @@ const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
      console.log("footerProps", company);
      return (
-          <footer className="footer">
+          <footer className="footer font2">
                <div className="footer-top">
                     <div className="container">
-                         <div className="row">
-                              <div className="col-lg-3">
-                                   <div className="widget">
-                                        <h4 className="widget-title">Contact Info</h4>
-                                        <div className="contact-widget mb-1">
-                                             <strong className="d-block">ADDRESS:</strong>
-                                             <p className="mb-0">
-                                                  {company?.city + " " + company?.country}
+                         <div className="widget-newsletter d-lg-flex align-items-center flex-wrap">
+                              <div className="footer-left d-md-flex flex-wrap align-items-center mr-5">
+                                   <div className="info-box w-auto mr-5 my-3">
+                                        <i className="far fa-envelope text-white mr-4" />
+                                        <div className="widget-newsletter-info">
+                                             <h4 className="line-height-1 text-white">
+                                                  Get Special Offers and Savings
+                                             </h4>
+                                             <p className="line-height-1">
+                                                  Get all the latest information on Events, Sales
+                                                  and Offers.
                                              </p>
                                         </div>
-                                        <div className="contact-widget">
-                                             <strong className="d-block">PHONE:</strong>
-                                             <p className="mb-0">{company?.phone}</p>
+                                   </div>
+                                   <form action="#" className="my-3">
+                                        <div className="footer-submit-wrapper d-flex">
+                                             <input
+                                                  type="email"
+                                                  className="form-control font-italic"
+                                                  placeholder="Enter Your E-mail Address..."
+                                                  size={40}
+                                                  required
+                                             />
+                                             <button type="submit" className="btn btn-sm">
+                                                  Sign Up
+                                             </button>
                                         </div>
+                                   </form>
+                              </div>
+                              <div className="footer-right text-lg-right">
+                                   <div className="social-icons my-3">
+                                        <a
+                                             href="#"
+                                             className="social-icon social-facebook icon-facebook"
+                                             target="_blank"
+                                        />
+                                        <a
+                                             href="#"
+                                             className="social-icon social-twitter icon-twitter"
+                                             target="_blank"
+                                        />
+                                        <a
+                                             href="#"
+                                             className="social-icon social-linkedin fab fa-linkedin-in"
+                                             target="_blank"
+                                        />
+                                   </div>
+                                   {/* End .social-icons */}
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div className="container">
+                    <div className="footer-middle">
+                         <div className="row">
+                              <div className="col-lg-3">
+                                   <a href="demo27.html">
+                                        <Image
+                                             src={templateImages.logoImage.logo2}
+                                             alt="Logo"
+                                             className="logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   </a>
+                                   <p className="footer-desc">
+                                        Lorem ipsum dolor sit amet, consectetur adipis.
+                                   </p>
+                                   <div className="ls-0 footer-question mb-3">
+                                        <h6 className="mb-0 text-white">QUESTIONS?</h6>
+                                        <h3 className="mb-0 text-primary">1-888-123-456</h3>
                                    </div>
                               </div>
+                              {/* End .col-lg-3 */}
                               <div className="col-sm-6 col-lg-3">
                                    <div className="widget">
                                         <h3 className="widget-title">Account</h3>
@@ -79,71 +137,16 @@ const Footer = (props: any) => {
                                    </div>
                               </div>
                          </div>
+                         {/* End .row */}
                     </div>
-               </div>
-               <div className="container">
-                    <div className="footer-middle">
-                         <div className="row justify-content-between widget-newsletter m-0 no-gutters">
-                              <div className="col-lg-4 mb-2">
-                                   <div className="social-icons">
-                                        <a
-                                             href="#"
-                                             className="social-icon social-facebook icon-facebook"
-                                             target="_blank"
-                                        />
-                                        <a
-                                             href="#"
-                                             className="social-icon social-twitter icon-twitter"
-                                             target="_blank"
-                                        />
-                                        <a
-                                             href="#"
-                                             className="social-icon social-instagram icon-instagram"
-                                             target="_blank"
-                                        />
-                                   </div>
-                              </div>
-                              <div className="col-lg-4 mb-2">
-                                   <h4 className="widget-newsletter-title font-weight-bold ls-0 text-uppercase">
-                                        Subscribe Newsletter
-                                   </h4>
-                                   <p className="widget-newsletter-content">
-                                        Get all the latest information on Events, Sales and Offers.
-                                   </p>
-                              </div>
-                              <div className="col-lg-4 mb-2">
-                                   <form action="#" className="mb-0">
-                                        <div className="footer-submit-wrapper d-flex">
-                                             <input
-                                                  type="email"
-                                                  className="form-control mb-0"
-                                                  placeholder="Email address"
-                                                  size={40}
-                                                  required
-                                             />
-                                             <button
-                                                  type="submit"
-                                                  className="btn btn-primary btn-sm ls-0"
-                                             >
-                                                  Subscribe
-                                             </button>
-                                        </div>
-                                   </form>
-                              </div>
-                         </div>
-                    </div>
-                    <div className="footer-bottom d-sm-flex align-items-center">
-                         <div className="footer-left">
-                              <span className="footer-copyright">
-                                   © copyright 2021 . All Rights Reserved.
-                              </span>
-                         </div>
-                         <div className="footer-right ml-auto mt-1 mt-sm-0">
-                              <Payments />
-                         </div>
+                    <div className="footer-bottom">
+                         <p className="footer-copyright text-lg-center mb-0">
+                              © Porto eCommerce. 2021. All Rights Reserved
+                         </p>
                     </div>
                     {/* End .footer-bottom */}
                </div>
+               {/* End .container */}
           </footer>
      );
 };
