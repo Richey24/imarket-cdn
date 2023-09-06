@@ -1,40 +1,78 @@
-import Image, { StaticImageData } from "next/image";
 import React from "react";
-import { ProductProps } from "../types";
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+import { ProductProps } from "../types";
 
 export const Product: React.FC<ProductProps> = ({
+     id,
      productImageUrl,
+     productImageUrlTwo,
+     productImageAlt,
      productCategory,
      productTitle,
      productPrice,
      oldPrice,
 }) => {
      return (
-          <div className="product-default left-details !shadow-none">
-               <figure className="relative h-64 w-full">
-                    <Link href="demo7-product.html">
-                         <Image src={productImageUrl} alt={productTitle} fill className="mb-1 hover:shadow-xl " />
+          <div className="product-default inner-quickview inner-icon mx-2">
+               <figure>
+                    <Link href={`/${id}`}>
+                         <Image src={productImageUrl} width={300} height={300} alt="product" />
+                         {productImageUrlTwo && (
+                              <Image
+                                   src={productImageUrlTwo}
+                                   width={300}
+                                   height={300}
+                                   alt="product"
+                              />
+                         )}
                     </Link>
                     <div className="label-group">
-                         <span className="product-label label-hot">HOT</span>
+                         <span className="product-label label-sale">-30%</span>
                     </div>
+                    <div className="btn-icon-group">
+                         <a href="#" className="btn-icon btn-add-cart product-type-simple">
+                              <i className="icon-shopping-cart" />
+                         </a>
+                    </div>
+                    <a
+                         href="ajax/product-quick-view.html"
+                         className="btn-quickview"
+                         title="Quick View"
+                    >
+                         Quick View
+                    </a>
                </figure>
                <div className="product-details">
-                    <div className="text-sm text-gray-600">
-                         <Link href="demo7-shop.html" className="text-sm text-gray-500">{productCategory}</Link>,
+                    <div className="category-wrap">
+                         <div className="category-list">
+                              <a href="demo13-shop.html" className="product-category">
+                                   {productCategory}
+                              </a>
+                         </div>
+                         <a href="#" className="btn-icon-wish">
+                              <i className="icon-wishlist-2" />
+                         </a>
                     </div>
-                    <h3 className="text-base font-medium"> <Link href="demo7-product.html">{productTitle}</Link> </h3>
-
+                    <h3 className="product-title">
+                         <Link href={`/${id}`}>{productTitle}</Link>
+                    </h3>
+                    <div className="ratings-container">
+                         <div className="product-ratings">
+                              <span className="ratings" style={{ width: "100%" }} />
+                              {/* End .ratings */}
+                              <span className="tooltiptext tooltip-top" />
+                         </div>
+                         {/* End .product-ratings */}
+                    </div>
+                    {/* End .product-container */}
                     <div className="price-box">
-                         <span className="product-price">${productPrice}</span>
+                         {oldPrice && <span className="old-price">${oldPrice.toFixed(2)}</span>}
+                         <span className="product-price">${productPrice.toFixed(2)}</span>
                     </div>
-                    <div className="product-action">
-                         <Link href="#" className="btn-icon btn-add-cart product-type-simple"><i className="icon-shopping-cart"></i><span>ADD TO CART</span></Link>
-                         <Link href="wishlist.html" className="btn-icon-wish" title="wishlist"><i className="icon-heart"></i></Link>
-                         <Link href="ajax/product-quick-view.html" className="btn-quickview" title="Quick View"><i className="fas fa-external-link-alt"></i></Link>
-                    </div>
+                    {/* End .price-box */}
                </div>
+               {/* End .product-details */}
           </div>
      );
 };
