@@ -1,5 +1,6 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
 
 interface InfoBoxItem {
      icon: string;
@@ -9,7 +10,7 @@ interface InfoBoxItem {
 
 const InfoBox: React.FC<InfoBoxItem> = ({ icon, title, description }) => {
      return (
-          <div className="info-box info-box-icon-left">
+          <div className="info-box text-dark info-box-icon-left">
                <i className={icon} />
                <div className="info-box-content pt-1">
                     <h4>{title}</h4>
@@ -54,15 +55,19 @@ export const InfoBoxesContainer: React.FC = () => {
      };
 
      return (
-          <div className="top-notice bg-primary">
-               <OwlCarousel
-                    className="info-boxes-slider owl-carousel owl-theme"
-                    {...owlCarouselOptions}
-               >
-                    {infoBoxItems.map((item, index) => (
-                         <InfoBox key={index} {...item} />
-                    ))}
-               </OwlCarousel>
+          <div className="info-boxes-container bg-white mb-4">
+               <div className="container">
+                    <OwlCarousel
+                         className="info-boxes-slider owl-carousel owl-theme"
+                         {...owlCarouselOptions}
+                    >
+                         {infoBoxItems.map((item, index) => (
+                              <InfoBox key={index} {...item} />
+                         ))}
+                    </OwlCarousel>
+                    {/* End .info-boxes-slider */}
+               </div>
+               {/* End .container */}
           </div>
      );
 };
