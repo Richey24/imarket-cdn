@@ -4,7 +4,7 @@ import { ProductWidgetProps } from "../types";
 export const ProductWidget: React.FC<ProductWidgetProps> = ({
      productImage,
      productImageTwo,
-     productTitle,
+     productName,
      productPrice,
 }) => {
      return (
@@ -17,11 +17,11 @@ export const ProductWidget: React.FC<ProductWidgetProps> = ({
                </figure>
                <div className="product-details">
                     <h3 className="product-title">
-                         <a href="demo13-product.html">{productTitle}</a>
+                         <a href="demo13-product.html">{productName}</a>
                     </h3>
                     {/* End .product-container */}
                     <div className="price-box">
-                         <span className="product-price">${productPrice.toFixed(2)}</span>
+                         <span className="product-price">${productPrice}</span>
                     </div>
                     {/* End .price-box */}
                </div>

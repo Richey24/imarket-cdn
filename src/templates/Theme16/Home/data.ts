@@ -1,13 +1,20 @@
-
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
-export const SliderImages = [
+export const banners = [
      {
-          slider: templateImages.demo14.sliderImage.slide1,
+          bannerImg: templateImages.demo16.sliderImage.slide1,
+          h3: "DRESSES",
+          H3Br: "COLLECTION",
+          p: "Check out this weeks hottest styles",
+          atag: "demo16-shop.html",
      },
      {
-          slider: templateImages.demo14.sliderImage.slide2,
+          bannerImg: templateImages.demo16.sliderImage.slide2,
+          h3: "HANDBAGS",
+          H3Br: "COLLECTION",
+          p: "Check out this weeks hottest styles",
+          atag: "demo16-shop.html",
      },
 ];
 
@@ -18,7 +25,7 @@ export const featuredProducts = [
           productImageUrl: templateImages.demo16.productImages.product7,
           productImageUrlTwo: "",
           productTitle: "Black Woman Underwear",
-          productPrice: 39.00,
+          productPrice: 39.0,
      },
      {
           productImageAlt: "product",
@@ -26,18 +33,16 @@ export const featuredProducts = [
           productImageUrl: templateImages.demo16.productImages.product4,
           productImageUrlTwo: "",
           productTitle: "Black Watch",
-          productPrice: 49.00,
+          productPrice: 49.0,
      },
      {
           productImageAlt: "product",
           productCategory: "HEADPHONE, WATCHES",
-          productImageUrl:templateImages.demo16.productImages.product14,
+          productImageUrl: templateImages.demo16.productImages.product14,
           productImageUrlTwo: "",
           productTitle: "Women Black Sunglasses",
-          productPrice: 299.00,
+          productPrice: 299.0,
      },
-    
- 
 ];
 export const styledOutFitsProducts = [
      {
@@ -46,7 +51,7 @@ export const styledOutFitsProducts = [
           productImageUrl: templateImages.demo16.productImages.product6,
           productImageUrlTwo: templateImages.demo16.productImages.product7,
           productTitle: "Black Woman Underwear",
-          productPrice: 39.00,
+          productPrice: 39.0,
      },
      {
           productImageAlt: "product",
@@ -54,15 +59,15 @@ export const styledOutFitsProducts = [
           productImageUrl: templateImages.demo16.productImages.product2,
           productImageUrlTwo: "",
           productTitle: "Black Watch",
-          productPrice: 49.00,
+          productPrice: 49.0,
      },
      {
           productImageAlt: "product",
           productCategory: "HEADPHONE, WATCHES",
-          productImageUrl:  templateImages.demo16.productImages.product1,
+          productImageUrl: templateImages.demo16.productImages.product1,
           productImageUrlTwo: "",
           productTitle: "Women Black Sunglasses",
-          productPrice: 299.00,
+          productPrice: 299.0,
      },
      {
           productImageAlt: "product",
@@ -70,7 +75,7 @@ export const styledOutFitsProducts = [
           productImageUrl: templateImages.demo16.productImages.product2,
           productImageUrlTwo: "",
           productTitle: "Black Watch",
-          productPrice: 49.00,
+          productPrice: 49.0,
      },
      {
           productImageAlt: "product",
@@ -78,11 +83,9 @@ export const styledOutFitsProducts = [
           productImageUrl: templateImages.demo16.productImages.product12,
           productImageUrlTwo: "",
           productTitle: "Women Black Sunglasses",
-          productPrice: 299.00,
+          productPrice: 299.0,
      },
- 
 ];
-
 
 export const sunglassesProducts = [
      {
@@ -144,7 +147,6 @@ export const miniBannerProduct = [
           productTitle: "Porto Evolution Headset",
           productPrice: 111.0,
      },
-    
 ];
 export const miniBanner2Product = [
      {
@@ -163,9 +165,7 @@ export const miniBanner2Product = [
           productTitle: "Porto Evolution Headset",
           productPrice: 111.0,
      },
-    
 ];
- 
 
 export const payments = [
      {

@@ -1,14 +1,15 @@
+import { newArrivalsProducts } from "@/templates/Theme21/Home/data";
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { newArrivalsProducts } from "../../data";
+import { products } from "../data";
 
-export const NewProducts = () => {
+export const Products = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
           infinite: true,
           speed: 500,
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 1,
           beforeChange: (current, next) => setCurrentSlide(next),
      };
@@ -16,12 +17,12 @@ export const NewProducts = () => {
      return (
           <div className="no-gutters">
                <Slider {...settings}>
-                    {newArrivalsProducts.map((product) => (
+                    {products.map((product) => (
                          <div className="product-default inner-quickview inner-icon">
                               <figure>
                                    <a href="demo21-product.html">
                                         <img
-                                             src={product.productImageUrl.src}
+                                             src={product.productImageUrl}
                                              width={217}
                                              height={217}
                                              alt="product"
@@ -62,7 +63,7 @@ export const NewProducts = () => {
                                         </a>
                                    </div>
                                    <h3 className="product-title">
-                                        <a href="demo21-product.html">Computer Mouse</a>
+                                        <a href="demo21-product.html">{product.productTitle}</a>
                                    </h3>
                                    {/* <div class="ratings-container">
                                 <div class="product-ratings">
@@ -71,11 +72,11 @@ export const NewProducts = () => {
                                 </div>
                             </div> */}
                                    <div className="price-box">
-                                        <span className="product-price">$55.00</span>
+                                        <span className="product-price">
+                                             ${product.productPrice}
+                                        </span>
                                    </div>
-                                   {/* End .price-box */}
                               </div>
-                              {/* End .product-details */}
                          </div>
                     ))}
                </Slider>

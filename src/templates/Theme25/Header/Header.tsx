@@ -193,7 +193,7 @@ const Header = () => {
                         <div className="header-right pl-0 pl-lg-4">
                             <div
                                 className="header-search header-search-inline header-search-category w-lg-max text-right d-none d-sm-flex">
-                                <a href="#" className="search-toggle" role="button"><i className="icon-magnifier"></i></a>
+                                <a onClick={showSearch} href="#" className="search-toggle" role="button"><i className="icon-magnifier"></i></a>
                                 <form action=" #" method="get">
                                     <div className="header-search-wrapper">
                                         <input type="search" className="form-control font-italic" name="q" id="q"

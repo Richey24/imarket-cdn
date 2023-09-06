@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import slide2 from "../../../../assets/images/demoes/demo13/slider/slide-2.jpg";
 import Slider from "react-slick";
 
 interface ProductData {
@@ -9,7 +8,7 @@ interface ProductData {
      altText?: string;
      category: string;
      productName: string;
-     oldPrice: number;
+     oldPrice?: number;
      productPrice: number;
 }
 
@@ -38,72 +37,78 @@ const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = ({ produ
                     </h2>
 
                     <Slider {...settings}>
-                         {products.map((product, index) => (
-                              <div className="product-default mx-2" key={index}>
-                                   <figure style={{ marginRight: "20px", height: 280 }}>
-                                        <a href="product.html">
-                                             <Image
-                                                  src={product.imageUrl1}
-                                                  width="280"
-                                                  height="280"
-                                                  alt="product"
-                                             />
-                                             <Image
-                                                  src={product.imageUrl2}
-                                                  width="280"
-                                                  height="280"
-                                                  alt="product"
-                                             />
-                                        </a>
-                                        <div className="label-group">
-                                             <div className="product-label label-hot">HOT</div>
-                                             <div className="product-label label-sale">-20%</div>
-                                        </div>
-                                   </figure>
-                                   <div className="product-details">
-                                        <div className="category-list">
-                                             <a href="category.html" className="product-category">
-                                                  {product.category}
+                         {products &&
+                              products.map((product, index) => (
+                                   <div className="product-default mx-2" key={index}>
+                                        <figure style={{ marginRight: "20px", height: 280 }}>
+                                             <a href="product.html">
+                                                  <Image
+                                                       src={product.imageUrl1}
+                                                       width="280"
+                                                       height="280"
+                                                       alt="product"
+                                                  />
+                                                  <Image
+                                                       src={product.imageUrl2}
+                                                       width="280"
+                                                       height="280"
+                                                       alt="product"
+                                                  />
                                              </a>
-                                        </div>
-                                        <h3 className="product-title">
-                                             <a href="product.html">{product.productName}</a>
-                                        </h3>
+                                             <div className="label-group">
+                                                  <div className="product-label label-hot">HOT</div>
+                                                  <div className="product-label label-sale">
+                                                       -20%
+                                                  </div>
+                                             </div>
+                                        </figure>
+                                        <div className="product-details">
+                                             <div className="category-list">
+                                                  <a
+                                                       href="category.html"
+                                                       className="product-category"
+                                                  >
+                                                       {product.category}
+                                                  </a>
+                                             </div>
+                                             <h3 className="product-title">
+                                                  <a href="product.html">{product.productName}</a>
+                                             </h3>
 
-                                        <div className="price-box">
-                                             <del className="old-price">
-                                                  ${product.oldPrice.toFixed(2)}
-                                             </del>
-                                             <span className="product-price">
-                                                  ${product.productPrice.toFixed(2)}
-                                             </span>
-                                        </div>
-                                        <div className="product-action">
-                                             <a
-                                                  href="wishlist.html"
-                                                  className="btn-icon-wish"
-                                                  title="wishlist"
-                                             >
-                                                  <i className="icon-heart" />
-                                             </a>
-                                             <a
-                                                  href="product.html"
-                                                  className="btn-icon btn-add-cart"
-                                             >
-                                                  <i className="fa fa-arrow-right" />
-                                                  <span>SELECT OPTIONS</span>
-                                             </a>
-                                             <a
-                                                  href="ajax/product-quick-view.html"
-                                                  className="btn-quickview"
-                                                  title="Quick View"
-                                             >
-                                                  <i className="fas fa-external-link-alt" />
-                                             </a>
+                                             <div className="price-box">
+                                                  <del className="old-price">
+                                                       {product.oldPrice}
+                                                  </del>
+                                                  <span className="product-price">
+                                                       ${product.productPrice}
+                                                  </span>
+                                             </div>
+                                             <div className="product-action">
+                                                  <a
+                                                       href="wishlist.html"
+                                                       className="btn-icon-wish"
+                                                       title="wishlist"
+                                                  >
+                                                       <i className="icon-heart" />
+                                                  </a>
+                                                  <a
+                                                       href="product.html"
+                                                       className="btn-icon btn-add-cart"
+                                                  >
+                                                       <i className="fa fa-arrow-right" />
+                                                       <span>SELECT OPTIONS</span>
+                                                  </a>
+                                                  <a
+                                                       href="ajax/product-quick-view.html"
+                                                       className="btn-quickview"
+                                                       title="Quick View"
+                                                  >
+                                                       <i className="fas fa-external-link-alt" />
+                                                  </a>
+                                             </div>
                                         </div>
                                    </div>
-                              </div>
-                         ))}
+                              ))}
                     </Slider>
                </div>
           </section>
