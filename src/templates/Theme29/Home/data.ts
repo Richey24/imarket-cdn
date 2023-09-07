@@ -1,0 +1,92 @@
+import { ProductProps } from "./types";
+import { templateImages } from "@/appProvider/templateImages";
+
+export const products: ProductProps[] = [
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.bedroomImage.bed1,
+        productTitle: "The Night Before",
+        productPrice: 299,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.bedroomImage.bed2,
+        productTitle: "Grey",
+        productPrice: 55,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.bedroomImage.bed3,
+        productTitle: "Ask Again Yes",
+        productPrice: 259,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.bedroomImage.bed4,
+        productTitle: "On Earth We're Briefly Gorgeous",
+        productPrice: 129,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.bedroomImage.bed5,
+        productTitle: "I'll Never Fall",
+        productPrice: 129,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.diningImage.dining1,
+        productTitle: "Call an Audible",
+        productPrice: 299,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.diningImage.dining2,
+        productTitle: "The Butterfly Garden",
+        productPrice: 39,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.diningImage.dining3,
+        productTitle: "The Bear and The Dragon",
+        productPrice: 101,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "DRESS, WATCHES",
+        productImageUrl: templateImages.demo29.diningImage.dining4,
+        productTitle: "Women Bag",
+        productPrice: 199,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.diningImage.dining5,
+        productTitle: "Men Black Jacket",
+        productPrice: 49,
+        oldPrice: 59,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.diningImage.dining6,
+        productTitle: "Black Women Shoes",
+        productPrice: 49,
+        oldPrice: 59,
+    },
+    {
+        productImageAlt: "product",
+        productCategory: "category",
+        productImageUrl: templateImages.demo29.kitchenImage.kitchen1,
+        productTitle: "Black Women Shoes",
+        productPrice: 49,
+        oldPrice: 59,
+    },
+];
