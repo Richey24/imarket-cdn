@@ -1,6 +1,32 @@
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
+export const cardData = [
+     {
+          h3: "Fashion",
+          icon: "icon-category-fashion",
+     },
+     {
+          h3: "Electronics",
+          icon: "icon-category-electronics",
+     },
+     {
+          h3: "Gifts",
+          icon: "icon-category-gifts",
+     },
+     {
+          h3: "Garden",
+          icon: "icon-category-garden",
+     },
+     {
+          h3: "Music",
+          icon: "icon-category-music",
+     },
+     {
+          h3: "Motors",
+          icon: "icon-category-motors",
+     },
+];
 export const featuredProducts = [
      {
           productImageAlt: "product",
