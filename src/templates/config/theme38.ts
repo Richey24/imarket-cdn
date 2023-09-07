@@ -1,11 +1,11 @@
-import T1Footer from "../Theme38/Footer/Footer";
-import T1Header from "../Theme38/Header/Header";
+import T38Footer from "../Theme38/Footer/Footer";
+import T38Header from "../Theme38/Header/Header";
 import { Home } from "../Theme38/Home/Home";
 
 const templateConfig = {
-     header: T1Header,
+     header: T38Header,
      home: Home,
-     footer: T1Footer,
+     footer: T38Footer,
 };
 
-export default templateConfig
+export default templateConfig;
