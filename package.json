@@ -35,7 +35,7 @@
           "next": "13.4.9",
           "next-auth": "^4.22.3",
           "next-themes": "^0.2.1",
-          "nextjs-progressbar": "^0.0.16",
+          "next13-progressbar": "^1.0.2",
           "popper.js": "^1.16.1",
           "postcss": "8.4.25",
           "prettier": "^3.0.2",

@@ -1,7 +1,5 @@
-import visa from "../../../assets/images/payments/payment-visa.svg";
-import paypal from "../../../assets/images/payments/payment-paypal.svg";
-import stripe from "../../../assets/images/payments/payment-stripe.png";
-import verisign from "../../../assets/images/payments/payment-verisign.svg";
+import ContactInfo from "@/templates/shared/Footer/Contact-Info";
+import CopyRight from "@/templates/shared/Footer/Copy-Right";
 
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
@@ -15,56 +13,8 @@ const Footer = (props: any): JSX.Element => {
                          {/* End .footer-ribbon */}
                          <div className="row">
                               <div className="col-lg-3 col-md-4">
-                                   <div className="widget">
-                                        <h4 className="widget-title font-weight-bold">
-                                             Contact Info
-                                        </h4>
-                                        <ul className="contact-info">
-                                             <li>
-                                                  <span className="contact-info-label">
-                                                       Address:
-                                                  </span>
-                                                  {company?.city + " " + company?.country}
-                                             </li>
-                                             <li>
-                                                  <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">{company?.phone}</a>
-                                             </li>
-                                             <li>
-                                                  <span className="contact-info-label">Email:</span>{" "}
-                                                  <a href={`mailto:${company?.user_id?.email}`}>
-                                                       {company?.user_id?.email}
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <span className="contact-info-label">
-                                                       Working Days/Hours:
-                                                  </span>{" "}
-                                                  Mon - Sun / 9:00 AM - 8:00 PM
-                                             </li>
-                                        </ul>
-                                        <div className="social-icons">
-                                             <a
-                                                  href="#"
-                                                  className="social-icon social-facebook icon-facebook"
-                                                  target="_blank"
-                                                  title="Facebook"
-                                             />
-                                             <a
-                                                  href="#"
-                                                  className="social-icon social-twitter icon-twitter"
-                                                  target="_blank"
-                                                  title="Twitter"
-                                             />
-                                             <a
-                                                  href="#"
-                                                  className="social-icon social-linkedin fab fa-linkedin-in"
-                                                  target="_blank"
-                                                  title="Linkedin"
-                                             />
-                                        </div>
-                                        {/* End .social-icons */}
-                                   </div>
+                                   {/* contact-info */}
+                                   <ContactInfo staticProps={staticProps} company={company} />
                                    {/* End .widget */}
                               </div>
                               {/* End .col-lg-3 */}
@@ -164,45 +114,7 @@ const Footer = (props: any): JSX.Element => {
                </div>
                {/* End .footer-middle */}
                <div className="container">
-                    <div className="footer-bottom d-sm-flex align-items-center">
-                         <div className="footer-left">
-                              <span className="footer-copyright">
-                                   © Porto eCommerce {new Date().getFullYear()}. All Rights
-                                   Reserved
-                              </span>
-                         </div>
-                         <div className="footer-right ml-auto mt-1 mt-sm-0">
-                              <div className="payment-icons mr-0">
-                                   <span
-                                        className="payment-icon visa"
-                                        style={{
-                                             backgroundImage: `url('${visa}')`,
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon paypal"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-paypal.svg)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon stripe"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-stripe.png)",
-                                        }}
-                                   />
-                                   <span
-                                        className="payment-icon verisign"
-                                        style={{
-                                             backgroundImage:
-                                                  "url(assets/images/payments/payment-verisign.svg)",
-                                        }}
-                                   />
-                              </div>
-                         </div>
-                    </div>
+                    <CopyRight name={company.company_name} />
                </div>
                {/* End .footer-bottom */}
           </footer>

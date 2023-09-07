@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import NextNProgress from "nextjs-progressbar";
 import { useGetCategories, useGetProducts, useGetSiteByDomain } from "./hook";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
@@ -59,15 +58,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      }, [site]);
 
      return (
-          <AppContext.Provider value={{ site, loading, categories, products }}>
-               <NextNProgress
-                    color="#29D"
-                    startPosition={0.3}
-                    stopDelayMs={200}
-                    height={3}
-                    showOnShallow={true}
-               />
-
+          <AppContext.Provider value={{ site: dummySite, loading, categories, products }}>
                {children}
           </AppContext.Provider>
      );

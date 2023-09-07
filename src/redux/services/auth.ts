@@ -13,6 +13,8 @@ export interface UserI {
      created_at?: string;
 }
 export interface UserResponse {
+     access_token: string;
+     refresh_token: string;
      user: UserI;
      token: string;
      message?: string;

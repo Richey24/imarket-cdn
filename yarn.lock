@@ -3973,6 +3973,15 @@ next-themes@^0.2.1:
   resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.2.1.tgz"
   integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
 
+next13-progressbar@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/next13-progressbar/-/next13-progressbar-1.0.2.tgz#6353a71a47b6aedfa98744bf11ce24aa432ff9e4"
+  integrity sha512-Cd5IHpXfIwRGYmQ6eLJzstC41NyU6oAE8TSm5SNR0RE2DjHz/ZEVvGBSolA/ctaDhjF08Y0h0vp7/XKkC3J+Ag==
+  dependencies:
+    "@types/nprogress" "^0.2.0"
+    nprogress "^0.2.0"
+    prop-types "^15.8.1"
+
 next@13.4.9:
   version "13.4.9"
   resolved "https://registry.npmjs.org/next/-/next-13.4.9.tgz"
@@ -3996,15 +4005,6 @@ next@13.4.9:
     "@next/swc-win32-arm64-msvc" "13.4.9"
     "@next/swc-win32-ia32-msvc" "13.4.9"
     "@next/swc-win32-x64-msvc" "13.4.9"
-
-nextjs-progressbar@^0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/nextjs-progressbar/-/nextjs-progressbar-0.0.16.tgz#d2c1e54ffc2c6d52b64282c0d764a44241fbc36e"
-  integrity sha512-GV0fD38EMD3vSDCmkq+tObmoup6QA91a6a9MxGuhJZuRk/9TNsrHGnIQQQ/sggkMkXuT4fBgF6jRjFwScDT3zA==
-  dependencies:
-    "@types/nprogress" "^0.2.0"
-    nprogress "^0.2.0"
-    prop-types "^15.8.1"
 
 node-releases@^2.0.12:
   version "2.0.13"

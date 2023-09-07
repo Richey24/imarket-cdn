@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Banner from "./components/Banner";
-// import { InfoBoxesContainer } from "../../components/Info";
 import { Product } from "./components/Product";
-import { featuredProducts } from "./data";
 import SideMenu from "./components/SideMenu";
 import Promotions from "./components/Promotions";
-import { InfoBoxesContainer } from "@/templates/components/Info";
+import { InfoBoxesContainer } from "@/templates/shared/Info";
 
 export const Home = (props: any) => {
      const { static: statiProps, products, categories } = props;

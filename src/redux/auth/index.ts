@@ -16,15 +16,16 @@ interface ISetAuth {
 const initialState: AuthState = {
      isAuthenticated: false,
      user: {
-          id: "",
-          full_name: "",
+          _id: "",
+          firstname: "",
+          lastname: "",
           email: "",
           password: "",
-          phone: "",
+          onboarded: false,
+          subscribed: false,
           role: "",
-          created_at: "",
-          merchant: { id: "", merchant_name: "", tier_name: "" },
-          is_verified: false,
+          company: "",
+          created_at: ""
      },
      isLoading: false,
 };

@@ -5,8 +5,15 @@ import product2 from "../../../assets/images/products/product-2.jpg";
 import product3 from "../../../assets/images/products/product-3.jpg";
 import menuBanner from "../../../assets/images/menu-banner.jpg";
 import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
+import SocialIcons from "@/templates/shared/SocialIcons";
+import Language from "@/templates/shared/Header/HeaderLinks/Language";
+import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
+import Links from "@/templates/shared/Header/HeaderLinks/Links";
+import CategorySelect from "@/templates/shared/Header/HeaderLinks/CategorySelect";
 
-const Header = () => {
+const Header = (props: any) => {
+     const { company, static: staticProps, categories } = props.props;
+
      const showSearch = () => {
           document.getElementById("searchDiv").classList.toggle("showSearch");
      };
@@ -34,72 +41,14 @@ const Header = () => {
                     <div className="header-top">
                          <div className="header-row container">
                               <div className="header-left">
-                                   <div className="header-dropdown">
-                                        <a href="#" className="pl-0">
-                                             USD
-                                        </a>
-                                        <div className="header-menu">
-                                             <ul>
-                                                  <li>
-                                                       <a href="#">EUR</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">USD</a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
-
-                                   <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
-                                        <a href="#">
-                                             <i className="flag-us flag"></i>ENG
-                                        </a>
-                                        <div className="header-menu">
-                                             <ul>
-                                                  <li>
-                                                       <a href="#">
-                                                            <i className="flag-us flag mr-2"></i>ENG
-                                                       </a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">
-                                                            <i className="flag-fr flag mr-2"></i>FRA
-                                                       </a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
+                                   <Language />
                               </div>
                               <div className="header-right">
                                    <div className="wel-msg text-uppercase d-none d-lg-block">
                                         FREE Returns. Standard Shipping Orders $99+
                                    </div>
                                    <span className="separator d-none d-xl-block"></span>
-                                   <div className="header-dropdown dropdown-expanded d-none d-lg-block">
-                                        <a href="#">Links</a>
-                                        <div className="header-menu">
-                                             <ul>
-                                                  <li>
-                                                       <a href="dashboard.html">Dashboard</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="cart.html">Cart</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="cart.html">Checkout</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="wishlist.html">Wishlist</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="about.html">About Us</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="blog.html">Contact Us</a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
+                                   <Links />
                                    <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                         <a href="#">Order</a>
                                         <div className="header-menu">
@@ -114,29 +63,7 @@ const Header = () => {
                                         </div>
                                    </div>
                                    <span className="separator d-none d-xl-block"></span>
-                                   <div className="share-links d-none d-xl-block">
-                                        <a
-                                             target="_blank"
-                                             rel="nofollow"
-                                             className="share-facebook icon-facebook"
-                                             href="#"
-                                             title="Facebook"
-                                        ></a>
-                                        <a
-                                             target="_blank"
-                                             rel="nofollow"
-                                             className="share-twitter icon-twitter"
-                                             href="#"
-                                             title="Twitter"
-                                        ></a>
-                                        <a
-                                             target="_blank"
-                                             rel="nofollow"
-                                             className="share-instagram icon-instagram"
-                                             href="#"
-                                             title="Instagram"
-                                        ></a>
-                                   </div>
+                                   <SocialIcons links={staticProps?.socials} />
                               </div>
                          </div>
                     </div>
@@ -152,17 +79,18 @@ const Header = () => {
                                         <i className="icon-phone-2"></i>
                                         <h6>
                                              Call us now
-                                             <a href="tel:#" className="text-dark font1">
-                                                  +123 5678 890
+                                             <a
+                                                  href={`tel:${company?.phone}`}
+                                                  className="text-dark font1"
+                                             >
+                                                  {company?.phone}
                                              </a>
                                         </h6>
                                    </div>
                               </div>
 
                               <div className="header-center">
-                                   <button className="mobile-menu-toggler" type="button">
-                                        <i className="fas fa-bars"></i>
-                                   </button>
+                                   <MenuButton />
                                    <a href="demo8.html" className="logo">
                                         <Image
                                              src={logo}
@@ -204,37 +132,7 @@ const Header = () => {
                                                        required
                                                   />
                                                   <div className="select-custom">
-                                                       <select id="cat" name="cat">
-                                                            <option value="">All Categories</option>
-                                                            <option value="4">Fashion</option>
-                                                            <option value="12">- Women</option>
-                                                            <option value="13">- Men</option>
-                                                            <option value="66">- Jewellery</option>
-                                                            <option value="67">
-                                                                 - Kids Fashion
-                                                            </option>
-                                                            <option value="5">Electronics</option>
-                                                            <option value="21">- Smart TVs</option>
-                                                            <option value="22">- Cameras</option>
-                                                            <option value="63">- Games</option>
-                                                            <option value="7">
-                                                                 Home &amp; Garden
-                                                            </option>
-                                                            <option value="11">Motors</option>
-                                                            <option value="31">
-                                                                 - Cars and Trucks
-                                                            </option>
-                                                            <option value="32">
-                                                                 - Motorcycles &amp; Powersports
-                                                            </option>
-                                                            <option value="33">
-                                                                 - Parts &amp; Accessories
-                                                            </option>
-                                                            <option value="34">- Boats</option>
-                                                            <option value="57">
-                                                                 - Auto Tools &amp; Supplies
-                                                            </option>
-                                                       </select>
+                                                       <CategorySelect categories={categories} />
                                                   </div>
                                                   <button
                                                        style={{ borderRadius: "30px" }}
