@@ -1,222 +1,267 @@
-"use client";
-import Link from "next/link";
-import React from "react";
+import Image from "next/image";
+import logo from "../../../assets/images/logo.png";
+import menuBanner from "../../../assets/images/menu-banner.jpg";
+import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
+import { FiChevronDown } from "react-icons/fi";
+import { useState } from "react";
+import { templateImages } from "@/appProvider/templateImages";
+const Header = (props: any) => {
+     const { company, static: staticProps } = props.props;
+     console.log("headerProps", staticProps);
 
-export default function Header() {
      return (
           <header className="header">
                <div className="header-top">
-                    <div className="container-fluid">
-                         <div className="header-left">
-                              <p className="top-message font-italic ls-n-10">
-                                   Get <b className="font-weight-extra-bold">10% OFF</b> at the
-                                   Porto Cosmetics Selection -
-                                   <Link
-                                        href="demo34-shop.html"
-                                        className="font-weight-extra-bold text-underline"
-                                   >
-                                        Shop Now!
-                                   </Link>
+                    <div className="container">
+                         <div className="header-left d-none d-md-flex">
+                              <a
+                                   href="tel:#"
+                                   className="font-weight-bold text-primary d-flex align-items-center"
+                              >
+                                   <i className="sicon-phone" />
+                                   (800) 123-4567
+                              </a>
+                              <span className="separator" />
+                              <p>
+                                   <span className="font-weight-bold text-primary">
+                                        Extra 15% OFF
+                                   </span>{" "}
+                                   Health &amp; Wellness
                               </p>
                          </div>
-
-                         <div className="header-right">
+                         {/* End .header-left */}
+                         <div className="header-right header-dropdowns ml-0 ml-md-auto w-md-100">
                               <div className="header-dropdown dropdown-expanded d-none d-lg-block">
-                                   <Link href="#">Links</Link>
+                                   <a href="#">Links</a>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <Link href="dashboard.html">Dashboard</Link>
+                                                  <a href="dashboard.html">Dashboard</a>
                                              </li>
                                              <li>
-                                                  <Link href="cart.html">Cart</Link>
+                                                  <a href="cart.html">Cart</a>
                                              </li>
                                              <li>
-                                                  <Link href="cart.html">Checkout</Link>
+                                                  <a href="cart.html">Checkout</a>
                                              </li>
                                              <li>
-                                                  <Link href="wishlist.html">Wishlist</Link>
+                                                  <a href="wishlist.html">Wishlist</a>
                                              </li>
                                              <li>
-                                                  <Link href="about.html">About Us</Link>
+                                                  <a href="about.html">About Us</a>
                                              </li>
                                              <li>
-                                                  <Link href="blog.html">Contact Us</Link>
+                                                  <a href="blog.html">Contact Us</a>
                                              </li>
                                         </ul>
                                    </div>
+                                   {/* End .header-menu */}
                               </div>
+                              {/* End .header-dropown */}
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
-                                   <Link href="#">Order</Link>
+                                   <a href="#">Order</a>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <Link href="#">Order Tracking</Link>
+                                                  <a href="#">Order Tracking</a>
                                              </li>
                                              <li>
-                                                  <Link href="#">Order History</Link>
+                                                  <a href="#">Order History</a>
                                              </li>
                                         </ul>
                                    </div>
+                                   {/* End .header-menu */}
                               </div>
-                              <div className="header-dropdown d-none d-sm-block">
-                                   <Link href="#">USD</Link>
+                              {/* End .header-dropown */}
+                              <span className="separator d-none d-xl-block" />
+                              <div className="header-dropdown ">
+                                   <a href="#">USD</a>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <Link href="#">EUR</Link>
+                                                  <a href="#">EUR</a>
                                              </li>
                                              <li>
-                                                  <Link href="#">USD</Link>
+                                                  <a href="#">USD</a>
                                              </li>
                                         </ul>
                                    </div>
+                                   {/* End .header-menu */}
                               </div>
-                              <div className="header-dropdown d-none d-sm-block">
-                                   <Link href="#">
-                                        <i className="flag-us flag"></i>ENG
-                                   </Link>
+                              {/* End .header-dropown */}
+                              <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
+                                   <a href="#">ENG</a>
                                    <div className="header-menu">
                                         <ul>
                                              <li>
-                                                  <Link href="#">
-                                                       <i className="flag-us flag mr-2"></i>ENG
-                                                  </Link>
+                                                  <a href="#">ENG</a>
                                              </li>
                                              <li>
-                                                  <Link href="#">
-                                                       <i className="flag-fr flag mr-2"></i>FRA
-                                                  </Link>
+                                                  <a href="#">FRA</a>
                                              </li>
                                         </ul>
                                    </div>
+                                   {/* End .header-menu */}
                               </div>
-                         </div>
-                    </div>
-               </div>
-               <div className="header-middle sticky-header font2">
-                    <div className="container-fluid">
-                         <div className="header-left">
-                              <button className="mobile-menu-toggler pl-0" type="button">
-                                   <i className="fas fa-bars"></i>
-                              </button>
-                              <Link href="demo34.html" className="logo">
-                                   <img
-                                        src="assets/images/your-logo.png"
-                                        alt="Porto Logo"
-                                        width="111"
-                                        height="44"
+                              {/* End .header-dropown */}
+                              <span className="separator" />
+                              <div className="social-icons ml-auto ml-md-0">
+                                   <a
+                                        href="#"
+                                        className="social-icon social-facebook icon-facebook"
+                                        target="_blank"
                                    />
-                              </Link>
-                              <nav className="main-nav">
-                                   <ul className="menu">
+                                   <a
+                                        href="#"
+                                        className="social-icon social-twitter icon-twitter"
+                                        target="_blank"
+                                   />
+                                   <a
+                                        href="#"
+                                        className="social-icon social-instagram icon-instagram"
+                                        target="_blank"
+                                   />
+                              </div>
+                              {/* End .social-icons */}
+                         </div>
+                         {/* End .header-right */}
+                    </div>
+                    {/* End .container */}
+               </div>
+               {/* End .header-top */}
+               <div className="header-middle sticky-header">
+                    <div className="container">
+                         <div className="header-left">
+                              <button className="mobile-menu-toggler" type="button">
+                                   <i className="fas fa-bars" />
+                              </button>
+                              <a href="demo38.html" className="logo">
+                                   {company?.logo ? (
+                                        <Image
+                                             src={company?.logo}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   ) : (
+                                        <Image
+                                             src={templateImages.logoImage.logo2}
+                                             className="black-logo"
+                                             alt="Porto Logo"
+                                             width={202}
+                                             height={80}
+                                        />
+                                   )}
+                              </a>
+                         </div>
+                         {/* End .header-left */}
+                         <div className="header-right">
+                              <nav className="main-nav font2">
+                                   <ul className="menu text-capitalize">
                                         <li className="active">
-                                             <Link href="demo34.html">Home</Link>
+                                             <a href="demo38.html">Home</a>
                                         </li>
                                         <li className="tw-group">
-                                             <Link href="demo34-shop.html">Shop</Link>
-                                             <div className="megamenu megamenu-fixed-width megamenu-3cols group-hover:tw-block">
+                                             <a
+                                                  href="demo38-shop.html"
+                                                  className="d-flex align-items-center"
+                                             >
+                                                  Shop <FiChevronDown />
+                                             </a>
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
-                                                            <Link href="#" className="nolink">
+                                                            <a href="#" className="nolink">
                                                                  VARIATION 1
-                                                            </Link>
+                                                            </a>
                                                             <ul className="submenu">
                                                                  <li>
-                                                                      <Link href="category.html">
+                                                                      <a href="demo38-shop.html">
                                                                            Fullwidth Banner
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-banner-boxed-slider.html">
+                                                                      <a href="category-banner-boxed-slider.html">
                                                                            Boxed Slider Banner
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-banner-boxed-image.html">
+                                                                      <a href="category-banner-boxed-image.html">
                                                                            Boxed Image Banner
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category.html">
+                                                                      <a href="demo38-shop.html">
                                                                            Left Sidebar
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-sidebar-right.html">
+                                                                      <a href="category-sidebar-right.html">
                                                                            Right Sidebar
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-off-canvas.html">
+                                                                      <a href="category-off-canvas.html">
                                                                            Off Canvas Filter
-                                                                           <span className="tip tip-new">
-                                                                                New
-                                                                           </span>
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-horizontal-filter1.html">
+                                                                      <a href="category-horizontal-filter1.html">
                                                                            Horizontal Filter1
-                                                                           <span className="tip tip-new">
-                                                                                New
-                                                                           </span>
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-horizontal-filter2.html">
+                                                                      <a href="category-horizontal-filter2.html">
                                                                            Horizontal Filter2
-                                                                           <span className="tip tip-new">
-                                                                                New
-                                                                           </span>
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                             </ul>
                                                        </div>
                                                        <div className="col-lg-4">
-                                                            <Link href="#" className="nolink">
+                                                            <a href="#" className="nolink">
                                                                  VARIATION 2
-                                                            </Link>
+                                                            </a>
                                                             <ul className="submenu">
                                                                  <li>
-                                                                      <Link href="category-list.html">
+                                                                      <a href="category-list.html">
                                                                            List Types
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-infinite-scroll.html">
+                                                                      <a href="category-infinite-scroll.html">
                                                                            Ajax Infinite Scroll
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category.html">
+                                                                      <a href="demo38-shop.html">
                                                                            3 Columns Products
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-4col.html">
+                                                                      <a href="category-4col.html">
                                                                            4 Columns Products
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-5col.html">
+                                                                      <a href="category-5col.html">
                                                                            5 Columns Products
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-6col.html">
+                                                                      <a href="category-6col.html">
                                                                            6 Columns Products
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-7col.html">
+                                                                      <a href="category-7col.html">
                                                                            7 Columns Products
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="category-8col.html">
+                                                                      <a href="category-8col.html">
                                                                            8 Columns Products
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                             </ul>
                                                        </div>
@@ -226,8 +271,8 @@ export default function Header() {
                                                                       <img
                                                                            src="assets/images/menu-banner.jpg"
                                                                            alt="Menu banner"
-                                                                           width="300"
-                                                                           height="300"
+                                                                           width={300}
+                                                                           height={300}
                                                                       />
                                                                  </figure>
                                                                  <div className="banner-content">
@@ -239,124 +284,122 @@ export default function Header() {
                                                                            <b className="">50%</b>
                                                                            <i>OFF</i>
                                                                       </h4>
-                                                                      <Link
-                                                                           href="category.html"
+                                                                      <a
+                                                                           href="demo38-shop.html"
                                                                            className="btn btn-sm btn-dark"
                                                                       >
                                                                            SHOP NOW
-                                                                      </Link>
+                                                                      </a>
                                                                  </div>
                                                             </div>
                                                        </div>
                                                   </div>
                                              </div>
+                                             {/* End .megamenu */}
                                         </li>
                                         <li className="tw-group">
-                                             <Link href="demo34-product.html">Products</Link>
-                                             <div className="megamenu megamenu-fixed-width group-hover:tw-block">
+                                             <a
+                                                  href="demo38-product.html"
+                                                  className="d-flex align-items-center"
+                                             >
+                                                  Products <FiChevronDown />
+                                             </a>
+                                             <div className="megamenu megamenu-fixed-width megamenu-3cols tw-hidden group-hover:tw-block">
                                                   <div className="row">
                                                        <div className="col-lg-4">
-                                                            <Link href="#" className="nolink">
+                                                            <a href="#" className="nolink">
                                                                  PRODUCT PAGES
-                                                            </Link>
+                                                            </a>
                                                             <ul className="submenu">
                                                                  <li>
-                                                                      <Link href="demo34-product.html">
+                                                                      <a href="product.html">
                                                                            SIMPLE PRODUCT
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-variable.html">
+                                                                      <a href="product-variable.html">
                                                                            VARIABLE PRODUCT
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="demo34-product.html">
+                                                                      <a href="product.html">
                                                                            SALE PRODUCT
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="demo34-product.html">
-                                                                           FEATURED & ON SALE
-                                                                      </Link>
+                                                                      <a href="product.html">
+                                                                           FEATURED &amp; ON SALE
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-custom-tab.html">
+                                                                      <a href="product-custom-tab.html">
                                                                            WITH CUSTOM TAB
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-sidebar-left.html">
+                                                                      <a href="product-sidebar-left.html">
                                                                            WITH LEFT SIDEBAR
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-sidebar-right.html">
+                                                                      <a href="product-sidebar-right.html">
                                                                            WITH RIGHT SIDEBAR
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-addcart-sticky.html">
+                                                                      <a href="product-addcart-sticky.html">
                                                                            ADD CART STICKY
-                                                                           <span className="tip tip-new">
-                                                                                New
-                                                                           </span>
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                             </ul>
                                                        </div>
-
+                                                       {/* End .col-lg-4 */}
                                                        <div className="col-lg-4">
-                                                            <Link href="#" className="nolink">
+                                                            <a href="#" className="nolink">
                                                                  PRODUCT LAYOUTS
-                                                            </Link>
+                                                            </a>
                                                             <ul className="submenu">
                                                                  <li>
-                                                                      <Link href="product-extended-layout.html">
+                                                                      <a href="product-extended-layout.html">
                                                                            EXTENDED LAYOUT
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-grid-layout.html">
+                                                                      <a href="product-grid-layout.html">
                                                                            GRID IMAGE
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-full-width.html">
+                                                                      <a href="product-full-width.html">
                                                                            FULL WIDTH LAYOUT
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-sticky-info.html">
+                                                                      <a href="product-sticky-info.html">
                                                                            STICKY INFO
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-sticky-both.html">
-                                                                           LEFT & RIGHT STICKY
-                                                                      </Link>
+                                                                      <a href="product-sticky-both.html">
+                                                                           LEFT &amp; RIGHT STICKY
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-transparent-image.html">
+                                                                      <a href="product-transparent-image.html">
                                                                            TRANSPARENT IMAGE
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="product-center-vertical.html">
+                                                                      <a href="product-center-vertical.html">
                                                                            CENTER VERTICAL
-                                                                      </Link>
+                                                                      </a>
                                                                  </li>
                                                                  <li>
-                                                                      <Link href="#">
-                                                                           BUILD YOUR OWN
-                                                                           <span className="tip tip-new">
-                                                                                New
-                                                                           </span>
-                                                                      </Link>
+                                                                      <a href="#">BUILD YOUR OWN</a>
                                                                  </li>
                                                             </ul>
                                                        </div>
-
+                                                       {/* End .col-lg-4 */}
                                                        <div className="col-lg-4 p-0">
                                                             <div className="menu-banner menu-banner-2">
                                                                  <figure>
@@ -364,8 +407,8 @@ export default function Header() {
                                                                            src="assets/images/menu-banner-1.jpg"
                                                                            alt="Menu banner"
                                                                            className="product-promo"
-                                                                           width="380"
-                                                                           height="790"
+                                                                           width={380}
+                                                                           height={790}
                                                                       />
                                                                  </figure>
                                                                  <i>OFF</i>
@@ -378,260 +421,232 @@ export default function Header() {
                                                                            <b className="">50%</b>
                                                                       </h4>
                                                                  </div>
-                                                                 <Link
-                                                                      href="category.html"
+                                                                 <a
+                                                                      href="demo38-shop.html"
                                                                       className="btn btn-sm btn-dark"
                                                                  >
                                                                       SHOP NOW
-                                                                 </Link>
+                                                                 </a>
                                                             </div>
                                                        </div>
+                                                       {/* End .col-lg-4 */}
                                                   </div>
+                                                  {/* End .row */}
                                              </div>
-                                        </li>
-
-                                        <li className="tw-group">
-                                             <Link href="#">Pages</Link>
-                                             <ul className="group-hover:tw-block">
-                                                  <li>
-                                                       <Link href="wishlist.html">Wishlist</Link>
-                                                  </li>
-                                                  <li>
-                                                       <Link href="cart.html">Shopping Cart</Link>
-                                                  </li>
-                                                  <li>
-                                                       <Link href="checkout.html">Checkout</Link>
-                                                  </li>
-                                                  <li>
-                                                       <Link href="dashboard.html">Dashboard</Link>
-                                                  </li>
-                                                  <li>
-                                                       <Link href="about.html">About Us</Link>
-                                                  </li>
-
-                                                  <li>
-                                                       <Link href="contact.html">Contact Us</Link>
-                                                  </li>
-                                                  <li>
-                                                       <Link href="login.html">Login</Link>
-                                                  </li>
-                                                  <li>
-                                                       <Link href="forgot-password.html">
-                                                            Forgot Password
-                                                       </Link>
-                                                  </li>
-                                             </ul>
+                                             {/* End .megamenu */}
                                         </li>
                                    </ul>
                               </nav>
-                         </div>
-
-                         <div className="header-right">
-                              <div className="header-search header-search-popup header-search-category w-lg-max text-right d-none d-sm-block">
-                                   <Link href="#" className="search-toggle" role="button">
-                                        <i className="icon-magnifier"></i>
-                                   </Link>
-                                   <form action=" #" method="get">
+                              <div className="header-icon header-search header-search-popup header-search-category d-none d-sm-block">
+                                   <a href="#" className="search-toggle" role="button">
+                                        <i className="icon-magnifier" />
+                                   </a>
+                                   <form action="#" method="get">
                                         <div className="header-search-wrapper">
                                              <input
                                                   type="search"
                                                   className="form-control"
                                                   name="q"
                                                   id="q"
-                                                  placeholder="Search..."
+                                                  placeholder="I'm searching for..."
                                                   required
                                              />
-                                             <button
-                                                  className="btn icon-magnifier"
-                                                  title="search"
-                                                  type="submit"
-                                             ></button>
+                                             <button className="btn icon-search-3" type="submit" />
                                         </div>
+                                        {/* End .header-search-wrapper */}
                                    </form>
                               </div>
-
-                              <Link href="login.html" className="header-icon">
-                                   <i className="icon-user-2"></i>
-                              </Link>
-
-                              <Link href="wishlist.html" className="header-icon position-relative">
-                                   <i className="icon-wishlist-2"></i>
-                                   <span className="cart-count badge-circle">2</span>
-                              </Link>
-
+                              <a
+                                   href="login.html"
+                                   className="header-icon header-icon-user"
+                                   title="Login"
+                              >
+                                   <i className="icon-user-2" />
+                              </a>
+                              <a
+                                   href="wishlist.html"
+                                   className="header-icon position-relative"
+                                   title="wishlist"
+                              >
+                                   <i className="icon-wishlist-2" />
+                                   <span className="wishlist-count badge-circle">0</span>
+                              </a>
                               <div className="dropdown cart-dropdown">
-                                   <Link
+                                   <a
                                         href="#"
                                         title="Cart"
-                                        className="dropdown-toggle cart-toggle"
+                                        className="dropdown-toggle dropdown-arrow cart-toggle"
                                         role="button"
                                         data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                         data-display="static"
                                    >
-                                        <i className="icon-cart-thick"></i>
+                                        <i className="icon-cart-thick" />
                                         <span className="cart-count badge-circle">3</span>
-                                   </Link>
-
-                                   <div className="cart-overlay"></div>
-
+                                   </a>
+                                   <div className="cart-overlay" />
                                    <div className="dropdown-menu mobile-cart">
-                                        <Link href="#" title="Close (Esc)" className="btn-close">
+                                        <a href="#" title="Close (Esc)" className="btn-close">
                                              ×
-                                        </Link>
-
+                                        </a>
                                         <div className="dropdownmenu-wrapper custom-scrollbar">
                                              <div className="dropdown-cart-header">
                                                   Shopping Cart
                                              </div>
-
+                                             {/* End .dropdown-cart-header */}
                                              <div className="dropdown-cart-products">
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <Link href="demo34-product.html">
-                                                                      Ultimate 3D Bluetooth Speaker
-                                                                 </Link>
+                                                                 <a href="demo38-product.html">
+                                                                      Injection
+                                                                 </a>
                                                             </h4>
-
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>
+                                                                 </span>{" "}
                                                                  × $99.00
                                                             </span>
                                                        </div>
-
+                                                       {/* End .product-details */}
                                                        <figure className="product-image-container">
-                                                            <Link
-                                                                 href="demo34-product.html"
+                                                            <a
+                                                                 href="demo38-product.html"
                                                                  className="product-image"
                                                             >
                                                                  <img
-                                                                      src="assets/images/products/product-1.jpg"
+                                                                      src="assets/images/demoes/demo38/products/product-1.jpg"
                                                                       alt="product"
-                                                                      width="80"
-                                                                      height="80"
+                                                                      width={80}
+                                                                      height={80}
                                                                  />
-                                                            </Link>
-
-                                                            <Link
+                                                            </a>
+                                                            <a
                                                                  href="#"
                                                                  className="btn-remove"
                                                                  title="Remove Product"
                                                             >
                                                                  <span>×</span>
-                                                            </Link>
+                                                            </a>
                                                        </figure>
                                                   </div>
-
+                                                  {/* End .product */}
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <Link href="demo34-product.html">
-                                                                      Brown Women Casual HandBag
-                                                                 </Link>
+                                                                 <a href="demo38-product.html">
+                                                                      Tonomter V2
+                                                                 </a>
                                                             </h4>
-
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>
+                                                                 </span>{" "}
                                                                  × $35.00
                                                             </span>
                                                        </div>
-
+                                                       {/* End .product-details */}
                                                        <figure className="product-image-container">
-                                                            <Link
-                                                                 href="demo34-product.html"
+                                                            <a
+                                                                 href="demo38-product.html"
                                                                  className="product-image"
                                                             >
                                                                  <img
-                                                                      src="assets/images/products/product-2.jpg"
+                                                                      src="assets/images/demoes/demo38/products/product-2.jpg"
                                                                       alt="product"
-                                                                      width="80"
-                                                                      height="80"
+                                                                      width={80}
+                                                                      height={80}
                                                                  />
-                                                            </Link>
-
-                                                            <Link
+                                                            </a>
+                                                            <a
                                                                  href="#"
                                                                  className="btn-remove"
                                                                  title="Remove Product"
                                                             >
                                                                  <span>×</span>
-                                                            </Link>
+                                                            </a>
                                                        </figure>
                                                   </div>
-
+                                                  {/* End .product */}
                                                   <div className="product">
                                                        <div className="product-details">
                                                             <h4 className="product-title">
-                                                                 <Link href="demo34-product.html">
-                                                                      Circled Ultimate 3D Speaker
-                                                                 </Link>
+                                                                 <a href="demo38-product.html">
+                                                                      Wheel Barrow
+                                                                 </a>
                                                             </h4>
-
                                                             <span className="cart-product-info">
                                                                  <span className="cart-product-qty">
                                                                       1
-                                                                 </span>
+                                                                 </span>{" "}
                                                                  × $35.00
                                                             </span>
                                                        </div>
-
+                                                       {/* End .product-details */}
                                                        <figure className="product-image-container">
-                                                            <Link
-                                                                 href="demo34-product.html"
+                                                            <a
+                                                                 href="demo38-product.html"
                                                                  className="product-image"
                                                             >
                                                                  <img
-                                                                      src="assets/images/products/product-3.jpg"
+                                                                      src="assets/images/demoes/demo38/products/product-3.jpg"
                                                                       alt="product"
-                                                                      width="80"
-                                                                      height="80"
+                                                                      width={80}
+                                                                      height={80}
                                                                  />
-                                                            </Link>
-                                                            <Link
+                                                            </a>
+                                                            <a
                                                                  href="#"
                                                                  className="btn-remove"
                                                                  title="Remove Product"
                                                             >
                                                                  <span>×</span>
-                                                            </Link>
+                                                            </a>
                                                        </figure>
                                                   </div>
+                                                  {/* End .product */}
                                              </div>
-
+                                             {/* End .cart-product */}
                                              <div className="dropdown-cart-total">
                                                   <span>SUBTOTAL:</span>
-
                                                   <span className="cart-total-price float-right">
                                                        $134.00
                                                   </span>
                                              </div>
-
+                                             {/* End .dropdown-cart-total */}
                                              <div className="dropdown-cart-action">
-                                                  <Link
+                                                  <a
                                                        href="cart.html"
                                                        className="btn btn-gray btn-block view-cart"
                                                   >
                                                        View Cart
-                                                  </Link>
-                                                  <Link
+                                                  </a>
+                                                  <a
                                                        href="checkout.html"
                                                        className="btn btn-dark btn-block"
                                                   >
                                                        Checkout
-                                                  </Link>
+                                                  </a>
                                              </div>
+                                             {/* End .dropdown-cart-total */}
                                         </div>
+                                        {/* End .dropdownmenu-wrapper */}
                                    </div>
+                                   {/* End .dropdown-menu */}
                               </div>
+                              {/* End .dropdown */}
                          </div>
+                         {/* End .header-right */}
                     </div>
+                    {/* End .container */}
                </div>
+               {/* End .header-middle */}
           </header>
      );
-}
+     {
+          /* End .header */
+     }
+};
+export default Header;

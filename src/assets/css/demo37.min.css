@@ -2189,9 +2189,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .customSVGLineAnimTwo {
      animation-name: customSVGLineAnimTwo;
 }
-.appear-animate {
+/* .appear-animate {
      opacity: 0;
-}
+} */
 .appear-animation-visible {
      opacity: 1;
 }

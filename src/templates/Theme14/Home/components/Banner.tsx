@@ -13,7 +13,7 @@ export const Banner = () => {
                                    <img
                                         className="slide-bg"
                                         src={data.slider}
-                                        alt="slider image"
+                                         alt="slider image"
                                         width={1120}
                                         height={500}
                                         style={{ backgroundColor: "#eee" }}

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const Footer = (): JSX.Element => {
+const Footer = (props): JSX.Element => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <div className="container">
                <footer className="footer bg-dark">
@@ -16,22 +18,23 @@ const Footer = (): JSX.Element => {
                                                        <span className="contact-info-label">
                                                             Address:
                                                        </span>
-                                                       1234 Street Name, City, England
+                                                       {company?.city + " " + company?.country}
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
                                                             Phone:
                                                        </span>
-                                                       Toll Free{" "}
-                                                       <Link href="tel:">(123) 456-7890</Link>
+                                                       Toll Free <a href="tel:">{company?.phone}</a>
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
                                                             Email:
-                                                       </span>{" "}
-                                                       <Link href="mailto:mail@example.com">
-                                                            mail@example.com
-                                                       </Link>
+                                                       </span>
+                                                       <a
+                                                            href={`mailto:${company?.user_id?.email}`}
+                                                       >
+                                                            {company?.user_id?.email}
+                                                       </a>
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
@@ -121,13 +124,13 @@ const Footer = (): JSX.Element => {
                                              <h4 className="widget-title">Popular Tags</h4>
 
                                              <div className="tagcloud">
-                                                  <Link href="#">Clothes</Link>
-                                                  <Link href="#">Fashion</Link>
-                                                  <Link href="#">Hub</Link>
-                                                  <Link href="#">Shirt</Link>
-                                                  <Link href="#">Skirt</Link>
-                                                  <Link href="#">Sports</Link>
-                                                  <Link href="#">Sweater</Link>
+                                                  {staticProps?.popularTags?.map(
+                                                       (link: any, idx: number) => (
+                                                            <Link key={idx} href={link.link}>
+                                                                 {link.name}
+                                                            </Link>
+                                                       ),
+                                                  )}
                                              </div>
                                         </div>
                                    </div>

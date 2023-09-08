@@ -48,7 +48,7 @@ export const InfoBoxesContainer: React.FC = () => {
                576: {
                     items: 2,
                },
-               992: {
+               992: { 
                     items: 3,
                },
           },

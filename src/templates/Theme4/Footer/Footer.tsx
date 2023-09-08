@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const Footer = (props) => {
      const { static: staticProps, company } = props.props;
-     console.log("===>", props);
 
      return (
           <footer className="footer bg-dark">

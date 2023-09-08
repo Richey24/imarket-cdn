@@ -1,68 +1,36 @@
-import React from "react";
-import OwlCarousel from "react-owl-carousel";
-
-interface InfoBoxItem {
-     icon: string;
-     title: string;
-     description: string;
-}
-
-const InfoBox: React.FC<InfoBoxItem> = ({ icon, title, description }) => {
-     return (
-          <div className="info-box info-box-icon-left">
-               <i className={icon} />
-               <div className="info-box-content pt-1">
-                    <h4>{title}</h4>
-                    <p>{description}</p>
-               </div>
-               {/* End .info-box-content */}
-          </div>
-     );
-};
-
-export const InfoBoxesContainer: React.FC = () => {
-     const infoBoxItems: InfoBoxItem[] = [
-          {
-               icon: "icon-shipping",
-               title: "FREE SHIPPING & RETURN",
-               description: "Free Shipping on All Orders Over $99.",
-          },
-          {
-               icon: "icon-money",
-               title: "MONEY BACK GUARANTEE",
-               description: "100% Money Back Guarantee",
-          },
-          {
-               icon: "icon-support",
-               title: "ONLINE SUPPORT 24/7",
-               description: "Lorem Ipsum Dolor Sit Amet.",
-          },
-     ];
-
-     const owlCarouselOptions = {
+import React, { useState } from "react";
+import Slider from "react-slick";
+import { infoData } from "../data";
+export const Info = () => {
+     const [currentSlide, setCurrentSlide] = useState(0);
+     const settings = {
           dots: false,
-          margin: 20,
-          loop: false,
-          responsive: {
-               576: {
-                    items: 2,
-               },
-               992: {
-                    items: 3,
-               },
-          },
+          infinite: true,
+          speed: 500,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
      };
-
      return (
-          <div className="top-notice bg-primary">
-               <OwlCarousel
-                    className="info-boxes-slider owl-carousel owl-theme"
-                    {...owlCarouselOptions}
-               >
-                    {infoBoxItems.map((item, index) => (
-                         <InfoBox key={index} {...item} />
-                    ))}
-               </OwlCarousel>
-          </div>
+          <section
+               className="info-boxes-container appear-animate"
+               data-animation-name="fadeIn"
+               data-animation-delay={200}
+          >
+               <div className="container">
+                    <Slider {...settings}>
+                         {" "}
+                         {infoData.map((data) => (
+                              <div className="info-box info-box-icon-left">
+                                   <i className={data.icon} />
+                                   <div className="info-box-content">
+                                        <h4>{data.h4}</h4>
+                                        <p className="text-body">{data.p}</p>
+                                   </div>
+                              </div>
+                         ))}
+                    </Slider>
+               </div>
+          </section>
      );
 };

@@ -7,6 +7,7 @@ import { theme6TemplateConfig } from './theme6';
 import theme7TemplateConfig from "./theme7";
 import theme8TemplateConfig from "./theme8";
 import theme9TemplateConfig from "./theme9";
+import theme11TemplateConfig from "./theme11";
 // import theme12TemplateConfig from "./theme12";
 import theme13TemplateConfig from "./theme13";
 import theme14TemplateConfig from "./theme14";
@@ -37,6 +38,7 @@ import { theme28TemplateConfig } from "./theme28";
 import { theme29TemplateConfig } from "./theme29";
 import { theme26TemplateConfig } from "./theme26";
 import { theme10TemplateConfig } from "./theme10";
+import { theme23TemplateConfig } from "./theme23";
 
 export const templateConfig: any = {
      theme1: theme1TemplateConfig,
@@ -45,6 +47,9 @@ export const templateConfig: any = {
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
      theme6: theme6TemplateConfig,
+     // theme6: theme6TemplateConfig,
+     theme11: theme11TemplateConfig,
+     // theme22: theme22TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
@@ -78,7 +83,8 @@ export const templateConfig: any = {
      theme40: theme40TemplateConfig,
      theme41: theme41TemplateConfig,
      theme42: theme42TemplateConfig,
-     theme26: theme26TemplateConfig
+     theme26: theme26TemplateConfig,
+     theme23: theme23TemplateConfig,
 
 };
 

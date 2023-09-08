@@ -1,6 +1,6 @@
 import React from "react";
 import { Banner } from "./components/Banner";
-import { Card } from "./components/Card";
+import { Info } from "./components/Info";
 import { MiniBanner } from "./components/MiniBanner";
 import { bestSellingProducts, lastestProducts2, topRatedProducts } from "./data";
 import { Products } from "./components/Products";
@@ -12,7 +12,7 @@ const Home = () => {
      return (
           <main className="main">
                <Banner />
-               <Card />
+               <Info />
                <MiniBanner />
                <ProductTabs />
                <FeatureBoxes />

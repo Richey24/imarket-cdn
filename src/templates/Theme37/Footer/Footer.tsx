@@ -1,48 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import { payments } from "../Home/data";
 
 const Footer = (): JSX.Element => {
      return (
           <footer className="footer font2">
-               <div className="footer-top">
+               <div className="footer-middle">
                     <div className="container">
-                         <div className="widget-newsletter">
-                              <div className="row align-items-center">
-                                   <div className="col-sm-6 col-lg-4">
-                                        <h4 className="newsletter-title line-height-1 text-uppercase m-b-1">
-                                             Subscribe Newsletter
-                                        </h4>
-                                        <p className="newsletter-info">
-                                             Get all the latest information on Events, Sales and
-                                             Offers.
-                                        </p>
-                                   </div>
-
-                                   <div className="col-sm-6 col-lg-8">
-                                        <form action="#" className="mb-0">
-                                             <div className="footer-submit-wrapper d-flex">
-                                                  <input
-                                                       type="email"
-                                                       className="form-control mb-1"
-                                                       placeholder="Email address..."
-                                                       required
-                                                  />
-                                                  <button
-                                                       type="submit"
-                                                       className="btn btn-dark btn-sm"
-                                                  >
-                                                       Subscribe
-                                                  </button>
-                                             </div>
-                                        </form>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-
-               <div className="container">
-                    <div className="footer-middle">
                          <div className="row">
                               <div className="col-sm-6 col-lg-3">
                                    <div className="widget">
@@ -50,22 +14,22 @@ const Footer = (): JSX.Element => {
                                         <div className="widget-content">
                                              <ul>
                                                   <li>
-                                                       <Link href="dashboard.html">Dashboard</Link>
+                                                       <a href="dashboard.html">Dashboard</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Cart</Link>
+                                                       <a href="#">Cart</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Checkout</Link>
+                                                       <a href="#">Checkout</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Order tracking</Link>
+                                                       <a href="#">Order tracking</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Order history</Link>
+                                                       <a href="#">Order history</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Wishlist</Link>
+                                                       <a href="#">Wishlist</a>
                                                   </li>
                                              </ul>
                                         </div>
@@ -77,85 +41,97 @@ const Footer = (): JSX.Element => {
                                         <div className="widget-content">
                                              <ul>
                                                   <li>
-                                                       <Link href="about.html">About us</Link>
+                                                       <a href="about.html">About us</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Contact us</Link>
+                                                       <a href="#">Contact us</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Shipping & Delivery</Link>
+                                                       <a href="#">Shipping &amp; Delivery</a>
                                                   </li>
                                                   <li>
-                                                       <Link href="#">Privacy</Link>
+                                                       <a href="#">Privacy</a>
                                                   </li>
                                              </ul>
                                         </div>
                                    </div>
                               </div>
-
-                              <div className="col-lg-3">
-                                   <div className="widget mb-3">
-                                        <h4 className="widget-title">More Information</h4>
-
-                                        <ul className="links">
-                                             <li>
-                                                  <Link href="#">Affiliates</Link>
-                                             </li>
-                                             <li>
-                                                  <Link href="#">Refer a Friend</Link>
-                                             </li>
-                                             <li>
-                                                  <Link href="#">Student Beans Offers</Link>
-                                             </li>
-                                             <li>
-                                                  <Link href="#">Gift Vouchers</Link>
-                                             </li>
-                                        </ul>
-                                   </div>
-                              </div>
-
-                              <div className="col-lg-3">
-                                   <div className="widget mb-3">
-                                        <h4 className="widget-title">Social Media</h4>
-
-                                        <div className="social-icons">
-                                             <Link
-                                                  href="#"
-                                                  className="social-icon social-facebook icon-facebook"
-                                                  target="_blank"
-                                             ></Link>
-                                             <Link
-                                                  href="#"
-                                                  className="social-icon social-twitter icon-twitter"
-                                                  target="_blank"
-                                             ></Link>
-                                             <Link
-                                                  href="#"
-                                                  className="social-icon social-instagram icon-instagram"
-                                                  target="_blank"
-                                             ></Link>
+                              <div className="col-sm-6 col-lg-3">
+                                   <div className="widget">
+                                        <h3 className="widget-title">More Information</h3>
+                                        <div className="widget-content">
+                                             <ul>
+                                                  <li>
+                                                       <a href="#">Affiliates</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Refer a Friend</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Student Beans Offers</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Gift Vouchers</a>
+                                                  </li>
+                                             </ul>
                                         </div>
                                    </div>
-
-                                   <div className="widget mb-3">
-                                        <h4 className="widget-title">Payment Methods</h4>
-
-                                        <img
-                                             src="assets/images/demoes/demo34/payments.png"
-                                             alt="payment"
-                                             width="240"
-                                             height="32"
-                                        />
+                              </div>
+                              <div className="col-sm-6 col-lg-3">
+                                   <div className="widget">
+                                        <h3 className="widget-title">Social Media</h3>
+                                        <div className="widget-content">
+                                             <div className="social-icons">
+                                                  <a
+                                                       href="#"
+                                                       target="_blank"
+                                                       className="social-icon"
+                                                  >
+                                                       <i className="fab fa-facebook-f" />
+                                                  </a>
+                                                  <a
+                                                       href="#"
+                                                       target="_blank"
+                                                       className="social-icon"
+                                                  >
+                                                       <i className="fab fa-twitter" />
+                                                  </a>
+                                                  <a
+                                                       href="#"
+                                                       target="_blank"
+                                                       className="social-icon"
+                                                  >
+                                                       <i className="icon-instagram" />
+                                                  </a>
+                                             </div>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                     </div>
-                    <div className="footer-bottom">
-                         <p className="footer-copyright text-lg-center mb-0">
-                              Porto eCommerce. &copy; 2021. All Rights Reserved
-                         </p>
+               </div>
+               <div className="footer-bottom">
+                    <div className="container d-sm-flex align-items-center">
+                         <div className="footer-left">
+                              <span className="footer-copyright">
+                                   Porto eCommerce. © 2021. All Rights Reserved
+                              </span>
+                         </div>
+                         <div className="footer-right ml-auto mt-1 mt-sm-0">
+                              <div className="payment-icons">
+                                   {payments.map((pay) => (
+                                        <span
+                                             className="payment-icon visa"
+                                             style={{
+                                                  backgroundImage: `url(${pay.image})`,
+                                             }}
+                                        />
+                                   ))}
+                              </div>
+                         </div>
                     </div>
                </div>
+               {/* End .footer-bottom */}
           </footer>
      );
 };
