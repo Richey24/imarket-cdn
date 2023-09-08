@@ -95,14 +95,6 @@ export const featuredProducts: ProductProps[] = [
      },
      {
           productImageAlt: "product",
-          productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: product4,
-          productImageUrlTwo: product4two,
-          productTitle: "Men Black Belts",
-          productPrice: 55,
-     },
-     {
-          productImageAlt: "product",
           productCategory: "DRESS, WATCHES",
           productImageUrl: product12,
           productImageUrlTwo: product12two,
