@@ -4,6 +4,7 @@ import banner from "../../../assets/images/menu-banner.jpg";
 import banner1 from "../../../assets/images/menu-banner-1.jpg";
 import logo from "../../../assets/images/your-logo.png";
 import banner2 from "../../../assets/images/demoes/demo22/banners/header-item.png";
+
 const Header = () => {
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);

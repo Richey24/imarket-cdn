@@ -1,8 +1,16 @@
 "use client";
+import CategorySelect from "@/templates/shared/Header/HeaderLinks/CategorySelect";
+import Links from "@/templates/shared/Header/HeaderLinks/Links";
+import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
+import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
+import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
+import SocialIcons from "@/templates/shared/SocialIcons";
 import Link from "next/link";
 import React from "react";
 
-export default function Header() {
+export default function Header(props: any) {
+     const { company, static: staticProps, categories } = props.props;
+
      return (
           <header className="header">
                <div className="header-top">
@@ -54,31 +62,7 @@ export default function Header() {
                                    </div>
                               </div>
 
-                              <div className="header-dropdown dropdown-expanded d-none d-lg-block">
-                                   <a href="#">Links</a>
-                                   <div className="header-menu">
-                                        <ul>
-                                             <li>
-                                                  <a href="dashboard.html">Dashboard</a>
-                                             </li>
-                                             <li>
-                                                  <a href="cart.html">Cart</a>
-                                             </li>
-                                             <li>
-                                                  <a href="cart.html">Checkout</a>
-                                             </li>
-                                             <li>
-                                                  <a href="wishlist.html">Wishlist</a>
-                                             </li>
-                                             <li>
-                                                  <a href="about.html">About Us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="blog.html">Contact Us</a>
-                                             </li>
-                                        </ul>
-                                   </div>
-                              </div>
+                              <Links />
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                    <a href="#">Order</a>
                                    <div className="header-menu">
@@ -93,23 +77,7 @@ export default function Header() {
                                    </div>
                               </div>
 
-                              <div className="social-icons">
-                                   <a
-                                        href="#"
-                                        className="social-icon social-facebook icon-facebook"
-                                        target="_blank"
-                                   ></a>
-                                   <a
-                                        href="#"
-                                        className="social-icon social-twitter icon-twitter"
-                                        target="_blank"
-                                   ></a>
-                                   <a
-                                        href="#"
-                                        className="social-icon social-instagram icon-instagram"
-                                        target="_blank"
-                                   ></a>
-                              </div>
+                              <SocialIcons />
                          </div>
                     </div>
                </div>
@@ -117,18 +85,8 @@ export default function Header() {
                <div className="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                     <div className="container">
                          <div className="header-left col-lg-2 w-auto pl-0">
-                              <button className="mobile-menu-toggler text-dark mr-2" type="button">
-                                   <i className="fas fa-bars"></i>
-                              </button>
-                              <a href="demo36.html" className="logo">
-                                   <img
-                                        src="assets/images/your-logo.png"
-                                        className="w-100"
-                                        width="111"
-                                        height="44"
-                                        alt="Porto Logo"
-                                   />
-                              </a>
+                              <MenuButton />
+                              <Logo company={company} />
                          </div>
 
                          <div className="header-right w-lg-max">
@@ -147,31 +105,7 @@ export default function Header() {
                                                   required
                                              />
                                              <div className="select-custom">
-                                                  <select id="cat" name="cat">
-                                                       <option value="">All Categories</option>
-                                                       <option value="4">Fashion</option>
-                                                       <option value="12">- Women</option>
-                                                       <option value="13">- Men</option>
-                                                       <option value="66">- Jewellery</option>
-                                                       <option value="67">- Kids Fashion</option>
-                                                       <option value="5">Electronics</option>
-                                                       <option value="21">- Smart TVs</option>
-                                                       <option value="22">- Cameras</option>
-                                                       <option value="63">- Games</option>
-                                                       <option value="7">Home &amp; Garden</option>
-                                                       <option value="11">Motors</option>
-                                                       <option value="31">- Cars and Trucks</option>
-                                                       <option value="32">
-                                                            - Motorcycles &amp; Powersports
-                                                       </option>
-                                                       <option value="33">
-                                                            - Parts &amp; Accessories
-                                                       </option>
-                                                       <option value="34">- Boats</option>
-                                                       <option value="57">
-                                                            - Auto Tools &amp; Supplies
-                                                       </option>
-                                                  </select>
+                                                  <CategorySelect categories={categories} />
                                              </div>
 
                                              <button
@@ -223,153 +157,6 @@ export default function Header() {
                                         <a href="#" title="Close (Esc)" className="btn-close">
                                              ×
                                         </a>
-
-                                        <div className="dropdownmenu-wrapper custom-scrollbar">
-                                             <div className="dropdown-cart-header">
-                                                  Shopping Cart
-                                             </div>
-
-                                             <div className="dropdown-cart-products">
-                                                  <div className="product">
-                                                       <div className="product-details">
-                                                            <h4 className="product-title">
-                                                                 <a href="demo36-product.html">
-                                                                      Ultimate 3D Bluetooth Speaker
-                                                                 </a>
-                                                            </h4>
-
-                                                            <span className="cart-product-info">
-                                                                 <span className="cart-product-qty">
-                                                                      1
-                                                                 </span>{" "}
-                                                                 × $99.00
-                                                            </span>
-                                                       </div>
-
-                                                       <figure className="product-image-container">
-                                                            <a
-                                                                 href="demo36-product.html"
-                                                                 className="product-image"
-                                                            >
-                                                                 <img
-                                                                      src="assets/images/demoes/demo36/products/product-1.jpg"
-                                                                      alt="product"
-                                                                      width="80"
-                                                                      height="80"
-                                                                 />
-                                                            </a>
-
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-remove"
-                                                                 title="Remove Product"
-                                                            >
-                                                                 <span>×</span>
-                                                            </a>
-                                                       </figure>
-                                                  </div>
-
-                                                  <div className="product">
-                                                       <div className="product-details">
-                                                            <h4 className="product-title">
-                                                                 <a href="demo36-product.html">
-                                                                      Brown Women Casual HandBag
-                                                                 </a>
-                                                            </h4>
-
-                                                            <span className="cart-product-info">
-                                                                 <span className="cart-product-qty">
-                                                                      1
-                                                                 </span>{" "}
-                                                                 × $35.00
-                                                            </span>
-                                                       </div>
-
-                                                       <figure className="product-image-container">
-                                                            <a
-                                                                 href="demo36-product.html"
-                                                                 className="product-image"
-                                                            >
-                                                                 <img
-                                                                      src="assets/images/demoes/demo36/products/product-2.jpg"
-                                                                      alt="product"
-                                                                      width="80"
-                                                                      height="80"
-                                                                 />
-                                                            </a>
-
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-remove"
-                                                                 title="Remove Product"
-                                                            >
-                                                                 <span>×</span>
-                                                            </a>
-                                                       </figure>
-                                                  </div>
-
-                                                  <div className="product">
-                                                       <div className="product-details">
-                                                            <h4 className="product-title">
-                                                                 <a href="demo36-product.html">
-                                                                      Circled Ultimate 3D Speaker
-                                                                 </a>
-                                                            </h4>
-
-                                                            <span className="cart-product-info">
-                                                                 <span className="cart-product-qty">
-                                                                      1
-                                                                 </span>{" "}
-                                                                 × $35.00
-                                                            </span>
-                                                       </div>
-
-                                                       <figure className="product-image-container">
-                                                            <a
-                                                                 href="demo36-product.html"
-                                                                 className="product-image"
-                                                            >
-                                                                 <img
-                                                                      src="assets/images/demoes/demo36/products/product-3.jpg"
-                                                                      alt="product"
-                                                                      width="80"
-                                                                      height="80"
-                                                                 />
-                                                            </a>
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-remove"
-                                                                 title="Remove Product"
-                                                            >
-                                                                 <span>×</span>
-                                                            </a>
-                                                       </figure>
-                                                  </div>
-                                             </div>
-
-                                             <div className="dropdown-cart-total">
-                                                  <span>SUBTOTAL:</span>
-
-                                                  <span className="cart-total-price float-right">
-                                                       $134.00
-                                                  </span>
-                                             </div>
-
-                                             <div className="dropdown-cart-action">
-                                                  <a
-                                                       href="cart.html"
-                                                       className="btn btn-gray btn-block view-cart"
-                                                  >
-                                                       View Cart
-                                                  </a>
-                                                  <a
-                                                       href="checkout.html"
-                                                       className="btn btn-dark btn-block"
-                                                  >
-                                                       Checkout
-                                                  </a>
-                                             </div>
-                                        </div>
                                    </div>
                               </div>
                          </div>
@@ -381,8 +168,8 @@ export default function Header() {
                     data-sticky-options="{'mobile': false}"
                >
                     <div className="container">
-                         <nav className="main-nav w-100">
-                              <ul className="menu w-100">
+                         <nav className="d-flex main-nav w-100">
+                              <ul className="menu">
                                    <li className="menu-item tw-group">
                                         <a className="d-inline-flex align-items-center sf-with-ul text-white">
                                              <i className="custom-icon-toggle-menu d-inline-table"></i>
@@ -1690,311 +1477,8 @@ export default function Header() {
                                              </ul>
                                         </div>
                                    </li>
-                                   <li className="active">
-                                        <a href="demo36.html">Home</a>
-                                   </li>
-                                   <li className="tw-group">
-                                        <a href="demo36-shop.html">Shop</a>
-                                        <div className="megamenu megamenu-fixed-width megamenu-3cols group-hover:tw-block">
-                                             <div className="row">
-                                                  <div className="col-lg-4">
-                                                       <a href="#" className="nolink">
-                                                            VARIATION 1
-                                                       </a>
-                                                       <ul className="submenu">
-                                                            <li>
-                                                                 <a href="demo36-shop.html">
-                                                                      Fullwidth Banner
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-banner-boxed-slider.html">
-                                                                      Boxed Slider Banner
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-banner-boxed-image.html">
-                                                                      Boxed Image Banner
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="demo36-shop.html">
-                                                                      Left Sidebar
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-sidebar-right.html">
-                                                                      Right Sidebar
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-off-canvas.html">
-                                                                      Off Canvas Filter
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-horizontal-filter1.html">
-                                                                      Horizontal Filter1
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-horizontal-filter2.html">
-                                                                      Horizontal Filter2
-                                                                 </a>
-                                                            </li>
-                                                       </ul>
-                                                  </div>
-                                                  <div className="col-lg-4">
-                                                       <a href="#" className="nolink">
-                                                            VARIATION 2
-                                                       </a>
-                                                       <ul className="submenu">
-                                                            <li>
-                                                                 <a href="category-list.html">
-                                                                      List Types
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-infinite-scroll.html">
-                                                                      Ajax Infinite Scroll
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="demo36-shop.html">
-                                                                      3 Columns Products
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-4col.html">
-                                                                      4 Columns Products
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-5col.html">
-                                                                      5 Columns Products
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-6col.html">
-                                                                      6 Columns Products
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-7col.html">
-                                                                      7 Columns Products
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="category-8col.html">
-                                                                      8 Columns Products
-                                                                 </a>
-                                                            </li>
-                                                       </ul>
-                                                  </div>
-                                                  <div className="col-lg-4 p-0">
-                                                       <div className="menu-banner">
-                                                            <figure>
-                                                                 <img
-                                                                      src="assets/images/menu-banner.jpg"
-                                                                      width="192"
-                                                                      height="313"
-                                                                      alt="Menu banner"
-                                                                 />
-                                                            </figure>
-                                                            <div className="banner-content">
-                                                                 <h4>
-                                                                      <span className="">
-                                                                           UP TO
-                                                                      </span>
-                                                                      <br />
-                                                                      <b className="">50%</b>
-                                                                      <i>OFF</i>
-                                                                 </h4>
-                                                                 <a
-                                                                      href="demo36-shop.html"
-                                                                      className="btn btn-sm btn-dark"
-                                                                 >
-                                                                      SHOP NOW
-                                                                 </a>
-                                                            </div>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </li>
-                                   <li className="tw-group">
-                                        <a href="demo36-product.html">Products</a>
-                                        <div className="megamenu megamenu-fixed-width group-hover:tw-block">
-                                             <div className="row">
-                                                  <div className="col-lg-4">
-                                                       <a href="#" className="nolink">
-                                                            PRODUCT PAGES
-                                                       </a>
-                                                       <ul className="submenu">
-                                                            <li>
-                                                                 <a href="product.html">
-                                                                      SIMPLE PRODUCT
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-variable.html">
-                                                                      VARIABLE PRODUCT
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product.html">
-                                                                      SALE PRODUCT
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product.html">
-                                                                      FEATURED & ON SALE
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-custom-tab.html">
-                                                                      WITH CUSTOM TAB
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-sidebar-left.html">
-                                                                      WITH LEFT SIDEBAR
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-sidebar-right.html">
-                                                                      WITH RIGHT SIDEBAR
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-addcart-sticky.html">
-                                                                      ADD CART STICKY
-                                                                 </a>
-                                                            </li>
-                                                       </ul>
-                                                  </div>
-
-                                                  <div className="col-lg-4">
-                                                       <a href="#" className="nolink">
-                                                            PRODUCT LAYOUTS
-                                                       </a>
-                                                       <ul className="submenu">
-                                                            <li>
-                                                                 <a href="product-extended-layout.html">
-                                                                      EXTENDED LAYOUT
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-grid-layout.html">
-                                                                      GRID IMAGE
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-full-width.html">
-                                                                      FULL WIDTH LAYOUT
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-sticky-info.html">
-                                                                      STICKY INFO
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-sticky-both.html">
-                                                                      LEFT & RIGHT STICKY
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-transparent-image.html">
-                                                                      TRANSPARENT IMAGE
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="product-center-vertical.html">
-                                                                      CENTER VERTICAL
-                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                 <a href="#">BUILD YOUR OWN</a>
-                                                            </li>
-                                                       </ul>
-                                                  </div>
-
-                                                  <div className="col-lg-4 p-0">
-                                                       <div className="menu-banner menu-banner-2">
-                                                            <figure>
-                                                                 <img
-                                                                      src="assets/images/menu-banner-1.jpg"
-                                                                      alt="Menu banner"
-                                                                      className="product-promo"
-                                                                 />
-                                                            </figure>
-                                                            <i>OFF</i>
-                                                            <div className="banner-content">
-                                                                 <h4>
-                                                                      <span className="">
-                                                                           UP TO
-                                                                      </span>
-                                                                      <br />
-                                                                      <b className="">50%</b>
-                                                                 </h4>
-                                                            </div>
-                                                            <a
-                                                                 href="demo36-shop.html"
-                                                                 className="btn btn-sm btn-dark"
-                                                            >
-                                                                 SHOP NOW
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </li>
-                                   <li className="tw-group">
-                                        <a href="#">Pages</a>
-                                        <ul className="group-hover:tw-block">
-                                             <li>
-                                                  <a href="wishlist.html">Wishlist</a>
-                                             </li>
-                                             <li>
-                                                  <a href="cart.html">Shopping Cart</a>
-                                             </li>
-                                             <li>
-                                                  <a href="checkout.html">Checkout</a>
-                                             </li>
-                                             <li>
-                                                  <a href="dashboard.html">Dashboard</a>
-                                             </li>
-                                             <li>
-                                                  <a href="about.html">About Us</a>
-                                             </li>
-
-                                             <li>
-                                                  <a href="contact.html">Contact Us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="login.html">Login</a>
-                                             </li>
-                                             <li>
-                                                  <a href="forgot-password.html">Forgot Password</a>
-                                             </li>
-                                        </ul>
-                                   </li>
-
-                                   <li className="float-right phone">
-                                        <a href="#" className="d-flex align-items-center">
-                                             <i className="icon-phone-1"></i>1-800-234-5678
-                                        </a>
-                                   </li>
-                                   <li className="float-right">
-                                        <a href="https://1.envato.market/DdLk5" target="_blank">
-                                             NEW ARRIVALS
-                                        </a>
-                                   </li>
-                                   <li className="float-right">
-                                        <a href="#">FLASH DEALS</a>
-                                   </li>
                               </ul>
+                              <PageLinks staticProps={staticProps} />
                          </nav>
                     </div>
                </div>

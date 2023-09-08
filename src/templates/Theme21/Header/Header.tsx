@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
-import banner from "../../../assets/images/menu-banner.jpg";
-import banner1 from "../../../assets/images/menu-banner-1.jpg";
-import logo from "../../../assets/images/your-logo.png";
 import HeaderSearch from "@/templates/shared/Header/HeaderSearch";
 import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
 import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
@@ -87,7 +83,7 @@ const Header = (props: any) => {
                     </div>
                     {/* End .container */}
                </div>
-               {/* End .header-top */}
+
                <HeaderSearch
                     company={company}
                     categories={categories}
