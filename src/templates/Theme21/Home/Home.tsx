@@ -9,14 +9,14 @@ import { Products } from "./components/Products";
 import { Banner } from "./components/Banner";
 import { SmallBanner } from "./components/SmallBanner";
 import { FeatureBoxes } from "./components/FeatureBoxes";
-import { Card } from "./components/Card";
+import { Info} from "./components/Info";
 
 const Home = () => {
      return (
           <main className="main">
                <Banner />
                <FeaturedProducts />
-               <Card />
+               <Info/>
                <section className="new-products-section">
                     <div className="container">
                          <MiniBanner />

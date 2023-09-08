@@ -1,44 +1,52 @@
 import React, { useState } from "react";
+import { SaleProducts } from "../data";
 import Slider from "react-slick";
-import { popularproducts } from "../data";
-export const PopularProducts = () => {
+import { templateImages } from "@/appProvider/templateImages";
+
+export const SaleProduct = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
           infinite: true,
           speed: 500,
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 1,
-          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
-          <section className="popular-section">
+          <section className="sale-products-section">
                <div className="container">
-                    <div
-                         className="appear-animate"
-                         data-animation-name="fadeInUpShorter"
-                         data-animation-delay={400}
+                    <h2
+                         className="section-title heading-border ls-n-10 border-0 text-center text-capitalize appear-animate"
+                         data-animation-delay={100}
+                         data-animation-name="fadeIn"
                     >
-                         <h2 className="section-title pb-3 m-b-4">Popular Items</h2>
-
+                         Sale Products
+                    </h2>
+                    <div
+                         className="products-slider custom-products  owl-theme nav-outer show-nav-hover nav-image-center appear-animate"
+                         data-animation-delay={200}
+                         data-animation-name="fadeInUpShorter"
+                    >
                          <Slider {...settings}>
-                              {popularproducts.map((data) => (
+                              {" "}
+                              {SaleProducts.map((data) => (
                                    <div className="product-default inner-quickview inner-icon">
                                         <figure>
-                                             <a href="demo26-product.html">
+                                             <a href="demo37-product.html">
                                                   <img
                                                        src={data.productImageUrl}
-                                                       width={217}
-                                                       height={217}
+                                                       width={205}
+                                                       height={205}
                                                        alt="product"
                                                   />
                                              </a>
                                              <div className="btn-icon-group">
                                                   <a
-                                                       href="demo26-product.html"
-                                                       className="btn-icon btn-add-cart"
+                                                       href="#"
+                                                       className="btn-icon btn-add-cart product-type-simple"
                                                   >
-                                                       <i className="fa fa-arrow-right" />
+                                                       <i className="icon-shopping-cart" />
                                                   </a>
                                              </div>
                                              <a
@@ -53,10 +61,10 @@ export const PopularProducts = () => {
                                              <div className="category-wrap">
                                                   <div className="category-list">
                                                        <a
-                                                            href="demo26-shop.html"
+                                                            href="demo37-shop.html"
                                                             className="product-category"
                                                        >
-                                                            category
+                                                            {data.productCategory}
                                                        </a>
                                                   </div>
                                                   <a
@@ -68,17 +76,18 @@ export const PopularProducts = () => {
                                                   </a>
                                              </div>
                                              <h3 className="product-title">
-                                                  <a href="demo26-product.html">
+                                                  <a href="demo37-product.html">
                                                        {data.productTitle}
                                                   </a>
                                              </h3>
                                              {/* <div class="ratings-container">
-                        <div class="product-ratings">
-                            <span class="ratings" style="width:100%"></span>
-                            <span class="tooltiptext tooltip-top"></span>
-                        </div>
-                    </div> */}
+                      <div class="product-ratings">
+                          <span class="ratings" style="width:100%"></span>
+                          <span class="tooltiptext tooltip-top"></span>
+                      </div>
+                  </div> */}
                                              <div className="price-box">
+                                                  <span className="old-price">$90.00</span>
                                                   <span className="product-price">
                                                        ${data.productPrice}
                                                   </span>
@@ -90,20 +99,35 @@ export const PopularProducts = () => {
                               ))}
                          </Slider>
                     </div>
+                    {/* End .featured-proucts */}
                     <div
-                         className="tagcloud d-flex flex-wrap justify-content-between bg-gray mb-4 appear-animate"
-                         data-animation-name="fadeInUpShorter"
-                         data-animation-delay={600}
+                         className="banner banner-big-sale appear-animate"
+                         data-animation-delay={100}
+                         data-animation-name="fadeIn"
+                         style={{
+                              background:
+                                   `#2A95CB center/cover url(${templateImages.demo37.bannerImage.banner2})`,
+                         }}
                     >
-                         <a href="demo26-shop.html">Cadillac</a>
-                         <a href="demo26-shop.html">Chevy</a>
-                         <a href="demo26-shop.html">Dodge</a>
-                         <a href="demo26-shop.html">Ford</a>
-                         <a href="demo26-shop.html">Honda</a>
-                         <a href="demo26-shop.html">Hyundai</a>
-                         <a href="demo26-shop.html">Jeep</a>
-                         <a href="demo26-shop.html">Nissan</a>
-                         <a href="demo26-shop.html">Toyota</a>
+                         <div className="banner-content row align-items-center mx-0 justify-content-center">
+                              <div className="col-xl-9 col-sm-8">
+                                   <h2 className="text-white text-uppercase text-center text-sm-left ls-n-20 mb-md-0 px-4">
+                                        <b className="d-inline-block mb-1 mb-xl-0">Big Sale</b>
+                                        All new fashion brands items up to 70% off
+                                        <small className="text-transform-none align-middle ls-n-10">
+                                             Online Purchases Only
+                                        </small>
+                                   </h2>
+                              </div>
+                              <div className="col-md-3 col-sm-4 text-center text-sm-right">
+                                   <a
+                                        className="btn btn-light btn-white btn-lg"
+                                        href="demo37-shop.html"
+                                   >
+                                        View Sale
+                                   </a>
+                              </div>
+                         </div>
                     </div>
                </div>
           </section>

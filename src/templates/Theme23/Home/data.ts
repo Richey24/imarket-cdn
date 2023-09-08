@@ -14,6 +14,23 @@ export const banners = [
           classname: "banner-layer-right",
      },
 ];
+export const infoData = [
+     {
+          h4: "FREE SHIPPING &amp; RETURN",
+          p: "Free shipping on all orders over $99.",
+          icon: "icon-shipping",
+     },
+     {
+          h4: "MONEY BACK GUARANTEE",
+          p: "100% money back guarantee",
+          icon: "icon-money",
+     },
+     {
+          h4: "ONLINE SUPPORT 24/7",
+          p: "Lorem ipsum dolor sit amet.",
+          icon: "icon-support",
+     },
+];
 export const bestCollection = [
      {
           bannerImage: templateImages.demo23.categoryImages.category1,
