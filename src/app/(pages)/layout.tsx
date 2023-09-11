@@ -31,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const [styleLoader, setStyleLoader] = useState(false);
      const [menuBtn, setMenuBtn] = useState("template-menu");
 
+     // console.log("site.theme.theme ", site);
      useEffect(() => {
           if (site) {
                setStyleLoader(true);
@@ -41,6 +42,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                });
           }
      }, [site]);
+
+     console.log(site, loading);
+
 
      if (!site && loading) {
           return <PlaceholderLayout />;

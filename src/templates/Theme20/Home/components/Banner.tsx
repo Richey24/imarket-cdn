@@ -2,7 +2,7 @@ import React from "react";
 import { templateImages } from "@/appProvider/templateImages";
 export const Banner = () => {
      return (
-          <section className="intro-section" style={{ paddingRight: "50px", paddingLeft: "50px" }}>
+          <section className="intro-section">
                <div className="container">
                     <div className="grid row" style={{ position: "relative", height: "485px" }}>
                          <div

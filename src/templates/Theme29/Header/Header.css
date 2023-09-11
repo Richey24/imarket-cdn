@@ -1,0 +1,17 @@
+.cartCanvas {
+    display: none;
+    overflow-y: scroll;
+    height: 95vh;
+}
+
+.showCanvas {
+    display: flex;
+}
+
+.showDrop {
+    display: block !important;
+}
+
+.showSearch {
+    display: flex !important;
+}

@@ -1,6 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
-const Footer = () => {
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <footer className="footer bg-dark">
                <div className="footer-middle">
@@ -14,16 +17,16 @@ const Footer = () => {
                                                   <span className="contact-info-label">
                                                        Address:
                                                   </span>
-                                                  123 Street Name, City, England
+                                                  {company?.city + " " + company?.country}
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">(123) 456-7890</a>
+                                                  <span>{company?.phone}</span>
                                              </li>
                                              <li>
-                                                  <span className="contact-info-label">Email:</span>{" "}
+                                                  <span className="contact-info-label">Email:</span>
                                                   <a href="mailto:mail@example.com">
-                                                       mail@example.com
+                                                       {company?.user_id?.email}
                                                   </a>
                                              </li>
                                              <li>
@@ -62,36 +65,15 @@ const Footer = () => {
                                    <div className="widget">
                                         <h4 className="widget-title">Customer Service</h4>
                                         <ul className="links">
-                                             <li>
-                                                  <a href="#">Help &amp; FAQs</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Order Tracking</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Shipping &amp; Delivery</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Orders History</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Advanced Search</a>
-                                             </li>
-                                             <li>
-                                                  <a href="dashboard.html">My Account</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Careers</a>
-                                             </li>
-                                             <li>
-                                                  <a href="about.html">About Us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Corporate Sales</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">Privacy</a>
-                                             </li>
+                                             {staticProps?.customerService?.map(
+                                                  (link: any, idx: number) => (
+                                                       <li key={idx}>
+                                                            <Link href={link.link}>
+                                                                 {link.name}
+                                                            </Link>
+                                                       </li>
+                                                  ),
+                                             )}
                                         </ul>
                                    </div>
                                    {/* End .widget */}
@@ -101,17 +83,13 @@ const Footer = () => {
                                    <div className="widget">
                                         <h4 className="widget-title">Popular Tags</h4>
                                         <div className="tagcloud">
-                                             <a href="#">Bag</a>
-                                             <a href="#">Black</a>
-                                             <a href="#">Blue</a>
-                                             <a href="#">Clothes</a>
-                                             <a href="#">Fashion</a>
-                                             <a href="#">Hub</a>
-                                             <a href="#">Shirt</a>
-                                             <a href="#">Shoes</a>
-                                             <a href="#">Skirt</a>
-                                             <a href="#">Sports</a>
-                                             <a href="#">Sweater</a>
+                                             {staticProps?.popularTags?.map(
+                                                  (link: any, idx: number) => (
+                                                       <Link key={idx} href={link.link}>
+                                                            {link.name}
+                                                       </Link>
+                                                  ),
+                                             )}
                                         </div>
                                    </div>
                                    {/* End .widget */}

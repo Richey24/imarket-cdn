@@ -20,7 +20,7 @@ function PageLinks({
                                    },
                                    idx: number,
                               ) => (
-                                   <li className="tw-group">
+                                   <li key={link.name} className="tw-group">
                                         <Link href={link.url}>{link.name}</Link>
                                         {link?.subMenu && (
                                              <div className="megamenu megamenu-fixed-width megamenu-3cols group-hover:tw-block tw-rounded">
@@ -28,7 +28,7 @@ function PageLinks({
                                                        <ul className="submenu">
                                                             {link?.subMenu.map((subLink) => {
                                                                  return (
-                                                                      <li>
+                                                                      <li key={subLink.name}>
                                                                            <Link
                                                                                 key={subLink.name}
                                                                                 href={subLink.url}

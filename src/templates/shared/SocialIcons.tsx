@@ -17,6 +17,7 @@ function SocialIcons({ links, className }: InferProps<typeof socialIconsProps>):
                     links.map((social) => {
                          return (
                               <Link
+                                   key={social.name}
                                    href={social.link}
                                    className={`social-icon ml-0${socialMap[social.name]} ${
                                         className && className

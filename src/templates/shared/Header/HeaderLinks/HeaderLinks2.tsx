@@ -17,7 +17,7 @@ function HeaderLinks2({
                     </div>
 
                     <div className="header-right header-dropdowns ml-0 ml-sm-auto w-sm-100">
-                         {/* header links */}
+
                          <Links />
 
                          <span className="separator"></span>

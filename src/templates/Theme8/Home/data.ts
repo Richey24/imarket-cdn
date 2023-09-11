@@ -269,3 +269,8 @@ export const bestSeller = [
           oldPrice: 59,
      },
 ];
+
+export const bannerData = [
+     { header: "Furniture  Garden", subText: "Huge Sale" },
+     { header: "  Home office sale", subText: "mega off" },
+];

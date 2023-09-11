@@ -1,4 +1,7 @@
 import Image from "next/image";
+import product1 from "../../../../assets/images/demoes/demo8/products/product-1.jpg";
+import product5 from "../../../../assets/images/demoes/demo8/products/product-5.jpg";
+import product9 from "../../../../assets/images/demoes/demo8/products/product-9.jpg";
 import instagram1 from "../../../../assets/images/demoes/demo8/instagram/1.jpg";
 import instagram2 from "../../../../assets/images/demoes/demo8/instagram/2.jpg";
 import instagram3 from "../../../../assets/images/demoes/demo8/instagram/3.jpg";
@@ -12,7 +15,7 @@ import instagram10 from "../../../../assets/images/demoes/demo8/instagram/10.jpg
 import { bestSeller, featuredProduct, latestProducts } from "../data";
 import ProductWidget from "@/app/components/Product/ProductWidget";
 
-const MiniCard = () => {
+const MiniCard = (props) => {
      return (
           <div>
                <div className="container">
@@ -25,14 +28,50 @@ const MiniCard = () => {
                                    Top Rated Products
                               </h4>
                               <div className="heading-spacer"></div>
-                              {featuredProduct.slice(0, 3).map((product, i) => (
-                                   <ProductWidget
-                                        showCategory={true}
-                                        category={product.productCategory}
-                                        imageSrc={product.productImageUrl}
-                                        productName={product.productTitle}
-                                        price={product.productPrice}
-                                   />
+                              {props.featuredProduct.slice(0, 3).map((product, i) => (
+                                   <div
+                                        key={i}
+                                        className="product-default left-details product-widget mb-2"
+                                   >
+                                        <figure>
+                                             <a href="demo8-product.html">
+                                                  <Image
+                                                       src={product.productImageUrl}
+                                                       width="175"
+                                                       height="175"
+                                                       alt="product"
+                                                  />
+                                                  <Image
+                                                       src={product1}
+                                                       width="175"
+                                                       height="175"
+                                                       alt="product"
+                                                  />
+                                             </a>
+                                        </figure>
+                                        <div className="product-details">
+                                             <div className="category-list">
+                                                  <a
+                                                       href="demo8-shop.html"
+                                                       className="product-category"
+                                                  >
+                                                       {product.productCategory}
+                                                  </a>
+                                                  ,
+                                             </div>
+                                             <h3 className="product-title">
+                                                  {" "}
+                                                  <a href="demo8-product.html">
+                                                       {product.productTitle}
+                                                  </a>{" "}
+                                             </h3>
+                                             <div className="price-box">
+                                                  <span className="product-price">
+                                                       ${product.productPrice}.00
+                                                  </span>
+                                             </div>
+                                        </div>
+                                   </div>
                               ))}
                          </div>
                          <div className="col-md-4 col-sm-6 pb-5">
@@ -43,14 +82,49 @@ const MiniCard = () => {
                                    Best Selling Products
                               </h4>
                               <div className="heading-spacer"></div>
-                              {bestSeller.slice(0, 3).map((product, i) => (
-                                   <ProductWidget
-                                        showCategory={true}
-                                        category={product.productCategory}
-                                        imageSrc={product.productImageUrl}
-                                        productName={product.productTitle}
-                                        price={product.productPrice}
-                                   />
+                              {props.bestSeller.slice(0, 3).map((product, i) => (
+                                   <div
+                                        key={i}
+                                        className="product-default left-details product-widget mb-2"
+                                   >
+                                        <figure>
+                                             <a href="demo8-product.html">
+                                                  <Image
+                                                       src={product.productImageUrl}
+                                                       width="175"
+                                                       height="175"
+                                                       alt="product"
+                                                  />
+                                                  <Image
+                                                       src={product9}
+                                                       width="175"
+                                                       height="175"
+                                                       alt="product"
+                                                  />
+                                             </a>
+                                        </figure>
+                                        <div className="product-details">
+                                             <div className="category-list">
+                                                  <a
+                                                       href="demo8-shop.html"
+                                                       className="product-category"
+                                                  >
+                                                       {product.productCategory}
+                                                  </a>
+                                             </div>
+                                             <h3 className="product-title">
+                                                  {" "}
+                                                  <a href="demo8-product.html">
+                                                       {product.productTitle}
+                                                  </a>{" "}
+                                             </h3>
+                                             <div className="price-box">
+                                                  <span className="product-price">
+                                                       ${product.productPrice}.00
+                                                  </span>
+                                             </div>
+                                        </div>
+                                   </div>
                               ))}
                          </div>
                          <div className="col-md-4 col-sm-6 pb-5">
@@ -61,17 +135,51 @@ const MiniCard = () => {
                                    Latest Products
                               </h4>
                               <div className="heading-spacer"></div>
-                              {latestProducts.slice(0, 3).map((product, i) => {
-                                   return (
-                                        <ProductWidget
-                                             showCategory={true}
-                                             category={product.productCategory}
-                                             imageSrc={product.productImageUrl}
-                                             productName={product.productTitle}
-                                             price={product.productPrice}
-                                        />
-                                   );
-                              })}
+                              {props.latestProducts.slice(0, 3).map((product, i) => (
+                                   <div
+                                        key={i}
+                                        className="product-default left-details product-widget mb-2"
+                                   >
+                                        <figure>
+                                             <a href="demo8-product.html">
+                                                  <Image
+                                                       src={product.productImageUrl}
+                                                       width="175"
+                                                       height="175"
+                                                       alt="banner"
+                                                  />
+                                                  <Image
+                                                       src={product5}
+                                                       width="175"
+                                                       height="175"
+                                                       alt="product"
+                                                  />
+                                             </a>
+                                        </figure>
+                                        <div className="product-details">
+                                             <div className="category-list">
+                                                  <a
+                                                       href="demo8-shop.html"
+                                                       className="product-category"
+                                                  >
+                                                       {product.productCategory}
+                                                  </a>
+                                                  ,
+                                             </div>
+                                             <h3 className="product-title">
+                                                  {" "}
+                                                  <a href="demo8-product.html">
+                                                       {product.productTitle}
+                                                  </a>{" "}
+                                             </h3>
+                                             <div className="price-box">
+                                                  <span className="product-price">
+                                                       ${product.productPrice}.00
+                                                  </span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              ))}
                          </div>
                     </div>
                </div>

@@ -1,6 +1,32 @@
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
+export const cardData = [
+     {
+          h3: "Fashion",
+          icon: "icon-category-fashion",
+     },
+     {
+          h3: "Electronics",
+          icon: "icon-category-electronics",
+     },
+     {
+          h3: "Gifts",
+          icon: "icon-category-gifts",
+     },
+     {
+          h3: "Garden",
+          icon: "icon-category-garden",
+     },
+     {
+          h3: "Music",
+          icon: "icon-category-music",
+     },
+     {
+          h3: "Motors",
+          icon: "icon-category-motors",
+     },
+];
 export const featuredProducts = [
      {
           productImageAlt: "product",
@@ -375,5 +401,76 @@ export const onSaleProduct = [
           productImageUrlTwo: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
+     },
+];
+export const smallBanners = [
+     {
+          img: templateImages.demo21.categoryImages.category1,
+          h3: "Top Sharp",
+          h3Br: "Knives",
+          atag: "demo21-shop.html",
+     },
+     {
+          img: templateImages.demo21.categoryImages.category2,
+          h3: "HD Vision",
+          h3Br: " Web Cameras",
+          atag: "demo21-shop.html",
+     },
+     {
+          img: templateImages.demo21.categoryImages.category3,
+          h3: "Mobiles And",
+          h3Br: "Tablets",
+          atag: "demo21-shop.html",
+     },
+     {
+          img: templateImages.demo21.categoryImages.category4,
+          h3: "Smart",
+          h3Br: "Watches",
+          atag: "demo21-shop.html",
+     },
+];
+export const miniBanners = [
+     {
+          img: templateImages.demo21.bannerImage.banner2,
+          h3: "Action",
+          h3Br: "Cameras",
+          h4: "Starting From",
+          price: 399,
+          atag: "demo21-shop.html",
+          bannerStyles: "col-6 col-lg-4",
+          styles: "text-right text-lg-left",
+     },
+     {
+          img: templateImages.demo21.bannerImage.banner3,
+          h3: "For All",
+          h3Br: "Styles",
+          h4: "Starting From",
+          price: 199,
+          atag: "demo21-shop.html",
+          bannerStyles: "col-6 col-lg-4 text-left text-lg-right",
+          styles: "text-right text-lg-left",
+     },
+];
+export const banners = [
+     {
+          bannerimg: templateImages.demo21.sliderImage.slide1,
+          h2: "start the revolution",
+          h1: "drone pro 4",
+          price: 499,
+          atag: "demo21-shop.html",
+     },
+     {
+          bannerimg: templateImages.demo21.sliderImage.slide2,
+          h2: "amazing deals",
+          h1: "smartphone",
+          price: 199,
+          atag: "demo21-shop.html",
+     },
+     {
+          bannerimg: templateImages.demo21.sliderImage.slide3,
+          h2: "best price of the year",
+          h1: "top accessories",
+          price: 19,
+          atag: "demo21-shop.html",
      },
 ];

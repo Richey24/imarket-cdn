@@ -9,11 +9,15 @@ function HeaderSearch({
      categories,
      className,
      menuBtnTextColor,
+     showCategory = true,
+     showPhone = true,
 }: {
      company: any;
      categories: any;
      className?: string;
      menuBtnTextColor?: string;
+     showCategory?: boolean;
+     showPhone?: boolean;
 }): JSX.Element {
      return (
           <div className={`header-middle sticky-header ${className}`}>
@@ -39,9 +43,11 @@ function HeaderSearch({
                                              placeholder="Search..."
                                              required
                                         />
-                                        <div className="select-custom">
-                                             <CategorySelect categories={categories} />
-                                        </div>
+                                        {showCategory && (
+                                             <div className="select-custom">
+                                                  <CategorySelect categories={categories} />
+                                             </div>
+                                        )}
 
                                         <button
                                              className="btn icon-magnifier p-0"
@@ -52,22 +58,24 @@ function HeaderSearch({
                               </form>
                          </div>
 
-                         <div className="header-contact d-none d-lg-flex pl-4 pr-4">
-                              <i className="icon-phone-2"></i>
-                              <h6 className="!tw-text-inherit">
-                                   <span>Call us now</span>
-                                   <Link
-                                        href={`tel:${company?.phone}`}
-                                        className={`font1 ${
-                                             className &&
-                                             className.includes("text-dark") &&
-                                             "text-dark"
-                                        }`}
-                                   >
-                                        {company?.phone}
-                                   </Link>
-                              </h6>
-                         </div>
+                         {showPhone && (
+                              <div className="header-contact d-none d-lg-flex pl-4 pr-4">
+                                   <i className="icon-phone-2"></i>
+                                   <h6 className="!tw-text-inherit">
+                                        <span>Call us now</span>
+                                        <Link
+                                             href={`tel:${company?.phone}`}
+                                             className={`font1 ${
+                                                  className &&
+                                                  className.includes("text-dark") &&
+                                                  "text-dark"
+                                             }`}
+                                        >
+                                             {company?.phone}
+                                        </Link>
+                                   </h6>
+                              </div>
+                         )}
 
                          <HeaderIcons />
                     </div>

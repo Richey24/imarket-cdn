@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { JsxElement } from "typescript";
 
 export interface ProductProps {
      productImageUrl: StaticImageData | string;
@@ -9,7 +10,6 @@ export interface ProductProps {
 }
 
 export interface BrowseByCategoryProps {
-     imageUrl: StaticImageData | string;
      categoryName: string;
      count: number;
      // url: Url;
@@ -18,6 +18,6 @@ export interface BrowseByCategoryProps {
 export interface ProductWidgetProps {
      productImage: string;
      productImageTwo: string;
-     productTitle: string;
+     productName: string;
      productPrice: number;
 }

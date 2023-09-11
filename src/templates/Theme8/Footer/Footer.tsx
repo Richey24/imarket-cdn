@@ -1,4 +1,6 @@
-const Footer = () => {
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <div>
                <footer style={{ paddingTop: "50px" }} className="footer">
@@ -18,14 +20,16 @@ const Footer = () => {
                                                                       Phone:
                                                                  </span>
                                                                  Toll Free{" "}
-                                                                 <a href="tel:">(123) 456-7890</a>
+                                                                 <a href="tel:">{company?.phone}</a>
                                                             </li>
                                                             <li>
                                                                  <span className="contact-info-label">
                                                                       Email:
-                                                                 </span>{" "}
-                                                                 <a href="mailto:mail@example.com">
-                                                                      mail@example.com
+                                                                 </span>
+                                                                 <a
+                                                                      href={`mailto:${company?.user_id?.email}`}
+                                                                 >
+                                                                      {company?.user_id?.email}
                                                                  </a>
                                                             </li>
                                                        </ul>

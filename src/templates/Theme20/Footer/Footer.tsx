@@ -15,7 +15,7 @@ const Footer = () => {
      };
      return (
           <footer>
-               <div className="footer-top" style={{ paddingRight: "50px", paddingLeft: "50px" }}>
+               <div className="footer-top" >
                     <div className="container-fluid">
                          <div
                               className="instagram-section mb-2 appear-animate"

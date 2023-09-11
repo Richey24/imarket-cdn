@@ -1,12 +1,20 @@
 import { ProductProps, ProductWidgetProps, TestimonialProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
-export const SliderImages = [
+export const banners = [
      {
-          slider: templateImages.demo14.sliderImage.slide1,
+          bannerImg: templateImages.demo16.sliderImage.slide1,
+          h3: "DRESSES",
+          H3Br: "COLLECTION",
+          p: "Check out this weeks hottest styles",
+          atag: "demo16-shop.html",
      },
      {
-          slider: templateImages.demo14.sliderImage.slide2,
+          bannerImg: templateImages.demo16.sliderImage.slide2,
+          h3: "HANDBAGS",
+          H3Br: "COLLECTION",
+          p: "Check out this weeks hottest styles",
+          atag: "demo16-shop.html",
      },
 ];
 

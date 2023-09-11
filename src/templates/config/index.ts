@@ -3,9 +3,11 @@ import theme2TemplateConfig from "./theme2";
 import theme3TemplateConfig from "./theme3";
 import theme4TemplateConfig from "./theme4";
 import theme5TemplateConfig from "./theme5";
+import { theme6TemplateConfig } from './theme6';
 import theme7TemplateConfig from "./theme7";
 import theme8TemplateConfig from "./theme8";
 import theme9TemplateConfig from "./theme9";
+import theme11TemplateConfig from "./theme11";
 // import theme12TemplateConfig from "./theme12";
 import theme13TemplateConfig from "./theme13";
 import theme14TemplateConfig from "./theme14";
@@ -18,6 +20,7 @@ import theme20TemplateConfig from "./theme20";
 import theme21TemplateConfig from "./theme21";
 import theme22TemplateConfig from "./theme22";
 import theme25TemplateConfig from "./theme25";
+import theme27TemplateConfig from "./theme27";
 import theme30TemplateConfig from "./theme30";
 import theme31TemplateConfig from "./theme31";
 import theme32TemplateConfig from "./theme32";
@@ -31,6 +34,11 @@ import theme39TemplateConfig from "./theme39";
 import theme40TemplateConfig from "./theme40";
 import theme41TemplateConfig from "./theme41";
 import theme42TemplateConfig from "./theme42";
+import { theme28TemplateConfig } from "./theme28";
+import { theme29TemplateConfig } from "./theme29";
+import { theme26TemplateConfig } from "./theme26";
+import { theme10TemplateConfig } from "./theme10";
+import { theme23TemplateConfig } from "./theme23";
 
 export const templateConfig: any = {
      theme1: theme1TemplateConfig,
@@ -38,9 +46,15 @@ export const templateConfig: any = {
      theme3: theme3TemplateConfig,
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
+     theme6: theme6TemplateConfig,
+     // theme6: theme6TemplateConfig,
+     theme11: theme11TemplateConfig,
+     // theme22: theme22TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
+     theme10: theme10TemplateConfig,
+     // theme11: theme11TemplateConfig,
      // theme12: theme12TemplateConfig,
      theme13: theme13TemplateConfig,
      theme14: theme14TemplateConfig,
@@ -53,6 +67,9 @@ export const templateConfig: any = {
      theme21: theme21TemplateConfig,
      theme22: theme22TemplateConfig,
      theme25: theme25TemplateConfig,
+     theme27: theme27TemplateConfig,
+     theme28: theme28TemplateConfig,
+     theme29: theme29TemplateConfig,
      theme30: theme30TemplateConfig,
      theme31: theme31TemplateConfig,
      theme32: theme32TemplateConfig,
@@ -66,6 +83,9 @@ export const templateConfig: any = {
      theme40: theme40TemplateConfig,
      theme41: theme41TemplateConfig,
      theme42: theme42TemplateConfig,
+     theme26: theme26TemplateConfig,
+     theme23: theme23TemplateConfig,
+
 };
 
 export const cssImports = (len = 42) => {
