@@ -6,10 +6,7 @@ const Footer = (props: any) => {
      return (
           <footer>
                <div className="footer">
-                    <div
-                         className="footer-top"
-
-                    >
+                    <div className="footer-top">
                          <div className="container">
                               <div className="row align-items-center">
                                    <div className="col-md-6 col-lg-3">
@@ -46,10 +43,7 @@ const Footer = (props: any) => {
                               </div>
                          </div>
                     </div>
-                    <div
-                         className="container"
-
-                    >
+                    <div className="container">
                          <div className="footer-middle">
                               <div className="row">
                                    <div className="col-lg-4">
@@ -179,7 +173,6 @@ const Footer = (props: any) => {
                               </div>
                          </div>
                     </div>
-
                </div>
           </footer>
      );

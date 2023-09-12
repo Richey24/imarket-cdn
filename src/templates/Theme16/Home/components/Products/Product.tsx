@@ -50,7 +50,6 @@ export const Product = () => {
                                                        width={400}
                                                        height={400}
                                                   />
-                                                 
                                              </a>
                                              <div className="label-group">
                                                   <span className="product-label label-hot">

@@ -1,10 +1,17 @@
 "use client";
+import HeaderLinks from "@/templates/shared/Header/HeaderLinks";
+import Links from "@/templates/shared/Header/HeaderLinks/Links";
+import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
+import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
+import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
 import Link from "next/link";
 import React from "react";
 import { CatData } from "../Home/data";
 import { templateImages } from "@/appProvider/templateImages";
 
-export default function Header() {
+export default function Header(props: any) {
+     const { company, static: staticProps, categories } = props.props;
+
      return (
           <header className="header">
                <div className="header-top">
@@ -19,74 +26,9 @@ export default function Header() {
                               </div>
                               {/* End .info-box */}
                          </div>
-                         {/* End .header-left */}
-                         <div className="header-right header-dropdowns ml-0 ml-sm-auto w-sm-100">
-                              <div className="header-dropdown ">
-                                   <a href="#">USD</a>
-                                   <div className="header-menu">
-                                        <ul>
-                                             <li>
-                                                  <a href="#">EUR</a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">USD</a>
-                                             </li>
-                                        </ul>
-                                   </div>
-                                   {/* End .header-menu */}
-                              </div>
-                              {/* End .header-dropown */}
-                              <div className="header-dropdown mr-auto mr-sm-3 mr-md-0 pl-2">
-                                   <a href="#">
-                                        <i className="flag-us flag" />
-                                        Eng
-                                   </a>
-                                   <div className="header-menu">
-                                        <ul>
-                                             <li>
-                                                  <a href="#">
-                                                       <i className="flag-us flag mr-2" />
-                                                       ENG
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <a href="#">
-                                                       <i className="flag-fr flag mr-2" />
-                                                       FRA
-                                                  </a>
-                                             </li>
-                                        </ul>
-                                   </div>
-                                   {/* End .header-menu */}
-                              </div>
-                              {/* End .header-dropown */}
-                              <div className="header-dropdown dropdown-expanded d-none d-lg-block">
-                                   <a href="#">Links</a>
-                                   <div className="header-menu">
-                                        <ul>
-                                             <li>
-                                                  <a href="dashboard.html">Dashboard</a>
-                                             </li>
-                                             <li>
-                                                  <a href="cart.html">Cart</a>
-                                             </li>
-                                             <li>
-                                                  <a href="cart.html">Checkout</a>
-                                             </li>
-                                             <li>
-                                                  <a href="wishlist.html">Wishlist</a>
-                                             </li>
-                                             <li>
-                                                  <a href="about.html">About Us</a>
-                                             </li>
-                                             <li>
-                                                  <a href="blog.html">Contact Us</a>
-                                             </li>
-                                        </ul>
-                                   </div>
-                                   {/* End .header-menu */}
-                              </div>
-                              {/* End .header-dropown */}
+
+                         <div className="header-right">
+                              <Links />
                               <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                    <a href="#">Order</a>
                                    <div className="header-menu">
@@ -101,25 +43,47 @@ export default function Header() {
                                    </div>
                                    {/* End .header-menu */}
                               </div>
-                              {/* End .header-dropown */}
-                              <div className="social-icons">
-                                   <a
-                                        href="#"
-                                        className="social-icon social-facebook icon-facebook"
-                                        target="_blank"
-                                   />
-                                   <a
-                                        href="#"
-                                        className="social-icon social-twitter icon-twitter"
-                                        target="_blank"
-                                   />
-                                   <a
-                                        href="#"
-                                        className="social-icon social-instagram icon-instagram"
-                                        target="_blank"
-                                   />
+                              <div className="header-dropdown d-none d-sm-block">
+                                   <Link href="#">USD</Link>
+                                   <div className="header-menu">
+                                        <ul>
+                                             <li>
+                                                  <Link href="#">EUR</Link>
+                                             </li>
+                                             <li>
+                                                  <Link href="#">USD</Link>
+                                             </li>
+                                        </ul>
+                                   </div>
                               </div>
-                              {/* End .social-icons */}
+                              <div className="header-dropdown d-none d-sm-block">
+                                   <Link href="#">
+                                        <i className="flag-us flag"></i>ENG
+                                   </Link>
+                                   <div className="header-menu">
+                                        <ul>
+                                             <li>
+                                                  <Link href="#">
+                                                       <i className="flag-us flag mr-2"></i>ENG
+                                                  </Link>
+                                             </li>
+                                             <li>
+                                                  <Link href="#">
+                                                       <i className="flag-fr flag mr-2"></i>FRA
+                                                  </Link>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div className="header-middle sticky-header font2">
+                    <div className="container-fluid">
+                         <div className="header-left">
+                              <MenuButton />
+                              <Logo company={company} />
+                              <PageLinks staticProps={staticProps} />
                          </div>
                          {/* End .header-right */}
                     </div>
@@ -200,152 +164,9 @@ export default function Header() {
                                    </a>
                                    <div className="cart-overlay" />
                                    <div className="dropdown-menu mobile-cart">
-                                        <a href="#" title="Close (Esc)" className="btn-close">
+                                        <Link href="#" title="Close (Esc)" className="btn-close">
                                              ×
-                                        </a>
-                                        <div className="dropdownmenu-wrapper custom-scrollbar">
-                                             <div className="dropdown-cart-header">
-                                                  Shopping Cart
-                                             </div>
-                                             {/* End .dropdown-cart-header */}
-                                             <div className="dropdown-cart-products">
-                                                  <div className="product">
-                                                       <div className="product-details">
-                                                            <h4 className="product-title">
-                                                                 <a href="demo37-product.html">
-                                                                      Black wrist watch
-                                                                 </a>
-                                                            </h4>
-                                                            <span className="cart-product-info">
-                                                                 <span className="cart-product-qty">
-                                                                      1
-                                                                 </span>
-                                                                 × $99.00
-                                                            </span>
-                                                       </div>
-                                                       {/* End .product-details */}
-                                                       <figure className="product-image-container">
-                                                            <a
-                                                                 href="demo37-product.html"
-                                                                 className="product-image"
-                                                            >
-                                                                 <img
-                                                                      src="assets/images/demoes/demo37/products/product-1.jpg"
-                                                                      alt="product"
-                                                                      width={80}
-                                                                      height={80}
-                                                                 />
-                                                            </a>
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-remove"
-                                                                 title="Remove Product"
-                                                            >
-                                                                 <span>×</span>
-                                                            </a>
-                                                       </figure>
-                                                  </div>
-                                                  {/* End .product */}
-                                                  <div className="product">
-                                                       <div className="product-details">
-                                                            <h4 className="product-title">
-                                                                 <a href="demo37-product.html">
-                                                                      Warm Jacket
-                                                                 </a>
-                                                            </h4>
-                                                            <span className="cart-product-info">
-                                                                 <span className="cart-product-qty">
-                                                                      1
-                                                                 </span>
-                                                                 × $35.00
-                                                            </span>
-                                                       </div>
-                                                       {/* End .product-details */}
-                                                       <figure className="product-image-container">
-                                                            <a
-                                                                 href="demo37-product.html"
-                                                                 className="product-image"
-                                                            >
-                                                                 <img
-                                                                      src="assets/images/demoes/demo37/products/product-2.jpg"
-                                                                      alt="product"
-                                                                      width={80}
-                                                                      height={80}
-                                                                 />
-                                                            </a>
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-remove"
-                                                                 title="Remove Product"
-                                                            >
-                                                                 <span>×</span>
-                                                            </a>
-                                                       </figure>
-                                                  </div>
-                                                  {/* End .product */}
-                                                  <div className="product">
-                                                       <div className="product-details">
-                                                            <h4 className="product-title">
-                                                                 <a href="demo37-product.html">
-                                                                      White Sports Shoes
-                                                                 </a>
-                                                            </h4>
-                                                            <span className="cart-product-info">
-                                                                 <span className="cart-product-qty">
-                                                                      1
-                                                                 </span>
-                                                                 × $35.00
-                                                            </span>
-                                                       </div>
-                                                       {/* End .product-details */}
-                                                       <figure className="product-image-container">
-                                                            <a
-                                                                 href="demo37-product.html"
-                                                                 className="product-image"
-                                                            >
-                                                                 <img
-                                                                      src="assets/images/demoes/demo37/products/product-3.jpg"
-                                                                      alt="product"
-                                                                      width={80}
-                                                                      height={80}
-                                                                 />
-                                                            </a>
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-remove"
-                                                                 title="Remove Product"
-                                                            >
-                                                                 <span>×</span>
-                                                            </a>
-                                                       </figure>
-                                                  </div>
-                                                  {/* End .product */}
-                                             </div>
-                                             {/* End .cart-product */}
-                                             <div className="dropdown-cart-total">
-                                                  <span>SUBTOTAL:</span>
-                                                  <span className="cart-total-price float-right">
-                                                       $134.00
-                                                  </span>
-                                             </div>
-                                             {/* End .dropdown-cart-total */}
-                                             <div className="dropdown-cart-action">
-                                                  <a
-                                                       href="cart.html"
-                                                       className="btn btn-gray btn-block view-cart"
-                                                  >
-                                                       View Cart
-                                                  </a>
-                                                  <a
-                                                       href="checkout.html"
-                                                       className="btn btn-dark btn-block"
-                                                  >
-                                                       Checkout
-                                                  </a>
-                                             </div>
-                                             {/* End .dropdown-cart-total */}
-                                        </div>
-                                        {/* End .dropdownmenu-wrapper */}
+                                        </Link>
                                    </div>
                                    {/* End .dropdown-menu */}
                               </div>

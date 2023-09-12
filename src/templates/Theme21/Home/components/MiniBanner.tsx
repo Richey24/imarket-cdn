@@ -1,4 +1,3 @@
-
 import { miniBanners } from "../data";
 
 export const MiniBanner = () => {

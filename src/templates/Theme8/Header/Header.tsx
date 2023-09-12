@@ -1,17 +1,18 @@
 import Image from "next/image";
-import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../../assets/images/your-logo.png";
-import Link from "next/link";
 import product2 from "../../../assets/images/products/product-2.jpg";
 import product3 from "../../../assets/images/products/product-3.jpg";
 import menuBanner from "../../../assets/images/menu-banner.jpg";
 import menuBanner1 from "../../../assets/images/menu-banner-1.jpg";
-import _ from "lodash";
+import SocialIcons from "@/templates/shared/SocialIcons";
+import Language from "@/templates/shared/Header/HeaderLinks/Language";
+import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
+import Links from "@/templates/shared/Header/HeaderLinks/Links";
+import CategorySelect from "@/templates/shared/Header/HeaderLinks/CategorySelect";
 
-const Header = (props) => {
+const Header = (props: any) => {
      const { company, static: staticProps, categories } = props.props;
-     const [activeMenuId, setActiveMenuId] = useState(0);
 
      const showSearch = () => {
           document.getElementById("searchDiv").classList.toggle("showSearch");
@@ -40,72 +41,14 @@ const Header = (props) => {
                     <div className="header-top">
                          <div className="header-row container">
                               <div className="header-left">
-                                   <div className="header-dropdown">
-                                        <a href="#" className="pl-0">
-                                             USD
-                                        </a>
-                                        <div className="header-menu">
-                                             <ul>
-                                                  <li>
-                                                       <a href="#">EUR</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">USD</a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
-
-                                   <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
-                                        <a href="#">
-                                             <i className="flag-us flag"></i>ENG
-                                        </a>
-                                        <div className="header-menu">
-                                             <ul>
-                                                  <li>
-                                                       <a href="#">
-                                                            <i className="flag-us flag mr-2"></i>ENG
-                                                       </a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">
-                                                            <i className="flag-fr flag mr-2"></i>FRA
-                                                       </a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
+                                   <Language />
                               </div>
                               <div className="header-right">
                                    <div className="wel-msg text-uppercase d-none d-lg-block">
                                         FREE Returns. Standard Shipping Orders $99+
                                    </div>
                                    <span className="separator d-none d-xl-block"></span>
-                                   <div className="header-dropdown dropdown-expanded d-none d-lg-block">
-                                        <a href="#">Links</a>
-                                        <div className="header-menu">
-                                             <ul>
-                                                  <li>
-                                                       <a href="dashboard.html">Dashboard</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="cart.html">Cart</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="cart.html">Checkout</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="wishlist.html">Wishlist</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="about.html">About Us</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="blog.html">Contact Us</a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
+                                   <Links />
                                    <div className="header-dropdown mr-auto mr-sm-3 mr-md-0">
                                         <a href="#">Order</a>
                                         <div className="header-menu">
@@ -120,29 +63,7 @@ const Header = (props) => {
                                         </div>
                                    </div>
                                    <span className="separator d-none d-xl-block"></span>
-                                   <div className="share-links d-none d-xl-block">
-                                        <a
-                                             target="_blank"
-                                             rel="nofollow"
-                                             className="share-facebook icon-facebook"
-                                             href="#"
-                                             title="Facebook"
-                                        ></a>
-                                        <a
-                                             target="_blank"
-                                             rel="nofollow"
-                                             className="share-twitter icon-twitter"
-                                             href="#"
-                                             title="Twitter"
-                                        ></a>
-                                        <a
-                                             target="_blank"
-                                             rel="nofollow"
-                                             className="share-instagram icon-instagram"
-                                             href="#"
-                                             title="Instagram"
-                                        ></a>
-                                   </div>
+                                   <SocialIcons links={staticProps?.socials} />
                               </div>
                          </div>
                     </div>
@@ -158,7 +79,10 @@ const Header = (props) => {
                                         <i className="icon-phone-2"></i>
                                         <h6>
                                              Call us now
-                                             <a href="tel:#" className="text-dark font1">
+                                             <a
+                                                  href={`tel:${company?.phone}`}
+                                                  className="text-dark font1"
+                                             >
                                                   {company?.phone}
                                              </a>
                                         </h6>
@@ -166,21 +90,14 @@ const Header = (props) => {
                               </div>
 
                               <div className="header-center">
-                                   <button className="mobile-menu-toggler" type="button">
-                                        <i className="fas fa-bars"></i>
-                                   </button>
+                                   <MenuButton />
                                    <a href="demo8.html" className="logo">
-                                        {company?.logo ? (
-                                             <Image
-                                                  src={company?.logo}
-                                                  className="black-logo"
-                                                  alt="Porto Logo"
-                                                  width={104}
-                                                  height={41}
-                                             />
-                                        ) : (
-                                             <h3>{company?.company_name || "Tester"}</h3>
-                                        )}
+                                        <Image
+                                             src={logo}
+                                             alt="Porto Logo"
+                                             width="104"
+                                             height="41"
+                                        />
                                    </a>
                               </div>
 
@@ -215,53 +132,7 @@ const Header = (props) => {
                                                        required
                                                   />
                                                   <div className="select-custom">
-                                                       <select id="cat" name="cat">
-                                                            <option value="">All Categories</option>
-                                                            {categories &&
-                                                                 categories.map((category) => (
-                                                                      <>
-                                                                           {!category.parent_id && (
-                                                                                <option
-                                                                                     value={
-                                                                                          category.id
-                                                                                     }
-                                                                                >
-                                                                                     {category.name}
-                                                                                </option>
-                                                                           )}
-                                                                           {category.child_id.map(
-                                                                                (id) => {
-                                                                                     const child =
-                                                                                          categories.find(
-                                                                                               (
-                                                                                                    cat,
-                                                                                               ) =>
-                                                                                                    cat.id ===
-                                                                                                    id,
-                                                                                          );
-                                                                                     if (child) {
-                                                                                          return (
-                                                                                               <option
-                                                                                                    value={
-                                                                                                         child.id
-                                                                                                    }
-                                                                                               >
-                                                                                                    -{" "}
-                                                                                                    {_.capitalize(
-                                                                                                         child.name,
-                                                                                                    )}
-                                                                                               </option>
-                                                                                          );
-                                                                                     } else {
-                                                                                          return (
-                                                                                               <></>
-                                                                                          );
-                                                                                     }
-                                                                                },
-                                                                           )}
-                                                                      </>
-                                                                 ))}
-                                                       </select>
+                                                       <CategorySelect categories={categories} />
                                                   </div>
                                                   <button
                                                        style={{ borderRadius: "30px" }}
@@ -474,19 +345,333 @@ const Header = (props) => {
                          <div className="container">
                               <nav className="main-nav w-100">
                                    <ul className="menu w-100">
-                                        {staticProps?.pageLinks?.map(
-                                             (link: { name: string; url: string }, idx: number) => (
-                                                  <li
-                                                       className={
-                                                            activeMenuId === idx ? "active" : ""
-                                                       }
-                                                       key={idx}
-                                                       onClick={() => setActiveMenuId(idx)}
-                                                  >
-                                                       <Link href={link.url}>{link.name}</Link>
+                                        <li className="active">
+                                             <a href="demo8.html">Home</a>
+                                        </li>
+                                        <li>
+                                             <a
+                                                  onMouseEnter={() => showDrop("theCategory")}
+                                                  onMouseLeave={() => showDrop("theCategory")}
+                                                  className="themeEightDrop"
+                                                  href="demo8-shop.html"
+                                             >
+                                                  Categories
+                                             </a>
+                                             <div
+                                                  onMouseEnter={() => showDrop("theCategory")}
+                                                  onMouseLeave={() => showDrop("theCategory")}
+                                                  id="theCategory"
+                                                  className="megamenu megamenu-fixed-width megamenu-3cols"
+                                             >
+                                                  <div className="row">
+                                                       <div className="col-lg-4">
+                                                            <a href="#" className="nolink">
+                                                                 VARIATION 1
+                                                            </a>
+                                                            <ul className="submenu">
+                                                                 <li>
+                                                                      <a href="category.html">
+                                                                           Fullwidth Banner
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-banner-boxed-slider.html">
+                                                                           Boxed Slider Banner
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-banner-boxed-image.html">
+                                                                           Boxed Image Banner
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category.html">
+                                                                           Left Sidebar
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-sidebar-right.html">
+                                                                           Right Sidebar
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-off-canvas.html">
+                                                                           Off Canvas Filter
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-horizontal-filter1.html">
+                                                                           Horizontal Filter1
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-horizontal-filter2.html">
+                                                                           Horizontal Filter2
+                                                                      </a>
+                                                                 </li>
+                                                            </ul>
+                                                       </div>
+                                                       <div className="col-lg-4">
+                                                            <a href="#" className="nolink">
+                                                                 VARIATION 2
+                                                            </a>
+                                                            <ul className="submenu">
+                                                                 <li>
+                                                                      <a href="category-list.html">
+                                                                           List Types
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-infinite-scroll.html">
+                                                                           Ajax Infinite Scroll
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category.html">
+                                                                           3 Columns Products
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-4col.html">
+                                                                           4 Columns Products
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-5col.html">
+                                                                           5 Columns Products
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-6col.html">
+                                                                           6 Columns Products
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-7col.html">
+                                                                           7 Columns Products
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="category-8col.html">
+                                                                           8 Columns Products
+                                                                      </a>
+                                                                 </li>
+                                                            </ul>
+                                                       </div>
+                                                       <div className="col-lg-4 p-0">
+                                                            <div className="menu-banner">
+                                                                 <figure>
+                                                                      <Image
+                                                                           src={menuBanner}
+                                                                           width="192"
+                                                                           height="313"
+                                                                           alt="Menu banner"
+                                                                      />
+                                                                 </figure>
+                                                                 <div className="banner-content">
+                                                                      <h4>
+                                                                           <span className="">
+                                                                                UP TO
+                                                                           </span>
+                                                                           <br />
+                                                                           <b className="">50%</b>
+                                                                           <i>OFF</i>
+                                                                      </h4>
+                                                                      <a
+                                                                           href="category.html"
+                                                                           className="btn btn-sm btn-dark"
+                                                                      >
+                                                                           SHOP NOW
+                                                                      </a>
+                                                                 </div>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </li>
+                                        <li>
+                                             <a
+                                                  onMouseEnter={() => showDrop("theProducts")}
+                                                  onMouseLeave={() => showDrop("theProducts")}
+                                                  className="themeEightDrop"
+                                                  href="demo8-product.html"
+                                             >
+                                                  Products
+                                             </a>
+                                             <div
+                                                  onMouseEnter={() => showDrop("theProducts")}
+                                                  onMouseLeave={() => showDrop("theProducts")}
+                                                  id="theProducts"
+                                                  className="megamenu megamenu-fixed-width"
+                                             >
+                                                  <div className="row">
+                                                       <div className="col-lg-4">
+                                                            <a href="#" className="nolink">
+                                                                 PRODUCT PAGES
+                                                            </a>
+                                                            <ul className="submenu">
+                                                                 <li>
+                                                                      <a href="product.html">
+                                                                           SIMPLE PRODUCT
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-variable.html">
+                                                                           VARIABLE PRODUCT
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product.html">
+                                                                           SALE PRODUCT
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product.html">
+                                                                           FEATURED & ON SALE
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-custom-tab.html">
+                                                                           WITH CUSTOM TAB
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-sidebar-left.html">
+                                                                           WITH LEFT SIDEBAR
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-sidebar-right.html">
+                                                                           WITH RIGHT SIDEBAR
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-addcart-sticky.html">
+                                                                           ADD CART STICKY
+                                                                      </a>
+                                                                 </li>
+                                                            </ul>
+                                                       </div>
+
+                                                       <div className="col-lg-4">
+                                                            <a href="#" className="nolink">
+                                                                 PRODUCT LAYOUTS
+                                                            </a>
+                                                            <ul className="submenu">
+                                                                 <li>
+                                                                      <a href="product-extended-layout.html">
+                                                                           EXTENDED LAYOUT
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-grid-layout.html">
+                                                                           GRID IMAGE
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-full-width.html">
+                                                                           FULL WIDTH LAYOUT
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-sticky-info.html">
+                                                                           STICKY INFO
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-sticky-both.html">
+                                                                           LEFT & RIGHT STICKY
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-transparent-image.html">
+                                                                           TRANSPARENT IMAGE
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="product-center-vertical.html">
+                                                                           CENTER VERTICAL
+                                                                      </a>
+                                                                 </li>
+                                                                 <li>
+                                                                      <a href="#">BUILD YOUR OWN</a>
+                                                                 </li>
+                                                            </ul>
+                                                       </div>
+
+                                                       <div className="col-lg-4 p-0">
+                                                            <div className="menu-banner menu-banner-2">
+                                                                 <figure>
+                                                                      <Image
+                                                                           src={menuBanner1}
+                                                                           alt="Menu banner"
+                                                                           className="product-promo"
+                                                                      />
+                                                                 </figure>
+                                                                 <i>OFF</i>
+                                                                 <div className="banner-content">
+                                                                      <h4>
+                                                                           <span className="">
+                                                                                UP TO
+                                                                           </span>
+                                                                           <br />
+                                                                           <b className="">50%</b>
+                                                                      </h4>
+                                                                 </div>
+                                                                 <a
+                                                                      href="category.html"
+                                                                      className="btn btn-sm btn-dark"
+                                                                 >
+                                                                      SHOP NOW
+                                                                 </a>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </li>
+                                        <li>
+                                             <a
+                                                  onMouseEnter={() => showDrop("thePages")}
+                                                  onMouseLeave={() => showDrop("thePages")}
+                                                  className="themeEightDrop"
+                                                  href="#"
+                                             >
+                                                  Pages
+                                             </a>
+                                             <ul
+                                                  onMouseEnter={() => showDrop("thePages")}
+                                                  onMouseLeave={() => showDrop("thePages")}
+                                                  id="thePages"
+                                             >
+                                                  <li>
+                                                       <a href="wishlist.html">Wishlist</a>
                                                   </li>
-                                             ),
-                                        )}
+                                                  <li>
+                                                       <a href="cart.html">Shopping Cart</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="checkout.html">Checkout</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="dashboard.html">Dashboard</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="demo8-about.html">About Us</a>
+                                                  </li>
+
+                                                  <li>
+                                                       <a href="demo8-contact.html">Contact Us</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="login.html">Login</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="forgot-password.html">
+                                                            Forgot Password
+                                                       </a>
+                                                  </li>
+                                             </ul>
+                                        </li>
 
                                         <li style={{ display: "block" }}>
                                              <a href="demo8-contact.html">Contact Us</a>

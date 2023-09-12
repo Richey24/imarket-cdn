@@ -38,9 +38,7 @@ export const RecentProduct = () => {
                                                                  <a href="demo22-product.html">
                                                                       <img
                                                                            src={
-                                                                                product
-                                                                                     .productImageUrl
-                                                                                      
+                                                                                product.productImageUrl
                                                                            }
                                                                            width={217}
                                                                            height={217}

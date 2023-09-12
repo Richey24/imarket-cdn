@@ -233,7 +233,7 @@ export const featuredProduct = [
           productPrice: 49,
           oldPrice: 59,
      },
-]
+];
 
 export const bestSeller = [
      {
@@ -267,5 +267,5 @@ export const bestSeller = [
           productTitle: "Blue Sports Clothes",
           productPrice: 49,
           oldPrice: 59,
-     }
-]
+     },
+];

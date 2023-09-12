@@ -1,4 +1,3 @@
-
 import { Banner } from "./components/Banner";
 import { FeaturedCategories } from "./components/FeaturedCategories";
 import { FeaturedProducts } from "./components/FeaturedProducts";

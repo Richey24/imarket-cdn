@@ -6,7 +6,6 @@
 // 3. Theme Variables
 // 4. Plugin Variables
 
-
 // 1. Theme Skin
 $sidebar-font-size: 1.2rem;
 $primary-color: #000;
@@ -16,145 +15,145 @@ $secondary-color-dark: #302e2a !default;
 // 3. Theme Variables
 
 @include set(
-	(
-		header: (
-			middle: (
-				padding-top: 2.5rem,
-				padding-bottom: 2.5rem,
-				color: $primary-color
-			),
+     (
+          header: (
+               middle: (
+                    padding-top: 2.5rem,
+                    padding-bottom: 2.5rem,
+                    color: $primary-color,
+               ),
 
-			top-notice: (
-				padding: 1.5rem,
-				font-size: 1.4rem
-			),
+               top-notice: (
+                    padding: 1.5rem,
+                    font-size: 1.4rem,
+               ),
 
-			logo: (
-				max-width: 111px
-			),
+               logo: (
+                    max-width: 111px,
+               ),
 
-			search: (
-				height: 40px,
-				divider: 1px solid #ccc,
+               search: (
+                    height: 40px,
+                    divider: 1px solid #ccc,
 
-				toggle: (
-					size: 21px,
-					weight: 600
-				),
+                    toggle: (
+                         size: 21px,
+                         weight: 600,
+                    ),
 
-				border: (
-					width: 5px,
-					color: #ccc
-				),
+                    border: (
+                         width: 5px,
+                         color: #ccc,
+                    ),
 
-				btn: (
-					font-size: 2.4rem,
-					min-width: 40px
-				),
-				
-				select: (
-					padding-left: 15px,
-					padding-right: 14px
-				)
-			),
+                    btn: (
+                         font-size: 2.4rem,
+                         min-width: 40px,
+                    ),
 
-			icon: (
-				size: 2.6rem,
-				space: 2.3rem
-			)
-		),
+                    select: (
+                         padding-left: 15px,
+                         padding-right: 14px,
+                    ),
+               ),
 
-		menu: (
-			color: false,
+               icon: (
+                    size: 2.6rem,
+                    space: 2.3rem,
+               ),
+          ),
 
-			top: (
-				color: false,
-			),
+          menu: (
+               color: false,
 
-			mega: (
-				width-3col: 580px,
-			),
+               top: (
+                    color: false,
+               ),
 
-			main: (
-				active-color: #fff,
-				active-background: $primary-color,
+               mega: (
+                    width-3col: 580px,
+               ),
 
-				mega: (
-					active-color: $primary-color,
-					active-background: transparent,
-				),
+               main: (
+                    active-color: #fff,
+                    active-background: $primary-color,
 
-				top: (
-					color: $primary-color,
-					active-color: $primary-color,
-					active-background: transparent,
-				)
-			)
-		),
+                    mega: (
+                         active-color: $primary-color,
+                         active-background: transparent,
+                    ),
 
-		breadcrumb: (
-			margin-bottom: 3rem,
-			color: $primary-color,
+                    top: (
+                         color: $primary-color,
+                         active-color: $primary-color,
+                         active-background: transparent,
+                    ),
+               ),
+          ),
 
-			font: (
-				size: 10px,
-				weight: 700,
-				family: $second-font-family,
-			),
+          breadcrumb: (
+               margin-bottom: 3rem,
+               color: $primary-color,
 
-			divider: (
-				size: 1.4rem,
-				space: 1.6rem,
-			)
-		),
-		
-		banner: (
-			layer: (
-				top: 20%,
-				left: 4%,
-				right: 4%,
-				bottom: 8.67%
-			)
-		),
+               font: (
+                    size: 10px,
+                    weight: 700,
+                    family: $second-font-family,
+               ),
 
-		footer: (
-			color: #90969a,
-			link-active-color: $primary-color,
+               divider: (
+                    size: 1.4rem,
+                    space: 1.6rem,
+               ),
+          ),
 
-			widget: (
-				title: (
-					weight: false,
-				)
-			),
+          banner: (
+               layer: (
+                    top: 20%,
+                    left: 4%,
+                    right: 4%,
+                    bottom: 8.67%,
+               ),
+          ),
 
-			top: (
-				padding-top: 4rem,
-				padding-bottom: 4rem,
-				border-top: 1px solid #e7e7e7
-			),
+          footer: (
+               color: #90969a,
+               link-active-color: $primary-color,
 
-			middle: (
-				padding-top: 6.4rem,
-				padding-bottom: 2.4rem,
-				border-top: 1px solid #e7e7e7
-			),
+               widget: (
+                    title: (
+                         weight: false,
+                    ),
+               ),
 
-			bottom: (
-				padding-top: 3.3rem,
-				padding-bottom: 4.1rem,
-				border-top: 1px solid #e7e7e7
-			)
-		),
+               top: (
+                    padding-top: 4rem,
+                    padding-bottom: 4rem,
+                    border-top: 1px solid #e7e7e7,
+               ),
 
-		category: (
-			sidebar: (
-				title: (
-					font-size: 1.4rem,
-					font-weight: 700
-				)
-			)
-		)
-	)
+               middle: (
+                    padding-top: 6.4rem,
+                    padding-bottom: 2.4rem,
+                    border-top: 1px solid #e7e7e7,
+               ),
+
+               bottom: (
+                    padding-top: 3.3rem,
+                    padding-bottom: 4.1rem,
+                    border-top: 1px solid #e7e7e7,
+               ),
+          ),
+
+          category: (
+               sidebar: (
+                    title: (
+                         font-size: 1.4rem,
+                         font-weight: 700,
+                    ),
+               ),
+          ),
+     )
 );
 
 // 4. Plugin Variables

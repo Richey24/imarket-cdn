@@ -1,4 +1,4 @@
-import { InfoBoxesContainer } from "@/templates/components/Info";
+import { InfoBoxesContainer } from "@/templates/shared/Info";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";

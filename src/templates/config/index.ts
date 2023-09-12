@@ -85,47 +85,13 @@ export const templateConfig: any = {
 
 };
 
-export const cssImports = {
-     theme1: "demo1",
-     theme3: "demo3",
-     theme2: "demo2",
-     theme4: "demo4",
-     theme5: "demo5",
-     theme6: "demo6",
-     theme7: "demo3",
-     theme8: "demo8",
-     theme9: "demo9",
-     theme10: "demo10",
-     theme11: "demo11",
-     theme12: "demo12",
-     theme13: "demo13",
-     theme15: "demo15",
-     theme20: "demo20",
-     theme22: "demo22",
-     theme24: "demo24",
-     theme27: "demo27",
-     theme14: "demo14",
-     theme16: "demo16",
-     theme21: "demo21",
-     theme25: "demo25",
-     theme28: "demo28",
-     theme29: "demo29",
-     theme23: "demo23",
-     theme26: "demo26",
-     theme30: "demo30",
-     theme31: "demo31",
-     theme32: "demo32",
-     theme33: "demo33",
-     theme34: "demo34",
-     theme35: "demo35",
-     theme36: "demo36",
-     theme37: "demo37",
-     theme38: "demo38",
-     theme39: "demo39",
-     theme40: "demo40",
-     theme41: "demo41",
-     theme42: "demo42",
-};
+export const cssImports = (len = 42) => {
+     let obj = {}
+     for (let i = 1; i <= len; i++) {
+          obj[`theme${i}`] = `demo${i}`
+     }
+     return obj
+}
 
 export const themeProps = {
      header: {

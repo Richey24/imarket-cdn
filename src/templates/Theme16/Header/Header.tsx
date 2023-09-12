@@ -6,7 +6,7 @@ const Header = () => {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
 
      const toggleMenu = () => {
-       setIsMenuOpen(!isMenuOpen);
+          setIsMenuOpen(!isMenuOpen);
      };
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);
@@ -122,11 +122,15 @@ const Header = () => {
                          </div>
                          {/* End .header-left */}
                          <div className="header-right">
-                              <a href="#" className="popup-menu-toggler mr-2 pr-1" onClick={toggleMenu}>
+                              <a
+                                   href="#"
+                                   className="popup-menu-toggler mr-2 pr-1"
+                                   onClick={toggleMenu}
+                              >
                                    <i className="toggler-icon" />
                               </a>
                               <div className="separator sepa-1" />
-                              <div className={isMenuOpen ? "popup-menu open" : "popup-menu" } >
+                              <div className={isMenuOpen ? "popup-menu open" : "popup-menu"}>
                                    <button
                                         title="Close (Esc)"
                                         type="button"

@@ -1,13 +1,10 @@
 import React from "react";
- 
+
 import { templateImages } from "@/appProvider/templateImages";
 
 export const BestSellersProducts = () => {
      return (
-          <section
-               className="best-sellers bg-gray appear-animate"
-              
-          >
+          <section className="best-sellers bg-gray appear-animate">
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">
                          Best Sellers on Electronics
@@ -21,7 +18,7 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                   src={templateImages.demo22.productImages.product1}
+                                                  src={templateImages.demo22.productImages.product1}
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -91,7 +88,9 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={templateImages.demo22.productImages.product22}
+                                                  src={
+                                                       templateImages.demo22.productImages.product22
+                                                  }
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -174,7 +173,9 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={templateImages.demo22.productImages.product21}
+                                                  src={
+                                                       templateImages.demo22.productImages.product21
+                                                  }
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -242,7 +243,9 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={templateImages.demo22.productImages.product20}
+                                                  src={
+                                                       templateImages.demo22.productImages.product20
+                                                  }
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -310,7 +313,9 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={templateImages.demo22.productImages.product23}
+                                                  src={
+                                                       templateImages.demo22.productImages.product23
+                                                  }
                                                   width={217}
                                                   height={217}
                                                   alt="product"
@@ -447,7 +452,9 @@ export const BestSellersProducts = () => {
                                    <figure>
                                         <a href="demo22-product.html">
                                              <img
-                                                  src={templateImages.demo22.productImages.product11}
+                                                  src={
+                                                       templateImages.demo22.productImages.product11
+                                                  }
                                                   width={217}
                                                   height={217}
                                                   alt="product"

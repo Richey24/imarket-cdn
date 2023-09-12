@@ -9,14 +9,24 @@ const Footer = (): JSX.Element => {
                          <div className="newsletter-widget row align-items-center">
                               <div className="col-md-6 mb-2 mb-md-0">
                                    <h3 className="mb-0">Sign Up to Newsletter</h3>
-                                   <p>Get all the latest information on Events, Sales and Offers.</p>
+                                   <p>
+                                        Get all the latest information on Events, Sales and Offers.
+                                   </p>
                               </div>
                               <div className="col-md-6">
                                    <form action="#" method="get" className="mb-0">
                                         <div className="submit-wrapper">
-                                             <input type="search" className="form-control" name="q" id="qqq"
-                                                  placeholder="Enter your Email address" required />
-                                             <button className="btn" type="submit">Submit</button>
+                                             <input
+                                                  type="search"
+                                                  className="form-control"
+                                                  name="q"
+                                                  id="qqq"
+                                                  placeholder="Enter your Email address"
+                                                  required
+                                             />
+                                             <button className="btn" type="submit">
+                                                  Submit
+                                             </button>
                                         </div>
                                    </form>
                               </div>
@@ -31,12 +41,24 @@ const Footer = (): JSX.Element => {
                                         <h3 className="widget-title">Account</h3>
                                         <div className="widget-content">
                                              <ul>
-                                                  <li><Link href="dashboard.html">Dashboard</Link></li>
-                                                  <li><Link href="#">Cart</Link></li>
-                                                  <li><Link href="#">Checkout</Link></li>
-                                                  <li><Link href="#">Order tracking</Link></li>
-                                                  <li><Link href="#">Order history</Link></li>
-                                                  <li><Link href="#">Wishlist</Link></li>
+                                                  <li>
+                                                       <Link href="dashboard.html">Dashboard</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Cart</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Checkout</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Order tracking</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Order history</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Wishlist</Link>
+                                                  </li>
                                              </ul>
                                         </div>
                                    </div>
@@ -46,10 +68,18 @@ const Footer = (): JSX.Element => {
                                         <h3 className="widget-title">About</h3>
                                         <div className="widget-content">
                                              <ul>
-                                                  <li><Link href="about.html">About us</Link></li>
-                                                  <li><Link href="#">Contact us</Link></li>
-                                                  <li><Link href="#">Shipping & Delivery</Link></li>
-                                                  <li><Link href="#">Privacy</Link></li>
+                                                  <li>
+                                                       <Link href="about.html">About us</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Contact us</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Shipping & Delivery</Link>
+                                                  </li>
+                                                  <li>
+                                                       <Link href="#">Privacy</Link>
+                                                  </li>
                                              </ul>
                                         </div>
                                    </div>
@@ -60,14 +90,30 @@ const Footer = (): JSX.Element => {
                                         <h3 className="widget-title">Follow Us</h3>
                                         <div className="widget-content">
                                              <div className="social-icons">
-                                                  <Link href="#" className="social-icon social-facebook icon-facebook" target="_blank"
-                                                       title="Facebook"></Link>
-                                                  <Link href="#" className="social-icon social-twitter icon-twitter" target="_blank"
-                                                       title="Twitter"></Link>
-                                                  <Link href="#" className="social-icon social-instagram icon-instagram" target="_blank"
-                                                       title="Instagram"></Link>
-                                                  <Link href="#" className="social-icon social-linkedin fab fa-linkedin-in"
-                                                       target="_blank" title="linkedin"></Link>
+                                                  <Link
+                                                       href="#"
+                                                       className="social-icon social-facebook icon-facebook"
+                                                       target="_blank"
+                                                       title="Facebook"
+                                                  ></Link>
+                                                  <Link
+                                                       href="#"
+                                                       className="social-icon social-twitter icon-twitter"
+                                                       target="_blank"
+                                                       title="Twitter"
+                                                  ></Link>
+                                                  <Link
+                                                       href="#"
+                                                       className="social-icon social-instagram icon-instagram"
+                                                       target="_blank"
+                                                       title="Instagram"
+                                                  ></Link>
+                                                  <Link
+                                                       href="#"
+                                                       className="social-icon social-linkedin fab fa-linkedin-in"
+                                                       target="_blank"
+                                                       title="linkedin"
+                                                  ></Link>
                                              </div>
                                         </div>
                                    </div>
@@ -77,7 +123,9 @@ const Footer = (): JSX.Element => {
                     <div className="footer-bottom">
                          <div className="container d-sm-flex align-items-center">
                               <div className="footer-left">
-                                   <span className="footer-copyright">© copyright 2021. All Rights Reserved.</span>
+                                   <span className="footer-copyright">
+                                        © copyright 2021. All Rights Reserved.
+                                   </span>
                               </div>
 
                               <div className="footer-right ml-auto mt-1 mt-sm-0">
