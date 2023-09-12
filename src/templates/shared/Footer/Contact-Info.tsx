@@ -1,9 +1,17 @@
 import SocialIcons from "../SocialIcons";
 
-function ContactInfo({ staticProps, company }) {
+function ContactInfo({
+     staticProps,
+     company,
+     title = "Contact Info",
+}: {
+     staticProps: any;
+     company: any;
+     title?: string;
+}) {
      return (
           <div className="widget">
-               <h4 className="widget-title font-weight-bold">Contact Info</h4>
+               <h4 className="widget-title font-weight-bold">{title}</h4>
                <ul className="contact-info">
                     <li>
                          <span className="contact-info-label">Address:</span>

@@ -2,9 +2,6 @@
 import { AppContext } from "@/appProvider";
 import { templateConfig } from "@/templates/config/index";
 import { useContext } from "react";
-import PropTypes from "prop-types";
-import { PlaceholderLayout } from "../components/PlaceholderLayout/PlaceholderLayout";
-import { products } from "@/templates/Theme5/Home/data";
 
 const DynamicComponent = ({
      component,

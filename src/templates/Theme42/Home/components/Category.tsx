@@ -1,209 +1,155 @@
 import { templateImages } from "@/appProvider/templateImages";
+import Image from "next/image";
+import OwlCarousel from "react-owl-carousel";
 
 function Category() {
+     const owlCarouselOptions = {
+          dots: false,
+          margin: 20,
+          nav: false,
+          loop: false,
+          responsive: {
+               "0": {
+                    items: 2,
+               },
+               "768": {
+                    items: 3,
+               },
+               "991": {
+                    items: 4,
+               },
+          },
+     };
+
      return (
-          <section className="category-section">
-               <div className="container">
-                    <h2 className="section-title m-b-2 " data-animation-name="fadeInUpShorter">
-                         Shop By Category
-                    </h2>
-                    <h5
-                         className="section-info p-b-4 mb-2 "
-                         data-animation-name="fadeInUpShorter"
-                         data-animation-delay="200"
-                    >
-                         Only the best seller products added recently in our catalog
-                    </h5>
-
-                    <div
-                         className="row grid "
-                         data-animation-name="fadeInUpShorter"
-                         data-animation-delay="400"
-                    >
-                         <div className="grid-item col-sm-6 col-md-3 height-3-5">
-                              <div className="product-category tw-bg-[#f4f4f2]">
-                                   <a href="demo34-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
-                                                  alt="src"
-                                                  width="264"
-                                                  height="345"
-                                             />
-                                        </figure>
-                                   </a>
-                                   <div className="category-content">
-                                        <ul className="sub-categories">
-                                             <li>
-                                                  <a href="demo34-shop.html">Bath &amp; Shower</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Body Care</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Body Sculpting</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Foot Care</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Handcare</a>
-                                             </li>
-                                        </ul>
-
-                                        <h3>
-                                             <a href="demo34-shop.html">Body</a>
-                                        </h3>
-                                   </div>
-                              </div>
-                         </div>
-                         <div className="grid-item col-sm-6 height-5-5">
-                              <div className="product-category tw-bg-[#f4f4f2]">
-                                   <a href="demo34-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
-                                                  alt="src"
-                                                  width="550"
-                                                  height="564"
-                                             />
-                                        </figure>
-                                   </a>
-                                   <div className="category-content">
-                                        <ul className="sub-categories">
-                                             <li>
-                                                  <a href="demo34-shop.html">Cleansers</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Exfoliators</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Eye Care</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Face Masks</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Lip Care</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Serums</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Toners</a>
-                                             </li>
-                                        </ul>
-
-                                        <h3>
-                                             <a href="demo34-shop.html">Skincare</a>
-                                        </h3>
-                                   </div>
-                              </div>
-                         </div>
-                         <div className="grid-item col-sm-6 col-md-3 height-2-5">
-                              <div className="product-category tw-bg-[#f4f4f4]">
-                                   <a href="demo34-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
-                                                  alt="src"
-                                                  width="264"
-                                                  height="199"
-                                             />
-                                        </figure>
-                                   </a>
-                                   <div className="category-content">
-                                        <ul className="sub-categories">
-                                             <li>
-                                                  <a href="demo34-shop.html">Complexion</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Eyes</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Lips</a>
-                                             </li>
-                                        </ul>
-
-                                        <h3>
-                                             <a href="demo34-shop.html">Makeup</a>
-                                        </h3>
-                                   </div>
-                              </div>
-                         </div>
-                         <div className="grid-item col-sm-6 col-md-3 height-3-5">
-                              <div className="product-category tw-bg-[#f4f4f2]">
-                                   <a href="demo34-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
-                                                  alt="src"
-                                                  width="264"
-                                                  height="345"
-                                             />
-                                        </figure>
-                                   </a>
-                                   <div className="category-content">
-                                        <ul className="sub-categories">
-                                             <li>
-                                                  <a href="demo34-shop.html">
-                                                       Body &amp; Hair Mist
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Fragrance</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Perfume</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Soap</a>
-                                             </li>
-                                        </ul>
-
-                                        <h3>
-                                             <a href="demo34-shop.html">Fragrance</a>
-                                        </h3>
-                                   </div>
-                              </div>
-                         </div>
-                         <div className="grid-item col-sm-6 col-md-3 height-2-5">
-                              <div className="product-category tw-bg-[#f4f4f4]">
-                                   <a href="demo34-shop.html">
-                                        <figure>
-                                             <img
-                                                  src="https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
-                                                  alt="src"
-                                                  width="264"
-                                                  height="199"
-                                             />
-                                        </figure>
-                                   </a>
-                                   <div className="category-content">
-                                        <ul className="sub-categories">
-                                             <li>
-                                                  <a href="demo34-shop.html">Conditioner</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Shampoo</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Styling</a>
-                                             </li>
-                                             <li>
-                                                  <a href="demo34-shop.html">Treatments</a>
-                                             </li>
-                                        </ul>
-
-                                        <h3>
-                                             <a href="demo34-shop.html">Hair</a>
-                                        </h3>
-                                   </div>
-                              </div>
-                         </div>
-                         <div className="grid-col-sizer col-1"></div>
-                    </div>
+          <section className="category-section container">
+               <div
+                    className="d-lg-flex align-items-center "
+                    data-animation-name="fadeInLeftShorter"
+               >
+                    <h2 className="title title-underline divider">Shop Categories</h2>
+                    <a href="demo42-shop.html" className="sicon-title">
+                         VIEW CATEGORIES<i className="fas fa-arrow-right"></i>
+                    </a>
                </div>
+               <OwlCarousel className="owl-carousel owl-theme " {...owlCarouselOptions}>
+                    <div className="product-category">
+                         <a href="demo42-shop.html">
+                              <figure>
+                                   <Image
+                                        src={templateImages.demo42.categoryImage.category1}
+                                        alt="category"
+                                        width="250"
+                                        height="250"
+                                   />
+                              </figure>
+                         </a>
+                         <div className="category-content">
+                              <h3 className="category-title">Auto Parts</h3>
+                              <ul className="sub-categories">
+                                   <li>
+                                        <a href="#">Batteries, Starting And Charging</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Brakes And Traction Control</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Climate Control</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Collision And Hardware</a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div className="product-category">
+                         <a href="demo42-shop.html">
+                              <figure>
+                                   <Image
+                                        src={templateImages.demo42.categoryImage.category2}
+                                        alt="category"
+                                        width="250"
+                                        height="250"
+                                   />
+                              </figure>
+                         </a>
+                         <div className="category-content">
+                              <h3 className="category-title">Interior Accessories</h3>
+                              <ul className="sub-categories">
+                                   <li>
+                                        <a href="#">Alarm And Security</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Dash Covers, Headliners And Visor</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Seat Covers And Seats Accessories</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Sun / Heat Protection</a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div className="product-category">
+                         <a href="demo42-shop.html">
+                              <figure>
+                                   <Image
+                                        src={templateImages.demo42.categoryImage.category3}
+                                        alt="category"
+                                        width="250"
+                                        height="250"
+                                   />
+                              </figure>
+                         </a>
+                         <div className="category-content">
+                              <h3 className="category-title">External Accessories</h3>
+                              <ul className="sub-categories">
+                                   <li>
+                                        <a href="#">Antenna Cables And Masts</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Decals And Graphics</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Exterior Lighting</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">License Plate And Accessories</a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div className="product-category">
+                         <a href="demo42-shop.html">
+                              <figure>
+                                   <Image
+                                        src={templateImages.demo42.categoryImage.category4}
+                                        alt="category"
+                                        width="250"
+                                        height="250"
+                                   />
+                              </figure>
+                         </a>
+                         <div className="category-content">
+                              <h3 className="category-title">Performance</h3>
+                              <ul className="sub-categories">
+                                   <li>
+                                        <a href="#">Body, Suspension, And Steering</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Exhaust</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Fuel System</a>
+                                   </li>
+                                   <li>
+                                        <a href="#">Power Adders Components</a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+               </OwlCarousel>
           </section>
      );
 }

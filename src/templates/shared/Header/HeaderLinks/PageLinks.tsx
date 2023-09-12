@@ -21,6 +21,7 @@ function PageLinks({
                                    idx: number,
                               ) => (
                                    <li key={link.name} className="tw-group">
+                                        {/** TODO: add active links**/}
                                         <Link href={link.url}>{link.name}</Link>
                                         {link?.subMenu && (
                                              <div className="megamenu megamenu-fixed-width megamenu-3cols group-hover:tw-block tw-rounded">

@@ -8,7 +8,7 @@ import theme7TemplateConfig from "./theme7";
 import theme8TemplateConfig from "./theme8";
 import theme9TemplateConfig from "./theme9";
 import theme11TemplateConfig from "./theme11";
-// import theme12TemplateConfig from "./theme12";
+import theme12TemplateConfig from "./theme12";
 import theme13TemplateConfig from "./theme13";
 import theme14TemplateConfig from "./theme14";
 import theme15TemplateConfig from "./theme15";
@@ -47,15 +47,12 @@ export const templateConfig: any = {
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
      theme6: theme6TemplateConfig,
-     // theme6: theme6TemplateConfig,
      theme11: theme11TemplateConfig,
-     // theme22: theme22TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
      theme10: theme10TemplateConfig,
-     // theme11: theme11TemplateConfig,
-     // theme12: theme12TemplateConfig,
+     theme12: theme12TemplateConfig,
      theme13: theme13TemplateConfig,
      theme14: theme14TemplateConfig,
      theme15: theme15TemplateConfig,
