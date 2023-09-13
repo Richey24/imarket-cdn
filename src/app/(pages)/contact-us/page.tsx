@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -10,10 +10,17 @@ import { ContactUsService } from "@/api/contact-us.api";
 import { IcontactUsReq } from "./contact.types";
 import { schema } from "./schema";
 import { getSubDomain } from "@/utils/helper";
+import { AppContext } from "@/appProvider";
 
 export default function ContactUs() {
      const contactUsApiService = new ContactUsService();
-     const [domain, setDomain] = React.useState<string>("");
+     const currentPage = "contact_us";
+
+     const { site } = useContext(AppContext);
+
+     const pageData = site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage);
+     const minifiedData = pageData?.sections[0]?.component.props.static;
+     console.log("minifoed", minifiedData);
 
      const {
           register,
@@ -47,6 +54,7 @@ export default function ContactUs() {
 
      const img1 =
           "https://images.unsplash.com/photo-1689481172416-dae28c4a08b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=822&q=80";
+          
      return (
           <main className="main">
                <GoogleMapComponent></GoogleMapComponent>
@@ -142,12 +150,7 @@ export default function ContactUs() {
                               <h2 className="contact-title">
                                    <strong>Get in touch</strong>
                               </h2>
-                              <p>
-                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                   Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae
-                                   velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet,
-                                   consectetur adipiscing elit.
-                              </p>
+                              <p>{minifiedData?.getInTouch}</p>
 
                               <hr className="tw-mt-3 tw-mb-0" />
 
