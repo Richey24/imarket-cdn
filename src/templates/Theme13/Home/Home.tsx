@@ -11,10 +11,7 @@ import { topRatedProducts } from "./data";
 import { ProductWidget } from "./components/ProductWidget";
 import { SidebarHome } from "./components/SidebarHome";
 import { Banner } from "./components/Banner";
-import { Skeleton, Stack } from "@chakra-ui/react";
 import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/PlaceholderLayout";
-// import Skeleton from "react-loading-skeleton";
-// import "react-loading-skeleton/dist/skeleton.css";
 
 export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
