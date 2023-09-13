@@ -3,16 +3,24 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "@/appProvider";
+import { Next13ProgressBar } from "next13-progressbar";
 import Head from "next/head";
 import { cssImports, templateConfig } from "@/templates/config/index";
 import { PlaceholderLayout } from "../components/PlaceholderLayout/PlaceholderLayout";
 import { SitesField, ThemeName } from "@/appProvider/types";
 import { NoSite } from "../components/NoSite/NoSite";
 import "react-loading-skeleton/dist/skeleton.css";
+import Sidebar from "../../templates/shared/SideBar";
+import { setSideBarVisibility } from "@/redux/global";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+     const dispatch = useDispatch();
+     const { isSideBarVisible } = useSelector((state: RootState) => state.general);
+
      const { site, loading, setLoading, categories, products } = useContext<{
           site: SitesField;
           loading: boolean;
@@ -21,18 +29,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           products: any;
      }>(AppContext);
      const [styleLoader, setStyleLoader] = useState(false);
+     const [menuBtn, setMenuBtn] = useState("template-menu");
 
      // console.log("site.theme.theme ", site);
      useEffect(() => {
           if (site) {
                setStyleLoader(true);
-               import(`../../assets/css/${cssImports[site.theme.theme as ThemeName]}.min.css`).then(
-                    () => {
-                         setStyleLoader(false);
-                    },
-               );
+               import(
+                    `../../assets/css/${cssImports()[site.theme.theme as ThemeName]}.min.css`
+               ).then(() => {
+                    setStyleLoader(false);
+               });
           }
      }, [site]);
+
+     console.log(site, loading);
+
 
      if (!site && loading) {
           return <PlaceholderLayout />;
@@ -44,6 +56,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const Header = defualtTemplate?.["header"];
      const Footer = defualtTemplate?.["footer"];
 
+     const handleSideBarClose = () => {
+          dispatch(setSideBarVisibility());
+     };
+
+     const bodyStyles = isSideBarVisible
+          ? { overflow: "hidden !important", height: "100vh" }
+          : { overflow: "unset", height: "auto" };
+
      return (
           <html lang="en">
                {/* <Head>
@@ -51,7 +71,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                </Head> */}
                {!styleLoader && (
                     <body className={"homepage relative"}>
-                         <div className="page-wrapper">
+                         <Next13ProgressBar
+                              height="4px"
+                              color="#9d78f1"
+                              options={{ showSpinner: true }}
+                              showOnShallow
+                         />
+
+                         <Sidebar
+                              data={{
+                                   ...site.theme.header.component.props,
+                                   company: site.company,
+                                   categories,
+                              }}
+                              isOpen={isSideBarVisible}
+                              toggleSidebar={handleSideBarClose}
+                         />
+                         <div
+                              className={`page-wrapper tw-flex-1 tw-transition-transform ${
+                                   isSideBarVisible ? "tw-translate-x-[28.889rem]" : ""
+                              }`}
+                         >
                               <Header
                                    props={{
                                         ...site.theme.header.component.props,
@@ -59,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                         categories,
                                    }}
                               />
+
                               {children}
                               <Footer
                                    props={{
@@ -67,8 +108,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                    }}
                               />
                          </div>
+                         {isSideBarVisible && (
+                              <div
+                                   className="tw-fixed tw-top-0 tw-bottom-0 tw-left-0 tw-w-screen tw-h-screen tw-bg-black tw-opacity-40 tw-cursor-pointer"
+                                   onClick={handleSideBarClose}
+                              />
+                         )}
                     </body>
                )}
+               <style jsx global>{`
+                    body {
+                         overflow: ${bodyStyles.overflow};
+                         height: ${bodyStyles.height};
+                    }
+               `}</style>
           </html>
      );
 }

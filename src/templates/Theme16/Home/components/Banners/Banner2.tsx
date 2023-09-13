@@ -1,5 +1,5 @@
 import { templateImages } from "@/appProvider/templateImages";
-import Carousel from "react-bootstrap/Carousel";
+ 
 
 export const Banner2 = () => {
      return (

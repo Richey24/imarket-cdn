@@ -1,521 +1,799 @@
-
 export const templateImages = {
-    allTemplateImage: {
-        product: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-6.jpg",
-            product7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-7.jpg",
-            product8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-8.jpg",
-            product9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-9.jpg",
-            product10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-10.jpg",
-            product11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-11.jpg",
-            product12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-12.jpg",
-            product13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-13.jpg",
-            product14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-14.jpg",
-            product15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-15.jpg",
-            product16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-16.jpg",
-            product17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-17.jpg",
-            product18: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-18.jpg",
-            product19: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-19.jpg",
-            product20: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-20.jpg",
-            product21: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-21.jpg",
-            product22: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-22.jpg",
-            product23: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-23.jpg",
-            product24: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-24.jpg",
-            product25: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-25.jpg",
-            product26: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-1-2.jpg",
-            product27: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-2-2.jpg",
-            product28: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-3-2.jpg",
-            product29: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-4-2.jpg",
-            product30: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-5-2.jpg",
-            product31: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-6-2.jpg",
-            product32: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-7-2.jpg",
-            product33: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-8-2.jpg",
-            product34: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-9-2.jpg",
-            product35: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-10-2.jpg",
-            product36: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-11-2.jpg",
-            product37: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-12-2.jpg",
-        },
-        category: {
-            categoryImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/category/product-1.jpg",
-            categoryImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/category/product-2.jpg",
-        },
-        grid: {
-            gridImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-1.jpg",
-            gridImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-2.jpg",
-            gridImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-3.jpg",
-            gridImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-4.jpg",
-            gridImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-3-2.jpg"
-        },
-        zoomImage: {
-            zoomImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-1.jpg",
-            zoomImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-2.jpg",
-            zoomImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-3.jpg",
-            zoomImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-4.jpg",
-            zoomImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-5.jpg",
-            zoomImage6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-1-big.jpg",
-            zoomImage7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-2-big.jpg",
-            zoomImage8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-3-big.jpg",
-            zoomImage9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-4-big.jpg",
-            zoomImage10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-5-big.jpg",
-        },
-        smallImage: {
-            smallImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-1.jpg",
-            smallImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-2.jpg",
-            smallImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-3.jpg",
-            smallImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-4.jpg",
-            smallImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-5.jpg",
-            smallImage6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-6.jpg",
-            smallImage7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-7.jpg",
-            smallImage8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-8.jpg",
-            smallImage9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-9.jpg",
-            smallImage10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-10.jpg",
-            smallImage12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-12.jpg",
-            smallImage13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-1-2.jpg",
-            smallImage14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-2-2.jpg",
-            smallImage15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-3-2.jpg",
-            smallImage16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-4-2.jpg",
-            smallImage17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-5-2.jpg",
-            smallImage18: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-6-2.jpg",
-            smallImage19: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-7-2.jpg",
-            smallImage20: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-8-2.jpg",
-            smallImage21: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-9-2.jpg",
-            smallImage22: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-10-2.jpg",
-            smallImage23: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-11-2.jpg",
-            smallImage24: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-12-2.jpg",
-        },
-        singleImage: {
-            singleImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/single/body-shape.png",
-            singleImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/single/product-img.jpg"
-        }
-    },
-    allBannerImage: {
-        banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-fashion-1.jpg",
-        banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-fashion-2.jpg",
-        banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-sidebar-bg.jpg",
-        banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-sidebar.jpg",
-        banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-top.jpg",
-    },
-    allBrandImage: {
-        mainImage: {
-            brand1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand1.png",
-            brand2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand2.png",
-            brand3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand3.png",
-            brand4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand4.png",
-            brand5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand5.png",
-            brand6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand6.png",
-        },
-        smallWhiteImage: {
-            brand1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand1.png",
-            brand2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand2.png",
-            brand3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand3.png",
-            brand4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand4.png",
-            brand5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand5.png",
-            brand6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand6.png",
-        },
-        smallImage: {
-            brand1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand1.png",
-            brand2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand2.png",
-            brand3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand3.png",
-            brand4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand4.png",
-            brand5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand5.png",
-            brand6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand6.png",
-        }
-    },
-    allCategoryImage: {
-        category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-1.jpg",
-        category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-2.jpg",
-        category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-3.jpg",
-        category4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-4.jpg",
-        category5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-5.jpg",
-        category6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-6.jpg",
-        category7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-7.jpg",
-        category8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-8.jpg",
-        category9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-9.jpg",
-        category10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/bulb.jpg",
-        category11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-beauty-cat.jpg",
-        category12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-electronics-cat.jpg",
-        category13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-fashion-cat.jpg",
-        category14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-sports-cat.jpg",
-        category15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/head_phone.jpg",
-        category16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/laptop.jpg",
-        category17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/smart_phone.jpg",
-        category18: "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/smart_watch.jpg",
-    },
-    clientImage: {
-        client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client-1.jpg",
-        client2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client-2.jpg",
-        client3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client-3.jpg",
-        client4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client1.png",
-        client5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client2.png"
-    },
-    effectImage: {
-        effect1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/s1.png",
-        effect2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/s2.png",
-        effect3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/s3.png",
-        effect4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/sparkle1.png",
-        effect5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/sparkle2.png",
-    },
-    elementImage: {
-        mainImage: {
-            element1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/device.png",
-            element2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/page-header.jpg",
-            element3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/parallax.jpg",
-        },
-        alertImage: {
-            alert1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/alert.png",
-            alert2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/close.svg",
-            alert3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/exclamation.png",
-            alert4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/info.png",
-            alert5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/tick.png",
-        },
-        banners: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/slide1.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/slide2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/slide3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/banner-effect.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/home_slide1.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/home_slide2.jpg",
-            banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/icon1.png",
-        },
-        counterImage: {
-            counter1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/counter/parallax.jpg"
-        },
-        infoBox: {
-            infoBox1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/info-box/history-1.jpg",
-            infoBox2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/info-box/history-2.jpg",
-            infoBox3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/info-box/history-3.jpg",
-        },
-        post: {
-            type2: {
-                post1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type2/post-1.jpg",
-                post2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type2/post-2.jpg",
-                post3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type2/post-3.jpg",
-            },
-            type3: {
-                post1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type3/post-1.jpg",
-                post2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type3/post-2.jpg",
-                post3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type3/post-3.jpg",
-            },
-            type4: {
-                post1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/1-1.jpg",
-                post2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/1-2.jpg",
-                post3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/2-1.jpg",
-                post4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/2-2.jpg",
-            }
-        },
-        testimonyImage: {
-            testimony1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/1-1.jpg",
-            testimony2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/testimonial/client1.png",
-            testimony3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/testimonial/parallax.jpg",
-        }
-    },
-    iconImage: {
-        icon1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/icon/favicon.ico",
-        icon2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/icon/favicon.png",
-    },
-    paymentImage: {
-        payment1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-paypal.svg",
-        payment2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-stripe.png",
-        payment3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-verisign.svg",
-        payment4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-visa.svg",
-    },
-    logoImage: {
-        logo1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/logos/your-logo.jpg",
-        logo2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/logos/your-logo.png",
-    },
-    teamImage: {
-        team1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-1.jpg",
-        team2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-2.jpg",
-        team3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-3.jpg",
-        team4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-4.jpg",
-    },
-    menuBanner: {
-        menu1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner.jpg",
-        menu2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner-1.jpg",
-    },
-    demo1: {
-        productImages: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-1-2.jpg",
-            product7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-3-2.jpg",
-            product8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-4-2.jpg",
-            product9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-5-2.jpg",
-        },
-        smallImages: {
-            smallImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-2.jpg",
-            smallImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-4.jpg",
-            smallImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-5.jpg",
-            smallImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-6.jpg",
-            smallImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-7.jpg",
-            smallImage6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-8.jpg",
-            smallImage7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-9.jpg",
-            smallImage8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-10.jpg",
-            smallImage9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-11.jpg",
-            smallImage10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-4-2.jpg",
-            smallImage11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-5-2.jpg",
-            smallImage12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-6-2.jpg",
-            smallImage13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-7-2.jpg",
-            smallImage14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-8-2.jpg",
-            smallImage15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-9-2.jpg",
-            smallImage16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-10-2.jpg",
-            smallImage17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-11-2.jpg",
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-slide.png",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-1.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-2.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-3.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-4.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-5.jpg",
-            banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-6.jpg",
-            banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-7.jpg",
-            banner9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-8.jpg",
-        },
-        slider: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-1.png",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-2.jpg",
-            slider3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-3.jpg",
-        }
-    },
-    demo2: {
-        productImages: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-6.jpg",
-            product7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-7.jpg",
-            product8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-8.jpg",
-            product9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-9.jpg",
-            product10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-10.jpg",
-            product11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-11.jpg",
-            product12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-12.jpg",
-            product13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-13.jpg",
-            product14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-14.jpg",
-            product15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-15.jpg",
-            product16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-16.jpg",
-            product17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-17.jpg",
-            product18: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-18.jpg",
-            product19: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-19.jpg",
-            product20: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-20.jpg",
-            product21: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-21.jpg",
-            product22: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-22.jpg",
-            product23: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-23.jpg",
-            product24: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-24.jpg",
-            product25: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-25.jpg",
-            product26: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-1-2.jpg"
-        },
-        smallImages: {
-            smallImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-1.jpg",
-            smallImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-2.jpg",
-            smallImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-3.jpg",
-            smallImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-4.jpg",
-            smallImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-5.jpg",
-            smallImage6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-6.jpg",
-            smallImage7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-7.jpg",
-            smallImage8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-8.jpg",
-            smallImage9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-9.jpg",
-            smallImage10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-1-2.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-5.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-6.jpg",
-            banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-7.jpg",
-            banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-8.jpg",
-            banner9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-9.jpg",
-            banner10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-1.jpg",
-            banner11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-fashion-1.jpg",
-            banner12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-fashion-2.jpg",
-            banner13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-sidebar.jpg",
-            banner14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-top.jpg",
-        },
-        sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/slider/slide-2.jpg",
-            slider3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/slider/slide-3.jpg",
-        }
-    },
-    demo3: {
-        productImages: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-6.jpg",
-            product7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-7.jpg",
-            product8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-8.jpg",
-            product9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-9.jpg",
-            product10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-10.jpg",
-            product11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-11.jpg",
-            product12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-12.jpg",
-            product13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-13.jpg",
-            product14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-14.jpg",
-            product15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-15.jpg",
-            product16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-2-2.jpg",
-            product17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-4-2.jpg",
-            product18: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-6-2.jpg",
-            product19: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-8-2.jpg",
-            product20: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-9-2.jpg",
-        },
-        smallImages: {
-            smallImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-4.jpg",
-            smallImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-5.jpg",
-            smallImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-15.jpg",
-            smallImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-16.jpg",
-            smallImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-17.jpg",
-            smallImage6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-18.jpg",
-            smallImage7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-4-2.jpg",
-            smallImage8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-15-2.jpg",
-            smallImage9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-16-2.jpg",
-            smallImage10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-17-2.jpg",
-            smallImage11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-18-2.jpg",
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/banner-1.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/banner-sidebar.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner1.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner2.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner3.jpg",
-            banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner4.jpg",
-        },
-        sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/slider/slide1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/slider/slide2.jpg",
-        },
-        categoryImage: {
-            category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-1.jpg",
-            category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-2.jpg",
-            category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-3.jpg",
-            category4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-4.jpg",
-            category5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-5.jpg",
-            category6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-6.jpg",
-        },
-        aboutImage: {
-            about1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/about/img-1.jpg",
-            about2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/about/img-2.jpg",
-            about3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/about/img-3.jpg",
-        }
-    },
-    demo4: {
-        productImages: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-6.jpg",
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-5.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-1.jpg",
-        },
-        sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/slider/slide-2.jpg",
-        }
-    },
-    demo5: {
-        productImages: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-6.jpg",
-            product7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-7.jpg",
-            product8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-8.jpg",
-            product9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-9.jpg",
-            product10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-10.jpg",
-            product11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-11.jpg",
-            product12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-12.jpg",
-            product13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-13.jpg",
-            product14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-14.jpg",
-            product15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-15.jpg",
-            product16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-16.jpg",
-            product17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-17.jpg",
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-1.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-brand.png",
-            banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-sidebar.jpg",
-            banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-top.jpg",
-        },
-        sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-2.jpg",
-        }
-    },
-    demo6: {
-        productImages: {
-            product1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-1.jpg",
-            product2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-2.jpg",
-            product3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-3.jpg",
-            product4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-4.jpg",
-            product5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-5.jpg",
-            product6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-6.jpg",
-            product7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-7.jpg",
-            product8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-8.jpg",
-            product9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-9.jpg",
-            product10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-10.jpg",
-            product11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-11.jpg",
-            product12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-12.jpg",
-            product13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-13.jpg",
-            product14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-14.jpg",
-            product15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-15.jpg",
-            product16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-16.jpg",
-            product17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-17.jpg",
-        },
+     allTemplateImage: {
+          product: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-12.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-13.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-14.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-15.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-16.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-17.jpg",
+               product18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-18.jpg",
+               product19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-19.jpg",
+               product20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-20.jpg",
+               product21:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-21.jpg",
+               product22:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-22.jpg",
+               product23:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-23.jpg",
+               product24:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-24.jpg",
+               product25:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-25.jpg",
+               product26:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-1-2.jpg",
+               product27:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-2-2.jpg",
+               product28:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-3-2.jpg",
+               product29:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-4-2.jpg",
+               product30:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-5-2.jpg",
+               product31:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-6-2.jpg",
+               product32:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-7-2.jpg",
+               product33:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-8-2.jpg",
+               product34:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-9-2.jpg",
+               product35:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-10-2.jpg",
+               product36:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-11-2.jpg",
+               product37:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/product-12-2.jpg",
+          },
+          category: {
+               categoryImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/category/product-1.jpg",
+               categoryImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/category/product-2.jpg",
+          },
+          grid: {
+               gridImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-1.jpg",
+               gridImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-2.jpg",
+               gridImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-3.jpg",
+               gridImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-4.jpg",
+               gridImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/grid/product-3-2.jpg",
+          },
+          zoomImage: {
+               zoomImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-1.jpg",
+               zoomImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-2.jpg",
+               zoomImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-3.jpg",
+               zoomImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-4.jpg",
+               zoomImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-5.jpg",
+               zoomImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-1-big.jpg",
+               zoomImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-2-big.jpg",
+               zoomImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-3-big.jpg",
+               zoomImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-4-big.jpg",
+               zoomImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/zoom/product-5-big.jpg",
+          },
+          smallImage: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-1.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-2.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-3.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-4.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-5.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-6.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-7.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-8.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-9.jpg",
+               smallImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-10.jpg",
+               smallImage12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-12.jpg",
+               smallImage13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-1-2.jpg",
+               smallImage14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-2-2.jpg",
+               smallImage15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-3-2.jpg",
+               smallImage16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-4-2.jpg",
+               smallImage17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-5-2.jpg",
+               smallImage18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-6-2.jpg",
+               smallImage19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-7-2.jpg",
+               smallImage20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-8-2.jpg",
+               smallImage21:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-9-2.jpg",
+               smallImage22:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-10-2.jpg",
+               smallImage23:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-11-2.jpg",
+               smallImage24:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/small/product-12-2.jpg",
+          },
+          singleImage: {
+               singleImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/single/body-shape.png",
+               singleImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/all-template-product/single/product-img.jpg",
+          },
+     },
+     allBannerImage: {
+          banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-fashion-1.jpg",
+          banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-fashion-2.jpg",
+          banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-sidebar-bg.jpg",
+          banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-sidebar.jpg",
+          banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/banner/banner-top.jpg",
+     },
+     allBrandImage: {
+          mainImage: {
+               brand1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand1.png",
+               brand2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand2.png",
+               brand3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand3.png",
+               brand4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand4.png",
+               brand5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand5.png",
+               brand6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/brand6.png",
+          },
+          smallWhiteImage: {
+               brand1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand1.png",
+               brand2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand2.png",
+               brand3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand3.png",
+               brand4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand4.png",
+               brand5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand5.png",
+               brand6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small-white/brand6.png",
+          },
+          smallImage: {
+               brand1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand1.png",
+               brand2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand2.png",
+               brand3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand3.png",
+               brand4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand4.png",
+               brand5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand5.png",
+               brand6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/brand/small/brand6.png",
+          },
+     },
+     allCategoryImage: {
+          category1:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-1.jpg",
+          category2:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-2.jpg",
+          category3:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-3.jpg",
+          category4:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-4.jpg",
+          category5:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-5.jpg",
+          category6:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-6.jpg",
+          category7:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-7.jpg",
+          category8:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-8.jpg",
+          category9:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-9.jpg",
+          category10:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/bulb.jpg",
+          category11:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-beauty-cat.jpg",
+          category12:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-electronics-cat.jpg",
+          category13:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-fashion-cat.jpg",
+          category14:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/category-sports-cat.jpg",
+          category15:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/head_phone.jpg",
+          category16:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/laptop.jpg",
+          category17:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/smart_phone.jpg",
+          category18:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/category-images/smart_watch.jpg",
+     },
+     clientImage: {
+          client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client-1.jpg",
+          client2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client-2.jpg",
+          client3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client-3.jpg",
+          client4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client1.png",
+          client5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/clients/client2.png",
+     },
+     effectImage: {
+          effect1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/s1.png",
+          effect2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/s2.png",
+          effect3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/s3.png",
+          effect4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/sparkle1.png",
+          effect5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/effects/sparkle2.png",
+     },
+     elementImage: {
+          mainImage: {
+               element1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/device.png",
+               element2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/page-header.jpg",
+               element3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/parallax.jpg",
+          },
+          alertImage: {
+               alert1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/alert.png",
+               alert2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/close.svg",
+               alert3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/exclamation.png",
+               alert4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/info.png",
+               alert5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/alert/tick.png",
+          },
+          banners: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/slide1.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/slide2.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/slide3.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/banner-effect.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/home_slide1.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/home_slide2.jpg",
+               banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/banners/icon1.png",
+          },
+          counterImage: {
+               counter1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/counter/parallax.jpg",
+          },
+          infoBox: {
+               infoBox1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/info-box/history-1.jpg",
+               infoBox2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/info-box/history-2.jpg",
+               infoBox3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/info-box/history-3.jpg",
+          },
+          post: {
+               type2: {
+                    post1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type2/post-1.jpg",
+                    post2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type2/post-2.jpg",
+                    post3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type2/post-3.jpg",
+               },
+               type3: {
+                    post1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type3/post-1.jpg",
+                    post2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type3/post-2.jpg",
+                    post3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type3/post-3.jpg",
+               },
+               type4: {
+                    post1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/1-1.jpg",
+                    post2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/1-2.jpg",
+                    post3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/2-1.jpg",
+                    post4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/2-2.jpg",
+               },
+          },
+          testimonyImage: {
+               testimony1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/post/type4/1-1.jpg",
+               testimony2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/testimonial/client1.png",
+               testimony3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/testimonial/parallax.jpg",
+          },
+     },
+     iconImage: {
+          icon1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/icon/favicon.ico",
+          icon2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/icon/favicon.png",
+     },
+     paymentImage: {
+          payment1:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-paypal.svg",
+          payment2:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-stripe.png",
+          payment3:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-verisign.svg",
+          payment4:
+               "https://absa7kzimnaf.blob.core.windows.net/templates-images/payment/payment-visa.svg",
+     },
+     logoImage: {
+          logo1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/logos/your-logo.jpg",
+          logo2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/logos/your-logo.png",
+     },
+     teamImage: {
+          team1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-1.jpg",
+          team2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-2.jpg",
+          team3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-3.jpg",
+          team4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/team/member-4.jpg",
+     },
+     menuBanner: {
+          menu1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner.jpg",
+          menu2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/elements/menu-banner-1.jpg",
+     },
+     demo1: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-1-2.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-3-2.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-4-2.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/product-5-2.jpg",
+          },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-2.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-4.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-5.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-6.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-7.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-8.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-9.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-10.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-11.jpg",
+               smallImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-4-2.jpg",
+               smallImage11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-5-2.jpg",
+               smallImage12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-6-2.jpg",
+               smallImage13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-7-2.jpg",
+               smallImage14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-8-2.jpg",
+               smallImage15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-9-2.jpg",
+               smallImage16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-10-2.jpg",
+               smallImage17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/small-images/product-11-2.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-slide.png",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-1.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-2.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-3.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-4.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-5.jpg",
+               banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-6.jpg",
+               banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-7.jpg",
+               banner9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/banner/banner-8.jpg",
+          },
+          slider: {
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-1.png",
+               slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-2.jpg",
+               slider3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-3.jpg",
+          },
+     },
+     demo2: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-12.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-13.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-14.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-15.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-16.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-17.jpg",
+               product18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-18.jpg",
+               product19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-19.jpg",
+               product20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-20.jpg",
+               product21:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-21.jpg",
+               product22:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-22.jpg",
+               product23:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-23.jpg",
+               product24:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-24.jpg",
+               product25:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-25.jpg",
+               product26:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/product-1-2.jpg",
+          },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-1.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-2.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-3.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-4.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-5.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-6.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-7.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-8.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-9.jpg",
+               smallImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/small-images/product-1-2.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-2.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-3.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-4.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-5.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-6.jpg",
+               banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-7.jpg",
+               banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-8.jpg",
+               banner9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-9.jpg",
+               banner10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-1.jpg",
+               banner11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-fashion-1.jpg",
+               banner12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-fashion-2.jpg",
+               banner13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-sidebar.jpg",
+               banner14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/banner/banner-top.jpg",
+          },
+          sliderImage: {
+               slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/slider/slide-1.jpg",
+               slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/slider/slide-2.jpg",
+               slider3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo2-product/slider/slide-3.jpg",
+          },
+     },
+     demo3: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-12.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-13.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-14.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-15.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-2-2.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-4-2.jpg",
+               product18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-6-2.jpg",
+               product19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-8-2.jpg",
+               product20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/product-9-2.jpg",
+          },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-4.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-5.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-15.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-16.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-17.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-18.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-4-2.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-15-2.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-16-2.jpg",
+               smallImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-17-2.jpg",
+               smallImage11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/small-images/product-18-2.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/banner-1.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/banner-sidebar.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner1.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner2.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner3.jpg",
+               banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/banner/home-banner4.jpg",
+          },
+          sliderImage: {
+               slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/slider/slide1.jpg",
+               slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/slider/slide2.jpg",
+          },
+          categoryImage: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-3.jpg",
+               category4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-4.jpg",
+               category5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-5.jpg",
+               category6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/category/category-6.jpg",
+          },
+          aboutImage: {
+               about1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/about/img-1.jpg",
+               about2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/about/img-2.jpg",
+               about3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo3-product/about/img-3.jpg",
+          },
+     },
+     demo4: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-6.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-2.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-3.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-4.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-5.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-1.jpg",
+          },
+          sliderImage: {
+               slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/slider/slide-1.jpg",
+               slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/slider/slide-2.jpg",
+          },
+     },
+     demo5: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-12.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-13.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-14.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-15.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-16.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-17.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-1.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-brand.png",
+               banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-sidebar.jpg",
+               banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-top.jpg",
+          },
+          sliderImage: {
+               slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-1.jpg",
+               slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-2.jpg",
+          },
+     },
+     demo6: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-12.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-13.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-14.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-15.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-16.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/product-17.jpg",
+          },
 
-        smallImages: {
-            smallImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-1.jpg",
-            smallImage2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-2.jpg",
-            smallImage3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-3.jpg",
-            smallImage4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-4.jpg",
-            smallImage5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-5.jpg",
-            smallImage6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-6.jpg",
-            smallImage7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-7.jpg",
-            smallImage8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-8.jpg",
-            smallImage9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-9.jpg",
-            smallImage10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-10.jpg",
-            smallImage11: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-11.jpg",
-            smallImage12: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-12.jpg",
-            smallImage13: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-1-2.jpg",
-            smallImage14: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-2-2.jpg",
-            smallImage15: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-3-2.jpg",
-            smallImage16: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-4-2.jpg",
-            smallImage17: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-5-2.jpg",
-            smallImage18: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-6-2.jpg",
-            smallImage19: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-7-2.jpg",
-            smallImage20: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-8-2.jpg",
-            smallImage21: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-9-2.jpg",
-            smallImage22: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-10-2.jpg",
-            smallImage23: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-11-2.jpg",
-            smallImage24: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-12-2.jpg",
-        },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-1.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-2.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-3.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-4.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-5.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-6.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-7.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-8.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-9.jpg",
+               smallImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-10.jpg",
+               smallImage11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-11.jpg",
+               smallImage12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-12.jpg",
+               smallImage13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-1-2.jpg",
+               smallImage14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-2-2.jpg",
+               smallImage15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-3-2.jpg",
+               smallImage16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-4-2.jpg",
+               smallImage17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-5-2.jpg",
+               smallImage18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-6-2.jpg",
+               smallImage19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-7-2.jpg",
+               smallImage20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-8-2.jpg",
+               smallImage21:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-9-2.jpg",
+               smallImage22:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-10-2.jpg",
+               smallImage23:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-11-2.jpg",
+               smallImage24:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/small-images/product-12-2.jpg",
+          },
 
         zoomImages: {
             zoomImage1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/zoom/product-1.jpg",
@@ -531,17 +809,17 @@ export const templateImages = {
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-1.jpg",
+            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/banner-2.jpg",
+            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/banner-3.jpg",
+            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/banner-4.jpg",
+            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/banner-1.jpg",
             banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/banner-sidebar.jpg",
             banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/banner-sidebar.png",
             banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/banner/category-banner.jpg",
         },
         sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-2.mp4",
+            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/slider/slide-1.jpg",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/slider/slide-2.mp4",
         },
         clientImage: {
             client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo6-product/client/client-1.jpg",
@@ -605,10 +883,10 @@ export const templateImages = {
         },
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-1.jpg",
+            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-2.jpg",
+            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-3.jpg",
+            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-4.jpg",
+            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-1.jpg",
             banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-sidebar.jpg",
             banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-top-2.jpg",
             banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo7-product/banner/banner-top.jpg",
@@ -697,7 +975,7 @@ export const templateImages = {
         },
         sliderImage: {
             slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-2.mp4",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-2.jpg",
         },
         instagramImage: {
             insta1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/instagram/1.jpg",
@@ -822,14 +1100,20 @@ export const templateImages = {
             "product28": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/product-14-white.jpg"
         },
 
-        grid: {
-            "gridImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-1.jpg",
-            "gridImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-2.jpg",
-            "gridImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-3.jpg",
-            "gridImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-4.jpg",
-            "gridImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-5.jpg",
-            "gridImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-6.jpg"
-        },
+          grid: {
+               gridImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-1.jpg",
+               gridImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-2.jpg",
+               gridImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-3.jpg",
+               gridImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-4.jpg",
+               gridImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-5.jpg",
+               gridImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-6.jpg",
+          },
 
         home: {
             "homeImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/home/product-1.jpg",
@@ -859,20 +1143,12 @@ export const templateImages = {
         },
         sliderImage: {
             slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-2.mp4",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-2.jpg",
         },
         aboutImage: {
             about1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/about/img-1.jpg",
             about2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/about/img-2.jpg",
             about3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/about/img-3.jpg",
-        },
-        gridImage: {
-            grid1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-1.jpg",
-            grid2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-2.jpg",
-            grid3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-3.jpg",
-            grid4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-4.jpg",
-            grid5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-5.jpg",
-            grid6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/grid/product-6.jpg",
         },
         homeImage: {
             home1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/home/product-1.jpg",
@@ -982,26 +1258,44 @@ export const templateImages = {
             "product78": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/product-18-white.jpg"
         },
 
-        smallImages: {
-            "smallImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-1-2.jpg",
-            "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-2-2.jpg",
-            "smallImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-3-2.jpg",
-            "smallImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-4-2.jpg",
-            "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-5-2.jpg",
-            "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-6-2.jpg",
-            "smallImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-7-2.jpg",
-            "smallImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-8-2.jpg",
-            "smallImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-9-2.jpg",
-            "smallImage10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-1.jpg",
-            "smallImage11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-2.jpg",
-            "smallImage12": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-3.jpg",
-            "smallImage13": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-4.jpg",
-            "smallImage14": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-5.jpg",
-            "smallImage15": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-6.jpg",
-            "smallImage16": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-7.jpg",
-            "smallImage17": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-8.jpg",
-            "smallImage18": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-9.jpg"
-        },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-1-2.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-2-2.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-3-2.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-4-2.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-5-2.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-6-2.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-7-2.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-8-2.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-9-2.jpg",
+               smallImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-1.jpg",
+               smallImage11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-2.jpg",
+               smallImage12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-3.jpg",
+               smallImage13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-4.jpg",
+               smallImage14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-5.jpg",
+               smallImage15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-6.jpg",
+               smallImage16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-7.jpg",
+               smallImage17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-8.jpg",
+               smallImage18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/small-images/product-9.jpg",
+          },
 
         zoom: {
             "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/zoom/product-1.jpg",
@@ -1023,7 +1317,7 @@ export const templateImages = {
         },
         sliderImage: {
             slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/slider/slide-2.mp4",
+            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/slider/slide-2.jpg",
         },
         aboutImage: {
             about1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo11-product/about/history-thumb.png",
@@ -1272,7 +1566,7 @@ export const templateImages = {
             banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo15-product/banner/banner-top.jpg",
         },
         sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo14-product/slider/slide-1.jpg",
+            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo15-product/slider/slide-1.jpg",
             slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo15-product/slider/slide-2.jpg",
         },
     },
@@ -2104,9 +2398,9 @@ export const templateImages = {
         bannerImage: {
             banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/1.png",
             banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/2.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38/banner/3.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo48/banner/4.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo58/banner/5.jpg",
+            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/3.jpg",
+            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/4.jpg",
+            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/banner/5.jpg",
         },
         clientImage: {
             client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo28/member/client-1.jpg",
@@ -2621,323 +2915,504 @@ export const templateImages = {
             "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/small-images/product-6.jpg"
         },
 
-        zoomImages: {
-            "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-1.jpg",
-            "zoomImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-2.jpg",
-            "zoomImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-3.jpg",
-            "zoomImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-4.jpg",
-            "zoomImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-1-big.jpg",
-            "zoomImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-2-big.jpg",
-            "zoomImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-3-big.jpg",
-            "zoomImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-4-big.jpg"
-        },
-        categoryImages: {
-            "category1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-1.jpg",
-            "category2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-2.jpg",
-            "category3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-3.jpg",
-            "category4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-4.jpg",
-            "category5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-5.jpg",
-            "category6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-6.jpg",
-            "category7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-7.jpg",
-            "category8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-8.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner1.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner2.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner3.jpg",
-            banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner4.jpg",
-            banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner5.jpg",
-            banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner6.jpg",
-            banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner7.jpg",
-        },
-        sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide-1.jpg",
-            slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide-2.jpg",
-            slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide1.jpg",
-            slide4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide2.jpg",
-        }
-    },
-    demo37: {
-        productImages: {
-            "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-1.jpg",
-            "product2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-2.jpg",
-            "product3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-3.jpg",
-            "product4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-4.jpg",
-            "product5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-5.jpg",
-            "product6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-6.jpg",
-            "product7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-7.jpg",
-            "product8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-8.jpg",
-            "product9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-9.jpg",
-            "product10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-10.jpg",
-            "product11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-11.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/banner/banner.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/banner/home_banner1.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/banner/icon1.png",
-        },
-        sliderImage: {
-            slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/slider/slide-1.jpg",
-            slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/slider/slide-2.jpg",
-        },
-        categoryImage: {
-            category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat1.jpg",
-            category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat2.jpg",
-            category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat3.jpg",
-            category4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat4.jpg",
-            category5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat5.jpg",
-            category6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat6.jpg",
-            category7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat7.jpg",
-            category8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat8.jpg",
-            category9: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat9.jpg",
-            category10: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat10.png",
-        }
-    },
-    demo38: {
-        productImages: {
-            "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-1.jpg",
-            "product2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-2.jpg",
-            "product3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-3.jpg",
-            "product4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-4.jpg",
-            "product5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-5.jpg",
-            "product6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-6.jpg",
-            "product7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-7.jpg",
-            "product8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-8.jpg",
-            "product9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-9.jpg",
-            "product10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-10.jpg",
-            "product11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-11.jpg",
-            "product12": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-12.jpg"
-        },
-        smallImages: {
-            "smallImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-1.jpg",
-            "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-2.jpg",
-            "smallImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-3.jpg",
-            "smallImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-4.jpg",
-            "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-5.jpg",
-            "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-6.jpg",
-            "smallImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-7.jpg",
-            "smallImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-8.jpg",
-            "smallImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-9.jpg"
-        },
+          zoomImages: {
+               zoomImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-1.jpg",
+               zoomImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-2.jpg",
+               zoomImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-3.jpg",
+               zoomImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-4.jpg",
+               zoomImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-1-big.jpg",
+               zoomImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-2-big.jpg",
+               zoomImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-3-big.jpg",
+               zoomImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/zoom/product-4-big.jpg",
+          },
+          categoryImages: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-3.jpg",
+               category4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-4.jpg",
+               category5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-5.jpg",
+               category6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-6.jpg",
+               category7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-7.jpg",
+               category8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/categories/category-8.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner1.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner2.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner3.jpg",
+               banner5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner4.jpg",
+               banner6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner5.jpg",
+               banner7: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner6.jpg",
+               banner8: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/banner/banner7.jpg",
+          },
+          sliderImage: {
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide-1.jpg",
+               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide-2.jpg",
+               slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide1.jpg",
+               slide4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo36-product/slider/slide2.jpg",
+          },
+     },
+     demo37: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/product-11.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/banner/banner.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/banner/home_banner1.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/banner/icon1.png",
+          },
+          sliderImage: {
+               slider1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/slider/slide-1.jpg",
+               slider2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/slider/slide-2.jpg",
+          },
+          categoryImage: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat3.jpg",
+               category4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat4.jpg",
+               category5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat5.jpg",
+               category6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat6.jpg",
+               category7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat7.jpg",
+               category8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat8.jpg",
+               category9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat9.jpg",
+               category10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo37-product/category/cat10.png",
+          },
+     },
+     demo38: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/product-12.jpg",
+          },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-1.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-2.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-3.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-4.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-5.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-6.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-7.jpg",
+               smallImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-8.jpg",
+               smallImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/small-images/product-9.jpg",
+          },
 
-        zoomImages: {
-            "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-1.jpg",
-            "zoomImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-2.jpg",
-            "zoomImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-3.jpg",
-            "zoomImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-4.jpg",
-            "zoomImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-5.jpg",
-            "zoomImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-1-big.jpg",
-            "zoomImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-2-big.jpg",
-            "zoomImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-3-big.jpg",
-            "zoomImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-4-big.jpg",
-            "zoomImage10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-5-big.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/banner/banner-1.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/banner/banner.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/banner/category-banner.jpg",
-        },
-        categoryImage: {
-            category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-1.jpg",
-            category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-2.jpg",
-            category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-3.jpg",
-            category4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-4.jpg",
-            category5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-5.jpg",
-            category6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-6.jpg",
-        },
-        iconImage: {
-            icon1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-1.jpg",
-            icon2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-2.jpg",
-            icon3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-3.jpg",
-            icon4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-4.jpg",
-            icon5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-5.jpg",
-            icon6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-6.jpg",
-        },
-        sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/fda.png",
-            slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/slide-1.jpg",
-            slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/slide-2.jpg",
-            slide4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/thermometer.png",
-        }
-    },
-    demo39: {
-        productImages: {
-            "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-1.jpg",
-            "product2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-2.jpg",
-            "product3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-3.jpg",
-            "product4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-4.jpg",
-            "product5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-5.jpg",
-            "product6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-6.jpg",
-            "product7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-7.jpg",
-            "product8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-8.jpg",
-            "product9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-9.jpg",
-            "product10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-10.jpg",
-            "product11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-11.jpg"
-        },
-        smallImages: {
-            "smallImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-1.jpg",
-            "smallImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-2.jpg",
-            "smallImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-3.jpg",
-            "smallImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-4.jpg",
-            "smallImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-5.jpg",
-            "smallImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-6.jpg",
-            "smallImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-7.jpg"
-        },
+          zoomImages: {
+               zoomImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-1.jpg",
+               zoomImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-2.jpg",
+               zoomImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-3.jpg",
+               zoomImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-4.jpg",
+               zoomImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-5.jpg",
+               zoomImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-1-big.jpg",
+               zoomImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-2-big.jpg",
+               zoomImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-3-big.jpg",
+               zoomImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-4-big.jpg",
+               zoomImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/zoom/product-5-big.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/banner/banner-1.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/banner/banner.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/banner/category-banner.jpg",
+          },
+          categoryImage: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-3.jpg",
+               category4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-4.jpg",
+               category5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-5.jpg",
+               category6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/category/category-6.jpg",
+          },
+          iconImage: {
+               icon1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-1.jpg",
+               icon2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-2.jpg",
+               icon3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-3.jpg",
+               icon4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-4.jpg",
+               icon5: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-5.jpg",
+               icon6: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/icon/icon-6.jpg",
+          },
+          sliderImage: {
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/fda.png",
+               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/slide-1.jpg",
+               slide3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/slide-2.jpg",
+               slide4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo38-product/slider/thermometer.png",
+          },
+     },
+     demo39: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/product-11.jpg",
+          },
+          smallImages: {
+               smallImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-1.jpg",
+               smallImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-2.jpg",
+               smallImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-3.jpg",
+               smallImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-4.jpg",
+               smallImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-5.jpg",
+               smallImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-6.jpg",
+               smallImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/small-images/product-7.jpg",
+          },
 
-        zoomImages: {
-            "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-1.jpg",
-            "zoomImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-2.jpg",
-            "zoomImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-3.jpg",
-            "zoomImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-4.jpg",
-            "zoomImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-5.jpg",
-            "zoomImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-1-big.jpg",
-            "zoomImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-2-big.jpg",
-            "zoomImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-3-big.jpg",
-            "zoomImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-4-big.jpg",
-            "zoomImage10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-5-big.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-slide.jpg"
-        },
-        clientImage: {
-            client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/client/client1.png"
-        },
-        instagramImage: {
-            insta1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/1.jpg",
-            insta2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/2.jpg",
-            insta3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/3.jpg",
-            insta4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/4.jpg",
-        },
-        sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-1.jpg",
-            slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-2.jpg",
-        }
-    },
-    demo40: {
-        productImages: {
-            "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-1.jpg",
-            "product2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-2.jpg",
-            "product3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-3.jpg",
-            "product4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-4.jpg",
-            "product5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-5.jpg",
-            "product6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-6.jpg",
-            "product7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-7.jpg",
-            "product8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-8.jpg",
-            "product9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-9.jpg",
-            "product10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-10.jpg",
-            "product11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-11.jpg",
-            "product12": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-12.jpg",
-            "product13": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-13.jpg",
-            "product14": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-14.jpg",
-            "product15": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-15.jpg",
-            "product16": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-16.jpg",
-            "product17": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-17.jpg",
-            "product18": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-18.jpg",
-            "product19": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-19.jpg",
-            "product20": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-20.jpg",
-            "product21": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-21.jpg",
-            "product22": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-22.jpg",
-            "product23": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-23.jpg",
-            "product24": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-24.jpg"
-        },
-        zoomImages: {
-            "zoomImage1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-1.jpg",
-            "zoomImage2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-2.jpg",
-            "zoomImage3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-3.jpg",
-            "zoomImage4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-4.jpg",
-            "zoomImage5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-5.jpg",
-            "zoomImage6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-1-big.jpg",
-            "zoomImage7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-2-big.jpg",
-            "zoomImage8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-3-big.jpg",
-            "zoomImage9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-4-big.jpg",
-            "zoomImage10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-5-big.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-1.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-2.jpg",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-3.jpg",
-        },
-        categoryImage: {
-            category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-1.jpg",
-            category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-2.jpg",
-            category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-3.jpg",
-            category4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-4.jpg",
-        },
-        sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/slider/slide-1.jpg",
-            slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/slider/slide-2.jpg",
-        }
-    },
-    demo41: {
-        productImages: {
-            "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-2-150x150.jpg",
-            "product2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-3-150x150.jpg",
-            "product3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-4-150x150.jpg",
-            "product4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-10-150x150.jpg",
-            "product5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-11-150x150.jpg",
-            "product6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-12-150x150.jpg",
-            "product7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-13-150x150.jpg",
-            "product8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-14-150x150.jpg",
-            "product9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-15-150x150.jpg",
-            "product10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-16-150x150.jpg",
-            "product11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-17-150x150.jpg",
-            "product12": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-18-150x150.jpg",
-            "product13": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product2-300x300.jpg",
-            "product14": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product3-300x300.jpg",
-            "product15": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product4-300x300.jpg",
-            "product16": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product5-300x300.jpg",
-            "product17": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product6-300x300.jpg",
-            "product18": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product7-300x300.jpg",
-            "product19": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product8-300x300.jpg",
-            "product20": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product9-300x300.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/banner/banner-1.png",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/banner/banner-2.png",
-            banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/banner/banner-3.jpg",
-        },
-        categoryImage: {
-            category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/category/category-1.jpg",
-            category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/category/category-2.jpg",
-            category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/category/category-3.jpg",
-        }
-    },
-    demo42: {
-        productImages: {
-            "product1": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product10-300x300.jpg",
-            "product2": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product11-300x300.jpg",
-            "product3": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product12-300x300.jpg",
-            "product4": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product13-300x300.jpg",
-            "product5": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product14-300x300.jpg",
-            "product6": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product15-300x300.jpg",
-            "product7": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product2-300x300.jpg",
-            "product8": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product3-300x300.jpg",
-            "product9": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product4-300x300.jpg",
-            "product10": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product5-300x300.jpg",
-            "product11": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product6-300x300.jpg",
-            "product12": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product7-300x300.jpg",
-            "product13": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product8-300x300.jpg",
-            "product14": "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product9-300x300.jpg"
-        },
-        bannerImage: {
-            banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-slide.jpg",
-            banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/banner/banner1.jpg",
-            banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/banner/banner2.jpg"
-        },
-        categoryImage: {
-            category1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat1.jpg",
-            category2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat2.jpg",
-            category3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat3.jpg",
-            category4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat4.jpg",
-        },
-        sliderImage: {
-            slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/slider/slide1.jpg",
-            slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/slider/slide2.jpg",
-        }
-    }
-}
+          zoomImages: {
+               zoomImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-1.jpg",
+               zoomImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-2.jpg",
+               zoomImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-3.jpg",
+               zoomImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-4.jpg",
+               zoomImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-5.jpg",
+               zoomImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-1-big.jpg",
+               zoomImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-2-big.jpg",
+               zoomImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-3-big.jpg",
+               zoomImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-4-big.jpg",
+               zoomImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/zoom/product-5-big.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-slide.jpg",
+          },
+          clientImage: {
+               client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/client/client1.png",
+          },
+          instagramImage: {
+               insta1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/1.jpg",
+               insta2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/2.jpg",
+               insta3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/3.jpg",
+               insta4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/4.jpg",
+          },
+          sliderImage: {
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-1.jpg",
+               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-2.jpg",
+          },
+     },
+     demo40: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-1.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-2.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-3.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-4.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-5.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-6.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-7.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-8.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-9.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-10.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-11.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-12.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-13.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-14.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-15.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-16.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-17.jpg",
+               product18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-18.jpg",
+               product19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-19.jpg",
+               product20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-20.jpg",
+               product21:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-21.jpg",
+               product22:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-22.jpg",
+               product23:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-23.jpg",
+               product24:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/product-24.jpg",
+          },
+          zoomImages: {
+               zoomImage1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-1.jpg",
+               zoomImage2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-2.jpg",
+               zoomImage3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-3.jpg",
+               zoomImage4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-4.jpg",
+               zoomImage5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-5.jpg",
+               zoomImage6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-1-big.jpg",
+               zoomImage7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-2-big.jpg",
+               zoomImage8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-3-big.jpg",
+               zoomImage9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-4-big.jpg",
+               zoomImage10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-5-big.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-1.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-2.jpg",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-3.jpg",
+          },
+          categoryImage: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-3.jpg",
+               category4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/category/category-4.jpg",
+          },
+          sliderImage: {
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/slider/slide-1.jpg",
+               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/slider/slide-2.jpg",
+          },
+     },
+     demo41: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-2-150x150.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-3-150x150.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-4-150x150.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-10-150x150.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-11-150x150.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-12-150x150.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-13-150x150.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-14-150x150.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-15-150x150.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-16-150x150.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-17-150x150.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product-18-150x150.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product2-300x300.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product3-300x300.jpg",
+               product15:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product4-300x300.jpg",
+               product16:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product5-300x300.jpg",
+               product17:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product6-300x300.jpg",
+               product18:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product7-300x300.jpg",
+               product19:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product8-300x300.jpg",
+               product20:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/product9-300x300.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/banner/banner-1.png",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/banner/banner-2.png",
+               banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/banner/banner-3.jpg",
+          },
+          categoryImage: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/category/category-1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/category/category-2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo41-product/category/category-3.jpg",
+          },
+     },
+     demo42: {
+          productImages: {
+               product1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product10-300x300.jpg",
+               product2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product11-300x300.jpg",
+               product3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product12-300x300.jpg",
+               product4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product13-300x300.jpg",
+               product5:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product14-300x300.jpg",
+               product6:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product15-300x300.jpg",
+               product7:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product2-300x300.jpg",
+               product8:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product3-300x300.jpg",
+               product9:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product4-300x300.jpg",
+               product10:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product5-300x300.jpg",
+               product11:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product6-300x300.jpg",
+               product12:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product7-300x300.jpg",
+               product13:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product8-300x300.jpg",
+               product14:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product9-300x300.jpg",
+          },
+          bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-slide.jpg",
+               banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/banner/banner1.jpg",
+               banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/banner/banner2.jpg",
+          },
+          categoryImage: {
+               category1:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat1.jpg",
+               category2:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat2.jpg",
+               category3:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat3.jpg",
+               category4:
+                    "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat4.jpg",
+          },
+          sliderImage: {
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/slider/slide1.jpg",
+               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/slider/slide2.jpg",
+          },
+     },
+};

@@ -32,15 +32,16 @@ export const MostViewedProducts = () => {
                                         <Slider {...settings}>
                                              {" "}
                                              {mostViedProducts.map((product) => (
-                                                  <div className="owl-item active" style={{ width: '228px' }}>
+                                                  <div
+                                                       className="owl-item active"
+                                                       style={{ width: "228px" }}
+                                                  >
                                                        <div className="product-default inner-quickview inner-icon">
                                                             <figure>
                                                                  <a href="demo22-product.html">
                                                                       <img
                                                                            src={
-                                                                                product
-                                                                                     .productImageUrl
-                                                                                      
+                                                                                product.productImageUrl
                                                                            }
                                                                            width={217}
                                                                            height={217}

@@ -5,7 +5,7 @@ import { NewProducts } from "./NewProducts";
 export const NewArrivals = () => {
      return (
           <section className="new-products-section">
-               <div className="container"  >
+               <div className="container">
                     <MiniBanner />
                     <h2
                          className="section-title ls-n-10 pb-3 m-b-4"

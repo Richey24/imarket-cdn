@@ -1,4 +1,3 @@
-
 // Variables
 
 // # Contents
@@ -6,7 +5,6 @@
 // 2. Theme Settings
 // 3. Theme Variables
 // 4. Plugin Variables
-
 
 // 1. Theme Skin
 $primary-color: #e13b3f;
@@ -17,173 +15,173 @@ $secondary-color: #222529;
 $border-color: #e7e7e7;
 
 @include set(
-	(
-		body: (
-			background: #fff,
-			line-height: 2.4rem
-		),
+     (
+          body: (
+               background: #fff,
+               line-height: 2.4rem,
+          ),
 
-		header: (
-			link-color: inherit,
+          header: (
+               link-color: inherit,
 
-			top: (
-				color: #777777,
-				font-size: 1.1rem,
-				font-weight: 600,
-				letter-spacing: .025em,
-				border-bottom: 1px solid $border-color
-			),
+               top: (
+                    color: #777777,
+                    font-size: 1.1rem,
+                    font-weight: 600,
+                    letter-spacing: 0.025em,
+                    border-bottom: 1px solid $border-color,
+               ),
 
-			middle: (
-				color: $primary-color-dark,
+               middle: (
+                    color: $primary-color-dark,
 
-				sticky: (
-					height: 70px
-				)
-			),
+                    sticky: (
+                         height: 70px,
+                    ),
+               ),
 
-			bottom: (
-				color: $secondary-color
-			),
+               bottom: (
+                    color: $secondary-color,
+               ),
 
-			dropdown: (
-				item: (
-					space: 1rem
-				),
+               dropdown: (
+                    item: (
+                         space: 1rem,
+                    ),
 
-				expanded: (
-					active-color: $primary-color
-				)
-			),
+                    expanded: (
+                         active-color: $primary-color,
+                    ),
+               ),
 
-			social-icon: (
-				color: inherit
-			),
+               social-icon: (
+                    color: inherit,
+               ),
 
-			separator: (
-				space: 14px
-			),
+               separator: (
+                    space: 14px,
+               ),
 
-			search: (
-				height: 40px,
-				background: #eee9e6,
-				divider: 1px solid #f6f7f9,
+               search: (
+                    height: 40px,
+                    background: #eee9e6,
+                    divider: 1px solid #f6f7f9,
 
-				btn: (
-					color: #8d8d8d,
-					min-width: 40px,
-					background: #eee9e6,
-				),
+                    btn: (
+                         color: #8d8d8d,
+                         min-width: 40px,
+                         background: #eee9e6,
+                    ),
 
-				select: (
-					padding-left: 1.5rem,
-					padding-right: 1.5rem
-				),
+                    select: (
+                         padding-left: 1.5rem,
+                         padding-right: 1.5rem,
+                    ),
 
-				border: (
-					width: 5px,
-					color: #ccc,
-				)
-			),
+                    border: (
+                         width: 5px,
+                         color: #ccc,
+                    ),
+               ),
 
-			icon: (
-				size: 2.7rem,
-				space: 1.4rem
-			),
-			
-			logo: (
-				max-width: 150px,
+               icon: (
+                    size: 2.7rem,
+                    space: 1.4rem,
+               ),
 
-				sticky: (
-					transform: scale(.8),
-					transform-origin: left center
-				)
-			)
-		),
+               logo: (
+                    max-width: 150px,
 
-		menu: (
-			main: (
-				top: (
-					cut-start-end: false,
-					padding: 8px 13px,
-					space: 1px,
-					color: $secondary-color,
-					active-background: transparent,
-					active-color: $primary-color,
-					font-family: $second-font-family,
-					letter-spacing: -.01em
-				)
-			)
-		),
+                    sticky: (
+                         transform: scale(0.8),
+                         transform-origin: left center,
+                    ),
+               ),
+          ),
 
-		breadcrumb: (
-			color: #8e8e8e,
-			border-bottom: false,
-			letter-spacing: 0,
+          menu: (
+               main: (
+                    top: (
+                         cut-start-end: false,
+                         padding: 8px 13px,
+                         space: 1px,
+                         color: $secondary-color,
+                         active-background: transparent,
+                         active-color: $primary-color,
+                         font-family: $second-font-family,
+                         letter-spacing: -0.01em,
+                    ),
+               ),
+          ),
 
-			divider: (
-				space: 1.4rem
-			)
-		),
+          breadcrumb: (
+               color: #8e8e8e,
+               border-bottom: false,
+               letter-spacing: 0,
 
-		footer: (
-			color: #a8a8a8,
-			link-active-color: #fff,
-			font-size: 1.3rem,
-			line-height: 2.6rem,
+               divider: (
+                    space: 1.4rem,
+               ),
+          ),
 
-			middle: (
-				padding-top: 6.4rem,
-			    padding-bottom: 1.3rem
-			),
+          footer: (
+               color: #a8a8a8,
+               link-active-color: #fff,
+               font-size: 1.3rem,
+               line-height: 2.6rem,
 
-			bottom: (
-			    padding-bottom: 2.4rem,
-    			padding-top: 2.4rem,
-				color: #777,
-				border-top: 1px solid #313438,
-			),
+               middle: (
+                    padding-top: 6.4rem,
+                    padding-bottom: 1.3rem,
+               ),
 
-			widget: (
-				title: (
-					size: 1.5rem,
-					color: #fff,
-					weight: 700,
-					margin: 0 0 1.6rem
-				)
-			),
+               bottom: (
+                    padding-bottom: 2.4rem,
+                    padding-top: 2.4rem,
+                    color: #777,
+                    border-top: 1px solid #313438,
+               ),
 
-			social-icon: (
-				color: #fff,
-				background: transparent,
-				font-size: 14px,
-				border: 1px solid #313438,
-			)
-		),
+               widget: (
+                    title: (
+                         size: 1.5rem,
+                         color: #fff,
+                         weight: 700,
+                         margin: 0 0 1.6rem,
+                    ),
+               ),
 
-		info-box: (
-			icon: (
-				space: 1.5rem,
-				size: 3.7rem,
-			),
+               social-icon: (
+                    color: #fff,
+                    background: transparent,
+                    font-size: 14px,
+                    border: 1px solid #313438,
+               ),
+          ),
 
-			title: (
-				margin-bottom: 2px
-			),
-		),
+          info-box: (
+               icon: (
+                    space: 1.5rem,
+                    size: 3.7rem,
+               ),
 
-		feature-box: (
-			title: (
-				color: #000
-			)
-		),
+               title: (
+                    margin-bottom: 2px,
+               ),
+          ),
 
-		owl-carousel: (
-			nav: (
-				image-center: 33.6%
-			)
-		)
-	)
+          feature-box: (
+               title: (
+                    color: #000,
+               ),
+          ),
+
+          owl-carousel: (
+               nav: (
+                    image-center: 33.6%,
+               ),
+          ),
+     )
 );
 
 // 4. Plugin Variables

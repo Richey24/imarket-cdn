@@ -7,4 +7,4 @@ const templateConfig = {
      home: Home,
      footer: T1Footer,
 };
-export default templateConfig
+export default templateConfig;

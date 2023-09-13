@@ -12,7 +12,10 @@ export const MiniBanner = () => {
           slidesToScroll: 1,
      };
      return (
-          <div className="banners-section container mt-4" style={{ paddingLeft: "40px", paddingRight: "40px" }}>
+          <div
+               className="banners-section container mt-4"
+               style={{ paddingLeft: "40px", paddingRight: "40px" }}
+          >
                <div className="banners-slider   owl-theme dots-mt-1">
                     <Slider {...settings}>
                          {" "}

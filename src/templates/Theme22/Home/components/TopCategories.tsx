@@ -1,5 +1,5 @@
 import React, { useState } from "react";
- 
+
 import Slider from "react-slick";
 import { templateImages } from "@/appProvider/templateImages";
 export const TopCategories = () => {
@@ -13,7 +13,7 @@ export const TopCategories = () => {
           beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
      };
      return (
-          <section className="top-categories" style={{paddingLeft:'80px', paddingRight:'80px'}}>
+          <section className="top-categories" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
                <div className="container">
                     <div className="row m-b-3">
                          <div className="col-lg-6">
@@ -40,10 +40,16 @@ export const TopCategories = () => {
                                    </div>
                                    <div className="banner-layer banner-layer-middle banner-layer-right">
                                         <div className="coupon-sale-text">
-                                             <h4 className="font1 line-height-1 ls-10 text-white   skew-box m-b-2" style={{background:'#01abec'}}>
+                                             <h4
+                                                  className="font1 line-height-1 ls-10 text-white   skew-box m-b-2"
+                                                  style={{ background: "#01abec" }}
+                                             >
                                                   Starting from
                                              </h4>
-                                             <h5 className="d-inline-block font1 text-white   skew-box mb-0" style={{background:'#01abec'}}>
+                                             <h5
+                                                  className="d-inline-block font1 text-white   skew-box mb-0"
+                                                  style={{ background: "#01abec" }}
+                                             >
                                                   $399<sub className="text-dark">$499</sub>
                                              </h5>
                                         </div>
@@ -74,10 +80,16 @@ export const TopCategories = () => {
                                    </div>
                                    <div className="banner-layer banner-layer-middle banner-layer-right">
                                         <div className="coupon-sale-text">
-                                             <h4 className="font1 line-height-1 ls-10 text-white   skew-box m-b-2" style={{background:'#188268'}}>
+                                             <h4
+                                                  className="font1 line-height-1 ls-10 text-white   skew-box m-b-2"
+                                                  style={{ background: "#188268" }}
+                                             >
                                                   Starting from
                                              </h4>
-                                             <h5 className="d-inline-block font1 text-white  skew-box mb-0" style={{background:'#188268'}}>
+                                             <h5
+                                                  className="d-inline-block font1 text-white  skew-box mb-0"
+                                                  style={{ background: "#188268" }}
+                                             >
                                                   $199<sub className="text-dark">$299</sub>
                                              </h5>
                                         </div>

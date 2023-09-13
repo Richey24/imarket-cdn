@@ -9,4 +9,4 @@ const templateConfig = {
      home: Home,
      footer: T13Footer,
 };
-export default templateConfig
+export default templateConfig;

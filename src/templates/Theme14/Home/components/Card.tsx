@@ -11,7 +11,10 @@ export const Card = () => {
           beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
-          <div className="info-boxes-container bg-gray" style={{ paddingLeft: "40px", paddingRight: "40px" }}>
+          <div
+               className="info-boxes-container bg-gray"
+               style={{ paddingLeft: "40px", paddingRight: "40px" }}
+          >
                <div className="container py-3">
                     <div className="info-boxes-slider owl-theme py-3">
                          <div className="owl-stage-outer">

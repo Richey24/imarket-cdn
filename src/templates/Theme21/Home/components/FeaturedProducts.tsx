@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Slider from "react-slick";
 import { featuredProducts } from "../data";
@@ -13,10 +12,7 @@ export const FeaturedProducts = () => {
           beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
      };
      return (
-          <section
-               className="featured-products-section"
-                
-          >
+          <section className="featured-products-section">
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">Featured Products</h2>
                     <div className="no-gutters">

@@ -8,28 +8,27 @@ import product10 from "../../../assets/images/demoes/demo13/products/product-10.
 import product11 from "../../../assets/images/demoes/demo13/products/product-11.jpg";
 import product12 from "../../../assets/images/demoes/demo13/products/product-12.jpg";
 
-
 export const latestProducts = [
      {
           category: "category",
           imageUrl: product1,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 3
+          oldPrice: 3,
      },
      {
           category: "category",
           imageUrl: product2,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 23
+          oldPrice: 23,
      },
      {
           category: "category",
           imageUrl: product3,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 9393
+          oldPrice: 9393,
      },
      // Add more latest products as needed
      {
@@ -37,42 +36,41 @@ export const latestProducts = [
           imageUrl: product4,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 383
+          oldPrice: 383,
      },
      {
           category: "category",
           imageUrl: product5,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 930
+          oldPrice: 930,
      },
      {
           category: "category",
           imageUrl: product6,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 123
+          oldPrice: 123,
      },
      {
           category: "category",
           imageUrl: product10,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 324
+          oldPrice: 324,
      },
      {
           category: "category",
           imageUrl: product11,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 903
+          oldPrice: 903,
      },
      {
           category: "category",
           imageUrl: product12,
           title: "Product Short Name",
           price: 49,
-          oldPrice: 38
+          oldPrice: 38,
      },
 ];
-
