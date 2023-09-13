@@ -2,8 +2,6 @@ import Link from "next/link";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props;
-     console.log("footerProps", company);
-     console.log("props", props);
      return (
           <footer className="footer font2 mt-0">
                {/* <div className="footer-top"></div> */}

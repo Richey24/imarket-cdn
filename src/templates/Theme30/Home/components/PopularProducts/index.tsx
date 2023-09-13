@@ -14,10 +14,7 @@ export default function PopularProducts() {
                               Top Rated Products
                          </h4>
                          {topRatedProducts.map((product, index) => (
-                              <ProductWidget
-                                   key={`product-${index}`}
-                                   {...product}
-                              />
+                              <ProductWidget key={`product-${index}`} {...product} />
                          ))}
                     </div>
                     {/* product-2 */}
@@ -26,22 +23,14 @@ export default function PopularProducts() {
                               Best Selling Products
                          </h4>
                          {topRatedProducts.map((product, index) => (
-                              <ProductWidget
-                                   key={`product-${index}`}
-                                   {...product}
-                              />
+                              <ProductWidget key={`product-${index}`} {...product} />
                          ))}
                     </div>
                     {/* product-3 */}
                     <div className="col-lg-4 col-sm-6 pb-5">
-                         <h4 className="section-sub-title text-uppercase m-b-3">
-                              Latest Products
-                         </h4>
+                         <h4 className="section-sub-title text-uppercase m-b-3">Latest Products</h4>
                          {topRatedProducts.map((product, index) => (
-                              <ProductWidget
-                                   key={`product-${index}`}
-                                   {...product}
-                              />
+                              <ProductWidget key={`product-${index}`} {...product} />
                          ))}
                     </div>
                </div>

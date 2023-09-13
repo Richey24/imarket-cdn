@@ -20,7 +20,23 @@ export const Sliders = [
           styles: "banner-layer-left",
      },
 ];
-
+export const infoData = [
+     {
+          h4: "Free Shipping on Orders Over $99",
+          p: "For more than 100,000 parts!",
+          icon: "icon-shipping text-primary",
+     },
+     {
+          h4: "Up to 40% OFF on Selected Items",
+          p: "Available for all Categories!",
+          icon: "icon-percent-circle text-primary",
+     },
+     {
+          h4: "100% Secure Payment",
+          p: "We ensure secure payment!",
+          icon: "icon-pulley text-primary",
+     },
+];
 export const featuredProducts = [
      {
           productImageAlt: "product",

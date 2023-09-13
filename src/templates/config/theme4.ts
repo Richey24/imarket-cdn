@@ -7,4 +7,4 @@ const templateConfig: any = {
      home: Home,
      footer: Footer,
 };
-export default templateConfig
+export default templateConfig;

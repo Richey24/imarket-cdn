@@ -5,7 +5,7 @@ const Footer = () => {
      return (
           <footer>
                <div className="footer">
-                    <div className="footer-top"   >
+                    <div className="footer-top">
                          <div className="container">
                               <div className="row align-items-center">
                                    <div className="col-md-6 col-lg-3">
@@ -42,7 +42,7 @@ const Footer = () => {
                               </div>
                          </div>
                     </div>
-                    <div className="container"  >
+                    <div className="container">
                          <div className="footer-middle">
                               <div className="row">
                                    <div className="col-lg-6 mb-1">

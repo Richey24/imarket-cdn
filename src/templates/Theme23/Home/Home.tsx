@@ -1,7 +1,7 @@
 import React from "react";
 import { Products } from "./components/Products";
 import { Banner } from "./components/Banner";
-import { Card } from "./components/Card";
+import { Info } from "./components/Info";
 import { BestCollection } from "./components/BestCollection";
 import { MiniBanners } from "./components/MiniBanner";
 import { Product2 } from "./components/Product2";
@@ -27,7 +27,7 @@ const Home = () => {
                               Enjoy the exceptional quality in all our products
                          </p>
                          <MiniBanners />
-                         <Card />
+                         <Info />
                          <Products />
                     </div>
                </section>

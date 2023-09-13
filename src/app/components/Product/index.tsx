@@ -8,11 +8,11 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
      return (
           <Link href={`/${productName}`}>
                <div className="product-default inner-quickview inner-icon">
-                    <figure className="img-effect tw-h-60 ">
-                         <a href="demo13-product.html">
-                              <img src={imageSrc} className="tw-w-full tw-h-full" alt="product" />
+                    <figure className="img-effect tw-h-72 ">
+                         <Link href={`/${productName}`}>
+                              <Image src={imageSrc} fill alt="product" />
                               {/* <img src={imageSrc} width="205" height="205" alt="product" /> */}
-                         </a>
+                         </Link>
                          <div className="label-group">
                               <div className="product-label label-hot">HOT</div>
                               <div className="product-label label-sale">-20%</div>
@@ -33,16 +33,16 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
                     <div className="product-details">
                          <div className="category-wrap">
                               <div className="category-list">
-                                   <a href="demo13-shop.html" className="product-category">
-                                        SHOES, WATCHES
-                                   </a>
+                                   <Link href={`/${productName}`} className="product-category">
+                                        {productName}
+                                   </Link>
                               </div>
                               <a href="wishlist.html" title="Wishlist" className="btn-icon-wish">
                                    <i className="icon-heart"></i>
                               </a>
                          </div>
                          <h3 className="product-title">
-                              <a href="demo13-product.html">Gentle Shoes</a>
+                              <Link href={`/${productName}`}>{productName}</Link>
                          </h3>
                          <div className="ratings-container">
                               <div className="product-ratings">

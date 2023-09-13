@@ -1,12 +1,9 @@
 import React from "react";
- 
+
 import { templateImages } from "@/appProvider/templateImages";
 export const MobileAndAccessories = () => {
      return (
-          <section
-               className="mobile-phones-container appear-animate"
-               
-          >
+          <section className="mobile-phones-container appear-animate">
                <div className="container">
                     <h2 className="section-title border-0 line-height-1 ls-n-10 m-b-4">
                          Mobile Phones &amp; Accessories
@@ -53,20 +50,33 @@ export const MobileAndAccessories = () => {
                                         </div>
                                    </div>
                                    <div className="banner-layer banner-layer-bottom">
-                                        <a href="demo22-shop.html" className="btn btn-primary" style={{fontWeight:'bold'}}>
+                                        <a
+                                             href="demo22-shop.html"
+                                             className="btn btn-primary"
+                                             style={{ fontWeight: "bold" }}
+                                        >
                                              View All Now
                                         </a>
                                    </div>
                               </div>
                          </div>
                          <div className="col-lg-7">
-                              <div className="grid grid3" style={{position:'relative', height:'521px'}}>
-                                   <div className="grid-item col-md-8 height-x1" style={{position:'absolute', left:'0%',top:'0px'}}>
+                              <div
+                                   className="grid grid3"
+                                   style={{ position: "relative", height: "521px" }}
+                              >
+                                   <div
+                                        className="grid-item col-md-8 height-x1"
+                                        style={{ position: "absolute", left: "0%", top: "0px" }}
+                                   >
                                         <div className="product-default inner-quickview inner-icon">
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product12}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product12
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -130,12 +140,22 @@ export const MobileAndAccessories = () => {
                                              {/* End .product-details */}
                                         </div>
                                    </div>
-                                   <div className="grid-item col-6 col-md-4 height-x2" style={{position:'absolute', left:'66.6668%',top:'0px'}}>
+                                   <div
+                                        className="grid-item col-6 col-md-4 height-x2"
+                                        style={{
+                                             position: "absolute",
+                                             left: "66.6668%",
+                                             top: "0px",
+                                        }}
+                                   >
                                         <div className="product-default inner-quickview inner-icon">
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product17}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product17
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -201,12 +221,18 @@ export const MobileAndAccessories = () => {
                                              {/* End .product-details */}
                                         </div>
                                    </div>
-                                   <div className="grid-item col-6 col-md-4 height-x1" style={{position:'absolute', left:'0%',top:'260px'}}>
+                                   <div
+                                        className="grid-item col-6 col-md-4 height-x1"
+                                        style={{ position: "absolute", left: "0%", top: "260px" }}
+                                   >
                                         <div className="product-default inner-quickview inner-icon">
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product13}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product13
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"
@@ -268,12 +294,22 @@ export const MobileAndAccessories = () => {
                                              {/* End .product-details */}
                                         </div>
                                    </div>
-                                   <div className="grid-item col-6 col-md-4 height-x1" style={{position:'absolute', left:'33.3334%',top:'260px'}}>
+                                   <div
+                                        className="grid-item col-6 col-md-4 height-x1"
+                                        style={{
+                                             position: "absolute",
+                                             left: "33.3334%",
+                                             top: "260px",
+                                        }}
+                                   >
                                         <div className="product-default inner-quickview inner-icon">
                                              <figure>
                                                   <a href="demo22-product.html">
                                                        <img
-                                                            src={templateImages.demo22.productImages.product11}
+                                                            src={
+                                                                 templateImages.demo22.productImages
+                                                                      .product11
+                                                            }
                                                             width={217}
                                                             height={217}
                                                             alt="product"

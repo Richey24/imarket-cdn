@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from "react";
 
 export interface ProductProps {
      productImageUrl: StaticImageData;
@@ -26,5 +26,5 @@ export interface TestimonialProps {
 }
 
 export interface ChildrenProps {
-     setState: Dispatch<SetStateAction<object>>
+     setState: Dispatch<SetStateAction<object>>;
 }

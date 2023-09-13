@@ -8,4 +8,4 @@ const templateConfig = {
      footer: T3Footer,
 };
 
-export default templateConfig
+export default templateConfig;

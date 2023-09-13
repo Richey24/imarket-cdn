@@ -4,7 +4,7 @@ import { payments } from "../Home/data";
 const Footer = () => {
      return (
           <footer className="footer bg-dark position-relative">
-               <div className="footer-middle"  >
+               <div className="footer-middle">
                     <div className="container position-static">
                          <div className="row">
                               <div className="col-lg-3 col-md-4">
@@ -83,7 +83,10 @@ const Footer = () => {
                                                        <input
                                                             type="submit"
                                                             className="btn shadow-none"
-                                                            style={{background:'#7aa93c', color:'#fff'}}
+                                                            style={{
+                                                                 background: "#7aa93c",
+                                                                 color: "#fff",
+                                                            }}
                                                             defaultValue="Subscribe"
                                                        />
                                                   </form>
@@ -156,7 +159,7 @@ const Footer = () => {
                     {/* End .container */}
                </div>
                {/* End .footer-middle */}
-               <div className="container"  >
+               <div className="container">
                     <div className="footer-bottom d-sm-flex align-items-center">
                          <div className="footer-left">
                               <span className="footer-copyright">
@@ -169,8 +172,7 @@ const Footer = () => {
                                         <span
                                              className="payment-icon visa"
                                              style={{
-                                                  backgroundImage:
-                                                       `url(${pay.image})`
+                                                  backgroundImage: `url(${pay.image})`,
                                              }}
                                         />
                                    ))}

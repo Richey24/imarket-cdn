@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { socialMap } from "@/utils/helper";
+import SocialIcons from "@/templates/shared/SocialIcons";
 
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
@@ -54,28 +55,12 @@ const Footer = (props: any): JSX.Element => {
                                                   Mon - Sun / 9:00AM - 8:00PM
                                              </li>
                                         </ul>
-
-                                        <div className="social-icons">
-                                             {company.site?.header.component.props.static.socials.map(
-                                                  (social, i) => {
-                                                       return (
-                                                            <Link
-                                                                 key={i}
-                                                                 style={{
-                                                                      color: "black",
-                                                                      backgroundColor: "white",
-                                                                      border: "none",
-                                                                 }}
-                                                                 href={social.link}
-                                                                 className={`social-icon ml-0${socialMap[social.name]
-                                                                      }`}
-                                                                 target="_blank"
-                                                                 title={social.name}
-                                                            ></Link>
-                                                       );
-                                                  },
-                                             )}
-                                        </div>
+                                        <SocialIcons
+                                             links={
+                                                  company.site.header.component.props.static.socials
+                                             }
+                                             className="tw-bg-white tw-text-black tw-border-0"
+                                        />
                                    </div>
                               </div>
 

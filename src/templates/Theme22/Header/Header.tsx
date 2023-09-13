@@ -4,6 +4,7 @@ import banner from "../../../assets/images/menu-banner.jpg";
 import banner1 from "../../../assets/images/menu-banner-1.jpg";
 import logo from "../../../assets/images/your-logo.png";
 import banner2 from "../../../assets/images/demoes/demo22/banners/header-item.png";
+
 const Header = () => {
      const [cat, setCat] = useState(false);
      const [pro, setPro] = useState(false);
@@ -13,21 +14,25 @@ const Header = () => {
           <div>
                <div className="top-notice">
                     <div className="container d-flex flex-wrap align-items-center justify-content-center text-center">
-                         <img
-                              src={banner2.src}
-                              alt="Top Ads"
-                              width={237}
-                              height={49}
-                         />
+                         <img src={banner2.src} alt="Top Ads" width={237} height={49} />
                          <div className="notice-content my-2">
-                              <h3 className="d-inline-block font1   mb-0" style={{ color: '#188268' }}>
+                              <h3
+                                   className="d-inline-block font1   mb-0"
+                                   style={{ color: "#188268" }}
+                              >
                                    PortoPlus X Pro Only
                               </h3>
                               <div className="d-inline-block">
-                                   <span className="d-inline-block skew-box product-price font1 font-weight-bold  " style={{ background: '#188268' }}>
+                                   <span
+                                        className="d-inline-block skew-box product-price font1 font-weight-bold  "
+                                        style={{ background: "#188268" }}
+                                   >
                                         $199
                                    </span>
-                                   <span className="d-inline-block font1 old-price   mr-0" style={{ color: '#188268' }}>
+                                   <span
+                                        className="d-inline-block font1 old-price   mr-0"
+                                        style={{ color: "#188268" }}
+                                   >
                                         $299
                                    </span>
                               </div>
@@ -330,10 +335,7 @@ const Header = () => {
                          className="header-bottom sticky-header"
                          data-sticky-options="{'mobile': false, 'offset': 684}"
                     >
-                         <div
-                              className="container"
-
-                         >
+                         <div className="container">
                               <div className="header-center">
                                    <button className="mobile-menu-toggler" type="button">
                                         <i className="fas fa-bars" />

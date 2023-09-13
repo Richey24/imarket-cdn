@@ -4,7 +4,7 @@ import { Banner } from "./components/Banner";
 import { PopularProducts } from "./components/PopularProducts";
 import { Products } from "./components/Products";
 import { TopSeller } from "./components/TopSeller";
-import { Card } from "./components/Card";
+import { Info } from "./components/Info";
 import { Content } from "./components/Content";
 
 export const Home = () => {
@@ -55,7 +55,7 @@ export const Home = () => {
                <PopularProducts />
                <Products />
                <TopSeller />
-               <Card />
+               <Info />
                <Content />
           </main>
      );

@@ -15,7 +15,7 @@ $dot-border: #222529;
 $dot-border-active: #222529;
 $dot-width: 14px;
 $dot-height: 14px;
-$dot-border: #e7e7e7;	
+$dot-border: #e7e7e7;
 $nav-color: #333;
 $nav-color-hover: #333;
 
@@ -23,181 +23,181 @@ $nav-color-hover: #333;
 $border-color: #e7e7e7;
 
 @include set(
-	(
-		body: (
-			background: #fff
-		),
-		
-		layout: (
-			container: (
-				max-width-desktop: 1416px
-			)
-		),
+     (
+          body: (
+               background: #fff,
+          ),
 
-		header: (
-			z-index: 1000,
-			width: 100%,
-			margin: 0 6px,
+          layout: (
+               container: (
+                    max-width-desktop: 1416px,
+               ),
+          ),
 
-			top-notice: (
-				padding-top: 9px,
-				padding-bottom: 11px
-			),
+          header: (
+               z-index: 1000,
+               width: 100%,
+               margin: 0 6px,
 
-			top: (
-				padding-top: 1.3rem,
-				font-family: "'Open Sans', sans-serif",
-				font-size: 11px,
-				font-weight: 600,
-				letter-spacing: .025em,
-				color: $primary-color
-			),
+               top-notice: (
+                    padding-top: 9px,
+                    padding-bottom: 11px,
+               ),
 
-			middle: (
-				padding-top: 2.7rem
-			),
+               top: (
+                    padding-top: 1.3rem,
+                    font-family: "'Open Sans', sans-serif",
+                    font-size: 11px,
+                    font-weight: 600,
+                    letter-spacing: 0.025em,
+                    color: $primary-color,
+               ),
 
-			dropdown: (
-				space: 1.9rem,
+               middle: (
+                    padding-top: 2.7rem,
+               ),
 
-				item: (
-					space: 2.4rem
-				)
-			),
+               dropdown: (
+                    space: 1.9rem,
 
-			logo: (
-				max-width: 11.1rem
-			),
+                    item: (
+                         space: 2.4rem,
+                    ),
+               ),
 
-			icon: (
-				size: 2.4rem,
-				space: 2.5rem
-			),
+               logo: (
+                    max-width: 11.1rem,
+               ),
 
-			search: (
-				height: 34px,
+               icon: (
+                    size: 2.4rem,
+                    space: 2.5rem,
+               ),
 
-				border: (
-					_width: 5px
-				),
+               search: (
+                    height: 34px,
 
-				select: (
-					min-width: 14rem
-				)
-			)
-		),
+                    border: (
+                         _width: 5px,
+                    ),
 
-		menu: (
-			main: (
-				top: (
-					_space: 3.7rem,
+                    select: (
+                         min-width: 14rem,
+                    ),
+               ),
+          ),
 
-					padding: 10px 0,
-					font-size: 13px,
-					letter-spacing: -.01em,
-					color: #333,
-				)
-			),
-		),
+          menu: (
+               main: (
+                    top: (
+                         _space: 3.7rem,
 
-		product: (
-			product-title: (
-				margin-bottom: 6px,
-				letter-spacing: -.01em
-			),
+                         padding: 10px 0,
+                         font-size: 13px,
+                         letter-spacing: -0.01em,
+                         color: #333,
+                    ),
+               ),
+          ),
 
-			ratings-container: (
-				margin-right: -1px,
-				margin-bottom: 1.3rem
-			),
+          product: (
+               product-title: (
+                    margin-bottom: 6px,
+                    letter-spacing: -0.01em,
+               ),
 
-			price: (
-				margin-bottom: 1.4rem,
-				font-family: "'Open Sans', sans-serif",
-				color: #444
-			),
+               ratings-container: (
+                    margin-right: -1px,
+                    margin-bottom: 1.3rem,
+               ),
 
-			old-price: (
-				margin-right: 4px,
-				font-family: "'Open Sans', sans-serif",
-				font-size: 1.44rem,
-				letter-spacing: 0	
-			),
+               price: (
+                    margin-bottom: 1.4rem,
+                    font-family: "'Open Sans', sans-serif",
+                    color: #444,
+               ),
 
-			price-box: (
-				margin-bottom: 1.4rem
-			),
+               old-price: (
+                    margin-right: 4px,
+                    font-family: "'Open Sans', sans-serif",
+                    font-size: 1.44rem,
+                    letter-spacing: 0,
+               ),
 
-			btn-quickview: (
-				transition: .25s
-			),
+               price-box: (
+                    margin-bottom: 1.4rem,
+               ),
 
-			btn-wishlist: (
-				transition: .25s
-			),
+               btn-quickview: (
+                    transition: 0.25s,
+               ),
 
-			product-label: (
-				font-family: "'Open Sans', sans-serif",
-				font-size: 1.2rem,
-				font-weight: 400,
-				padding: 5px 1.15rem
-			),
+               btn-wishlist: (
+                    transition: 0.25s,
+               ),
 
-			label-group: (
-				top: 1rem,
-				left: 9px
-			)
-		),
+               product-label: (
+                    font-family: "'Open Sans', sans-serif",
+                    font-size: 1.2rem,
+                    font-weight: 400,
+                    padding: 5px 1.15rem,
+               ),
 
-		footer: (
-			_link-color: #a8a8a8,
-			_link-active-color: #fff,
+               label-group: (
+                    top: 1rem,
+                    left: 9px,
+               ),
+          ),
 
-			padding-top: 6.6rem,
-			font-family: "'Open Sans', sans-serif",
+          footer: (
+               _link-color: #a8a8a8,
+               _link-active-color: #fff,
 
-			widget: (
-				title: (
-					font-size: 1.5rem,
-					color: #fff,
-					font-weight: 700
-				),
+               padding-top: 6.6rem,
+               font-family: "'Open Sans', sans-serif",
 
-				link: (
-					_space: 1px
-				)
-			),
+               widget: (
+                    title: (
+                         font-size: 1.5rem,
+                         color: #fff,
+                         font-weight: 700,
+                    ),
 
-			social-icon: (
-				width: 4rem,
-				height: 4rem,
-				background: transparent,
-				color: #fff,
-				line-height: 3.8rem,
-				font-size: 1.6rem,
-				border: 1px solid #313438
-			),
+                    link: (
+                         _space: 1px,
+                    ),
+               ),
 
-			middle: (
-				padding-bottom: 10px,
-				padding-top: 6.6rem,
-				color: #a8a8a8,
-			),
+               social-icon: (
+                    width: 4rem,
+                    height: 4rem,
+                    background: transparent,
+                    color: #fff,
+                    line-height: 3.8rem,
+                    font-size: 1.6rem,
+                    border: 1px solid #313438,
+               ),
 
-			bottom: (
-				padding-top: 2.4rem,
-				padding-bottom: 2.4rem,
-				border-top: 1px solid #313438,
-				font-size: .9em
-			)
-		),
+               middle: (
+                    padding-bottom: 10px,
+                    padding-top: 6.6rem,
+                    color: #a8a8a8,
+               ),
 
-		owl-carousel: (
-			nav: (
-				image-center: 38%
-			)
-		)
-	)
+               bottom: (
+                    padding-top: 2.4rem,
+                    padding-bottom: 2.4rem,
+                    border-top: 1px solid #313438,
+                    font-size: 0.9em,
+               ),
+          ),
+
+          owl-carousel: (
+               nav: (
+                    image-center: 38%,
+               ),
+          ),
+     )
 );
 
 // 4. Plugin Variables

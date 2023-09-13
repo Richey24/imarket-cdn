@@ -73,11 +73,11 @@ export const PopularProducts = () => {
                                                   </a>
                                              </h3>
                                              {/* <div class="ratings-container">
-                                      <div class="product-ratings">
-                                          <span class="ratings" style="width:100%"></span>
-                                          <span class="tooltiptext tooltip-top"></span>
-                                      </div>
-                                  </div> */}
+                        <div class="product-ratings">
+                            <span class="ratings" style="width:100%"></span>
+                            <span class="tooltiptext tooltip-top"></span>
+                        </div>
+                    </div> */}
                                              <div className="price-box">
                                                   <span className="product-price">
                                                        ${data.productPrice}

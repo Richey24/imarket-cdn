@@ -1,4 +1,2 @@
-const pageLinks =()=>{
-
-}
-export default pageLinks
+const pageLinks = () => {};
+export default pageLinks;

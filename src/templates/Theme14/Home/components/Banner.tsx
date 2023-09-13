@@ -26,8 +26,7 @@ export const Banner = () => {
                                              <h2 className="m-b-2">{data.h2}</h2>
 
                                              <h3 className="m-b-2">{data.h3}</h3>
-                                              
-                                                
+
                                              {data.price ? (
                                                   <h5 className="d-inline-block pt-2 mb-1 pb-1 ls-n-20 align-middle">
                                                        Starting AT
@@ -51,7 +50,6 @@ export const Banner = () => {
                               </div>
                          </Carousel.Item>
                     ))}
-                
                </Carousel>
           </section>
      );

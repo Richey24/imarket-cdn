@@ -1,18 +1,10 @@
 import Footer from "../Theme7/Footer/Footer";
-import T3Header from "../Theme7/Header/Header";
-import InfoBoxesContainer from "../Theme7/InfoBoxesContainer";
-import PopularProducts from "../Theme7/PopularProducts";
-import ShopByCategory from "../Theme7/ShopByCategory";
-import Banner from "../Theme7/Banner";
-import MainCategory from "../Theme7/MainCategory";
+import T7Header from "../Theme7/Header/Header";
+import T7Home from "../Theme7/Home/Home";
 
 const templateConfig: any = {
-     header: T3Header,
-     Banner: Banner,
-     ShopByCategory: ShopByCategory,
-     MainCategory: MainCategory,
-     PopularProducts: PopularProducts,
-     InfoBoxesContainer: InfoBoxesContainer,
+     header: T7Header,
+     home: T7Home,
      footer: Footer,
 };
-export default templateConfig
+export default templateConfig;
