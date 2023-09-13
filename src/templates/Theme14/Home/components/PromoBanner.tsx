@@ -1,12 +1,12 @@
 import { templateImages } from "@/appProvider/templateImages";
 import React from "react";
- 
+
 export const PromoBanner = () => {
      return (
           <div
                className="promo-section bg-gray"
                data-parallax="{'speed': 2, 'enableOnMobile': true}"
-               style={{backgroundImage:`url(${templateImages.demo14.bannerImage.banner8})`}}
+               style={{ backgroundImage: `url(${templateImages.demo14.bannerImage.banner8})` }}
                //  data-image-src={promobanner.src}
           >
                <div className="promo-banner banner container text-uppercase">

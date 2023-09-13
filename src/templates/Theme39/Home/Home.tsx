@@ -4,7 +4,6 @@ import { PopularProducts } from "./components/PopularProducts";
 import { MiniBanner } from "./components/MiniBanner";
 import { FeaturedProducts } from "./components/FeaturedProducts";
 import { Testimonials } from "./components/Testimonials";
-import { Blogs } from "./components/Blogs";
 import { Instagram } from "./components/Instagram";
 import { Info } from "./components/Info";
 import { ProductTabs } from "./components/ProductTabs";
@@ -44,7 +43,7 @@ export const Home = () => {
                               </div>
                          </div>
                     </div>
-                    <Blogs />
+
                     <Info />
                     <Instagram />
                </div>

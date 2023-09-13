@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { featuredProducts } from "../data";
- 
+
 import Slider from "react-slick";
 import { Product } from "./Product";
 
@@ -17,7 +17,10 @@ export const FeaturedProducts = () => {
      return (
           <section className="featured-products-section"  >
                <div className="container">
-                    <h2 className="section-title ls-n-10 text-center text-uppercase m-b-3" style={{fontWeight:'bold'}}>
+                    <h2
+                         className="section-title ls-n-10 text-center text-uppercase m-b-3"
+                         style={{ fontWeight: "bold" }}
+                    >
                          Featured Products
                     </h2>
                     <Slider {...settings}>

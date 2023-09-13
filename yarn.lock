@@ -3973,6 +3973,15 @@ next-themes@^0.2.1:
   resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.2.1.tgz"
   integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
 
+next13-progressbar@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/next13-progressbar/-/next13-progressbar-1.0.2.tgz#6353a71a47b6aedfa98744bf11ce24aa432ff9e4"
+  integrity sha512-Cd5IHpXfIwRGYmQ6eLJzstC41NyU6oAE8TSm5SNR0RE2DjHz/ZEVvGBSolA/ctaDhjF08Y0h0vp7/XKkC3J+Ag==
+  dependencies:
+    "@types/nprogress" "^0.2.0"
+    nprogress "^0.2.0"
+    prop-types "^15.8.1"
+
 next@13.4.9:
   version "13.4.9"
   resolved "https://registry.npmjs.org/next/-/next-13.4.9.tgz"
@@ -4349,6 +4358,11 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+
+prettier@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.0.2.tgz#78fcecd6d870551aa5547437cdae39d4701dca5b"
+  integrity sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==
 
 pretty-format@^3.8.0:
   version "3.8.0"

@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import banner1 from "../../../assets/images/demoes/demo1/banners/banner-1.jpg";
-import banner2 from "../../../assets/images/demoes/demo1/banners/banner-2.jpg";
-import banner3 from "../../../assets/images/demoes/demo1/banners/banner-3.jpg";
-import banner4 from "../../../assets/images/demoes/demo1/banners/banner-4.jpg";
 import Banner from "./components/Banner";
 import SideSlide from "./components/SideSlide";
 import { MiniBanner } from "./components/MiniBanner";
 import { Product } from "./components/Product";
-import { featuredProducts, testimonies } from "./data";
+import { testimonies } from "./data";
 import { Testimonial } from "./components/Testimonial";
 import Carousel from "react-bootstrap/esm/Carousel";
-import { InfoBoxesContainer } from "@/templates/components/Info";
+import { InfoBoxesContainer } from "@/templates/shared/Info";
 
 export const Home = (props: any) => {
      const { static: statiProps, products, categories } = props;

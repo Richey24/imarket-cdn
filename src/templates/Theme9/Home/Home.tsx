@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FeaturedProduct from "./components/FeaturedProducts";
 import { Banner } from "./components/Banner";
 import { latestProducts } from "./data";
 
-export const Home = () => {
+export const Home = (props) => {
+     const { static: statiProps, products, categories } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
+
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         category: "Fashion",
+                         imageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         imageUrl2: "data:image/jpeg;base64," + product?.image_1024,
+                         title: product.display_name,
+                         price: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+     }, [products]);
+
      return (
           <main className="main">
                <div className="container">
@@ -33,8 +58,9 @@ export const Home = () => {
                          </div>
                          <hr className="h-0 border-b w-full" />
                     </div>
-
-                    <FeaturedProduct products={latestProducts} />
+                    {latestProductsState && (
+                         <FeaturedProduct products={latestProductsState ?? []} />
+                    )}
                </div>
           </main>
      );

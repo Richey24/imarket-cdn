@@ -1,5 +1,6 @@
 import Image from "next/image";
 import payments from "../../../assets/images/payments.png";
+import ContactInfo from "@/templates/shared/Footer/Contact-Info";
 
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
@@ -55,43 +56,7 @@ const Footer = (props: any): JSX.Element => {
                     <div className="footer-middle">
                          <div className="row">
                               <div className="col-lg-6 col-xl-4">
-                                   <div className="widget">
-                                        <h4 className="widget-title">Contact Info</h4>
-                                        <div className="row">
-                                             <div className="col-sm-6">
-                                                  <div className="contact-widget">
-                                                       <h4 className="widget-title">ADDRESS:</h4>
-                                                       <a href="#">
-                                                            {company?.city + " " + company?.country}
-                                                       </a>
-                                                  </div>
-                                             </div>
-                                             <div className="col-sm-6 pl-xl-0">
-                                                  <div className="contact-widget">
-                                                       <h4 className="widget-title">PHONE:</h4>
-                                                       <a href="#">{company?.phone}</a>
-                                                  </div>
-                                             </div>
-                                             <div className="col-sm-6">
-                                                  <div className="contact-widget email">
-                                                       <h4 className="widget-title">EMAIL:</h4>
-                                                       <a
-                                                            href={`mailto:${company?.user_id?.email}`}
-                                                       >
-                                                            {company?.user_id?.email}
-                                                       </a>
-                                                  </div>
-                                             </div>
-                                             <div className="col-sm-6 pl-xl-0">
-                                                  <div className="contact-widget">
-                                                       <h4 className="widget-title">
-                                                            WORKING DAYS/HOURS:
-                                                       </h4>
-                                                       <a href="#">Mon - Sun / 9:00 AM - 8:00 PM</a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
+                                   <ContactInfo staticProps={staticProps} company={company} />
                               </div>
                               <div className="col-sm-6 col-lg-3">
                                    <div className="widget">

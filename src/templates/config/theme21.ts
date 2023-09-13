@@ -10,4 +10,4 @@ const templateConfig = {
      footer: Footer,
 };
 
-export default templateConfig
+export default templateConfig;

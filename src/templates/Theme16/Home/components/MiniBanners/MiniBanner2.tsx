@@ -60,7 +60,6 @@ export const MiniBanner2 = () => {
                                                        width={400}
                                                        height={400}
                                                   />
-                                               
                                              </a>
                                              <div className="btn-icon-group">
                                                   <button

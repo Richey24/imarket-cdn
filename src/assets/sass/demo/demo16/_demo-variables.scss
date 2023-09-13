@@ -6,7 +6,6 @@
 // 3. Theme Variables
 // 4. Plugin Variables
 
-
 // 1. Theme Skin
 $primary-color: #08c;
 $secondary-color: #e6e5e2;
@@ -23,208 +22,208 @@ $nav-color-hover: #fff;
 $border-color: #e7e7e7;
 
 @include set(
-	(
-		body: (
-			background: #fff
-		),
-		
-		layout: (
-			container: (
-				max-width-desktop: 1200px
-			)
-		),
+     (
+          body: (
+               background: #fff,
+          ),
 
-		header: (
-			link-color: inherit,
-			link-active-color: $primary-color-dark,
+          layout: (
+               container: (
+                    max-width-desktop: 1200px,
+               ),
+          ),
 
-			top: (
-				color: #fff,
-				font-size: 1.2rem,
-				font-weight: 600,
-				letter-spacing: .025em
-			),
+          header: (
+               link-color: inherit,
+               link-active-color: $primary-color-dark,
 
-			middle: (
-				padding-top: 2.8rem,
-				padding-bottom: 2.8rem,
-				color: $primary-color-dark,
-				background: $secondary-color
-			),
+               top: (
+                    color: #fff,
+                    font-size: 1.2rem,
+                    font-weight: 600,
+                    letter-spacing: 0.025em,
+               ),
 
-			bottom: (
-				color: $secondary-color,
-			),
+               middle: (
+                    padding-top: 2.8rem,
+                    padding-bottom: 2.8rem,
+                    color: $primary-color-dark,
+                    background: $secondary-color,
+               ),
 
-			top-menu-li: (
-				width: 100%,
-				text-align: left
-			),
+               bottom: (
+                    color: $secondary-color,
+               ),
 
-			dropdowns: (
-				padding-left: 2.7rem,
-				margin-left: 1.2rem,
-				border-left: 1px solid #2c3035,
-				letter-spacing: .01em
-			),
+               top-menu-li: (
+                    width: 100%,
+                    text-align: left,
+               ),
 
-			social-icon: (
-				color: inherit,
-				font-size: 1.4rem,
-				size: 2.548rem,
-			),
+               dropdowns: (
+                    padding-left: 2.7rem,
+                    margin-left: 1.2rem,
+                    border-left: 1px solid #2c3035,
+                    letter-spacing: 0.01em,
+               ),
 
-			separator: (
-				space: 10px,
-				color: rgba(0, 0, 0, 0.1),
-			),
+               social-icon: (
+                    color: inherit,
+                    font-size: 1.4rem,
+                    size: 2.548rem,
+               ),
 
-			search: (
-				height: 40px,
-				background: #f4f4f4,
-				divider: 1px solid #fff,
-				toggle: (
-					size: 2.5rem,
-				),
-				btn: (
-					color: #606669,
-					background: #fff,
-					min-width: 46.17px
-				),
+               separator: (
+                    space: 10px,
+                    color: rgba(0, 0, 0, 0.1),
+               ),
 
-				select: (
-					padding-left: .9rem,
-					padding-right: 1rem,
-					min-width: 12.9rem,
-				),
+               search: (
+                    height: 40px,
+                    background: #f4f4f4,
+                    divider: 1px solid #fff,
+                    toggle: (
+                         size: 2.5rem,
+                    ),
+                    btn: (
+                         color: #606669,
+                         background: #fff,
+                         min-width: 46.17px,
+                    ),
 
-				border: (
-					width: 5px,
-					color: #ccc,
-					radius: 2.5rem,
-				)
-			),
+                    select: (
+                         padding-left: 0.9rem,
+                         padding-right: 1rem,
+                         min-width: 12.9rem,
+                    ),
 
-			icon: (
-				size: 2.7rem,
-				space: 2.2rem
-			),
+                    border: (
+                         width: 5px,
+                         color: #ccc,
+                         radius: 2.5rem,
+                    ),
+               ),
 
-			logo: (
-				max-width: 111px,
-				max-width-mobile: 100px,
-				sticky: (
-					transform: scale(.8),
-					transform-origin: left center
-				)
-			)
-		),
-		menu: (
-			top: (
-				color: #fff,
-			),
-			main: (
-				top: (
-					font-family: $second-font-family,
-					padding: 20px,
-					space: 1px,
-				)
-			),
-			vertical: (
-				color: $secondary-color,
-				active-color: #7b858a,
-				active-background: #fff,
-			),
-		),
+               icon: (
+                    size: 2.7rem,
+                    space: 2.2rem,
+               ),
 
-		breadcrumb: (
-			color: #8e8e8e,
-			border-bottom: false,
-			letter-spacing: 0,
+               logo: (
+                    max-width: 111px,
+                    max-width-mobile: 100px,
+                    sticky: (
+                         transform: scale(0.8),
+                         transform-origin: left center,
+                    ),
+               ),
+          ),
+          menu: (
+               top: (
+                    color: #fff,
+               ),
+               main: (
+                    top: (
+                         font-family: $second-font-family,
+                         padding: 20px,
+                         space: 1px,
+                    ),
+               ),
+               vertical: (
+                    color: $secondary-color,
+                    active-color: #7b858a,
+                    active-background: #fff,
+               ),
+          ),
 
-			divider: (
-				space: 1.4rem
-			)
-		),
+          breadcrumb: (
+               color: #8e8e8e,
+               border-bottom: false,
+               letter-spacing: 0,
 
-		footer: (
-			padding-top: 1px,
-			color: #777,
-			background: $secondary-color,
-			link-active-color: #fff,
-			font-size: 1.3rem,
-			line-height: 2.4rem,
+               divider: (
+                    space: 1.4rem,
+               ),
+          ),
 
-			a: (
-				hover: (
-					color: $primary-color-dark
-				)
-			),
+          footer: (
+               padding-top: 1px,
+               color: #777,
+               background: $secondary-color,
+               link-active-color: #fff,
+               font-size: 1.3rem,
+               line-height: 2.4rem,
 
-			top: (
-				padding-top: 6.3rem,
-			),
+               a: (
+                    hover: (
+                         color: $primary-color-dark,
+                    ),
+               ),
 
-			middle: (
-				padding-top: 4rem,
-				padding-bottom: 3rem,
-				border-top: 1px solid #cecdca,
-			),
+               top: (
+                    padding-top: 6.3rem,
+               ),
 
-			bottom: (
-				padding-top: 1.5rem,
-				padding-bottom: 1.5rem,
-				border-top: 1px solid #cecdca,
-				color: #999,
-				font-size: 1.2rem
-			),
+               middle: (
+                    padding-top: 4rem,
+                    padding-bottom: 3rem,
+                    border-top: 1px solid #cecdca,
+               ),
 
-			widget: (
-				margin-bottom: .9rem,
+               bottom: (
+                    padding-top: 1.5rem,
+                    padding-bottom: 1.5rem,
+                    border-top: 1px solid #cecdca,
+                    color: #999,
+                    font-size: 1.2rem,
+               ),
 
-				title: (
-					size: 1.5rem,
-					color: #222529,
-					line-height: 1.4,
-					weight: 700,
-					margin: 0 0 1.5rem
-				)
-			),
+               widget: (
+                    margin-bottom: 0.9rem,
 
-			social-icon: (
-				space: .4rem,
-				border: 1px solid #cecdca,
-				color: #222529,
-				background: transparent,
-				font-size: 1.6rem,
-				line-height: 3.6rem
-			)
-		),
+                    title: (
+                         size: 1.5rem,
+                         color: #222529,
+                         line-height: 1.4,
+                         weight: 700,
+                         margin: 0 0 1.5rem,
+                    ),
+               ),
 
-		info-box: (
-			icon: (
-				space: .8rem,
-				size: 2.8rem,
-			),
+               social-icon: (
+                    space: 0.4rem,
+                    border: 1px solid #cecdca,
+                    color: #222529,
+                    background: transparent,
+                    font-size: 1.6rem,
+                    line-height: 3.6rem,
+               ),
+          ),
 
-			title: (
-				margin-bottom: 2px,
-				size: 1.2rem,
-				weight: 600,
-			),
-		),
+          info-box: (
+               icon: (
+                    space: 0.8rem,
+                    size: 2.8rem,
+               ),
 
-		feature-box: (
-			title: (
-				color: $secondary-color,
-				font-size: 2rem,
-			)
-		),
+               title: (
+                    margin-bottom: 2px,
+                    size: 1.2rem,
+                    weight: 600,
+               ),
+          ),
 
-		owl-carousel: (
-			nav: (
-				image-center: 38%
-			)
-		)
-	)
+          feature-box: (
+               title: (
+                    color: $secondary-color,
+                    font-size: 2rem,
+               ),
+          ),
+
+          owl-carousel: (
+               nav: (
+                    image-center: 38%,
+               ),
+          ),
+     )
 );

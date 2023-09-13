@@ -124,7 +124,6 @@ export const MiniBanner = () => {
                                    </div>
                               ))}
                          </Slider>
- 
                     </div>
                </div>
                {/* End .col-md-6 */}

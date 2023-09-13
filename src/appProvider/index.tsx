@@ -73,7 +73,9 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      }, [site]);
 
      return (
-          <AppContext.Provider value={{ site: dummySite, loading, categories, products, featuredProducts }}>
+          <AppContext.Provider
+               value={{ site: dummySite, loading, categories, products, featuredProducts }}
+          >
                <NextNProgress
                     color="#29D"
                     startPosition={0.3}

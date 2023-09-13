@@ -13,114 +13,113 @@ $secondary-color: #61605a;
 $link-color: #3c4250;
 $border-radius: 0;
 $font-family: Poppins, sans-serif;
-$third-font-family: 'Open Sans', sans-serif;
+$third-font-family: "Open Sans", sans-serif;
 
 // 3. Theme Variables
 @include set(
-    (
-        header: (
-            color: #fff,
+     (
+          header: (
+               color: #fff,
 
-            top: (
-                font-size: 1.2rem
-            ),
+               top: (
+                    font-size: 1.2rem,
+               ),
 
-            middle: (
-                padding-top: 2.5rem,
-                padding-bottom: 2.5rem,
-            ),
-            logo: (
-				max-width: 11.1rem,
-                max-width-mobile: 90px
-            ),
+               middle: (
+                    padding-top: 2.5rem,
+                    padding-bottom: 2.5rem,
+               ),
+               logo: (
+                    max-width: 11.1rem,
+                    max-width-mobile: 90px,
+               ),
 
-            search: (
-                toggle: (
-                    size: 21px,
-                    weight: 600
-                ),
-                btn: (
-                    size: 2.4rem,
+               search: (
+                    toggle: (
+                         size: 21px,
+                         weight: 600,
+                    ),
+                    btn: (
+                         size: 2.4rem,
+                         color: #fff,
+                         min-width: 63px,
+                    ),
+                    border: (
+                         width: 0,
+                         color: $primary-color-dark,
+                    ),
+               ),
+
+               dropdown: (
+                    font: (
+                         weight: 600,
+                    ),
+
+                    item: (
+                         active-background: $primary-color,
+                    ),
+               ),
+
+               icon: (
+                    space: 0,
+                    size: 2.7rem,
+               ),
+          ),
+
+          footer: (
+               color: #a8a8a8,
+               link-active-color: $primary-color,
+
+               social-icon: (
                     color: #fff,
-                    min-width: 63px
-                ),
-                border: (
-                    width: 0,
-                    color: $primary-color-dark
-                )
-            ),
+                    size: 1.7rem,
+               ),
 
-            dropdown: (
-                font: (
-                    weight: 600
-                ),
+               widget: (
+                    title: (
+                         weight: 700,
+                    ),
+               ),
 
-                item: (
-                    active-background: $primary-color
-                )
-            ),
+               middle: (
+                    padding-top: 2rem,
+                    padding-bottom: 2.5rem,
+               ),
 
-            icon: (
-                space: 0,
-                size: 2.7rem
-            )
-        ),
+               bottom: (
+                    padding-bottom: 2.7rem,
+                    padding-top: 2.3rem,
+                    border-top: 1px solid #2c2f33,
+               ),
+          ),
 
-        footer: (
-            color: #a8a8a8,
-            link-active-color: $primary-color,
+          breadcrumb: (
+               color: #323232,
+               border-bottom: 1px solid #e7e7e7,
+               padding: 1.5rem,
 
-            social-icon: (
-                color: #fff,
-                size: 1.7rem
-            ),
+               font: (
+                    size: 10px,
+                    weight: 600,
+               ),
 
-            widget: (
-                title: (
-                    weight: 700,
-                )
-            ),
+               divider: (
+                    weight: 400,
+               ),
+          ),
 
-            middle: (
-                padding-top: 2rem,
-                padding-bottom: 2.5rem
-            ),
+          page-header: (
+               color: #fff,
+          ),
 
-            bottom: (
-                padding-bottom: 2.7rem,
-                padding-top: 2.3rem,
-                border-top: 1px solid #2c2f33
-            )
-        ),
-
-
-        breadcrumb: (
-            color: #323232,
-            border-bottom: 1px solid #e7e7e7,
-            padding: 1.5rem,
-
-            font: (
-                size: 10px,
-                weight: 600
-            ),
-
-            divider: (
-                weight: 400,
-            )
-        ),
-
-        page-header: (
-            color: #fff,
-        ),
-
-        category: (
-            sidebar: (
-                title: (
-                    font-size: 12px
-                )
-            )
-        )
-    )
+          category: (
+               sidebar: (
+                    title: (
+                         font-size: 12px,
+                    ),
+               ),
+          ),
+     )
 );
 
 // 4. Plugin Variables

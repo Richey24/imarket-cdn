@@ -3,11 +3,12 @@ import theme2TemplateConfig from "./theme2";
 import theme3TemplateConfig from "./theme3";
 import theme4TemplateConfig from "./theme4";
 import theme5TemplateConfig from "./theme5";
+import { theme6TemplateConfig } from './theme6';
 import theme7TemplateConfig from "./theme7";
 import theme8TemplateConfig from "./theme8";
 import theme9TemplateConfig from "./theme9";
 import theme11TemplateConfig from "./theme11";
-// import theme12TemplateConfig from "./theme12";
+import theme12TemplateConfig from "./theme12";
 import theme13TemplateConfig from "./theme13";
 import theme14TemplateConfig from "./theme14";
 import theme15TemplateConfig from "./theme15";
@@ -36,6 +37,7 @@ import theme42TemplateConfig from "./theme42";
 import { theme28TemplateConfig } from "./theme28";
 import { theme29TemplateConfig } from "./theme29";
 import { theme26TemplateConfig } from "./theme26";
+import { theme10TemplateConfig } from "./theme10";
 import { theme23TemplateConfig } from "./theme23";
 
 export const templateConfig: any = {
@@ -44,15 +46,13 @@ export const templateConfig: any = {
      theme3: theme3TemplateConfig,
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
-     // theme6: theme6TemplateConfig,
+     theme6: theme6TemplateConfig,
      theme11: theme11TemplateConfig,
-     // theme22: theme22TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
-     // theme10: theme10TemplateConfig,
-     // theme11: theme11TemplateConfig,
-     // theme12: theme12TemplateConfig,
+     theme10: theme10TemplateConfig,
+     theme12: theme12TemplateConfig,
      theme13: theme13TemplateConfig,
      theme14: theme14TemplateConfig,
      theme15: theme15TemplateConfig,
@@ -81,50 +81,17 @@ export const templateConfig: any = {
      theme41: theme41TemplateConfig,
      theme42: theme42TemplateConfig,
      theme26: theme26TemplateConfig,
-     theme23:theme23TemplateConfig,
-     
+     theme23: theme23TemplateConfig,
+
 };
 
-export const cssImports = {
-     theme1: "demo1",
-     theme3: "demo3",
-     theme2: "demo2",
-     theme4: "demo4",
-     theme5: "demo5",
-     theme6: "demo6",
-     theme7: "demo3",
-     theme8: "demo8",
-     theme9: "demo9",
-     theme11: "demo11",
-     theme12: "demo12",
-     theme13: "demo13",
-     theme15: "demo15",
-     theme20: "demo20",
-     theme22: "demo22",
-     theme24: "demo24",
-     theme27: "demo27",
-     theme14: "demo14",
-     theme16: "demo16",
-     theme21: "demo21",
-     theme25: "demo25",
-     theme28: "demo28",
-     theme29: "demo29",
-     theme23: "demo23",
-     theme26: "demo26",
-     theme30: "demo30",
-     theme31: "demo31",
-     theme32: "demo32",
-     theme33: "demo33",
-     theme34: "demo34",
-     theme35: "demo35",
-     theme36: "demo36",
-     theme37: "demo37",
-     theme38: "demo38",
-     theme39: "demo39",
-     theme40: "demo40",
-     theme41: "demo41",
-     theme42: "demo42",
-};
+export const cssImports = (len = 42) => {
+     let obj = {}
+     for (let i = 1; i <= len; i++) {
+          obj[`theme${i}`] = `demo${i}`
+     }
+     return obj
+}
 
 export const themeProps = {
      header: {

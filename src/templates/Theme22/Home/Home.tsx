@@ -3,6 +3,7 @@ import Banner from "./components/Banner"
  
 
 const Home = () => {
+     const [quickView, setQuick] = useState({});
 
  
 
@@ -12,5 +13,6 @@ const Home = () => {
         </div>
     )
 }
+
 
 export default Home
