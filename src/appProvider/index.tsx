@@ -25,7 +25,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
 
-     console.log("featuredProducts", featuredProducts);
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {
@@ -74,7 +73,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
      return (
           <AppContext.Provider
-               value={{ site: dummySite, loading, categories, products, featuredProducts }}
+               value={{ site, loading, categories, products, featuredProducts }}
           >
                <NextNProgress
                     color="#29D"

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import "./Header.css";
 import logo from "../../../assets/images/your-logo.png";
@@ -10,9 +11,11 @@ import Language from "@/templates/shared/Header/HeaderLinks/Language";
 import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
 import Links from "@/templates/shared/Header/HeaderLinks/Links";
 import CategorySelect from "@/templates/shared/Header/HeaderLinks/CategorySelect";
+import Link from "next/link";
 
 const Header = (props: any) => {
      const { company, static: staticProps, categories } = props.props;
+     const [activeMenuId, setActiveMenuId] = useState(0);
 
      const showSearch = () => {
           document.getElementById("searchDiv").classList.toggle("showSearch");
@@ -92,12 +95,17 @@ const Header = (props: any) => {
                               <div className="header-center">
                                    <MenuButton />
                                    <a href="demo8.html" className="logo">
-                                        <Image
-                                             src={logo}
-                                             alt="Porto Logo"
-                                             width="104"
-                                             height="41"
-                                        />
+                                        {company?.logo ? (
+                                             <Image
+                                                  src={company?.logo}
+                                                  className="black-logo"
+                                                  alt="Porto Logo"
+                                                  width={104}
+                                                  height={41}
+                                             />
+                                        ) : (
+                                             <h3>{company?.company_name || "Tester"}</h3>
+                                        )}
                                    </a>
                               </div>
 
