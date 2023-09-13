@@ -17,8 +17,6 @@ const Home = (props) => {
      const [quickView, setQuick] = useState({});
      const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
-     console.log(">>>", featuredProductData);
-
      useEffect(() => {
           if (products && !latestProductsState) {
                const latestProductsMap = products.map((product) => {
