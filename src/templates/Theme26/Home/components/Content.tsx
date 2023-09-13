@@ -17,8 +17,8 @@ export const Content = () => {
                     <div className="  owl-theme">
                          <Slider {...settings}>
                               {contentData.map((data) => (
-                                   <article className="post">
-                                        <div className="post-media">
+                                   <article className="post  ">
+                                        <div className="post-media ">
                                              <a href="single.html">
                                                   <img
                                                        src={data.img}
@@ -26,6 +26,7 @@ export const Content = () => {
                                                        alt="Post"
                                                        width={400}
                                                        height={185}
+                                                       className="px-2"
                                                   />
                                              </a>
                                              <div className="post-date">
