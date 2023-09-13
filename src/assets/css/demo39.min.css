@@ -2189,9 +2189,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .customSVGLineAnimTwo {
      animation-name: customSVGLineAnimTwo;
 }
-.appear-animate {
+/* .appear-animate {
      opacity: 0;
-}
+} */
 .appear-animation-visible {
      opacity: 1;
 }
@@ -2683,6 +2683,7 @@ a:focus {
      line-height: 1.5;
      text-transform: uppercase;
 }
+ 
 .card-header:after {
      display: block;
      clear: both;
@@ -4827,6 +4828,7 @@ label {
 .instagram-feed-list a:hover:after {
      opacity: 1;
      visibility: visible;
+     
 }
 .instagram-feed-list img {
      width: 100%;
@@ -13856,11 +13858,11 @@ aside .widget-info i {
      .sidebar-opened .main-content-wrap > .main-content {
           margin-left: 0;
      }
-     body:not(.sidebar-opened) .main-content-wrap > .main-content {
+     /* body:not(.sidebar-opened) .main-content-wrap > .main-content {
           max-width: 100%;
           -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-     }
+     } */
      .sidebar-toggle {
           display: none;
      }

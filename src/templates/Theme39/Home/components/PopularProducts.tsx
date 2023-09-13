@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { featuredproducts } from "../data";
+import { products } from "../data";
 import { Product } from "./Product";
-export const FeaturedProducts = () => {
+
+export const PopularProducts = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -14,22 +15,20 @@ export const FeaturedProducts = () => {
      };
      return (
           <section
-               className="featured-products-container mb-2 appear-animate"
+               className="popular-products-section appear-animate"
                data-animation-name="fadeInUpShorter"
-               data-animation-delay={200}
           >
                <div className="container">
                     <div className="heading">
-                         <h2 className="text-uppercase">Featured Wines</h2>
+                         <h2 className="text-uppercase">Popular Wines</h2>
                     </div>
-                    <div className="products-slider custom-products   owl-theme nav-outer show-nav-hover nav-image-center appear-animate">
+                    <div className="products-slider custom-products   owl-theme nav-outer show-nav-hover nav-image-center">
                          <Slider {...settings}>
-                              {featuredproducts.map((product) => (
+                              {products.map((product) => (
                                  <Product {...product} />
                               ))}
                          </Slider>
                     </div>
-                    {/* End .featured-proucts */}
                </div>
           </section>
      );

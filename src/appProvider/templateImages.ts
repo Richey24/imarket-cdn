@@ -2804,7 +2804,7 @@ export const templateImages = {
         },
         clientImage: {
             client1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/client/client1.png"
-        },
+        }, 
         instagramImage: {
             insta1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/1.jpg",
             insta2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/instagram/2.jpg",

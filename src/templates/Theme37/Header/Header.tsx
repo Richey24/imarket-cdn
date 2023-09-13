@@ -10,13 +10,7 @@ export default function Header() {
                <div className="header-top">
                     <div className="container">
                          <div className="header-left d-none d-sm-block">
-                              <div className="info-box info-box-icon-left text-primary justify-content-start p-0">
-                                   <i className="icon-shipping" />
-                                   <div className="info-box-content">
-                                        <h4>FREE Express Shipping On Orders $99+</h4>
-                                   </div>
-                                   {/* End .info-box-content */}
-                              </div>
+                              
                               {/* End .info-box */}
                          </div>
                          {/* End .header-left */}

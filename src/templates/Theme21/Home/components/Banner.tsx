@@ -11,7 +11,7 @@ export const Banner = () => {
                               <div
                                    className="home-slide banner test"
                                    style={{
-                                        background: `url(${data.bannerimg})`,
+                                        background: `url(${data.bannerImg})`,
                                    }}
                               >
                                    <div
@@ -24,14 +24,14 @@ export const Banner = () => {
                                                   data-animation-name="fadeInUpShorter"
                                                   data-animation-delay={200}
                                              >
-                                                  {data.h2}
+                                                  {data.bannerTitle}
                                              </h2>
                                              <h1
                                                   className="font1 font-weight-bold text-uppercase"
                                                   data-animation-name="fadeInUpShorter"
                                                   data-animation-delay={500}
                                              >
-                                                  {data.h1}
+                                                  {data.bannerSubTitle}
                                              </h1>
                                              <h2
                                                   className="font1 font-weight-normal text-uppercase mb-3"
