@@ -72,4 +72,6 @@ export const options: NextAuthOptions = {
                return token;
           },
      },
+     secret: process.env.NEXTAUTH_SECRET,
+
 };
