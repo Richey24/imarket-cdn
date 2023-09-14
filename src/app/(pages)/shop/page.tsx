@@ -256,13 +256,13 @@ export default function Home(props) {
                                                                  </AccordionButton>
                                                             </h2>
                                                             <AccordionPanel pb={4}>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Shoe
                                                                  </div>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Clothes
                                                                  </div>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Bag
                                                                  </div>
                                                             </AccordionPanel>
@@ -278,7 +278,6 @@ export default function Home(props) {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold"
                                                             className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             PRICE
@@ -306,7 +305,6 @@ export default function Home(props) {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold"
                                                             className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             SIZE
@@ -315,19 +313,19 @@ export default function Home(props) {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Extra Large
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Extra Small
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Large
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Medium
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Small
                                                   </div>
                                              </AccordionPanel>
@@ -339,7 +337,6 @@ export default function Home(props) {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold"
                                                             className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             BRANDS
@@ -348,13 +345,13 @@ export default function Home(props) {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Adidas
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Niki
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Puma
                                                   </div>
                                              </AccordionPanel>

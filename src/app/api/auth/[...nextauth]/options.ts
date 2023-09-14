@@ -10,7 +10,7 @@ export const options: NextAuthOptions = {
      },
      providers: [
           CredentialsProvider({
-               name: "Credentials",
+               name: "Credentals",
                credentials: {
                     email: {
                          label: "Username:",
