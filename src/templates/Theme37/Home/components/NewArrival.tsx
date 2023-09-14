@@ -19,7 +19,7 @@ export const NewArrival = () => {
                          data-animation-delay={100}
                          data-animation-name="fadeIn"
                     >
-                         Sale Products
+                         New Arrivals
                     </h2>
                     <div
                          className="products-slider custom-products  owl-theme nav-outer show-nav-hover nav-image-center appear-animate"

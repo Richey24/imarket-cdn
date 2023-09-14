@@ -3211,7 +3211,7 @@ export const templateImages = {
                slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-1.jpg",
                slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-2.jpg",
           },
-     },
+      },
      demo40: {
           productImages: {
                product1:
