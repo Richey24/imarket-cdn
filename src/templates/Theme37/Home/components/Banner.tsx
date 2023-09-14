@@ -25,14 +25,14 @@ export const Banner = () => {
                                                   data-animation-name="fadeInLeftShorter"
                                                   data-animation-delay={200}
                                              >
-                                                  {data.h4}
+                                                  {data.title}
                                              </h4>
                                              <h2
                                                   className="text-transform-none mb-0 appear-animate"
                                                   data-animation-name="fadeInUpShorter"
                                                   data-animation-delay={200}
                                              >
-                                                  {data.h2}
+                                                  {data.subTitle}
                                              </h2>
                                              <img
                                                   src={data.sliderImage2}
