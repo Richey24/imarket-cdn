@@ -5,6 +5,7 @@ format:
   stage: format
   image: node:18
   script:
+    - set -x
     - yarn install --frozen-lockfile
     - yarn run format:fix 
   only:
