@@ -1,7 +1,18 @@
+"use client";
 import Image from "next/image";
 import OwlCarouselComponent from "@/app/components/OWlCarousel";
+import { useContext } from "react";
+import { AppContext } from "@/appProvider";
 
 export default function About() {
+     const currentPage = "about_us";
+
+     const { site } = useContext(AppContext);
+
+     const pageData = site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage);
+     const minifiedData = pageData?.sections[0]?.component.props.static;
+     console.log("pageData", minifiedData);
+
      const img1 =
           "https://images.unsplash.com/photo-1689481172416-dae28c4a08b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=822&q=80";
      return (
@@ -29,19 +40,14 @@ export default function About() {
                          <div className="row">
                               <div className="col-lg-6 history-section">
                                    <h3 className="section-heading">our history</h3>
-                                   <p className="section-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Cras dapibus a eros in venenatis. Cras mauris arcu, suscipit
-                                        id lacinia sed, pulvinar in urna. Donec urna nisi, efficitur
-                                        fermentum ullamcorper non, mattis et est. Nullam malesuada
-                                        leo leo, non tempus turpis accumsan a. Sed tincidunt feugiat
-                                        purus, sed lobortis justo consequat in. Phasellus lectus
-                                        magna, accumsan eget felis in, hendrerit malesuada lectus.
-                                        Duis orci nunc, vulputate vel sapien nec, sodales
-                                        sollicitudin ligula.
-                                   </p>
+                                   <p
+                                        className="section-text"
+                                        dangerouslySetInnerHTML={{
+                                             __html: minifiedData?.history ?? "",
+                                        }}
+                                   ></p>
                               </div>
-                              <div className="col-lg-6 testimonial about-test">
+                              {/* <div className="col-lg-6 testimonial about-test">
                                    <h3 className="section-heading">client reviews</h3>
                                    <div className="testimonial-owner">
                                         <figure>
@@ -63,7 +69,7 @@ export default function About() {
                                              consectetur elitad adipiscing cas non placerat mi.
                                         </p>
                                    </blockquote>
-                              </div>
+                              </div> */}
                          </div>
                     </div>
                </section>

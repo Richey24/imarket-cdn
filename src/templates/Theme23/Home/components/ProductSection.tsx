@@ -1,15 +1,16 @@
+import { newArrivalsProducts } from "@/templates/Theme21/Home/data";
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { newArrivalsProducts } from "../data";
+import { products } from "../data";
 import { Product } from "./Product";
 
-export const NewProducts = () => {
+export const ProductSection = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
           infinite: true,
           speed: 500,
-          slidesToShow: 5,
+          slidesToShow: 4,
           slidesToScroll: 1,
           beforeChange: (current, next) => setCurrentSlide(next),
      };
@@ -17,8 +18,8 @@ export const NewProducts = () => {
      return (
           <div className="no-gutters">
                <Slider {...settings}>
-                    {newArrivalsProducts.map((product) => (
-                         <Product {...product} />
+                    {products.map((product) => (
+                        <Product {...product} />
                     ))}
                </Slider>
           </div>
