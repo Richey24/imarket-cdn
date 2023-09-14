@@ -4,17 +4,18 @@ import Card from "./components/Card";
 import MiniCard from "./components/MiniCard";
 import Product from "./components/Product";
 import ProductWidget from "./components/ProductWidget";
-import { bestSeller, featuredProduct, latestProducts } from "./data";
+import { bestSeller, featuredProductAlt, latestProducts } from "./data";
 
 const Home = (props) => {
      const {
           static: statiProps,
           products,
           categories,
-          featuredProduct: featuredProductData,
+          featuredProducts: featuredProductData,
      } = props;
      const [latestProductsState, setLatestProducts] = useState<any>(null);
      const [quickView, setQuick] = useState({});
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
      useEffect(() => {
           if (products && !latestProductsState) {
@@ -36,18 +37,40 @@ const Home = (props) => {
                });
                setLatestProducts(latestProductsMap);
           }
+          if (featuredProductData && !featuredProductsState) {
+               const featuredProductsMap = featuredProductData.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
+          }
      }, [products]);
 
      return (
           <div>
                <Banner slides={statiProps?.banner ?? []} />
                {/* <Card /> */}
-               <Product setQuickView={setQuick} />
+               {featuredProductsState && (
+                    <Product setQuickView={setQuick} products={featuredProductsState} />
+               )}
+
                {latestProductsState && (
                     <MiniCard
                          latestProducts={latestProductsState.slice(0, 3) ?? []}
                          bestSeller={bestSeller}
-                         featuredProduct={featuredProduct}
+                         featuredProduct={featuredProductAlt}
                     />
                )}
                <ProductWidget quickView={quickView} />

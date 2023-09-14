@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { products } from "../data";
 
-const Product = ({ setQuickView }) => {
+const Product = ({ setQuickView, products }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
