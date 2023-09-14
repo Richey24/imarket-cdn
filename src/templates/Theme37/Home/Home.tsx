@@ -1,6 +1,6 @@
 import React from "react";
 import { Banner } from "./components/Banner";
-import { Info} from "./components/Info";
+import { Info } from "./components/Info";
 import { TopProduct } from "./components/TopProduct";
 import { SaleProduct } from "./components/SaleProduct";
 import { NewArrival } from "./components/NewArrival";
@@ -12,7 +12,7 @@ export const Home = () => {
                <Banner />
                <Info />
                <TopProduct />
-               <ProductInfo/>
+               <ProductInfo />
                <SaleProduct />
                <NewArrival />
                <div

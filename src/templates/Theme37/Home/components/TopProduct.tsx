@@ -9,7 +9,7 @@ export const TopProduct = () => {
           infinite: true,
           speed: 500,
           slidesToShow: 4,
-          margin:20,
+          margin: 20,
           slidesToScroll: 1,
           beforeChange: (current, next) => setCurrentSlide(next),
      };
@@ -26,7 +26,7 @@ export const TopProduct = () => {
 
                     <Slider {...settings}>
                          {productScrolls.map((data) => (
-                              <div className="product-default inner-quickview inner-icon"  >
+                              <div className="product-default inner-quickview inner-icon">
                                    <figure>
                                         <a href="demo37-product.html">
                                              <img

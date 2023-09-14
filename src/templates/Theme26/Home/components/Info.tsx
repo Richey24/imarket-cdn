@@ -24,12 +24,8 @@ export const Info = () => {
                               <div className="info-box info-box-icon-left">
                                    <i className={data.icon} />
                                    <div className="info-box-content">
-                                        <h4 className="line-height-1">
-                                             {data.h4}
-                                        </h4>
-                                        <p className="font2 line-height-1 text-body ">
-                                             {data.p}
-                                        </p>
+                                        <h4 className="line-height-1">{data.h4}</h4>
+                                        <p className="font2 line-height-1 text-body ">{data.p}</p>
                                    </div>
                               </div>
                          ))}

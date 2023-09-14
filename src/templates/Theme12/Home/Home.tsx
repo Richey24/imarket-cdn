@@ -1,12 +1,11 @@
-import { useState } from "react"
-import Banner from "./components/Banner"
-import MiniiBanners from "./components/MiniBanner"
-import Product from "./components/Product"
-import ProductWidget from "@/templates/Theme6/Home/components/ProductWidget"
+import { useState } from "react";
+import Banner from "./components/Banner";
+import MiniiBanners from "./components/MiniBanner";
+import Product from "./components/Product";
+import ProductWidget from "@/templates/Theme6/Home/components/ProductWidget";
 
 const Home = () => {
-
-     const [quickView, setQuick] = useState({})
+     const [quickView, setQuick] = useState({});
 
      return (
           <div>
@@ -15,7 +14,7 @@ const Home = () => {
                <Product setQuickView={setQuick} />
                <ProductWidget quickView={quickView} />
           </div>
-     )
-}
+     );
+};
 
-export default Home
+export default Home;

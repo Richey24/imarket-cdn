@@ -3,7 +3,6 @@ import { authApi, UserI } from "../services/auth";
 
 interface IGlobalState {
      isSideBarVisible: boolean;
-
 }
 
 interface ISetGlobal {
@@ -19,13 +18,10 @@ export const globalSlice = createSlice({
      initialState,
      reducers: {
           setSideBarVisibility: (state) => {
-               state.isSideBarVisible = !state.isSideBarVisible
+               state.isSideBarVisible = !state.isSideBarVisible;
           },
-
      },
-     extraReducers: (builder) => {
-
-     },
+     extraReducers: (builder) => {},
 });
 
 export const { setSideBarVisibility } = globalSlice.actions;

@@ -1,12 +1,12 @@
 stages:
-  - format
+     - format
 
 format:
-  stage: format
-  image: node:18
-  script:
-    - set -x
-    - yarn install --frozen-lockfile
-    - yarn run format:fix 
-  only:
-    - merge_requests
+     stage: format
+     image: node:18
+     script:
+          - set -x
+          - yarn install --frozen-lockfile
+          - yarn run format:fix
+     only:
+          - merge_requests
