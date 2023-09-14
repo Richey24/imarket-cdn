@@ -74,42 +74,6 @@ const Banner = () => {
                                                   />
                                              </p>
                                         </div>
-                                        <div
-                                             className="col-lg-3 col-xl-3 col-md-12 col-sm-4 col-6 pr-0 content-right  mr-0 ml-0"
-                                             data-animation-name="fadeInLeftShorter"
-                                             data-animation-delay={280}
-                                        >
-                                             {/* <img
-                                                  src="assets/images/demoes/demo38/slider/fda.png"
-                                                  className="w-auto mb-3"
-                                                  alt="Slider Thumb"
-                                             /> */}
-                                             <ul className="text-capitalize">
-                                                  <li>
-                                                       <i className="fa fa-check" />
-                                                       Non-Contact Temperature Taking
-                                                  </li>
-                                                  <li>
-                                                       <i className="fa fa-check" />
-                                                       Get Readings in Only 1 Second
-                                                  </li>
-                                                  <li>
-                                                       <i className="fa fa-check" />
-                                                       Fever Alarm at 100°F
-                                                  </li>
-                                             </ul>
-                                             <span className="d-block">
-                                                  from <span className="old-price">$299.99</span>
-                                             </span>
-                                             <h5 className="d-inline-flex align-items-center mb-0">
-                                                  <span>to</span>
-                                                  <b className="coupon-sale-text text-white align-middle d-block">
-                                                       <sup>$</sup>
-                                                       <em className="align-text-top">199</em>
-                                                       <sup>99</sup>
-                                                  </b>
-                                             </h5>
-                                        </div>
                                    </div>
                                    {/* End .banner-layer */}
                               </div>
