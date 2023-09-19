@@ -25,7 +25,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
 
-     console.log("featuredProducts", featuredProducts);
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {

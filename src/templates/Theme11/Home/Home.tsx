@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HomeSlider from "./components/HomeSlider";
 import {
      additionalProductWidgetsData,
@@ -19,40 +19,108 @@ import { ProductWidget } from "./components/ProductWidget";
 import TopRatedCard from "./components/TopRatedCard";
 import bannerBg from "../../../assets/images/demoes/demo11/banners/category-bg.jpg";
 
-const Home = () => {
+const Home = (props) => {
+     const {
+          static: statiProps,
+          products,
+          categories,
+          featuredProducts: featuredProductData,
+     } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
+
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         category: "Fashion",
+                         image1: "data:image/jpeg;base64," + product?.image_1920,
+                         imageUrl2: "data:image/jpeg;base64," + product?.image_1024,
+                         title: product.display_name,
+                         price: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+          if (featuredProductData && !featuredProductsState) {
+               const featuredProductsMap = featuredProductData.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         category: "SHOES, TOYS",
+                         image1: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         title: product.display_name,
+                         price: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
+          }
+     }, [products, featuredProductData]);
+
+     const displayCategoryNames =
+          categories &&
+          products &&
+          categories.map((category) => {
+               const categoryProducts = products.filter(
+                    (product) => product.category === category.display_name,
+               );
+               return {
+                    name: category.display_name,
+                    productsCount: categoryProducts.length,
+               };
+          });
+
      return (
           <div className="page-wrapper">
                {/* End .header */}
                <main className="main">
-                    <HomeSlider slides={sliderData} />
+                    <HomeSlider slides={statiProps?.banner ?? []} />
                     {/* End .home-slider-container */}
-                    <BannersContainer banners={bannerData} />
+                    {/* <BannersContainer banners={bannerData} /> */}
                     {/* End .banners-container */}
                     <InfoBoxesContainer infoBoxes={infoBoxData} />
                     {/* End .container */}
                     <div className="container mb-4 mb-lg-6">
-                         <h2
-                              className="section-title text-center "
-                              data-animation-name="fadeInUpShorter"
-                              data-animation-delay={200}
-                         >
-                              Featured Products
-                         </h2>
-                         <p
-                              className="section-description text-center "
-                              data-animation-name="fadeInUpShorter"
-                              data-animation-delay={200}
-                         >
-                              Amazing products added recently in our catalog
-                         </p>
-                         <ProductGrid products={productsData} />
-                         {/* End .row */}
-                         <a
-                              className="btn btn-dark btn-lg btn-center loadmore"
-                              href="ajax/demo11-ajax-products.html"
-                         >
-                              Load More...
-                         </a>
+                         {featuredProductsState && (
+                              <>
+                                   <h2
+                                        className="section-title text-center "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay={200}
+                                   >
+                                        Featured Products
+                                   </h2>
+                                   <p
+                                        className="section-description text-center "
+                                        data-animation-name="fadeInUpShorter"
+                                        data-animation-delay={200}
+                                   >
+                                        Amazing products added recently in our catalog
+                                   </p>
+                                   <ProductGrid products={featuredProductsState.slice(0, 4)} />
+                                   {/* End .row */}
+                                   <a
+                                        className="btn btn-dark btn-lg btn-center loadmore"
+                                        href="ajax/demo11-ajax-products.html"
+                                   >
+                                        Load More...
+                                   </a>
+                              </>
+                         )}
+
                          <hr className="mb-4 pb-1" />
                          <h2
                               className="section-title text-center "
@@ -68,7 +136,10 @@ const Home = () => {
                          >
                               Amazing categories with only top fashion products
                          </p>
-                         <CategoriesSlider categories={categoriesData} />
+                         {displayCategoryNames && (
+                              <CategoriesSlider categories={displayCategoryNames.slice(0, 5)} />
+                         )}
+
                          {/* End .categories-slider */}
                     </div>
                     {/* End .container */}
@@ -128,15 +199,18 @@ const Home = () => {
                                    <h4 className="section-sub-title mb-2">
                                         Recently Added Products
                                    </h4>
-                                   {productWidgetsData.map((product, index) => (
-                                        <ProductWidget
-                                             key={index}
-                                             productImage={product.image1}
-                                             productTitle={product.name}
-                                             productPrice={product.price}
-                                             productImageTwo={product.image2}
-                                        />
-                                   ))}
+                                   {latestProductsState &&
+                                        latestProductsState
+                                             .slice(0, 3)
+                                             .map((product, index) => (
+                                                  <ProductWidget
+                                                       key={index}
+                                                       productImage={product.image1}
+                                                       productTitle={product.title}
+                                                       productPrice={product.price}
+                                                       productImageTwo={product.image2}
+                                                  />
+                                             ))}
                               </div>
                               <div
                                    className="col-md-4 pb-5 pb-md-0 "
@@ -160,15 +234,18 @@ const Home = () => {
                                    data-animation-delay={600}
                               >
                                    <h4 className="section-sub-title mb-2">Featured Products</h4>
-                                   {featuredProductsWidgetsData.map((product, index) => (
-                                        <ProductWidget
-                                             key={index}
-                                             productImage={product.image1}
-                                             productTitle={product.name}
-                                             productPrice={product.price}
-                                             productImageTwo={product.image2}
-                                        />
-                                   ))}
+                                   {featuredProductsState &&
+                                        featuredProductsState
+                                             .slice(0, 3)
+                                             .map((product, index) => (
+                                                  <ProductWidget
+                                                       key={index}
+                                                       productImage={product.image1}
+                                                       productTitle={product.title}
+                                                       productPrice={product.price}
+                                                       productImageTwo={product.image2}
+                                                  />
+                                             ))}
                               </div>
                          </div>
                          {/* End .row */}

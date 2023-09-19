@@ -15476,7 +15476,7 @@ aside .widget-info i {
      border-radius: 6px;
 }
 .banner img {
-     min-height: 218px;
+     /* min-height: 218px; */
      border-radius: 6px;
 }
 .banner h6 {

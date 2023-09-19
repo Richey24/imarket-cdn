@@ -1,132 +1,241 @@
-import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+import Slider from "react-slick";
+import { templateImages } from "@/appProvider/templateImages";
 
-const owlCarouselOptions = {
-     dots: false,
-     margin: 0,
-     loop: false,
-     items: 1,
-};
-
-export const Banner = () => {
+const Banner = () => {
+     let settings = {
+          // dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          swipeToSlide: true,
+          arrows: true,
+          accessibility: true,
+          className: "",
+     };
      return (
-          <section className="intro-section">
-               <OwlCarousel
-                    className="home-slider slide-animate owl-carousel owl-theme show-nav-hover loaded m-b-5"
-                    {...owlCarouselOptions}
-               >
-                    <div className="home-slide home-slide-1 banner tw-bg-[#f6dbe2]">
-                         <figure>
-                              <img
-                                   src="assets/images/demoes/demo34/slider/slide-1.jpg"
-                                   alt="slider"
-                                   width="1920"
-                                   height="700"
-                              />
-                         </figure>
+          <section className="home-section ">
+               <div className="row">
+                    <div className="col-md-12 col-xl-8 col-lg-12 mb-xl-0 mb-2 h-100">
+                         <div className="home-slider slide-animate owl-carouse owl-theme show-nav-hover dot-inside nav-big h-100 text-uppercase">
+                              <Slider {...settings}>
+                                   <div className="home-slide home-slide1 banner h-100">
+                                        <Image
+                                             className="slide-bg"
+                                             src={templateImages.demo40.sliderImage.slide1}
+                                             width={1028}
+                                             height={465}
+                                             alt="slider image"
+                                             style={{
+                                                  objectFit: "cover",
+                                             }}
+                                        />
+                                        <div className="container d-flex align-items-center">
+                                             <div className="banner-layer d-flex flex-column">
+                                                  <h6
+                                                       className="text-transform-none"
+                                                       data-animation-name="fadeInDownShorter"
+                                                       data-animation-delay={100}
+                                                  >
+                                                       Exclusive Product New Arrival
+                                                  </h6>
+                                                  <h2
+                                                       className="text-transform-none"
+                                                       data-animation-name="fadeInUpShorter"
+                                                       data-animation-delay={600}
+                                                  >
+                                                       Condensed Milk
+                                                  </h2>
+                                                  <h3
+                                                       className=""
+                                                       data-animation-name="fadeInRightShorter"
+                                                       data-animation-delay={1100}
+                                                  >
+                                                       NATURAL PRODUCT
+                                                  </h3>
+                                                  <span
+                                                       className="custom-font text-transform-none"
+                                                       data-animation-name="fadeInRightShorter"
+                                                       data-animation-delay={1100}
+                                                  >
+                                                       <span>Extra!</span>
+                                                  </span>
+                                                  <h5
+                                                       className=""
+                                                       data-animation-name="fadeInUpShorter"
+                                                       data-animation-delay={1400}
+                                                  >
+                                                       BREAKFAST PRODUCTS ON SALE
+                                                  </h5>
+                                                  <h4
+                                                       className="d-inline-block"
+                                                       data-animation-name="fadeInRightShorter"
+                                                       data-animation-delay={1800}
+                                                  >
+                                                       <sup>UP TO</sup>
+                                                       <b className="coupon-sale-text ls-10 text-white align-middle">
+                                                            50%
+                                                       </b>
+                                                  </h4>
+                                             </div>
+                                             {/* End .banner-layer */}
+                                        </div>
+                                   </div>
 
-                         <div className="banner-layer banner-layer-middle">
-                              <div
-                                   className="appear-animate"
-                                   data-animation-name="fadeInLeftShorter"
-                                   data-animation-delay="300"
-                              >
-                                   <h4 className="m-b-2">New Amazing Collection</h4>
-                                   <h2 className="font1 font-italic m-b-4">Summer Beauty Sale</h2>
-                                   <p className="font2 ls-n-15 m-b-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent ullamcorper quam lacus, et suscipit lectus porta
-                                        efficitur.
-                                   </p>
-                                   <h5 className="coupon-sale-text float-left ls-n-20 text-uppercase">
-                                        Starting at
-                                        <em>
-                                             $<strong>39</strong>99
-                                        </em>
-                                   </h5>
-                                   <a href="demo34-shop.html" className="btn btn-light btn-lg mb-2">
-                                        Shop Now
-                                   </a>
-                              </div>
-                         </div>
-
-                         <div className="banner-layer banner-layer-bottom banner-text">
-                              <img
-                                   src="assets/images/demoes/demo34/slider/slide-1-text.png"
-                                   alt="bg-text"
-                                   width="1281"
-                                   height="275"
-                              />
-                         </div>
-
-                         <div className="banner-layer dot-image">
-                              <img
-                                   src="assets/images/demoes/demo34/dots.png"
-                                   alt="dots"
-                                   width="123"
-                                   height="126"
-                              />
+                                   <div className="home-slide home-slide2 banner banner-md-vw">
+                                        <Image
+                                             className="slide-bg"
+                                             src={templateImages.demo40.sliderImage.slide2}
+                                             alt="slider image"
+                                             width={659}
+                                             height={600}
+                                             style={{ objectFit: "cover" }}
+                                        />
+                                        <div className="container d-flex align-items-center">
+                                             <div className="container d-flex align-items-center">
+                                                  <div className="banner-layer d-flex flex-column text-right">
+                                                       <h6
+                                                            className="text-transform-none"
+                                                            data-animation-name="fadeInDownShorter"
+                                                            data-animation-delay={100}
+                                                       >
+                                                            Exclusive Whole Wheat
+                                                       </h6>
+                                                       <h2
+                                                            className="text-transform-none"
+                                                            data-animation-name="fadeInUpShorter"
+                                                            data-animation-delay={600}
+                                                       >
+                                                            Fluffy Pancakes
+                                                       </h2>
+                                                       <h3
+                                                            className=""
+                                                            data-animation-name="fadeInRightShorter"
+                                                            data-animation-delay={1100}
+                                                       >
+                                                            GOOD OLD FASHIONED
+                                                       </h3>
+                                                       <h5
+                                                            className=""
+                                                            data-animation-name="fadeInUpShorter"
+                                                            data-animation-delay={1400}
+                                                       >
+                                                            BREAKFAST PRODUCTS ON SALE
+                                                       </h5>
+                                                       <h4
+                                                            className="d-inline-block"
+                                                            data-animation-name="fadeInRightShorter"
+                                                            data-animation-delay={1800}
+                                                       >
+                                                            <sup>UP TO</sup>
+                                                            <b className="coupon-sale-text ls-10 text-white align-middle">
+                                                                 50%
+                                                            </b>
+                                                       </h4>
+                                                  </div>
+                                                  {/* End .banner-layer */}
+                                             </div>
+                                        </div>
+                                   </div>
+                              </Slider>
                          </div>
                     </div>
-                    <div className="home-slide home-slide-2 banner tw-bg-[#f6dbe2]">
-                         <figure>
-                              <img
-                                   src="assets/images/demoes/demo34/slider/slide-2.jpg"
-                                   alt="slider"
-                                   width="1920"
-                                   height="700"
+                    <div className="col-md-12 col-xl-4 col-lg-12 d-sm-flex d-xl-block">
+                         <div className="banner banner1 mb-2 pr-sm-3 pr-0 pr-xl-0">
+                              <Image
+                                   className="slide-bg"
+                                   src={templateImages.demo40.sliderImage.slide2}
+                                   alt="slider image"
+                                   width={504}
+                                   height={222}
+                                   style={{ backgroundColor: "#d9e2e1", minHeight: "218px" }}
                               />
-                         </figure>
-
-                         <div className="banner-layer banner-layer-middle text-right">
-                              <div
-                                   className="appear-animate"
-                                   data-animation-name="fadeInRightShorter"
-                                   data-animation-delay="300"
-                              >
-                                   <h4 className="m-b-2">Back In Stock</h4>
-                                   <h2 className="font1 font-italic m-b-4">Ultimate SkinCare</h2>
-                                   <p className="font2 ls-n-15 m-b-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent lori ullamcorper quam lacus, et suscipit lectus
-                                        porta efficitur.
-                                   </p>
-                                   <a
-                                        href="demo34-shop.html"
-                                        className="btn btn-light btn-lg mb-2 float-right"
-                                   >
-                                        Shop Now
-                                   </a>
-                                   <h5 className="coupon-sale-text float-right ls-n-20 text-uppercase">
-                                        Starting at
-                                        <em>
-                                             $<strong>39</strong>99
-                                        </em>
-                                   </h5>
+                              <div className="container d-flex align-items-center">
+                                   <div className="banner-layer d-flex flex-column pt-0">
+                                        <h6
+                                             className="text-transform-none mb-1"
+                                             data-animation-name="fadeInDownShorter"
+                                             data-animation-delay={100}
+                                        >
+                                             Exclusive Product New Arrival
+                                        </h6>
+                                        <h2
+                                             className="text-transform-none"
+                                             data-animation-name="fadeInUpShorter"
+                                             data-animation-delay={600}
+                                        >
+                                             Organic Coffee
+                                        </h2>
+                                        <h3
+                                             className=""
+                                             data-animation-name="fadeInRightShorter"
+                                             data-animation-delay={1100}
+                                        >
+                                             SPECIAL BLEND
+                                        </h3>
+                                        <span
+                                             className="custom-font text-transform-none"
+                                             data-animation-name="fadeInRightShorter"
+                                             data-animation-delay={1100}
+                                        >
+                                             <span>Fresh!</span>
+                                        </span>
+                                   </div>
+                                   {/* End .banner-layer */}
                               </div>
                          </div>
-
-                         <div className="banner-layer banner-layer-bottom banner-text">
-                              <img
-                                   src="assets/images/demoes/demo34/slider/slide-2-text.png"
-                                   alt="bg-text"
-                                   width="1281"
-                                   height="275"
+                         {/* End .home-slide */}
+                         <div className="banner banner2 pl-sm-3 pl-0 pl-xl-0">
+                              <Image
+                                   className="slide-bg"
+                                   src={templateImages.demo40.sliderImage.slide1}
+                                   alt="slider image"
+                                   width={504}
+                                   height={222}
+                                   style={{ backgroundColor: "#b48476", minHeight: "218px" }}
                               />
+                              <div className="container d-flex align-items-center">
+                                   <div className="banner-layer d-flex flex-column">
+                                        <h6
+                                             className="text-transform-none mb-1"
+                                             data-animation-name="fadeInUpShorter"
+                                             data-animation-delay={200}
+                                        >
+                                             Stay Healthy
+                                        </h6>
+                                        <h2
+                                             className="text-transform-none text-white ml-0"
+                                             data-animation-name="fadeInUpShorter"
+                                             data-animation-delay={400}
+                                        >
+                                             Low Carb
+                                        </h2>
+                                        <h3
+                                             className=" text-white"
+                                             data-animation-name="fadeInUpShorter"
+                                             data-animation-delay={800}
+                                        >
+                                             STRAWBERRY
+                                        </h3>
+                                        <span
+                                             className="custom-font text-transform-none"
+                                             data-animation-name="fadeInUpShorter"
+                                             data-animation-delay={1200}
+                                        >
+                                             <span className="text-white text-transform-none">
+                                                  Sugar-Free
+                                             </span>
+                                        </span>
+                                   </div>
+                                   {/* End .banner-layer */}
+                              </div>
                          </div>
-
-                         <div className="banner-layer dot-image">
-                              <img
-                                   src="assets/images/demoes/demo34/dots.png"
-                                   alt="dots"
-                                   width="123"
-                                   height="126"
-                              />
-                         </div>
+                         {/* End .home-slide */}
                     </div>
-               </OwlCarousel>
+               </div>
           </section>
      );
 };
+export default Banner;
