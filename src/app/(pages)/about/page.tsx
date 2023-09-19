@@ -1,10 +1,21 @@
 "use client";
 import Image from "next/image";
 import OwlCarouselComponent from "@/app/components/OWlCarousel";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "@/appProvider";
+import { TeamInfo } from "./TeamInfo";
+import Slider from "react-slick";
 
 export default function About() {
+     const [currentSlide, setCurrentSlide] = useState(0);
+     const settings = {
+          dots: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          beforeChange: (current, next) => setCurrentSlide(next),
+     };
      const currentPage = "about_us";
 
      const { site } = useContext(AppContext);
@@ -73,84 +84,24 @@ export default function About() {
                          </div>
                     </div>
                </section>
-               <section className="gallery-section with-bg">
-                    <div className="container">
-                         <h3 className="section-heading">photo gallery</h3>
-                         <OwlCarouselComponent>
-                              <figure>
-                                   <img src={img1} alt="blog" />
-                              </figure>
-                              <figure>
-                                   <img src={img1} alt="blog" />
-                              </figure>
-                              <figure>
-                                   <img src={img1} alt="blog" />
-                              </figure>
-                              <figure>
-                                   <img src={img1} alt="blog" />
-                              </figure>
-                         </OwlCarouselComponent>
+               <div className="team-section container">
+                    <h4 className="title-decorate text-center text-dark d-flex align-items-center">
+                         OUR TEAM
+                    </h4>
+                    <div className=" justify-content-center">
+                         <Slider {...settings}>
+                              {" "}
+                              {minifiedData &&
+                                   minifiedData.team &&
+                                   minifiedData.team.map((data) => <TeamInfo {...data} />)}
+                         </Slider>
                     </div>
-               </section>
-               <section className="detail-info-section">
-                    <div className="container">
-                         <div className="row">
-                              <div className="col-lg-6">
-                                   <figure>
-                                        <Image
-                                             src={img1}
-                                             layout="fill"
-                                             className="lg-img"
-                                             alt="blog"
-                                        />
-                                   </figure>
-                              </div>
-                              <div className="col-lg-6 info-body">
-                                   <div className="info-item">
-                                        <h4 className="section-heading">our mission</h4>
-                                        <p className="section-text">
-                                             Lorem Ipsum is simply dummy text of the printing and
-                                             typesetting industry. Lorem Ipsum has been the
-                                             industry’s standard dummy text ever since the 1500s,
-                                             when an unknown printer took a galley of type and
-                                             scrambled.
-                                        </p>
-                                   </div>
-                                   <div className="info-item">
-                                        <h4 className="section-heading">our vision</h4>
-                                        <p className="section-text">
-                                             Lorem Ipsum is simply dummy text of the printing and
-                                             typesetting industry. Lorem Ipsum has been the
-                                             industry’s standard dummy text ever since the 1500s,
-                                             when an unknown printer took a galley of type and
-                                             scrambled.
-                                        </p>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </section>
+                    {/* End .row */}
+               </div>
+
                <section className="features-section with-bg">
                     <div className="container">
-                         <div
-                              className="owl-carousel owl-theme"
-                              data-owl-options="{
-                        'dots': false,
-                        'margin': 30,
-                        'loop': false,
-                        'responsive': {
-                            '0': {
-                                'items': 1
-                            },
-                            '576': {
-                                'items': 2
-                            },
-                            '992': {
-                                'items': 3
-                            }
-                        }
-                    }"
-                         >
+                         <div className="owl-carousel owl-theme">
                               <div className="feature-box">
                                    <i className="icon-shipped"></i>
 
