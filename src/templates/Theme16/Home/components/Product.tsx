@@ -11,15 +11,30 @@ export const Product: React.FC<ProductProps> = ({
      oldPrice,
 }) => {
      return (
-          <div className="product-default inner-quickview inner-icon px-2">
+          <div
+               className="product-default inner-quickview inner-icon appear-animate mx-2"
+               
+          >
                <figure>
-                    <a href="demo37-product.html">
-                         <Image src={productImageUrl} width={205} height={205} alt="product" />
+                    <a href="demo16-product.html">
+                         <Image
+                              src={productImageUrl}
+                              alt="product"
+                              width={400}
+                              height={400}
+                         />
                     </a>
+                    <div className="label-group">
+                         <span className="product-label label-hot">HOT</span>
+                    </div>
                     <div className="btn-icon-group">
-                         <a href="#" className="btn-icon btn-add-cart product-type-simple">
+                         <button
+                              className="btn-icon btn-add-cart product-type-simple"
+                              data-toggle="modal"
+                              data-target="#addCartModal"
+                         >
                               <i className="icon-shopping-cart" />
-                         </a>
+                         </button>
                     </div>
                     <a
                          href="ajax/product-quick-view.html"
@@ -32,16 +47,18 @@ export const Product: React.FC<ProductProps> = ({
                <div className="product-details">
                     <div className="category-wrap">
                          <div className="category-list">
-                              <a href="demo37-shop.html" className="product-category">
-                                   {productCategory}
+                              <a href="demo16-shop.html" className="product-category">
+                                   DRESS
+                              </a>
+                              ,
+                              <a href="demo16-shop.html" className="product-category">
+                                   OUTFITS
                               </a>
                          </div>
-                         <a href="wishlist.html" title="Wishlist" className="btn-icon-wish">
-                              <i className="icon-heart" />
-                         </a>
                     </div>
                     <h3 className="product-title">
-                         <a href="demo37-product.html">{productTitle}</a>
+                         {" "}
+                         <a href="demo16-product.html">{productTitle}</a>{" "}
                     </h3>
                     {/* <div class="ratings-container">
 <div class="product-ratings">
@@ -49,8 +66,8 @@ export const Product: React.FC<ProductProps> = ({
 <span class="tooltiptext tooltip-top"></span>
 </div>
 </div> */}
+                    {/* End .product-container */}
                     <div className="price-box">
-                         <span className="old-price">$90.00</span>
                          <span className="product-price">${productPrice}</span>
                     </div>
                     {/* End .price-box */}
