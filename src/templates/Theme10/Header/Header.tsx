@@ -1,6 +1,6 @@
-import Image from "next/image"
-import "./Header.css"
-import { templateImages } from "@/appProvider/templateImages"
+import Image from "next/image";
+import "./Header.css";
+import { templateImages } from "@/appProvider/templateImages";
 import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
 import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
 import Link from "next/link";
@@ -123,9 +123,9 @@ const Header = (props: any) => {
                          <div className="header-middle d-lg-block d-none">
                               <div className="container d-block">
                                    <div className="header-left d-none d-lg-flex justify-content-center">
-                                        <MenuButton/>
+                                        <MenuButton />
 
-                                       <Logo company={company}/>
+                                        <Logo company={company} />
                                    </div>
 
                                    <div className="header-right d-lg-block d-flex">
@@ -644,4 +644,4 @@ const Header = (props: any) => {
      );
 };
 
-export default Header
+export default Header;

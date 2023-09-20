@@ -13,7 +13,8 @@ import {
      RangeSlider,
 } from "@chakra-ui/react";
 
-export default function Home() {
+export default function Home(props) {
+     console.log({ props });
      const img =
           "https://images.unsplash.com/photo-1689631281436-0123773c8cff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
      return (
@@ -26,7 +27,7 @@ export default function Home() {
                                    "no-repeat 50%/cover url(https://plus.unsplash.com/premium_photo-1661381007965-b21e0fb0681b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80) #ee3d43",
                          }}
                     >
-                         <div className="bg-black tw-opacity-50 tw-absolute tw-w-full tw-h-full tw-top-0 tw-left-0"></div>
+                         <div className="tw-absolute tw-top-0 tw-bottom-0 tw-right-0 tw-left-0 tw-bg-black/5"></div>
                          <div className="container position-relative">
                               <div className="banner-body text-uppercase">
                                    <h4 className="banner-subtitle text-white">
@@ -179,41 +180,17 @@ export default function Home() {
                                    </div>
                               </nav>
                               <div className="row products-group">
-                                   <div className="col-xl-3 col-md-4 col-6">
-                                        <ProductCard
-                                             imageSrc={img}
-                                             productName={""}
-                                             price={"$180"}
-                                        />
-                                   </div>
-                                   <div className="col-xl-3 col-md-4 col-6">
-                                        <ProductCard
-                                             imageSrc={img}
-                                             productName={""}
-                                             price={"$4000"}
-                                        />
-                                   </div>
-                                   <div className="col-xl-3 col-md-4 col-6">
-                                        <ProductCard
-                                             imageSrc={img}
-                                             productName={""}
-                                             price={"$2000"}
-                                        />
-                                   </div>
-                                   <div className="col-xl-3 col-md-4 col-6">
-                                        <ProductCard
-                                             imageSrc={img}
-                                             productName={""}
-                                             price={"$20"}
-                                        />
-                                   </div>
-                                   <div className="col-xl-3 col-md-4 col-6">
-                                        <ProductCard
-                                             imageSrc={img}
-                                             productName={""}
-                                             price={"$20"}
-                                        />
-                                   </div>
+                                   {[...Array(12)].map((val) => {
+                                        return (
+                                             <div key={val} className="col-xl-3 col-md-4 col-6">
+                                                  <ProductCard
+                                                       imageSrc={img}
+                                                       productName={"product name"}
+                                                       price={"$180"}
+                                                  />
+                                             </div>
+                                        );
+                                   })}
                               </div>
                          </div>
                          <aside className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
@@ -227,7 +204,7 @@ export default function Home() {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold "
+                                                            className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             CATEGORIES
                                                        </Box>
@@ -245,6 +222,7 @@ export default function Home() {
                                                                            as="span"
                                                                            flex="1"
                                                                            textAlign="left"
+                                                                           className="tw-font-semibold tw-text-2xl"
                                                                       >
                                                                            Car
                                                                       </Box>
@@ -252,13 +230,13 @@ export default function Home() {
                                                                  </AccordionButton>
                                                             </h2>
                                                             <AccordionPanel pb={4}>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       BMW
                                                                  </div>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Range Rover
                                                                  </div>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Benz
                                                                  </div>
                                                             </AccordionPanel>
@@ -270,6 +248,7 @@ export default function Home() {
                                                                            as="span"
                                                                            flex="1"
                                                                            textAlign="left"
+                                                                           className="tw-font-semibold tw-text-2xl"
                                                                       >
                                                                            Fashion
                                                                       </Box>
@@ -277,13 +256,13 @@ export default function Home() {
                                                                  </AccordionButton>
                                                             </h2>
                                                             <AccordionPanel pb={4}>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Shoe
                                                                  </div>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Clothes
                                                                  </div>
-                                                                 <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                                 <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                                       Bag
                                                                  </div>
                                                             </AccordionPanel>
@@ -299,7 +278,7 @@ export default function Home() {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold "
+                                                            className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             PRICE
                                                        </Box>
@@ -326,7 +305,7 @@ export default function Home() {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold "
+                                                            className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             SIZE
                                                        </Box>
@@ -334,19 +313,19 @@ export default function Home() {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Extra Large
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Extra Small
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Large
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Medium
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Small
                                                   </div>
                                              </AccordionPanel>
@@ -358,7 +337,7 @@ export default function Home() {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold "
+                                                            className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             BRANDS
                                                        </Box>
@@ -366,13 +345,13 @@ export default function Home() {
                                                   </AccordionButton>
                                              </h2>
                                              <AccordionPanel pb={4}>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Adidas
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Niki
                                                   </div>
-                                                  <div className="tw-text-base tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
+                                                  <div className="tw-text-lg tw-font-light tw-cursor-pointer tw-text-gray-700 hover:tw-text-gray-900">
                                                        Puma
                                                   </div>
                                              </AccordionPanel>
@@ -384,7 +363,7 @@ export default function Home() {
                                                             as="span"
                                                             flex="1"
                                                             textAlign="left"
-                                                            className=" font-semibold "
+                                                            className="tw-font-semibold tw-text-2xl"
                                                        >
                                                             COLOR
                                                        </Box>

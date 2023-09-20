@@ -16,7 +16,7 @@ const Home = () => {
           <main className="main">
                <Banner />
                <FeaturedProducts />
-               <Info/>
+               <Info />
                <section className="new-products-section">
                     <div className="container">
                          <MiniBanner />

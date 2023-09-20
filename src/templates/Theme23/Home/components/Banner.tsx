@@ -19,27 +19,29 @@ export const Banner = () => {
                                              width={1200}
                                              height={575}
                                         />
-                                      
-                                      <div  className={`banner-layer banner-layer-middle ${banner.classname}`}>
-                                                  <div className="container-fluid">
-                                                       <div
-                                                            className="appear-animate"
-                                                            data-animation-name="fadeInLeftShorter"
-                                                            data-animation-delay={200}
+
+                                        <div
+                                             className={`banner-layer banner-layer-middle ${banner.classname}`}
+                                        >
+                                             <div className="container-fluid">
+                                                  <div
+                                                       className="appear-animate"
+                                                       data-animation-name="fadeInLeftShorter"
+                                                       data-animation-delay={200}
+                                                  >
+                                                       <h2 className="font-weight-light ls-10 text-primary">
+                                                            {banner.h2}
+                                                       </h2>
+                                                       <a
+                                                            href="demo23-shop.html"
+                                                            className="btn btn-link"
                                                        >
-                                                            <h2 className="font-weight-light ls-10 text-primary">
-                                                                 {banner.h2}
-                                                            </h2>
-                                                            <a
-                                                                 href="demo23-shop.html"
-                                                                 className="btn btn-link"
-                                                            >
-                                                                 <i>View our Dresses</i>
-                                                                 <i className="icon-right-open-big" />
-                                                            </a>
-                                                       </div>
+                                                            <i>View our Dresses</i>
+                                                            <i className="icon-right-open-big" />
+                                                       </a>
                                                   </div>
                                              </div>
+                                        </div>
                                    </div>
                               </Carousel.Item>
                          ))}
