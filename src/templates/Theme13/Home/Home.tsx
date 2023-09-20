@@ -106,7 +106,7 @@ export const Home = (props: any) => {
                          </div>
                     </div>
                </div>
-               <InfoBoxesContainer />
+               <InfoBoxesContainer state={statiProps?.guarantee} />
                <div className="container">
                     <div className="row">
                          <div className="col-lg-9">
