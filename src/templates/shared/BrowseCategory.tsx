@@ -3,7 +3,6 @@ import OwlCarousel from "react-owl-carousel";
 import ShopByCategory from "./ShopByCategory";
 
 const BrowseCategory = ({ categories }): JSX.Element => {
-
      const owlCarouselOptions = {
           infinite: true,
           speed: 500,

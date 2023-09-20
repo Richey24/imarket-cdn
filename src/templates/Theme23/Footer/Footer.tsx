@@ -137,7 +137,6 @@ const Footer = () => {
                                                             className="form-control mb-0"
                                                             placeholder="Email Address"
                                                             size={40}
-                                                        
                                                        />
                                                        <button
                                                             type="submit"
@@ -161,10 +160,7 @@ const Footer = () => {
                               </span>
                          </div>
                          <div className="footer-right ml-auto mt-1 mt-sm-0">
-                              <img
-                                   src={payment.src}
-                                   alt="payment"
-                              />
+                              <img src={payment.src} alt="payment" />
                          </div>
                     </div>
                </div>
