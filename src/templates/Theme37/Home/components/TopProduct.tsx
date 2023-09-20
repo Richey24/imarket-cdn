@@ -26,7 +26,7 @@ export const TopProduct = () => {
 
                     <Slider {...settings}>
                          {productScrolls.map((data) => (
-                              <div className="product-default inner-quickview inner-icon">
+                              <div className="product-default inner-quickview inner-icon mx-2">
                                    <figure>
                                         <a href="demo37-product.html">
                                              <img
@@ -81,11 +81,11 @@ export const TopProduct = () => {
                                              <a href="demo37-product.html">{data.productTitle}</a>
                                         </h3>
                                         {/* <div class="ratings-container">
-                          <div class="product-ratings">
-                              <span class="ratings" style="width:100%"></span>
-                              <span class="tooltiptext tooltip-top"></span>
-                          </div>
-                      </div> */}
+            <div class="product-ratings">
+                <span class="ratings" style="width:100%"></span>
+                <span class="tooltiptext tooltip-top"></span>
+            </div>
+        </div> */}
                                         <div className="price-box">
                                              <span className="old-price">$90.00</span>
                                              <span className="product-price">

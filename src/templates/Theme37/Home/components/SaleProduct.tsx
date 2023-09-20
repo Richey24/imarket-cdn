@@ -31,7 +31,7 @@ export const SaleProduct = () => {
                          <Slider {...settings}>
                               {" "}
                               {SaleProducts.map((data) => (
-                                   <div className="product-default inner-quickview inner-icon">
+                                   <div className="product-default inner-quickview inner-icon mx-2">
                                         <figure>
                                              <a href="demo37-product.html">
                                                   <img

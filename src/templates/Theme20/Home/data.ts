@@ -1,26 +1,12 @@
-import { ProductProps, ProductWidgetProps } from "./types";
+import { ProductProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
-// export const bannersImage = [
-//      {
-//           bannerImg: templateImages.demo20.bannerImage.banner8,
-//           size:8
-//      },
-//      {
-//           size:4,
-
-//      },
-//      {
-//           bannerImg: templateImages.demo20.bannerImage.banner3,
-//           size:4,
-//      },
-// ];
-export const featuredProducts = [
+ 
+export const featuredProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product1,
-          productImageUrlTwo: "",
           productTitle: "Men Gentle Shoes",
           productPrice: 56.0,
      },
@@ -28,7 +14,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product2,
-          productImageUrlTwo: "",
           productTitle: "Porto Gray Cap",
           productPrice: 76.0,
      },
@@ -36,7 +21,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product3,
-          productImageUrlTwo: "",
           productTitle: "Porto White Cap",
           productPrice: 56.0,
      },
@@ -44,7 +28,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product4,
-          productImageUrlTwo: "",
           productTitle: "Winter Towel",
           productPrice: 199,
      },
@@ -52,7 +35,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product5,
-          productImageUrlTwo: "",
           productTitle: "FOOTWAER",
           productPrice: 88,
      },

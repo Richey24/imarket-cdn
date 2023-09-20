@@ -25,12 +25,6 @@ const Header = (props: any) => {
                                    (800) 123-4567
                               </a>
                               <span className="separator" />
-                              <p>
-                                   <span className="font-weight-bold text-primary">
-                                        Extra 15% OFF
-                                   </span>{" "}
-                                   Health &amp; Wellness
-                              </p>
                          </div>
                          {/* End .header-left */}
                          <div className="header-right header-dropdowns ml-0 ml-md-auto w-md-100">
