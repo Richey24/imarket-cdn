@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { ProductProps } from "../types";
 
 export const Product: React.FC<ProductProps> = ({

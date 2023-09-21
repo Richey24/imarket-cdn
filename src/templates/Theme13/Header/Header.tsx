@@ -9,6 +9,7 @@ export default function Header(props: any) {
 
      return (
           <div style={{ width: "100%" }}>
+            
                <header className="header">
                     <div className="header-top">
                          <div className="container">
