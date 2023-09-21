@@ -11,15 +11,19 @@ import { SitesField, ThemeName } from "@/appProvider/types";
 import { NoSite } from "../components/NoSite/NoSite";
 import "react-loading-skeleton/dist/skeleton.css";
 import Sidebar from "../../templates/shared/SideBar";
-import { setSideBarVisibility } from "@/redux/global";
+import { setCartSideBarOpen, setSideBarVisibility } from "@/redux/global";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import ScrollToTopButton from "../components/ScrollToTopBtn";
+import RightDrawer from "@/templates/shared/CartSideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
      const dispatch = useDispatch();
-     const { isSideBarVisible } = useSelector((state: RootState) => state.general);
+     const { isSideBarVisible, isCartSideBarOpen } = useSelector(
+          (state: RootState) => state.general,
+     );
 
      const { site, loading, setLoading, categories, products } = useContext<{
           site: SitesField;
@@ -59,6 +63,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dispatch(setSideBarVisibility());
      };
 
+     const handleCartSideBarClose = () => {
+          dispatch(setCartSideBarOpen());
+     };
+
      const bodyStyles = isSideBarVisible
           ? { overflow: "hidden !important", height: "100vh" }
           : { overflow: "unset", height: "auto" };
@@ -86,6 +94,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                               isOpen={isSideBarVisible}
                               toggleSidebar={handleSideBarClose}
                          />
+
+                         <RightDrawer isOpen={isCartSideBarOpen} onClose={handleCartSideBarClose} />
+
                          <div
                               className={`page-wrapper tw-flex-1 tw-transition-transform ${
                                    isSideBarVisible ? "tw-translate-x-[28.889rem]" : ""
@@ -106,6 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                         ...site.theme.footer.component.props,
                                    }}
                               />
+                              <ScrollToTopButton />
                          </div>
                          {isSideBarVisible && (
                               <div

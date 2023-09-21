@@ -1,11 +1,9 @@
 import { setSideBarVisibility } from "@/redux/global";
-import { RootState } from "@/redux/store";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function MenuButton({ textColor }: { textColor?: string }) {
      const dispatch = useDispatch();
-     const { isSideBarVisible } = useSelector((state: RootState) => state.general);
 
      const handleSideBarClose = () => {
           dispatch(setSideBarVisibility());
