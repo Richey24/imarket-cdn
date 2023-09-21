@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import HeaderSearch from "@/templates/shared/Header/HeaderSearch";
 import SocialIcons from "@/templates/shared/SocialIcons";
+import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
 
 export default function Header(props: any) {
      const { company, static: staticProps, categories } = props.props;
@@ -83,6 +84,28 @@ export default function Header(props: any) {
                          </div>
                     </div>
                     <HeaderSearch company={company} categories={categories} />
+
+                    <div
+                         className="header-bottom sticky-header d-lg-block d-none"
+                         data-sticky-options="{'mobile': false}"
+                    >
+                         <div className="container">
+                              <div className="header-left">
+                                   <a href="demo13.html" className="logo">
+                                        <img
+                                             src="assets/images/your-logo.png"
+                                             className="white-logo sticky-logo"
+                                             alt="Porto Logo"
+                                             width="110"
+                                             height="46"
+                                        />
+                                   </a>
+                              </div>
+                              <div className="header-center">
+                                   <PageLinks staticProps={staticProps} />
+                              </div>
+                         </div>
+                    </div>
                </header>
           </div>
      );

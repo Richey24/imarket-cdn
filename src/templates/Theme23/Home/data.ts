@@ -141,7 +141,7 @@ export const miniBanners = [
           atag: "demo23-shop.html",
           size: 6,
           mdSize: 8,
-          styles:'justify-content-center'
+          styles: "justify-content-center",
      },
      {
           productImageUrl: templateImages.demo23.bannerImage.banner3,
@@ -149,7 +149,7 @@ export const miniBanners = [
           atag: "demo23-shop.html",
           size: 3,
           mdSize: 4,
-          styles:'justify-content-end'
+          styles: "justify-content-end",
      },
      {
           productImageUrl: templateImages.demo23.bannerImage.banner4,
@@ -157,7 +157,7 @@ export const miniBanners = [
           atag: "demo23-shop.html",
           size: 3,
           mdSize: 6,
-          styles:'justify-content-between'
+          styles: "justify-content-between",
      },
      {
           productImageUrl: templateImages.demo23.bannerImage.banner5,
@@ -165,7 +165,7 @@ export const miniBanners = [
           atag: "demo23-shop.html",
           size: 3,
           mdSize: 6,
-          styles:'align-items-center'
+          styles: "align-items-center",
      },
      {
           productImageUrl: templateImages.demo23.bannerImage.banner6,
@@ -173,7 +173,7 @@ export const miniBanners = [
           atag: "demo23-shop.html",
           size: 3,
           mdSize: 4,
-          styles:'justify-content-between'
+          styles: "justify-content-between",
      },
      {
           productImageUrl: templateImages.demo23.bannerImage.banner7,
@@ -181,6 +181,6 @@ export const miniBanners = [
           atag: "demo23-shop.html",
           size: 6,
           mdSize: 8,
-          styles:'justify-content-between'
+          styles: "justify-content-between",
      },
 ];

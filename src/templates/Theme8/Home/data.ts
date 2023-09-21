@@ -200,7 +200,7 @@ export const latestProducts = [
      },
 ];
 
-export const featuredProduct = [
+export const featuredProductAlt = [
      {
           productImageAlt: "product",
           productCategory: "category",

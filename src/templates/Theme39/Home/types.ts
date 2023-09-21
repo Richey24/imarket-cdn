@@ -9,7 +9,7 @@ export interface ProductProps {
 }
 
 export interface ProductWidgetProps {
-     productImage: StaticImageData;
+     productImage: StaticImageData | string;
      productTitle: string;
      productPrice: number;
 }

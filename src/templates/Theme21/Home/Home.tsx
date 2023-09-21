@@ -4,19 +4,19 @@ import { FeaturedProducts } from "./components/FeaturedProducts";
 import { MiniBanner } from "./components/MiniBanner";
 import { NewProducts } from "./components/NewProducts";
 import { SpecialOffer } from "./components/SpecialOffer";
-import { Products } from "./components/Products";
+import { TopRatedProducts } from "./components/TopRatedProducts";
 
 import { Banner } from "./components/Banner";
 import { SmallBanner } from "./components/SmallBanner";
 import { FeatureBoxes } from "./components/FeatureBoxes";
-import { Info} from "./components/Info";
+import { Info} from "./components/Card";
 
 const Home = () => {
      return (
           <main className="main">
                <Banner />
                <FeaturedProducts />
-               <Info/>
+               <Info />
                <section className="new-products-section">
                     <div className="container">
                          <MiniBanner />
@@ -33,7 +33,7 @@ const Home = () => {
                <SpecialOffer />
                <SmallBanner />
                <FeatureBoxes />
-               <Products />
+               <TopRatedProducts />
           </main>
      );
 };

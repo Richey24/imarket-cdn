@@ -146,78 +146,58 @@ export const miniBanners = [
 
 export const topRatedProducts = [
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo14.smallImages.smallImage1,
-          productImageUrlTwo: "",
+ 
+          productImage: templateImages.demo14.smallImages.smallImage1,
           productTitle: "25 Acoustic Noise",
           productPrice: 299.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, T-SHIRTS",
-          productImageUrl: templateImages.demo14.smallImages.smallImage2,
-          productImageUrlTwo: "",
+ 
+          productImage: templateImages.demo14.smallImages.smallImage2,
           productTitle: "Porto Evolution Headset",
           productPrice: 111.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: templateImages.demo14.smallImages.smallImage3,
-          productImageUrlTwo: "",
+ 
+          productImage: templateImages.demo14.smallImages.smallImage3,
           productTitle: "Porto Sticky info",
           productPrice: 101.0,
      },
 ];
 export const bestSellingProducts = [
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: templateImages.demo14.smallImages.smallImage3,
-          productImageUrlTwo: "",
+          
+          productImage: templateImages.demo14.smallImages.smallImage3,
           productTitle: "Porto Sticky info",
           productPrice: 101.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: templateImages.demo14.smallImages.smallImage4,
-          productImageUrlTwo: "",
+ 
+          productImage: templateImages.demo14.smallImages.smallImage4,
           productTitle: "Porto Headset",
           productPrice: 39.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "TOYS, WATCHE  ",
-          productImageUrl: templateImages.demo14.smallImages.smallImage5,
-          productImageUrlTwo: "",
+          productImage: templateImages.demo14.smallImages.smallImage5,
           productTitle: "TOYS, WATCHES Porto Both Sticky info",
           productPrice: 108.0,
      },
 ];
 export const lastestProducts2 = [
      {
-          productImageAlt: "product",
-          productCategory: "T-SHIRTS, WATCHES",
-          productImageUrl: templateImages.demo14.smallImages.smallImage6,
-          productImageUrlTwo: "",
+ 
+          productImage: templateImages.demo14.smallImages.smallImage6,
           productTitle: "IdeaPad",
           productPrice: 1699.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "TOYS, WATCHE  ",
-          productImageUrl: templateImages.demo14.smallImages.smallImage5,
-          productImageUrlTwo: "",
+ 
+          productImage: templateImages.demo14.smallImages.smallImage5,
           productTitle: "Porto Both Sticky info",
           productPrice: 108.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: templateImages.demo14.smallImages.smallImage4,
-          productImageUrlTwo: "",
+          productImage: templateImages.demo14.smallImages.smallImage4,
           productTitle: "Porto Headset",
           productPrice: 39.0,
      },

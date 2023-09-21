@@ -53,72 +53,63 @@ const FeatureBox: React.FC<FeatureBoxProps> = (props) => {
 const FeatureBoxes = () => {
      return (
           <div className="feature-boxes-container container pt-2">
-          <div className="row justify-content-center">
-               <div
-                    className="col-sm-6 col-lg-4 "
-                    data-animation-name="fadeInLeftShorter"
-                    data-animation-delay={500}
-                    data-animation-duration={1000}
-               >
-                    <div className="feature-box feature-box-simple text-center">
-                         <i className="icon-earphones-alt" />
-                         <div className="feature-box-content p-0">
-                              <h3 className="text-capitalize">Customer Support</h3>
-                              <h5>Need Assistence?</h5>
-                              <p>
-                                   Lorem ipsum dolor sit amet, consectetur adipiscing
-                                   elit.
-                              </p>
+               <div className="row justify-content-center">
+                    <div
+                         className="col-sm-6 col-lg-4 "
+                         data-animation-name="fadeInLeftShorter"
+                         data-animation-delay={500}
+                         data-animation-duration={1000}
+                    >
+                         <div className="feature-box feature-box-simple text-center">
+                              <i className="icon-earphones-alt" />
+                              <div className="feature-box-content p-0">
+                                   <h3 className="text-capitalize">Customer Support</h3>
+                                   <h5>Need Assistence?</h5>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              </div>
+                              {/* End .feature-box-content */}
                          </div>
-                         {/* End .feature-box-content */}
+                         {/* End .feature-box */}
                     </div>
-                    {/* End .feature-box */}
-               </div>
-               {/* End .col-lg-3 */}
-               <div
-                    className="col-sm-6 col-lg-4 "
-                    data-animation-name="fadeInUpShorter"
-                    data-animation-delay={200}
-                    data-animation-duration={1000}
-               >
-                    <div className="feature-box feature-box-simple text-center">
-                         <i className="icon-credit-card" />
-                         <div className="feature-box-content p-0">
-                              <h3 className="text-capitalize">Secure Payment</h3>
-                              <h5>Safe &amp; Fast</h5>
-                              <p>
-                                   Lorem ipsum dolor sit amet, consectetur adipiscing
-                                   elit.
-                              </p>
+                    {/* End .col-lg-3 */}
+                    <div
+                         className="col-sm-6 col-lg-4 "
+                         data-animation-name="fadeInUpShorter"
+                         data-animation-delay={200}
+                         data-animation-duration={1000}
+                    >
+                         <div className="feature-box feature-box-simple text-center">
+                              <i className="icon-credit-card" />
+                              <div className="feature-box-content p-0">
+                                   <h3 className="text-capitalize">Secure Payment</h3>
+                                   <h5>Safe &amp; Fast</h5>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              </div>
+                              {/* End .feature-box-content */}
                          </div>
-                         {/* End .feature-box-content */}
+                         {/* End .feature-box */}
                     </div>
-                    {/* End .feature-box */}
-               </div>
-               {/* End .col-lg-3 */}
-               <div
-                    className="col-sm-6 col-lg-4 "
-                    data-animation-name="fadeInRightShorter"
-                    data-animation-delay={500}
-                    data-animation-duration={1000}
-               >
-                    <div className="feature-box feature-box-simple text-center">
-                         <i className="icon-action-undo" />
-                         <div className="feature-box-content p-0">
-                              <h3 className="text-capitalize">Free Returns</h3>
-                              <h5>Easy &amp; Free</h5>
-                              <p>
-                                   Lorem ipsum dolor sit amet, consectetur adipiscing
-                                   elit.
-                              </p>
+                    {/* End .col-lg-3 */}
+                    <div
+                         className="col-sm-6 col-lg-4 "
+                         data-animation-name="fadeInRightShorter"
+                         data-animation-delay={500}
+                         data-animation-duration={1000}
+                    >
+                         <div className="feature-box feature-box-simple text-center">
+                              <i className="icon-action-undo" />
+                              <div className="feature-box-content p-0">
+                                   <h3 className="text-capitalize">Free Returns</h3>
+                                   <h5>Easy &amp; Free</h5>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              </div>
+                              {/* End .feature-box-content */}
                          </div>
-                         {/* End .feature-box-content */}
+                         {/* End .feature-box */}
                     </div>
-                    {/* End .feature-box */}
+                    {/* End .col-lg-3 */}
                </div>
-               {/* End .col-lg-3 */}
           </div>
-     </div>
      );
 };
 

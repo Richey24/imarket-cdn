@@ -1,45 +1,36 @@
-import React from "react";
-import { StaticImageData } from "next/image";
-import OwlCarousel from "react-owl-carousel";
-import Product from "@/app/components/Product";
-
-interface Iproduct {
-     imageUrl: StaticImageData | string;
-     category: string;
-     title: string;
-     price: string;
-}
-[];
-
-const owlCarouselOptions = {
-     dots: false,
-     margin: 20,
-     loop: false,
-     items: 2,
-     nav: true,
-     responsive: {
-          "768": {
-               items: 3,
-          },
-     },
-};
-
-function FeaturedProduct({ products }: { products: Iproduct[] }) {
+import React, { useState } from "react";
+import Slider from "react-slick";
+import { featuredproducts } from "../data";
+import { Product } from "./Product";
+export const FeaturedProducts = () => {
+     const [currentSlide, setCurrentSlide] = useState(0);
+     const settings = {
+          dots: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          beforeChange: (current, next) => setCurrentSlide(next),
+     };
      return (
-          <section className="best-product-section">
-               <OwlCarousel className="product-panel" {...owlCarouselOptions}>
-                    {products.map((product: Iproduct) => {
-                         return (
-                              <Product
-                                   imageSrc={product.imageUrl as string}
-                                   productName={product.title}
-                                   price={product.price}
-                              />
-                         );
-                    })}
-               </OwlCarousel>
+          <section
+               className="featured-products-container mb-2 appear-animate"
+               data-animation-name="fadeInUpShorter"
+               data-animation-delay={200}
+          >
+               <div className="container">
+                    <div className="heading">
+                         <h2 className="text-uppercase">Featured Wines</h2>
+                    </div>
+                    <div className="products-slider custom-products   owl-theme nav-outer show-nav-hover nav-image-center appear-animate">
+                         <Slider {...settings}>
+                              {featuredproducts.map((product) => (
+                                 <Product {...product} />
+                              ))}
+                         </Slider>
+                    </div>
+                    {/* End .featured-proucts */}
+               </div>
           </section>
      );
-}
-
-export default FeaturedProduct;
+};

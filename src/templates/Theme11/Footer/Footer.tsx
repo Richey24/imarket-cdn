@@ -1,6 +1,7 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer className="footer bg-dark">
                <div className="container">
@@ -15,12 +16,12 @@ const Footer = () => {
                                                   <span className="contact-info-label">
                                                        Address
                                                   </span>
-                                                  123 Street Name, City, England
+                                                  {company?.city + " " + company?.country}
                                              </li>
                                              <li>
                                                   <i className="icon-phone-1" />
                                                   <span className="contact-info-label">Phone</span>
-                                                  Toll Free <a href="tel:">(123) 456-7890</a>
+                                                  Toll Free <a href="tel:">{company?.phone}</a>
                                              </li>
                                              <li>
                                                   <i className="icon-envolope" />
@@ -28,7 +29,7 @@ const Footer = () => {
                                                        Email
                                                   </span>{" "}
                                                   <a href="mailto:mail@example.com">
-                                                       mail@example.com
+                                                       {company?.user_id?.email}
                                                   </a>
                                              </li>
                                         </ul>

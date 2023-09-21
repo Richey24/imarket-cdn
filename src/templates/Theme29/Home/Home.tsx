@@ -1,19 +1,18 @@
-import ProductWidget from "@/templates/Theme25/Home/components/ProductWidget"
-import Banner from "./components/Banner"
-import Product from "./components/Product"
-import { useState } from "react"
+import ProductWidget from "@/templates/Theme25/Home/components/ProductWidget";
+import Banner from "./components/Banner";
+import Product from "./components/Product";
+import { useState } from "react";
 
 const Home = () => {
+     const [quickView, setQuick] = useState({});
 
-    const [quickView, setQuick] = useState({})
+     return (
+          <div>
+               <Banner />
+               <Product setQuickView={setQuick} />
+               <ProductWidget quickView={quickView} />
+          </div>
+     );
+};
 
-    return (
-        <div>
-            <Banner />
-            <Product setQuickView={setQuick} />
-            <ProductWidget quickView={quickView} />
-        </div>
-    )
-}
-
-export default Home
+export default Home;

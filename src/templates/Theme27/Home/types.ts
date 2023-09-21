@@ -11,12 +11,8 @@ export interface ProductProps {
      oldPrice?: number;
 }
 
-
-
 export interface PromotionProps {
      title: string;
      promoText: string;
      bannerUrl: string | StaticImageData;
 }
-
-

@@ -20,11 +20,9 @@ export const Category = () => {
                               <h3 className="title">
                                    {data.h3}
                                    <br />
-                                  {data.H3Br}
+                                   {data.H3Br}
                               </h3>
-                              <p className="subtitle font2">
-                                   {data.p}
-                              </p>
+                              <p className="subtitle font2">{data.p}</p>
                               <div className="mb-0">
                                    <a
                                         href={data.atag}

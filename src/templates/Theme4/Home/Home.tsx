@@ -16,8 +16,14 @@ import { ProductWidget } from "./components/ProductWidget";
 import { templateImages } from "@/appProvider/templateImages";
 
 const Home = (props) => {
-     const { static: statiProps, products, categories } = props;
+     const {
+          static: statiProps,
+          products,
+          categories,
+          featuredProducts: featuredProductData,
+     } = props;
      const [latestProductsState, setLatestProducts] = useState<any>(null);
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
      useEffect(() => {
           if (products && !latestProductsState) {
@@ -38,6 +44,25 @@ const Home = (props) => {
                     };
                });
                setLatestProducts(latestProductsMap);
+          }
+          if (featuredProductData && !featuredProductsState) {
+               const featuredProductsMap = featuredProductData.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
           }
      }, [products]);
 
@@ -62,10 +87,12 @@ const Home = (props) => {
                     </div>
                     <InfoBoxesContainer />
                     <SmallBoxes banners={smallBoxData} />
-                    <FeaturedProductsSection
-                         products={[...productsData]}
-                         section="Featured Products"
-                    />
+                    {featuredProductsState && (
+                         <FeaturedProductsSection
+                              products={featuredProductsState}
+                              section="Featured Products"
+                         />
+                    )}
                     {latestProductsState && (
                          <FeaturedProductsSection
                               products={latestProductsState ?? []}
@@ -246,22 +273,28 @@ const Home = (props) => {
                               {/* End .brands-slider */}
                               <hr className="mt-4 m-b-5" />
                               <div className="product-widgets-container row pb-2">
-                                   <div
-                                        className="col-lg-3 col-sm-6 pb-5 pb-md-0 "
-                                        data-animation-name="fadeInLeftShorter"
-                                        data-animation-delay={200}
-                                   >
-                                        <h4 className="section-sub-title">Featured Products</h4>
-                                        {featuredProductWidget.map((product, index) => (
-                                             <ProductWidget
-                                                  key={index}
-                                                  productImage={product.imageUrl1}
-                                                  productName={product.title}
-                                                  productPrice={product.price}
-                                                  productImageTwo={product.imageUrl2}
-                                             />
-                                        ))}
-                                   </div>
+                                   {featuredProductsState && (
+                                        <div
+                                             className="col-lg-3 col-sm-6 pb-5 pb-md-0 "
+                                             data-animation-name="fadeInLeftShorter"
+                                             data-animation-delay={200}
+                                        >
+                                             <h4 className="section-sub-title">
+                                                  Featured Products
+                                             </h4>
+                                             {featuredProductsState
+                                                  .slice(0, 3)
+                                                  .map((product, index) => (
+                                                       <ProductWidget
+                                                            key={index}
+                                                            productImage={product.imageUrl1}
+                                                            productName={product.title}
+                                                            productPrice={product.price}
+                                                            productImageTwo={product.imageUrl2}
+                                                       />
+                                                  ))}
+                                        </div>
+                                   )}
                                    <div
                                         className="col-lg-3 col-sm-6 pb-5 pb-md-0 "
                                         data-animation-name="fadeInLeftShorter"

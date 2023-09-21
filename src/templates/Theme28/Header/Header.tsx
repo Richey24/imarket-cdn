@@ -1,16 +1,79 @@
-import { templateImages } from '@/appProvider/templateImages'
-import Image from 'next/image'
-import React from 'react'
+import { templateImages } from "@/appProvider/templateImages";
+import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
+import Image from "next/image";
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
-const Header = () => {
+const Header = (props: any) => {
+     const { company, static: staticProps, categories } = props.props;
 
-    const showCanvas = () => {
-        document.getElementById("cartCanvas").classList.toggle("showCanvas")
-    }
+     const showCanvas = () => {
+          document.getElementById("cartCanvas").classList.toggle("showCanvas");
+     };
 
-    return (
-        <div>
-            <header className="header" id="top">
+     return (
+          <header className="header" id="top">
+               <div className="header-middle sticky-header">
+                    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+                         <Container>
+                              <Navbar.Brand href="#home">
+                                   <Logo company={company} />
+                              </Navbar.Brand>
+                              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+                              <Navbar.Collapse id="responsive-navbar-nav">
+                                   <Nav className="me-auto">
+                                        {/* <Nav.Link href="#features">Features</Nav.Link> */}
+                                        {staticProps &&
+                                             staticProps?.pageLinks?.map(
+                                                  (
+                                                       link: {
+                                                            subMenu?: {
+                                                                 name: string;
+                                                                 url: string;
+                                                            }[];
+                                                            name: string;
+                                                            url: string;
+                                                       },
+                                                       idx: number,
+                                                  ) => {
+                                                       return (
+                                                            <Nav.Link
+                                                                 key={link.name}
+                                                                 href="#features"
+                                                            >
+                                                                 {link.name}
+                                                            </Nav.Link>
+                                                       );
+                                                  },
+                                             )}
+                                        <NavDropdown title="USD" id="collapsible-nav-dropdown">
+                                             <NavDropdown.Item href="#action/3.1">
+                                                  EUR
+                                             </NavDropdown.Item>
+                                             <NavDropdown.Item href="#action/3.2">
+                                                  USD
+                                             </NavDropdown.Item>
+                                        </NavDropdown>
+                                        <NavDropdown title="ENG" id="collapsible-nav-dropdown">
+                                             <NavDropdown.Item href="#action/3.1">
+                                                  ENG
+                                             </NavDropdown.Item>
+                                             <NavDropdown.Item href="#action/3.2">
+                                                  FRA
+                                             </NavDropdown.Item>
+                                        </NavDropdown>
+                                   </Nav>
+                              </Navbar.Collapse>
+                         </Container>
+                    </Navbar>
+               </div>
+          </header>
+          /* <div>
+           <header className="header" id="top">
                 <div className="header-middle sticky-header">
                     <div className="container">
                         <div className="header-left">
@@ -77,97 +140,7 @@ const Header = () => {
                                     <span className="cart-count badge-circle">3</span>
                                 </a>
 
-                                {/* <div className="cart-overlay"></div> */}
-
-                                <div id="cartCanvas" className="cartCanvas" style={{ position: "fixed", top: "0px", right: "0px", zIndex: "10", alignItems: "flex-start", gap: "10px" }}>
-                                    <a style={{ fontSize: "40px", color: "black" }} onClick={showCanvas} href="#" title="Close (Esc)" className="btn-close">×</a>
-
-                                    <div className="dropdownmenu-wrapper custom-scrollbar">
-                                        <div className="dropdown-cart-header">Shopping Cart</div>
-
-                                        <div className="dropdown-cart-products">
-                                            <div className="product">
-                                                <div className="product-details">
-                                                    <h4 className="product-title">
-                                                        <a href="demo13-product.html">Ultimate 3D Bluetooth Speaker</a>
-                                                    </h4>
-
-                                                    <span className="cart-product-info">
-                                                        <span className="cart-product-qty">1</span> × $99.00
-                                                    </span>
-                                                </div>
-
-                                                <figure className="product-image-container">
-                                                    <a href="demo13-product.html" className="product-image">
-                                                        <Image src={templateImages.allTemplateImage.product.product1} alt="product"
-                                                            width="80" height="80" />
-                                                    </a>
-
-                                                    <a href="#" className="btn-remove" title="Remove Product">
-                                                        <span>×</span>
-                                                    </a>
-                                                </figure>
-                                            </div>
-
-                                            <div className="product">
-                                                <div className="product-details">
-                                                    <h4 className="product-title">
-                                                        <a href="demo13-product.html">Brown Women Casual HandBag</a>
-                                                    </h4>
-
-                                                    <span className="cart-product-info">
-                                                        <span className="cart-product-qty">1</span> × $35.00
-                                                    </span>
-                                                </div>
-
-                                                <figure className="product-image-container">
-                                                    <a href="demo13-product.html" className="product-image">
-                                                        <Image src={templateImages.allTemplateImage.product.product2} alt="product"
-                                                            width="80" height="80" />
-                                                    </a>
-
-                                                    <a href="#" className="btn-remove" title="Remove Product">
-                                                        <span>×</span>
-                                                    </a>
-                                                </figure>
-                                            </div>
-
-                                            <div className="product">
-                                                <div className="product-details">
-                                                    <h4 className="product-title">
-                                                        <a href="demo13-product.html">Circled Ultimate 3D Speaker</a>
-                                                    </h4>
-
-                                                    <span className="cart-product-info">
-                                                        <span className="cart-product-qty">1</span> × $35.00
-                                                    </span>
-                                                </div>
-
-                                                <figure className="product-image-container">
-                                                    <a href="demo13-product.html" className="product-image">
-                                                        <Image src={templateImages.allTemplateImage.product.product3} alt="product"
-                                                            width="80" height="80" />
-                                                    </a>
-                                                    <a href="#" className="btn-remove" title="Remove Product">
-                                                        <span>×</span>
-                                                    </a>
-                                                </figure>
-                                            </div>
-                                        </div>
-
-                                        <div className="dropdown-cart-total">
-                                            <span>SUBTOTAL:</span>
-
-                                            <span className="cart-total-price float-right">$134.00</span>
-                                        </div>
-
-                                        <div className="dropdown-cart-action">
-                                            <a href="cart.html" className="btn btn-gray btn-block view-cart">View Cart
-                                            </a>
-                                            <a href="checkout.html" className="btn btn-dark btn-block">Checkout</a>
-                                        </div>
-                                    </div>
-                                </div>
+                              
                             </div>
                             <a href="#widget-mobile" className="mobile-btn text-white" data-toggle="collapse">
                                 <i className="fas fa-bars"></i>
@@ -230,9 +203,9 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </header>
-        </div>
-    )
-}
+            </header> 
+          </div>*/
+     );
+};
 
-export default Header
+export default Header;
