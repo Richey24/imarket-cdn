@@ -11,9 +11,9 @@ export const Product: React.FC<ProductProps> = ({
      oldPrice,
 }) => {
      return (
-          <div className="product-default inner-quickview inner-icon px-2">
+          <div className="product-default inner-quickview inner-icon mx-2">
                <figure>
-                    <a href="demo37-product.html">
+                    <a href="demo39-product.html">
                          <Image src={productImageUrl} width={205} height={205} alt="product" />
                     </a>
                     <div className="btn-icon-group">
@@ -32,7 +32,7 @@ export const Product: React.FC<ProductProps> = ({
                <div className="product-details">
                     <div className="category-wrap">
                          <div className="category-list">
-                              <a href="demo37-shop.html" className="product-category">
+                              <a href="demo39-shop.html" className="product-category">
                                    {productCategory}
                               </a>
                          </div>
@@ -41,21 +41,14 @@ export const Product: React.FC<ProductProps> = ({
                          </a>
                     </div>
                     <h3 className="product-title">
-                         <a href="demo37-product.html">{productTitle}</a>
+                         <a href="demo39-product.html">{productTitle} </a>
                     </h3>
-                    {/* <div class="ratings-container">
-<div class="product-ratings">
-<span class="ratings" style="width:100%"></span>
-<span class="tooltiptext tooltip-top"></span>
-</div>
-</div> */}
+
                     <div className="price-box">
                          <span className="old-price">$90.00</span>
                          <span className="product-price">${productPrice}</span>
                     </div>
-                    {/* End .price-box */}
                </div>
-               {/* End .product-details */}
           </div>
      );
 };

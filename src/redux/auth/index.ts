@@ -25,7 +25,7 @@ const initialState: AuthState = {
           subscribed: false,
           role: "",
           company: "",
-          created_at: ""
+          created_at: "",
      },
      isLoading: false,
 };

@@ -33,11 +33,9 @@ export const Banner = () => {
                                                        <small>$</small>99<small>99</small>
                                                   </h2>
                                                   <h4 className="font-weight-normal ls-n-20 m-b-3">
-                                                      {data.h4}
+                                                       {data.h4}
                                                   </h4>
-                                                  <p className="font2 text-body m-b-3">
-                                                       {data.p}
-                                                  </p>
+                                                  <p className="font2 text-body m-b-3">{data.p}</p>
                                                   <a
                                                        href="demo26-shop.html"
                                                        className="btn btn-dark btn-lg m-b-5"
@@ -61,8 +59,7 @@ export const Banner = () => {
                                         <div
                                              className="banner banner2 h-100"
                                              style={{
-                                                  background:
-                                                       `#414141 no-repeat center/cover url(${data.imageUrl})`,
+                                                  background: `#414141 no-repeat center/cover url(${data.imageUrl})`,
                                              }}
                                         >
                                              <div className="banner-layer d-flex flex-column justify-content-center align-items-end text-right">
@@ -71,7 +68,7 @@ export const Banner = () => {
                                                        data-animation-name="fadeInUpShorter"
                                                        data-animation-delay={100}
                                                   >
-                                                     {data.h3}
+                                                       {data.h3}
                                                   </h3>
                                                   <h3
                                                        className="ls-n-20 m-b-2 appear-animate"
@@ -80,7 +77,7 @@ export const Banner = () => {
                                                   >
                                                        {data.h5}
                                                        <br />
-                                                      {data.h5Br}
+                                                       {data.h5Br}
                                                   </h3>
                                                   <h2
                                                        className="ls-n-20 text-white text-uppercase m-b-3 appear-animate"
@@ -105,7 +102,6 @@ export const Banner = () => {
                                    ) : null}
                               </div>
                          ))}
-                         
                     </div>
                </div>
           </section>

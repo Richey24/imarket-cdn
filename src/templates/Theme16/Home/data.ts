@@ -20,26 +20,17 @@ export const banners = [
 
 export const featuredProducts = [
      {
-          productImageAlt: "product",
-          productCategory: "T-SHIRTS, WATCHES",
-          productImageUrl: templateImages.demo16.productImages.product7,
-          productImageUrlTwo: "",
+          productImage: templateImages.demo16.productImages.product7,
           productTitle: "Black Woman Underwear",
           productPrice: 39.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "TOYS, WATCHE  ",
-          productImageUrl: templateImages.demo16.productImages.product4,
-          productImageUrlTwo: "",
+          productImage: templateImages.demo16.productImages.product4,
           productTitle: "Black Watch",
           productPrice: 49.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "HEADPHONE, WATCHES",
-          productImageUrl: templateImages.demo16.productImages.product14,
-          productImageUrlTwo: "",
+          productImage: templateImages.demo16.productImages.product14,
           productTitle: "Women Black Sunglasses",
           productPrice: 299.0,
      },

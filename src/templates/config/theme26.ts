@@ -1,4 +1,3 @@
- 
 import Footer from "../Theme26/Footer/Footer";
 import Header from "../Theme26/Header/Header";
 import { Home } from "../Theme26/Home/Home";

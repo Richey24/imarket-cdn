@@ -10,7 +10,7 @@ export const options: NextAuthOptions = {
      },
      providers: [
           CredentialsProvider({
-               name: "Credentials",
+               name: "Credentals",
                credentials: {
                     email: {
                          label: "Username:",
@@ -72,4 +72,5 @@ export const options: NextAuthOptions = {
                return token;
           },
      },
+     secret: process.env.NEXTAUTH_SECRET,
 };

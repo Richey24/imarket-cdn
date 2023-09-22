@@ -1,9 +1,9 @@
 #fourOnePro {
-    width: 19%;
+     width: 19%;
 }
 
 @media (max-width: 700px) {
-    #fourOnePro {
-        width: 90%;
-    }
+     #fourOnePro {
+          width: 90%;
+     }
 }

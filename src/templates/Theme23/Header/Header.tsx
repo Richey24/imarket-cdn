@@ -346,10 +346,7 @@ const Header = () => {
                                                        href="demo20-shop.html"
                                                        style={{ display: "flex" }}
                                                   >
-                                                       Categories{" "}
-                                                       <FiChevronDown
-                                                            size={15}
-                                                       />
+                                                       Categories <FiChevronDown size={15} />
                                                   </a>
                                                   {cat && (
                                                        <div
@@ -550,10 +547,7 @@ const Header = () => {
                                                        href="demo20-product.html"
                                                        style={{ display: "flex" }}
                                                   >
-                                                       Products{" "}
-                                                       <FiChevronDown
-                                                            size={15}
-                                                       />
+                                                       Products <FiChevronDown size={15} />
                                                   </a>
                                                   {pro && (
                                                        <div
@@ -749,10 +743,7 @@ const Header = () => {
                                                   onMouseLeave={() => setPag(false)}
                                              >
                                                   <a href="#" style={{ display: "flex" }}>
-                                                       Pages{" "}
-                                                       <FiChevronDown
-                                                            size={15}
-                                                       />
+                                                       Pages <FiChevronDown size={15} />
                                                   </a>
                                                   {pag && (
                                                        <ul
