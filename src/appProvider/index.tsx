@@ -10,7 +10,6 @@ import {
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
-import NextNProgress from "nextjs-progressbar";
 
 export const AppContext = React.createContext<any>(null);
 

@@ -26,7 +26,7 @@ export class ContactUsService extends HTTPBaseService {
      public sendSubcribeEmail = async (
           payload: {email:string},
      ): Promise<any> => {
-          const data  = await this.instance.post("/xxx", payload);
+          const { data } = await this.instance.post("/xxx", payload);
 
           return data;
      };
