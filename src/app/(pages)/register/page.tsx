@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./schema";
 import { RegisterRequest, useRegisterMutation } from "@/redux/services/auth";
 import toast from "react-hot-toast";
+import LoadingIcon from "@/app/components/Icons/LoadingIcon";
 
 export default function Register() {
      const [register, { isLoading }] = useRegisterMutation();
@@ -123,11 +124,12 @@ export default function Register() {
                                    {errors.confirmPassword?.message}
                               </p>
                          </div>
+
                          <button
                               type="submit"
-                              className="btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md tw-w-100 tw-mt-4 tw-rounded-md"
+                              className="tw-flex tw-gap-5 tw-items-center tw-justify-center btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md w-100 tw-mt-4 tw-rounded-2xl tw-overflow-hidden"
                          >
-                              Register
+                              {isLoading && <LoadingIcon />}Register
                          </button>
                     </form>
                </div>
