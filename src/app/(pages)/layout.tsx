@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      }>(AppContext);
      const [styleLoader, setStyleLoader] = useState(false);
      const [menuBtn, setMenuBtn] = useState("template-menu");
+     const [showTopAds, setShowTopAds] = useState(true);
 
      // console.log("site.theme.theme ", site);
      useEffect(() => {
@@ -54,7 +55,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const defualtTemplate = templateConfig[site.theme.theme];
      const Header = defualtTemplate?.["header"];
      const Footer = defualtTemplate?.["footer"];
+     const topAds = (site as any)?.theme?.topAds?.component?.props?.static;
 
+     console.log("topads", topAds);
      const handleSideBarClose = () => {
           dispatch(setSideBarVisibility());
      };
@@ -91,6 +94,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                    isSideBarVisible ? "tw-translate-x-[28.889rem]" : ""
                               }`}
                          >
+                              {topAds && topAds?.show && showTopAds && (
+                                   <div className="top-notice text-white bg-secondary">
+                                        <div className="container text-center">
+                                             <h5 className="d-inline-block mb-0">
+                                                  {topAds?.title}
+                                             </h5>
+                                             {topAds?.categories?.map((category, idx) => (
+                                                  <a href="/" className="category" key={idx}>
+                                                       {category}
+                                                  </a>
+                                             ))}
+                                             <small>{topAds?.additionalText}</small>
+                                             <button
+                                                  title="Close (Esc)"
+                                                  type="button"
+                                                  className="mfp-close"
+                                                  onClick={() => setShowTopAds((prev) => !prev)}
+                                             >
+                                                  ×
+                                             </button>
+                                        </div>
+                                   </div>
+                              )}
                               <Header
                                    props={{
                                         ...site.theme.header.component.props,

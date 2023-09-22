@@ -1,6 +1,8 @@
 import React from "react";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
 import logo from "../../../assets/images/your-logo.png";
+import { SubcribeEmail } from "@/templates/shared/SubcribeEmail";
+
 const Footer = () => {
      return (
           <footer>
@@ -23,21 +25,7 @@ const Footer = () => {
                                         </span>
                                    </div>
                                    <div className="col-md-10 col-lg-5">
-                                        <form action="#" className="mb-0">
-                                             <div className="footer-submit-wrapper d-flex">
-                                                  <input
-                                                       type="email"
-                                                       className="form-control mb-0"
-                                                       placeholder="Enter your Email address..."
-                                                  />
-                                                  <button
-                                                       type="submit"
-                                                       className="btn btn-md btn-dark"
-                                                  >
-                                                       Subscribe
-                                                  </button>
-                                             </div>
-                                        </form>
+                                        <SubcribeEmail />
                                    </div>
                               </div>
                          </div>

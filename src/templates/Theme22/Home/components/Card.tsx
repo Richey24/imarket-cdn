@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Card = () => {
+export const Info = () => {
      return (
           <div className="container" style={{ marginTop: "20px" }}>
                <div className="info-boxes-container">

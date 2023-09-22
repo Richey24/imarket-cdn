@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { bestSeller } from "../data";
+
 import Product from "@/app/components/Product";
+import { bestSellers } from "../data";
 export const TopRatedProducts = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
@@ -10,10 +11,14 @@ export const TopRatedProducts = () => {
           speed: 500,
           slidesToShow: 5,
           slidesToScroll: 1,
-          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
-          <section className="recent-products">
+          <section
+               className="top-rated-products appear-animate"
+               data-animation-name="fadeIn"
+               data-animation-delay={200}
+          >
                <div className="container">
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">Top Rated Products</h2>
                     <div className="row">
@@ -28,10 +33,10 @@ export const TopRatedProducts = () => {
                                         }}
                                    >
                                         <Slider {...settings}>
-                                             {bestSeller.map((product) => (
+                                             {bestSellers.map((product) => (
                                                   <div>
                                                        <Product
-                                                            imageSrc={product.productImageUrl.src}
+                                                            imageSrc={product.productImageUrl}
                                                             productName={product.productTitle}
                                                             price={`$ ${product.productPrice}`}
                                                        />

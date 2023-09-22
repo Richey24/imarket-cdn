@@ -21,22 +21,25 @@ const InfoBox: React.FC<InfoBoxItem> = ({ icon, title, description }) => {
      );
 };
 
-export const InfoBoxesContainer: React.FC = () => {
+export const InfoBoxesContainer: React.FC<{ state: any }> = ({ state }) => {
      const infoBoxItems: InfoBoxItem[] = [
           {
                icon: "icon-shipping",
                title: "FREE SHIPPING & RETURN",
-               description: "Free Shipping on All Orders Over $99.",
+               // description: "Free Shipping on All Orders Over $99.",
+               description: state?.shipping || "",
           },
           {
                icon: "icon-money",
                title: "MONEY BACK GUARANTEE",
-               description: "100% Money Back Guarantee",
+               description: state?.money || "",
+               // description: "100% Money Back Guarantee",
           },
           {
                icon: "icon-support",
                title: "ONLINE SUPPORT 24/7",
-               description: "Lorem Ipsum Dolor Sit Amet.",
+               description: state?.support || "",
+               // description: "Lorem Ipsum Dolor Sit Amet.",
           },
      ];
 
