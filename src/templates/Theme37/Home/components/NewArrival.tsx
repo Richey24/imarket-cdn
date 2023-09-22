@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import Slider from "react-slick";
-import { newArrivalsProducts } from '../data';
-import { Product } from './Product';
+import { newArrivalsProducts } from "../data";
 export const NewArrival = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const settings = {
-         dots: false,
-         infinite: true,
-         speed: 500,
-         slidesToShow: 5,
-         slidesToScroll: 1,
-         beforeChange: (current, next) => setCurrentSlide(next),
-    };
-  return (
-    <section className="sale-products-section">
+     const [currentSlide, setCurrentSlide] = useState(0);
+     const settings = {
+          dots: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          beforeChange: (current, next) => setCurrentSlide(next),
+     };
+     return (
+          <section className="sale-products-section">
                <div className="container">
                     <h2
                          className="section-title heading-border ls-n-10 border-0 text-center text-capitalize appear-animate"
@@ -34,8 +33,7 @@ export const NewArrival = () => {
                               ))}
                          </Slider>
                     </div>
-                  
                </div>
           </section>
-  )
-}
+     );
+};

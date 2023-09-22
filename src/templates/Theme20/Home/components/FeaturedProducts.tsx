@@ -15,7 +15,7 @@ export const FeaturedProducts = () => {
           beforeChange: (current, next) => setCurrentSlide(next), 
      };
      return (
-          <section className="featured-products-section"  >
+          <section className="featured-products-section">
                <div className="container">
                     <h2
                          className="section-title ls-n-10 text-center text-uppercase m-b-3"

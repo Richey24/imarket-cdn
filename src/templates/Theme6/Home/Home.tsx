@@ -7,8 +7,7 @@ import { useState } from "react";
 import ProductWidget from "./components/ProductWidget";
 
 const Home = () => {
-
-     const [quickView, setQuick] = useState({})
+     const [quickView, setQuick] = useState({});
 
      return (
           <main className="main">

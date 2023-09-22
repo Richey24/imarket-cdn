@@ -12,7 +12,7 @@ import instagram7 from "../../../../assets/images/demoes/demo8/instagram/7.jpg";
 import instagram8 from "../../../../assets/images/demoes/demo8/instagram/8.jpg";
 import instagram9 from "../../../../assets/images/demoes/demo8/instagram/9.jpg";
 import instagram10 from "../../../../assets/images/demoes/demo8/instagram/10.jpg";
-import { bestSeller, featuredProduct, latestProducts } from "../data";
+import { bestSeller, latestProducts } from "../data";
 import ProductWidget from "@/app/components/Product/ProductWidget";
 
 const MiniCard = (props) => {

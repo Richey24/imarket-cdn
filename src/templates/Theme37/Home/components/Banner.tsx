@@ -19,7 +19,10 @@ export const Banner = () => {
                                         style={{ backgroundColor: "#eee" }}
                                    />
                                    <div className="container d-flex align-items-center">
-                                        <div className="banner-layer" style={{left:`${data.left}`}}>
+                                        <div
+                                             className="banner-layer"
+                                             style={{ left: `${data.left}` }}
+                                        >
                                              <h4
                                                   className="text-transform-none appear-animate"
                                                   data-animation-name="fadeInLeftShorter"

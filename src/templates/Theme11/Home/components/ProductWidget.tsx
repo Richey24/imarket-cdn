@@ -27,7 +27,7 @@ export const ProductWidget: React.FC<ProductWidgetProps> = ({
                     </h3>
                     {/* End .product-container */}
                     <div className="price-box">
-                         <span className="product-price">${productPrice.toFixed(2)}</span>
+                         <span className="product-price">${productPrice}</span>
                     </div>
                     {/* End .price-box */}
                </div>

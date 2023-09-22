@@ -42,8 +42,7 @@ export const SaleProduct = () => {
                          data-animation-delay={100}
                          data-animation-name="fadeIn"
                          style={{
-                              background:
-                                   `#2A95CB center/cover url(${templateImages.demo37.bannerImage.banner2})`,
+                              background: `#2A95CB center/cover url(${templateImages.demo37.bannerImage.banner2})`,
                          }}
                     >
                          <div className="banner-content row align-items-center mx-0 justify-content-center">
