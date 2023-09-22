@@ -58,7 +58,7 @@ export default function About() {
                                         }}
                                    ></p>
                               </div>
-                              {/* <div className="col-lg-6 testimonial about-test">
+                              <div className="col-lg-6 testimonial about-test">
                                    <h3 className="section-heading">client reviews</h3>
                                    <div className="testimonial-owner">
                                         <figure>
@@ -80,7 +80,7 @@ export default function About() {
                                              consectetur elitad adipiscing cas non placerat mi.
                                         </p>
                                    </blockquote>
-                              </div> */}
+                              </div>
                          </div>
                     </div>
                </section>
@@ -89,12 +89,12 @@ export default function About() {
                          OUR TEAM
                     </h4>
                     <div className=" justify-content-center">
-                         <Slider {...settings}>
+                         {/* <Slider {...settings}>
                               {" "}
                               {minifiedData &&
                                    minifiedData.team &&
                                    minifiedData.team.map((data) => <TeamInfo {...data} />)}
-                         </Slider>
+                         </Slider> */}
                     </div>
                     {/* End .row */}
                </div>
