@@ -16,6 +16,35 @@ import product15 from "../../../assets/images/demoes/demo5/products/product-15.j
 import product16 from "../../../assets/images/demoes/demo5/products/product-16.jpg";
 import product17 from "../../../assets/images/demoes/demo5/products/product-17.jpg";
 import { ProductProps } from "./types";
+import { templateImages } from "@/appProvider/templateImages";
+
+export const sliders = [
+     {
+          sliderImg: templateImages.demo22.sliderImage.slide1,
+          p: "* Only 200 Available",
+          styles: "banner-layer-right",
+     },
+     {
+          sliderImg: templateImages.demo22.sliderImage.slide2,
+          b: "$199",
+     },
+];
+export const featuredProductSliders = [
+     {
+          sliderImg: templateImages.demo22.productImages.product4,
+          countDownTitle: "offer ends in:",
+          title: "1080p Wifi IP Camera",
+          productPrice: 199.0,
+          oldPrice: 199.0,
+     },
+     {
+          sliderImg: templateImages.demo22.productImages.product19,
+          countDownTitle: "offer ends in:",
+          title: "HD Camera",
+          productPrice: 299.0,
+          oldPrice: 199.0,
+     },
+];
 
 export const products: ProductProps[] = [
      {

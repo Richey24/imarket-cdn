@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import {
+     useAddToCart,
      useGetCategories,
      useGetFeaturedProducts,
      useGetProducts,
@@ -18,13 +19,12 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [products, setProducts] = useState(null);
      const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
-
+     const addToCart = useAddToCart();
      const getSiteByDomain = useGetSiteByDomain();
      const getProducts = useGetProducts();
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
 
-     console.log("featuredProducts", featuredProducts);
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {
@@ -71,9 +71,20 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           }
      }, [site]);
 
+     const handleAddToCart = (product: any) => {
+          console.log("log");
+     };
+
      return (
           <AppContext.Provider
-               value={{ site: dummySite, loading, categories, products, featuredProducts }}
+               value={{
+                    site: dummySite,
+                    loading,
+                    categories,
+                    products,
+                    featuredProducts,
+                    handleAddToCart,
+               }}
           >
                {children}
           </AppContext.Provider>

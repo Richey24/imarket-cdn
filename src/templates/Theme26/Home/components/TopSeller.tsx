@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { topsellerproducts } from "../data";
+import { Product } from "./Product";
+ 
 export const TopSeller = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {

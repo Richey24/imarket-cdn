@@ -1,6 +1,7 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
+import { CategoryIconComponent } from "@/utils/Categoryicon";
 
 interface Category {
      name: string;
@@ -15,20 +16,20 @@ interface CategoriesSliderProps {
 const CategoriesSlider: React.FC<CategoriesSliderProps> = ({ categories }) => {
      const owlCarouselOptions = {
           dots: false,
-          margin: 0,
+          margin: 16,
           loop: false,
           responsive: {
                576: {
                     items: 2,
                },
                992: {
-                    items: 3,
+                    items: 5,
                },
           },
      };
      return (
           <OwlCarousel
-               className=" owl-theme categories-slider content-center-bottom nav-outer"
+               className="owl-theme categories-slider content-center-bottom nav-outer"
                data-animation-name="fadeIn"
                data-animation-delay={100}
                {...owlCarouselOptions}
@@ -36,14 +37,7 @@ const CategoriesSlider: React.FC<CategoriesSliderProps> = ({ categories }) => {
                {categories.map((category, index) => (
                     <div className="product-category" key={index}>
                          <a href={category.link}>
-                              <figure>
-                                   <img
-                                        src={category.image}
-                                        width={220}
-                                        height={220}
-                                        alt="Category"
-                                   />
-                              </figure>
+                              <CategoryIconComponent categoryName={category.name} fontSize={70} />
                               <div className="category-content">
                                    <h3>{category.name}</h3>
                               </div>
