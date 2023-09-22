@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import { templateImages } from "@/appProvider/templateImages";
+import Image from "next/image";
 import { featuredProductSliders, sliders } from "../data";
 export const Banner = () => {
      return (
@@ -13,94 +14,52 @@ export const Banner = () => {
                                         {sliders.map((data) => (
                                              <Carousel.Item>
                                                   <div className="home-slide home-slide-1 banner">
-                                                       <img
+                                                       <Image
                                                             className="slide-bg"
                                                             src={data.sliderImg}
                                                             alt="slider image"
                                                             width={772}
                                                             height={434}
                                                        />
-                                                       {data.p ? (
-                                                            <div className="banner-layer banner-layer-middle banner-layer-right">
-                                                                 <div
-                                                                      className="appear-animate"
-                                                                      data-animation-name="rotateInUpLeft"
-                                                                 >
-                                                                      <h2 className="font1 ls-10 text-uppercase text-right m-b-4">
-                                                                           Electronic
-                                                                           <br />
-                                                                           Deals
-                                                                      </h2>
-                                                                      <div className="coupon-sale-text">
-                                                                           <h4 className="m-b-2 font1 d-block text-white bg-dark skew-box">
-                                                                                Exclusive COUPON
-                                                                           </h4>
-                                                                           <h5 className="mb-0 font1 d-inline-block bg-dark skew-box">
-                                                                                <i className="text-dark ls-0">
-                                                                                     UP TO
-                                                                                </i>
-                                                                                <b className="text-white">
-                                                                                     $100
-                                                                                </b>
-                                                                                <sub className="text-dark">
-                                                                                     OFF
-                                                                                </sub>
-                                                                           </h5>
-                                                                      </div>
-                                                                      <a
-                                                                           href="demo22-shop.html"
-                                                                           className="btn btn-light btn-lg ls-10"
-                                                                           style={{
-                                                                                color: "#f14705",
-                                                                                fontWeight: "bold",
-                                                                           }}
-                                                                      >
-                                                                           View All Now
-                                                                      </a>
+
+                                                       <div
+                                                            className={`banner-layer banner-layer-middle ${data.styles}`}
+                                                       >
+                                                            <div
+                                                                 className="appear-animate"
+                                                                 data-animation-name="rotateInUpLeft"
+                                                            >
+                                                                 <h2 className="font1 ls-10 text-uppercase text-right m-b-4  w-50 d-flex align-items-start justify-content-start flex-wrap">
+                                                                      {data.title}
+                                                                 </h2>
+                                                                 <div className="coupon-sale-text">
+                                                                      <h4 className="m-b-2 font1 d-block text-white bg-dark skew-box">
+                                                                           {data.h4}
+                                                                      </h4>
+                                                                      <h5 className="mb-0 font1 d-inline-block bg-dark skew-box">
+                                                                           <i className="text-dark ls-0">
+                                                                                UP TO
+                                                                           </i>
+                                                                           <b className="text-white">
+                                                                                $100
+                                                                           </b>
+                                                                           <sub className="text-dark">
+                                                                                OFF
+                                                                           </sub>
+                                                                      </h5>
                                                                  </div>
-                                                            </div>
-                                                       ) : null}
-                                                       {data.b ? (
-                                                            <div className="banner-layer banner-layer-middle banner-layer-left">
-                                                                 <div
-                                                                      className="appear-animate"
-                                                                      data-animation-name="rotateInUpLeft"
+                                                                 <a
+                                                                      href="demo22-shop.html"
+                                                                      className="btn btn-light btn-lg ls-10"
+                                                                      style={{
+                                                                           color: "#f14705",
+                                                                           fontWeight: "bold",
+                                                                      }}
                                                                  >
-                                                                      <h2 className="font1 ls-10 text-uppercase m-b-4">
-                                                                           Top Brands
-                                                                           <br />
-                                                                           Smartphones
-                                                                      </h2>
-                                                                      <div className="coupon-sale-text d-flex flex-column align-items-start">
-                                                                           <h4 className="m-b-2 font1 d-block text-uppercase text-white bg-dark skew-box">
-                                                                                Starting From
-                                                                           </h4>
-                                                                           <h5 className="mb-0 font1 d-inline-block bg-dark skew-box">
-                                                                                <b className="text-white">
-                                                                                     $199
-                                                                                </b>
-                                                                           </h5>
-                                                                      </div>
-                                                                      <a
-                                                                           href="demo22-shop.html"
-                                                                           className="btn btn-light btn-lg ls-10"
-                                                                           style={{
-                                                                                color: "#f14705",
-                                                                                fontWeight: "bold",
-                                                                           }}
-                                                                      >
-                                                                           View All Now
-                                                                      </a>
-                                                                 </div>
+                                                                      View All Now
+                                                                 </a>
                                                             </div>
-                                                       ) : null}
-                                                       {data.p ? (
-                                                            <div className="banner-layer banner-layer-bottom banner-layer-right">
-                                                                 <p className="ls-0 mb-0">
-                                                                      * Only 200 Available
-                                                                 </p>
-                                                            </div>
-                                                       ) : null}
+                                                       </div>
                                                   </div>
                                              </Carousel.Item>
                                         ))}
@@ -117,7 +76,7 @@ export const Banner = () => {
                                                        <h3 className="product-name">Flash Deals</h3>
                                                        <figure>
                                                             <a href="demo22-product.html">
-                                                                 <img
+                                                                 <Image
                                                                       src={data.sliderImg}
                                                                       width={217}
                                                                       height={217}
@@ -158,7 +117,7 @@ export const Banner = () => {
                                                             <div className="price-box">
                                                                  {data.oldPrice && (
                                                                       <span className="old-price">
-                                                                           $596.00
+                                                                           ${data.oldPrice}
                                                                       </span>
                                                                  )}
                                                                  <span className="product-price">
