@@ -23,10 +23,8 @@ export class ContactUsService extends HTTPBaseService {
 
           return data;
      };
-     public sendSubcribeEmail = async (
-          payload: {email:string},
-     ): Promise<any> => {
-          const data  = await this.instance.post("/xxx", payload);
+     public sendSubcribeEmail = async (payload: { email: string }): Promise<any> => {
+          const { data } = await this.instance.post("/xxx", payload);
 
           return data;
      };
