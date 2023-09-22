@@ -1,26 +1,12 @@
-import { ProductProps, ProductWidgetProps } from "./types";
+import { ProductProps } from "./types";
 import { templateImages } from "@/appProvider/templateImages";
 
-// export const bannersImage = [
-//      {
-//           bannerImg: templateImages.demo20.bannerImage.banner8,
-//           size:8
-//      },
-//      {
-//           size:4,
-          
-//      },
-//      {
-//           bannerImg: templateImages.demo20.bannerImage.banner3,
-//           size:4,
-//      },
-// ];
-export const featuredProducts = [
+ 
+export const featuredProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product1,
-          productImageUrlTwo: "",
           productTitle: "Men Gentle Shoes",
           productPrice: 56.0,
      },
@@ -28,7 +14,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product2,
-          productImageUrlTwo: "",
           productTitle: "Porto Gray Cap",
           productPrice: 76.0,
      },
@@ -36,7 +21,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product3,
-          productImageUrlTwo: "",
           productTitle: "Porto White Cap",
           productPrice: 56.0,
      },
@@ -44,7 +28,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product4,
-          productImageUrlTwo: "",
           productTitle: "Winter Towel",
           productPrice: 199,
      },
@@ -52,7 +35,6 @@ export const featuredProducts = [
           productImageAlt: "product",
           productCategory: "CATEGORY",
           productImageUrl: templateImages.demo20.productImages.product5,
-          productImageUrlTwo: "",
           productTitle: "FOOTWAER",
           productPrice: 88,
      },
@@ -104,11 +86,10 @@ export const offerAndDeals = [
           h4: "50% Off",
           atag: "demo20-shop.html",
           MdSize: 6,
-          bannerStyles:'banner3',
+          bannerStyles: "banner3",
           h3Styles: "m-b-1",
           h4Styles: "text-uppercase mb-4",
-          contentStyles:'banner-layer banner-layer-middle banner-layer-left'
-
+          contentStyles: "banner-layer banner-layer-middle banner-layer-left",
      },
      {
           Img: templateImages.demo20.bannerImage.banner5,
@@ -117,11 +98,11 @@ export const offerAndDeals = [
           h5: "Check our discounts",
           atag: "demo20-shop.html",
           MdSize: 6,
-          bannerStyles:'banner4',
+          bannerStyles: "banner4",
           h6Styles: "heading-border text-dark text-uppercase m-b-2",
           h3Styles: "ls-n-10 text-uppercase m-b-3",
           h5Styles: "text-uppercase",
-          contentStyles:'banner-layer banner-layer-middle banner-layer-right text-center'
+          contentStyles: "banner-layer banner-layer-middle banner-layer-right text-center",
      },
      {
           Img: templateImages.demo20.bannerImage.banner6,
@@ -130,8 +111,8 @@ export const offerAndDeals = [
           MdSize: 12,
           h4Styles: "mt-0 m-b-1",
           pStyles: "font2 text-body m-b-4",
-          contentStyles:'banner-layer banner-layer-middle text-center',
-          bannerStyles:'banner5',
+          contentStyles: "banner-layer banner-layer-middle text-center",
+          bannerStyles: "banner5",
      },
 ];
 

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../assets/images/your-logo.png";
 import { featuredProducts, payments } from "../Home/data";
+import { ProductWidget } from "../Home/components/ProductWidget";
 const Footer = () => {
      return (
           <footer className="footer ">
@@ -91,46 +92,7 @@ const Footer = () => {
                                    <div className="widget widget-products">
                                         <h4 className="widget-title">Featured Products</h4>
                                         {featuredProducts.map((product) => (
-                                             <div className="product-default left-details product-widget">
-                                                  <figure>
-                                                       <a
-                                                            href="demo16-product.html"
-                                                            title="Black Woman Underwear"
-                                                       >
-                                                            <img
-                                                                 src={product.productImageUrl}
-                                                                 width={84}
-                                                                 height={84}
-                                                                 alt="product"
-                                                            />
-                                                       </a>
-                                                  </figure>
-                                                  <div className="product-details">
-                                                       <h3 className="product-title">
-                                                            {" "}
-                                                            <a
-                                                                 href="demo16-product.html"
-                                                                 className="text-dark"
-                                                            >
-                                                                 {product.productTitle}
-                                                            </a>{" "}
-                                                       </h3>
-                                                       {/* <div class="ratings-container">
-                                      <div class="product-ratings">
-                                          <span class="ratings" style="width:100%"></span>
-                                          <span class="tooltiptext tooltip-top"></span>
-                                      </div>
-                                  </div> */}
-                                                       {/* End .product-container */}
-                                                       <div className="price-box">
-                                                            <span className="product-price text-dark">
-                                                                 $39.00
-                                                            </span>
-                                                       </div>
-                                                       {/* End .price-box */}
-                                                  </div>
-                                                  {/* End .product-details */}
-                                             </div>
+                                             <ProductWidget {...product} />
                                         ))}
                                    </div>
                                    {/* End .widget */}

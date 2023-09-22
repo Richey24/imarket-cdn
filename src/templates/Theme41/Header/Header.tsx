@@ -2,7 +2,7 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
 import React from "react";
-import "./Header.css"
+import "./Header.css";
 import HeaderLinks from "@/templates/shared/Header/HeaderLinks";
 import HeaderSearch from "@/templates/shared/Header/HeaderSearch";
 

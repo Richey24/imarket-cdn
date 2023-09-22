@@ -3,7 +3,7 @@ import theme2TemplateConfig from "./theme2";
 import theme3TemplateConfig from "./theme3";
 import theme4TemplateConfig from "./theme4";
 import theme5TemplateConfig from "./theme5";
-import { theme6TemplateConfig } from './theme6';
+import { theme6TemplateConfig } from "./theme6";
 import theme7TemplateConfig from "./theme7";
 import theme8TemplateConfig from "./theme8";
 import theme9TemplateConfig from "./theme9";
@@ -82,16 +82,15 @@ export const templateConfig: any = {
      theme42: theme42TemplateConfig,
      theme26: theme26TemplateConfig,
      theme23: theme23TemplateConfig,
-
 };
 
 export const cssImports = (len = 42) => {
-     let obj = {}
+     let obj = {};
      for (let i = 1; i <= len; i++) {
-          obj[`theme${i}`] = `demo${i}`
+          obj[`theme${i}`] = `demo${i}`;
      }
-     return obj
-}
+     return obj;
+};
 
 export const themeProps = {
      header: {

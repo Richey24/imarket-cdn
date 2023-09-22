@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
      return (
@@ -12,27 +12,51 @@ const Footer = () => {
                                              <h4 className="widget-title">Contact Info</h4>
                                              <ul className="contact-info">
                                                   <li>
-                                                       <span className="contact-info-label">Address:</span>1234 Street Name, City, US
+                                                       <span className="contact-info-label">
+                                                            Address:
+                                                       </span>
+                                                       1234 Street Name, City, US
                                                   </li>
                                                   <li>
-                                                       <span className="contact-info-label">Phone:</span><a href="tel:">(123) 456-7890</a>
+                                                       <span className="contact-info-label">
+                                                            Phone:
+                                                       </span>
+                                                       <a href="tel:">(123) 456-7890</a>
                                                   </li>
                                                   <li>
-                                                       <span className="contact-info-label">Email:</span> <a
-                                                            href="mailto:mail@example.com">mail@example.com</a>
+                                                       <span className="contact-info-label">
+                                                            Email:
+                                                       </span>{" "}
+                                                       <a href="mailto:mail@example.com">
+                                                            mail@example.com
+                                                       </a>
                                                   </li>
                                                   <li>
-                                                       <span className="contact-info-label">Working Days/Hours:</span> Mon - Sun / 9:00 AM
-                                                       - 8:00 PM
+                                                       <span className="contact-info-label">
+                                                            Working Days/Hours:
+                                                       </span>{" "}
+                                                       Mon - Sun / 9:00 AM - 8:00 PM
                                                   </li>
                                              </ul>
                                              <div className="social-icons">
-                                                  <a href="#" className="social-icon social-facebook icon-facebook" target="_blank"
-                                                       title="Facebook"></a>
-                                                  <a href="#" className="social-icon social-twitter icon-twitter" target="_blank"
-                                                       title="Twitter"></a>
-                                                  <a href="#" className="social-icon social-instagram icon-instagram" target="_blank"
-                                                       title="Instagram"></a>
+                                                  <a
+                                                       href="#"
+                                                       className="social-icon social-facebook icon-facebook"
+                                                       target="_blank"
+                                                       title="Facebook"
+                                                  ></a>
+                                                  <a
+                                                       href="#"
+                                                       className="social-icon social-twitter icon-twitter"
+                                                       target="_blank"
+                                                       title="Twitter"
+                                                  ></a>
+                                                  <a
+                                                       href="#"
+                                                       className="social-icon social-instagram icon-instagram"
+                                                       target="_blank"
+                                                       title="Instagram"
+                                                  ></a>
                                              </div>
                                         </div>
                                    </div>
@@ -42,23 +66,45 @@ const Footer = () => {
                                              <h4 className="widget-title">Customer Service</h4>
 
                                              <ul className="links">
-                                                  <li><a href="demo4-dark-about.html">About Us</a></li>
-                                                  <li><a href="#">Cart</a></li>
-                                                  <li><a href="#">Checkout</a></li>
-                                                  <li><a href="#">Contact us</a></li>
-                                                  <li><a href="dashboard.html">Dashboard</a></li>
-                                                  <li><a href="#">Orders Tracking</a></li>
-                                                  <li><a href="#">Orders History</a></li>
-                                                  <li><a href="#">Privacy</a></li>
-                                                  <li><a href="#">Shipping & Delivery</a></li>
-                                                  <li><a href="#">Wishlist</a></li>
+                                                  <li>
+                                                       <a href="demo4-dark-about.html">About Us</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Cart</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Checkout</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Contact us</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="dashboard.html">Dashboard</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Orders Tracking</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Orders History</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Privacy</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Shipping & Delivery</a>
+                                                  </li>
+                                                  <li>
+                                                       <a href="#">Wishlist</a>
+                                                  </li>
                                              </ul>
                                         </div>
                                    </div>
 
                                    <div className="col-lg-3 col-sm-6">
                                         <div className="widget">
-                                             <h4 className="widget-title tag-widget-title">Popular Tags</h4>
+                                             <h4 className="widget-title tag-widget-title">
+                                                  Popular Tags
+                                             </h4>
 
                                              <div className="tagcloud">
                                                   <a href="#">Clothes</a>
@@ -70,27 +116,35 @@ const Footer = () => {
                                                   <a href="#">Sweater</a>
                                              </div>
                                         </div>
-
                                    </div>
-
 
                                    <div className="col-lg-3 col-sm-6">
                                         <div className="widget widget-newsletter">
-                                             <h4 className="widget-title newsletter-title">Subscribe newsletter</h4>
-                                             <p>Get all the latest information on Events,<br />Sales and Offers. Sign up for newsletter
-                                                  today.
+                                             <h4 className="widget-title newsletter-title">
+                                                  Subscribe newsletter
+                                             </h4>
+                                             <p>
+                                                  Get all the latest information on Events,
+                                                  <br />
+                                                  Sales and Offers. Sign up for newsletter today.
                                              </p>
                                              <form action="#" className="mb-0">
-                                                  <input type="email" className="form-control m-b-3" placeholder="Email address" required />
+                                                  <input
+                                                       type="email"
+                                                       className="form-control m-b-3"
+                                                       placeholder="Email address"
+                                                       required
+                                                  />
 
-                                                  <input type="submit" className="btn shadow-none" value="Subscribe" />
+                                                  <input
+                                                       type="submit"
+                                                       className="btn shadow-none"
+                                                       value="Subscribe"
+                                                  />
                                              </form>
                                         </div>
-
                                    </div>
-
                               </div>
-
                          </div>
                     </div>
 
@@ -98,15 +152,16 @@ const Footer = () => {
                          <div className="footer-bottom">
                               <div className="container d-sm-flex align-items-center">
                                    <div className="footer-left">
-                                        <span className="footer-copyright">© Dreamtechlabs 2021. All Rights Reserved.</span>
+                                        <span className="footer-copyright">
+                                             © Dreamtechlabs 2021. All Rights Reserved.
+                                        </span>
                                    </div>
-
                               </div>
                          </div>
                     </div>
                </footer>
           </div>
-     )
-}
+     );
+};
 
-export default Footer
+export default Footer;

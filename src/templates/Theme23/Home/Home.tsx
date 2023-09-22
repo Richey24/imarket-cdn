@@ -1,10 +1,10 @@
 import React from "react";
-import { Products } from "./components/Products";
+import { ProductSection } from "./components/ProductSection";
 import { Banner } from "./components/Banner";
 import { Info } from "./components/Info";
 import { BestCollection } from "./components/BestCollection";
 import { MiniBanners } from "./components/MiniBanner";
-import { Product2 } from "./components/Product2";
+import { ProductSection2 } from "./components/ProductSection2";
 
 const Home = () => {
      return (
@@ -28,7 +28,7 @@ const Home = () => {
                          </p>
                          <MiniBanners />
                          <Info />
-                         <Products />
+                         <ProductSection />
                     </div>
                </section>
                <div className="cats-banner-section mb-3">
@@ -46,7 +46,7 @@ const Home = () => {
                          <BestCollection />
                     </div>
                </div>
-               <Product2 />
+               <ProductSection2 />
           </main>
      );
 };

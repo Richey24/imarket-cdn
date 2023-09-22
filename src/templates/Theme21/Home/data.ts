@@ -27,7 +27,7 @@ export const cardData = [
           icon: "icon-category-motors",
      },
 ];
-export const featuredProducts = [
+export const featuredProducts: ProductProps[] = [
      {
           productImageAlt: "product",
           productCategory: "CATEGORY",
@@ -326,52 +326,34 @@ export const mobilephones = [
 ];
 export const topRatedProduct = [
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: templateImages.demo21.specialImage.special2,
+          productImage: templateImages.demo21.specialImage.special2,
           productTitle: " Casual Blue Shoes",
           productPrice: 101.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo21.specialImage.special12,
-          productImageUrlTwo: templateImages.demo21.specialImage.special12,
+          productImage: templateImages.demo21.specialImage.special12,
           productTitle: "1080p Wifi IP Camera",
           productPrice: 299.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: templateImages.demo21.specialImage.special13,
-          productImageUrlTwo: templateImages.demo21.specialImage.special13,
+          productImage: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
      },
 ];
 export const topSellingProduct = [
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: templateImages.demo21.specialImage.special2,
+          productImage: templateImages.demo21.specialImage.special2,
           productTitle: " Casual Blue Shoes",
           productPrice: 101.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo21.specialImage.special12,
-          productImageUrlTwo: templateImages.demo21.specialImage.special12,
+          productImage: templateImages.demo21.specialImage.special12,
           productTitle: "1080p Wifi IP Camera",
           productPrice: 299.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: templateImages.demo21.specialImage.special13,
-          productImageUrlTwo: templateImages.demo21.specialImage.special13,
+          productImage: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
      },
@@ -379,26 +361,17 @@ export const topSellingProduct = [
 
 export const onSaleProduct = [
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo21.specialImage.special2,
-          productImageUrlTwo: templateImages.demo21.specialImage.special2,
+          productImage: templateImages.demo21.specialImage.special2,
           productTitle: " Casual Blue Shoes",
           productPrice: 101.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "CAPS, DRESS",
-          productImageUrl: templateImages.demo21.specialImage.special12,
-          productImageUrlTwo: templateImages.demo21.specialImage.special12,
+          productImage: templateImages.demo21.specialImage.special12,
           productTitle: "1080p Wifi IP Camera",
           productPrice: 299.0,
      },
      {
-          productImageAlt: "product",
-          productCategory: "DRESS, T-SHIRTS",
-          productImageUrl: templateImages.demo21.specialImage.special13,
-          productImageUrlTwo: templateImages.demo21.specialImage.special13,
+          productImage: templateImages.demo21.specialImage.special13,
           productTitle: "  Blue BackPack",
           productPrice: 299.0,
      },
@@ -453,23 +426,23 @@ export const miniBanners = [
 ];
 export const banners = [
      {
-          bannerimg: templateImages.demo21.sliderImage.slide1,
-          h2: "start the revolution",
-          h1: "drone pro 4",
+          bannerImg: templateImages.demo21.sliderImage.slide1,
+          bannerTitle: "start the revolution",
+          bannerSubTitle: "drone pro 4",
           price: 499,
           atag: "demo21-shop.html",
      },
      {
-          bannerimg: templateImages.demo21.sliderImage.slide2,
-          h2: "amazing deals",
-          h1: "smartphone",
+          bannerImg: templateImages.demo21.sliderImage.slide2,
+          bannerTitle: "amazing deals",
+          bannerSubTitle: "smartphone",
           price: 199,
           atag: "demo21-shop.html",
      },
      {
-          bannerimg: templateImages.demo21.sliderImage.slide3,
-          h2: "best price of the year",
-          h1: "top accessories",
+          bannerImg: templateImages.demo21.sliderImage.slide3,
+          bannerTitle: "best price of the year",
+          bannerSubTitle: "top accessories",
           price: 19,
           atag: "demo21-shop.html",
      },

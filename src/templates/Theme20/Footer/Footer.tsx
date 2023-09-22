@@ -15,7 +15,7 @@ const Footer = () => {
      };
      return (
           <footer>
-               <div className="footer-top" >
+               <div className="footer-top">
                     <div className="container-fluid">
                          <div
                               className="instagram-section mb-2 appear-animate"
@@ -34,12 +34,7 @@ const Footer = () => {
 
                               <Slider {...settings}>
                                    {instagram.map((data, index) => (
-                                        <Image
-                                             src={data.image}
-                                             alt="instagram"
-                                             width={100}
-                                             height={100}
-                                        />
+                                        <Image src={data.image} alt="instagram" className="px-2" width={100} height={100} />
                                    ))}
                               </Slider>
                          </div>

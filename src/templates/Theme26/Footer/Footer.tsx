@@ -1,7 +1,7 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Link from "next/link";
 import React from "react";
- 
+
 const Footer = (): JSX.Element => {
      return (
           <footer className="footer font2">

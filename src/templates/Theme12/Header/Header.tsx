@@ -1,4 +1,4 @@
-import "./Header.css"
+import "./Header.css";
 import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
 import MenuButton from "@/templates/shared/Header/HeaderSearch/MenuButton";
 import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
@@ -142,4 +142,4 @@ const Header = (props: any) => {
      );
 };
 
-export default Header
+export default Header;

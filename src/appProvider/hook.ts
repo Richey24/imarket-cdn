@@ -63,3 +63,28 @@ export const useGetCategories = () => {
           }
      };
 };
+
+export const useAddToCart = () => {
+     return async (
+          companyId: string,
+          userId: string,
+          items: any,
+          onSuccess: (data: any) => void,
+          onError: () => void,
+     ) => {
+          try {
+               const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/carts`, {
+                    companyId,
+                    userId,
+                    items,
+               });
+               console.log("response", response);
+               if (response.data.status) {
+                    onSuccess(response.data.categories);
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
