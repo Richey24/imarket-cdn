@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import GoogleMapComponent from "@/app/components/GoogleMap";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import { ContactUsService } from "@/api/contact-us.api";
+import { ContactUsService, } from "@/api/contact-us.api";
 import { IcontactUsReq } from "./contact.types";
 import { schema } from "./schema";
 import { getSubDomain } from "@/utils/helper";
