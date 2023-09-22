@@ -175,7 +175,7 @@ export const Home = (props: any) => {
                          </div>
                          {/* End .col-lg-9 */}
 
-                         <aside className="col-lg-3 order-lg-1 mobile-sideba">
+                         <div className="col-lg-3 order-lg-1 mobile-sideba">
                               <SideSlide />
 
                               <div className="widget widget-newsletters bg-gray text-center">
@@ -217,7 +217,7 @@ export const Home = (props: any) => {
                                    {/* End .testimonials-slider */}
                               </div>
                               {/* End .widget */}
-                         </aside>
+                         </div>
                          {/* End .col-lg-3 */}
                     </div>
                     {/* End .row */}

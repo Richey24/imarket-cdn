@@ -1,6 +1,5 @@
 "use client";
 import { Inter } from "next/font/google";
-import { Providers } from "./providers";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "@/appProvider";
 import { Next13ProgressBar } from "next13-progressbar";

@@ -3,7 +3,7 @@ import { authApi, UserI } from "../services/auth";
 
 interface IGlobalState {
      isSideBarVisible: boolean;
-     isCartSideBarOpen: boolean
+     isCartSideBarOpen: boolean;
 }
 
 interface ISetGlobal {
@@ -12,7 +12,7 @@ interface ISetGlobal {
 
 const initialState: IGlobalState = {
      isSideBarVisible: false,
-     isCartSideBarOpen: false
+     isCartSideBarOpen: false,
 };
 
 export const globalSlice = createSlice({
