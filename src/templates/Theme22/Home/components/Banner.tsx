@@ -1,8 +1,9 @@
 import Carousel from "react-bootstrap/Carousel";
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
-import { featuredProductSliders, sliders } from "../data";
-export const Banner = () => {
+import { featuredProductSliders } from "../data";
+
+export const Banner = ({ sliders }) => {
      return (
           <section className="intro-section" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
                <div className="container">
@@ -11,19 +12,23 @@ export const Banner = () => {
                               <div className="home-slider slide-animate   owl-theme custom-nav">
                                    <Carousel>
                                         {" "}
-                                        {sliders.map((data) => (
+                                        {sliders.map((data, index) => (
                                              <Carousel.Item>
                                                   <div className="home-slide home-slide-1 banner">
                                                        <Image
                                                             className="slide-bg"
-                                                            src={data.sliderImg}
+                                                            src={data.imageUrl}
                                                             alt="slider image"
                                                             width={772}
                                                             height={434}
                                                        />
 
                                                        <div
-                                                            className={`banner-layer banner-layer-middle ${data.styles}`}
+                                                            className={`banner-layer banner-layer-middle ${
+                                                                 index === 0
+                                                                      ? "banner-layer-right"
+                                                                      : "banner-layer-left"
+                                                            }`}
                                                        >
                                                             <div
                                                                  className="appear-animate"
