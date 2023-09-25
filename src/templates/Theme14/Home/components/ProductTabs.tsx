@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { featuredProducts, latestProducts } from "../data";
 import { Product } from "./Product";
 
-export const ProductTabs = () => {
+export const ProductTabs = ({ featuredProducts, latestProducts }) => {
      const [activeTab, setActiveTab] = useState("featured-product");
 
      const handleTabChange = (tabId: string) => {

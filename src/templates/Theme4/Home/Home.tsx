@@ -89,7 +89,7 @@ const Home = (props) => {
                     <SmallBoxes banners={smallBoxData} />
                     {featuredProductsState && (
                          <FeaturedProductsSection
-                              products={featuredProductsState}
+                              products={featuredProductsState ?? []}
                               section="Featured Products"
                          />
                     )}

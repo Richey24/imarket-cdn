@@ -1,7 +1,9 @@
 import React from "react";
-import logo from "../../../assets/images/your-logo.png";
 import { payments } from "../Home/data";
-const Footer = () => {
+
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <footer className="footer bg-dark position-relative">
                <div className="footer-middle">
@@ -17,16 +19,16 @@ const Footer = () => {
                                                   <span className="contact-info-label">
                                                        Address:
                                                   </span>
-                                                  1234 Street Name, City, England
+                                                  {company?.city + " " + company?.country}
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">(123) 456-7890</a>
+                                                  <a href="tel:">{company?.phone}</a>
                                              </li>
                                              <li>
                                                   <span className="contact-info-label">Email:</span>
                                                   <a href="mailto:mail@example.com">
-                                                       mail@example.com
+                                                       {company?.user_id?.email}
                                                   </a>
                                              </li>
                                              <li>
