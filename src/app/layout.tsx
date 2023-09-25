@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                          <ReactQueryProviders>
                               <AppProvider>
                                    {children}
-                                   <Toaster />
+                                   <Toaster toastOptions={{ className: "tw-text-2xl" }} />
                               </AppProvider>
                          </ReactQueryProviders>
                     </Providers>
