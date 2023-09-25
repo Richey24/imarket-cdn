@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { ContactUsService } from "@/api/contact-us.api";
 import toast from "react-hot-toast";
- 
+
 export const SubcribeEmail = () => {
      const contactUsApiService = new ContactUsService();
      const [email, setEmail] = useState<string>("");
@@ -18,13 +18,7 @@ export const SubcribeEmail = () => {
           },
      });
      const onSubmit = async () => {
-          try {
-               mutation.mutate({ email: email });
-          } catch (err: any) {
-               toast.error(err.data.message);
-               console.log(err.data.message)
-          }
-          
+          mutation.mutate({ email: email });
      };
      const updateEmail = (e) => {
           setEmail(() => e.target.value);
