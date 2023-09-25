@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from "react";
 import {
      useAddToCart,
+     useGetCart,
      useGetCategories,
      useGetFeaturedProducts,
      useGetProducts,
      useGetSiteByDomain,
+     useUpdateCart,
 } from "./hook";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
@@ -20,11 +22,15 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [products, setProducts] = useState(null);
      const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
+     const [cart, setCart] = useState(null);
+
      const addToCart = useAddToCart();
      const getSiteByDomain = useGetSiteByDomain();
      const getProducts = useGetProducts();
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
+     const updateCart = useUpdateCart();
+     const getCart = useGetCart();
 
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
@@ -70,10 +76,44 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     () => {},
                );
           }
+          if (site && !cart) {
+               getCart(
+                    "64b0950b3e08f13c705c5b1b",
+                    (data: any) => {
+                         setCart(data as any);
+                    },
+                    () => {},
+               );
+          }
      }, [site]);
 
-     const handleAddToCart = (product: any) => {
-          console.log("log");
+     const handleAddToCart = async (product: any, onDone: () => void) => {
+          console.log("log", product);
+          if (!cart) {
+               return addToCart(
+                    site?.company?._id,
+                    "64b0950b3e08f13c705c5b1b",
+                    product?.id,
+                    () => {
+                         onDone?.();
+                    },
+                    () => {
+                         onDone?.();
+                    },
+               );
+          } else {
+               updateCart(
+                    cart?._id,
+                    [product?.id],
+                    "64b0950b3e08f13c705c5b1b",
+                    () => {
+                         onDone?.();
+                    },
+                    () => {
+                         onDone?.();
+                    },
+               );
+          }
      };
 
      return (

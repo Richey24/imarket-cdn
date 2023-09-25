@@ -12,6 +12,7 @@ export const Product: React.FC<ProductProps> = ({
      productTitle,
      productPrice,
      oldPrice,
+     handleAddToCart,
 }) => {
      return (
           <div className="col-6 col-sm-4">
@@ -32,7 +33,10 @@ export const Product: React.FC<ProductProps> = ({
                               <span className="product-label label-sale">-30%</span>
                          </div>
                          <div className="btn-icon-group">
-                              <a href="#" className="btn-icon btn-add-cart product-type-simple">
+                              <a
+                                   onClick={handleAddToCart}
+                                   className="btn-icon btn-add-cart product-type-simple"
+                              >
                                    <i className="icon-shopping-cart" />
                               </a>
                          </div>
@@ -47,7 +51,7 @@ export const Product: React.FC<ProductProps> = ({
                                         {productCategory}
                                    </a>
                               </div>
-                              <a href="#" className="btn-icon-wish">
+                              <a className="btn-icon-wish">
                                    <i className="icon-wishlist-2" />
                               </a>
                          </div>

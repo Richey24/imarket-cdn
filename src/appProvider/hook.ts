@@ -69,7 +69,7 @@ export const useAddToCart = () => {
           companyId: string,
           userId: string,
           items: any,
-          onSuccess: (data: any) => void,
+          onSuccess: () => void,
           onError: () => void,
      ) => {
           try {
@@ -80,7 +80,47 @@ export const useAddToCart = () => {
                });
                console.log("response", response);
                if (response.data.status) {
-                    onSuccess(response.data.categories);
+                    onSuccess();
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
+
+export const useGetCart = () => {
+     return async (userId: string, onSuccess: (data: any) => void, onError: () => void) => {
+          try {
+               const response = await axios.get(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/carts/${userId}`,
+               );
+               console.log("get-response", response);
+               if (response.data.status) {
+                    onSuccess(response.data.data);
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
+
+export const useUpdateCart = () => {
+     return async (
+          cartId: string,
+          items: any,
+          userId: string,
+          onSuccess: () => void,
+          onError: () => void,
+     ) => {
+          try {
+               const response = await axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/carts/`, {
+                    cartId,
+               });
+               console.log("get-response", response);
+               if (response.data.status) {
+                    onSuccess();
                }
           } catch (err) {
                onError();
