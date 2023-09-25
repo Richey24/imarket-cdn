@@ -9,6 +9,7 @@ import {
 } from "./hook";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
+import NextNProgress from "nextjs-progressbar";
 import { dummySite } from "./data";
 
 export const AppContext = React.createContext<any>(null);

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { bestSeller, featuredProduct, latestProducts, products } from "../data";
+import { bestSeller } from "../data";
 
-const Product = ({ setQuickView }) => {
+const Product = ({ setQuickView, featuredProduct, latestProducts, products }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
