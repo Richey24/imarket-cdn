@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import GoogleMapComponent from "@/app/components/GoogleMap";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import { ContactUsService, } from "@/api/contact-us.api";
+import { sendContactUsMessage } from "@/api/contact-us.api";
 import { IcontactUsReq } from "./contact.types";
 import { schema } from "./schema";
 import { getSubDomain } from "@/utils/helper";
@@ -27,7 +27,6 @@ function CustomToggle({ children, eventKey }) {
 }
 
 export default function ContactUs() {
-     const contactUsApiService = new ContactUsService();
      const currentPage = "contact_us";
 
      const { site } = useContext(AppContext);
@@ -59,7 +58,7 @@ export default function ContactUs() {
 
      const mutation = useMutation({
           mutationFn: (payload: IcontactUsReq) => {
-               return contactUsApiService.sendContactUsMessage(payload);
+               return sendContactUsMessage(payload);
           },
           onSuccess() {
                toast.success("Message sent successfully");
@@ -70,12 +69,7 @@ export default function ContactUs() {
      });
 
      const onSubmit = async (data: IcontactUsReq) => {
-          console.log({ data });
-          try {
-               mutation.mutate(data);
-          } catch (err: any) {
-               toast.error(err.data.message);
-          }
+          mutation.mutate(data);
      };
 
      const img1 =
