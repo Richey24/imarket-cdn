@@ -1,6 +1,5 @@
 "use client";
 import { Inter } from "next/font/google";
-import { Providers } from "./providers";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "@/appProvider";
 import { Next13ProgressBar } from "next13-progressbar";
@@ -11,15 +10,19 @@ import { SitesField, ThemeName } from "@/appProvider/types";
 import { NoSite } from "../components/NoSite/NoSite";
 import "react-loading-skeleton/dist/skeleton.css";
 import Sidebar from "../../templates/shared/SideBar";
-import { setSideBarVisibility } from "@/redux/global";
+import { setCartSideBarOpen, setSideBarVisibility } from "@/redux/global";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import ScrollToTopButton from "../components/ScrollToTopBtn";
+import RightDrawer from "@/templates/shared/CartSideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
      const dispatch = useDispatch();
-     const { isSideBarVisible } = useSelector((state: RootState) => state.general);
+     const { isSideBarVisible, isCartSideBarOpen } = useSelector(
+          (state: RootState) => state.general,
+     );
 
      const { site, loading, setLoading, categories, products } = useContext<{
           site: SitesField;
@@ -35,11 +38,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      // console.log("site.theme.theme ", site);
      useEffect(() => {
           if (site) {
-               setStyleLoader(true);
+               // setStyleLoader(true);
                import(
                     `../../assets/css/${cssImports()[site.theme.theme as ThemeName]}.min.css`
                ).then(() => {
-                    setStyleLoader(false);
+                    setStyleLoader(true);
                });
           }
      }, [site]);
@@ -62,85 +65,94 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dispatch(setSideBarVisibility());
      };
 
+     const handleCartSideBarClose = () => {
+          dispatch(setCartSideBarOpen());
+     };
+
      const bodyStyles = isSideBarVisible
           ? { overflow: "hidden !important", height: "100vh" }
           : { overflow: "unset", height: "auto" };
 
      return (
           <html lang="en">
-               {/* <Head>
+               <Head>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-               </Head> */}
-               {!styleLoader && (
-                    <body className={"homepage relative"}>
-                         <Next13ProgressBar
-                              height="4px"
-                              color="#9d78f1"
-                              options={{ showSpinner: true }}
-                              showOnShallow
-                         />
+               </Head>
+               <body className={"homepage relative"}>
+                    <Next13ProgressBar
+                         height="4px"
+                         color="#9d78f1"
+                         options={{ showSpinner: true }}
+                         showOnShallow
+                    />
+                    {/* {styleLoader ? ( */}
+                    <Sidebar
+                         data={{
+                              ...site.theme.header.component.props,
+                              company: site.company,
+                              categories,
+                         }}
+                         isOpen={isSideBarVisible}
+                         toggleSidebar={handleSideBarClose}
+                    />
 
-                         <Sidebar
-                              data={{
+                    <RightDrawer isOpen={isCartSideBarOpen} onClose={handleCartSideBarClose} />
+
+                    <div
+                         className={`page-wrapper tw-flex-1 tw-transition-transform ${
+                              isSideBarVisible ? "tw-translate-x-[28.889rem]" : ""
+                         }`}
+                    >
+                         {topAds && topAds?.show && showTopAds && (
+                              <div className="top-notice text-white bg-secondary">
+                                   <div className="container text-center">
+                                        <h5 className="d-inline-block mb-0">{topAds?.title}</h5>
+                                        {topAds?.categories?.map((category, idx) => (
+                                             <a href="/" className="category" key={idx}>
+                                                  {category}
+                                             </a>
+                                        ))}
+                                        <small>{topAds?.additionalText}</small>
+                                        <button
+                                             title="Close (Esc)"
+                                             type="button"
+                                             className="mfp-close"
+                                             onClick={() => setShowTopAds((prev) => !prev)}
+                                        >
+                                             ×
+                                        </button>
+                                   </div>
+                              </div>
+                         )}
+                         <Header
+                              props={{
                                    ...site.theme.header.component.props,
                                    company: site.company,
                                    categories,
                               }}
-                              isOpen={isSideBarVisible}
-                              toggleSidebar={handleSideBarClose}
                          />
-                         <div
-                              className={`page-wrapper tw-flex-1 tw-transition-transform ${
-                                   isSideBarVisible ? "tw-translate-x-[28.889rem]" : ""
-                              }`}
-                         >
-                              {topAds && topAds?.show && showTopAds && (
-                                   <div className="top-notice text-white bg-secondary">
-                                        <div className="container text-center">
-                                             <h5 className="d-inline-block mb-0">
-                                                  {topAds?.title}
-                                             </h5>
-                                             {topAds?.categories?.map((category, idx) => (
-                                                  <a href="/" className="category" key={idx}>
-                                                       {category}
-                                                  </a>
-                                             ))}
-                                             <small>{topAds?.additionalText}</small>
-                                             <button
-                                                  title="Close (Esc)"
-                                                  type="button"
-                                                  className="mfp-close"
-                                                  onClick={() => setShowTopAds((prev) => !prev)}
-                                             >
-                                                  ×
-                                             </button>
-                                        </div>
-                                   </div>
-                              )}
-                              <Header
-                                   props={{
-                                        ...site.theme.header.component.props,
-                                        company: site.company,
-                                        categories,
-                                   }}
-                              />
 
-                              {children}
-                              <Footer
-                                   props={{
-                                        company: site.company,
-                                        ...site.theme.footer.component.props,
-                                   }}
-                              />
-                         </div>
-                         {isSideBarVisible && (
-                              <div
-                                   className="tw-fixed tw-top-0 tw-bottom-0 tw-left-0 tw-w-screen tw-h-screen tw-bg-black tw-opacity-40 tw-cursor-pointer"
-                                   onClick={handleSideBarClose}
-                              />
-                         )}
-                    </body>
-               )}
+                         {children}
+                         <Footer
+                              props={{
+                                   company: site.company,
+                                   ...site.theme.footer.component.props,
+                              }}
+                         />
+                         <ScrollToTopButton />
+                    </div>
+                    {isSideBarVisible && (
+                         <div
+                              className="tw-fixed tw-top-0 tw-bottom-0 tw-left-0 tw-w-screen tw-h-screen tw-bg-black tw-opacity-40 tw-cursor-pointer"
+                              onClick={handleSideBarClose}
+                         />
+                    )}
+                    {/* // ) 
+                    // : (
+                    //      <div className={"homepage relative"}> {children}</div>
+                    // )} */}
+               </body>
+
                <style jsx global>{`
                     body {
                          overflow: ${bodyStyles.overflow};

@@ -22,15 +22,19 @@ export default function Orders() {
                <h3 className="account-sub-title d-none d-md-block">
                     <i className="sicon-social-dropbox align-middle mr-3"></i>Orders
                </h3>
-               <div className="order-table-container text-center">
-                    <table className="table table-order text-left ">
+               <div className="order-table-container tw-text-center">
+                    <table className="table table-order tw-text-left ">
                          <thead>
                               <tr>
-                                   <th className="text-base font-bold order-id">ORDER</th>
-                                   <th className="text-base font-bold order-date">DATE</th>
-                                   <th className="text-base font-bold order-status">STATUS</th>
-                                   <th className="text-base font-bold order-price">TOTAL</th>
-                                   <th className="text-base font-bold order-action">ACTIONS</th>
+                                   <th className="tw-text-base tw-font-bold order-id">ORDER</th>
+                                   <th className="tw-text-base tw-font-bold order-date">DATE</th>
+                                   <th className="tw-text-base tw-font-bold order-status">
+                                        STATUS
+                                   </th>
+                                   <th className="tw-text-base tw-font-bold order-price">TOTAL</th>
+                                   <th className="tw-text-base tw-font-bold order-action">
+                                        ACTIONS
+                                   </th>
                               </tr>
                          </thead>
                          {orders.length == 0 ? (
@@ -48,21 +52,21 @@ export default function Orders() {
                                    {orders.map((order) => (
                                         <tr
                                              key={order.id}
-                                             className="border-b transition duration-300 ease-in-out hover:bg-gray-100"
+                                             className="tw-border-b tw-transition tw-duration-300 tw-ease-in-out tw-hover:bg-gray-100"
                                         >
-                                             <td className="whitespace-nowrap font-light text-lg px-6 py-2">
+                                             <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
                                                   {order.order}
                                              </td>
-                                             <td className="whitespace-nowrap font-light text-lg px-6 py-2">
+                                             <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
                                                   {order.date}
                                              </td>
-                                             <td className="whitespace-nowrap font-light text-lg px-6 py-2">
+                                             <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
                                                   {order.status}
                                              </td>
-                                             <td className="whitespace-nowrap font-light text-lg px-6 py-2">
+                                             <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
                                                   {order.total}
                                              </td>
-                                             <td className="whitespace-nowrap font-light text-lg px-6 py-2">
+                                             <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
                                                   <button>Cancel Order</button>
                                              </td>
                                         </tr>

@@ -58,7 +58,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
           <div className="products-filter-container bg-gray">
                <div className="container-fluid">
                     <div className="row align-items-lg-stretch">
-                         <aside className="filter-sidebar col-lg-2">
+                         <div className="filter-sidebar col-lg-2">
                               <div className="sidebar-wrapper">
                                    <h3 className="ls-n-10 text-uppercase text-primary">Sort By</h3>
                                    <ul className="check-filter-list">
@@ -85,7 +85,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
                                    </ul>
                               </div>
                               {/* End .sidebar-wrapper */}
-                         </aside>
+                         </div>
                          {/* End .col-lg-3 */}
                          <div className="col-lg-10">
                               <div className="row product-ajax-grid mb-2">
