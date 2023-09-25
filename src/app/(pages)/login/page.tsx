@@ -10,14 +10,16 @@ import { LoginRequest, useLoginMutation } from "@/redux/services/auth";
 import toast from "react-hot-toast";
 import { schema } from "./schema";
 import axios from "axios";
+import LoadingIcon from "@/app/components/Icons/LoadingIcon";
 
 export default function Login() {
      const [csrfToken, setCsrfToken] = React.useState<string | null>("");
+     const [isLoading, setLoading] = React.useState<boolean | null>(false);
      const router = useRouter();
 
      // const [login, { isLoading }] = useLoginMutation();
      const searchParams = useSearchParams();
-     const callbackUrl = searchParams.get("callbackUrl") || "/profile";
+     const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
 
      const {
           register,
@@ -28,6 +30,7 @@ export default function Login() {
           resolver: yupResolver(schema),
      });
      const onSubmit = async (data: LoginRequest) => {
+          setLoading(true);
           try {
                console.log(data);
 
@@ -44,9 +47,12 @@ export default function Login() {
                if (!res?.error) {
                     router.push(callbackUrl);
                } else {
+                    setLoading(false);
+
                     toast.error("invalid email or password");
                }
           } catch (err: any) {
+               setLoading(false);
                toast.error(err.data.message);
           }
      };
@@ -122,9 +128,9 @@ export default function Login() {
                          </div>
                          <button
                               type="submit"
-                              className="btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md w-100 tw-mt-4 tw-rounded-md"
+                              className="tw-flex tw-gap-5 tw-items-center tw-justify-center btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md w-100 tw-mt-4 tw-rounded-xl"
                          >
-                              LOGIN
+                              {isLoading && <LoadingIcon />}LOGIN
                          </button>
                     </form>
                </div>

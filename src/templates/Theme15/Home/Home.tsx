@@ -16,10 +16,10 @@ export const Home = () => {
                     <ServiceBox />
                     <section className="product-section">
                          <div className="row">
-                              <aside className="sidebar-home col-lg-3 col-md-4 order-lg-first">
+                              <div className="sidebar-home col-lg-3 col-md-4 order-lg-first">
                                    <SideMenu />
                                    <FeatureBoxes />
-                              </aside>
+                              </div>
                               <div className="col-lg-9 col-md-8">
                                    <ProductSection
                                         sectionTitle="Recent Products"
