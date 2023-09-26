@@ -8,7 +8,7 @@ import { AppContext } from "@/appProvider";
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
      const { featuredProducts } = useContext(AppContext);
-     console.log("+++++++", featuredProducts);
+    
      return (
           <footer className="footer bg-dark ">
                <div className="container">

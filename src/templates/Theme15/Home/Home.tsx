@@ -60,6 +60,7 @@ export const Home = (props) => {
                setFeaturedProducts(featuredProductsMap);
           }
      }, [products, featuredProductsState]);
+     console.log("]]]]]]]]", featuredProductsState);
 
      const displayCategories =
           categories &&
@@ -93,13 +94,15 @@ export const Home = (props) => {
                          </div>
                     </section>
                     <MiniBanners banners={miniBanners} />
-                    <ProductSection
-                         sectionTitle="Featured products"
-                         sectionSubTitle="All our featured products in a exclusive brand selection"
-                         products={featuredProductsState ?? []}
-                         colLg={2}
-                         colMd={3}
-                    />
+                    {featuredProductsState && (
+                         <ProductSection
+                              sectionTitle="Featured products"
+                              sectionSubTitle="All our featured products in a exclusive brand selection"
+                              products={featuredProductsState ?? []}
+                              colLg={2}
+                              colMd={3}
+                         />
+                    )}
                     <SaleBanner />
                     <div className="m-b-1" />
                     <Newsletter />
