@@ -60,7 +60,7 @@ export const Home = (props) => {
                setFeaturedProducts(featuredProductsMap);
           }
      }, [products, featuredProductsState]);
-     console.log("]]]]]]]]", featuredProductsState);
+     
 
      const displayCategories =
           categories &&
