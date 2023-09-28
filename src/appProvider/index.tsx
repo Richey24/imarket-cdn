@@ -30,7 +30,8 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const getFeaturedProducts = useGetFeaturedProducts();
      const updateCart = useUpdateCart();
      const getCart = useGetCart();
-
+     console.log("products", products);
+     
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {
@@ -117,14 +118,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
      return (
           <AppContext.Provider value={{ site, loading, categories, products, featuredProducts }}>
-               <NextNProgress
-                    color="#29D"
-                    startPosition={0.3}
-                    stopDelayMs={200}
-                    height={3}
-                    showOnShallow={true}
-               />
-
                {children}
           </AppContext.Provider>
      );

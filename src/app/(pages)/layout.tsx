@@ -15,6 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import ScrollToTopButton from "../components/ScrollToTopBtn";
 import RightDrawer from "@/templates/shared/CartSideBar";
+import { useSession } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const { isSideBarVisible, isCartSideBarOpen } = useSelector(
           (state: RootState) => state.general,
      );
-
+     const { data } = useSession();
      const { site, loading, setLoading, categories, products } = useContext<{
           site: SitesField;
           loading: boolean;
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                    ...site.theme.header.component.props,
                                    company: site.company,
                                    categories,
+                                   loggedInData: data,
                               }}
                          />
 
@@ -147,10 +149,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                               onClick={handleSideBarClose}
                          />
                     )}
-                    {/* // ) 
-                    // : (
-                    //      <div className={"homepage relative"}> {children}</div>
-                    // )} */}
                </body>
 
                <style jsx global>{`

@@ -12,11 +12,11 @@ const RightDrawer = ({ isOpen, onClose }) => {
                </div>
                <div className="">
                     <a href="#" title="Close (Esc)" className="btn-close">
-                         ×
+                         ×ddd
                     </a>
 
                     <div className="dropdownmenu-wrapper custom-scrollbar">
-                         <div className="dropdown-cart-header">Shopping Cart</div>
+                         <div className="dropdown-cart-header">Shoppingt Cart</div>
 
                          <div className="dropdown-cart-products">
                               <div className="product">

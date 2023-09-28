@@ -54,6 +54,7 @@ export const options: NextAuthOptions = {
                          firstname: token.firstname,
                          lastname: token.lastname,
                          randomKey: token.randomKey,
+                         token,
                     },
                };
           },

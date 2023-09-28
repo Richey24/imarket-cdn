@@ -1,15 +1,27 @@
+"use client";
+import { withAuth } from "@/utils/middleware";
+import { signOut, SignOutParams } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+// import { useRouter } from "next/router";
 import React from "react";
 
 function Dashboard() {
+     const router = useRouter();
+
+     const handleLogout = async () => {
+          await signOut({ redirect: false });
+          router.push("/");
+     };
+
      return (
           <div className="dashboard-content">
                <p>
                     Hello <strong className="text-dark">Editor</strong> (not
                     <strong className="text-dark">Editor</strong>?
-                    <Link href="login.html" className="btn btn-link ">
+                    <a onClick={handleLogout} className="btn btn-link ">
                          Log out
-                    </Link>
+                    </a>
                     )
                </p>
 
@@ -89,4 +101,5 @@ function Dashboard() {
           </div>
      );
 }
+
 export default Dashboard;

@@ -2,7 +2,7 @@ import React from "react";
 import { setCartSideBarOpen } from "@/redux/global";
 import { useDispatch } from "react-redux";
 
-function CartButton({ textColor }: { textColor?: string }) {
+function CartButton({ textColor, loggedInData }: { textColor?: string; loggedInData: any }) {
      const dispatch = useDispatch();
 
      const handleSideBarClose = () => {
@@ -23,7 +23,7 @@ function CartButton({ textColor }: { textColor?: string }) {
                     onClick={handleSideBarClose}
                >
                     <i className="minicart-icon"></i>
-                    <span className="cart-count badge-circle">3</span>
+                    {loggedInData && <span className="cart-count badge-circle">3</span>}
                </a>
           </div>
      );

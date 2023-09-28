@@ -6,8 +6,10 @@ import { schema } from "./schema";
 import { RegisterRequest, useRegisterMutation } from "@/redux/services/auth";
 import toast from "react-hot-toast";
 import LoadingIcon from "@/app/components/Icons/LoadingIcon";
+import { useRouter } from "next/navigation";
+import { withAuthHidden } from "@/utils/middleware";
 
-export default function Register() {
+function Register() {
      const [register, { isLoading }] = useRegisterMutation();
      const [domain, setDomain] = React.useState<string>("");
      const {
@@ -18,11 +20,17 @@ export default function Register() {
      } = useForm({
           resolver: yupResolver(schema),
      });
+     const router = useRouter();
 
      const onSubmit = async (data: RegisterRequest) => {
           try {
-               await register({ ...data, domain: domain }).unwrap();
-               toast.success("Signup successful");
+               const response = await register({ ...data, domain: domain }).unwrap();
+               console.log("response", response);
+
+               if (response.status) {
+                    toast.success("Signup successful");
+                    router.push("/login");
+               }
           } catch (err: any) {
                toast.error(err.data.message);
           }
@@ -136,3 +144,5 @@ export default function Register() {
           </div>
      );
 }
+
+export default withAuthHidden(Register);

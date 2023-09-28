@@ -11,8 +11,9 @@ import toast from "react-hot-toast";
 import { schema } from "./schema";
 import axios from "axios";
 import LoadingIcon from "@/app/components/Icons/LoadingIcon";
+import { withAuthHidden } from "@/utils/middleware";
 
-export default function Login() {
+function Login() {
      const [csrfToken, setCsrfToken] = React.useState<string | null>("");
      const [isLoading, setLoading] = React.useState<boolean | null>(false);
      const router = useRouter();
@@ -56,6 +57,7 @@ export default function Login() {
                toast.error(err.data.message);
           }
      };
+
      React.useEffect(() => {
           getCsrfToken().then((csr) => {
                setCsrfToken(csr || null);
@@ -137,3 +139,5 @@ export default function Login() {
           </div>
      );
 }
+
+export default withAuthHidden(Login);

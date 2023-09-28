@@ -1,8 +1,9 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
+import { getSession } from "next-auth/react";
 
 const baseQuery = fetchBaseQuery({
      baseUrl: process.env.NEXT_PUBLIC_BACKEND_URL,
-     prepareHeaders: (headers, { getState }) => {
+     prepareHeaders: async (headers, { getState }) => {
           const token = localStorage.getItem("access_token");
           if (token) {
                headers.set("authorization", `Bearer ${token}`);

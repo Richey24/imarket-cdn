@@ -5,11 +5,10 @@ import SocialIcons from "@/templates/shared/SocialIcons";
 import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
 
 export default function Header(props: any) {
-     const { company, static: staticProps, categories } = props.props;
-
+     const { company, static: staticProps, categories, loggedInData } = props.props;
+     console.log("loggedInData", loggedInData);
      return (
           <div style={{ width: "100%" }}>
-            
                <header className="header">
                     <div className="header-top">
                          <div className="container">
@@ -68,11 +67,16 @@ export default function Header(props: any) {
                                                   <li>
                                                        <Link href="/cart">Cart</Link>
                                                   </li>
-                                                  <li>
-                                                       <Link href="/login" className="login-link">
-                                                            Log In
-                                                       </Link>
-                                                  </li>
+                                                  {!loggedInData && (
+                                                       <li>
+                                                            <Link
+                                                                 href="/login"
+                                                                 className="login-link"
+                                                            >
+                                                                 Log In
+                                                            </Link>
+                                                       </li>
+                                                  )}
                                              </ul>
                                         </div>
                                         {/* End .header-menu */}
@@ -83,7 +87,11 @@ export default function Header(props: any) {
                               </div>
                          </div>
                     </div>
-                    <HeaderSearch company={company} categories={categories} />
+                    <HeaderSearch
+                         company={company}
+                         categories={categories}
+                         loggedInData={loggedInData}
+                    />
 
                     <div
                          className="header-bottom sticky-header d-lg-block d-none"

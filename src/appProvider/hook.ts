@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useSession } from "next-auth/react";
 
 export const useGetSiteByDomain = () => {
      return async (domain: string, onSuccess: (data: any) => void, onError: () => void) => {
@@ -90,11 +91,17 @@ export const useAddToCart = () => {
 };
 
 export const useGetCart = () => {
+     const { status, data } = useSession();
      return async (userId: string, onSuccess: (data: any) => void, onError: () => void) => {
           try {
-               const response = await axios.get(
-                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/carts/${userId}`,
-               );
+               console.log("loginData", data);
+               const headers = {
+                    Authorization: `Bearer ${(data as any)?.user?.token?.accessToken}`,
+               };
+
+               const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/orders`, {
+                    headers,
+               });
                console.log("get-response", response);
                if (response.data.status) {
                     onSuccess(response.data.data);
