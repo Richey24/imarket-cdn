@@ -3,12 +3,17 @@ import Slider from "react-slick";
 import { ProductItemProps, ProductsProps } from "../types";
 import { templateImages } from "@/appProvider/templateImages";
 
-const ProductItem: React.FC<ProductItemProps> = ({ imageUrl, productName, price, category }) => {
+const ProductItem: React.FC<ProductItemProps> = ({
+     productImageUrl,
+     productName,
+     productPrice,
+     productCategory,
+}) => {
      return (
           <div className="product-default inner-quickview inner-icon mx-2">
                <figure>
                     <a href="demo18-product.html">
-                         <img src={imageUrl} width={205} height={205} alt="product" />
+                         <img src={productImageUrl} width={205} height={205} alt="product" />
                     </a>
                     <div className="btn-icon-group">
                          <a href="#" className="btn-icon btn-add-cart product-type-simple">
@@ -27,7 +32,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ imageUrl, productName, price,
                     <div className="category-wrap">
                          <div className="category-list">
                               <a href="demo18-shop.html" className="product-category">
-                                   {category}
+                                   {productCategory}
                               </a>
                          </div>
                          <a href="wishlist.html" title="Wishlist" className="btn-icon-wish">
@@ -38,7 +43,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ imageUrl, productName, price,
                          <a href="demo18-product.html">{productName}</a>
                     </h3>
                     <div className="price-box">
-                         <span className="product-price">${price}</span>
+                         <span className="product-price">${productPrice}</span>
                     </div>
                </div>
           </div>
@@ -49,12 +54,12 @@ const FeaturedProducts: FC<ProductsProps> = ({ products }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
 
      const settings = {
-          dots: true,
+          dots: false,
           infinite: true,
           speed: 500,
-          slidesToShow: 6,
-          slidesToScroll: 2,
-          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
 
      return (
@@ -67,16 +72,16 @@ const FeaturedProducts: FC<ProductsProps> = ({ products }) => {
                          Featured products
                     </h2>
                     <div
-                         className="featured-products  owl-theme show-nav-hover nav-outer nav-image-center mb-3 "
+                         // className="featured-products  owl-theme show-nav-hover nav-outer nav-image-center mb-3 "
                          data-animation-name="fadeIn"
                     >
                          <Slider {...settings}>
                               {products.map((product, index) => (
                                    <ProductItem
-                                        imageUrl={product.imageUrl}
-                                        category={product.category}
+                                        productImageUrl={product.productImageUrl}
+                                        productCategory={product.productCategory}
                                         productName={product.productName}
-                                        price={product.price}
+                                        productPrice={product.productPrice}
                                         key={index}
                                    />
                               ))}

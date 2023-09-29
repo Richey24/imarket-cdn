@@ -1,23 +1,72 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
-import { ProductsData, featuredProducts } from "./data";
+// import { ProductsData, featuredProducts } from "./data";
 import ProductBanner from "./components/ProductBanner";
 import FeaturedProducts from "./components/FeaturedProducts";
 import Banner from "../../../assets/images/demoes/demo18/bg-2.jpg";
 import { templateImages } from "@/appProvider/templateImages";
 import FeaturedBoxes from "./components/FeaturedBoxes";
 
-const Home = () => {
+const Home = (props) => {
+     const {
+          static: statiProps,
+          products,
+          categories,
+          featuredProducts: featuredProductData,
+     } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
+
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         category: "Fashion",
+                         imageUrl1: "data:image/jpeg;base64," + product?.image_1920,
+                         imageUrl2: "data:image/jpeg;base64," + product?.image_1024,
+                         productName: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+          if (featuredProductData && !featuredProductsState) {
+               const featuredProductsMap = featuredProductData.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
+          }
+     }, [products, featuredProductData]);
      return (
           <main className="main">
-               <Hero />
+               <Hero  slides={statiProps?.banner ?? []}/>
                {/* End .home-slider-container */}
-               <Products products={ProductsData} />
+               <Products products={latestProductsState ?? []} />
                {/* End .produts-filter-container*/}
                <ProductBanner />
                {/* End .product-banner-section */}
-               <FeaturedProducts products={featuredProducts} />
+               <FeaturedProducts products={featuredProductsState ?? []} />
                <section
                     className="explore-section d-flex align-items-center"
                     data-parallax="{'speed': 1.8,  'enableOnMobile': true}"

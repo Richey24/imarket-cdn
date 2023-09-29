@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-css-tags */
 "use client";
+import React from "react";
 import AppProvider from "@/appProvider";
 import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 import ReactQueryProviders from "@/utils/provider";
 import { SessionProvider } from "next-auth/react";
 import "./globals.css";
@@ -18,15 +20,21 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "../assets/css/bootstrap.min.css";
 import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
-import "../assets/js/webfont";
+// import "../assets/js/webfont";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+     const loadJS = async () => {
+          (await import("../assets/js/webfont")).default;
+     };
+     React.useEffect(() => {
+          loadJS();
+     }, []);
+
      return (
           <html lang="en">
                <Head>
@@ -51,7 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                          <ReactQueryProviders>
                               <AppProvider>
                                    {children}
-                                   <Toaster />
+                                   <Toaster toastOptions={{ className: "tw-text-2xl" }} />
+                                   {/* <ToastContainer /> */}
                               </AppProvider>
                          </ReactQueryProviders>
                     </Providers>

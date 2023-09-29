@@ -11,6 +11,7 @@ import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 
 import NextNProgress from "nextjs-progressbar";
+import { dummySite } from "./data";
 
 export const AppContext = React.createContext<any>(null);
 
@@ -77,9 +78,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      };
 
      return (
-          <AppContext.Provider
-               value={{ site, loading, categories, products, featuredProducts, handleAddToCart }}
-          >
+          <AppContext.Provider value={{ site, loading, categories, products, featuredProducts }}>
                <NextNProgress
                     color="#29D"
                     startPosition={0.3}

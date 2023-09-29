@@ -1,31 +1,15 @@
 import { IcontactUsReq } from "@/app/(pages)/contact-us/contact.types";
-import { HTTPBaseService } from "@/utils/api";
+import api from "@/utils/api";
 
-export class ContactUsService extends HTTPBaseService {
-     private static classInstance?: ContactUsService;
 
-     constructor(token?: string) {
-          super(token);
-     }
+export const sendSubcribeEmail = async (email: string) => {
+     const { data } = await api.post("/xxx", { email });
+     return data;
+};
 
-     public static getInstance(token: string) {
-          if (!this.classInstance) {
-               this.classInstance = new ContactUsService(token);
-          }
+export const sendContactUsMessage = async (
+     payload: IcontactUsReq) => {
+     const { data } = await api.post("/contact-us", payload);
 
-          return this.classInstance;
-     }
-
-     public sendContactUsMessage = async (
-          payload: IcontactUsReq,
-     ): Promise<{ isError: boolean; message: string }> => {
-          const { data } = await this.instance.post("/contact-us", payload);
-
-          return data;
-     };
-     public sendSubcribeEmail = async (payload: { email: string }): Promise<any> => {
-          const { data } = await this.instance.post("/xxx", payload);
-
-          return data;
-     };
-}
+     return data;
+};

@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import { ProductItemProps, ProductsProps } from "../types";
 
 export const ProductItem: React.FC<ProductItemProps> = ({
-     imageUrl,
-     category,
+     productImageUrl,
+     productCategory,
      productName,
-     price,
+     productPrice,
 }) => {
      return (
           <div className="col-6 col-md-4 col-lg-3 col-xl-5col">
@@ -15,7 +15,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
                >
                     <figure>
                          <a href="demo18-product.html">
-                              <img src={imageUrl} width={205} height={205} alt="product" />
+                              <img src={productImageUrl} width={205} height={205} alt="product" />
                          </a>
                          <div className="btn-icon-group">
                               <a href="#" className="btn-icon btn-add-cart product-type-simple">
@@ -31,10 +31,10 @@ export const ProductItem: React.FC<ProductItemProps> = ({
                          </a>
                     </figure>
                     <div className="product-details">
-                         <div className="category-wrap">
+                         <div className="productCwrap">
                               <div className="category-list">
                                    <a href="demo18-shop.html" className="product-category">
-                                        {category}
+                                        {productCategory}
                                    </a>
                               </div>
                               <a href="wishlist.html" className="btn-icon-wish">
@@ -45,7 +45,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({
                               <a href="demo18-product.html">{productName}</a>
                          </h3>
                          <div className="price-box">
-                              <span className="product-price">${price}</span>
+                              <span className="product-price">${productPrice}</span>
                          </div>
                     </div>
                </div>
@@ -91,13 +91,13 @@ const Products: FC<ProductsProps> = ({ products }) => {
                               <div className="row product-ajax-grid mb-2">
                                    {products.map((product, index) => (
                                         <ProductItem
-                                             imageUrl={product.imageUrl}
-                                             category={product.category}
+                                             productImageUrl={product.productImageUrl}
+                                             productCategory={product.productCategory}
                                              productName={product.productName}
-                                             price={product.price}
+                                             productPrice={product.productPrice}
                                              key={index}
                                         />
-                                   ))}
+                                   ))}\
                               </div>
                               {/* End .row */}
                               <div className="product-more-container d-flex justify-content-center">

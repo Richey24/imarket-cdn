@@ -1,10 +1,12 @@
 export type ProductItemProps = {
-     imageUrl: string;
-     category: string;
+     productImageUrl: string ;
+     productCategory: string;
      productName: string;
-     price: number;
+     productPrice?: number | string;
+ 
 };
 
 export type ProductsProps = {
      products: ProductItemProps[];
+
 };
