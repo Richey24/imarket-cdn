@@ -1,14 +1,14 @@
+import { useContext } from "react";
 import Image from "next/image";
 import logo from "../../../assets/images/logo.png";
-import product9 from "../../../assets/images/demoes/demo15/products/product-9.jpg";
-import product3 from "../../../assets/images/demoes/demo15/products/product-3.jpg";
-import product6 from "../../../assets/images/demoes/demo15/products/product-6.jpg";
-import payments from "../../../assets/images/demoes/demo15/payment-icon.png";
 import { templateImages } from "@/appProvider/templateImages";
 import Payments from "./Payments";
+import { AppContext } from "@/appProvider";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
+     const { featuredProducts } = useContext(AppContext);
+    
      return (
           <footer className="footer bg-dark ">
                <div className="container">
@@ -99,112 +99,43 @@ const Footer = (props: any) => {
                               <div className="col-lg-3">
                                    <div className="widget widget-product mb-3">
                                         <h4 className="widget-title">Featured Products</h4>
-                                        <div className="product-default left-details product-widget">
-                                             <figure>
-                                                  <a href="demo15-product.html">
-                                                       <Image
-                                                            src={
-                                                                 templateImages.demo15.productImages
-                                                                      .product9
-                                                            }
-                                                            width={95}
-                                                            height={95}
-                                                            alt="product"
-                                                       />
-                                                  </a>
-                                             </figure>
-                                             <div className="product-details">
-                                                  <h3 className="product-title text-white">
-                                                       <a href="demo15-product.html">
-                                                            Woman Black Blouse
-                                                       </a>
-                                                  </h3>
-                                                  {/* <div class="ratings-container">
-                              <div class="product-ratings">
-                                  <span class="ratings" style="width:100%"></span>
-                                  <span class="tooltiptext tooltip-top"></span>
-                              </div>
-                          </div> */}
-                                                  {/* End .product-container */}
-                                                  <div className="price-box">
-                                                       <span className="product-price">
-                                                            $129.00 – $185.00
-                                                       </span>
+                                        {featuredProducts &&
+                                             featuredProducts.slice(0, 3).map((product, index) => (
+                                                  <div
+                                                       className="product-default left-details product-widget"
+                                                       key={index}
+                                                  >
+                                                       <figure>
+                                                            <a href="demo15-product.html">
+                                                                 <Image
+                                                                      src={
+                                                                           "data:image/jpeg;base64," +
+                                                                           product?.image_1920
+                                                                      }
+                                                                      width={95}
+                                                                      height={95}
+                                                                      alt="product"
+                                                                 />
+                                                            </a>
+                                                       </figure>
+                                                       <div className="product-details">
+                                                            <h3 className="product-title text-white">
+                                                                 <a href="demo15-product.html">
+                                                                      {product.display_name}
+                                                                 </a>
+                                                            </h3>
+
+                                                            {/* End .product-container */}
+                                                            <div className="price-box">
+                                                                 <span className="product-price">
+                                                                      ${product.standard_price}
+                                                                 </span>
+                                                            </div>
+                                                            {/* End .price-box */}
+                                                       </div>
+                                                       {/* End .product-details */}
                                                   </div>
-                                                  {/* End .price-box */}
-                                             </div>
-                                             {/* End .product-details */}
-                                        </div>
-                                        <div className="product-default left-details product-widget">
-                                             <figure>
-                                                  <a href="demo15-product.html">
-                                                       <Image
-                                                            src={
-                                                                 templateImages.demo15.productImages
-                                                                      .product6
-                                                            }
-                                                            width={95}
-                                                            height={95}
-                                                            alt="product"
-                                                       />
-                                                  </a>
-                                             </figure>
-                                             <div className="product-details">
-                                                  <h3 className="product-title text-white">
-                                                       <a href="demo15-product.html">Jeans Wear</a>
-                                                  </h3>
-                                                  {/* <div class="ratings-container">
-                              <div class="product-ratings">
-                                  <span class="ratings" style="width:100%"></span>
-                                  <span class="tooltiptext tooltip-top"></span>
-                              </div>
-                          </div> */}
-                                                  {/* End .product-container */}
-                                                  <div className="price-box">
-                                                       <span className="product-price">
-                                                            $185.00
-                                                       </span>
-                                                  </div>
-                                                  {/* End .price-box */}
-                                             </div>
-                                             {/* End .product-details */}
-                                        </div>
-                                        <div className="product-default left-details product-widget">
-                                             <figure>
-                                                  <a href="demo15-product.html">
-                                                       <Image
-                                                            src={
-                                                                 templateImages.demo15.productImages
-                                                                      .product3
-                                                            }
-                                                            width={95}
-                                                            height={95}
-                                                            alt="product"
-                                                       />
-                                                  </a>
-                                             </figure>
-                                             <div className="product-details">
-                                                  <h3 className="product-title text-white">
-                                                       <a href="demo15-product.html">
-                                                            Porto Sticky Info
-                                                       </a>
-                                                  </h3>
-                                                  {/* <div class="ratings-container">
-                              <div class="product-ratings">
-                                  <span class="ratings" style="width:100%"></span>
-                                  <span class="tooltiptext tooltip-top"></span>
-                              </div>
-                          </div> */}
-                                                  {/* End .product-container */}
-                                                  <div className="price-box">
-                                                       <span className="product-price">
-                                                            $129.00
-                                                       </span>
-                                                  </div>
-                                                  {/* End .price-box */}
-                                             </div>
-                                             {/* End .product-details */}
-                                        </div>
+                                             ))}
                                    </div>
                                    {/* End .widget */}
                               </div>
