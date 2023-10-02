@@ -79,6 +79,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           <AppContext.Provider
                value={{
                     site: dummySite,
+                    // site,
                     loading,
                     categories,
                     products,
