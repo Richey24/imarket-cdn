@@ -57,6 +57,12 @@ const Products: FC<ProductsProps> = ({ products }) => {
      return (
           <div className="products-filter-container bg-gray">
                <div className="container-fluid">
+                    <h4
+                         className="subtitle text-center text-uppercase mb-2 "
+                         data-animation-name="fadeIn"
+                    >
+                         Latest products
+                    </h4>
                     <div className="row align-items-lg-stretch">
                          <aside className="filter-sidebar col-lg-2">
                               <div className="sidebar-wrapper">
@@ -97,7 +103,8 @@ const Products: FC<ProductsProps> = ({ products }) => {
                                              productPrice={product.productPrice}
                                              key={index}
                                         />
-                                   ))}\
+                                   ))}
+                                   \
                               </div>
                               {/* End .row */}
                               <div className="product-more-container d-flex justify-content-center">

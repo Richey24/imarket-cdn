@@ -3,16 +3,16 @@ import React from "react";
 import Slider from "react-slick";
 
 const Hero = ({ slides }) => {
-     // const mappedSlides = slides.map((slide: any) => ({
-     //      background: "#555",
-     //      imageSrc:
-     //           slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo18.sliderImage.slide9,
-     //      title: "Spring / Summer Season",
-     //      saleTitle: "Summer Sale",
-     //      discount: "50% off",
-     //      price: "$19.99",
-     //      link: "demo13-shop.html",
-     // }));
+     const mappedSlides = slides.map((slide: any) => ({
+          background: "#555",
+          imageSrc:
+               slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo18.sliderImage.slide9,
+          title: "Spring / Summer Season",
+          saleTitle: "Summer Sale",
+          discount: "50% off",
+          price: "$19.99",
+          link: "demo13-shop.html",
+     }));
 
      let settings = {
           // dots: true,
@@ -28,7 +28,7 @@ const Hero = ({ slides }) => {
      return (
           <section className="home-slider-container">
                <Slider {...settings} className="home-slider with-dots-container">
-                    {slides.map((slide, index) => (
+                    {mappedSlides.map((slide, index) => (
                          <div
                               className="home-slide home-slide1 banner"
                               style={{ backgroundColor: "#111" }}
@@ -39,8 +39,6 @@ const Hero = ({ slides }) => {
                                         backgroundImage: `url(${slide.imageUrl})`,
                                    }}
                               >
-                                    
-                                  
                                    <ul
                                         className="slide-bg scene"
                                         style={{ width: "100%", height: "100%" }}
