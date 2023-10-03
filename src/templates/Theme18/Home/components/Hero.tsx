@@ -25,6 +25,7 @@ const Hero = ({ slides }) => {
           arrows: true,
           accessibility: true,
      };
+     console.log("Hey",slides)
      return (
           <section className="home-slider-container">
                <Slider {...settings} className="home-slider with-dots-container">
@@ -32,11 +33,12 @@ const Hero = ({ slides }) => {
                          <div
                               className="home-slide home-slide1 banner"
                               style={{ backgroundColor: "#111" }}
+                              key={index}
                          >
                               <div
                                    className="tw-h-full tw-w-full"
                                    style={{
-                                        backgroundImage: `url(${slide.imageUrl})`,
+                                        backgroundImage: `url(${slide.imageSrc})`,
                                    }}
                               >
                                    <ul
@@ -82,12 +84,7 @@ const Hero = ({ slides }) => {
                               {/* End .home-slide-content */}
                          </div>
                     ))}
-                    {/* End .home-slide */}
-
-                    {/* End .home-slide */}
                </Slider>
-               {/* End .home-slider */}
-               {/* End .home-slide-thumbs */}
           </section>
      );
 };

@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import Slider from "react-slick";
 import { ProductItemProps, ProductsProps } from "../types";
 import { templateImages } from "@/appProvider/templateImages";
+import Image from "next/image";
 
 const ProductItem: React.FC<ProductItemProps> = ({
      productImageUrl,
@@ -12,9 +13,16 @@ const ProductItem: React.FC<ProductItemProps> = ({
      return (
           <div className="product-default inner-quickview inner-icon mx-2">
                <figure>
-                    <a href="demo18-product.html">
-                         <img src={productImageUrl} width={205} height={205} alt="product" />
-                    </a>
+                    <div style={{ width: "300px", height: "300px", overflow: "hidden" }}>
+                         <Image
+                              style={{ width: "100%", height: "100%" }}
+                              src={productImageUrl}
+                              width={300}
+                              height={300}
+                              alt="product"
+                         />
+                    </div>
+
                     <div className="btn-icon-group">
                          <a href="#" className="btn-icon btn-add-cart product-type-simple">
                               <i className="icon-shopping-cart" />
@@ -72,7 +80,7 @@ const FeaturedProducts: FC<ProductsProps> = ({ products }) => {
                          Featured products
                     </h2>
                     <div
-                         // className="featured-products  owl-theme show-nav-hover nav-outer nav-image-center mb-3 "
+                         className="featured-products  owl-theme show-nav-hover nav-outer nav-image-center mb-3 "
                          data-animation-name="fadeIn"
                     >
                          <Slider {...settings}>
