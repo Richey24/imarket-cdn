@@ -1,6 +1,8 @@
 import React from "react";
 import { templateImages } from "@/appProvider/templateImages";
-export const Banner = () => {
+
+export const Banner = ({ banner }) => {
+     console.log("===>", banner);
      return (
           <section className="intro-section">
                <div className="container">
@@ -12,7 +14,7 @@ export const Banner = () => {
                               <div className="banner banner1" style={{ backgroundColor: "#eee" }}>
                                    <figure>
                                         <img
-                                             src={templateImages.demo20.bannerImage.banner8}
+                                             src={banner.imageUrl}
                                              alt="banner"
                                              width={779}
                                              height={464}
@@ -24,12 +26,11 @@ export const Banner = () => {
                                              data-animation-name="bounceInLeft"
                                              data-animation-delay={100}
                                         >
-                                             <h3 className="text-body m-b-1">Save Big Sale</h3>
+                                             <h3 className="text-body m-b-1">{banner.text}</h3>
                                              <h4 className="d-flex align-items-center text-uppercase">
-                                                  50%
-                                                  <small className="d-inline-block">Off</small>
+                                                  {banner.title}
                                              </h4>
-                                             <h5>
+                                             {/* <h5>
                                                   <span className="d-inline-block align-top ls-n-20 text-uppercase">
                                                        Starting At
                                                   </span>
@@ -39,7 +40,7 @@ export const Banner = () => {
                                                   >
                                                        <sup>$</sup>199<sup>99</sup>
                                                   </b>
-                                             </h5>
+                                             </h5> */}
                                              <a
                                                   href="demo20-shop.html"
                                                   className="btn btn-sm text-uppercase ls-10"

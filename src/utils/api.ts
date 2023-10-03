@@ -1,8 +1,10 @@
 import axios from "axios";
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
-axios.interceptors.request.use((request) => {
-    request.headers!['Authorization'] = `Bearer ${localStorage.getItem('access_token')}`
+axios.interceptors.request.use(async (request) => {
+    // request.headers!['Authorization'] = `Bearer ${localStorage.getItem('access_token')}`
+
+
     return request;
 }, function (err) {
 
