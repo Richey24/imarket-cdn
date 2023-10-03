@@ -53,21 +53,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => {},
+                    () => { },
                );
           }
      }, [site]);
@@ -78,15 +78,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
      return (
           <AppContext.Provider
-               value={{
-                    site: dummySite,
-                    // site,
-                    loading,
-                    categories,
-                    products,
-                    featuredProducts,
-                    handleAddToCart,
-               }}
+               value={{ site: dummySite, loading, categories, products, featuredProducts, handleAddToCart }}
           >
                <NextNProgress
                     color="#29D"

@@ -692,7 +692,6 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-17.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-slide.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
@@ -3298,7 +3297,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo29-product/zoom/product-4.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo29-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo29-slide4.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo29-product/banner/banner-article.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo29-product/banner/banner-bathroom.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo29-product/banner/banner-sidebar.jpg",
@@ -4269,7 +4268,7 @@ export const templateImages = {
                slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-1.jpg",
                slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo39-product/slider/slide-2.jpg",
           },
-      },
+     },
      demo40: {
           productImages: {
                product1:
@@ -4344,7 +4343,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/zoom/product-5-big.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-slide1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-1.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-2.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo40-product/banner/banner-3.jpg",
@@ -4454,7 +4453,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/product9-300x300.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-slide2.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/banner/banner1.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/banner/banner2.jpg",
           },
@@ -4469,8 +4468,8 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/category/cat4.jpg",
           },
           sliderImage: {
-               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/slider/slide1.jpg",
-               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-product/slider/slide2.jpg",
+               slide1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-slide1.jpg",
+               slide2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo42-slide2.jpg",
           },
      },
 };
