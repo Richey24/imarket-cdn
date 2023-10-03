@@ -1,21 +1,15 @@
 import React from "react";
-
-import Image from "next/image";
-import { bestSellers } from "../data";
- 
 import { Product } from "./Product";
 
-export const BestSellersProducts = () => {
+export const LatestProducts = ({ latestProducts }) => {
      return (
           <section className="best-sellers bg-gray appear-animate">
                <div className="container">
-                    <h2 className="section-title ls-n-10 pb-3 m-b-4">
-                         Best Sellers on Electronics
-                    </h2>
+                    <h2 className="section-title ls-n-10 pb-3 m-b-4">Latest Products</h2>
                     <div className="row ">
-                         {bestSellers.map((product) => (
+                         {latestProducts.map((product) => (
                               <div className="grid-item col-sm-45 col-md-3 mt-1 ">
-                                    <Product  {...product}/>
+                                   <Product {...product} />
                               </div>
                          ))}
 

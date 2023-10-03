@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { products } from "../data";
 import { Product } from "./Product";
 
-export const MostViewedProducts = () => {
+export const FeaturedProducts = ({ products }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -20,7 +19,7 @@ export const MostViewedProducts = () => {
                data-animation-delay={200}
           >
                <div className="container">
-                    <h2 className="section-title ls-n-10 pb-3 m-b-4">Most Viewed Products</h2>
+                    <h2 className="section-title ls-n-10 pb-3 m-b-4">Featured Products</h2>
 
                     <Slider {...settings}>
                          {products.map((product) => (
