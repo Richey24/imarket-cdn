@@ -5,7 +5,7 @@ import { FeaturedProducts } from "./components/FeaturedProducts";
 import { MiniBanner } from "./components/MiniBanner";
 
 const Home = (props) => {
-     const { static: statiProps, featuredProducts: featuredProductData } = props;
+     const { static: statiProps, featuredProducts: featuredProductData, categories } = props;
      const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
      useEffect(() => {
@@ -30,10 +30,20 @@ const Home = (props) => {
           }
      }, [featuredProductData]);
 
+     const displayCategories =
+          categories &&
+          categories.map((category) => {
+               return {
+                    name: category.display_name,
+               };
+          });
+          
+     console.log("+++++++", displayCategories);
+
      return (
           <main className="main">
-               <Banner />
-               <FeaturedCategories />
+               <Banner banner={statiProps?.banner[0] ?? []} />
+               {displayCategories && <FeaturedCategories categories={displayCategories ?? []} />}
                <FeaturedProducts featuredProducts={featuredProductsState ?? []} />
                <MiniBanner />
           </main>
