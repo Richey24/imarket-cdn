@@ -1,11 +1,16 @@
-export type ProductItemProps = {
-     productImageUrl: string ;
+import { StaticImageData } from "next/image";
+export interface ProductProps {
+     productImageUrl: StaticImageData | string;
+     productImageUrlTwo?: StaticImageData | string;
+     productImageAlt: string;
      productCategory: string;
-     productName: string;
-     price?: number | string;
-};
+     productTitle: string;
+     productPrice: number;
+     oldPrice?: number;
+}
 
+ 
 export type ProductsProps = {
-     products: ProductItemProps[];
+     products: ProductProps[];
 
 };

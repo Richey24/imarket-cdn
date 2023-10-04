@@ -23,10 +23,10 @@ const Home = (props) => {
                const latestProductsMap = products.map((product) => {
                     return {
                          productImageAlt: "product",
-                         category: "Fashion",
-                         imageUrl1: "data:image/jpeg;base64," + product?.image_1920,
-                         imageUrl2: "data:image/jpeg;base64," + product?.image_1024,
-                         productName: product.display_name,
+                         productCategory: "Fashion",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
                          productPrice: product.standard_price,
                          id: product.id,
                          slug: product.website_url,
@@ -62,11 +62,11 @@ const Home = (props) => {
           <main className="main">
                <Hero  slides={statiProps?.banner ?? []}/>
                {/* End .home-slider-container */}
-               <Products products={latestProductsState ?? []} />
+               <Products section="Latest Products" products={latestProductsState ?? []} />
                {/* End .produts-filter-container*/}
                <ProductBanner />
                {/* End .product-banner-section */}
-               <FeaturedProducts products={featuredProductsState ?? []} />
+               <FeaturedProducts section="Faatured Products"  products={featuredProductsState ?? []} />
                <section
                     className="explore-section d-flex align-items-center"
                     data-parallax="{'speed': 1.8,  'enableOnMobile': true}"

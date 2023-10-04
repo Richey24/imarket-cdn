@@ -1,59 +1,9 @@
 import React, { FC } from "react";
-import { ProductItemProps, ProductsProps } from "../types";
 
-export const ProductItem: React.FC<ProductItemProps> = ({
-     productImageUrl,
-     productCategory,
-     productName,
-     productPrice,
-}) => {
-     return (
-          <div className="col-6 col-md-4 col-lg-3 col-xl-5col">
-               <div
-                    className="product-default inner-quickview inner-icon "
-                    data-animation-name="fadeIn"
-               >
-                    <figure>
-                         <a href="demo18-product.html">
-                              <img src={productImageUrl} width={205} height={205} alt="product" />
-                         </a>
-                         <div className="btn-icon-group">
-                              <a href="#" className="btn-icon btn-add-cart product-type-simple">
-                                   <i className="icon-shopping-cart" />
-                              </a>
-                         </div>
-                         <a
-                              href="ajax/product-quick-view.html"
-                              className="btn-quickview"
-                              title="Quick View"
-                         >
-                              Quick View
-                         </a>
-                    </figure>
-                    <div className="product-details">
-                         <div className="productCwrap">
-                              <div className="category-list">
-                                   <a href="demo18-shop.html" className="product-category">
-                                        {productCategory}
-                                   </a>
-                              </div>
-                              <a href="wishlist.html" className="btn-icon-wish">
-                                   <i className="icon-heart" />
-                              </a>
-                         </div>
-                         <h3 className="product-title">
-                              <a href="demo18-product.html">{productName}</a>
-                         </h3>
-                         <div className="price-box">
-                              <span className="product-price">${productPrice}</span>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     );
-};
+import Image from "next/image";
+import { Product } from "./Product";
 
-const Products: FC<ProductsProps> = ({ products }) => {
+const Products = ({ products, section}) => {
      return (
           <div className="products-filter-container bg-gray">
                <div className="container-fluid">
@@ -61,7 +11,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
                          className="subtitle text-center text-uppercase mb-2 "
                          data-animation-name="fadeIn"
                     >
-                         Latest products
+                         {section}
                     </h4>
                     <div className="row align-items-lg-stretch">
                          <aside className="filter-sidebar col-lg-2">
@@ -96,13 +46,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
                          <div className="col-lg-10">
                               <div className="row product-ajax-grid mb-2">
                                    {products.map((product, index) => (
-                                        <ProductItem
-                                             productImageUrl={product.productImageUrl}
-                                             productCategory={product.productCategory}
-                                             productName={product.productName}
-                                             productPrice={product.productPrice}
-                                             key={index}
-                                        />
+                                        <Product key={`latest-product-${index}`} {...product} />
                                    ))}
                                    \
                               </div>
