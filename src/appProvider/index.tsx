@@ -53,21 +53,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => {},
+                    () => { },
                );
           }
      }, [site]);

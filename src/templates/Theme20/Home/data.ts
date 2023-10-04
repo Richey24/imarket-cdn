@@ -78,6 +78,7 @@ export const featuredCat = [
           MdSize: 5,
      },
 ];
+
 export const offerAndDeals = [
      {
           Img: templateImages.demo20.bannerImage.banner4,

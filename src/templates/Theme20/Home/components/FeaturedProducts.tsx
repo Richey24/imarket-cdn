@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { featuredProducts } from "../data";
-
 import Slider from "react-slick";
 import { Product } from "./Product";
 
-export const FeaturedProducts = () => {
+export const FeaturedProducts = ({ featuredProducts }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -12,7 +10,7 @@ export const FeaturedProducts = () => {
           speed: 500,
           slidesToShow: 4,
           slidesToScroll: 1,
-          beforeChange: (current, next) => setCurrentSlide(next), 
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
      return (
           <section className="featured-products-section">
@@ -25,8 +23,7 @@ export const FeaturedProducts = () => {
                     </h2>
                     <Slider {...settings}>
                          {featuredProducts.map((product, index) => (
-                              
-                        <Product key={index} {...product} />
+                              <Product key={index} {...product} />
                          ))}
                     </Slider>
                </div>

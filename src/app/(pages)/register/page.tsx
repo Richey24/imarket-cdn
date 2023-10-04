@@ -14,12 +14,12 @@ export default function Register() {
                                         <div className="tw-font-bold tw-text-4xl 2xl:tw-text-6xl tw-mt-24">
                                              Shoping made convenient
                                         </div>
-                                        <p className=" tw-mt-8 tw-text-3xl tw-font-light">
+                                        <p className=" tw-mt-8 tw-text-xl md:tw-text-2xl tw-font-light">
                                              Discover the worlds best community of buyers and
                                              sellers around you.
                                         </p>
                                    </div>
-                                   <div className="tw-relative tw-h-80 tw-w-80  tw-mt-32">
+                                   <div className="tw-relative tw-h-80 tw-w-80  tw-mt-24">
                                         {" "}
                                         <Image fill src="/bagging.png" alt="hand with bag" />
                                    </div>
@@ -27,7 +27,7 @@ export default function Register() {
                          </div>
                          <div className="tw-p-10 tw-w-full">
                               <div className="heading tw-mb-1">
-                                   <h2 className="title">Register</h2>
+                                   <h2 className="tw-text-5xl tw-font-bold">Register</h2>
                               </div>
                               <SignUpForm />
                          </div>
