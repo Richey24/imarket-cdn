@@ -65,13 +65,13 @@ body {
      border-radius: 0;
      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
 }
-.float-label-input {
-     margin: 32px 0;     
-  }
- 
- .float-label-input:focus-within label,
-   .float-label-input input:not(:placeholder-shown) + label {
-     transform: translateY(-1.5rem) scale(0.75);
-     background-color: white;
- }
- 
+.pricingCard {
+     border-top: 1px solid black;
+     border-left: 1px solid black;
+     border-right: 6px solid black;
+     border-bottom: 6px solid black;
+}
+
+.products-slider> .container{
+
+}
