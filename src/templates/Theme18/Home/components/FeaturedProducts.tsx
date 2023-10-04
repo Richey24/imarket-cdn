@@ -1,60 +1,20 @@
 import React, { FC, useState } from "react";
 import Slider from "react-slick";
-import { ProductItemProps, ProductsProps } from "../types";
+import { ProductsProps } from "../types";
 import { templateImages } from "@/appProvider/templateImages";
+import Image from "next/image";
+import { Product } from "./Product";
 
-const ProductItem: React.FC<ProductItemProps> = ({ imageUrl, productName, price, category }) => {
-     return (
-          <div className="product-default inner-quickview inner-icon mx-2">
-               <figure>
-                    <a href="demo18-product.html">
-                         <img src={imageUrl} width={205} height={205} alt="product" />
-                    </a>
-                    <div className="btn-icon-group">
-                         <a href="#" className="btn-icon btn-add-cart product-type-simple">
-                              <i className="icon-shopping-cart" />
-                         </a>
-                    </div>
-                    <a
-                         href="ajax/product-quick-view.html"
-                         className="btn-quickview"
-                         title="Quick View"
-                    >
-                         Quick View
-                    </a>
-               </figure>
-               <div className="product-details">
-                    <div className="category-wrap">
-                         <div className="category-list">
-                              <a href="demo18-shop.html" className="product-category">
-                                   {category}
-                              </a>
-                         </div>
-                         <a href="wishlist.html" title="Wishlist" className="btn-icon-wish">
-                              <i className="icon-heart" />
-                         </a>
-                    </div>
-                    <h3 className="product-title">
-                         <a href="demo18-product.html">{productName}</a>
-                    </h3>
-                    <div className="price-box">
-                         <span className="product-price">${price}</span>
-                    </div>
-               </div>
-          </div>
-     );
-};
-
-const FeaturedProducts: FC<ProductsProps> = ({ products }) => {
+const FeaturedProducts = ({ products, section }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
 
      const settings = {
-          dots: true,
+          dots: false,
           infinite: true,
           speed: 500,
-          slidesToShow: 6,
-          slidesToScroll: 2,
-          beforeChange: (current, next) => setCurrentSlide(next), // Update currentSlide state on slide change
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          beforeChange: (current, next) => setCurrentSlide(next),
      };
 
      return (
@@ -64,7 +24,7 @@ const FeaturedProducts: FC<ProductsProps> = ({ products }) => {
                          className="subtitle text-center text-uppercase mb-2 "
                          data-animation-name="fadeIn"
                     >
-                         Featured products
+                         {section}
                     </h2>
                     <div
                          className="featured-products  owl-theme show-nav-hover nav-outer nav-image-center mb-3 "
@@ -72,13 +32,7 @@ const FeaturedProducts: FC<ProductsProps> = ({ products }) => {
                     >
                          <Slider {...settings}>
                               {products.map((product, index) => (
-                                   <ProductItem
-                                        imageUrl={product.imageUrl}
-                                        category={product.category}
-                                        productName={product.productName}
-                                        price={product.price}
-                                        key={index}
-                                   />
+                                   <Product key={`featured-product-${index}`} {...product} />
                               ))}
                          </Slider>
                     </div>

@@ -193,7 +193,7 @@ export default function Home(props) {
                                    })}
                               </div>
                          </div>
-                         <div className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
+                         <aside className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
                               <div className="sidebar-wrapper">
                                    {/* side nav */}
                                    <Accordion allowMultiple allowToggle>
@@ -387,7 +387,7 @@ export default function Home(props) {
                                         </AccordionItem>
                                    </Accordion>
                               </div>
-                         </div>
+                         </aside>
                     </div>
                </div>
           </div>

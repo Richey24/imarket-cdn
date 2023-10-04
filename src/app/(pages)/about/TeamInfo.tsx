@@ -6,7 +6,7 @@ export const TeamInfo = ({ name, role, image_url }) => {
                <figure className="zoom-effect">
                     <a href="#">
                          <div style={{width:'300px', height:'300px', overflow:'hidden'}}>
-                              <Image
+                              <img
                                    src={image_url}
                                    data-zoom-image="assets/images/demoes/demo6/about/team1.jpg"
                                    className="w-100"

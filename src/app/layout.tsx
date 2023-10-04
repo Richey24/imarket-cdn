@@ -4,8 +4,10 @@ import React from "react";
 import AppProvider from "@/appProvider";
 import { Providers } from "@/redux/provider";
 import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 import ReactQueryProviders from "@/utils/provider";
 import { SessionProvider } from "next-auth/react";
+import "./globals.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 import type { Metadata } from "next";
@@ -20,7 +22,6 @@ import "../assets/vendor/fontawesome-free/css/all.min.css";
 import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 // import "../assets/js/webfont";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                               <AppProvider>
                                    {children}
                                    <Toaster toastOptions={{ className: "tw-text-2xl" }} />
+                                   {/* <ToastContainer /> */}
                               </AppProvider>
                          </ReactQueryProviders>
                     </Providers>

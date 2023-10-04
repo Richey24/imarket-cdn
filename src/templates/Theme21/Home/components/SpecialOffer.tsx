@@ -12,7 +12,7 @@ import {
 import { templateImages } from "@/appProvider/templateImages";
 import { Product } from "./Product";
 
-export const SpecialOffer = () => {
+export const SpecialOffer = ({section, cat1,cat2,cat3,cat4,cat5,cat6}) => {
      const [activeTab, setActiveTab] = useState("best-sellers");
 
      const handleTabChange = (tabId: string) => {
@@ -23,7 +23,7 @@ export const SpecialOffer = () => {
                <div className="container">
                     <div className="row">
                          <div className="col-xl-4">
-                              <h3 className="subtitle font1 ls-0 mb-3">Special Offer</h3>
+                              <h3 className="subtitle font1 ls-0 mb-3">{section}</h3>
                               <div className="banner banner3" style={{ backgroundColor: "#fff" }}>
                                    <figure>
                                         <img
@@ -54,7 +54,7 @@ export const SpecialOffer = () => {
                                              id="best-sellers-tab"
                                              onClick={() => handleTabChange("best-sellers")}
                                         >
-                                             Best Sellers
+                                             {cat1}
                                         </a>
                                    </li>
                                    <li className="nav-item">
@@ -65,7 +65,7 @@ export const SpecialOffer = () => {
                                              id="audio-speakers-tab"
                                              onClick={() => handleTabChange("audio-speakers")}
                                         >
-                                             Audio Speakers
+                                             {cat2}
                                         </a>
                                    </li>
                                    <li className="nav-item">
@@ -76,7 +76,7 @@ export const SpecialOffer = () => {
                                              id="cameras-tab"
                                              onClick={() => handleTabChange("cameras")}
                                         >
-                                             Cameras
+                                            {cat3}
                                         </a>
                                    </li>
                                    <li className="nav-item">
@@ -87,7 +87,7 @@ export const SpecialOffer = () => {
                                              id="lamps-tab"
                                              onClick={() => handleTabChange("lamps")}
                                         >
-                                             Lamps
+                                             {cat4}
                                         </a>
                                    </li>
                                    <li className="nav-item">
@@ -98,7 +98,7 @@ export const SpecialOffer = () => {
                                              id="computer-tab"
                                              onClick={() => handleTabChange("computer")}
                                         >
-                                             Computer
+                                             {cat5}
                                         </a>
                                    </li>
                                    <li className="nav-item">
@@ -109,7 +109,7 @@ export const SpecialOffer = () => {
                                              id="mobile-phones-tab"
                                              onClick={() => handleTabChange("mobile-phones")}
                                         >
-                                             Mobile Phones
+                                             {cat6}
                                         </a>
                                    </li>
                               </ul>

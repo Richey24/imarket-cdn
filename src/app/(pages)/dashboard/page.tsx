@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-function Dashboard() {
+const Dashboard = async () => {
      return (
           <div className="dashboard-content">
                <p>
@@ -88,5 +88,5 @@ function Dashboard() {
                </div>
           </div>
      );
-}
+};
 export default Dashboard;

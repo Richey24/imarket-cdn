@@ -15,13 +15,13 @@ export const Product: React.FC<ProductProps> = ({
      return (
           <div className="product-default inner-quickview inner-icon">
                <figure>
-                    <div style={{ width: "200px", height: "200px", overflow: "hidden" }}>
+                    <div style={{ width: "300px", height: "300px", overflow: "hidden" }}>
                          <a href="demo21-product.html">
                               <Image
                                    style={{ width: "100%", height: "100%" }}
                                    src={productImageUrl}
-                                   width={217}
-                                   height={217}
+                                   width={300}
+                                   height={300}
                                    alt="product"
                               />
                          </a>

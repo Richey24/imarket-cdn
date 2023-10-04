@@ -13,12 +13,14 @@ export const SubcribeEmail = () => {
                toast.success("Message sent successfully");
           },
           onError(error) {
+               console.log("error is here");
                toast.error("An Error occured while trying to send message", {
                     position: "top-right",
                });
           },
      });
      const onSubmit = async () => {
+          // console.log("its me")
           mutation.mutate({ email: email });
      };
      const updateEmail = (e) => {
