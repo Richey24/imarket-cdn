@@ -48,7 +48,7 @@ export const Home = (props) => {
                          <hr className="h-0 border-b w-full" />
                     </div>
 
-                    <FeaturedProduct products={latestProducts} />
+                    <FeaturedProduct products={latestProducts ?? []} />
                </div>
 
                <div className="container my-12">

@@ -68,7 +68,11 @@ const Home = (props) => {
 
                {latestProductsState && (
                     <MiniCard
-                         latestProducts={latestProductsState.slice(0, 3) ?? []}
+                         latestProducts={
+                              latestProductsState
+                                   .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                                   .slice(0, 3) ?? []
+                         }
                          bestSeller={bestSeller}
                          featuredProduct={featuredProductAlt}
                     />

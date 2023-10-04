@@ -22,31 +22,6 @@ const Footer = (props: any): JSX.Element => {
 
                               <div className="col-lg-3 col-sm-6 pb-4 pb-sm-0">
                                    <div className="widget mb-2">
-                                        {/* <h4 className="widget-title mb-1 pb-1">Get In Touch</h4> */}
-                                        {/* <ul className="contact-info">
-                                             <li>
-                                                  <span className="contact-info-label">
-                                                       Address:
-                                                  </span>
-                                                  123 Street Name, City, England
-                                             </li>
-                                             <li>
-                                                  <span className="contact-info-label">Phone:</span>
-                                                  <a href="tel:">Toll Free (123) 456-7890</a>
-                                             </li>
-                                             <li>
-                                                  <span className="contact-info-label">Email:</span>{" "}
-                                                  <a href="mailto:mail@example.com">
-                                                       mail@example.com
-                                                  </a>
-                                             </li>
-                                             <li>
-                                                  <span className="contact-info-label">
-                                                       Working Days/Hours:
-                                                  </span>
-                                                  Mon - Sun / 9:00 AM - 8:00 PM
-                                             </li>
-                                        </ul> */}
                                         <ContactInfo
                                              staticProps={staticProps}
                                              company={company}

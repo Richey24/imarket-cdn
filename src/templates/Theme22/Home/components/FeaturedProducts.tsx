@@ -22,9 +22,11 @@ export const FeaturedProducts = ({ products }) => {
                     <h2 className="section-title ls-n-10 pb-3 m-b-4">Featured Products</h2>
 
                     <Slider {...settings}>
-                         {products.map((product) => (
-                              <Product {...product} />
-                         ))}
+                         {products
+                              .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                              .map((product) => (
+                                   <Product {...product} />
+                              ))}
                     </Slider>
                </div>
           </section>

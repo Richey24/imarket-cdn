@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 interface HomeSlide {
      imageUrl: string;
      title: string;
-     discount: string;
+     text: string;
      startingPrice: string;
 }
 
@@ -41,16 +41,15 @@ const HomeSlider: React.FC<HomeSliderProps> = ({ slides }) => {
                                              >
                                                   <h2>{slide.title}</h2>
                                                   <h3 className="text-uppercase rotated-upto-text mb-0">
-                                                       <small>Up to</small>
-                                                       {slide.discount}
+                                                       {slide.text}
                                                   </h3>
 
                                                   <hr className="divider-short-thick" />
 
-                                                  <h5 className="text-uppercase d-inline-block mb-0 ls-n-20">
+                                                  {/* <h5 className="text-uppercase d-inline-block mb-0 ls-n-20">
                                                        Starting at{" "}
                                                        <span>${slide.startingPrice}</span>
-                                                  </h5>
+                                                  </h5> */}
                                                   <a
                                                        href="demo11-shop.html"
                                                        className="btn btn-light btn-xl btn-icon-right"

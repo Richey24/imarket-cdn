@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Rubik&display=swap");
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.temOneHeader {
+    background-color: #5A56EF;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.temOneHeader>nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 130px;
+}
+
+.temOneHeader>nav>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.temOneHeader>nav>div>div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+}
+
+.temOneHeader>h1 {
+    font-size: 48px;
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    margin-top: 80px;
+}
+
+.temOneHeader>div {
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    justify-content: center;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.homeDot {
+    position: relative;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+.homeDot::after {
+    right: 0;
+    position: absolute;
+    content: "";
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.trustUs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 60px;
+    padding: 30px 130px;
+}
+
+.trustUs>img {
+    width: 550px;
+    height: 340px;
+    border-radius: 10px;
+}
+
+.trustUs>div>h1 {
+    font-size: 32px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    width: 450px;
+    margin-top: 0px;
+}
+
+.trustUs>div>p {
+    font-size: 16px;
+    line-height: 1.625;
+    color: rgb(110, 110, 110);
+    font-family: 'Rubik', sans-serif;
+    width: 500px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.trustUs>div>button {
+    font-weight: 700;
+    border-radius: 50px;
+    line-height: 1;
+    border: none;
+    outline: none;
+    background-color: #5551ef;
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 18px 39px;
+}
+
+.theInfo,
+.gigabit {
+    padding: 30px 130px;
+}
+
+.theInfo>h1 {
+    font-size: 36px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.theInfo>h2 {
+    font-size: 24px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+.theInfo>h2>span {
+    color: #958e8e;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.theInfo>p {
+    font-size: 16px;
+    line-height: 1.625;
+    color: #6e6e6e;
+    font-family: 'Rubik', sans-serif;
+    height: 0px;
+    overflow: hidden;
+    margin: 20px 0px;
+    transition: ease-in-out 1s;
+}
+
+.theInfo>h6 {
+    font-size: 16px;
+    line-height: 1.625;
+    color: #6e6e6e;
+    font-family: 'Rubik', sans-serif;
+}
+
+.theInfo>.activeInfo {
+    height: fit-content;
+}
+
+.gigabit>h1 {
+    font-size: 36px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+.gigabit>li {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #6e6e6e;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gigabit>li>svg {
+    margin-right: 10px
+}
+
+.gigabit>li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.pricingPlan {
+    padding: 100px;
+    text-align: center;
+}
+
+.divBorder {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.divBorder>div {
+    width: 30px;
+    height: 3px;
+    background-color: #5A56EF;
+}
+
+.divBorder>div:last-child {
+    width: 10px;
+}
+
+.pricingPlan>h1 {
+    font-size: 36px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+}
+
+.pricingPlan>p {
+    font-size: 16px;
+    line-height: 1.625;
+    color: rgb(110, 110, 110);
+    font-family: 'Rubik', sans-serif;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.workCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-top: 70px;
+    flex-wrap: nowrap;
+}
+
+.workCard>div {
+    box-shadow: rgba(0, 0, 0, 0.07) 10px 10px 60px;
+    padding: 60px 45px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    width: 33%;
+}
+
+.workCard>div>h3 {
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    margin-top: 0px;
+}
+
+.workCard .price {
+    color: #5551ef;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.workCard .price .value {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.workCard .price .currency {
+    vertical-align: top;
+    font-size: 24px;
+}
+
+.workCard>div>p {
+    font-size: 16px;
+    color: rgb(110, 110, 110);
+    font-family: 'Rubik', sans-serif;
+    margin-top: 10px;
+}
+
+.workCard>div>h5 {
+    color: #252525;
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 30px;
+}
+
+.workCard hr {
+    width: 60%;
+}
+
+.workCard>div>span {
+    font-size: 16px;
+    line-height: 1.625;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.workCard>div>button {
+    font-weight: 700;
+    border-radius: 50px;
+    line-height: 1;
+    border: none;
+    outline: none;
+    background-color: #5551ef;
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 18px 39px;
+    margin-top: 20px;
+}
+
+.workCard>div>span>del {
+    color: #6e6e6e;
+}
+
+.wordCardDiv2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.wordCardDiv2>h4 {
+    background-color: #0fe705;
+    position: absolute;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    top: 25px;
+    right: -45px;
+    font-size: 18px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.serviceFooter {
+    background: url("https: //absa7kzimnaf.blob.core.windows.net/templates-images/service/bg.png"), transparent radial-gradient(closest-side at 50% 50%, #7875f4 0, #5551ef 100%) 0 0 no-repeat;
+    padding: 80px 130px;
+    padding-bottom: 40px;
+}
+
+.serviceFooter>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+.serviceFooter h1 {
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: 800px;
+    border-left: 3px solid white;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    margin-bottom: 34px;
+}
+
+.serviceFooter p {
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 800px;
+}
+
+.serviceFooter>div>div>p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.serviceFooter>p {
+    text-align: center;
+}
+
+.serviceFooter>div>div>div {
+    margin-top: 25px;
+}
+
+.serviceFooter>div>div>div>a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 50%;
+}
+
+.serviceFooter>div>div>div>a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.serviceFooter>div>div>div>a>svg {
+    color: white;
+}
+
+.theOverlay {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #252525;
+    opacity: .9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.theSideOverlay {
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 50px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: none;
+}
+
+.showOverlay {
+    display: block;
+}
+
+.theSideOverlay h1 {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #252525;
+    font-size: 24px;
+    margin-top: 40px;
+    border-left: 3px solid #5551ef;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theSideOverlay p {
+    color: #6e6e6e;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+}
+
+.theSideOverlay hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.theSideOverlay>div>a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 50%;
+}
+
+.theSideOverlay>div>a>svg {
+    color: black;
+}
+
+.theSideOverlay::-webkit-scrollbar {
+    display: none;
+}
+
+.map-container {
+    height: 400px;
+}
+
+.map-sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+
+    .temOneHeader>nav,
+    .theInfo,
+    .gigabit,
+    .pricingPlan,
+    .serviceFooter {
+        padding: 40px 10px;
+    }
+
+    .serviceFooter>div {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .serviceFooter {
+        padding-top: 60px;
+    }
+
+    .temOneHeader>h1 {
+        font-size: 28px;
+    }
+
+    .temOneHeader>div {
+        font-size: 14px;
+    }
+
+    .trustUs {
+        padding: 30px 10px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .trustUs {
+        row-gap: 30px;
+    }
+
+    .trustUs>div>h1,
+    .trustUs>div>p,
+    .pricingPlan>p {
+        width: auto;
+    }
+
+    .trustUs>div>h1,
+    .theInfo>h1,
+    .gigabit>h1,
+    .pricingPlan>h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .theInfo>h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .trustUs>div>p,
+    .theInfo>p,
+    .gigabit>li {
+        font-size: 14px;
+    }
+
+    .workCard {
+        flex-wrap: wrap;
+    }
+
+    .workCard>div {
+        width: 100%;
+    }
+
+    .trustUs>img {
+        width: 100%;
+    }
+}
