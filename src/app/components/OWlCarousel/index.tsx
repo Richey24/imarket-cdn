@@ -10,6 +10,7 @@ export default function OwlCarouselComponent({
      children,
      className,
      isResponsive = false,
+     container = true,
      responsive = {
           "480": {
                items: 2,
@@ -23,12 +24,13 @@ export default function OwlCarouselComponent({
      },
 }: {
      children: React.ReactNode;
+     container?: boolean;
      className?: string;
      isResponsive?: boolean;
      responsive?: { [breakpoint: string]: Options };
 }) {
      return (
-          <div className="container">
+          <div className={container ? "container" : ""}>
                {typeof window !== "undefined" && (
                     <OwlCarousel
                          className={className ? `${className} owl-theme` : "owl-theme"}

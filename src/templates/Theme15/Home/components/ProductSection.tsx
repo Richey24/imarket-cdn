@@ -24,14 +24,16 @@ const ProductSection: React.FC<ProductSectionProps> = ({
                     {sectionSubTitle}
                </h3>
                <div className="row owl-carouel owl-thee nav-center-images-only">
-                    {products.map((product, index) => (
-                         <div
-                              className={`col-lg-${colLg ?? "4"} col-md-${colMd ?? "6"}`}
-                              key={index}
-                         >
-                              <Product {...product} />
-                         </div>
-                    ))}
+                    {products
+                         .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                         .map((product, index) => (
+                              <div
+                                   className={`col-lg-${colLg ?? "4"} col-md-${colMd ?? "6"}`}
+                                   key={index}
+                              >
+                                   <Product {...product} />
+                              </div>
+                         ))}
                </div>
           </section>
      );

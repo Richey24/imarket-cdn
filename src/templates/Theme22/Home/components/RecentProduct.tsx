@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { recentProducts } from "../data";
 import { Product } from "./Product";
 
-export const RecentProduct = () => {
+export const RecentProduct = ({ recentProducts }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -24,9 +23,11 @@ export const RecentProduct = () => {
                          <h2 className="section-title ls-n-10 pb-3 m-b-4">Recent Products</h2>
 
                          <Slider {...settings}>
-                              {recentProducts.map((product) => (
-                                   <Product {...product} />
-                              ))}
+                              {recentProducts
+                                   .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                                   .map((product) => (
+                                        <Product {...product} />
+                                   ))}
                          </Slider>
                     </div>
                     <div

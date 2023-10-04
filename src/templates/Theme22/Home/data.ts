@@ -23,13 +23,11 @@ export const sliders = [
           sliderImg: templateImages.demo22.sliderImage.slide1,
           title: "Electronic deals",
           h4: "Exclusive COUPON",
-          styles: "banner-layer-right",
      },
      {
           sliderImg: templateImages.demo22.sliderImage.slide2,
           title: "Top brands Smartphone",
           h4: "STARTING FROM",
-          styles: "banner-layer-left",
      },
 ];
 export const featuredProductSliders = [

@@ -15,9 +15,17 @@ export const Product: React.FC<ProductProps> = ({
      return (
           <div className="product-default inner-quickview inner-icon">
                <figure>
-                    <a href="demo21-product.html">
-                         <Image src={productImageUrl} width={217} height={217} alt="product" />
-                    </a>
+                    <div style={{ width: "200px", height: "200px", overflow: "hidden" }}>
+                         <a href="demo21-product.html">
+                              <Image
+                                   style={{ width: "100%", height: "100%" }}
+                                   src={productImageUrl}
+                                   width={217}
+                                   height={217}
+                                   alt="product"
+                              />
+                         </a>
+                    </div>
                     <div className="label-group">
                          <div className="product-label label-hot">HOT</div>
                     </div>
@@ -55,7 +63,7 @@ export const Product: React.FC<ProductProps> = ({
 </div>
 </div> */}
                     <div className="price-box">
-                         <span className="product-price">{productPrice}</span>
+                         <span className="product-price">${productPrice}</span>
                     </div>
                     {/* End .price-box */}
                </div>

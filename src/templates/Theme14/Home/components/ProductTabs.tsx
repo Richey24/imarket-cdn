@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import { featuredProducts, latestProducts } from "../data";
 import { Product } from "./Product";
 
-export const ProductTabs = () => {
+export const ProductTabs = ({ featuredProducts, latestProducts }) => {
      const [activeTab, setActiveTab] = useState("featured-product");
 
      const handleTabChange = (tabId: string) => {
@@ -55,9 +54,14 @@ export const ProductTabs = () => {
                                    <div className="tab-products-carousel  owl-theme quantity-inputs show-nav-hover nav-outer nav-image-center">
                                         <Slider {...settings}>
                                              {" "}
-                                             {featuredProducts.map((product) => (
-                                                  <Product {...product} />
-                                             ))}
+                                             {featuredProducts
+                                                  .sort(
+                                                       (a: any, b: any) =>
+                                                            b.__last_update - a.__last_update,
+                                                  )
+                                                  .map((product) => (
+                                                       <Product {...product} />
+                                                  ))}
                                         </Slider>
                                         {/* product 1 */}
                                    </div>
@@ -69,9 +73,14 @@ export const ProductTabs = () => {
                                    <div className="tab-products-carousel  owl-theme quantity-inputs show-nav-hover nav-outer nav-image-center">
                                         <Slider {...settings}>
                                              {" "}
-                                             {latestProducts.map((product) => (
-                                                  <Product {...product} />
-                                             ))}
+                                             {latestProducts
+                                                  .sort(
+                                                       (a: any, b: any) =>
+                                                            b.__last_update - a.__last_update,
+                                                  )
+                                                  .map((product) => (
+                                                       <Product {...product} />
+                                                  ))}
                                         </Slider>
                                         {/* product 1 */}
                                    </div>

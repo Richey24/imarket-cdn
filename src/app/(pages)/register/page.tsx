@@ -1,137 +1,37 @@
-"use client";
 import React from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "./schema";
-import { RegisterRequest, useRegisterMutation } from "@/redux/services/auth";
-import toast from "react-hot-toast";
-import LoadingIcon from "@/app/components/Icons/LoadingIcon";
+import SignUpForm from "@/app/components/auth/SignUpForm";
+import Image from "next/image";
 
 export default function Register() {
-     const [register, { isLoading }] = useRegisterMutation();
-     const [domain, setDomain] = React.useState<string>("");
-     const {
-          register: formRegister,
-          handleSubmit,
-          formState: { errors },
-          reset,
-     } = useForm({
-          resolver: yupResolver(schema),
-     });
-
-     const onSubmit = async (data: RegisterRequest) => {
-          try {
-               await register({ ...data, domain: domain }).unwrap();
-               toast.success("Signup successful");
-          } catch (err: any) {
-               toast.error(err.data.message);
-          }
-     };
-
-     React.useEffect(() => {
-          const subDomain = window.location.host.split(".")[0];
-          setDomain(subDomain);
-     }, []);
-
      return (
-          <div className="tw-flex tw-w-screen tw-h-screen tw-items-center tw-justify-center">
-               <div className="tw-bg-gray-50 tw-p-6 tw-border tw-rounded-xl tw-w-full md:tw-w-1/2 xl:tw-w-1/3">
-                    <div className="heading tw-mb-1">
-                         <h2 className="title">Register</h2>
+          <div className="tw-flex tw-w-screen tw-h-screen tw-items-center tw-justify-center tw-px-3">
+               <div className="tw-w-full md:tw-w-[70%]  2xl:tw-w-3/4 tw-h-fit tw-shadow md:tw-shadow-lg tw-rounded-xl tw-overflow-hidden">
+                    <div className="tw-flex tw-gap-4 tw-items-stretch tw-justify-between tw-w-full tw-h-full">
+                         <div className="tw-hidden h-full md:tw-block md:tw-w-2/4 tw-p-10">
+                              <div className="tw-bg-gray-200 tw-rounded-xl tw-text-gray-900 tw-w-full tw-h-full">
+                                   <div className="tw-p-8">
+                                        <div className="tw-text-2xl">subdomain</div>
+                                        <div className="tw-font-bold tw-text-4xl 2xl:tw-text-6xl tw-mt-24">
+                                             Shoping made convenient
+                                        </div>
+                                        <p className=" tw-mt-8 tw-text-xl md:tw-text-2xl tw-font-light">
+                                             Discover the worlds best community of buyers and
+                                             sellers around you.
+                                        </p>
+                                   </div>
+                                   <div className="tw-relative tw-h-80 tw-w-80  tw-mt-24">
+                                        {" "}
+                                        <Image fill src="/bagging.png" alt="hand with bag" />
+                                   </div>
+                              </div>
+                         </div>
+                         <div className="tw-p-10 tw-w-full">
+                              <div className="heading tw-mb-1">
+                                   <h2 className="tw-text-5xl tw-font-bold">Register</h2>
+                              </div>
+                              <SignUpForm />
+                         </div>
                     </div>
-
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                         <div className="tw-mb-1">
-                              <label htmlFor="firstname">
-                                   First Name
-                                   <span className="required">*</span>
-                              </label>
-                              <input
-                                   type="text"
-                                   {...formRegister("firstname")}
-                                   className={`${
-                                        errors.firstname?.message && "tw-border-red-500"
-                                   } form-input form-wide tw-bg-white tw-px-3 tw-py-2`}
-                                   id="firstname"
-                              />
-                              <p className="tw-text-red-500 tw-text-base">
-                                   {errors.firstname?.message}
-                              </p>
-                         </div>
-                         <div className="tw-mb-1">
-                              <label htmlFor="lastname">
-                                   Last Name
-                                   <span className="required">*</span>
-                              </label>
-                              <input
-                                   type="text"
-                                   {...formRegister("lastname")}
-                                   className={`${
-                                        errors.lastname?.message && "tw-border-red-500"
-                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
-                                   id="lastname"
-                              />
-                              <p className="text-red-500 text-base">{errors.lastname?.message}</p>
-                         </div>
-                         <div className="tw-mb-1">
-                              <label htmlFor="register-email">
-                                   Email address
-                                   <span className="required">*</span>
-                              </label>
-                              <input
-                                   type="email"
-                                   {...formRegister("email")}
-                                   className={`${
-                                        errors.email?.message && "border-red-500"
-                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
-                                   id="register-email"
-                              />
-                              <p className="tw-text-red-500 tw-text-base">
-                                   {errors.email?.message}
-                              </p>
-                         </div>
-                         <div className="tw-mb-1">
-                              <label htmlFor="register-password">
-                                   Password
-                                   <span className="required">*</span>
-                              </label>
-                              <input
-                                   type="password"
-                                   {...formRegister("password")}
-                                   className={`${
-                                        errors.email?.message && "tw-border-red-500"
-                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
-                                   id="register-password"
-                              />
-                              <p className="tw-text-red-500 tw-text-base">
-                                   {errors.password?.message}
-                              </p>
-                         </div>
-                         <div className="tw-mb-1">
-                              <label htmlFor="confirmPassword">
-                                   Confirm Password
-                                   <span className="required">*</span>
-                              </label>
-                              <input
-                                   type="password"
-                                   {...formRegister("confirmPassword")}
-                                   className={`${
-                                        errors.confirmPassword?.message && "tw-border-red-500"
-                                   } form-input tw-bg-white form-wide tw-px-3 tw-py-2`}
-                                   id="confirmPassword"
-                              />
-                              <p className="tw-text-red-500 tw-text-base">
-                                   {errors.confirmPassword?.message}
-                              </p>
-                         </div>
-
-                         <button
-                              type="submit"
-                              className="tw-flex tw-gap-5 tw-items-center tw-justify-center btn tw-bg-gray-800 tw-text-gray-50 hover:tw-bg-gray-700 btn-md w-100 tw-mt-4 tw-rounded-2xl tw-overflow-hidden"
-                         >
-                              {isLoading && <LoadingIcon />}Register
-                         </button>
-                    </form>
                </div>
           </div>
      );

@@ -9,7 +9,6 @@ import {
 } from "./hook";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
-
 import NextNProgress from "nextjs-progressbar";
 import { dummySite } from "./data";
 
@@ -54,21 +53,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => {},
+                    () => { },
                );
           }
      }, [site]);
@@ -78,7 +77,9 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      };
 
      return (
-          <AppContext.Provider value={{ site, loading, categories, products, featuredProducts }}>
+          <AppContext.Provider
+               value={{ site: dummySite, loading, categories, products, featuredProducts, handleAddToCart }}
+          >
                <NextNProgress
                     color="#29D"
                     startPosition={0.3}

@@ -82,7 +82,7 @@ const Banner: FC<CarouselBannerProps> = ({ slides }) => {
                                                             </h3>
                                                        </div>
 
-                                                       <div
+                                                       {/* <div
                                                             className="col-auto col-md-6 col-2"
                                                             data-animation-name="slideInLeft"
                                                             data-animation-delay="400"
@@ -93,7 +93,7 @@ const Banner: FC<CarouselBannerProps> = ({ slides }) => {
                                                                       %<ins>OFF</ins>
                                                                  </small>
                                                             </h2>
-                                                       </div>
+                                                       </div> */}
                                                   </div>
                                                   <div className="mb-0 text-right">
                                                        <a

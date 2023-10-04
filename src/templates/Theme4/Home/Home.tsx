@@ -89,7 +89,7 @@ const Home = (props) => {
                     <SmallBoxes banners={smallBoxData} />
                     {featuredProductsState && (
                          <FeaturedProductsSection
-                              products={featuredProductsState}
+                              products={featuredProductsState ?? []}
                               section="Featured Products"
                          />
                     )}
@@ -284,6 +284,10 @@ const Home = (props) => {
                                              </h4>
                                              {featuredProductsState
                                                   .slice(0, 3)
+                                                  .sort(
+                                                       (a: any, b: any) =>
+                                                            b.__last_update - a.__last_update,
+                                                  )
                                                   .map((product, index) => (
                                                        <ProductWidget
                                                             key={index}
@@ -319,6 +323,10 @@ const Home = (props) => {
                                         <h4 className="section-sub-title">Latest Products</h4>
                                         {latestProductsState &&
                                              latestProductsState
+                                                  .sort(
+                                                       (a: any, b: any) =>
+                                                            b.__last_update - a.__last_update,
+                                                  )
                                                   .slice(0, 3)
                                                   .map((product, index) => (
                                                        <ProductWidget

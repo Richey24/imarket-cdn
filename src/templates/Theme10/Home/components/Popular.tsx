@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { featuredProducts } from "../data";
 
-const Popular = ({ setQuickView }) => {
+const Popular = ({ setQuickView, popularProducts }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
@@ -16,7 +16,7 @@ const Popular = ({ setQuickView }) => {
                     <div className="container">
                          <h2 className="section-title">POPULAR PRODUCTS</h2>
                          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-                              {featuredProducts.slice(0, 6).map((product, i) => (
+                              {popularProducts.slice(0, 6).map((product, i) => (
                                    <div
                                         style={{ width: "230px" }}
                                         key={i}
@@ -64,7 +64,7 @@ const Popular = ({ setQuickView }) => {
                                                             href="demo10-shop.html"
                                                             className="product-category"
                                                        >
-                                                            {product.productCategory}
+                                                            {product.category}
                                                        </a>
                                                        ,
                                                   </div>
@@ -81,7 +81,7 @@ const Popular = ({ setQuickView }) => {
                                              <h3 className="product-title">
                                                   {" "}
                                                   <a href="demo10-product.html">
-                                                       {product.productTitle}
+                                                       {product.productName}
                                                   </a>{" "}
                                              </h3>
 

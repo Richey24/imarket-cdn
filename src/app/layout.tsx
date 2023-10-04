@@ -24,6 +24,7 @@ import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const inter = Inter({ subsets: ["latin"] });
 

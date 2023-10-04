@@ -2,8 +2,7 @@ export type ProductItemProps = {
      productImageUrl: string ;
      productCategory: string;
      productName: string;
-     productPrice?: number | string;
- 
+     price?: number | string;
 };
 
 export type ProductsProps = {
