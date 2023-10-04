@@ -14,71 +14,76 @@ const Product = ({ setQuickView, products }) => {
                <h2 className="subtitle text-center">FEATURED PRODUCTS</h2>
                <div className="heading-spacer"></div>
                <div className="row">
-                    {products.slice(0, 8).map((product, i) => (
-                         <div className="col-6 col-sm-4 col-md-3" key={i}>
-                              <div className="product-default inner-quickview inner-icon">
-                                   <figure>
-                                        <a href="demo8-product.html">
-                                             <Image
-                                                  src={product.productImageUrl}
-                                                  alt="product"
-                                                  width="300"
-                                                  height="300"
-                                             />
-                                             <Image
-                                                  src={product.productImageUrlTwo}
-                                                  alt="product"
-                                                  width="300"
-                                                  height="300"
-                                             />
-                                        </a>
-                                        <div className="btn-icon-group">
-                                             <a
-                                                  href="#"
-                                                  className="btn-icon btn-add-cart product-type-simple"
-                                             >
-                                                  <i className="icon-shopping-cart"></i>
+                    {products
+                         .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                         .slice(0, 8)
+                         .map((product, i) => (
+                              <div className="col-6 col-sm-4 col-md-3" key={i}>
+                                   <div className="product-default inner-quickview inner-icon">
+                                        <figure>
+                                             <a href="demo8-product.html">
+                                                  <Image
+                                                       src={product.productImageUrl}
+                                                       alt="product"
+                                                       width="300"
+                                                       height="300"
+                                                  />
+                                                  <Image
+                                                       src={product.productImageUrlTwo}
+                                                       alt="product"
+                                                       width="300"
+                                                       height="300"
+                                                  />
                                              </a>
-                                        </div>
-                                        <a
-                                             onClick={() => showDiv(product)}
-                                             style={{ cursor: "pointer" }}
-                                             className="btn-quickview"
-                                             title="Quick View"
-                                        >
-                                             Quick View
-                                        </a>
-                                   </figure>
-                                   <div className="product-details">
-                                        <div className="category-wrap">
-                                             <div className="category-list">
+                                             <div className="btn-icon-group">
                                                   <a
-                                                       href="demo8-shop.html"
-                                                       className="product-category"
+                                                       href="#"
+                                                       className="btn-icon btn-add-cart product-type-simple"
                                                   >
-                                                       {product.productCategory}
+                                                       <i className="icon-shopping-cart"></i>
                                                   </a>
                                              </div>
                                              <a
-                                                  href="wishlist.html"
-                                                  title="Wishlist"
-                                                  className="btn-icon-wish"
+                                                  onClick={() => showDiv(product)}
+                                                  style={{ cursor: "pointer" }}
+                                                  className="btn-quickview"
+                                                  title="Quick View"
                                              >
-                                                  <i className="icon-heart"></i>
+                                                  Quick View
                                              </a>
-                                        </div>
-                                        <h3 className="product-title">
-                                             <a href="demo8-product.html">{product.productTitle}</a>
-                                        </h3>
-                                        <div className="price-box">
-                                             <span className="product-price">
-                                                  ${product.productPrice}.00
-                                             </span>
+                                        </figure>
+                                        <div className="product-details">
+                                             <div className="category-wrap">
+                                                  <div className="category-list">
+                                                       <a
+                                                            href="demo8-shop.html"
+                                                            className="product-category"
+                                                       >
+                                                            {product.productCategory}
+                                                       </a>
+                                                  </div>
+                                                  <a
+                                                       href="wishlist.html"
+                                                       title="Wishlist"
+                                                       className="btn-icon-wish"
+                                                  >
+                                                       <i className="icon-heart"></i>
+                                                  </a>
+                                             </div>
+                                             <h3 className="product-title">
+                                                  <a href="demo8-product.html">
+                                                       {product.productTitle}
+                                                  </a>
+                                             </h3>
+                                             <div className="price-box">
+                                                  <span className="product-price">
+                                                       ${product.productPrice}.00
+                                                  </span>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
-                         </div>
-                    ))}
+                         ))}
                </div>
                <div className="sale-banner banner">
                     <div className="container banner-content">

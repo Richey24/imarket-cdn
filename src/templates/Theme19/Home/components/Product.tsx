@@ -225,65 +225,70 @@ const Product = ({ setQuickView, products }) => {
                                    className="products-slider custom-products"
                               >
                                    {products &&
-                                        products.map((product, i) => (
-                                             <div
-                                                  key={i}
-                                                  className="product-default inner-quickview inner-icon"
-                                             >
-                                                  <figure>
-                                                       <a href="demo19-product.html">
-                                                            <Image
-                                                                 src={product.productImageUrl}
-                                                                 width="205"
-                                                                 height="205"
-                                                                 alt="product"
-                                                            />
-                                                       </a>
-                                                       <div className="label-group">
-                                                            <div className="product-label label-hot">
-                                                                 HOT
+                                        products
+                                             .sort(
+                                                  (a: any, b: any) =>
+                                                       b.__last_update - a.__last_update,
+                                             )
+                                             .map((product, i) => (
+                                                  <div
+                                                       key={i}
+                                                       className="product-default inner-quickview inner-icon"
+                                                  >
+                                                       <figure>
+                                                            <a href="demo19-product.html">
+                                                                 <Image
+                                                                      src={product.productImageUrl}
+                                                                      width="205"
+                                                                      height="205"
+                                                                      alt="product"
+                                                                 />
+                                                            </a>
+                                                            <div className="label-group">
+                                                                 <div className="product-label label-hot">
+                                                                      HOT
+                                                                 </div>
+                                                            </div>
+                                                            <div className="btn-icon-group">
+                                                                 <a
+                                                                      href="#"
+                                                                      className="btn-icon btn-add-cart product-type-simple"
+                                                                 >
+                                                                      <i className="icon-shopping-cart"></i>
+                                                                 </a>
+                                                            </div>
+                                                            <a
+                                                                 onClick={() => showDiv(product)}
+                                                                 style={{ cursor: "pointer" }}
+                                                                 className="btn-quickview"
+                                                                 title="Quick View"
+                                                            >
+                                                                 Quick View
+                                                            </a>
+                                                       </figure>
+                                                       <div className="product-details">
+                                                            <div className="title-wrap">
+                                                                 <h3 className="product-title">
+                                                                      <a href="demo19-product.html">
+                                                                           {product.productTitle}
+                                                                      </a>
+                                                                 </h3>
+                                                                 <a
+                                                                      href="wishlist.html"
+                                                                      title="Wishlist"
+                                                                      className="btn-icon-wish"
+                                                                 >
+                                                                      <i className="icon-heart"></i>
+                                                                 </a>
+                                                            </div>
+                                                            <div className="price-box">
+                                                                 <span className="product-price">
+                                                                      ${product.productPrice}.00
+                                                                 </span>
                                                             </div>
                                                        </div>
-                                                       <div className="btn-icon-group">
-                                                            <a
-                                                                 href="#"
-                                                                 className="btn-icon btn-add-cart product-type-simple"
-                                                            >
-                                                                 <i className="icon-shopping-cart"></i>
-                                                            </a>
-                                                       </div>
-                                                       <a
-                                                            onClick={() => showDiv(product)}
-                                                            style={{ cursor: "pointer" }}
-                                                            className="btn-quickview"
-                                                            title="Quick View"
-                                                       >
-                                                            Quick View
-                                                       </a>
-                                                  </figure>
-                                                  <div className="product-details">
-                                                       <div className="title-wrap">
-                                                            <h3 className="product-title">
-                                                                 <a href="demo19-product.html">
-                                                                      {product.productTitle}
-                                                                 </a>
-                                                            </h3>
-                                                            <a
-                                                                 href="wishlist.html"
-                                                                 title="Wishlist"
-                                                                 className="btn-icon-wish"
-                                                            >
-                                                                 <i className="icon-heart"></i>
-                                                            </a>
-                                                       </div>
-                                                       <div className="price-box">
-                                                            <span className="product-price">
-                                                                 ${product.productPrice}.00
-                                                            </span>
-                                                       </div>
                                                   </div>
-                                             </div>
-                                        ))}
+                                             ))}
                               </div>
                               <div
                                    className="category-description"

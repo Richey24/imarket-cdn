@@ -38,7 +38,7 @@ const Banner = ({ slides }) => {
                                    data-animation-delay={700}
                                    data-animation-name="splitRight"
                               >
-                                   Luxury With Brands We Love
+                                   {slide.text}
                               </h4>
                               <h3
                                    className={`m-b-2 font3 ${
@@ -47,9 +47,9 @@ const Banner = ({ slides }) => {
                                    data-animation-name="blurIn"
                                    data-animation-duration={1200}
                               >
-                                   Women&apos;s Lingerie
+                                   {slide.title}
                               </h3>
-                              <h5
+                              {/* <h5
                                    className={`${
                                         index === 0 && "d-inline-block"
                                    } ls-n-20 m-r-3 p-t-3 ${
@@ -70,7 +70,7 @@ const Banner = ({ slides }) => {
                                    data-animation-name="fadeInUp"
                               >
                                    $<b>199</b>99
-                              </h4>
+                              </h4> */}
                               <div className="clearfix" />
                               <div
                                    className="mb-0"

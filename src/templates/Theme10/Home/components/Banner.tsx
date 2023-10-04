@@ -18,48 +18,6 @@ const Banner = ({ banners }) => {
 
                <div className="home-slider slide-animate show-nav-hover">
                     <Slider {...settings}>
-                         {/* <div className="banner">
-                              <Image
-                                   src={templateImages.demo10.sliderImage.slider1}
-                                   width="1620"
-                                   height="980"
-                                   style={{ backgroundColor: "#eee" }}
-                                   alt="slider-one"
-                              />
-
-                              <div className="banner-layer banner-layer-middle">
-                                   <h6
-                                        className=" "
-                                        data-animation-name="fadeInRightShorter"
-                                        data-animation-delay="200"
-                                   >
-                                        NEW ARRIVALS!
-                                   </h6>
-                                   <Image
-                                        src={templateImages.demo10.bannerImage.banner3}
-                                        className="w-auto "
-                                        width="503"
-                                        height="113"
-                                        alt="banner-text"
-                                   />
-                                   <h3
-                                        className=" "
-                                        data-animation-name="fadeInRightShorter"
-                                        data-animation-delay="700"
-                                   >
-                                        70% OFF
-                                   </h3>
-                                   <a
-                                        href="demo10-shop.html"
-                                        className="btn btn-xl "
-                                        data-animation-name="fadeInRightShorter"
-                                        data-animation-delay="950"
-                                        role="button"
-                                   >
-                                        Shop Now<i className="fas fa-chevron-right"></i>
-                                   </a>
-                              </div>
-                         </div> */}
                          {banners.map((banner, index) => (
                               <div className="banner text-right" key={index}>
                                    <Image
@@ -76,7 +34,7 @@ const Banner = ({ banners }) => {
                                              data-animation-name="fadeInLeftShorter"
                                              data-animation-delay="200"
                                         >
-                                             NEW ARRIVALS!
+                                             {banner.title}
                                         </h6>
                                         <Image
                                              src={templateImages.demo10.bannerImage.banner4}
@@ -90,7 +48,7 @@ const Banner = ({ banners }) => {
                                              data-animation-name="fadeInLeftShorter"
                                              data-animation-delay="700"
                                         >
-                                             50% OFF
+                                             {banner.text}
                                         </h3>
                                         <a
                                              href="demo10-shop.html"

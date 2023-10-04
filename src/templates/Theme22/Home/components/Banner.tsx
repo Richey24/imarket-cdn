@@ -42,15 +42,7 @@ export const Banner = ({ sliders }) => {
                                                                            {data.h4}
                                                                       </h4>
                                                                       <h5 className="mb-0 font1 d-inline-block bg-dark skew-box">
-                                                                           <i className="text-dark ls-0">
-                                                                                UP TO
-                                                                           </i>
-                                                                           <b className="text-white">
-                                                                                $100
-                                                                           </b>
-                                                                           <sub className="text-dark">
-                                                                                OFF
-                                                                           </sub>
+                                                                           {data.text}
                                                                       </h5>
                                                                  </div>
                                                                  <a

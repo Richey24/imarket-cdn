@@ -37,8 +37,6 @@ const Home = (props) => {
                     name: category.display_name,
                };
           });
-          
-     console.log("+++++++", displayCategories);
 
      return (
           <main className="main">
