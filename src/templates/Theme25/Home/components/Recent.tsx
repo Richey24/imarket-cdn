@@ -1,8 +1,7 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
-import { products } from "../data";
 
-const Recent = ({ setQuickView }) => {
+const Recent = ({ setQuickView, latestProducts }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
@@ -51,7 +50,7 @@ const Recent = ({ setQuickView }) => {
                          <h2 className="section-title pb-3 mb-2">Recent Books</h2>
 
                          <div className="row">
-                              {products.slice(0, 6).map((product, i) => (
+                              {latestProducts.slice(0, 6).map((product, i) => (
                                    <div key={i} className="col-6 col-md-4 col-lg-3 col-xl-2">
                                         <div className="product-default inner-quickview inner-icon">
                                              <figure>

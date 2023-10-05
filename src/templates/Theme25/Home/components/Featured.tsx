@@ -2,7 +2,7 @@ import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
 import { products } from "../data";
 
-const Featured = ({ setQuickView }) => {
+const Featured = ({ setQuickView, featuredProducts }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
@@ -91,10 +91,10 @@ const Featured = ({ setQuickView }) => {
                          </div>
 
                          <div>
-                              <h2 className="section-title pb-3 mb-2">Featured Books</h2>
+                              <h2 className="section-title pb-3 mb-2">Featured Products</h2>
 
                               <div className="row">
-                                   {products.slice(0, 6).map((product, i) => (
+                                   {featuredProducts.slice(0, 6).map((product, i) => (
                                         <div key={i} className="col-6 col-md-4 col-lg-3 col-xl-2">
                                              <div className="product-default inner-quickview inner-icon">
                                                   <figure>
