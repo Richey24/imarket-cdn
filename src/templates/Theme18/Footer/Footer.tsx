@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../../../assets/images/your-logo.png";
 
-const Footer = () => {
+const Footer = (props) => {
+          const { static: staticProps, company } = props.props;
      return (
           <footer className="footer font2">
                <div className="container-fluid">
@@ -56,18 +57,49 @@ const Footer = () => {
                                    <a href="demo18.html">
                                         <img src={logo.src} alt="Logo" className="logo" />
                                    </a>
-                                   <p className="footer-desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipis.
-                                   </p>
-                                   <div className="ls-0 footer-question">
-                                        <h6 className="mb-0 text-white">QUESTIONS?</h6>
-                                        <h3 className="mb-3 text-white">
-                                             <a href="tel:1-888-123-456">1-888-123-456</a>
-                                        </h3>
-                                   </div>
+                                   <div className="row">
+                                             <div className="col-sm-6 pr-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            ADDRESS:
+                                                       </h4>
+                                                       <a href="#">
+                                                            {" "}
+                                                            {company?.city + " " + company?.country}
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div className="col-sm-6 pl-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            PHONE:
+                                                       </h4>
+                                                       <a href="#">{company?.phone}</a>
+                                                  </div>
+                                             </div>
+                                             <div className="col-sm-6 pr-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            EMAIL:
+                                                       </h4>
+                                                       <a href="mailto:mail@example.com">
+                                                            {company?.user_id?.email}
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div className="col-sm-6 pl-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            WORKING DAYS/HOURS:
+                                                       </h4>
+                                                       <a href="#">Mon - Sun / 9:00AM - 8:00PM</a>
+                                                  </div>
+                                             </div>
+                                        </div>
                               </div>
+                            
                               {/* End .col-lg-3 */}
-                              <div className="col-lg-3">
+                              <div className="col-lg-3 ">
                                    <div className="widget">
                                         <h4 className="widget-title">Account</h4>
                                         <div className="links link-parts row">
