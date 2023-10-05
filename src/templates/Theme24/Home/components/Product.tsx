@@ -14,17 +14,28 @@ export const Product: React.FC<ProductProps> = ({
      return (
           <div className="product-default inner-quickview inner-icon w-100">
                <figure>
-                    <a href="demo13-product.html">
-                         <Image src={productImageUrl} width={300} height={300} alt="product" />
-                         {productImageUrlTwo && (
+                    <div style={{ width: "380px", height: "380px", overflow: "hidden" }}>
+                         {" "}
+                         <a href="demo13-product.html">
                               <Image
-                                   src={productImageUrlTwo}
-                                   width={300}
-                                   height={300}
+                                   src={productImageUrl}
+                                   style={{ width: "100%", height: "100%" }}
+                                   width={217}
+                                   height={217}
                                    alt="product"
                               />
-                         )}
-                    </a>
+                              {productImageUrlTwo && (
+                                   <Image
+                                        style={{ width: "100%", height: "100%" }}
+                                        src={productImageUrlTwo}
+                                        width={217}
+                                        height={217}
+                                        alt="product"
+                                   />
+                              )}
+                         </a>
+                    </div>
+
                     <div className="label-group">
                          <span className="product-label label-sale">-30%</span>
                     </div>

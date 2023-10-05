@@ -1,13 +1,13 @@
 import { ProductProps } from "../types";
 import { Product } from "./Product";
 
-const BestSellingProducts: React.FC<{ products: ProductProps[] }> = (props) => {
+const BestSellingProducts  = ({products, section}) => {
      return (
           <section className="best-sellers">
                <div className="container">
-                    <h2 className="section-title mb-2">Best Selling Items</h2>
+                    <h2 className="section-title mb-2">{section}</h2>
                     <div className="row">
-                         {props.products.map((product, index) => (
+                         {products.map((product, index) => (
                               <div className="col-sm-6 col-md-4" key={index}>
                                    <Product {...product} />
                               </div>
