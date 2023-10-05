@@ -1,7 +1,9 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <div>
                <section className="newsletter-section bg-white text-center">
@@ -38,7 +40,7 @@ const Footer = () => {
                                         >
                                              <a href="demo25.html">
                                                   <Image
-                                                       src={templateImages.logoImage.logo2}
+                                                       src={company.logo}
                                                        alt="Logo"
                                                        width="111"
                                                        height="44"
@@ -48,13 +50,6 @@ const Footer = () => {
                                         </div>
 
                                         <div className="contact-widget">
-                                             <p>
-                                                  Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                  elit. Praesent pulvinar feugiat quam, vitae
-                                                  aliquam urna egestas nec. Phasellus sit amet
-                                                  consequat tortor.
-                                             </p>
-
                                              <div className="row ls-0">
                                                   <div className="col-md-2-5">
                                                        <h6 className="text-uppercase mb-0">
