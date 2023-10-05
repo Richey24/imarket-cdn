@@ -39,6 +39,7 @@ import { theme29TemplateConfig } from "./theme29";
 import { theme26TemplateConfig } from "./theme26";
 import { theme10TemplateConfig } from "./theme10";
 import { theme23TemplateConfig } from "./theme23";
+import { theme24TemplateConfig } from "./theme24";
 import template43Config from "./theme43";
 import template44Config from "./theme44";
 
@@ -66,6 +67,7 @@ export const templateConfig: any = {
      theme21: theme21TemplateConfig,
      theme22: theme22TemplateConfig,
      theme23: theme23TemplateConfig,
+     theme24: theme24TemplateConfig,
      theme25: theme25TemplateConfig,
      theme26: theme26TemplateConfig,
      theme27: theme27TemplateConfig,
