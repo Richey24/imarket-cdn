@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ProductSection } from "./components/ProductSection";
 import { Banner } from "./components/Banner";
 import { Info } from "./components/Info";
@@ -6,10 +6,59 @@ import { BestCollection } from "./components/BestCollection";
 import { MiniBanners } from "./components/MiniBanner";
 import { ProductSection2 } from "./components/ProductSection2";
 
-const Home = () => {
+const Home = (props) => {
+     const {
+          static: statiProps,
+          products,
+          categories,
+          featuredProducts: featuredProductData,
+     } = props;
+     const [latestProductsState, setLatestProducts] = useState<any>(null);
+     const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
+
+     useEffect(() => {
+          if (products && !latestProductsState) {
+               const latestProductsMap = products.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         category: "Fashion",
+                         imageUrl1: "data:image/jpeg;base64," + product?.image_1920,
+                         imageUrl2: "data:image/jpeg;base64," + product?.image_1024,
+                         productName: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setLatestProducts(latestProductsMap);
+          }
+          if (featuredProductData && !featuredProductsState) {
+               const featuredProductsMap = featuredProductData.map((product) => {
+                    return {
+                         productImageAlt: "product",
+                         productCategory: "SHOES, TOYS",
+                         productImageUrl: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageUrlTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         productTitle: product.display_name,
+                         productPrice: product.standard_price,
+                         id: product.id,
+                         slug: product.website_url,
+                         tooltip: product.product_tooltip,
+                         productImage: "data:image/jpeg;base64," + product?.image_1920,
+                         productImageTwo: "data:image/jpeg;base64," + product?.image_1024,
+                         __last_update: new Date(product.__last_update),
+                    };
+               });
+               setFeaturedProducts(featuredProductsMap);
+          }
+     }, [products, featuredProductData]);
      return (
           <main className="main">
-               <Banner />
+               <Banner banners={statiProps?.banner ?? []} />
                <section className="welcome-section">
                     <div className="container">
                          <h2
@@ -28,7 +77,7 @@ const Home = () => {
                          </p>
                          <MiniBanners />
                          <Info />
-                         <ProductSection />
+                         <ProductSection featuredProducts={featuredProductsState ?? []} />
                     </div>
                </section>
                <div className="cats-banner-section mb-3">
@@ -46,7 +95,7 @@ const Home = () => {
                          <BestCollection />
                     </div>
                </div>
-               <ProductSection2 />
+               <ProductSection2 latestProducts={latestProductsState ?? []} />
           </main>
      );
 };

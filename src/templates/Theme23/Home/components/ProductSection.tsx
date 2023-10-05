@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { products } from "../data";
 import { Product } from "./Product";
 
-export const ProductSection = () => {
+export const ProductSection = ({ featuredProducts }) => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -18,9 +18,11 @@ export const ProductSection = () => {
      return (
           <div className="no-gutters">
                <Slider {...settings}>
-                    {products.map((product) => (
-                        <Product {...product} />
-                    ))}
+                    {featuredProducts
+                         .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                         .map((product) => (
+                              <Product {...product} />
+                         ))}
                </Slider>
           </div>
      );
