@@ -2,7 +2,6 @@ import Banner from "./components/Banner";
 import FeatureBoxes from "./components/FeatureBoxes";
 import FeaturedProducts from "./components/FeaturedProducts";
 import BestSellingProducts from "./components/BestSellingProducts";
-import Testimonials from "./components/Testimonials";
 import { useEffect, useState } from "react";
 import { testimonies } from "./data";
 
@@ -60,9 +59,14 @@ export const Home = (props) => {
           <main className="main">
                <Banner slides={statiProps?.banner ?? []} />
                <FeatureBoxes />
-               <FeaturedProducts section="Featured products" products={featuredProductsState ?? []} />
-               <BestSellingProducts section="Latest products" products={latestProductsState ?? []} />
-               <Testimonials testimonials={testimonies} />
+               <FeaturedProducts
+                    section="Featured products"
+                    products={featuredProductsState ?? []}
+               />
+               <BestSellingProducts
+                    section="Latest products"
+                    products={latestProductsState ?? []}
+               />
           </main>
      );
 };

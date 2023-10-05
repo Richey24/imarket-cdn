@@ -13,9 +13,19 @@ export const Product: React.FC<ProductProps> = ({
      return (
           <div className="product-default inner-quickview inner-icon mx-2">
                <figure>
-                    <a href="demo21-product.html">
-                         <Image src={productImageUrl} width={217} height={217} alt="product" />
-                    </a>
+                    <div style={{ width: "200px", height: "200px", overflow: "hidden" }}>
+                         {" "}
+                         <a href="demo21-product.html">
+                              <Image
+                                   style={{ width: "100%", height: "100%" }}
+                                   src={productImageUrl}
+                                   width={217}
+                                   height={217}
+                                   alt="product"
+                              />
+                         </a>{" "}
+                    </div>
+
                     <div className="btn-icon-group">
                          <a href="demo21-product.html" className="btn-icon btn-add-cart">
                               <i className="fa fa-arrow-right" />
