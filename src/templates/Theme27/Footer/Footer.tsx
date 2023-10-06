@@ -72,7 +72,7 @@ const Footer = (props: any) => {
                               <div className="col-lg-3">
                                    <a href="demo27.html">
                                         <Image
-                                             src={templateImages.logoImage.logo2}
+                                             src={company?.logo}
                                              alt="Logo"
                                              className="logo"
                                              width={202}
