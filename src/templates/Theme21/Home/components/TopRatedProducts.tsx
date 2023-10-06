@@ -1,33 +1,33 @@
 import { templateImages } from "@/appProvider/templateImages";
 import { onSaleProduct, topRatedProduct, topSellingProduct } from "../data";
 import { ProductWidget } from "./ProductWidget";
-export const TopRatedProducts = () => {
+export const TopRatedProducts = ({ products, productDatas, section, section2, section3 }) => {
      return (
           <div className="product-widgets-container lg-images mb-0">
                <div className="container">
                     <div className="row">
                          <div className="col-md-6 col-lg-3">
-                              <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">
-                                   Top Rated Products
-                              </h4>
-                              {topRatedProduct.map((product) => (
-                                  <ProductWidget {...product}/>
-                              ))}
+                              <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">{section}</h4>
+                              {products
+                                   .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                                   .filter((_, idx) => idx < 3)
+                                   .map((product, index) => (
+                                        <ProductWidget key={`featured-product-${index}`} {...product} />
+                                   ))}
                          </div>
                          <div className="col-md-6 col-lg-3">
-                              <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">
-                                   Top Selling Products
-                              </h4>
-                              {topSellingProduct.map((product ) => (
-                                  <ProductWidget {...product}/>
-                              ))}
+                              <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">{section2}</h4>
+                              {productDatas
+                                   .sort((a: any, b: any) => b.__last_update - a.__last_update)
+                                   .filter((_, idx) => idx < 3)
+                                   .map((product, index) => (
+                                        <ProductWidget key={`latest-product-${index}`} {...product} />
+                                   ))}
                          </div>
                          <div className="col-md-6 col-lg-3">
-                              <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">
-                                   On Sale Products
-                              </h4>
+                              <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">{section3}</h4>
                               {onSaleProduct.map((product) => (
-                                   <ProductWidget {...product}/>
+                                   <ProductWidget {...product} />
                               ))}
                          </div>
                          <div className="col-md-6 col-lg-3">

@@ -119,8 +119,9 @@ const Footer = (): JSX.Element => {
                          </div>
                          <div className="footer-right ml-auto mt-1 mt-sm-0">
                               <div className="payment-icons">
-                                   {payments.map((pay) => (
+                                   {payments.map((pay, idx) => (
                                         <span
+                                             key={idx}
                                              className="payment-icon visa"
                                              style={{
                                                   backgroundImage: `url(${pay.image})`,

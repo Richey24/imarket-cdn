@@ -24,15 +24,9 @@ export const Instagram = () => {
                </div>
                <div className="  owl-theme instagram-feed-list dots-small">
                     <Slider {...settings}>
-                         {instagramsImg.map((data) => (
-                              <a href="#"className="px-3" >
-                                   <img
-                                        src={data.img}
-                                        width={197}
-                                        height={150}
-                                        alt="Feed"
-                                        
-                                   />
+                         {instagramsImg.map((data, idx) => (
+                              <a key={idx} href="#" className="px-3">
+                                   <img src={data.img} width={197} height={150} alt="Feed" />
                               </a>
                          ))}
                     </Slider>

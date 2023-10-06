@@ -89,7 +89,7 @@ const Home = (props) => {
                     <SmallBoxes banners={smallBoxData} />
                     {featuredProductsState && (
                          <FeaturedProductsSection
-                              products={featuredProductsState}
+                              products={featuredProductsState ?? []}
                               section="Featured Products"
                          />
                     )}
@@ -158,7 +158,7 @@ const Home = (props) => {
                                              </div>
                                              <div className="feature-box-content p-0">
                                                   <h3>Customer Support</h3>
-                                                  <h5>You Won't Be Alone</h5>
+                                                  <h5>You {"Won't"} Be Alone</h5>
                                                   <p>
                                                        We really care about you and your website as
                                                        much as you do. Purchasing Porto or any other
@@ -284,6 +284,10 @@ const Home = (props) => {
                                              </h4>
                                              {featuredProductsState
                                                   .slice(0, 3)
+                                                  .sort(
+                                                       (a: any, b: any) =>
+                                                            b.__last_update - a.__last_update,
+                                                  )
                                                   .map((product, index) => (
                                                        <ProductWidget
                                                             key={index}
@@ -319,6 +323,10 @@ const Home = (props) => {
                                         <h4 className="section-sub-title">Latest Products</h4>
                                         {latestProductsState &&
                                              latestProductsState
+                                                  .sort(
+                                                       (a: any, b: any) =>
+                                                            b.__last_update - a.__last_update,
+                                                  )
                                                   .slice(0, 3)
                                                   .map((product, index) => (
                                                        <ProductWidget

@@ -110,7 +110,14 @@ const Home = (props) => {
                                    >
                                         Amazing products added recently in our catalog
                                    </p>
-                                   <ProductGrid products={featuredProductsState.slice(0, 4)} />
+                                   <ProductGrid
+                                        products={featuredProductsState
+                                             .sort(
+                                                  (a: any, b: any) =>
+                                                       b.__last_update - a.__last_update,
+                                             )
+                                             .slice(0, 4)}
+                                   />
                                    {/* End .row */}
                                    <a
                                         className="btn btn-dark btn-lg btn-center loadmore"
@@ -201,6 +208,10 @@ const Home = (props) => {
                                    </h4>
                                    {latestProductsState &&
                                         latestProductsState
+                                             .sort(
+                                                  (a: any, b: any) =>
+                                                       b.__last_update - a.__last_update,
+                                             )
                                              .slice(0, 3)
                                              .map((product, index) => (
                                                   <ProductWidget

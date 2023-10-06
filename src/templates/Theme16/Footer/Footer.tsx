@@ -91,8 +91,8 @@ const Footer = () => {
                               <div className="col-lg-3 col-sm-6">
                                    <div className="widget widget-products">
                                         <h4 className="widget-title">Featured Products</h4>
-                                        {featuredProducts.map((product) => (
-                                             <ProductWidget {...product} />
+                                        {featuredProducts.map((product, idx) => (
+                                             <ProductWidget key={idx} {...product} />
                                         ))}
                                    </div>
                                    {/* End .widget */}
@@ -193,8 +193,9 @@ const Footer = () => {
                          </p>
                          <div className="footer-right mt-1 mt-sm-0">
                               <div className="payment-icons mr-0">
-                                   {payments.map((pay) => (
+                                   {payments.map((pay, idx) => (
                                         <span
+                                             key={idx}
                                              className="payment-icon visa"
                                              style={{
                                                   backgroundImage: `url(${pay.image})`,

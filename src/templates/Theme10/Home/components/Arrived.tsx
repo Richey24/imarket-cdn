@@ -2,7 +2,7 @@ import Image from "next/image";
 import { featuredProducts } from "../data";
 import newsletter from "../../../../assets/images/demoes/demo10/newsletter_bg.jpg";
 
-const Arrived = ({ setQuickView }) => {
+const Arrived = ({ setQuickView, arrivedProduct }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
@@ -17,7 +17,7 @@ const Arrived = ({ setQuickView }) => {
                     <div className="container">
                          <h2 className="section-title">JUST ARRIVED</h2>
                          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-                              {featuredProducts.slice(0, 5).map((product, i) => (
+                              {arrivedProduct.slice(0, 5).map((product, i) => (
                                    <div
                                         style={{ width: "190px" }}
                                         key={i}
@@ -26,7 +26,7 @@ const Arrived = ({ setQuickView }) => {
                                         <figure>
                                              <a href="demo10-product.html">
                                                   <Image
-                                                       src={product.productImageUrl}
+                                                       src={product.imageUrl1}
                                                        alt="product"
                                                        width="400"
                                                        height="400"
@@ -59,7 +59,7 @@ const Arrived = ({ setQuickView }) => {
                                                             href="demo10-shop.html"
                                                             className="product-category"
                                                        >
-                                                            {product.productCategory}
+                                                            {product.category}
                                                        </a>
                                                        ,
                                                   </div>
@@ -76,7 +76,7 @@ const Arrived = ({ setQuickView }) => {
                                              <h3 className="product-title">
                                                   {" "}
                                                   <a href="demo10-product.html">
-                                                       {product.productTitle}
+                                                       {product.productName}
                                                   </a>
                                              </h3>
                                              <div className="price-box">

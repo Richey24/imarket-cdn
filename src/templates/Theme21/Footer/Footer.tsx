@@ -3,7 +3,8 @@ import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
 import logo from "../../../assets/images/your-logo.png";
 import { SubcribeEmail } from "@/templates/shared/SubcribeEmail";
 
-const Footer = () => {
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer>
                <div className="footer">
@@ -36,53 +37,47 @@ const Footer = () => {
                                    <div className="col-lg-6 mb-1">
                                         <a href="demo21.html">
                                              <img
-                                                  src={logo.src}
+                                                  src={company?.logo}
                                                   alt="Logo"
                                                   className="logo mb-3 mb-lg-6"
                                              />
                                         </a>
-                                        <div className="row no-gutters m-0">
-                                             <div className="col-md-4 mb-2">
-                                                  <div className="contact-widget phone">
-                                                       <h4 className="widget-title">
-                                                            call us now:
+                                        <div className="row">
+                                             <div className="col-sm-6 pr-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            ADDRESS:
                                                        </h4>
-                                                       <a href="#">+123 5678 890</a>
-                                                  </div>
-                                             </div>
-                                             <div className="col-md-4 mb-2">
-                                                  <div className="contact-widget email">
-                                                       <h4 className="widget-title">
-                                                            e-mail address:
-                                                       </h4>
-                                                       <a href="mailto:mail@example.com">
-                                                            mail@example.com
+                                                       <a href="#">
+                                                            {" "}
+                                                            {company?.city + " " + company?.country}
                                                        </a>
                                                   </div>
                                              </div>
-                                             <div className="col-md-4 mb-2">
-                                                  <div className="contact-widget follow">
-                                                       <h4 className="widget-title ls-n-10">
-                                                            follow us
+                                             <div className="col-sm-6 pl-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            PHONE:
                                                        </h4>
-                                                       <div className="social-icons">
-                                                            <a
-                                                                 href="#"
-                                                                 className="social-icon social-facebook icon-facebook"
-                                                                 target="_blank"
-                                                            />
-                                                            <a
-                                                                 href="#"
-                                                                 className="social-icon social-twitter icon-twitter"
-                                                                 target="_blank"
-                                                            />
-                                                            <a
-                                                                 href="#"
-                                                                 className="social-icon social-linkedin fab fa-linkedin-in"
-                                                                 target="_blank"
-                                                            />
-                                                       </div>
-                                                       {/* End .social-icons */}
+                                                       <a href="#">{company?.phone}</a>
+                                                  </div>
+                                             </div>
+                                             <div className="col-sm-6 pr-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            EMAIL:
+                                                       </h4>
+                                                       <a href="mailto:mail@example.com">
+                                                            {company?.user_id?.email}
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div className="col-sm-6 pl-sm-0">
+                                                  <div className="contact-widget m-b-3">
+                                                       <h4 className="widget-title font2">
+                                                            WORKING DAYS/HOURS:
+                                                       </h4>
+                                                       <a href="#">Mon - Sun / 9:00AM - 8:00PM</a>
                                                   </div>
                                              </div>
                                         </div>

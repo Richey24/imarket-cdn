@@ -1,12 +1,13 @@
 import { capitalize } from "lodash";
+import React from "react";
 
 function CategorySelect({ categories }): JSX.Element {
      return (
           <select id="cat" name="cat">
                <option value="">All Categories</option>
                {categories &&
-                    categories.map((category) => (
-                         <>
+                    categories.map((category, idx) => (
+                         <React.Fragment key={idx}>
                               {!category.parent_id && (
                                    <option value={category.id}>{category.name}</option>
                               )}
@@ -22,7 +23,7 @@ function CategorySelect({ categories }): JSX.Element {
                                         return <></>;
                                    }
                               })}
-                         </>
+                         </React.Fragment>
                     ))}
           </select>
      );

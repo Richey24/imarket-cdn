@@ -43,8 +43,8 @@ const ProductInfo = () => {
                                    data-animation-name="fadeInLeftShorter"
                                    data-animation-delay={1000}
                               >
-                                   {productinfo.map((data) => (
-                                        <li className="product-info-item">
+                                   {productinfo.map((data, idx) => (
+                                        <li key={idx} className="product-info-item">
                                              <div className="product-default">
                                                   <figure className="d-none">
                                                        <a href="demo37-product.html">
@@ -98,8 +98,11 @@ const ProductInfo = () => {
                                              alt="Product"
                                         />
                                    </figure>
-                                   {productinfo2.map((data) => (
-                                        <div className={`product-popup-dot ${data.position}`}>
+                                   {productinfo2.map((data, idx) => (
+                                        <div
+                                             key={idx}
+                                             className={`product-popup-dot ${data.position}`}
+                                        >
                                              <a href="#">
                                                   <i className="fas fa-circle" />
                                              </a>

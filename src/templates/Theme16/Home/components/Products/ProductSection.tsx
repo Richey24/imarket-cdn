@@ -38,14 +38,10 @@ export const ProductSection = () => {
                <div className="container">
                     <div className="products-slider   owl-theme nav-image-center show-nav-hover nav-outer nav-white">
                          <Slider {...settings}>
-                              {styledOutFitsProducts.map((product) => (
-                                   <Product {...product}/>
+                              {styledOutFitsProducts.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
-
-                         {/* End .product-default */}
-
-                         {/* End .product-default */}
                     </div>
                     {/* End .section-products-carousel */}
                </div>

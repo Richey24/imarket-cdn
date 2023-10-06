@@ -1,7 +1,10 @@
 import React from "react";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
 import logo from "../../../assets/images/your-logo.png";
-const Footer = () => {
+
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <footer className="footer">
                <div className="footer-middle">
@@ -21,20 +24,23 @@ const Footer = () => {
                                         <div className="col-sm-6 pr-sm-0">
                                              <div className="contact-widget m-b-3">
                                                   <h4 className="widget-title font2">ADDRESS:</h4>
-                                                  <a href="#">123 Street Name, City, England</a>
+                                                  <a href="#">
+                                                       {" "}
+                                                       {company?.city + " " + company?.country}
+                                                  </a>
                                              </div>
                                         </div>
                                         <div className="col-sm-6 pl-sm-0">
                                              <div className="contact-widget m-b-3">
                                                   <h4 className="widget-title font2">PHONE:</h4>
-                                                  <a href="#">Toll Free (123) 456-7890</a>
+                                                  <a href="#">{company?.phone}</a>
                                              </div>
                                         </div>
                                         <div className="col-sm-6 pr-sm-0">
                                              <div className="contact-widget m-b-3">
                                                   <h4 className="widget-title font2">EMAIL:</h4>
                                                   <a href="mailto:mail@example.com">
-                                                       mail@example.com
+                                                       {company?.user_id?.email}
                                                   </a>
                                              </div>
                                         </div>

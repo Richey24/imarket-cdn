@@ -89,12 +89,14 @@ export default function About() {
                          OUR TEAM
                     </h4>
                     <div className=" justify-content-center">
-                         {/* <Slider {...settings}>
+                         <Slider {...settings}>
                               {" "}
                               {minifiedData &&
                                    minifiedData.team &&
-                                   minifiedData.team.map((data) => <TeamInfo {...data} />)}
-                         </Slider> */}
+                                   minifiedData.team.map((data, idx) => (
+                                        <TeamInfo key={idx} {...data} />
+                                   ))}
+                         </Slider>
                     </div>
                     {/* End .row */}
                </div>

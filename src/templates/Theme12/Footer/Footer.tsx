@@ -1,6 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
-const Footer = () => {
+const Footer = (props) => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <div>
                <footer className="footer bg-dark">
@@ -15,20 +18,20 @@ const Footer = () => {
                                                        <span className="contact-info-label">
                                                             Address:
                                                        </span>
-                                                       1234 Street Name, City, US
+                                                       {company?.city + " " + company?.country}
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
                                                             Phone:
                                                        </span>
-                                                       <a href="tel:">(123) 456-7890</a>
+                                                       <a href="tel:">{company?.phone}</a>
                                                   </li>
                                                   <li>
                                                        <span className="contact-info-label">
                                                             Email:
                                                        </span>{" "}
                                                        <a href="mailto:mail@example.com">
-                                                            mail@example.com
+                                                            {company?.user_id?.email}
                                                        </a>
                                                   </li>
                                                   <li>
@@ -66,36 +69,15 @@ const Footer = () => {
                                              <h4 className="widget-title">Customer Service</h4>
 
                                              <ul className="links">
-                                                  <li>
-                                                       <a href="demo4-dark-about.html">About Us</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Cart</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Checkout</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Contact us</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="dashboard.html">Dashboard</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Orders Tracking</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Orders History</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Privacy</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Shipping & Delivery</a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">Wishlist</a>
-                                                  </li>
+                                                  {staticProps?.customerService?.map(
+                                                       (link: any, idx: number) => (
+                                                            <li key={idx}>
+                                                                 <Link href={link.link}>
+                                                                      {link.name}
+                                                                 </Link>
+                                                            </li>
+                                                       ),
+                                                  )}
                                              </ul>
                                         </div>
                                    </div>
@@ -107,13 +89,13 @@ const Footer = () => {
                                              </h4>
 
                                              <div className="tagcloud">
-                                                  <a href="#">Clothes</a>
-                                                  <a href="#">Fashion</a>
-                                                  <a href="#">Hub</a>
-                                                  <a href="#">Shirt</a>
-                                                  <a href="#">Skirt</a>
-                                                  <a href="#">Sports</a>
-                                                  <a href="#">Sweater</a>
+                                                  {staticProps?.popularTags?.map(
+                                                       (link: any, idx: number) => (
+                                                            <Link key={idx} href={link.link}>
+                                                                 {link.name}
+                                                            </Link>
+                                                       ),
+                                                  )}
                                              </div>
                                         </div>
                                    </div>

@@ -13,6 +13,7 @@ import {
 } from "./hooks";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
+import NextNProgress from "nextjs-progressbar";
 import { dummySite } from "./data";
 import { useSession } from "next-auth/react";
 
@@ -65,21 +66,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => {},
+                    () => { },
                );
           }
           if (site && !cart && data) {

@@ -20,7 +20,7 @@ function Login() {
 
      // const [login, { isLoading }] = useLoginMutation();
      const searchParams = useSearchParams();
-     const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+     const callbackUrl = searchParams.get("callbackUrl") || "/profile";
 
      const {
           register,

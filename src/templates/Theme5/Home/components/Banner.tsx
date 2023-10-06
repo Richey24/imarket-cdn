@@ -6,7 +6,7 @@ import Slider from "react-slick";
 const Banner = ({ slides }) => {
      const mappedSlides = slides.map((slide: any) => ({
           background: "#555",
-          imageSrc: slide?.imageUrl !== "" ? slide?.imageUrl : slide1,
+          imageSrc: slide?.imageUrl !== "" ? slide?.imageUrl : "",
           title: "Find the Boundaries. Push Through!",
           saleTitle: "Summer Sale",
           discount: "80% Off",
@@ -30,7 +30,7 @@ const Banner = ({ slides }) => {
                <Slider {...settings}>
                     {mappedSlides.map((slide, next) => {
                          return (
-                              <div className="home-slide banner banner-md-vw">
+                              <div key={next} className="home-slide banner banner-md-vw">
                                    <Image
                                         width={200}
                                         height={200}

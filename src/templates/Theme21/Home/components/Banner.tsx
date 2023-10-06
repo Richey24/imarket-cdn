@@ -1,17 +1,28 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { banners } from "../data";
+import { templateImages } from "@/appProvider/templateImages";
 
-export const Banner = () => {
+export const Banner = ({slides}) => {
+     const mappedSlides = slides.map((slide: any) => ({
+          background: "#555",
+          imageSrc:
+               slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo21.sliderImage.slide1,
+          title: "best price of the year",
+          saleTitle: "top accessories",
+          discount: "50% off",
+          price: 133.99,
+          link: "demo13-shop.html",
+     }));
      return (
           <section className="intro-section">
                <Carousel>
-                    {banners.map((data) => (
+                    {mappedSlides.map((slide, index) => (
                          <Carousel.Item>
                               <div
                                    className="home-slide banner test"
                                    style={{
-                                        background: `url(${data.bannerImg})`,
+                                        background: `url(${slide.imageSrc})`,
                                    }}
                               >
                                    <div
@@ -24,14 +35,14 @@ export const Banner = () => {
                                                   data-animation-name="fadeInUpShorter"
                                                   data-animation-delay={200}
                                              >
-                                                  {data.bannerTitle}
+                                                  {slide.title}
                                              </h2>
                                              <h1
                                                   className="font1 font-weight-bold text-uppercase"
                                                   data-animation-name="fadeInUpShorter"
                                                   data-animation-delay={500}
                                              >
-                                                  {data.bannerSubTitle}
+                                                  {slide.saleTitle}
                                              </h1>
                                              <h2
                                                   className="font1 font-weight-normal text-uppercase mb-3"
@@ -39,13 +50,13 @@ export const Banner = () => {
                                                   data-animation-delay={800}
                                              >
                                                   from
-                                                  <strong>${data.price}</strong>
+                                                  <strong> ${slide.price}</strong>
                                              </h2>
                                              <a
                                                   className="btn btn-dark btn-buy"
                                                   data-animation-name="fadeInUpShorter"
                                                   data-animation-delay={1100}
-                                                  href={data.atag}
+                                                  href={slide.atag}
                                              >
                                                   BUY NOW
                                              </a>

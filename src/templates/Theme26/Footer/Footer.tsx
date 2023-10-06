@@ -1,8 +1,10 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
-const Footer = (): JSX.Element => {
+const Footer = (props): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer className="footer font2">
                <div className="container">
@@ -11,39 +13,43 @@ const Footer = (): JSX.Element => {
                               <div className="col-lg-5">
                                    <a href="demo26.html">
                                         <img
-                                             src={templateImages.logoImage.logo2}
+                                             src={company?.logo}
                                              alt="Logo"
                                              width={111}
                                              height={44}
                                              className="m-b-4"
                                         />
                                    </a>
-                                   <div className="contact-widget mb-2 mb-lg-0">
-                                        <p>
-                                             Lorem ipsum dolor sit amet, consectetur adipiscing
-                                             elit. Praesent pulvinar feugiat quam, vitae aliquam
-                                             urna egestas nec. Phasellus sit amet consequat tortor.
-                                        </p>
-                                        <div className="row ls-0">
-                                             <div className="col-md-2-5">
-                                                  <h6 className="text-uppercase text-white mb-0">
-                                                       Questions?
-                                                  </h6>
-                                                  <h3 className="ls-n-10 text-primary">
-                                                       1-888-123-456
-                                                  </h3>
+                                   <div className="row">
+                                        <div className="col-sm-6 pr-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">ADDRESS:</h4>
+                                                  <a href="#">
+                                                       {" "}
+                                                       {company?.city + " " + company?.country}
+                                                  </a>
                                              </div>
-                                             <div className="col-md-3-5">
-                                                  <h6 className="text-uppercase text-white mb-0">
-                                                       Payment Methods
-                                                  </h6>
-                                                  <img
-                                                       src="assets/images/demoes/demo26/payments.png"
-                                                       alt="payment methods"
-                                                       className="footer-payments m-b-3"
-                                                       width={295}
-                                                       height={32}
-                                                  />
+                                        </div>
+                                        <div className="col-sm-6 pl-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">PHONE:</h4>
+                                                  <a href="#">{company?.phone}</a>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 pr-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">EMAIL:</h4>
+                                                  <a href="mailto:mail@example.com">
+                                                       {company?.user_id?.email}
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 pl-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">
+                                                       WORKING DAYS/HOURS:
+                                                  </h4>
+                                                  <a href="#">Mon - Sun / 9:00AM - 8:00PM</a>
                                              </div>
                                         </div>
                                    </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { sendSubcribeEmail } from "@/api/contact-us.api";
 import toast from "react-hot-toast";
@@ -13,12 +13,14 @@ export const SubcribeEmail = () => {
                toast.success("Message sent successfully");
           },
           onError(error) {
+               console.log("error is here");
                toast.error("An Error occured while trying to send message", {
                     position: "top-right",
                });
           },
      });
      const onSubmit = async () => {
+          // console.log("its me")
           mutation.mutate({ email: email });
      };
      const updateEmail = (e) => {

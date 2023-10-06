@@ -3,6 +3,7 @@ import logo from "../../../assets/images/your-logo.png";
 import payment from "../../../assets/images/demoes/demo21/payment-icon.png";
 
 const Footer = (props: any) => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer>
                <div className="footer">
@@ -61,21 +62,21 @@ const Footer = (props: any) => {
                                                   <div className="contact-widget">
                                                        <h4 className="widget-title">ADDRESS:</h4>
                                                        <a href="#">
-                                                            123 Street Name, City, England
+                                                            {company?.city + " " + company?.country}
                                                        </a>
                                                   </div>
                                              </div>
                                              <div className="col-sm-6 pl-sm-0">
                                                   <div className="contact-widget">
                                                        <h4 className="widget-title">PHONE:</h4>
-                                                       <a href="#">Toll Free (123) 456-7890</a>
+                                                       <a href="#">{company?.phone}</a>
                                                   </div>
                                              </div>
                                              <div className="col-sm-6 pr-sm-0">
                                                   <div className="contact-widget">
                                                        <h4 className="widget-title">EMAIL:</h4>
                                                        <a href="mailto:mail@example.com">
-                                                            mail@example.com
+                                                            {company?.user_id?.email}
                                                        </a>
                                                   </div>
                                              </div>

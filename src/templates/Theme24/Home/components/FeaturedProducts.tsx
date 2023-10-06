@@ -8,15 +8,15 @@ import { Product } from "./Product";
 import { ProductProps } from "../types";
 import { templateImages } from "@/appProvider/templateImages";
 
-const FeaturedProducts: React.FC<{ featuredProducts: ProductProps[] }> = (props) => {
+const FeaturedProducts = ({products, section}) => {
      return (
           <section className="featured-products-container curved-border bg-gray">
                <div className="container">
-                    <h2 className="section-title mb-2">Featured Items</h2>
+                    <h2 className="section-title mb-2">{section}</h2>
                     <div className="row">
-                         {props.featuredProducts.map((featuredProduct, index) => (
+                         {products.map((product, index) => (
                               <div className="col-sm-4" key={index}>
-                                   <Product {...featuredProduct} />
+                                   <Product {...product} />
                               </div>
                          ))}
                     </div>

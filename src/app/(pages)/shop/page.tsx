@@ -179,9 +179,9 @@ export default function Home(props) {
                                    </div>
                               </nav>
                               <div className="row products-group">
-                                   {[...Array(12)].map((val) => {
+                                   {[...Array(12)].map((val, idx) => {
                                         return (
-                                             <div key={val} className="col-xl-3 col-md-4 col-6">
+                                             <div key={idx} className="col-xl-3 col-md-4 col-6">
                                                   <ProductCard
                                                        imageSrc={img}
                                                        productName={"product name"}
@@ -192,7 +192,7 @@ export default function Home(props) {
                                    })}
                               </div>
                          </div>
-                         <div className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
+                         <aside className="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
                               <div className="sidebar-wrapper">
                                    {/* side nav */}
                                    <Accordion allowMultiple allowToggle>
@@ -371,22 +371,23 @@ export default function Home(props) {
                                              </h2>
                                              <AccordionPanel pb={4}>
                                                   <div className="tw-flex tw-gap-4">
-                                                       {["red", "blue", "green"].map((color) => {
-                                                            return (
+                                                       {["red", "blue", "green"].map(
+                                                            (color, idx) => (
                                                                  <div
+                                                                      key={idx}
                                                                       className="tw-h-8 tw-w-8 tw-rounded-sm tw-cursor-pointer"
                                                                       style={{
                                                                            backgroundColor: color,
                                                                       }}
                                                                  ></div>
-                                                            );
-                                                       })}
+                                                            ),
+                                                       )}
                                                   </div>
                                              </AccordionPanel>
                                         </AccordionItem>
                                    </Accordion>
                               </div>
-                         </div>
+                         </aside>
                     </div>
                </div>
           </div>

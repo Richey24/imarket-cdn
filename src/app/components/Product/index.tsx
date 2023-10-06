@@ -53,7 +53,7 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
                          </div>
 
                          <div className="price-box">
-                              <span className="tw-text-2xl font-semibold"> {price}</span>
+                              <span className="tw-text-2xl tw-font-semibold"> {price}</span>
                          </div>
                     </div>
                </div>

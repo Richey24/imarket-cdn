@@ -57,8 +57,9 @@ const RightDrawer = ({ isOpen, onClose }) => {
                                    )}
                               </div>
                               <div className="dropdown-cart-products">
-                                   {cart?.order_lines?.map((order) => (
+                                   {cart?.order_lines?.map((order, idx) => (
                                         <div
+                                             key={idx}
                                              className="product d-flex align-items-center justify-content-center"
                                              style={{
                                                   position: "relative",

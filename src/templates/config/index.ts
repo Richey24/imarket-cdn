@@ -39,6 +39,9 @@ import { theme29TemplateConfig } from "./theme29";
 import { theme26TemplateConfig } from "./theme26";
 import { theme10TemplateConfig } from "./theme10";
 import { theme23TemplateConfig } from "./theme23";
+import { theme24TemplateConfig } from "./theme24";
+import template43Config from "./theme43";
+import template44Config from "./theme44";
 
 export const templateConfig: any = {
      theme1: theme1TemplateConfig,
@@ -47,11 +50,11 @@ export const templateConfig: any = {
      theme4: theme4TemplateConfig,
      theme5: theme5TemplateConfig,
      theme6: theme6TemplateConfig,
-     theme11: theme11TemplateConfig,
      theme7: theme7TemplateConfig,
      theme8: theme8TemplateConfig,
      theme9: theme9TemplateConfig,
      theme10: theme10TemplateConfig,
+     theme11: theme11TemplateConfig,
      theme12: theme12TemplateConfig,
      theme13: theme13TemplateConfig,
      theme14: theme14TemplateConfig,
@@ -63,7 +66,10 @@ export const templateConfig: any = {
      theme20: theme20TemplateConfig,
      theme21: theme21TemplateConfig,
      theme22: theme22TemplateConfig,
+     theme23: theme23TemplateConfig,
+     theme24: theme24TemplateConfig,
      theme25: theme25TemplateConfig,
+     theme26: theme26TemplateConfig,
      theme27: theme27TemplateConfig,
      theme28: theme28TemplateConfig,
      theme29: theme29TemplateConfig,
@@ -80,8 +86,8 @@ export const templateConfig: any = {
      theme40: theme40TemplateConfig,
      theme41: theme41TemplateConfig,
      theme42: theme42TemplateConfig,
-     theme26: theme26TemplateConfig,
-     theme23: theme23TemplateConfig,
+     theme43: template43Config,
+     theme44: template44Config
 };
 
 export const cssImports = (len = 42) => {

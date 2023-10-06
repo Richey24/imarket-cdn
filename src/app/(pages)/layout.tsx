@@ -13,9 +13,9 @@ import Sidebar from "../../templates/shared/SideBar";
 import { setCartSideBarOpen, setSideBarVisibility } from "@/redux/global";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
-import ScrollToTopButton from "../components/ScrollToTopBtn";
 import RightDrawer from "@/templates/shared/CartSideBar";
 import { useSession } from "next-auth/react";
+import ScrollToTopButton from "../components/ScrollToTopButton ";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -160,3 +160,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </html>
      );
 }
+

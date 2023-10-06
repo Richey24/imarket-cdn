@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { newArrivalsProducts } from "../data";
 import { Product } from "./Product";
 
-export const NewProducts = () => {
+export const NewProducts = ({products}) => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
           dots: false,
@@ -17,8 +17,8 @@ export const NewProducts = () => {
      return (
           <div className="no-gutters">
                <Slider {...settings}>
-                    {newArrivalsProducts.map((product) => (
-                         <Product {...product} />
+                    {products.map((product, index) => (
+                         <Product key={`latest-product-${index}`}  {...product} />
                     ))}
                </Slider>
           </div>

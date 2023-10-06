@@ -28,12 +28,13 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
      return (
           <section className="best-product-section">
                <OwlCarousel className="product-panel" {...owlCarouselOptions}>
-                    {products.map((product: Iproduct) => {
+                    {products.map((product: Iproduct, idx) => {
                          return (
                               <Product
                                    imageSrc={product.imageUrl as string}
                                    productName={product.title}
                                    price={product.price}
+                                   key={idx}
                               />
                          );
                     })}

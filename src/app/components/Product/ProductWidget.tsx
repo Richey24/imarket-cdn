@@ -4,6 +4,7 @@ import { ProductProps } from "./product.types";
 import Link from "next/link";
 
 function ProductWidget({
+     id,
      imageSrc,
      productName,
      category,
@@ -15,26 +16,26 @@ function ProductWidget({
      return (
           <div className="product-default left-details product-widget">
                <figure>
-                    <a href="product.html" className={"tw-relative"}>
+                    <Link href={`/${id}`} className={"tw-relative"}>
                          <Image
                               src={imageSrc}
                               width={imageWidth}
                               height={imageHeight}
                               alt="product"
                          />
-                    </a>
+                    </Link>
                </figure>
                <div className="product-details">
                     {showCategory && (
                          <div className="category-list">
-                              <Link href="demo8-shop.html" className="product-category">
+                              <Link href={`/${id}`} className="product-category">
                                    {category}
                               </Link>
                          </div>
                     )}
                     <h3 className="product-title">
                          {" "}
-                         <a href="product.html">{productName}</a>{" "}
+                         <a href={`/${id}`}>{productName}</a>{" "}
                     </h3>
                     <div className="ratings-container">
                          <div className="product-ratings">
