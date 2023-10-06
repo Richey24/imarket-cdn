@@ -33,7 +33,6 @@ export default function GoogleMapComponent({ address }) {
      const [map, setMap] = useState(null);
      const [center, setCenter] = useState({ lat: 0, lng: 0 });
 
-     console.log("===> coordinates", center);
      const { isLoaded } = useJsApiLoader({
           id: "google-map-script",
           googleMapsApiKey: "AIzaSyDc3LRykbLB-y8MuomRUIY0qH5S6xgBLX4",

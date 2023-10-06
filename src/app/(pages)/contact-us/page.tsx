@@ -42,10 +42,10 @@ export default function ContactUs() {
           }
      };
 
-     console.log("===>", site);
+     // console.log("===>", site);
      const pageData = site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage);
      const minifiedData = pageData?.sections[0]?.component.props.static;
-     console.log("minifoed", minifiedData);
+     // console.log("minifoed", minifiedData);
 
      const {
           register,

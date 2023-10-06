@@ -7,11 +7,14 @@ import {
      useGetFeaturedProducts,
      useGetProducts,
      useGetSiteByDomain,
-     useUpdateCart,
-} from "./hook";
+     useCreateCart,
+     useRemoveProductFromCart,
+     useUpdateProductQtyCart,
+} from "./hooks";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import { dummySite } from "./data";
+import { useSession } from "next-auth/react";
 
 export const AppContext = React.createContext<any>(null);
 
@@ -28,10 +31,13 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const getProducts = useGetProducts();
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
-     const updateCart = useUpdateCart();
+     const createCart = useCreateCart();
      const getCart = useGetCart();
+     const { data } = useSession();
+     const removeProduct = useRemoveProductFromCart();
+     const updateProductQtyOnCart = useUpdateProductQtyCart();
+
      console.log("products", products);
-     
      useEffect(() => {
           const domain = getSubDomain(window.location.href as string);
           if (window) {
@@ -76,38 +82,57 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     () => {},
                );
           }
-          if (site && !cart) {
+          if (site && !cart && data) {
                getCart(
-                    "64b0950b3e08f13c705c5b1b",
+                    (data as any)?.user?.id,
                     (data: any) => {
                          setCart(data as any);
                     },
                     () => {},
                );
           }
-     }, [site]);
+     }, [site, data]);
 
-     const handleAddToCart = async (product: any, onDone: () => void) => {
-          console.log("log", product);
-          if (!cart) {
+     const handleAddToCart = async (productId: any, price: number | string, onDone: () => void) => {
+          if (cart) {
                return addToCart(
-                    site?.company?._id,
-                    "64b0950b3e08f13c705c5b1b",
-                    product?.id,
+                    {
+                         companyId: site?.company?.company_id,
+                         orderId: cart?.id,
+                         productId,
+                         qty: 1,
+                         price_unit: price,
+                    },
                     () => {
-                         onDone?.();
+                         getCart(
+                              (data as any)?.user?.id,
+                              (data: any) => {
+                                   setCart(data as any);
+                                   onDone?.();
+                              },
+                              () => {},
+                         );
                     },
                     () => {
                          onDone?.();
                     },
                );
           } else {
-               updateCart(
-                    cart?._id,
-                    [product?.id],
-                    "64b0950b3e08f13c705c5b1b",
+               createCart(
+                    {
+                         companyId: site?.company?.company_id,
+                         userId: (data as any)?.user?.id,
+                         products: [{ productId, qty: 1, price_unit: price }],
+                    },
                     () => {
-                         onDone?.();
+                         getCart(
+                              (data as any)?.user?.id,
+                              (data: any) => {
+                                   setCart(data as any);
+                                   onDone?.();
+                              },
+                              () => {},
+                         );
                     },
                     () => {
                          onDone?.();
@@ -116,8 +141,63 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           }
      };
 
+     const handleUpdateProductQtyOnCart = (
+          orderLineId: number,
+          qty: number,
+          onDone: () => void,
+     ) => {
+          updateProductQtyOnCart(
+               orderLineId,
+               qty,
+               () => {
+                    getCart(
+                         (data as any)?.user?.id,
+                         (data: any) => {
+                              setCart(data as any);
+                              onDone?.();
+                         },
+                         () => {},
+                    );
+               },
+               () => {
+                    onDone?.();
+               },
+          );
+     };
+
+     const handleRemoveProductFromOrder = (orderLineId: number, onDone: () => void) => {
+          removeProduct(
+               orderLineId,
+               () => {
+                    getCart(
+                         (data as any)?.user?.id,
+                         (data: any) => {
+                              setCart(data as any);
+                              onDone?.();
+                         },
+                         () => {},
+                    );
+               },
+               () => {
+                    onDone?.();
+               },
+          );
+     };
+
      return (
-          <AppContext.Provider value={{ site, loading, categories, products, featuredProducts }}>
+          <AppContext.Provider
+               value={{
+                    site,
+                    loading,
+                    categories,
+                    products,
+                    featuredProducts,
+                    cart,
+                    handleAddToCart,
+                    handleRemoveProductFromOrder,
+                    handleUpdateProductQtyOnCart,
+               }}
+          >
                {children}
           </AppContext.Provider>
      );

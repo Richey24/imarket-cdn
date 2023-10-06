@@ -29,7 +29,6 @@ const ShopByCategory: React.FC<Icategory> = ({ categoryName, count }) => {
 };
 
 const BannerCategory = ({ categories }): JSX.Element => {
-     console.log({ categories });
 
      const owlCarouselOptions = {
           dots: false,

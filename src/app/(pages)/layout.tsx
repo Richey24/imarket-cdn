@@ -25,18 +25,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           (state: RootState) => state.general,
      );
      const { data } = useSession();
-     const { site, loading, setLoading, categories, products } = useContext<{
+     const { site, loading, setLoading, categories, products, cart } = useContext<{
           site: SitesField;
           loading: boolean;
           setLoading: React.Dispatch<React.SetStateAction<boolean>>;
           categories: any;
           products: any;
+          cart: any;
      }>(AppContext);
      const [styleLoader, setStyleLoader] = useState(false);
      const [menuBtn, setMenuBtn] = useState("template-menu");
      const [showTopAds, setShowTopAds] = useState(true);
 
-     // console.log("site.theme.theme ", site);
      useEffect(() => {
           if (site) {
                // setStyleLoader(true);
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }
      }, [site]);
 
-     console.log(site, loading);
+     // console.log(site, loading);
 
      if (!site && loading) {
           return <PlaceholderLayout />;
@@ -61,7 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const Footer = defualtTemplate?.["footer"];
      const topAds = (site as any)?.theme?.topAds?.component?.props?.static;
 
-     console.log("topads", topAds);
      const handleSideBarClose = () => {
           dispatch(setSideBarVisibility());
      };
@@ -131,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                    company: site.company,
                                    categories,
                                    loggedInData: data,
+                                   cart,
                               }}
                          />
 

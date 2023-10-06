@@ -163,11 +163,9 @@ export const Home = (props: any) => {
                                                                       <Product
                                                                            key={`latest-product-${index}`}
                                                                            {...product}
-                                                                           handleAddToCart={async () => {
-                                                                                return await handleAddToCart(
-                                                                                     product,
-                                                                                );
-                                                                           }}
+                                                                           handleAddToCart={
+                                                                                handleAddToCart
+                                                                           }
                                                                       />
                                                                  ))}
                                                   </div>
@@ -196,11 +194,9 @@ export const Home = (props: any) => {
                                                                            <Product
                                                                                 key={`latest-product-${index}`}
                                                                                 {...product}
-                                                                                handleAddToCart={async () => {
-                                                                                     return await handleAddToCart(
-                                                                                          product,
-                                                                                     );
-                                                                                }}
+                                                                                handleAddToCart={
+                                                                                     handleAddToCart
+                                                                                }
                                                                            />
                                                                       ))}
                                                        </div>

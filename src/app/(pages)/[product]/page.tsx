@@ -5,7 +5,7 @@ import ProductWidget from "@/app/components/Product/ProductWidget";
 import { Button, HStack, Input, useNumberInput } from "@chakra-ui/react";
 
 export default function ProductPage(props) {
-     console.log({ props });
+     // console.log({ props });
      const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } = useNumberInput({
           step: 0.01,
           defaultValue: 1.53,

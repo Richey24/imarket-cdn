@@ -1,7 +1,12 @@
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { ProductProps } from "../types";
 import Link from "next/link";
+import { Spinner } from "react-bootstrap";
+import { CircularProgress } from "@chakra-ui/react";
+import { useAddWishlist } from "@/appProvider/hooks/dashboard/wishlist";
+import { useSession } from "next-auth/react";
+import { toast } from "react-hot-toast";
 
 export const Product: React.FC<ProductProps> = ({
      id,
@@ -14,6 +19,33 @@ export const Product: React.FC<ProductProps> = ({
      oldPrice,
      handleAddToCart,
 }) => {
+     const [cartLoading, setCartLoading] = useState(false);
+     const [wishLoading, setWishLoading] = useState(false);
+     const addToWishlist = useAddWishlist();
+     const { data } = useSession();
+
+     const handleAddToWishlist = () => {
+          setWishLoading(true);
+          if (data) {
+               addToWishlist(
+                    {
+                         userId: (data as any)?.user?.id,
+                         productId: id,
+                         price: productPrice,
+                         display_name: productTitle,
+                    },
+                    () => {
+                         setWishLoading(false);
+                    },
+                    () => {
+                         setWishLoading(false);
+                    },
+               );
+          } else {
+               toast.error("Login to Continue");
+          }
+     };
+
      return (
           <div className="col-6 col-sm-4">
                <div className="product-default inner-quickview inner-icon">
@@ -33,12 +65,28 @@ export const Product: React.FC<ProductProps> = ({
                               <span className="product-label label-sale">-30%</span>
                          </div>
                          <div className="btn-icon-group">
-                              <a
-                                   onClick={handleAddToCart}
-                                   className="btn-icon btn-add-cart product-type-simple"
-                              >
-                                   <i className="icon-shopping-cart" />
-                              </a>
+                              {cartLoading ? (
+                                   <CircularProgress
+                                        isIndeterminate
+                                        color="green"
+                                        width={30}
+                                        height={30}
+                                        size={30}
+                                   />
+                              ) : (
+                                   <a
+                                        onClick={() => {
+                                             setCartLoading(true);
+                                             handleAddToCart(id, productPrice, () =>
+                                                  setCartLoading(false),
+                                             );
+                                        }}
+                                        className="btn-icon btn-add-cart product-type-simple"
+                                   >
+                                        <i className="icon-shopping-cart" />
+                                   </a>
+                              )}
+                              {/* <Spinner /> */}
                          </div>
                          <Link href={`/${id}`} className="btn-quickview" title="Quick View">
                               Quick View
@@ -51,21 +99,27 @@ export const Product: React.FC<ProductProps> = ({
                                         {productCategory}
                                    </a>
                               </div>
-                              <a className="btn-icon-wish">
-                                   <i className="icon-wishlist-2" />
-                              </a>
+                              {wishLoading ? (
+                                   <CircularProgress
+                                        isIndeterminate
+                                        color="green"
+                                        width={30}
+                                        height={30}
+                                        size={30}
+                                   />
+                              ) : (
+                                   <a
+                                        className="btn-icon-wish"
+                                        style={{ cursor: "pointer" }}
+                                        onClick={handleAddToWishlist}
+                                   >
+                                        <i className="icon-wishlist-2" />
+                                   </a>
+                              )}
                          </div>
                          <h3 className="product-title">
                               <Link href={`/${id}`}>{productTitle}</Link>
                          </h3>
-                         <div className="ratings-container">
-                              <div className="product-ratings">
-                                   <span className="ratings" style={{ width: "100%" }} />
-                                   {/* End .ratings */}
-                                   <span className="tooltiptext tooltip-top" />
-                              </div>
-                              {/* End .product-ratings */}
-                         </div>
                          {/* End .product-container */}
                          <div className="price-box">
                               {oldPrice && (

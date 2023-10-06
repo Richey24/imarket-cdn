@@ -30,11 +30,10 @@ function Login() {
      } = useForm({
           resolver: yupResolver(schema),
      });
+     
      const onSubmit = async (data: LoginRequest) => {
           setLoading(true);
           try {
-               console.log(data);
-
                const res = await signIn("credentials", {
                     redirect: false,
                     email: data.email,
@@ -44,7 +43,6 @@ function Login() {
                //uahomorejoice@gmail.com
                //Rejoice11#
 
-               console.log(res);
                if (!res?.error) {
                     router.push(callbackUrl);
                } else {

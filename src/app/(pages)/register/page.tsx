@@ -25,7 +25,6 @@ function Register() {
      const onSubmit = async (data: RegisterRequest) => {
           try {
                const response = await register({ ...data, domain: domain }).unwrap();
-               console.log("response", response);
 
                if (response.status) {
                     toast.success("Signup successful");

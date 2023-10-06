@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import CartButton from "./CartButton";
 
-function HeaderIcons({ loggedInData }) {
+function HeaderIcons({ loggedInData, cart }) {
      return (
           <span className="tw-flex">
                {!loggedInData && (
@@ -11,11 +11,11 @@ function HeaderIcons({ loggedInData }) {
                     </Link>
                )}
 
-               <Link href="wishlist.html" className="header-icon" title="wishlist">
+               <Link href="/dashboard/wishlist" className="header-icon" title="wishlist">
                     <i className="icon-wishlist-2"></i>
                </Link>
                {/* cart button */}
-               <CartButton loggedInData={loggedInData} />
+               <CartButton loggedInData={loggedInData} cart={cart} />
           </span>
      );
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useSession } from "next-auth/react";
+import { AddToCard, CreateCard } from "../types";
 
 export const useGetSiteByDomain = () => {
      return async (domain: string, onSuccess: (data: any) => void, onError: () => void) => {
@@ -66,19 +67,14 @@ export const useGetCategories = () => {
 };
 
 export const useAddToCart = () => {
-     return async (
-          companyId: string,
-          userId: string,
-          items: any,
-          onSuccess: () => void,
-          onError: () => void,
-     ) => {
+     return async (payload: AddToCard, onSuccess: () => void, onError: () => void) => {
           try {
-               const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/carts`, {
-                    companyId,
-                    userId,
-                    items,
-               });
+               const response = await axios.post(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/orders/product`,
+                    {
+                         ...payload,
+                    },
+               );
                console.log("response", response);
                if (response.data.status) {
                     onSuccess();
@@ -91,20 +87,14 @@ export const useAddToCart = () => {
 };
 
 export const useGetCart = () => {
-     const { status, data } = useSession();
      return async (userId: string, onSuccess: (data: any) => void, onError: () => void) => {
           try {
-               console.log("loginData", data);
-               const headers = {
-                    Authorization: `Bearer ${(data as any)?.user?.token?.accessToken}`,
-               };
-
-               const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/orders`, {
-                    headers,
-               });
-               console.log("get-response", response);
+               const response = await axios.get(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/orders/customer/${userId}`,
+               );
+               // console.log("get-response", response);
                if (response.data.status) {
-                    onSuccess(response.data.data);
+                    onSuccess(response.data.order);
                }
           } catch (err) {
                onError();
@@ -113,19 +103,70 @@ export const useGetCart = () => {
      };
 };
 
-export const useUpdateCart = () => {
+export const useCreateCart = () => {
+     return async (payload: CreateCard, onSuccess: () => void, onError: () => void) => {
+          try {
+               const response = await axios.post(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/orders/create`,
+                    {
+                         ...payload,
+                    },
+               );
+               if (response.data.status) {
+                    onSuccess();
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
+
+export const useRemoveProductFromCart = () => {
+     return async (orderLineId: number, onSuccess: () => void, onError: () => void) => {
+          try {
+               const response = await axios.delete(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/orders/product/${orderLineId}`,
+               );
+               if (response.data.status) {
+                    onSuccess();
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
+
+export const useUpdateProductQtyCart = () => {
      return async (
-          cartId: string,
-          items: any,
-          userId: string,
+          orderLineId: number,
+          qty: number,
           onSuccess: () => void,
           onError: () => void,
      ) => {
           try {
-               const response = await axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/carts/`, {
-                    cartId,
-               });
-               console.log("get-response", response);
+               const response = await axios.put(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/orders/product/qty/${orderLineId}`,
+                    { qty },
+               );
+               if (response.data.status) {
+                    onSuccess();
+               }
+          } catch (err) {
+               onError();
+               console.log(err);
+          }
+     };
+};
+
+export const useChangeOrderStatus = () => {
+     return async (orderId: number, status: string, onSuccess: () => void, onError: () => void) => {
+          try {
+               const response = await axios.put(
+                    `${process.env.NEXT_PUBLIC_BACKEND_URL}/orders/status`,
+                    { newStatus: status, orderId: orderId },
+               );
                if (response.data.status) {
                     onSuccess();
                }

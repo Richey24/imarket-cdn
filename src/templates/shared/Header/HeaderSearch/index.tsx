@@ -12,6 +12,7 @@ function HeaderSearch({
      showCategory = true,
      showPhone = true,
      loggedInData,
+     cart,
 }: {
      company: any;
      categories: any;
@@ -20,6 +21,7 @@ function HeaderSearch({
      showCategory?: boolean;
      showPhone?: boolean;
      loggedInData: any;
+     cart: any;
 }): JSX.Element {
      return (
           <div className={`header-middle sticky-header ${className}`}>
@@ -79,7 +81,7 @@ function HeaderSearch({
                               </div>
                          )}
 
-                         <HeaderIcons loggedInData={loggedInData} />
+                         <HeaderIcons loggedInData={loggedInData} cart={cart} />
                     </div>
                </div>
           </div>

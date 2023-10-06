@@ -37,7 +37,6 @@ export const options: NextAuthOptions = {
                     if (data) {
                          return { ...data.user, token: data.token };
                     } else {
-                         console.log("check your credentials");
                          return null;
                     }
                },

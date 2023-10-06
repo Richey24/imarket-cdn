@@ -78,7 +78,7 @@ function Dashboard() {
 
                     <div className="col-6 col-md-4">
                          <div className="feature-box p-12 text-center border border-solidtext-center pb-4">
-                              <Link href="/wishlist/">
+                              <Link href="/dashboard/wishlist/">
                                    <i className="sicon-heart"></i>
                               </Link>
                               <div className="mb-2 uppercase">

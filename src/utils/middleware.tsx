@@ -6,8 +6,7 @@ export const withAuth = (WrappedComponent) => {
      const Wrapper = (props) => {
           const { status, data } = useSession();
           const router = useRouter();
-          console.log("status", status, data);
-
+          console.log("me", data);
           useEffect(() => {
                if (status === "unauthenticated") {
                     router.push("/login");

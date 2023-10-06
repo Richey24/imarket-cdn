@@ -23,6 +23,7 @@ import "../assets/vendor/simple-line-icons/css/simple-line-icons.min.css";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import StyledJsxRegistry from "@/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,10 +57,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                <SessionProvider>
                     <Providers>
                          <ReactQueryProviders>
-                              <AppProvider>
-                                   {children}
-                                   <Toaster toastOptions={{ className: "tw-text-2xl" }} />
-                              </AppProvider>
+                              <StyledJsxRegistry>
+                                   <AppProvider>
+                                        {children}
+                                        <Toaster toastOptions={{ className: "tw-text-2xl" }} />
+                                   </AppProvider>
+                              </StyledJsxRegistry>
                          </ReactQueryProviders>
                     </Providers>
                </SessionProvider>

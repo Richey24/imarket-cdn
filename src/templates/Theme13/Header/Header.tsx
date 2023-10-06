@@ -5,8 +5,7 @@ import SocialIcons from "@/templates/shared/SocialIcons";
 import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
 
 export default function Header(props: any) {
-     const { company, static: staticProps, categories, loggedInData } = props.props;
-     console.log("loggedInData", loggedInData);
+     const { company, static: staticProps, categories, loggedInData, cart } = props.props;
      return (
           <div style={{ width: "100%" }}>
                <header className="header">
@@ -62,7 +61,9 @@ export default function Header(props: any) {
                                                        <Link href="/dashboard">My Account</Link>
                                                   </li>
                                                   <li>
-                                                       <Link href="/wishlist">My Wishlist</Link>
+                                                       <Link href="/dashboard/wishlist">
+                                                            My Wishlist
+                                                       </Link>
                                                   </li>
                                                   <li>
                                                        <Link href="/cart">Cart</Link>
@@ -91,6 +92,7 @@ export default function Header(props: any) {
                          company={company}
                          categories={categories}
                          loggedInData={loggedInData}
+                         cart={cart}
                     />
 
                     <div

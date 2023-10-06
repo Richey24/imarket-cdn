@@ -22,7 +22,7 @@ export default function About() {
 
      const pageData = site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage);
      const minifiedData = pageData?.sections[0]?.component.props.static;
-     console.log("pageData", minifiedData);
+     // console.log("pageData", minifiedData);
 
      const img1 =
           "https://images.unsplash.com/photo-1689481172416-dae28c4a08b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=822&q=80";

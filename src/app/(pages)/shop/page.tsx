@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 
 export default function Home(props) {
-     console.log({ props });
      const img =
           "https://images.unsplash.com/photo-1689631281436-0123773c8cff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
      return (

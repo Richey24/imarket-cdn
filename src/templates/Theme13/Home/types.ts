@@ -9,7 +9,7 @@ export interface ProductProps {
      productTitle: string;
      productPrice: number;
      oldPrice?: number;
-     handleAddToCart: () => any;
+     handleAddToCart: (id: number, productPrice: string | number, done: () => void) => any;
 }
 
 export interface ProductWidgetProps {
