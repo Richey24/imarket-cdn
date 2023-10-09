@@ -16,6 +16,7 @@ const MostPopularProducts: React.FC<{ mostPopularProducts: ProductProps[] }> = (
           accessibility: true,
           className: "",
      };
+
      return (
           <section className="popular-products">
                <div className="container">
@@ -24,7 +25,7 @@ const MostPopularProducts: React.FC<{ mostPopularProducts: ProductProps[] }> = (
                          data-animation-name="fadeInUpShorter"
                          data-animation-delay={200}
                     >
-                         Most Popular Products
+                         Featured Products
                     </h2>
                     <div className="row">
                          <div

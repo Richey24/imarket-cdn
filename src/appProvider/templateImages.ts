@@ -1719,7 +1719,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo12-product/small-images/product-12.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo12-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo12-product/banner/bg-1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo12-product/banner/banner-1.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo12-product/banner/banner-2.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo12-product/banner/banner-3.jpg",

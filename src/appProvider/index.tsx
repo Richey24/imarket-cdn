@@ -20,6 +20,11 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [products, setProducts] = useState(null);
      const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
+     const [brandcolor, setBrandcolor] = useState({
+          primaryColor: "#3498db",
+          secondaryColor: "#2ecc71",
+     });
+
      const addToCart = useAddToCart();
      const getSiteByDomain = useGetSiteByDomain();
      const getProducts = useGetProducts();
@@ -53,21 +58,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => { },
+                    () => {},
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => { },
+                    () => {},
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => { },
+                    () => {},
                );
           }
      }, [site]);
@@ -75,6 +80,33 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const handleAddToCart = (product: any) => {
           console.log("log");
      };
+
+     React.useEffect(() => {
+          if (site) {
+               console.log({ brandcolor: site.company.brandcolor });
+               const colors = site.company.brandcolor;
+               setBrandcolor(() => {
+                    return { primaryColor: colors[0].hex, secondaryColor: colors[1].hex };
+               });
+          }
+     }, [site]);
+     useEffect(() => {
+          if (window) {
+               document.documentElement.style.setProperty(
+                    "--primary-color",
+                    brandcolor.primaryColor,
+               );
+               document.documentElement.style.setProperty(
+                    "--secondary-color",
+                    brandcolor.secondaryColor,
+               );
+
+               const root = document.documentElement;
+
+               root.style.setProperty("--primary", brandcolor.primaryColor);
+               root.style.setProperty("--secondary", brandcolor.secondaryColor);
+          }
+     }, [brandcolor]);
 
      return (
           <AppContext.Provider

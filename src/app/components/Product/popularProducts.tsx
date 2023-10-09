@@ -38,7 +38,7 @@ export default function popularProducts() {
                                    <Link
                                         key={product.id}
                                         href={`/${product.id}`}
-                                        className="tw-no-underline hover:tw-no-underline	"
+                                        className="tw-no-underline hover:tw-no-underline !tw-text-gray-800"
                                    >
                                         <div className="tw-max-w-xs tw-mx-auto tw-bg-white tw-rounded tw-transition tw-ease-in-out tw-overflow-hidden tw-shadow-md hover:tw-shadow-lg tw-m-4">
                                              <div className="tw-relative tw-h-40">
@@ -61,7 +61,7 @@ export default function popularProducts() {
                                                        Lorem ipsum dolor sit amet consectetur
                                                        adipisicing elit. Magnam, delectus.
                                                   </p>
-                                                  <div className="tw-font-bold tw-text-xl mt-4">
+                                                  <div className="text-primary tw-font-bold tw-text-xl mt-4">
                                                        ${product.standard_price}
                                                   </div>
                                              </div>
