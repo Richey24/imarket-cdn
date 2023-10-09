@@ -40,7 +40,7 @@ export const InfoBoxesContainer: React.FC = () => {
      return (
           <div className="info-section mb-3 row row-joined">
                {infoBoxItems.map((item, index) => (
-                    <div className="col-sm-4">
+                    <div className="col-sm-4" key={index}>
                          <InfoBox key={index} {...item} />
                     </div>
                ))}

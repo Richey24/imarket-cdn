@@ -72,6 +72,8 @@ export default function Header(props: any) {
                          categories={categories}
                          className="w-100"
                          menuBtnTextColor="text-white"
+                         loggedInData={{}}
+                         cart={{}}
                     />
                </div>
           </header>

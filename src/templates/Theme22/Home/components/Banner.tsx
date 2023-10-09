@@ -13,7 +13,7 @@ export const Banner = ({ sliders }) => {
                                    <Carousel>
                                         {" "}
                                         {sliders.map((data, index) => (
-                                             <Carousel.Item>
+                                             <Carousel.Item key={index}>
                                                   <div className="home-slide home-slide-1 banner">
                                                        <Image
                                                             className="slide-bg"
@@ -66,8 +66,8 @@ export const Banner = ({ sliders }) => {
                          <div className="col-lg-3 mb-2">
                               <div className="featured-products-slider  owl-theme dot-inside dots-small">
                                    <Carousel>
-                                        {featuredProductSliders.map((data) => (
-                                             <Carousel.Item>
+                                        {featuredProductSliders.map((data, idx) => (
+                                             <Carousel.Item key={idx}>
                                                   {" "}
                                                   <div className="product-default count-down">
                                                        <h3 className="product-name">Flash Deals</h3>

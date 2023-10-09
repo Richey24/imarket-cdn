@@ -71,7 +71,7 @@ function Category() {
                                         </figure>
 
                                         <div className="banner-layer banner-layer-top">
-                                             <h3>Women's Bags &amp; Purses</h3>
+                                             <h3>{"Women's"} Bags &amp; Purses</h3>
                                              <h4>
                                                   <del className="">20%</del>
                                                   <strong className="text-primary">30%</strong>
@@ -99,7 +99,7 @@ function Category() {
                                         </figure>
 
                                         <div className="banner-layer banner-layer-top">
-                                             <h3>Women's Shoes</h3>
+                                             <h3>{"Women's"} Shoes</h3>
                                         </div>
 
                                         <div className="banner-layer banner-layer-circle">
@@ -130,7 +130,7 @@ function Category() {
                                         </figure>
 
                                         <div className="banner-layer banner-layer-top">
-                                             <h3>Men's Leather Belt</h3>
+                                             <h3>{"Men's"} Leather Belt</h3>
                                              <h4 className="right-text">
                                                   <del>30%</del>
                                                   <strong className="text-primary">50%</strong>

@@ -12,7 +12,7 @@ export default function PopularProducts() {
                     {/* product-1 */}
                     {latestProducts.map((product, index) => {
                          return (
-                              <div className="col-lg-3 col-sm-6 pb-5">
+                              <div className="col-lg-3 col-sm-6 pb-5" key={`product-${index}`}>
                                    <ProductWidget key={`product-${index}`} {...product} />
                               </div>
                          );

@@ -89,6 +89,8 @@ const Header = (props: any) => {
                     categories={categories}
                     className="text-white"
                     menuBtnTextColor={"text-white"}
+                    loggedInData={{}}
+                    cart={{}}
                />
                <div className="header-bottom sticky-header">
                     <div className="container">

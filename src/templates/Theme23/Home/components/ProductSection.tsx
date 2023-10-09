@@ -20,8 +20,8 @@ export const ProductSection = ({ featuredProducts }) => {
                <Slider {...settings}>
                     {featuredProducts
                          .sort((a: any, b: any) => b.__last_update - a.__last_update)
-                         .map((product) => (
-                              <Product {...product} />
+                         .map((product, idx) => (
+                              <Product key={idx} {...product} />
                          ))}
                </Slider>
           </div>

@@ -22,7 +22,7 @@ const Banner = ({ slides }) => {
           <div className="intro-section mb-3">
                <Carousel>
                     {mappedSlides.map((slide, index) => (
-                         <Carousel.Item>
+                         <Carousel.Item key={index}>
                               <div>
                                    <div
                                         className="intro-slide intro-slide-1"

@@ -23,9 +23,10 @@ function TabContent() {
                className="products-slider owl-carousel owl-theme show-nav-hover nav-outer nav-image-center"
                {...owlCarouselOptions}
           >
-               {latestProducts.map((product) => {
+               {latestProducts.map((product, idx) => {
                     return (
                          <Product
+                              key={idx}
                               imageSrc={product.imageUrl as string}
                               productName={product.title}
                               price={product.price}

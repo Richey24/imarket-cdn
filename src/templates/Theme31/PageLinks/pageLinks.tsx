@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const pageLinks = () => {
+const PageLinks = () => {
      const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
      const handleDropdownToggle = () => {
@@ -52,4 +52,4 @@ const pageLinks = () => {
      );
 };
 
-export default pageLinks;
+export default PageLinks;

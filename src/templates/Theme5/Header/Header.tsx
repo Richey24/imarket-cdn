@@ -20,7 +20,12 @@ const Header = (props: any) => {
                     className="header"
                >
                     <HeaderLinks staticProps={staticProps} />
-                    <HeaderSearch company={company} categories={categories} />
+                    <HeaderSearch
+                         company={company}
+                         categories={categories}
+                         loggedInData={{}}
+                         cart={{}}
+                    />
                     <div className="container bg-primary">
                          <PageLinks staticProps={staticProps} />
                     </div>

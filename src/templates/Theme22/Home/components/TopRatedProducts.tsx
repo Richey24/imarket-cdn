@@ -33,8 +33,8 @@ export const TopRatedProducts = () => {
                                         }}
                                    >
                                         <Slider {...settings}>
-                                             {bestSellers.map((product) => (
-                                                  <div>
+                                             {bestSellers.map((product, idx) => (
+                                                  <div key={idx}>
                                                        <Product
                                                             imageSrc={product.productImageUrl}
                                                             productName={product.productTitle}

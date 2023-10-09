@@ -21,7 +21,7 @@ const owlCarouselOptions = {
 export default function WeekSpecials() {
      return (
           <section className="special-section tw-py-16">
-               <h2 className="section-title">This Week's Specials</h2>
+               <h2 className="section-title">This {"Week's"} Specials</h2>
                <p className="section-info font2">
                     All our new arrivals in a exclusive brand selection
                </p>

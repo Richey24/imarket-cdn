@@ -196,9 +196,12 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                     </div>
                     <div className="col-12 col-sm-6 col-lg-8">
                          <div className="row">
-                              {products.map((product: Iproduct) => {
+                              {products.map((product: Iproduct, idx) => {
                                    return (
-                                        <div className="col-6 col-sm-6 col-md-3  height-xl">
+                                        <div
+                                             key={idx}
+                                             className="col-6 col-sm-6 col-md-3  height-xl"
+                                        >
                                              <Product
                                                   imageSrc={product.imageUrl as string}
                                                   productName={product.title}

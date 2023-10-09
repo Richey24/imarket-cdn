@@ -11,11 +11,11 @@ function CategorySelect({ categories }): JSX.Element {
                               {!category.parent_id && (
                                    <option value={category.id}>{category.name}</option>
                               )}
-                              {category.child_id.map((id) => {
+                              {category.child_id.map((id, idx) => {
                                    const child = categories.find((cat) => cat.id === id);
                                    if (child) {
                                         return (
-                                             <option value={child.id}>
+                                             <option value={child.id} key={idx}>
                                                   - {capitalize(child.name)}
                                              </option>
                                         );

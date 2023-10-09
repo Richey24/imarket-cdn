@@ -12,8 +12,8 @@ export const MiniBanner = () => {
                          Offers and Deals
                     </h2>
                     <div className="row">
-                         {offerAndDeals.map((data) => (
-                              <div className={`col-md-${data.MdSize} mb-2`}>
+                         {offerAndDeals.map((data, idx) => (
+                              <div className={`col-md-${data.MdSize} mb-2`} key={idx}>
                                    <div
                                         className={`banner ${data.bannerStyles} h-100 appear-animate`}
                                         data-animation-name="fadeIn"

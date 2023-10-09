@@ -12,7 +12,14 @@ const Header = (props: any) => {
                     {/* sub */}
                     <HeaderLinks2 staticProps={staticProps} className="bg-primary text-uppercase" />
                     {/* search */}
-                    <HeaderSearch company={company} categories={categories} className="text-dark" />
+                    <HeaderSearch
+                         menuBtnTextColor="red"
+                         company={company}
+                         categories={categories}
+                         className="text-dark"
+                         loggedInData={{}}
+                         cart={{}}
+                    />
                     {/* End .header-middle */}
                </header>
                {/* End .header */}

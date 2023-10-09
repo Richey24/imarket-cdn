@@ -12,7 +12,10 @@ export const TopRatedProducts = ({ products, productDatas, section, section2, se
                                    .sort((a: any, b: any) => b.__last_update - a.__last_update)
                                    .filter((_, idx) => idx < 3)
                                    .map((product, index) => (
-                                        <ProductWidget key={`featured-product-${index}`} {...product} />
+                                        <ProductWidget
+                                             key={`featured-product-${index}`}
+                                             {...product}
+                                        />
                                    ))}
                          </div>
                          <div className="col-md-6 col-lg-3">
@@ -21,13 +24,16 @@ export const TopRatedProducts = ({ products, productDatas, section, section2, se
                                    .sort((a: any, b: any) => b.__last_update - a.__last_update)
                                    .filter((_, idx) => idx < 3)
                                    .map((product, index) => (
-                                        <ProductWidget key={`latest-product-${index}`} {...product} />
+                                        <ProductWidget
+                                             key={`latest-product-${index}`}
+                                             {...product}
+                                        />
                                    ))}
                          </div>
                          <div className="col-md-6 col-lg-3">
                               <h4 className="section-sub-title ls-n-10 pb-3 m-b-4">{section3}</h4>
-                              {onSaleProduct.map((product) => (
-                                   <ProductWidget {...product} />
+                              {onSaleProduct.map((product, idx) => (
+                                   <ProductWidget key={idx} {...product} />
                               ))}
                          </div>
                          <div className="col-md-6 col-lg-3">

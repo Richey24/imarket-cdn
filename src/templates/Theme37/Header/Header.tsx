@@ -16,10 +16,7 @@ export default function Header(props: any) {
           <header className="header">
                <div className="header-top">
                     <div className="container">
-                         <div className="header-left d-none d-sm-block">
-                              
-                              {/* End .info-box */}
-                         </div>
+                         <div className="header-left d-none d-sm-block">{/* End .info-box */}</div>
 
                          <div className="header-right">
                               <Links />
@@ -181,8 +178,8 @@ export default function Header(props: any) {
                                              Categories
                                         </a>
                                    </li>
-                                   {CatData.map((data) => (
-                                        <li className="thumb-item col-1">
+                                   {CatData.map((data, idx) => (
+                                        <li className="thumb-item col-1" key={idx}>
                                              <a href={data.link} className=" has-preview">
                                                   <span
                                                        className="thumb-info-image fixed-image"

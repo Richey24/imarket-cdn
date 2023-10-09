@@ -3,7 +3,7 @@ import React from "react";
 import { templateImages } from "@/appProvider/templateImages";
 import { bestSellers, electronics } from "../data";
 import { Product } from "./Product";
- 
+
 export const Electronics = () => {
      return (
           <section className="electronics-container appear-animate">
@@ -67,8 +67,11 @@ export const Electronics = () => {
                          </div>
                          <div className="col-lg-7">
                               <div className="row">
-                                   {electronics.map((product) => (
-                                        <div className="grid-item col-sm-4 col-md-3 mt-1 ">
+                                   {electronics.map((product, idx) => (
+                                        <div
+                                             key={idx}
+                                             className="grid-item col-sm-4 col-md-3 mt-1 "
+                                        >
                                              <Product {...product} />
                                         </div>
                                    ))}
