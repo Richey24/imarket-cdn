@@ -16,20 +16,20 @@ export default function PopularProducts() {
                     className={"products-slider"}
                     isResponsive={true}
                     container={false}
-                    responsive={{
-                         "480": {
-                              items: 2,
-                         },
-                         "768": {
-                              items: 3,
-                         },
-                         "992": {
-                              items: 4,
-                         },
-                         "1440": {
-                              items: 6,
-                         },
-                    }}
+                    // responsive={{
+                    //      "480": {
+                    //           items: 2,
+                    //      },
+                    //      "768": {
+                    //           items: 3,
+                    //      },
+                    //      "992": {
+                    //           items: 4,
+                    //      },
+                    //      "1440": {
+                    //           items: 6,
+                    //      },
+                    // }}
                >
                     {products &&
                          products.length > 0 &&

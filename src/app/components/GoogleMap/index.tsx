@@ -7,7 +7,10 @@ const containerStyle = {
      height: "30rem",
 };
 const geocodeAddress = async (address: string): Promise<{ lat: number; lng: number }> => {
-     const geocoder = new window.google.maps.Geocoder();
+     let geocoder;
+     if (typeof window !== "undefined") {
+          geocoder = new window.google.maps.Geocoder();
+     }
 
      return new Promise<{ lat: number; lng: number }>((resolve, reject) => {
           geocoder.geocode({ address }, (results, status) => {
@@ -39,7 +42,7 @@ export default function GoogleMapComponent({ address }) {
      });
      useEffect(() => {
           (async () => {
-               if (isLoaded) {
+               if (isLoaded && typeof window !== "undefined") {
                     try {
                          const coordinates = await geocodeAddress(address);
                          setCenter(coordinates);

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { templateImages } from "@/appProvider/templateImages";
 import Product from "@/app/components/Product";
 
@@ -48,7 +48,7 @@ function BestSelling() {
                                    </div>
                               </div>
                               <div className="col-md-6">
-                                   <OwlCarousel
+                                   {/* <OwlCarousel
                                         className="owl-carousel owl-theme dots-small"
                                         {...{
                                              dots: false,
@@ -73,7 +73,7 @@ function BestSelling() {
                                              productName={"ABC"}
                                              price={"$300"}
                                         />
-                                   </OwlCarousel>
+                                   </OwlCarousel> */}
                               </div>
                          </div>
                     </div>

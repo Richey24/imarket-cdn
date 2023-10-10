@@ -1,7 +1,7 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import { CategoryIconComponent } from "@/utils/Categoryicon";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import { CategoryIconComponent } from "@/utils/Categoryicon";
 
 interface Category {
      name: string;
@@ -28,23 +28,24 @@ const CategoriesSlider: React.FC<CategoriesSliderProps> = ({ categories }) => {
           },
      };
      return (
-          <OwlCarousel
-               className="owl-theme categories-slider content-center-bottom nav-outer"
-               data-animation-name="fadeIn"
-               data-animation-delay={100}
-               {...owlCarouselOptions}
-          >
-               {categories.map((category, index) => (
-                    <div className="product-category" key={index}>
-                         <a href={category.link}>
-                              <CategoryIconComponent categoryName={category.name} fontSize={70} />
-                              <div className="category-content">
-                                   <h3>{category.name}</h3>
-                              </div>
-                         </a>
-                    </div>
-               ))}
-          </OwlCarousel>
+          // <OwlCarousel
+          //      className="owl-theme categories-slider content-center-bottom nav-outer"
+          //      data-animation-name="fadeIn"
+          //      data-animation-delay={100}
+          //      {...owlCarouselOptions}
+          // >
+          //      {categories.map((category, index) => (
+          //           <div className="product-category" key={index}>
+          //                <a href={category.link}>
+          //                     <CategoryIconComponent categoryName={category.name} fontSize={70} />
+          //                     <div className="category-content">
+          //                          <h3>{category.name}</h3>
+          //                     </div>
+          //                </a>
+          //           </div>
+          //      ))}
+          // </OwlCarousel>
+          <div>a</div>
      );
 };
 

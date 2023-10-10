@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
      dots: false,
@@ -33,7 +33,7 @@ export const Banner = () => {
                                              </div>
                                         </div>
                                         <div className="col-sm-6 p-0">
-                                             <OwlCarousel
+                                             {/* <OwlCarousel
                                                   className="info-boxes-slider owl-carousel owl-theme"
                                                   {...owlCarouselOptions}
                                              >
@@ -139,7 +139,7 @@ export const Banner = () => {
                                                             </div>
                                                        </div>
                                                   </div>
-                                             </OwlCarousel>
+                                             </OwlCarousel> */}
                                         </div>
                                    </div>
                               </div>

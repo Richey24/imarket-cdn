@@ -1,24 +1,24 @@
-"use client";
+// "use client";
 import React from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { RegisterRequest, useRegisterMutation } from "@/redux/services/auth";
-import toast from "react-hot-toast";
-import LoadingIcon from "@/app/components/Icons/LoadingIcon";
-import { useRouter } from "next/navigation";
-import { withAuthHidden } from "@/utils/middleware";
-import SignUpForm from "@/app/components/auth/SignUpForm";
-import Image from "next/image";
+// import { useForm } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import { RegisterRequest, useRegisterMutation } from "@/redux/services/auth";
+// import toast from "react-hot-toast";
+// import LoadingIcon from "@/app/components/Icons/LoadingIcon";
+// import { useRouter } from "next/navigation";
+// import { withAuthHidden } from "@/utils/middleware";
+// import SignUpForm from "@/app/components/auth/SignUpForm";
+// import Image from "next/image";
 
 function Register() {
-     const [domain, setDomain] = React.useState<string>("");
+     // const [domain, setDomain] = React.useState<string>("");
 
-     React.useEffect(() => {
-          if (typeof window !== "undefined") {
-               const subDomain = window.location.host.split(".")[0];
-               setDomain(subDomain);
-          }
-     }, []);
+     // React.useEffect(() => {
+     //      if (typeof window !== "undefined") {
+     //           const subDomain = window.location.host.split(".")[0];
+     //           setDomain(subDomain);
+     //      }
+     // }, []);
 
      return (
           <div className="tw-flex tw-w-screen tw-h-screen tw-items-center tw-justify-center tw-px-3">
@@ -38,7 +38,7 @@ function Register() {
                                    </div>
                                    <div className="tw-relative tw-h-80 tw-w-80  tw-mt-24">
                                         {" "}
-                                        <Image fill src="/bagging.png" alt="hand with bag" />
+                                        {/* <Image fill src="/bagging.png" alt="hand with bag" /> */}
                                    </div>
                               </div>
                          </div>
@@ -46,7 +46,7 @@ function Register() {
                               <div className="heading tw-mb-1">
                                    <h2 className="tw-text-5xl tw-font-bold">Register</h2>
                               </div>
-                              <SignUpForm />
+                              {/* <SignUpForm /> */}
                          </div>
                     </div>
                </div>
@@ -54,4 +54,6 @@ function Register() {
      );
 }
 
-export default withAuthHidden(Register);
+// export default withAuthHidden(Register);
+
+export default Register;

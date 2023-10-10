@@ -1,5 +1,5 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import ShopByCategory from "./ShopByCategory";
 
 const BrowseCategory = ({ categories }): JSX.Element => {
@@ -15,11 +15,12 @@ const BrowseCategory = ({ categories }): JSX.Element => {
      };
 
      return (
-          <OwlCarousel className="info-boxes-slider owl-carousel owl-theme" {...owlCarouselOptions}>
-               {categories &&
-                    categories.length > 0 &&
-                    categories.map((item, index) => <ShopByCategory key={index} {...item} />)}
-          </OwlCarousel>
+          // <OwlCarousel className="info-boxes-slider owl-carousel owl-theme" {...owlCarouselOptions}>
+          //      {categories &&
+          //           categories.length > 0 &&
+          //           categories.map((item, index) => <ShopByCategory key={index} {...item} />)}
+          // </OwlCarousel>
+          <div>hello</div>
      );
 };
 

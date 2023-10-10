@@ -40,17 +40,17 @@ export default function ProductStuf() {
                     <OwlCarouselComponent
                          className={"products-slider"}
                          isResponsive={true}
-                         responsive={{
-                              "480": {
-                                   items: 2,
-                              },
-                              "768": {
-                                   items: 3,
-                              },
-                              "992": {
-                                   items: 4,
-                              },
-                         }}
+                         // responsive={{
+                         //      "480": {
+                         //           items: 2,
+                         //      },
+                         //      "768": {
+                         //           items: 3,
+                         //      },
+                         //      "992": {
+                         //           items: 4,
+                         //      },
+                         // }}
                     >
                          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((product, idx) => {
                               return (

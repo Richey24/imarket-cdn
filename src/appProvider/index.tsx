@@ -38,7 +38,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const removeProduct = useRemoveProductFromCart();
      const updateProductQtyOnCart = useUpdateProductQtyCart();
 
-     console.log("products", products);
+
      useEffect(() => {
           if (typeof window !== "undefined") {
                const domain = getSubDomain(window.location.href as string);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { templateImages } from "@/appProvider/templateImages";
 
 const owlCarouselOptions = {
@@ -14,7 +14,7 @@ const owlCarouselOptions = {
 export const Banner = () => {
      return (
           <section className="intro-section">
-               <OwlCarousel
+               {/* <OwlCarousel
                     className="home-slider slide-animate owl-carousel owl-theme show-nav-hover loaded m-b-5"
                     {...owlCarouselOptions}
                >
@@ -119,7 +119,7 @@ export const Banner = () => {
                               />
                          </div>
                     </div>
-               </OwlCarousel>
+               </OwlCarousel> */}
           </section>
      );
 };

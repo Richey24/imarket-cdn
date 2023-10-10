@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import Product from "@/app/components/Product";
 
 interface Iproduct {
@@ -27,7 +27,7 @@ const owlCarouselOptions = {
 function FeaturedProduct({ products }: { products: Iproduct[] }) {
      return (
           <section className="best-product-section">
-               <OwlCarousel className="product-panel" {...owlCarouselOptions}>
+               {/* <OwlCarousel className="product-panel" {...owlCarouselOptions}>
                     {products.map((product: Iproduct, idx) => {
                          return (
                               <Product
@@ -38,7 +38,7 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                               />
                          );
                     })}
-               </OwlCarousel>
+               </OwlCarousel> */}
           </section>
      );
 }
