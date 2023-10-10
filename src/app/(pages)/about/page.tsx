@@ -20,8 +20,9 @@ export default function About() {
 
      const { site } = useContext(AppContext);
 
-     const pageData = site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage);
-     const minifiedData = pageData?.sections[0]?.component.props.static;
+     const pageData =
+          site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage) || null;
+     const minifiedData = pageData?.sections[0]?.component.props.static || null;
      // console.log("pageData", minifiedData);
 
      const img1 =

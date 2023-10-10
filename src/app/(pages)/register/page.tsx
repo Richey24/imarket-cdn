@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -13,8 +14,10 @@ function Register() {
      const [domain, setDomain] = React.useState<string>("");
 
      React.useEffect(() => {
-          const subDomain = window.location.host.split(".")[0];
-          setDomain(subDomain);
+          if (typeof window !== "undefined") {
+               const subDomain = window.location.host.split(".")[0];
+               setDomain(subDomain);
+          }
      }, []);
 
      return (

@@ -40,8 +40,8 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
      console.log("products", products);
      useEffect(() => {
-          const domain = getSubDomain(window.location.href as string);
-          if (window) {
+          if (typeof window !== "undefined") {
+               const domain = getSubDomain(window.location.href as string);
                if (domain) {
                     setLoading(true);
                     getSiteByDomain(
@@ -66,21 +66,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => { },
+                    () => {},
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => { },
+                    () => {},
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => { },
+                    () => {},
                );
           }
           if (site && !cart && data) {

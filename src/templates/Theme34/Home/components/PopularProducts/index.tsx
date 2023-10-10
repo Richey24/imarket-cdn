@@ -10,7 +10,7 @@ export default function PopularProducts() {
           <div className="product-widgets container">
                <div className="row">
                     {/* product-1 */}
-                    {latestProducts.map((product, index) => {
+                    {latestProducts.map((product: any, index) => {
                          return (
                               <div className="col-lg-3 col-sm-6 pb-5" key={`product-${index}`}>
                                    <ProductWidget key={`product-${index}`} {...product} />

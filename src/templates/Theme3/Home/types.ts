@@ -3,7 +3,7 @@ import { Url } from "url";
 
 export interface ProductProps {
      id: number;
-     productImageUrl: StaticImageData;
+     productImageUrl: StaticImageData | string;
      productImageUrlTwo?: StaticImageData;
      productImageAlt: string;
      productCategory: string;

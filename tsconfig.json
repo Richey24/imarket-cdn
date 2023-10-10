@@ -31,5 +31,5 @@
           ".next/types/**/*.ts",
           "src/app/api/auth/[...nextauth].js"
      ],
-     "exclude": ["node_modules"]
+     "exclude": ["node_modules", "src/assets"]
 }

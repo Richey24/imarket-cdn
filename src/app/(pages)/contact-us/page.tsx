@@ -85,14 +85,16 @@ export default function ContactUs() {
                               <h4 className="ls-n-10 tw-mb-1 tw-pb-2">Contact Us</h4>
 
                               <form onSubmit={handleSubmit(onSubmit)}>
-                                   <input
-                                        type="text"
-                                        id="domain"
-                                        className="hidden"
-                                        value={getSubDomain(window.location.host) || ""}
-                                        {...register("domain")}
-                                        name="domain"
-                                   />
+                                   {typeof window !== "undefined" && (
+                                        <input
+                                             type="text"
+                                             id="domain"
+                                             className="hidden"
+                                             value={getSubDomain(window.location.host) || ""}
+                                             {...register("domain")}
+                                             name="domain"
+                                        />
+                                   )}
                                    <div className="row">
                                         <div className="col-md-6">
                                              <div className="form-group required-field">
