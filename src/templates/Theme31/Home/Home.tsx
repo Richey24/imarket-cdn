@@ -4,12 +4,18 @@ import { Banner } from "./components/Banner";
 import { latestProducts } from "./data";
 import { InfoBoxesContainer } from "./components/Info";
 
-export const Home = () => {
+export const Home = (props) => {
+     const {
+          static: statiProps,
+          products,
+          categories,
+          featuredProducts: featuredProductData,
+     } = props;
+
      return (
           <main className="main">
                <div className="container">
-                    <Banner />
-
+                    <Banner slides={statiProps?.banner ?? []} />
                     {/* <Gift /> */}
                     {/* <div className="text-2xl font-extrabold my-10">Best Selling Gifts</div>*/}
                     <div className="section-title">
