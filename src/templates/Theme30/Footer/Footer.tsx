@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-const Footer = (): JSX.Element => {
+const Footer = (props): JSX.Element => {
+     const { static: staticProps, company } = props.props;
      return (
           <footer className="footer font2">
                <div className="footer-top">
@@ -118,6 +119,41 @@ const Footer = (): JSX.Element => {
                                         </div>
                                    </div>
                               </div>
+                              {/* <div className="col-sm-6 col-lg-3">
+                                   <div className="row">
+                                        <div className="col-sm-6 pr-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">ADDRESS:</h4>
+                                                  <a href="#">
+                                                       {" "}
+                                                       {company?.city + " " + company?.country}
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 pl-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">PHONE:</h4>
+                                                  <a href="#">{company?.phone}</a>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 pr-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">EMAIL:</h4>
+                                                  <a href="mailto:mail@example.com">
+                                                       {company?.user_id?.email}
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 pl-sm-0">
+                                             <div className="contact-widget m-b-3">
+                                                  <h4 className="widget-title font2">
+                                                       WORKING DAYS/HOURS:
+                                                  </h4>
+                                                  <a href="#">Mon - Sun / 9:00AM - 8:00PM</a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div> */}
                          </div>
                     </div>
                     <div className="footer-bottom">

@@ -6,6 +6,8 @@ export interface ProductProps {
      productTitle: string;
      productPrice: number;
      oldPrice?: number;
+     productImageUrlTwo: StaticImageData | string;
+     productImageAlt: string;
 }
 
 export interface ProductWidgetProps {
