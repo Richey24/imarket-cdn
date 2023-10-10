@@ -77,7 +77,7 @@ export const Banner = ({ slides }) => {
                                                        alt="Home Banner"
                                                   />
                                              </figure>
-                                             <div className="banner-content content-right-bottom">
+                                             <div className="tw-absolute tw-left-2/4 tw-top-2/4 -tw-translate-y-2/4 -tw-translate-x-2/4 tw-w-full tw-text-right">
                                                   <span
                                                        className="font1 "
                                                        data-animation-name="fadeInUpShorter"
@@ -107,7 +107,7 @@ export const Banner = ({ slides }) => {
                                         <div className="home-banner">
                                              <figure>
                                                   <img
-                                                       src="assets/images/demoes/demo31/banners/home_banner3.jpg"
+                                                       src={slides[2]?.imageUrl}
                                                        width="380"
                                                        height="210"
                                                        alt="Home Banner"
@@ -119,16 +119,16 @@ export const Banner = ({ slides }) => {
                                                        data-animation-name="fadeInUpShorter"
                                                        data-animation-delay="1500"
                                                   >
-                                                       check new wireless
+                                                       {slides[2]?.text}
                                                   </span>
                                                   <h3
                                                        className=" "
                                                        data-animation-name="fadeInUpShorter"
                                                        data-animation-delay="1700"
                                                   >
-                                                       controllers
+                                                       {slides[2]?.title}
                                                   </h3>
-                                                  <h4
+                                                  {/* <h4
                                                        className="sale-off text-white font1 "
                                                        data-animation-name="fadeInUpShorter"
                                                        data-animation-delay="1900"
@@ -137,7 +137,7 @@ export const Banner = ({ slides }) => {
                                                             50%
                                                        </span>
                                                        off
-                                                  </h4>
+                                                  </h4> */}
                                                   <a
                                                        href="demo31-shop.html"
                                                        className="btn "

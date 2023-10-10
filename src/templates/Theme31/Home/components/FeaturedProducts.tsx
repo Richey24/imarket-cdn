@@ -22,7 +22,7 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
      return (
           <section className="product-panel bar-bottom">
                <div className="row ">
-                    <div className="col-12 col-sm-6 col-lg-4 height-xxl mb-0 mb-lg-0">
+                    {/* <div className="col-12 col-sm-6 col-lg-4 height-xxl mb-0 mb-lg-0">
                          <OwlCarousel className="product-slider" {...owlCarouselOptions}>
                               <div className="product-default inner-quickview inner-icon center-details">
                                    <figure>
@@ -193,8 +193,8 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                                    </div>
                               </div>
                          </OwlCarousel>
-                    </div>
-                    <div className="col-12 col-sm-6 col-lg-8">
+                    </div> */}
+                    <div className="col-12">
                          <div className="row">
                               {products.map((product: Iproduct) => {
                                    return (
