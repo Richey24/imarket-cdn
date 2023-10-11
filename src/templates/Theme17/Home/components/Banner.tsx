@@ -16,7 +16,7 @@ const Banner = ({ slides }) => {
                <section className="section-1 pt-0">
                     <Slider {...settings}>
                          {slides.map((slide, index) => (
-                              <div className="home-banner">
+                              <div key={index} className="home-banner">
                                    <div
                                         className="bg-img tw-h-full tw-w-full banner-left"
                                         style={{

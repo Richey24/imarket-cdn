@@ -6,7 +6,12 @@ const Header = (props: any) => {
      return (
           <header className="header">
                <HeaderLinks2 staticProps={staticProps} />
-               <HeaderSearch company={company} categories={categories} />
+               <HeaderSearch
+                    loggedInData={{}}
+                    cart={{}}
+                    company={company}
+                    categories={categories}
+               />
           </header>
      );
      {

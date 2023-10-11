@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ShopByCategoryProps } from "../types";
+// import { ShopByCategoryProps } from "../types";
 
-const ShopByCategory: React.FC<ShopByCategoryProps> = (props) => {
+const ShopByCategory: React.FC<any> = (props) => {
      return (
           <div className="product-category mx-2">
                <a href="demo3-shop.html">

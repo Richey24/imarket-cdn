@@ -27,11 +27,11 @@ export const MiniBanner2 = () => {
                >
                     <div className="banner-content ml-auto text-right">
                          <h3 className="title">
-                              WOMEN'S
+                              {"WOMEN'S"}
                               <br />
                               OUTFITS
                          </h3>
-                         <p className="subtitle">Check out this week's hottest styles.</p>
+                         <p className="subtitle">Check out this {"week's"} hottest styles.</p>
                          <div className="mb-0">
                               <a
                                    href="demo16-shop.html"
@@ -48,8 +48,8 @@ export const MiniBanner2 = () => {
                <div className="col-md-6 col-12 product-part pb-3">
                     <div className="products-slider   owl-theme">
                          <Slider {...settings}>
-                              {miniBanner2Product.map((product) => (
-                                     <Product {...product}/>
+                              {miniBanner2Product.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>

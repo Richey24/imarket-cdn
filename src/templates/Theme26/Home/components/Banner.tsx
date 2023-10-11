@@ -23,7 +23,7 @@ export const Banner = ({ slides }) => {
                               <div className="col-md-8 mb-2">
                                    <Carousel>
                                         {mappedSlides.map((slide, index) => (
-                                             <Carousel.Item>
+                                             <Carousel.Item key={index}>
                                                   <div
                                                        className="banner banner1 d-flex flex-wrap align-items-center bg-gray no-gutters"
                                                        style={{

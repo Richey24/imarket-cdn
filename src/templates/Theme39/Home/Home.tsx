@@ -28,9 +28,9 @@ export const Home = () => {
                                    data-animation-delay={150}
                               >
                                    <h2 className="text-white">
-                                        WINE SPECTATOR'S TOP <span className="font1">100</span>
+                                        WINE {"SPECTATOR'S"} TOP <span className="font1">100</span>
                                    </h2>
-                                   <h5 className="mb-0">Check Now This Year’s List</h5>
+                                   <h5 className="mb-0">Check Now This {"Year’s"} List</h5>
                               </div>
                               <div
                                    className="content-right text-right appear-animate"

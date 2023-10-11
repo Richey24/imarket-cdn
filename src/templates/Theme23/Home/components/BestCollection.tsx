@@ -20,8 +20,9 @@ export const BestCollection = () => {
                <div className="categories-slider   owl-theme">
                     <Slider {...settings}>
                          {" "}
-                         {bestCollection.map((data) => (
+                         {bestCollection.map((data, idx) => (
                               <div
+                                   key={idx}
                                    className="product-category"
                                    style={{ backgroundColor: `${data.bg}` }}
                               >

@@ -20,8 +20,8 @@ export const Info = () => {
                <div className="container">
                     <Slider {...settings}>
                          {" "}
-                         {infoData.map((data) => (
-                              <div className="info-box info-box-icon-left">
+                         {infoData.map((data, idx) => (
+                              <div className="info-box info-box-icon-left" key={idx}>
                                    <i className={data.icon} />
                                    <div className="info-box-content">
                                         <h4>{data.h4}</h4>

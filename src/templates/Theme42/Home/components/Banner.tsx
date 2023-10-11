@@ -4,7 +4,6 @@ import Link from "next/link";
 import Carousel from "react-bootstrap/Carousel";
 
 export const Banner = ({ slides }) => {
-     console.log({ slides });
      const mappedSlides = slides.map((slide: any) => ({
           background: "#555",
           imageSrc: slide?.imageUrl,

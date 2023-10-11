@@ -17,7 +17,7 @@ const Banner = ({ slides }) => {
      return (
           <Slider {...settings}>
                {slides.map((slide, index) => (
-                    <div className="home-slide banner banner-md-vw-small">
+                    <div key={index} className="home-slide banner banner-md-vw-small">
                          <Image
                               className="slide-bg"
                               src={slide.imageUrl}

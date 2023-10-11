@@ -4,16 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import Product from "@/app/components/Product";
+import { Product } from "./Product";
+ 
 
-interface Iproduct {
-     imageUrl: StaticImageData | string;
-     category: string;
-     title: string;
-     price: string;
-}
-[];
-function FeaturedProduct({ products }: { products: Iproduct[] }) {
+const FeaturedProducts = ({ products }) => {
      return (
           <div>
                <Swiper
@@ -22,20 +16,16 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                     // modules={[Pagination]}
                     className="mySwiper"
                >
-                    {products.map((product: Iproduct) => {
+                    {products.map((product) => {
                          return (
-                              <SwiperSlide key={product.title}>
-                                   <Product
-                                        imageSrc={product.imageUrl as string}
-                                        productName={product.title}
-                                        price={product.price}
-                                   />
+                              <SwiperSlide>
+                                   <Product {...product} />
                               </SwiperSlide>
                          );
                     })}
                </Swiper>
           </div>
      );
-}
+};
 
-export default FeaturedProduct;
+export default FeaturedProducts;

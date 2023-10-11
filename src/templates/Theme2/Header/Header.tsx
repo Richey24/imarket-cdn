@@ -8,7 +8,12 @@ const Header = (props: any) => {
           <header className="header">
                <HeaderLinks staticProps={staticProps} className="text-white" />
 
-               <HeaderSearch company={company} categories={categories} />
+               <HeaderSearch
+                    company={company}
+                    categories={categories}
+                    loggedInData={{}}
+                    cart={{}}
+               />
           </header>
      );
 };

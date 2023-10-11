@@ -9,7 +9,6 @@ import Payments from "./Payments";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
-     console.log("footerProps", company);
      return (
           <footer className="footer font2">
                <div className="footer-top">
@@ -72,19 +71,16 @@ const Footer = (props: any) => {
                               <div className="col-lg-3">
                                    <a href="demo27.html">
                                         <Image
-                                             src={templateImages.logoImage.logo2}
+                                             src={company?.logo}
                                              alt="Logo"
                                              className="logo"
                                              width={202}
                                              height={80}
                                         />
                                    </a>
-                                   <p className="footer-desc">
-                                        Lorem ipsum dolor sit amet, consectetur adipis.
-                                   </p>
                                    <div className="ls-0 footer-question mb-3">
                                         <h6 className="mb-0 text-white">QUESTIONS?</h6>
-                                        <h3 className="mb-0 text-primary">1-888-123-456</h3>
+                                        <h3 className="mb-0 text-primary">{company?.phone}</h3>
                                    </div>
                               </div>
                               {/* End .col-lg-3 */}

@@ -3,6 +3,7 @@ import React from "react";
 import { templateImages } from "@/appProvider/templateImages";
 import { mobileandAcc } from "../data";
 import { Product } from "./Product";
+
 export const MobileAndAccessories = () => {
      return (
           <section className="mobile-phones-container appear-animate">
@@ -64,9 +65,12 @@ export const MobileAndAccessories = () => {
                          </div>
                          <div className="col-lg-7">
                               <div className="row">
-                                   {mobileandAcc.map((product) => (
-                                        <div className="grid-item col-sm-4 col-md-3 mt-1 ">
-                                             <Product {...product} />
+                                   {mobileandAcc.map((product, idx) => (
+                                        <div
+                                             key={idx}
+                                             className="grid-item col-sm-4 col-md-3 mt-1 "
+                                        >
+                                             <Product key={idx} {...product} />
                                         </div>
                                    ))}
 

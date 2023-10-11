@@ -59,8 +59,8 @@ export const ProductTabs = ({ featuredProducts, latestProducts }) => {
                                                        (a: any, b: any) =>
                                                             b.__last_update - a.__last_update,
                                                   )
-                                                  .map((product) => (
-                                                       <Product {...product} />
+                                                  .map((product, idx) => (
+                                                       <Product key={idx} {...product} />
                                                   ))}
                                         </Slider>
                                         {/* product 1 */}
@@ -78,8 +78,8 @@ export const ProductTabs = ({ featuredProducts, latestProducts }) => {
                                                        (a: any, b: any) =>
                                                             b.__last_update - a.__last_update,
                                                   )
-                                                  .map((product) => (
-                                                       <Product {...product} />
+                                                  .map((product, idx) => (
+                                                       <Product key={idx} {...product} />
                                                   ))}
                                         </Slider>
                                         {/* product 1 */}

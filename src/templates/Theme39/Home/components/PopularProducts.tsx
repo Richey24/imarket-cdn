@@ -24,8 +24,8 @@ export const PopularProducts = () => {
                     </div>
                     <div className="products-slider custom-products   owl-theme nav-outer show-nav-hover nav-image-center">
                          <Slider {...settings}>
-                              {products.map((product) => (
-                                 <Product {...product} />
+                              {products.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>

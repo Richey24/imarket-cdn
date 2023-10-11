@@ -23,6 +23,8 @@ export default function Header(props: any) {
                          categories={categories}
                          showCategory={false}
                          showPhone={false}
+                         loggedInData={{}}
+                         cart={{}}
                     />
 
                     <div

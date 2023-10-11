@@ -10,7 +10,6 @@ import Link from "next/link";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
-     console.log("footerProps", company);
      return (
           <footer className="footer bg-dark">
                <div className="footer-middle">

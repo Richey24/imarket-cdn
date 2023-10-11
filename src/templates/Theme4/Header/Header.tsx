@@ -9,7 +9,12 @@ const Header = (props: any) => {
      return (
           <header className="header" style={{ background: "#fbfbfb" }}>
                <HeaderLinks staticProps={staticProps} />
-               <HeaderSearch company={company} categories={categories} />
+               <HeaderSearch
+                    company={company}
+                    categories={categories}
+                    loggedInData={{}}
+                    cart={{}}
+               />
                <div className="container">
                     <PageLinks staticProps={staticProps} />
                </div>

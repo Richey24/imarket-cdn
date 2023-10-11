@@ -27,11 +27,11 @@ export const MiniBanner = () => {
                >
                     <div className="banner-content">
                          <h3 className="title">
-                              WOMEN'S
+                              {"WOMEN'S"}
                               <br />
                               CASUAL STYLE
                          </h3>
-                         <p className="subtitle">Check out this week's hottest styles.</p>
+                         <p className="subtitle">Check out this {"week's"} hottest styles.</p>
                          <div className="mb-0">
                               <a
                                    href="demo16-shop.html"
@@ -48,8 +48,8 @@ export const MiniBanner = () => {
                <div className="col-md-6 col-12 product-part pb-4">
                     <div className="products-slider  owl-theme">
                          <Slider {...settings}>
-                              {miniBannerProduct.map((product) => (
-                                    <Product {...product}/>
+                              {miniBannerProduct.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>

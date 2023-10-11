@@ -1,21 +1,35 @@
+"use client";
+import { useGetOrderHistory } from "@/appProvider/hooks/dashboard/orders";
+import _ from "lodash";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import moment from "moment";
+
 export default function Orders() {
-     const orders = [
-          {
-               id: 1,
-               order: "Product A",
-               date: "2023-07-19",
-               status: "Pending",
-               total: "$100",
-          },
-          {
-               id: 2,
-               order: "Product B",
-               date: "2023-07-20",
-               status: "Shipped",
-               total: "$50",
-          },
-          // Add more sample data here...
-     ];
+     const [orders, setOrder] = useState(null);
+     const [loading, setLoading] = useState(false);
+
+     const getOrders = useGetOrderHistory();
+     const { data } = useSession();
+
+     useEffect(() => {
+          setLoading(true);
+          if (data) {
+               getOrders(
+                    (data as any)?.user?.id,
+                    (orders) => {
+                         console.log("orders", orders);
+                         setLoading(false);
+                         setOrder(orders);
+                    },
+                    () => {
+                         setOrder([]);
+                         setLoading(false);
+                    },
+               );
+          }
+     }, [data]);
 
      return (
           <div className="order-content">
@@ -37,7 +51,16 @@ export default function Orders() {
                                    </th>
                               </tr>
                          </thead>
-                         {orders.length == 0 ? (
+                         {!orders && loading && (
+                              <tbody>
+                                   <tr>
+                                        <td className="text-center p-0" colSpan={5}>
+                                             <p className="mb-5 mt-5">Loading......</p>
+                                        </td>
+                                   </tr>
+                              </tbody>
+                         )}
+                         {orders?.length == 0 ? (
                               <tbody>
                                    <tr>
                                         <td className="text-center p-0" colSpan={5}>
@@ -49,22 +72,22 @@ export default function Orders() {
                               </tbody>
                          ) : (
                               <tbody>
-                                   {orders.map((order) => (
+                                   {orders?.map((order) => (
                                         <tr
                                              key={order.id}
                                              className="tw-border-b tw-transition tw-duration-300 tw-ease-in-out tw-hover:bg-gray-100"
                                         >
                                              <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
-                                                  {order.order}
+                                                  {order.name}
                                              </td>
                                              <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
-                                                  {order.date}
+                                                  {moment(order.date_order).format("YYYY-MM-DD")}
                                              </td>
                                              <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
-                                                  {order.status}
+                                                  {_.capitalize(order.state)}
                                              </td>
                                              <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
-                                                  {order.total}
+                                                  ${order.amount_total}
                                              </td>
                                              <td className="whitespace-nowrap tw-font-light tw-text-lg tw-px-6 tw-py-2">
                                                   <button>Cancel Order</button>
@@ -75,9 +98,9 @@ export default function Orders() {
                          )}
                     </table>
 
-                    <a href="category.html" className="btn btn-dark">
+                    <Link href="/shop" className="btn btn-dark">
                          Go Shop
-                    </a>
+                    </Link>
                </div>
           </div>
      );

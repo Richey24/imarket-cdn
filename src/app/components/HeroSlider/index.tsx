@@ -21,9 +21,9 @@ function HeroSlider({ images }: { images: string[] }): JSX.Element {
                     modules={[EffectFade, Zoom, Navigation, Pagination]}
                     className="mySwiper"
                >
-                    {images.map((image) => {
+                    {images.map((image, idx) => {
                          return (
-                              <SwiperSlide>
+                              <SwiperSlide key={idx}>
                                    <div className="swiper-zoom-container h-screen relative">
                                         <div className="h-full w-full absolute top-0 bottom-0 right-0 left-0 bg-black opacity-40 "></div>
                                         <img

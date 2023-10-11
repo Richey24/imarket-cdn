@@ -17,8 +17,8 @@ export const Info = () => {
                     <div className="row categories-slider owl-carousel owl-theme owl-loaded owl-drag animated fadeIn appear-animation-visible">
                          <Slider {...settings}>
                               {" "}
-                              {cardData.map((data) => (
-                                   <div className="product-category mb-2">
+                              {cardData.map((data, idx) => (
+                                   <div key={idx} className="product-category mb-2">
                                         <a href="demo21-shop.html">
                                              <div className="category-content">
                                                   <i className={data.icon} />

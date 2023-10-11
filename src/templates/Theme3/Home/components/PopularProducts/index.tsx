@@ -13,7 +13,7 @@ export default function PopularProducts() {
                          <h4 className="section-sub-title text-uppercase m-b-3">
                               Top Rated Products
                          </h4>
-                         {topRatedProducts.map((product, index) => (
+                         {topRatedProducts.map((product: any, index) => (
                               <ProductWidget key={`product-${index}`} {...product} />
                          ))}
                     </div>
@@ -22,14 +22,14 @@ export default function PopularProducts() {
                          <h4 className="section-sub-title text-uppercase m-b-3">
                               Best Selling Products
                          </h4>
-                         {topRatedProducts.map((product, index) => (
+                         {topRatedProducts.map((product: any, index) => (
                               <ProductWidget key={`product-${index}`} {...product} />
                          ))}
                     </div>
                     {/* product-3 */}
                     <div className="col-lg-4 col-sm-6 pb-5">
                          <h4 className="section-sub-title text-uppercase m-b-3">Latest Products</h4>
-                         {topRatedProducts.map((product, index) => (
+                         {topRatedProducts.map((product: any, index) => (
                               <ProductWidget key={`product-${index}`} {...product} />
                          ))}
                     </div>

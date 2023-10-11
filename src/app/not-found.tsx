@@ -11,10 +11,10 @@ export default function page() {
                               404
                          </h1>
                          <p className="tw-mb-4 tw-text-3xl tw-tracking-tight tw-font-bold tw-text-gray-900 md:tw-text-4xl dark:tw-text-white">
-                              Something's missing.
+                              {"Something's"} missing.
                          </p>
                          <p className="tw-mb-4 tw-text-xl tw-font-light tw-text-gray-500 dark:tw-text-gray-400">
-                              Sorry, we can't find that page. You'll find lots to explore on the
+                              Sorry, we {"can't "}find that page. {"You'll"} find lots to explore on the
                               home page.{" "}
                          </p>
                          <Link href="/" className="">

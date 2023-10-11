@@ -58,6 +58,7 @@ export const FeaturedCategories = ({ categories }) => {
                                    className={`grid-item col-sm-${
                                         determineSize(index).Smsize
                                    } col-md-${determineSize(index).MdSize}`}
+                                   key={index}
                               >
                                    <div
                                         className="product-category appear-animate"
