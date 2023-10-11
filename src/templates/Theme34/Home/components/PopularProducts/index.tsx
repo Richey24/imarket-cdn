@@ -1,7 +1,5 @@
 import Product from "@/app/components/Product";
 import ProductWidget from "@/app/components/Product/ProductWidget";
-import ProductList from "@/app/components/ProductList";
-import { templateImages } from "@/appProvider/templateImages";
 import { latestProducts } from "@/templates/Theme34/Home/data";
 import React from "react";
 
