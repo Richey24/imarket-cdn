@@ -19,9 +19,9 @@ export default function ProductList({ col = 6 }: { col?: number }): JSX.Element 
      };
      return (
           <div className="flex flex-row flex-wrap ">
-               {[...Array(8)].map((product) => {
+               {[...Array(8)].map((product, idx) => {
                     return (
-                         <div className={`w-full ${dynamicCols[col]} p-2`}>
+                         <div key={idx} className={`w-full ${dynamicCols[col]} p-2`}>
                               {/* 16.66 */}
                               <Product
                                    imageSrc={

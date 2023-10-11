@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
-import Carousel from "react-bootstrap/Carousel";
-import { templateImages } from "@/appProvider/templateImages";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
      dots: false,
@@ -33,14 +31,22 @@ export const Banner = ({ slides }) => {
                <section className="mb-2">
                     <div className="row">
                          <div className="col-lg-6">
-                              <Carousel>
-                                   {mappedSlides.map((slide, index) => (
-                                        <Carousel.Item>
-                                             <div
-                                                  className="home-banner"
-                                                  style={{
-                                                       backgroundImage: `url('${slide.imageSrc}')`,
-                                                  }}
+                              <div className="home-banner">
+                                   <div className="row m-0">
+                                        <div className="col-sm-6 p-0 pr-sm-2 d-flex align-items-center justify-content-center justify-content-lg-end text-center text-sm-right">
+                                             <div className="banner-content ">
+                                                  <span>An entire week to enjoy all offers</span>
+                                                  <h3 className="ls-0">The Week</h3>
+                                                  <h4 className="ls-0">Gift Shop</h4>
+                                                  <Link href="demo30-shop.html" className="btn">
+                                                       SHOP NOW
+                                                  </Link>
+                                             </div>
+                                        </div>
+                                        <div className="col-sm-6 p-0">
+                                             {/* <OwlCarousel
+                                                  className="info-boxes-slider owl-carousel owl-theme"
+                                                  {...owlCarouselOptions}
                                              >
                                                   <div className="row m-0">
                                                        <div className="col-sm-6 p-0 pr-sm-2 d-flex align-items-center justify-content-center justify-content-lg-end text-center text-sm-right">
@@ -171,10 +177,10 @@ export const Banner = ({ slides }) => {
                                                             </OwlCarousel>
                                                        </div> */}
                                                   </div>
-                                             </div>
-                                        </Carousel.Item>
-                                   ))}
-                              </Carousel>
+                                             </OwlCarousel> */}
+                                        </div>
+                                   </div>
+                              </div>
                          </div>
                          <div className="col-sm-6 col-lg-3">
                               <div className="home-banner2 text-center">

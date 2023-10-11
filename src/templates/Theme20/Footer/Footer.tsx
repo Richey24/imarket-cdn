@@ -34,7 +34,14 @@ const Footer = () => {
 
                               <Slider {...settings}>
                                    {instagram.map((data, index) => (
-                                        <Image src={data.image} alt="instagram" className="px-2" width={100} height={100} />
+                                        <Image
+                                             key={index}
+                                             src={data.image}
+                                             alt="instagram"
+                                             className="px-2"
+                                             width={100}
+                                             height={100}
+                                        />
                                    ))}
                               </Slider>
                          </div>
@@ -125,8 +132,9 @@ const Footer = () => {
                               </div>
                               <div className="footer-right ml-auto mt-1 mt-sm-0">
                                    <div className="payment-icons mr-0">
-                                        {payments.map((pay) => (
+                                        {payments.map((pay, idx) => (
                                              <span
+                                                  key={idx}
                                                   className="payment-icon visa"
                                                   style={{
                                                        backgroundImage: `url(${pay.image})`,

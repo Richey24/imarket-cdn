@@ -1,6 +1,14 @@
+"use client";
+import { useChangeOrderStatus } from "@/appProvider/hooks";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-export default function Home() {
+export default function Home({ params }) {
+     const changeOrderStatus = useChangeOrderStatus();
+     const router = useRouter();
+     const [loading, setLoading] = useState(false);
+
      return (
           <main className="tw-flex tw-min-h-screen tw-flex-col tw-items-center tw-justify-between tw-p-24">
                <div className="container">
@@ -154,9 +162,25 @@ export default function Home() {
                                         </tfoot>
                                    </table>
 
-                                   <div className="checkout-methods">
-                                        <a href="cart.html" className="btn btn-block btn-dark">
-                                             Proceed to Checkout
+                                   <div
+                                        className="checkout-methods"
+                                        onClick={() => {
+                                             setLoading(true);
+                                             changeOrderStatus(
+                                                  params?.orderId,
+                                                  "sent",
+                                                  () => {
+                                                       setLoading(false);
+                                                       router.push("/");
+                                                  },
+                                                  () => {
+                                                       setLoading(false);
+                                                  },
+                                             );
+                                        }}
+                                   >
+                                        <a className="btn btn-block btn-dark">
+                                             {loading ? "loading" : "Proceed to Checkout"}
                                              <i className="fa fa-arrow-right"></i>
                                         </a>
                                    </div>

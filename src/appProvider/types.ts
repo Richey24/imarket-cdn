@@ -19,6 +19,20 @@ export interface PagesField {
      sections: SectionsField[];
 }
 
+export interface AddToCard {
+     companyId: string | number;
+     orderId: number;
+     productId: number;
+     qty: number;
+     price_unit: string | number;
+}
+
+export interface CreateCard {
+     companyId: string | number;
+     userId: number;
+     products: { productId: number; qty: number; price_unit: string | number }[];
+}
+
 export interface SectionsField {
      name: string;
      content: string;
@@ -27,6 +41,13 @@ export interface SectionsField {
           name: string;
           props: any;
      };
+}
+
+export interface WishlistPayload {
+     userId: string;
+     productId: number;
+     price: number;
+     display_name: string;
 }
 
 export type ThemeName =

@@ -1,6 +1,6 @@
 import Product from "@/app/components/Product";
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const ProductSlider = ({ products }): JSX.Element => {
      const owlCarouselOptions = {
@@ -22,21 +22,22 @@ const ProductSlider = ({ products }): JSX.Element => {
      };
 
      return (
-          <OwlCarousel
-               className="owl-carousel owl-theme dots-top dots-small"
-               {...owlCarouselOptions}
-          >
-               {products &&
-                    products.length > 0 &&
-                    products.map((item, index) => (
-                         <Product
-                              key={item.id}
-                              imageSrc={item.productImageUrl}
-                              productName={item.productTitle}
-                              price={item.productPrice}
-                         />
-                    ))}
-          </OwlCarousel>
+          // <OwlCarousel
+          //      className="owl-carousel owl-theme dots-top dots-small"
+          //      {...owlCarouselOptions}
+          // >
+          //      {products &&
+          //           products.length > 0 &&
+          //           products.map((item, index) => (
+          //                <Product
+          //                     key={item.id}
+          //                     imageSrc={item.productImageUrl}
+          //                     productName={item.productTitle}
+          //                     price={item.productPrice}
+          //                />
+          //           ))}
+          // </OwlCarousel>
+          <div>hello</div>
      );
 };
 

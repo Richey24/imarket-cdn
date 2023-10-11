@@ -1,5 +1,5 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { templateImages } from "@/appProvider/templateImages";
 
 const owlCarouselOptions = {
@@ -21,7 +21,7 @@ export default function PopularDepartment() {
           <div className="tw-py-12">
                <h2 className="section-title">Popular Departments</h2>
                <p className="section-info font2">Products From These Categories Often Buy</p>
-
+               {/* 
                <OwlCarousel className="categories-slider" {...owlCarouselOptions}>
                     <div className="product-category bg-white">
                          <a href="category.html">
@@ -87,7 +87,7 @@ export default function PopularDepartment() {
                               </div>
                          </a>
                     </div>
-               </OwlCarousel>
+               </OwlCarousel> */}
           </div>
      );
 }

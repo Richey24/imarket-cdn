@@ -1,7 +1,7 @@
 import Product from "@/app/components/Product";
 import { latestProducts } from "@/templates/Theme34/Home/data";
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { templateImages } from "@/appProvider/templateImages";
 
 const owlCarouselOptions = {
@@ -21,12 +21,12 @@ const owlCarouselOptions = {
 export default function WeekSpecials() {
      return (
           <section className="special-section tw-py-16">
-               <h2 className="section-title">This Week's Specials</h2>
+               <h2 className="section-title">This {"Week's"} Specials</h2>
                <p className="section-info font2">
                     All our new arrivals in a exclusive brand selection
                </p>
 
-               <OwlCarousel
+               {/* <OwlCarousel
                     className="products-container bg-white mb-4 rounded"
                     {...owlCarouselOptions}
                >
@@ -42,7 +42,7 @@ export default function WeekSpecials() {
                               />
                          );
                     })}
-               </OwlCarousel>
+               </OwlCarousel> */}
           </section>
      );
 }

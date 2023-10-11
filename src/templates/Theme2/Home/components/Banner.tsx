@@ -19,7 +19,7 @@ const Banner = ({ slides }) => {
           <Carousel>
                {mappedSlides.map((slide, next) => {
                     return (
-                         <Carousel.Item>
+                         <Carousel.Item key={next}>
                               <div className="home-slide home-slide1 banner banner-md-vw banner-sm-vw d-flex align-items-center">
                                    <Image
                                         className="slide-bg"

@@ -1,10 +1,21 @@
 "use client";
 import BillingAddress from "@/app/components/BillingAddress";
 import ShippingAddress from "@/app/components/ShippingAddress";
-import React from "react";
+import { useGetBillingAddress } from "@/appProvider/hooks/dashboard/addresses";
+import { useSession } from "next-auth/react";
+import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
 
 const Addresses = () => {
      const [tab, setTab] = React.useState<number | null>(null);
+     const getBilling = useGetBillingAddress();
+     const { data } = useSession();
+
+     useEffect(() => {
+          if (data) {
+               // getBilling((data as any)?.user?.id);
+          }
+     }, [data]);
 
      return (
           <div>
@@ -63,3 +74,35 @@ const Addresses = () => {
      );
 };
 export default Addresses;
+
+const AddressCard = (props) => {
+     const { firstname, lastname, country, state, city, company, street, phone, zipcode, email } =
+          props;
+
+     return (
+          <Card>
+               <Card.Body>
+                    <Card.Title>Address Information</Card.Title>
+                    <Card.Text>
+                         <strong>Name:</strong> {firstname} {lastname}
+                         <br />
+                         <strong>Country:</strong> {country}
+                         <br />
+                         <strong>State:</strong> {state}
+                         <br />
+                         <strong>City:</strong> {city}
+                         <br />
+                         <strong>Company:</strong> {company}
+                         <br />
+                         <strong>Street:</strong> {street}
+                         <br />
+                         <strong>Phone:</strong> {phone}
+                         <br />
+                         <strong>Zipcode:</strong> {zipcode}
+                         <br />
+                         <strong>Email:</strong> {email}
+                    </Card.Text>
+               </Card.Body>
+          </Card>
+     );
+};

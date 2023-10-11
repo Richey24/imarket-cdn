@@ -1,6 +1,6 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 function Category() {
      const owlCarouselOptions = {
@@ -32,7 +32,7 @@ function Category() {
                          VIEW CATEGORIES<i className="fas fa-arrow-right"></i>
                     </a>
                </div>
-               <OwlCarousel className="owl-carousel owl-theme " {...owlCarouselOptions}>
+               {/* <OwlCarousel className="owl-carousel owl-theme " {...owlCarouselOptions}>
                     <div className="product-category">
                          <a href="demo42-shop.html">
                               <figure>
@@ -149,7 +149,7 @@ function Category() {
                               </ul>
                          </div>
                     </div>
-               </OwlCarousel>
+               </OwlCarousel> */}
           </section>
      );
 }

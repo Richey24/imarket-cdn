@@ -31,8 +31,8 @@ export const SaleProduct = () => {
                     >
                          <Slider {...settings}>
                               {" "}
-                              {SaleProducts.map((product) => (
-                                   <Product {...product} />
+                              {SaleProducts.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>

@@ -2,15 +2,20 @@
 import React, { useEffect, useState } from "react";
 import {
      useAddToCart,
+     useGetCart,
      useGetCategories,
      useGetFeaturedProducts,
      useGetProducts,
      useGetSiteByDomain,
-} from "./hook";
+     useCreateCart,
+     useRemoveProductFromCart,
+     useUpdateProductQtyCart,
+} from "./hooks";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import NextNProgress from "nextjs-progressbar";
 import { dummySite } from "./data";
+import { useSession } from "next-auth/react";
 
 export const AppContext = React.createContext<any>(null);
 
@@ -20,6 +25,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [products, setProducts] = useState(null);
      const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
+     const [cart, setCart] = useState(null);
      const [brandcolor, setBrandcolor] = useState({
           primaryColor: "#3498db",
           secondaryColor: "#2ecc71",
@@ -30,10 +36,16 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const getProducts = useGetProducts();
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
+     const createCart = useCreateCart();
+     const getCart = useGetCart();
+     const { data } = useSession();
+     const removeProduct = useRemoveProductFromCart();
+     const updateProductQtyOnCart = useUpdateProductQtyCart();
+
 
      useEffect(() => {
-          const domain = getSubDomain(window.location.href as string);
-          if (window) {
+          if (typeof window !== "undefined") {
+               const domain = getSubDomain(window.location.href as string);
                if (domain) {
                     setLoading(true);
                     getSiteByDomain(
@@ -75,10 +87,106 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     () => {},
                );
           }
-     }, [site]);
+          if (site && !cart && data) {
+               getCart(
+                    (data as any)?.user?.id,
+                    (data: any) => {
+                         setCart(data as any);
+                    },
+                    () => {},
+               );
+          }
+     }, [site, data]);
 
-     const handleAddToCart = (product: any) => {
-          console.log("log");
+     const handleAddToCart = async (productId: any, price: number | string, onDone: () => void) => {
+          if (cart) {
+               return addToCart(
+                    {
+                         companyId: site?.company?.company_id,
+                         orderId: cart?.id,
+                         productId,
+                         qty: 1,
+                         price_unit: price,
+                    },
+                    () => {
+                         getCart(
+                              (data as any)?.user?.id,
+                              (data: any) => {
+                                   setCart(data as any);
+                                   onDone?.();
+                              },
+                              () => {},
+                         );
+                    },
+                    () => {
+                         onDone?.();
+                    },
+               );
+          } else {
+               createCart(
+                    {
+                         companyId: site?.company?.company_id,
+                         userId: (data as any)?.user?.id,
+                         products: [{ productId, qty: 1, price_unit: price }],
+                    },
+                    () => {
+                         getCart(
+                              (data as any)?.user?.id,
+                              (data: any) => {
+                                   setCart(data as any);
+                                   onDone?.();
+                              },
+                              () => {},
+                         );
+                    },
+                    () => {
+                         onDone?.();
+                    },
+               );
+          }
+     };
+
+     const handleUpdateProductQtyOnCart = (
+          orderLineId: number,
+          qty: number,
+          onDone: () => void,
+     ) => {
+          updateProductQtyOnCart(
+               orderLineId,
+               qty,
+               () => {
+                    getCart(
+                         (data as any)?.user?.id,
+                         (data: any) => {
+                              setCart(data as any);
+                              onDone?.();
+                         },
+                         () => {},
+                    );
+               },
+               () => {
+                    onDone?.();
+               },
+          );
+     };
+
+     const handleRemoveProductFromOrder = (orderLineId: number, onDone: () => void) => {
+          removeProduct(
+               orderLineId,
+               () => {
+                    getCart(
+                         (data as any)?.user?.id,
+                         (data: any) => {
+                              setCart(data as any);
+                              onDone?.();
+                         },
+                         () => {},
+                    );
+               },
+               () => {
+                    onDone?.();
+               },
+          );
      };
 
      React.useEffect(() => {
@@ -110,16 +218,18 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
      return (
           <AppContext.Provider
-               value={{ site, loading, categories, products, featuredProducts, handleAddToCart }}
+               value={{
+                    site,
+                    loading,
+                    categories,
+                    products,
+                    featuredProducts,
+                    cart,
+                    handleAddToCart,
+                    handleRemoveProductFromOrder,
+                    handleUpdateProductQtyOnCart,
+               }}
           >
-               <NextNProgress
-                    color="#29D"
-                    startPosition={0.3}
-                    stopDelayMs={200}
-                    height={3}
-                    showOnShallow={true}
-               />
-
                {children}
           </AppContext.Provider>
      );

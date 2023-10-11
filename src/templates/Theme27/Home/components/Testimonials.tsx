@@ -1,9 +1,9 @@
 import React from "react";
-import { TestimonialProps } from "../types";
+// import { TestimonialProps } from "../types";
 import Image from "next/image";
 import Slider from "react-slick";
 
-const Testimonial: React.FC<TestimonialProps> = ({ clientImageUrl, title, position, message }) => {
+const Testimonial: React.FC<any> = ({ clientImageUrl, title, position, message }) => {
      return (
           <div className="testimonial">
                <div className="testimonial-owner">
@@ -22,7 +22,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ clientImageUrl, title, positi
      );
 };
 
-const Testimonials: React.FC<{ testimonials: TestimonialProps[] }> = (props) => {
+const Testimonials: React.FC<{ testimonials: any[] }> = (props) => {
      const sliderSettings = {
           dots: true,
           infinite: true,

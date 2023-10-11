@@ -132,8 +132,9 @@ const Footer = (): JSX.Element => {
                                         <h3 className="widget-title ls-n-10">PAYMENT METHODS</h3>
                                         <div className="widget-content">
                                              <div className="payment-icons">
-                                                  {payments.map((pay) => (
+                                                  {payments.map((pay, idx) => (
                                                        <span
+                                                            key={idx}
                                                             className="payment-icon visa"
                                                             style={{
                                                                  backgroundImage: `url(${pay.image})`,

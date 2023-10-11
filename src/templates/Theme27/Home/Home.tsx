@@ -1,15 +1,9 @@
-import { mostPopularProducts, promotions, trendingAccessories } from "./data";
+import { promotions } from "./data";
 import Banner from "./components/Banner";
-import FeatureBoxes from "./components/FeatureBoxes";
-import FeaturedProducts from "./components/MostPopularProducts";
-import BestSellingProducts from "./components/BestSellingProducts";
-import Testimonials from "./components/Testimonials";
-import MostPopularProducts from "./components/MostPopularProducts";
 import BannersSection from "./components/BannersSection";
 import TrendingAccessories from "./components/TrendingAccessories";
 import Promotions from "./components/Promotions";
 import { useState, useEffect } from "react";
-import { log } from "console";
 
 export const Home = (props) => {
      const {

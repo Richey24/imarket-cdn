@@ -14,18 +14,18 @@ export const StaffFav = () => {
                </div>
                <div className=" row pb-2">
                     <div className="col-md-4  col-sm-6 pb-5 pb-md-0">
-                         {staffFavProducts1.map((product) => (
-                              <ProductWidget {...product} />
+                         {staffFavProducts1.map((product, idx) => (
+                              <ProductWidget key={idx} {...product} />
                          ))}
                     </div>
                     <div className="col-md-4  col-sm-6 pb-5 pb-md-0">
-                         {staffFavProducts2.map((product) => (
-                              <ProductWidget {...product} />
+                         {staffFavProducts2.map((product, idx) => (
+                              <ProductWidget key={idx} {...product} />
                          ))}
                     </div>
                     <div className="col-md-4  col-sm-6 pb-5 pb-md-0">
-                         {staffFavProducts3.map((product) => (
-                              <ProductWidget {...product} />
+                         {staffFavProducts3.map((product, idx) => (
+                              <ProductWidget key={idx} {...product} />
                          ))}
                     </div>
                </div>

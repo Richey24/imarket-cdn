@@ -11,22 +11,22 @@ export const Products = ({ latestProducts }) => {
                     <div className="col-md-4 col-sm-6 pb-5">
                          <h4 className="section-sub-title text-uppercase">Top Rated Products</h4>
 
-                         {topRatedProducts.map((product) => (
-                              <ProductWidget {...product} />
+                         {topRatedProducts.map((product, idx) => (
+                              <ProductWidget key={idx} {...product} />
                          ))}
                     </div>
                     <div className="col-md-4 col-sm-6 pb-5">
                          <h4 className="section-sub-title text-uppercase">Best Selling Products</h4>
 
-                         {bestSellingProducts.map((product) => (
-                              <ProductWidget {...product} />
+                         {bestSellingProducts.map((product, idx) => (
+                              <ProductWidget key={idx} {...product} />
                          ))}
                     </div>
                     <div className="col-md-4 col-sm-6 pb-5">
                          <h4 className="section-sub-title text-uppercase">Latest Products</h4>
 
-                         {latestProducts.slice(0, 3).map((product) => (
-                              <ProductWidget {...product} />
+                         {latestProducts.slice(0, 3).map((product, idx) => (
+                              <ProductWidget key={idx} {...product} />
                          ))}
                     </div>
                </div>

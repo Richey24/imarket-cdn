@@ -10,7 +10,6 @@ const fetchMarkdownFile = async () => {
      try {
           const response = await axios.get(rawUrl);
           const markdownContent = response.data;
-          // console.log(markdownContent);
           // Process the markdownContent as needed.
           return markdownContent;
      } catch (error) {

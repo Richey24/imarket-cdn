@@ -48,22 +48,18 @@ const Banner = ({ slides }) => {
                          <div className="grid-item col-lg-7 height-x2">
                               <Carousel>
                                    {mappedSlides.map((slide, index) => (
-                                        <Carousel.Item>
+                                        <Carousel.Item key={index}>
                                              <div className="home-banner">
                                                   <figure className="bg-gray">
                                                        <Image
-                                                            src={
-                                                                 slide.imageSrc
-                                                            }
+                                                            src={slide.imageSrc}
                                                             width="951"
                                                             height="651"
                                                             alt="banner"
                                                        />
                                                   </figure>
                                                   <div className="banner-content content-left">
-                                                       <h3>
-                                                            {slide.title}
-                                                       </h3>
+                                                       <h3>{slide.title}</h3>
                                                        <div className="banner-info">
                                                             <a href="#" className="btn skew-box">
                                                                  {slide.saleTitle}
@@ -74,10 +70,7 @@ const Banner = ({ slides }) => {
                                                             <p className="font2">
                                                                  starting from ${slide.price}
                                                             </p>
-                                                            <a
-                                                                 href={slide.link}
-                                                                 className="btn"
-                                                            >
+                                                            <a href={slide.link} className="btn">
                                                                  shop now{" "}
                                                                  <i className="fas fa-long-arrow-alt-right"></i>
                                                             </a>

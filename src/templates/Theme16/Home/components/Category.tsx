@@ -5,8 +5,9 @@ import { banners } from "../data";
 export const Category = () => {
      return (
           <section className="section-3 category-section d-block d-md-flex">
-               {banners.map((data) => (
+               {banners.map((data, idx) => (
                     <div
+                         key={idx}
                          className="col-md-6 col-12 banner banner-1 bg-img d-flex align-items-center appear-animate"
                          data-animation-duration={1200}
                          style={{

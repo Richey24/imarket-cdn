@@ -29,10 +29,13 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                          return (
                               <SwiperSlide key={product.title}>
                                    <Product
-                                        productImageUrl={product.imageUrl}
+                                        productImageUrl={product.imageUrl as string}
                                         productCategory={product.category}
                                         productTitle={product.title}
                                         productPrice={product.price}
+                                        productImageAlt=""
+                                        id={123}
+                                        // productImageUrlTwo={""}
                                    />
                               </SwiperSlide>
                          );

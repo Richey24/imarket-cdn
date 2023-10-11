@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
      dots: false,
@@ -30,7 +31,7 @@ function OurCategory() {
                     >
                          <span>BROWSE OUR CATEGORIES</span>
                     </h2>
-                    <OwlCarousel
+                    {/* <OwlCarousel
                          className="owl-carousel owl-theme show-nav-hover"
                          {...owlCarouselOptions}
                     >
@@ -108,7 +109,7 @@ function OurCategory() {
                                    <span>2 Products </span>
                               </div>
                          </div>
-                    </OwlCarousel>
+                    </OwlCarousel> */}
                </div>
           </div>
      );

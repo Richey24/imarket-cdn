@@ -1,6 +1,6 @@
 import Product from "@/app/components/Product";
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { latestProducts } from "@/templates/Theme34/Home/data";
 import { Tab, Nav } from "react-bootstrap";
 import { templateImages } from "@/appProvider/templateImages";
@@ -31,21 +31,22 @@ const owlCarouselOptions = {
 
 function TabContent() {
      return (
-          <OwlCarousel
-               className="products-slider owl-carousel nav-circle carousel-with-bg owl-theme pb-0"
-               {...owlCarouselOptions}
-          >
-               {latestProducts.map((product, index) => {
-                    return (
-                         <Product
-                              key={product.title}
-                              imageSrc={templateImages.demo36.productImages[`product${index + 1}`]}
-                              productName={product.title}
-                              price={product.price}
-                         />
-                    );
-               })}
-          </OwlCarousel>
+          // <OwlCarousel
+          //      className="products-slider owl-carousel nav-circle carousel-with-bg owl-theme pb-0"
+          //      {...owlCarouselOptions}
+          // >
+          //      {latestProducts.map((product, index) => {
+          //           return (
+          //                <Product
+          //                     key={product.title}
+          //                     imageSrc={templateImages.demo36.productImages[`product${index + 1}`]}
+          //                     productName={product.title}
+          //                     price={product.price}
+          //                />
+          //           );
+          //      })}
+          // </OwlCarousel>
+          <div></div>
      );
 }
 

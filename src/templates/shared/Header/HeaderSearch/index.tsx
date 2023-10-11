@@ -11,6 +11,8 @@ function HeaderSearch({
      menuBtnTextColor,
      showCategory = true,
      showPhone = true,
+     loggedInData,
+     cart,
 }: {
      company: any;
      categories: any;
@@ -18,6 +20,8 @@ function HeaderSearch({
      menuBtnTextColor?: string;
      showCategory?: boolean;
      showPhone?: boolean;
+     loggedInData: any;
+     cart: any;
 }): JSX.Element {
      return (
           <div className={`header-middle sticky-header ${className}`}>
@@ -77,7 +81,7 @@ function HeaderSearch({
                               </div>
                          )}
 
-                         <HeaderIcons />
+                         <HeaderIcons loggedInData={loggedInData} cart={cart} />
                     </div>
                </div>
           </div>

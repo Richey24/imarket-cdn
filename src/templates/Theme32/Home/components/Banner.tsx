@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
      dots: false,
@@ -14,7 +14,7 @@ const owlCarouselOptions = {
 export const Banner = ({ slides }) => {
      return (
           <section className="w-full pb-0 mb-0">
-               <OwlCarousel className="top-slider" {...owlCarouselOptions}>
+               {/* <OwlCarousel className="top-slider" {...owlCarouselOptions}>
                     <div
                          className="home-slide home-slide1"
                          style={{
@@ -66,7 +66,7 @@ export const Banner = ({ slides }) => {
                               </div>
                          </div>
                     </div>
-               </OwlCarousel>
+               </OwlCarousel> */}
           </section>
      );
 };

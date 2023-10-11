@@ -9,8 +9,8 @@ export const Products = () => {
                          data-animation-name="fadeInUpShorter"
                          data-animation-delay={200}
                     >
-                         {productsData.map((data) => (
-                              <div className="col-sm-6 col-md-4">
+                         {productsData.map((data, idx) => (
+                              <div key={idx} className="col-sm-6 col-md-4">
                                    <div className="product-default inner-icon inner-quickview">
                                         <figure>
                                              <a href="demo26-product.html">

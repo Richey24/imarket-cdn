@@ -6,8 +6,8 @@ export const Banner = () => {
      return (
           <div className="home-slider slide-animate  owl-theme show-nav-hover nav-big mb-2 text-uppercase">
                <Carousel>
-                    {slidersData.map((data) => (
-                         <Carousel.Item>
+                    {slidersData.map((data, idx) => (
+                         <Carousel.Item key={idx}>
                               {" "}
                               <div className="home-slide home-slide1 banner">
                                    <img

@@ -18,8 +18,8 @@ export const Info = () => {
                data-animation-delay={200}
           >
                <div className="row m-0">
-                    {infoData.map((data) => (
-                         <div className="info-box info-box-icon-left col-md-4">
+                    {infoData.map((data, idx) => (
+                         <div key={idx} className="info-box info-box-icon-left col-md-4">
                               <i className={data.icon} />
                               <div className="info-box-content">
                                    <h4 className="ls-n-25">{data.h4}</h4>

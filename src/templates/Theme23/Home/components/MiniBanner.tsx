@@ -44,6 +44,7 @@ export const MiniBanners = () => {
           <div className="row mb-2">
                {miniBanners.map((minibanner, index) => (
                     <MiniBanner
+                         key={index}
                          h2={minibanner.h2}
                          h3={minibanner.h3}
                          h4={minibanner.h4}

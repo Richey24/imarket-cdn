@@ -37,8 +37,8 @@ export const ProductSection2 = () => {
                <div className="container">
                     <div className="products-slider  owl-theme nav-out nav-image-center">
                          <Slider {...settings}>
-                              {sunglassesProducts.map((product) => (
-                                    <Product {...product} />
+                              {sunglassesProducts.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
 

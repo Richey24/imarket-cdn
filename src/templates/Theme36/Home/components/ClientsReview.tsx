@@ -1,4 +1,4 @@
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
      dots: true,
@@ -19,7 +19,7 @@ function ClientsReview() {
                          Only the best seller products added recently in our catalog
                     </h5>
 
-                    <OwlCarousel
+                    {/* <OwlCarousel
                          className="testimonial-carousel owl-carousel owl-theme show-nav-hover nav-outer dots-small mb-2"
                          {...owlCarouselOptions}
                     >
@@ -47,7 +47,7 @@ function ClientsReview() {
                                    <strong className="testimonial-title">Mary Doe</strong>
                               </div>
                          </div>
-                    </OwlCarousel>
+                    </OwlCarousel> */}
                </div>
           </section>
      );

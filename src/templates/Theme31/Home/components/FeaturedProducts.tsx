@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImageData } from "next/image";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import Product from "@/app/components/Product";
 
 interface Iproduct {
@@ -22,8 +22,8 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
      return (
           <section className="product-panel bar-bottom">
                <div className="row ">
-                    {/* <div className="col-12 col-sm-6 col-lg-4 height-xxl mb-0 mb-lg-0">
-                         <OwlCarousel className="product-slider" {...owlCarouselOptions}>
+                    <div className="col-12 col-sm-6 col-lg-4 height-xxl mb-0 mb-lg-0">
+                         {/* <OwlCarousel className="product-slider" {...owlCarouselOptions}>
                               <div className="product-default inner-quickview inner-icon center-details">
                                    <figure>
                                         <a href="demo31-product.html">
@@ -192,13 +192,16 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                                         </div>
                                    </div>
                               </div>
-                         </OwlCarousel>
-                    </div> */}
-                    <div className="col-12">
+                         </OwlCarousel> */}
+                    </div>
+                    <div className="col-12 col-sm-6 col-lg-8">
                          <div className="row">
-                              {products.map((product: Iproduct) => {
+                              {products.map((product: Iproduct, idx) => {
                                    return (
-                                        <div className="col-6 col-sm-6 col-md-3  height-xl">
+                                        <div
+                                             key={idx}
+                                             className="col-6 col-sm-6 col-md-3  height-xl"
+                                        >
                                              <Product
                                                   imageSrc={product.imageUrl as string}
                                                   productName={product.title}

@@ -23,12 +23,11 @@ export const PopularProducts = ({ section, products}) => {
                          <h2 className="section-title pb-3 m-b-4">{section}</h2>
 
                          <Slider {...settings}>
-                              {products.map((product) => (
-                                   <Product {...product} />
+                              {products.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>
-                    
                </div>
           </section>
      );

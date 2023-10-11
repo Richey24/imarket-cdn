@@ -61,8 +61,12 @@ export const SidebarHome = ({ categories }) => {
                          {categories &&
                               categories
                                    .filter((category) => !category.parent_id)
-                                   .map((category) => (
-                                        <CategoryList category={category} categories={categories} />
+                                   .map((category, idx) => (
+                                        <CategoryList
+                                             key={idx}
+                                             category={category}
+                                             categories={categories}
+                                        />
                                    ))}
                     </ul>
                     {/* End .side-menu */}

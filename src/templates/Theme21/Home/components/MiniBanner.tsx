@@ -3,8 +3,8 @@ import { miniBanners } from "../data";
 export const MiniBanner = () => {
      return (
           <div className="row m-b-3">
-               {miniBanners.map((data) => (
-                    <div className="col-md-6">
+               {miniBanners.map((data, idx) => (
+                    <div className="col-md-6" key={idx}>
                          <div className="banner banner1" style={{ backgroundColor: "#f4f4f4" }}>
                               <figure>
                                    <img src={data.img} alt="banner" />

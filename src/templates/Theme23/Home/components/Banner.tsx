@@ -9,7 +9,7 @@ export const Banner = ({ banners }) => {
                <div className="home-slider slide-animate  owl-theme">
                     <Carousel>
                          {banners.map((banner, index) => (
-                              <Carousel.Item>
+                              <Carousel.Item key={index}>
                                    {" "}
                                    <div className="home-slide home-slide-1 banner">
                                         <img

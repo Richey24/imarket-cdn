@@ -37,7 +37,6 @@ export const options: NextAuthOptions = {
                     if (data) {
                          return { ...data.user, token: data.token };
                     } else {
-                         console.log("check your credentials");
                          return null;
                     }
                },
@@ -56,6 +55,7 @@ export const options: NextAuthOptions = {
                          firstname: token.firstname,
                          lastname: token.lastname,
                          randomKey: token.randomKey,
+                         token,
                     },
                };
           },

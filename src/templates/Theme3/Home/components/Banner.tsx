@@ -32,7 +32,10 @@ const Banner = ({ slides }) => {
           <Slider {...settings}>
                {mappedSlides.map((slide, next) => {
                     return (
-                         <div className="home-slide home-slide1 banner d-flex align-items-center tw-h-screen tw-w-screen">
+                         <div
+                              key={next}
+                              className="home-slide home-slide1 banner d-flex align-items-center tw-h-screen tw-w-screen"
+                         >
                               <Image
                                    className="slide-bg"
                                    src={slide.imageSrc}

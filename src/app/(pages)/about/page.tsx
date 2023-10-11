@@ -20,9 +20,10 @@ export default function About() {
 
      const { site } = useContext(AppContext);
 
-     const pageData = site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage);
-     const minifiedData = pageData?.sections[0]?.component.props.static;
-     console.log("pageData", minifiedData);
+     const pageData =
+          site?.theme?.pages?.find((page: { name: any }) => page.name === currentPage) || null;
+     const minifiedData = pageData?.sections[0]?.component.props.static || null;
+     // console.log("pageData", minifiedData);
 
      const img1 =
           "https://images.unsplash.com/photo-1689481172416-dae28c4a08b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=822&q=80";
@@ -93,7 +94,9 @@ export default function About() {
                               {" "}
                               {minifiedData &&
                                    minifiedData.team &&
-                                   minifiedData.team.map((data) => <TeamInfo {...data} />)}
+                                   minifiedData.team.map((data, idx) => (
+                                        <TeamInfo key={idx} {...data} />
+                                   ))}
                          </Slider>
                     </div>
                     {/* End .row */}

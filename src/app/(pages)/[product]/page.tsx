@@ -1,7 +1,6 @@
 import { findFeaturedProducts, findProduct } from "@/api/product.api";
 import { ProductDescription } from "@/app/components/Product/Product-description";
 import ProductStuf from "@/app/components/Product/product-stuf";
-// import { Button, HStack, Input, useNumberInput } from "@chakra-ui/react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -13,8 +12,6 @@ async function ProductPage({ params }: { params: { product: string } }) {
           console.log({ err });
           if (!product) return notFound();
      }
-
-     // const featuredProducts = findFeaturedProducts();
 
      return (
           <div className="tw-pb-12 tw-pt-8">
