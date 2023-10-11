@@ -26,6 +26,10 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
      const [cart, setCart] = useState(null);
+     const [brandcolor, setBrandcolor] = useState({
+          primaryColor: "#3498db",
+          secondaryColor: "#2ecc71",
+     });
 
      const addToCart = useAddToCart();
      const getSiteByDomain = useGetSiteByDomain();
@@ -184,6 +188,33 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                },
           );
      };
+
+     React.useEffect(() => {
+          if (site) {
+               console.log({ brandcolor: site.company.brandcolor });
+               const colors = site.company.brandcolor;
+               setBrandcolor(() => {
+                    return { primaryColor: colors[0].hex, secondaryColor: colors[1].hex };
+               });
+          }
+     }, [site]);
+     useEffect(() => {
+          if (window) {
+               document.documentElement.style.setProperty(
+                    "--primary-color",
+                    brandcolor.primaryColor,
+               );
+               document.documentElement.style.setProperty(
+                    "--secondary-color",
+                    brandcolor.secondaryColor,
+               );
+
+               const root = document.documentElement;
+
+               root.style.setProperty("--primary", brandcolor.primaryColor);
+               root.style.setProperty("--secondary", brandcolor.secondaryColor);
+          }
+     }, [brandcolor]);
 
      return (
           <AppContext.Provider

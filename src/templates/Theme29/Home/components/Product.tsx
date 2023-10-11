@@ -3,7 +3,7 @@ import { products } from "../data";
 import { templateImages } from "@/appProvider/templateImages";
 import { useState } from "react";
 
-const Product = ({ setQuickView }) => {
+const Product = ({ setQuickView, productDatas, section1, section }) => {
      const showDiv = (product: object) => {
           const theDiv = document.getElementById("quickViewDiv");
           if (theDiv) {
@@ -23,7 +23,7 @@ const Product = ({ setQuickView }) => {
                >
                     <div className="heading d-flex align-items-center flex-column flex-lg-row">
                          <div className="section-title">
-                              <h2 className="mt-1 mb-1">FEATURED PRODUCTS</h2>
+                              <h2 className="mt-1 mb-1">{section1}</h2>
                          </div>
                          <ul
                               className="nav product-filter-items ml-lg-auto justify-content-center mb-0"
@@ -607,19 +607,34 @@ const Product = ({ setQuickView }) => {
                </section>
                <section className="container">
                     <div className="featured-section bg-white">
+                         <div className="section-title">
+                              <h2 className="mt-1 mb-1">{section}</h2>
+                         </div>
                          <div className="row">
-                              {products.slice(0, 12).map((product, i) => (
+                              {productDatas.slice(0, 12).map((product, i) => (
                                    <div key={i} className="col-6 col-md-4 col-lg-3 col-xl-2">
                                         <div className="product-default inner-quickview left-details inner-icon">
                                              <figure>
-                                                  <a href="demo29-product.html">
-                                                       <Image
-                                                            src={product.productImageUrl}
-                                                            width="257"
-                                                            height="257"
-                                                            alt="Product"
-                                                       />
-                                                  </a>
+                                                  <div
+                                                       style={{
+                                                            width: "200px",
+                                                            height: "200px",
+                                                            overflow: "hidden",
+                                                       }}
+                                                  >
+                                                       <a href="demo21-product.html">
+                                                            <Image
+                                                                 style={{
+                                                                      width: "100%",
+                                                                      height: "100%",
+                                                                 }}
+                                                                 src={product.productImageUrl}
+                                                                 width={217}
+                                                                 height={217}
+                                                                 alt="product"
+                                                            />
+                                                       </a>
+                                                  </div>
                                                   <div className="btn-icon-group">
                                                        <a
                                                             href="#"

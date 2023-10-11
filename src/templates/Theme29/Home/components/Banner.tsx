@@ -1,8 +1,20 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
 import "./Banner.css";
+import Carousel from "react-bootstrap/Carousel";
 
-const Banner = () => {
+const Banner = ({ slides }) => {
+     const mappedSlides = slides.map((slide: any) => ({
+          background: "#555",
+          imageSrc:
+               slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo21.sliderImage.slide1,
+          title: "wooden Black chair",
+          saleTitle: "go coupon",
+          discount: "$100",
+          price: 99,
+          oldPrice: 59,
+          link: "demo29-shop.html",
+     }));
      return (
           <div className="container">
                <section>
@@ -34,38 +46,40 @@ const Banner = () => {
                               </div>
                          </div>
                          <div className="grid-item col-lg-7 height-x2">
-                              <div className="home-banner">
-                                   <figure className="bg-gray">
-                                        <Image
-                                             src={templateImages.demo29.bannerImage.banner7}
-                                             width="951"
-                                             height="651"
-                                             alt="banner"
-                                        />
-                                   </figure>
-                                   <div className="banner-content content-left">
-                                        <h3>
-                                             <strong>
-                                                  wooden
-                                                  <br />
-                                             </strong>
-                                             Black Chair
-                                        </h3>
-                                        <div className="banner-info">
-                                             <a href="#" className="btn skew-box">
-                                                  go coupon
-                                             </a>
-                                             <h3 className="sale-off skew-box">
-                                                  <span>$100</span>off
-                                             </h3>
-                                             <p className="font2">starting from $199</p>
-                                             <a href="demo29-shop.html" className="btn">
-                                                  shop now{" "}
-                                                  <i className="fas fa-long-arrow-alt-right"></i>
-                                             </a>
-                                        </div>
-                                   </div>
-                              </div>
+                              <Carousel>
+                                   {mappedSlides.map((slide, index) => (
+                                        <Carousel.Item key={index}>
+                                             <div className="home-banner">
+                                                  <figure className="bg-gray">
+                                                       <Image
+                                                            src={slide.imageSrc}
+                                                            width="951"
+                                                            height="651"
+                                                            alt="banner"
+                                                       />
+                                                  </figure>
+                                                  <div className="banner-content content-left">
+                                                       <h3>{slide.title}</h3>
+                                                       <div className="banner-info">
+                                                            <a href="#" className="btn skew-box">
+                                                                 {slide.saleTitle}
+                                                            </a>
+                                                            <h3 className="sale-off skew-box">
+                                                                 <span>{slide.discount}</span>off
+                                                            </h3>
+                                                            <p className="font2">
+                                                                 starting from ${slide.price}
+                                                            </p>
+                                                            <a href={slide.link} className="btn">
+                                                                 shop now{" "}
+                                                                 <i className="fas fa-long-arrow-alt-right"></i>
+                                                            </a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </Carousel.Item>
+                                   ))}
+                              </Carousel>
                          </div>
                          <div id="banGrid" className="row grid" style={{ width: "100%" }}>
                               <div className="grid-item col-6 col-lg-2 height-x1">

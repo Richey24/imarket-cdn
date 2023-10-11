@@ -2,7 +2,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import { templateImages } from "@/appProvider/templateImages";
 
-const Banner = () => {
+const Banner = ({ slider }) => {
      let settings = {
           dots: true,
           infinite: true,
@@ -20,7 +20,7 @@ const Banner = () => {
                <div className="container">
                     <div className="home-slider slide-animate owl-carousel owl-theme owl-carousel-lazy">
                          <Slider {...settings}>
-                              <div>
+                              {slider[0] && (
                                    <div className="home-slide home-slide-1 banner d-flex flex-wrap">
                                         <div className="col-lg-4 d-flex justify-content-center">
                                              <div
@@ -29,13 +29,13 @@ const Banner = () => {
                                                   data-animation-delay={200}
                                              >
                                                   <h4 className="text-light text-uppercase m-b-1">
-                                                       Extra
+                                                       {slider[0]?.title}
                                                   </h4>
-                                                  <h2 className="text-uppercase m-b-1">20% off</h2>
+                                                  {/* <h2 className="text-uppercase m-b-1">20% off</h2>
                                                   <h4 className="font-weight-bold text-uppercase heading-border m-b-3">
                                                        BIKES
-                                                  </h4>
-                                                  <h3 className="font5 m-b-5">Summer Sale</h3>
+                                                  </h4> */}
+                                                  <h3 className="font5 m-b-5">{slider[0]?.text}</h3>
                                                   <div>
                                                        <a
                                                             href="demo27-shop.html"
@@ -46,12 +46,7 @@ const Banner = () => {
                                                   </div>
                                              </div>
                                         </div>
-                                        <div
-                                             className="col-lg-8 with-bg"
-                                             style={{
-                                                  backgroundImage: `url(${templateImages.demo27.sliderImage.slide3})`,
-                                             }}
-                                        >
+                                        <div className="col-lg-8 with-bg">
                                              <div
                                                   className=""
                                                   data-animation-name="fadeInLeftShorter"
@@ -59,15 +54,13 @@ const Banner = () => {
                                              >
                                                   <Image
                                                        className="m-b-5"
-                                                       src={
-                                                            templateImages.demo27.sliderImage.slide1
-                                                       }
+                                                       src={slider[0]?.imageUrl}
                                                        width={740}
                                                        height={397}
                                                        alt="banner"
                                                   />
                                              </div>
-                                             <div
+                                             {/* <div
                                                   className="content-box d-sm-flex "
                                                   data-animation-name="fadeInLeftShorter"
                                                   data-animation-delay={700}
@@ -86,11 +79,12 @@ const Banner = () => {
                                                             * Get Plus Discount Buying Package
                                                        </p>
                                                   </div>
-                                             </div>
+                                             </div> */}
                                         </div>
                                    </div>
-                              </div>
-                              <div>
+                              )}
+
+                              {slider[1] && (
                                    <div className="home-slide home-slide-2 banner d-flex flex-wrap">
                                         <div className="col-lg-5 d-flex justify-content-center">
                                              <div
@@ -99,13 +93,15 @@ const Banner = () => {
                                                   data-animation-delay={200}
                                              >
                                                   <h4 className="text-light text-uppercase m-b-1">
-                                                       Extra
+                                                       {slider[1]?.title}
                                                   </h4>
-                                                  <h2 className="text-uppercase m-b-1">20% off</h2>
+                                                  {/* <h2 className="text-uppercase m-b-1">20% off</h2>
                                                   <h4 className="font-weight-bold text-uppercase heading-border m-b-3">
                                                        BIKES
-                                                  </h4>
-                                                  <h3 className="font5 p-b-4 m-b-5">Summer Sale</h3>
+                                                  </h4> */}
+                                                  <h3 className="font5 p-b-4 m-b-5">
+                                                       {slider[1]?.text}
+                                                  </h3>
                                                   <div>
                                                        <a
                                                             href="demo27-shop.html"
@@ -123,14 +119,14 @@ const Banner = () => {
                                         >
                                              <Image
                                                   className="m-b-5"
-                                                  src={templateImages.demo27.sliderImage.slide2}
+                                                  src={slider[1]?.imageUrl}
                                                   width={740}
                                                   height={397}
                                                   alt="banner"
                                              />
                                         </div>
                                    </div>
-                              </div>
+                              )}
                          </Slider>
                     </div>
                </div>

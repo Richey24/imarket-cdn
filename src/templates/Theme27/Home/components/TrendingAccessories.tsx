@@ -1,7 +1,9 @@
 import Slider from "react-slick";
 import { ProductProps } from "../types";
 import { Product } from "./Product";
-const TrendingAccessories: React.FC<{ trendingAccessories: ProductProps[] }> = (props) => {
+const TrendingAccessories: React.FC<{ trendingAccessories: ProductProps[]; headerTitle }> = (
+     props,
+) => {
      let settings = {
           dots: true,
           infinite: true,
@@ -22,7 +24,7 @@ const TrendingAccessories: React.FC<{ trendingAccessories: ProductProps[] }> = (
                          data-animation-name="fadeInUpShorter"
                          data-animation-delay={200}
                     >
-                         Trending Accessories
+                         {props.headerTitle}
                     </h2>
                     <div
                          className="row w-100"

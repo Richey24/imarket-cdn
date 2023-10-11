@@ -17,12 +17,13 @@ export default function page() {
                               Sorry, we {"can't "}find that page. {"You'll"} find lots to explore on the
                               home page.{" "}
                          </p>
-                         <Link
-                              href="/"
-                              className="tw-inline-flex tw-text-white bg-primary hover:tw-text-white focus:tw-ring-4 focus:tw-outline-none tw-text-md
+                         <Link href="/" className="">
+                              <button
+                                   className="btn btn-primary tw-inline-flex !tw-text-white  hover:tw-text-white focus:tw-ring-4 focus:tw-outline-none tw-text-md
                                focus:tw-ring-primary-300 tw-font-medium tw-rounded-lg tw-px-5 tw-py-2.5 tw-text-center dark:tw-focus:ring-primary-900 tw-my-4"
-                         >
-                              Back to Homepage
+                              >
+                                   Back to Homepage
+                              </button>
                          </Link>
                     </div>
                </div>
