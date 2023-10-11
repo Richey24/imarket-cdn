@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Product } from "./Product";
- 
 
 const LatestProducts = ({ products }) => {
      return (
@@ -16,9 +15,9 @@ const LatestProducts = ({ products }) => {
                     // modules={[Pagination]}
                     className="mySwiper"
                >
-                    {products.map((product) => {
+                    {products.map((product, idx) => {
                          return (
-                              <SwiperSlide>
+                              <SwiperSlide key={idx}>
                                    <Product {...product} />
                               </SwiperSlide>
                          );

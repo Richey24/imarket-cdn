@@ -16,17 +16,17 @@ const owlCarouselOptions = {
 };
 
 export const Banner = ({ slides }) => {
-     const mappedSlides = slides.map((slide: any) => ({
-          background: "#555",
-          imageSrc:
-               slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo21.sliderImage.slide1,
-          title: "The Week",
-          saleTitle: "Gift Shop",
-          discount: " An entire week to enjoy all offers",
-          price: 99,
-          oldPrice: 59,
-          link: "demo30-shop.html",
-     }));
+     // const mappedSlides = slides.map((slide: any) => ({
+     //      background: "#555",
+     //      imageSrc:
+     //           slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo21.sliderImage.slide1,
+     //      title: "The Week",
+     //      saleTitle: "Gift Shop",
+     //      discount: " An entire week to enjoy all offers",
+     //      price: 99,
+     //      oldPrice: 59,
+     //      link: "demo30-shop.html",
+     // }));
      return (
           <div className="container">
                <section className="mb-2">
@@ -176,9 +176,9 @@ export const Banner = ({ slides }) => {
                                                                       </div>
                                                                  </div>
                                                             </OwlCarousel>
-                                                       </div> 
-                                                  </div>
-                                             </OwlCarousel> */}
+                                                       </div> */}
+                                             {/* </div> */}
+                                             {/* </OwlCarousel>  */}
                                         </div>
                                    </div>
                               </div>
