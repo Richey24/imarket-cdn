@@ -44,13 +44,13 @@ const Product = ({ imageSrc, productName, price }: InferProps<typeof ProductProp
                          <h3 className="product-title">
                               <Link href={`/${productName}`}>{productName}</Link>
                          </h3>
-                         <div className="ratings-container">
+                         {/* <div className="ratings-container">
                               <div className="product-ratings">
                                    <span className="ratings tw-w-0"></span>
 
                                    <span className="tooltiptext tooltip-top"></span>
                               </div>
-                         </div>
+                         </div> */}
 
                          <div className="price-box">
                               <span className="tw-text-2xl tw-font-semibold"> {price}</span>

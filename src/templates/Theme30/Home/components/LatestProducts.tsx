@@ -7,7 +7,7 @@ import { Pagination } from "swiper/modules";
 import { Product } from "./Product";
  
 
-const FeaturedProducts = ({ products }) => {
+const LatestProducts = ({ products }) => {
      return (
           <div>
                <Swiper
@@ -28,4 +28,4 @@ const FeaturedProducts = ({ products }) => {
      );
 };
 
-export default FeaturedProducts;
+export default LatestProducts;
