@@ -26,15 +26,8 @@ export const Banner = ({ slides }) => {
                               <div className="divide-txt mb-0 ">
                                    <span className="font2">{slides[0]?.text}</span>
                               </div>
-                              {/* <h2 className="">Summer Sale</h2> */}
                               <h3 className=" ">{slides[0]?.title}</h3>
                               <div className="image-info-group ">
-                                   {/* <h5>
-                                        STARTING AT{" "}
-                                        <span>
-                                             <sup>$</sup>39<sup>99</sup>
-                                        </span>
-                                   </h5> */}
                                    <a href="demo32-shop.html" className="btn">
                                         GET YOURS!
                                    </a>
@@ -54,12 +47,6 @@ export const Banner = ({ slides }) => {
                               <h2 className="">{slides[1]?.text}</h2>
                               <h3 className="">{slides[1]?.title}</h3>
                               <div className="image-info-group ">
-                                   {/* <h5>
-                                        STARTING AT{" "}
-                                        <span>
-                                             <sup>$</sup>19<sup>99</sup>
-                                        </span>
-                                   </h5> */}
                                    <a href="demo32-shop.html" className="btn">
                                         GET YOURS!
                                    </a>
