@@ -445,7 +445,7 @@
      background-color: #f26100 !important;
 }
 .bg-secondary {
-     background-color: #ee8379 !important;
+     background-color: var(--secondary-color)  !important;
 }
 .text-dark {
      color: #222529 !important;
@@ -454,7 +454,7 @@
      color: #f26100 !important;
 }
 .text-secondary {
-     color: #ee8379 !important;
+     color: var(--secondary-color)  !important;
 }
 .text-body {
      color: #777 !important;

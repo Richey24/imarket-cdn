@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { templateImages } from "@/appProvider/templateImages";
 // import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {

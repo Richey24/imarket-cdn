@@ -585,11 +585,11 @@
 }
 
 .bg-primary {
-     background-color: #282d3b !important;
+     background-color: var(--primary-color)  !important;
 }
 
 .bg-secondary {
-     background-color: #ee3d43 !important;
+     background-color: var(--secondary-color)  !important;
 }
 
 .text-dark {
@@ -10156,13 +10156,9 @@ body {
      -webkit-font-smoothing: antialiased;
      overflow-x: hidden;
 }
-<<<<<<< HEAD
-/* body:not(.loaded) > :not(.loading-overlay) {
-=======
 
 /* 
 body:not(.loaded) > :not(.loading-overlay) {
->>>>>>> 4767401aed9954d642dd4b761af6a9beecfd187d
      visibility: hidden !important;
      transition: none !important;
 }
