@@ -4,6 +4,7 @@ import Image from "next/image";
 
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
+   
      return (
           <footer className="footer">
                <div className="footer-middle">

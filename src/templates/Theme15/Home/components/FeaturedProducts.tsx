@@ -33,6 +33,7 @@ function FeaturedProduct({ products }: { products: Iproduct[] }) {
                                         productCategory={product.category}
                                         productTitle={product.title}
                                         productPrice={product.price}
+                                        productImageAlt=""
                                    />
                               </SwiperSlide>
                          );

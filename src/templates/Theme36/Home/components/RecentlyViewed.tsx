@@ -1,7 +1,7 @@
 import Product from "@/app/components/Product";
 import { latestProducts } from "@/templates/Theme34/Home/data";
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { templateImages } from "@/appProvider/templateImages";
 
 const owlCarouselOptions = {
@@ -39,7 +39,7 @@ export default function RecentlyViewed() {
                          View All<i className="fas fa-long-arrow-alt-right"></i>
                     </a>
                </div>
-               <OwlCarousel
+               {/* <OwlCarousel
                     className="products-slider owl-carousel owl-theme carousel-with-bg nav-circle "
                     {...owlCarouselOptions}
                >
@@ -55,7 +55,7 @@ export default function RecentlyViewed() {
                               />
                          );
                     })}
-               </OwlCarousel>
+               </OwlCarousel> */}
           </section>
      );
 }

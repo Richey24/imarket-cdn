@@ -158,7 +158,7 @@ const Home = (props) => {
                                              </div>
                                              <div className="feature-box-content p-0">
                                                   <h3>Customer Support</h3>
-                                                  <h5>You Won't Be Alone</h5>
+                                                  <h5>You {"Won't"} Be Alone</h5>
                                                   <p>
                                                        We really care about you and your website as
                                                        much as you do. Purchasing Porto or any other

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
     dots: false,
@@ -22,15 +22,16 @@ const owlCarouselOptions = {
 
 
 function OurCategory() {
-    return <div className="categories-section bg-primary">
-        <div className="container">
-            <h2 className="section-title border-0 title-decorate text-center text-white d-flex align-items-center appear-animate"
-                data-animation-name="fadeInUpShorter">
-                <span>BROWSE
-                    OUR
-                    CATEGORIES</span>
-            </h2>
-            <OwlCarousel className="owl-carousel owl-theme show-nav-hover" {...owlCarouselOptions}>
+    return (
+         <div className="categories-section bg-primary">
+              <div className="container">
+                   <h2
+                        className="section-title border-0 title-decorate text-center text-white d-flex align-items-center appear-animate"
+                        data-animation-name="fadeInUpShorter"
+                   >
+                        <span>BROWSE OUR CATEGORIES</span>
+                   </h2>
+                   {/* <OwlCarousel className="owl-carousel owl-theme show-nav-hover" {...owlCarouselOptions}>
                 <div className="banner banner-image">
                     <Link href="demo7-product.html">
                         <Image src="https://images.unsplash.com/photo-1524532787116-e70228437bbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" width="272" height="231"
@@ -85,9 +86,10 @@ function OurCategory() {
                         <span>2 Products </span>
                     </div>
                 </div>
-            </OwlCarousel>
-        </div>
-    </div>
+            </OwlCarousel> */}
+              </div>
+         </div>
+    );
 }
 
 export default OurCategory

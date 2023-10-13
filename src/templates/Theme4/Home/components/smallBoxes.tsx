@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
+// import OwlCarousel from "react-owl-carousel";
 
 interface Banner {
      imageUrl: string;
@@ -30,7 +29,7 @@ const SmallBoxes: React.FC<Props> = ({ banners }) => {
           <div className="container">
                <div className="banners-container mb-2">
                     <div className="banners-slider ">
-                         <OwlCarousel
+                         {/* <OwlCarousel
                               className="info-boxes-slider owl-carousel owl-theme"
                               {...owlCarouselOptions}
                          >
@@ -97,7 +96,7 @@ const SmallBoxes: React.FC<Props> = ({ banners }) => {
                                         </div>
                                    </div>
                               ))}
-                         </OwlCarousel>
+                         </OwlCarousel> */}
                     </div>
                </div>
           </div>

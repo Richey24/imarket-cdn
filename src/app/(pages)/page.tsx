@@ -16,7 +16,8 @@ const DynamicComponent = ({
 
 export default function Home() {
      const currentPage = "home";
-     const { site, products, categories, featuredProducts } = useContext(AppContext);
+     const { site, products, categories, featuredProducts, handleAddToCart } =
+          useContext(AppContext);
 
      const newGeneratedTemplate = (): {
           [key: string]: { component?: React.ComponentType<any> | string; props?: object };
@@ -62,6 +63,7 @@ export default function Home() {
                               products,
                               categories,
                               featuredProducts,
+                              handleAddToCart,
                          }
                     }
                />

@@ -29,8 +29,10 @@ export default function SignUpForm() {
      };
 
      React.useEffect(() => {
-          const subDomain = window.location.host.split(".")[0];
-          setDomain(subDomain);
+          if (typeof window !== "undefined") {
+               const subDomain = window.location.host.split(".")[0];
+               setDomain(subDomain);
+          }
      }, []);
      return (
           <form onSubmit={handleSubmit(onSubmit)}>

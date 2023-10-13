@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import Image from "next/image";
 
 export const Banner = () => {
@@ -21,7 +21,7 @@ export const Banner = () => {
      return (
           <div className="row m-b-3">
                <div className="home-slider-container col-lg-9 offset-lg-3">
-                    <OwlCarousel
+                    {/* <OwlCarousel
                          className="home-slider owl-carousel owl-carousel-lazy"
                          {...owlCarouselOptions}
                     >
@@ -135,7 +135,7 @@ export const Banner = () => {
                                    </div>
                               </div>
                          </div>
-                    </OwlCarousel>
+                    </OwlCarousel> */}
                </div>
           </div>
      );

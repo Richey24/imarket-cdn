@@ -14,6 +14,7 @@ import { setCartSideBarOpen, setSideBarVisibility } from "@/redux/global";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import RightDrawer from "@/templates/shared/CartSideBar";
+import { useSession } from "next-auth/react";
 import ScrollToTopButton from "../components/ScrollToTopButton ";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,19 +24,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const { isSideBarVisible, isCartSideBarOpen } = useSelector(
           (state: RootState) => state.general,
      );
-
-     const { site, loading, setLoading, categories, products } = useContext<{
+     const { data } = useSession();
+     const { site, loading, setLoading, categories, products, cart } = useContext<{
           site: SitesField;
           loading: boolean;
           setLoading: React.Dispatch<React.SetStateAction<boolean>>;
           categories: any;
           products: any;
+          cart: any;
      }>(AppContext);
      const [styleLoader, setStyleLoader] = useState(false);
      const [menuBtn, setMenuBtn] = useState("template-menu");
      const [showTopAds, setShowTopAds] = useState(true);
 
-     // console.log("site.theme.theme ", site);
      useEffect(() => {
           if (site) {
                // setStyleLoader(true);
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }
      }, [site]);
 
-     console.log(site, loading);
+     // console.log(site, loading);
 
      if (!site && loading) {
           return <PlaceholderLayout />;
@@ -60,7 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
      const Footer = defualtTemplate?.["footer"];
      const topAds = (site as any)?.theme?.topAds?.component?.props?.static;
 
-     console.log("topads", topAds);
      const handleSideBarClose = () => {
           dispatch(setSideBarVisibility());
      };
@@ -129,6 +129,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                    ...site.theme.header.component.props,
                                    company: site.company,
                                    categories,
+                                   loggedInData: data,
+                                   cart,
                               }}
                          />
 
@@ -147,10 +149,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                               onClick={handleSideBarClose}
                          />
                     )}
-                    {/* // ) 
-                    // : (
-                    //      <div className={"homepage relative"}> {children}</div>
-                    // )} */}
                </body>
 
                <style jsx global>{`

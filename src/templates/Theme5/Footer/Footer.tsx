@@ -4,7 +4,6 @@ import SocialIcons from "@/templates/shared/SocialIcons";
 
 const Footer = (props: any): JSX.Element => {
      const { static: staticProps, company } = props.props;
-     console.log({ t5: props });
      return (
           <footer style={{ backgroundColor: "#F6F7F9", paddingTop: "40px" }} className="footer">
                <div className="footer-middle">

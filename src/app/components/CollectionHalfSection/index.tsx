@@ -19,7 +19,7 @@ function CollectionHalfSection({ reverse = false }: { reverse?: boolean }): JSX.
                                         reverse ? "text-left" : "text-right"
                                    }`}
                               >
-                                   MEN'S
+                                   {"MEN'S"}
                                    <br />
                                    COLLECTION
                               </h3>
@@ -28,7 +28,7 @@ function CollectionHalfSection({ reverse = false }: { reverse?: boolean }): JSX.
                                         reverse ? "text-left" : "text-right"
                                    }`}
                               >
-                                   Check out this week's hottest styles.
+                                   Check out this {"week's"} hottest styles.
                               </p>
                               <div className={`mb-0 ${reverse ? "text-left" : "text-right"}`}>
                                    <a

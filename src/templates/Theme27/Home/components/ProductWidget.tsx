@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import { ProductWidgetProps } from "../types";
+// import { ProductWidgetProps } from "../types";
 
-export const ProductWidget: React.FC<ProductWidgetProps> = ({
+export const ProductWidget: React.FC<any> = ({
      productImage,
      productImageTwo,
      productTitle,

@@ -2,6 +2,7 @@
 const webpack = require("webpack");
 
 const nextConfig = {
+
      reactStrictMode: true,
      images: {
           remotePatterns: [

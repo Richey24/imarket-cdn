@@ -9,7 +9,6 @@ import Payments from "./Payments";
 
 const Footer = (props: any) => {
      const { static: staticProps, company } = props.props;
-     console.log("footerProps", company);
      return (
           <footer className="footer">
                <div className="footer-top">

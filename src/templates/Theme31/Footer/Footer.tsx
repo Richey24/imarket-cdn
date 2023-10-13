@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-const Footer = (): JSX.Element => {
+const Footer = (props): JSX.Element => {
+     const { static: staticProps, company } = props.props;
+
      return (
           <footer className="footer p-0">
                <div className="footer-top">
@@ -25,7 +27,7 @@ const Footer = (): JSX.Element => {
                          <div className="footer-left">
                               <Link href="demo31.html">
                                    <img
-                                        src="assets/images/your-logo.png"
+                                        src={company?.logo}
                                         className="logo-footer"
                                         alt="logo image"
                                         width="110"

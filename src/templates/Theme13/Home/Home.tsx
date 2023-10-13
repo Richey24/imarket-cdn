@@ -15,7 +15,7 @@ import { ProductPlaceholder } from "@/app/components/ProductPlaceholder/Placehol
 
 export const Home = (props: any) => {
      const [activeTab, setActiveTab] = useState("featured-products");
-     const { static: statiProps, products, categories, featuredProducts } = props;
+     const { static: statiProps, products, categories, featuredProducts, handleAddToCart } = props;
      const [latestProductsState, setLatestProducts] = useState<any>(null);
      const [featuredProductsState, setFeaturedProducts] = useState<any>(null);
 
@@ -163,6 +163,9 @@ export const Home = (props: any) => {
                                                                       <Product
                                                                            key={`latest-product-${index}`}
                                                                            {...product}
+                                                                           handleAddToCart={
+                                                                                handleAddToCart
+                                                                           }
                                                                       />
                                                                  ))}
                                                   </div>
@@ -180,12 +183,6 @@ export const Home = (props: any) => {
                                              >
                                                   {latestProductsState ? (
                                                        <div className="row">
-                                                            {/* {products.map((product, index) => (
-                                                                 <Product
-                                                                      key={`latest-product-${index}`}
-                                                                      {...product}
-                                                                 />
-                                                            ))} */}
                                                             {latestProductsState &&
                                                                  latestProductsState
                                                                       .sort(
@@ -197,6 +194,9 @@ export const Home = (props: any) => {
                                                                            <Product
                                                                                 key={`latest-product-${index}`}
                                                                                 {...product}
+                                                                                handleAddToCart={
+                                                                                     handleAddToCart
+                                                                                }
                                                                            />
                                                                       ))}
                                                        </div>

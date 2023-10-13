@@ -451,7 +451,7 @@
      color: #222529 !important;
 }
 .text-primary {
-     color: #222529 !important;
+     color: var(--primary-color)  !important;
 }
 .text-secondary {
      color: #b93027 !important;

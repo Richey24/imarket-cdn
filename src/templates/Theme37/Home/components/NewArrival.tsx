@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { newArrivalsProducts } from "../data";
+import { Product } from "./Product";
+
 export const NewArrival = () => {
      const [currentSlide, setCurrentSlide] = useState(0);
      const settings = {
@@ -28,8 +30,8 @@ export const NewArrival = () => {
                     >
                          <Slider {...settings}>
                               {" "}
-                              {newArrivalsProducts.map((product) => (
-                                    <Product {...product} />
+                              {newArrivalsProducts.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>

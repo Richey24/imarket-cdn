@@ -29,7 +29,7 @@ const Banner = ({ slides }) => {
                     <Slider {...settings}>
                          {mappedSlides.map((slide, next) => {
                               return (
-                                   <div className="home-slide home-slide1 banner">
+                                   <div className="home-slide home-slide1 banner" key={next}>
                                         <Image
                                              width={400}
                                              height={400}

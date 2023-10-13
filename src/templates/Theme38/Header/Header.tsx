@@ -10,7 +10,6 @@ import Logo from "@/templates/shared/Header/HeaderSearch/Logo";
 import PageLinks from "@/templates/shared/Header/HeaderLinks/PageLinks";
 const Header = (props: any) => {
      const { company, static: staticProps } = props.props;
-     console.log("headerProps", staticProps);
 
      return (
           <header className="header">

@@ -24,8 +24,8 @@ export const FeaturedProducts = () => {
                     </div>
                     <div className="products-slider custom-products   owl-theme nav-outer show-nav-hover nav-image-center appear-animate">
                          <Slider {...settings}>
-                              {featuredproducts.map((product) => (
-                                 <Product {...product} />
+                              {featuredproducts.map((product, idx) => (
+                                   <Product key={idx} {...product} />
                               ))}
                          </Slider>
                     </div>

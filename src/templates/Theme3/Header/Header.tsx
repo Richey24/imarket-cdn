@@ -21,7 +21,7 @@ const Header = (props: any) => {
                          </div>
                          <PageLinks staticProps={staticProps} />
                     </div>
-                    <HeaderIcons />
+                    <HeaderIcons loggedInData={{}} cart={{}} />
                </div>
           </header>
      );

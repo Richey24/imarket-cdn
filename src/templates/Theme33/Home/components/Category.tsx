@@ -1,7 +1,7 @@
 import { templateImages } from "@/appProvider/templateImages";
 import Image from "next/image";
 import Link from "next/link";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const owlCarouselOptions = {
      dots: false,
@@ -56,7 +56,7 @@ function Category() {
                <div className="">
                     <div className="banners-section bg-gray tw-mb-12">
                          <div className="container mb-2">
-                              <OwlCarousel
+                              {/* <OwlCarousel
                                    className="banners-slider owl-carousel owl-theme"
                                    {...owlCarouselOptions}
                               >
@@ -71,7 +71,7 @@ function Category() {
                                         </figure>
 
                                         <div className="banner-layer banner-layer-top">
-                                             <h3>Women's Bags &amp; Purses</h3>
+                                             <h3>{"Women's"} Bags &amp; Purses</h3>
                                              <h4>
                                                   <del className="">20%</del>
                                                   <strong className="text-primary">30%</strong>
@@ -99,7 +99,7 @@ function Category() {
                                         </figure>
 
                                         <div className="banner-layer banner-layer-top">
-                                             <h3>Women's Shoes</h3>
+                                             <h3>{"Women's"} Shoes</h3>
                                         </div>
 
                                         <div className="banner-layer banner-layer-circle">
@@ -130,7 +130,7 @@ function Category() {
                                         </figure>
 
                                         <div className="banner-layer banner-layer-top">
-                                             <h3>Men's Leather Belt</h3>
+                                             <h3>{"Men's"} Leather Belt</h3>
                                              <h4 className="right-text">
                                                   <del>30%</del>
                                                   <strong className="text-primary">50%</strong>
@@ -156,14 +156,14 @@ function Category() {
                                              />
                                         </div>
                                    </div>
-                              </OwlCarousel>
+                              </OwlCarousel> */}
                          </div>
                     </div>
 
                     <div className="container">
                          <h2 className="section-title ">Browse By Category</h2>
 
-                         <OwlCarousel
+                         {/* <OwlCarousel
                               className="owl-carousel owl-theme nav-thick show-nav-hover nav-outer pb-2 mb-3"
                               {...owlCarouselOptions}
                          >
@@ -194,7 +194,7 @@ function Category() {
                                         </div>
                                    );
                               })}
-                         </OwlCarousel>
+                         </OwlCarousel> */}
 
                          <div className="">
                               <h2 className="section-title ">Featured Products Grid</h2>

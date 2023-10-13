@@ -15,7 +15,6 @@ export const Home = (props: any) => {
 
      const [latestProductsState, setLatestProducts] = useState<any>(null);
 
-     console.log("products", products, categories);
      useEffect(() => {
           if (products && !latestProductsState) {
                const latestProductsMap = products.map((product) => {

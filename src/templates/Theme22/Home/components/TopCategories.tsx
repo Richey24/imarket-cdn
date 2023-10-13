@@ -17,8 +17,8 @@ export const TopCategories = () => {
           <section className="top-categories" style={{ paddingLeft: "80px", paddingRight: "80px" }}>
                <div className="container">
                     <div className="row m-b-3">
-                         {miniBanners.map((banner) => (
-                              <div className="col-lg-6">
+                         {miniBanners.map((banner, idx) => (
+                              <div className="col-lg-6" key={idx}>
                                    <div
                                         className="banner banner1 mb-2 appear-animate"
                                         data-animation-name="fadeInLeftShorter"
@@ -35,7 +35,7 @@ export const TopCategories = () => {
                                         </figure>
                                         <div className="banner-layer banner-layer-middle banner-layer-left">
                                              <h3 className="font1 ls-10 text-uppercase mb-0 w-50 d-flex align-items-start justify-content-start flex-wrap">
-                                                   {banner.title}
+                                                  {banner.title}
                                              </h3>
                                         </div>
                                         <div className="banner-layer banner-layer-middle banner-layer-right">

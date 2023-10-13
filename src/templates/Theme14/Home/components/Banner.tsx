@@ -5,8 +5,8 @@ export const Banner = ({ Sliders }) => {
      return (
           <section className="home-slider  owl-theme text-uppercase nav-big bg-gray">
                <Carousel>
-                    {Sliders.map((data) => (
-                         <Carousel.Item>
+                    {Sliders.map((data, idx) => (
+                         <Carousel.Item key={idx}>
                               <div className="home-slide home-slide1 banner">
                                    <img
                                         className="slide-bg"

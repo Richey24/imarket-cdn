@@ -42,49 +42,6 @@ import banner8 from "../../../assets/images/demoes/demo2/banners/banner-8.jpg";
 import banner9 from "../../../assets/images/demoes/demo2/banners/banner-9.jpg";
 import { templateImages } from "@/appProvider/templateImages";
 
-export const featuredProducts: ProductProps[] = [
-     {
-          productImageAlt: "product",
-          productCategory: "Category",
-          productImageUrl: templateImages.demo2.productImages.product1,
-          productImageUrlTwo: templateImages.demo2.productImages.product1,
-          productTitle: "Blue High Hill",
-          productPrice: 269,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "Category",
-          productImageUrl: templateImages.demo2.productImages.product2,
-          productImageUrlTwo: templateImages.demo2.productImages.product2,
-          productTitle: "Brown Bag",
-          productPrice: 29,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "Category",
-          productImageUrl: templateImages.demo2.productImages.product3,
-          productImageUrlTwo: templateImages.demo2.productImages.product3,
-          productTitle: "Black Belt",
-          productPrice: 101,
-     },
-     {
-          productImageAlt: "product",
-          productCategory: "Category",
-          productImageUrl: templateImages.demo2.productImages.product4,
-          productImageUrlTwo: templateImages.demo2.productImages.product4,
-          productTitle: "High Hill Casual",
-          productPrice: 49,
-     },
-     // {
-     //      productImageAlt: "product",
-     //      productCategory: "Category",
-     //      productImageUrl: templateImages.demo2.productImages.product5,
-     //      productImageUrlTwo: templateImages.demo2.productImages.product5,
-     //      productTitle: "Travel Bag",
-     //      productPrice: 49,
-     // },
-];
-
 export const latestProducts = [
      {
           productImageAlt: "product",

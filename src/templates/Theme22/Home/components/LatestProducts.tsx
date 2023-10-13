@@ -9,8 +9,8 @@ export const LatestProducts = ({ latestProducts }) => {
                     <div className="row ">
                          {latestProducts
                               .sort((a: any, b: any) => b.__last_update - a.__last_update)
-                              .map((product) => (
-                                   <div className="grid-item col-sm-45 col-md-3 mt-1 ">
+                              .map((product, idx) => (
+                                   <div key={idx} className="grid-item col-sm-45 col-md-3 mt-1 ">
                                         <Product {...product} />
                                    </div>
                               ))}

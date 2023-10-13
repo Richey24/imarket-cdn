@@ -16,7 +16,7 @@ export default function PopularProducts() {
                                    <h4 className="section-sub-title text-uppercase ">
                                         Top Rated Products
                                    </h4>
-                                   {topRatedProducts.map((product, index) => (
+                                   {topRatedProducts.map((product: any, index) => (
                                         <ProductWidget key={`product-${index}`} {...product} />
                                    ))}
                               </div>
@@ -25,7 +25,7 @@ export default function PopularProducts() {
                                    <h4 className="section-sub-title text-uppercase">
                                         Best Selling Products
                                    </h4>
-                                   {topRatedProducts.map((product, index) => (
+                                   {topRatedProducts.map((product: any, index) => (
                                         <ProductWidget key={`product-${index}`} {...product} />
                                    ))}
                               </div>
@@ -34,7 +34,7 @@ export default function PopularProducts() {
                                    <h4 className="section-sub-title text-uppercase m-b-3">
                                         Latest Products
                                    </h4>
-                                   {topRatedProducts.map((product, index) => (
+                                   {topRatedProducts.map((product: any, index) => (
                                         <ProductWidget key={`product-${index}`} {...product} />
                                    ))}
                               </div>

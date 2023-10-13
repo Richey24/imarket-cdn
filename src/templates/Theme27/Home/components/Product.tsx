@@ -3,11 +3,11 @@ import React from "react";
 import { ProductProps } from "../types";
 
 export const Product: React.FC<ProductProps> = ({
-     productImageUrl,
+     imageUrl1,
      productImageUrlTwo,
      productImageAlt,
      productCategory,
-     productTitle,
+     productName,
      productPrice,
      oldPrice,
 }) => {
@@ -15,7 +15,7 @@ export const Product: React.FC<ProductProps> = ({
           <div className="product-default">
                <figure>
                     <a href="demo27-product.html">
-                         <Image src={productImageUrl} width={280} height={280} alt="product" />
+                         <Image src={imageUrl1} width={280} height={280} alt="product" />
                     </a>
                     <div className="label-group">
                          <div className="product-label label-hot">HOT</div>
@@ -28,7 +28,7 @@ export const Product: React.FC<ProductProps> = ({
                          </a>
                     </div>
                     <h3 className="product-title">
-                         <a href="demo27-product.html">{productTitle}</a>
+                         <a href="demo27-product.html">{productName}</a>
                     </h3>
                     {/* <div class="ratings-container">
 <div class="product-ratings">

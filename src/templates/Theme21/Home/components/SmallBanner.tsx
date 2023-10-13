@@ -5,8 +5,8 @@ export const SmallBanner = () => {
           <section className="cat-banners-section">
                <div className="container">
                     <div className="row">
-                         {smallBanners.map((data) => (
-                              <div className="col-sm-6 col-xl-3">
+                         {smallBanners.map((data, idx) => (
+                              <div key={idx} className="col-sm-6 col-xl-3">
                                    <div
                                         className="cat-banner"
                                         data-animation-name="fadeInLeftShorter"

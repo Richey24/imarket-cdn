@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { banners } from "../data";
 import { templateImages } from "@/appProvider/templateImages";
 
-export const Banner = ({slides}) => {
+export const Banner = ({ slides }) => {
      const mappedSlides = slides.map((slide: any) => ({
           background: "#555",
           imageSrc:
@@ -18,7 +18,7 @@ export const Banner = ({slides}) => {
           <section className="intro-section">
                <Carousel>
                     {mappedSlides.map((slide, index) => (
-                         <Carousel.Item>
+                         <Carousel.Item key={index}>
                               <div
                                    className="home-slide banner test"
                                    style={{

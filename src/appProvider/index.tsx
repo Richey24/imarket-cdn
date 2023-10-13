@@ -2,15 +2,20 @@
 import React, { useEffect, useState } from "react";
 import {
      useAddToCart,
+     useGetCart,
      useGetCategories,
      useGetFeaturedProducts,
      useGetProducts,
      useGetSiteByDomain,
-} from "./hook";
+     useCreateCart,
+     useRemoveProductFromCart,
+     useUpdateProductQtyCart,
+} from "./hooks";
 import { getSubDomain } from "@/utils/helper";
 import { SitesField, ThemeName } from "./types";
 import NextNProgress from "nextjs-progressbar";
 import { dummySite } from "./data";
+import { useSession } from "next-auth/react";
 
 export const AppContext = React.createContext<any>(null);
 
@@ -20,15 +25,27 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      const [products, setProducts] = useState(null);
      const [featuredProducts, setFeaturedProducts] = useState(null);
      const [categories, setCategories] = useState(null);
+     const [cart, setCart] = useState(null);
+     const [brandcolor, setBrandcolor] = useState({
+          primaryColor: "#3498db",
+          secondaryColor: "#2ecc71",
+     });
+
      const addToCart = useAddToCart();
      const getSiteByDomain = useGetSiteByDomain();
      const getProducts = useGetProducts();
      const getCategories = useGetCategories();
      const getFeaturedProducts = useGetFeaturedProducts();
+     const createCart = useCreateCart();
+     const getCart = useGetCart();
+     const { data } = useSession();
+     const removeProduct = useRemoveProductFromCart();
+     const updateProductQtyOnCart = useUpdateProductQtyCart();
+
 
      useEffect(() => {
-          const domain = getSubDomain(window.location.href as string);
-          if (window) {
+          if (typeof window !== "undefined") {
+               const domain = getSubDomain(window.location.href as string);
                if (domain) {
                     setLoading(true);
                     getSiteByDomain(
@@ -70,24 +87,157 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     () => { },
                );
           }
-     }, [site]);
+          if (site && !cart && data) {
+               getCart(
+                    (data as any)?.user?.id,
+                    (data: any) => {
+                         setCart(data as any);
+                    },
+                    () => { },
+               );
+          }
+     }, [site, data]);
 
-     const handleAddToCart = (product: any) => {
-          console.log("log");
+     const handleAddToCart = async (productId: any, price: number | string, onDone: () => void) => {
+          if (cart) {
+               return addToCart(
+                    {
+                         companyId: site?.company?.company_id,
+                         orderId: cart?.id,
+                         productId,
+                         qty: 1,
+                         price_unit: price,
+                    },
+                    () => {
+                         getCart(
+                              (data as any)?.user?.id,
+                              (data: any) => {
+                                   setCart(data as any);
+                                   onDone?.();
+                              },
+                              () => { },
+                         );
+                    },
+                    () => {
+                         onDone?.();
+                    },
+               );
+          } else {
+               createCart(
+                    {
+                         companyId: site?.company?.company_id,
+                         userId: (data as any)?.user?.id,
+                         products: [{ productId, qty: 1, price_unit: price }],
+                    },
+                    () => {
+                         getCart(
+                              (data as any)?.user?.id,
+                              (data: any) => {
+                                   setCart(data as any);
+                                   onDone?.();
+                              },
+                              () => { },
+                         );
+                    },
+                    () => {
+                         onDone?.();
+                    },
+               );
+          }
      };
+
+     const handleUpdateProductQtyOnCart = (
+          orderLineId: number,
+          qty: number,
+          onDone: () => void,
+     ) => {
+          updateProductQtyOnCart(
+               orderLineId,
+               qty,
+               () => {
+                    getCart(
+                         (data as any)?.user?.id,
+                         (data: any) => {
+                              setCart(data as any);
+                              onDone?.();
+                         },
+                         () => { },
+                    );
+               },
+               () => {
+                    onDone?.();
+               },
+          );
+     };
+
+     const handleRemoveProductFromOrder = (orderLineId: number, onDone: () => void) => {
+          removeProduct(
+               orderLineId,
+               () => {
+                    getCart(
+                         (data as any)?.user?.id,
+                         (data: any) => {
+                              setCart(data as any);
+                              onDone?.();
+                         },
+                         () => { },
+                    );
+               },
+               () => {
+                    onDone?.();
+               },
+          );
+     };
+
+     React.useEffect(() => {
+          if (site) {
+               console.log({ brandcolor: site.company.brandcolor });
+               const colors = site.company.brandcolor;
+               setBrandcolor(() => {
+                    return { primaryColor: colors[0].hex, secondaryColor: colors[1].hex };
+               });
+          }
+     }, [site]);
+     useEffect(() => {
+          if (window) {
+               document.documentElement.style.setProperty(
+                    "--primary-color",
+                    brandcolor.primaryColor,
+               );
+               document.documentElement.style.setProperty(
+                    "--secondary-color",
+                    brandcolor.secondaryColor,
+               );
+
+               const root = document.documentElement;
+
+               root.style.setProperty("--primary", brandcolor.primaryColor);
+               root.style.setProperty("--secondary", brandcolor.secondaryColor);
+          }
+     }, [brandcolor]);
 
      return (
           <AppContext.Provider
-               value={{ site: dummySite, loading, categories, products, featuredProducts, handleAddToCart }}
+               value={{
+<<<<<<< HEAD
+                    site: dummySite,
+=======
+                    site,
+>>>>>>> 657a7b4a6b353590b771263c911d6fb22ece54dd
+                    loading,
+                    categories,
+                    products,
+                    featuredProducts,
+<<<<<<< HEAD
+                    handleAddToCart,
+=======
+                    cart,
+                    handleAddToCart,
+                    handleRemoveProductFromOrder,
+                    handleUpdateProductQtyOnCart,
+>>>>>>> 657a7b4a6b353590b771263c911d6fb22ece54dd
+               }}
           >
-               <NextNProgress
-                    color="#29D"
-                    startPosition={0.3}
-                    stopDelayMs={200}
-                    height={3}
-                    showOnShallow={true}
-               />
-
                {children}
           </AppContext.Provider>
      );

@@ -11,18 +11,19 @@ export default function page() {
                               404
                          </h1>
                          <p className="tw-mb-4 tw-text-3xl tw-tracking-tight tw-font-bold tw-text-gray-900 md:tw-text-4xl dark:tw-text-white">
-                              Something's missing.
+                              {"Something's"} missing.
                          </p>
                          <p className="tw-mb-4 tw-text-xl tw-font-light tw-text-gray-500 dark:tw-text-gray-400">
-                              Sorry, we can't find that page. You'll find lots to explore on the
+                              Sorry, we {"can't "}find that page. {"You'll"} find lots to explore on the
                               home page.{" "}
                          </p>
-                         <Link
-                              href="/"
-                              className="tw-inline-flex tw-text-white bg-primary hover:tw-text-white focus:tw-ring-4 focus:tw-outline-none tw-text-md
+                         <Link href="/" className="">
+                              <button
+                                   className="btn btn-primary tw-inline-flex !tw-text-white  hover:tw-text-white focus:tw-ring-4 focus:tw-outline-none tw-text-md
                                focus:tw-ring-primary-300 tw-font-medium tw-rounded-lg tw-px-5 tw-py-2.5 tw-text-center dark:tw-focus:ring-primary-900 tw-my-4"
-                         >
-                              Back to Homepage
+                              >
+                                   Back to Homepage
+                              </button>
                          </Link>
                     </div>
                </div>

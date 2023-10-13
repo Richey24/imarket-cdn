@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import { templateImages } from "@/appProvider/templateImages";
 
 interface Icategory {
@@ -29,7 +29,6 @@ const ShopByCategory: React.FC<Icategory> = ({ categoryName, count }) => {
 };
 
 const BannerCategory = ({ categories }): JSX.Element => {
-     console.log({ categories });
 
      const owlCarouselOptions = {
           dots: false,
@@ -52,13 +51,14 @@ const BannerCategory = ({ categories }): JSX.Element => {
      };
 
      return (
-          <OwlCarousel className="info-boxes-slider owl-carousel owl-theme" {...owlCarouselOptions}>
-               {categories &&
-                    categories.length > 0 &&
-                    categories.map((item, index) => (
-                         <ShopByCategory key={index} categoryName={item.name} count={0} />
-                    ))}
-          </OwlCarousel>
+          // <OwlCarousel className="info-boxes-slider owl-carousel owl-theme" {...owlCarouselOptions}>
+          //      {categories &&
+          //           categories.length > 0 &&
+          //           categories.map((item, index) => (
+          //                <ShopByCategory key={index} categoryName={item.name} count={0} />
+          //           ))}
+          // </OwlCarousel>
+          <div></div>
      );
 };
 

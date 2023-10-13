@@ -1,15 +1,27 @@
+"use client";
+import { withAuth } from "@/utils/middleware";
+import { signOut, SignOutParams } from "next-auth/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+// import { useRouter } from "next/router";
 import React from "react";
 
-const Dashboard = async () => {
+function Dashboard() {
+     const router = useRouter();
+
+     const handleLogout = async () => {
+          await signOut({ redirect: false });
+          router.push("/");
+     };
+
      return (
           <div className="dashboard-content">
                <p>
                     Hello <strong className="text-dark">Editor</strong> (not
                     <strong className="text-dark">Editor</strong>?
-                    <Link href="login.html" className="btn btn-link ">
+                    <a onClick={handleLogout} className="btn btn-link ">
                          Log out
-                    </Link>
+                    </a>
                     )
                </p>
 
@@ -66,7 +78,7 @@ const Dashboard = async () => {
 
                     <div className="col-6 col-md-4">
                          <div className="feature-box p-12 text-center border border-solidtext-center pb-4">
-                              <Link href="/wishlist/">
+                              <Link href="/dashboard/wishlist/">
                                    <i className="sicon-heart"></i>
                               </Link>
                               <div className="mb-2 uppercase">
@@ -88,5 +100,6 @@ const Dashboard = async () => {
                </div>
           </div>
      );
-};
+}
+
 export default Dashboard;

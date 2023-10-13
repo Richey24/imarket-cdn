@@ -20,8 +20,8 @@ const Banner = ({ bannerData }) => {
                     <div className="home-slider">
                          <Slider {...settings}>
                               <div className="theBanner25">
-                                   {bannerData.slice(0, 3).map((data) => (
-                                        <div className="home-slide">
+                                   {bannerData.slice(0, 3).map((data, idx) => (
+                                        <div className="home-slide" key={idx}>
                                              <a href="demo25-shop.html">
                                                   <Image
                                                        src={
@@ -80,8 +80,8 @@ const Banner = ({ bannerData }) => {
                               </div>
 
                               <div className="theBanner25">
-                                   {bannerData.slice(3, 6).map((data) => (
-                                        <div className="home-slide">
+                                   {bannerData.slice(3, 6).map((data, idx) => (
+                                        <div className="home-slide" key={idx}>
                                              <a href="demo25-shop.html">
                                                   <Image
                                                        src={

@@ -26,8 +26,8 @@ export const TopProduct = () => {
                     </h2>
 
                     <Slider {...settings}>
-                         {productScrolls.map((product) => (
-                              <Product {...product} />
+                         {productScrolls.map((product, idx) => (
+                              <Product key={idx} {...product} />
                          ))}
                     </Slider>
                </div>

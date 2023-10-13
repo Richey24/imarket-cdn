@@ -19,8 +19,8 @@ export const MiniBanner = () => {
                <div className="banners-slider   owl-theme dots-mt-1">
                     <Slider {...settings}>
                          {" "}
-                         {miniBanners.map((banner) => (
-                              <div className="banner">
+                         {miniBanners.map((banner, idx) => (
+                              <div key={idx} className="banner">
                                    <img
                                         src={banner.image}
                                         width={360}
