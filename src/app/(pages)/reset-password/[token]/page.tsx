@@ -14,7 +14,7 @@ const ResetPassword = () => {
         const body = {
             password: e.target.newPass.value,
             confirmPass: e.target.confirmPass.value,
-            reset: true
+            reset: "true"
         }
         if (body.password !== body.confirmPass) {
             setMsg("New password and confirm password do not match")
@@ -22,10 +22,13 @@ const ResetPassword = () => {
             setLoad(false)
             return
         }
-        axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/update/password`, body, {
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/update/password`, {
+            body: new URLSearchParams(body),
             headers: {
-                Authorization: `Bearer ${window.location.pathname.split("/")[2]}`
-            }
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": `Bearer ${window.location.pathname.split("/")[2]}`
+            },
+            method: "put",
         })
             .then((res) => {
                 if (res.status == 200) {
@@ -44,6 +47,7 @@ const ResetPassword = () => {
             .finally(() => {
                 setLoad(false)
             })
+
     }
 
     return (

@@ -2,12 +2,12 @@ import { templateImages } from "./templateImages";
 
 export const dummySite = {
      theme: {
-          theme: "theme5",
+          theme: "theme2",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme5",
+                    theme: "theme2",
                     name: "",
                     props: {
                          company: {
@@ -43,7 +43,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme5",
+                    theme: "theme2",
                     props: {
                          company: {
                               city: "City",
@@ -88,7 +88,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme5",
+                                   theme: "theme2",
                                    props: {
                                         static: {
                                              promotion: {
