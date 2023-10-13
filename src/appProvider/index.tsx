@@ -70,21 +70,21 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (products) => {
                          setProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getFeaturedProducts(
                     site?.company?.company_id,
                     (products) => {
                          setFeaturedProducts(products);
                     },
-                    () => {},
+                    () => { },
                );
                getCategories(
                     site?.company?._id,
                     (categories) => {
                          setCategories(categories);
                     },
-                    () => {},
+                    () => { },
                );
           }
           if (site && !cart && data) {
@@ -93,7 +93,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                     (data: any) => {
                          setCart(data as any);
                     },
-                    () => {},
+                    () => { },
                );
           }
      }, [site, data]);
@@ -115,7 +115,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                                    setCart(data as any);
                                    onDone?.();
                               },
-                              () => {},
+                              () => { },
                          );
                     },
                     () => {
@@ -136,7 +136,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                                    setCart(data as any);
                                    onDone?.();
                               },
-                              () => {},
+                              () => { },
                          );
                     },
                     () => {
@@ -161,7 +161,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                               setCart(data as any);
                               onDone?.();
                          },
-                         () => {},
+                         () => { },
                     );
                },
                () => {
@@ -180,7 +180,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
                               setCart(data as any);
                               onDone?.();
                          },
-                         () => {},
+                         () => { },
                     );
                },
                () => {
@@ -219,23 +219,15 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
      return (
           <AppContext.Provider
                value={{
-<<<<<<< HEAD
-                    site: dummySite,
-=======
                     site,
->>>>>>> 657a7b4a6b353590b771263c911d6fb22ece54dd
                     loading,
                     categories,
                     products,
                     featuredProducts,
-<<<<<<< HEAD
-                    handleAddToCart,
-=======
                     cart,
                     handleAddToCart,
                     handleRemoveProductFromOrder,
                     handleUpdateProductQtyOnCart,
->>>>>>> 657a7b4a6b353590b771263c911d6fb22ece54dd
                }}
           >
                {children}

@@ -642,7 +642,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/product-6.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/slider/slide-1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-2.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-3.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo4-product/banner/banner-4.jpg",
@@ -692,6 +692,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/product-17.jpg",
           },
           bannerImage: {
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/slider/slide-1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-2.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-3.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo5-product/banner/banner-4.jpg",
@@ -1086,7 +1087,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/zoom/product-5-big.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/slider/slide-1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/banner/banner-1.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/banner/banner-2.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo8-product/banner/banner-bedroom.jpg",
@@ -1357,7 +1358,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/home/product-12-2.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/slider/slide-1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/banner/banner-sidebar.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/banner/banner-text-1.png",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo10-product/banner/banner-text-2.png",
@@ -3530,7 +3531,7 @@ export const templateImages = {
                     "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo31-product/zoom/product-5.jpg",
           },
           bannerImage: {
-               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo31-slide.jpg",
+               banner1: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo31-product/banner/home_banner1.jpg",
                banner2: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo31-product/banner/home_banner1.jpg",
                banner3: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo31-product/banner/home_banner2.jpg",
                banner4: "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo31-product/banner/home_banner3.jpg",

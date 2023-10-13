@@ -1,11 +1,13 @@
+import { templateImages } from "./templateImages";
+
 export const dummySite = {
      theme: {
-          theme: "theme1",
+          theme: "theme5",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme1",
+                    theme: "theme5",
                     name: "",
                     props: {
                          company: {
@@ -41,7 +43,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme1",
+                    theme: "theme5",
                     props: {
                          company: {
                               city: "City",
@@ -86,7 +88,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme1",
+                                   theme: "theme5",
                                    props: {
                                         static: {
                                              promotion: {
@@ -97,13 +99,13 @@ export const dummySite = {
                                                        title: "",
                                                        text: "",
                                                        imageUrl:
-                                                            "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-1.png",
+                                                            templateImages["demo5"].bannerImage.banner1,
                                                   },
                                                   {
                                                        title: "",
                                                        text: "",
                                                        imageUrl:
-                                                            "https://absa7kzimnaf.blob.core.windows.net/templates-images/demo1-product/slider/slide-2.jpg",
+                                                            templateImages["demo5"].bannerImage.banner1,
                                                   },
                                              ],
                                              dealsBanner: [
