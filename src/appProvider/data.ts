@@ -2,12 +2,12 @@ import { templateImages } from "./templateImages";
 
 export const dummySite = {
      theme: {
-          theme: "theme2",
+          theme: "theme5",
           footer: {
                name: "footer",
                content: "",
                component: {
-                    theme: "theme2",
+                    theme: "theme5",
                     name: "",
                     props: {
                          company: {
@@ -43,7 +43,7 @@ export const dummySite = {
                name: "header",
                content: "",
                component: {
-                    theme: "theme2",
+                    theme: "theme5",
                     props: {
                          company: {
                               city: "City",
@@ -88,7 +88,7 @@ export const dummySite = {
                               name: "home",
                               content: "",
                               component: {
-                                   theme: "theme2",
+                                   theme: "theme5",
                                    props: {
                                         static: {
                                              promotion: {
@@ -99,13 +99,13 @@ export const dummySite = {
                                                        title: "",
                                                        text: "",
                                                        imageUrl:
-                                                            templateImages["demo2"].bannerImage.banner1,
+                                                            templateImages["demo5"].bannerImage.banner1,
                                                   },
                                                   {
                                                        title: "",
                                                        text: "",
                                                        imageUrl:
-                                                            templateImages["demo2"].bannerImage.banner1,
+                                                            templateImages["demo5"].bannerImage.banner1,
                                                   },
                                              ],
                                              dealsBanner: [
