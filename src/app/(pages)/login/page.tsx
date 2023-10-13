@@ -78,9 +78,8 @@ export default function Login() {
                               <input
                                    type="email"
                                    {...register("email")}
-                                   className={`${
-                                        errors.email?.message && "tw-border-red-500"
-                                   } form-input form-wide`}
+                                   className={`${errors.email?.message && "tw-border-red-500"
+                                        } form-input form-wide`}
                                    id="login-email"
                               />
                               <p className="tw-text-red-500 tw-text-base">
@@ -95,9 +94,8 @@ export default function Login() {
                               <input
                                    type="password"
                                    {...register("password")}
-                                   className={`${
-                                        errors.email?.message && "tw-border-red-500"
-                                   } form-input form-wide`}
+                                   className={`${errors.email?.message && "tw-border-red-500"
+                                        } form-input form-wide`}
                                    id="login-password"
                               />
                               <p className="tw-text-red-500 tw-text-base">
@@ -120,7 +118,7 @@ export default function Login() {
                               </div>
 
                               <a
-                                   href="forgot-password.html"
+                                   href="forgot-password"
                                    className="forget-password text-dark form-footer-right"
                               >
                                    Forgot Password?

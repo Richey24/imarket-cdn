@@ -1,11 +1,12 @@
 import Carousel from "react-bootstrap/Carousel";
 import slide1 from "../../../../assets/images/demoes/demo1/slider/slide-1.png";
 import Image from "next/image";
+import { templateImages } from "@/appProvider/templateImages";
 
 const Banner = ({ slides }) => {
      const mappedSlides = slides.map((slide: any) => ({
           background: "#555",
-          imageSrc: slide?.imageUrl !== "" ? slide?.imageUrl : slide1,
+          imageSrc: slide?.imageUrl !== "" ? slide?.imageUrl : templateImages.demo1.bannerImage.banner1,
           title: "Find the Boundaries. Push Through!",
           saleTitle: "Summer Sale",
           discount: "70% Off",
