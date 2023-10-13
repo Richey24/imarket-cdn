@@ -22,7 +22,7 @@ const ResetPassword = () => {
             setLoad(false)
             return
         }
-        axios.put(`http://localhost:4000/api/auth/update/password`, body, {
+        axios.put(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/update/password`, body, {
             headers: {
                 Authorization: `Bearer ${window.location.pathname.split("/")[2]}`
             }

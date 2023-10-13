@@ -15,7 +15,7 @@ const Page = () => {
             email: e.target.email.value,
             url: window.location.origin
         }
-        axios.post(`http://localhost:4000/api/auth/forgot/password`, body)
+        axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/forgot/password`, body)
             .then((res) => {
                 if (res.status === 201) {
                     setMsg("There is not account associated with this email, kindly proceed to create an account")
